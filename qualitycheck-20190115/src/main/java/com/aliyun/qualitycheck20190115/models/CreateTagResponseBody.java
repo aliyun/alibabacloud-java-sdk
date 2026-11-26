@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTagResponseBody extends TeaModel {
     /**
-     * <p>The result code. A value of <strong>200</strong> indicates success. Other values indicate failure. You can use this field to determine the cause of failure.</p>
+     * <p>The result code. A value of <strong>200</strong> indicates success, whereas other values indicate failure. You can determine the cause of the failure based on this field.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,7 +20,7 @@ public class CreateTagResponseBody extends TeaModel {
     public CreateTagResponseBodyData data;
 
     /**
-     * <p>The error message, if any.</p>
+     * <p>The error message returned if an error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -38,7 +38,11 @@ public class CreateTagResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values: true: The call was successful. false: The call failed.</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +97,7 @@ public class CreateTagResponseBody extends TeaModel {
 
     public static class CreateTagResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the label node was created.</p>
+         * <p>The time when the tag node was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1748428991000</p>
@@ -102,16 +106,16 @@ public class CreateTagResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The label description.</p>
+         * <p>The tag description.</p>
          * 
          * <strong>example:</strong>
-         * <p>用于归集售后服务相关的所有意图与 FAQ</p>
+         * <p>Used to aggregate all intents and FAQs related to after-sales service</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The time when the label node was last modified.</p>
+         * <p>The time when the tag node was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1748428991000</p>
@@ -120,16 +124,16 @@ public class CreateTagResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>The label name.</p>
+         * <p>The tag name.</p>
          * 
          * <strong>example:</strong>
-         * <p>售后问题</p>
+         * <p>After-sales issue</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The parent label node ID.</p>
+         * <p>The parent tag node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -138,7 +142,7 @@ public class CreateTagResponseBody extends TeaModel {
         public Long parentTagId;
 
         /**
-         * <p>The label ID.</p>
+         * <p>The tag ID.</p>
          * 
          * <strong>example:</strong>
          * <p>128</p>

@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class JudgeNodeMetaDesc extends TeaModel {
     /**
-     * <p>Actual value</p>
+     * <p>The actual value. <strong>[Deprecated]</strong></p>
      * 
      * <strong>example:</strong>
-     * <p>xx</p>
+     * <p><strong>[Deprecated]</strong></p>
      */
     @NameInMap("ActualValue")
     public String actualValue;
 
     /**
-     * <p>Data type</p>
+     * <p>The data type.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -22,11 +22,14 @@ public class JudgeNodeMetaDesc extends TeaModel {
     @NameInMap("DataType")
     public Integer dataType;
 
+    /**
+     * <p><strong>[Deprecated]</strong></p>
+     */
     @NameInMap("ExpressionMetaDesc")
     public JudgeNodeMetaDescExpressionMetaDesc expressionMetaDesc;
 
     /**
-     * <p>System field</p>
+     * <p>The system field.</p>
      * 
      * <strong>example:</strong>
      * <p>remark1</p>
@@ -35,7 +38,7 @@ public class JudgeNodeMetaDesc extends TeaModel {
     public String field;
 
     /**
-     * <p>Field data source type: 1: System predefined field. 2: Quality inspection field for passed parameters.</p>
+     * <p>The field data source type. 1: System predefined field. 2: Parameter-passed quality inspection field.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,7 +47,7 @@ public class JudgeNodeMetaDesc extends TeaModel {
     public Integer fieldType;
 
     /**
-     * <p>Expression</p>
+     * <p>The logical expression.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -53,10 +56,10 @@ public class JudgeNodeMetaDesc extends TeaModel {
     public Integer symbol;
 
     /**
-     * <p>Preset value</p>
+     * <p>The preset value. <strong>[Deprecated]</strong></p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p><strong>[Deprecated]</strong></p>
      */
     @NameInMap("Value")
     public String value;
@@ -123,21 +126,57 @@ public class JudgeNodeMetaDesc extends TeaModel {
     }
 
     public static class JudgeNodeMetaDescExpressionMetaDesc extends TeaModel {
+        /**
+         * <p><strong>[Deprecated]</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong>[Deprecated]</strong></p>
+         */
         @NameInMap("LeftFieldType")
         public Integer leftFieldType;
 
+        /**
+         * <p><strong>[Deprecated]</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong>[Deprecated]</strong></p>
+         */
         @NameInMap("LeftOperand")
         public String leftOperand;
 
+        /**
+         * <p><strong>[Deprecated]</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong>[Deprecated]</strong></p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <p><strong>[Deprecated]</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong>[Deprecated]</strong></p>
+         */
         @NameInMap("RightFieldType")
         public Integer rightFieldType;
 
+        /**
+         * <p><strong>[Deprecated]</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong>[Deprecated]</strong></p>
+         */
         @NameInMap("RightOperand")
         public String rightOperand;
 
+        /**
+         * <p><strong>[Deprecated]</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong>[Deprecated]</strong></p>
+         */
         @NameInMap("RoundingMode")
         public String roundingMode;
 

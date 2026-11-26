@@ -6,12 +6,15 @@ import com.aliyun.tea.*;
 public class UpdateUserRequest extends TeaModel {
     /**
      * <p>Workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
-     * <p>This API supports batch modification of user roles. The value of the \<code>jsonStr\\</code> input parameter is a List type. Refer to the example value. See the detailed information below for the complete JSON string content.</p>
+     * <p>This API supports batch modification of user roles. The value of the `jsonStr` input parameter is a List type. Refer to the example value. See the detailed information below for the complete JSON string content.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

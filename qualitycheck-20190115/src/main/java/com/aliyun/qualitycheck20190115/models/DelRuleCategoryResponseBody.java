@@ -32,7 +32,7 @@ public class DelRuleCategoryResponseBody extends TeaModel {
      * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>4B0A8DCD-0DDF-5E80-8B9C-0A2F68B3403B</p>
      */
     @NameInMap("RequestId")
     public String requestId;

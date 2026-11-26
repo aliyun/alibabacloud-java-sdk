@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResponseBody extends TeaModel {
     /**
-     * <p>The result code. A value of <strong>200</strong> indicates success. Other values indicate failure. You can use this field to determine the cause of the failure.</p>
+     * <p>The result code. A value of <strong>200</strong> indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -38,7 +38,7 @@ public class ListTagResponseBody extends TeaModel {
     public Integer dataSize;
 
     /**
-     * <p>The error message, if any.</p>
+     * <p>The error message returned if an error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -65,7 +65,7 @@ public class ListTagResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. true: The call was successful. false: The call failed.</p>
+     * <p>Indicates whether the call is successful. Valid values: true: The call is successful. false: The call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -74,7 +74,7 @@ public class ListTagResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of records that meet the conditions.</p>
+     * <p>The total number of records that meet the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -170,7 +170,7 @@ public class ListTagResponseBody extends TeaModel {
         public Integer childCount;
 
         /**
-         * <p>The time when the label was created.</p>
+         * <p>The time when the tag was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1748428991000</p>
@@ -179,10 +179,10 @@ public class ListTagResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The label description.</p>
+         * <p>The tag description.</p>
          * 
          * <strong>example:</strong>
-         * <p>用于归集售后服务相关的所有意图与 FAQ</p>
+         * <p>Used to collect all intents and FAQs related to after-sales service</p>
          */
         @NameInMap("Description")
         public String description;
@@ -197,7 +197,7 @@ public class ListTagResponseBody extends TeaModel {
         public Integer level;
 
         /**
-         * <p>The time when the label was last modified.</p>
+         * <p>The time when the tag was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1748428991000</p>
@@ -206,16 +206,16 @@ public class ListTagResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>The label name.</p>
+         * <p>The tag name.</p>
          * 
          * <strong>example:</strong>
-         * <p>售后问题</p>
+         * <p>After-sales issues</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The ID of the parent label node.</p>
+         * <p>The ID of the parent tag node.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -230,7 +230,7 @@ public class ListTagResponseBody extends TeaModel {
         public java.util.List<String> path;
 
         /**
-         * <p>The label ID.</p>
+         * <p>The tag ID.</p>
          * 
          * <strong>example:</strong>
          * <p>128</p>

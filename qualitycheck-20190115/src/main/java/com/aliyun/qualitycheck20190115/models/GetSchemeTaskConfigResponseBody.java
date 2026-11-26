@@ -185,7 +185,7 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
          * <p>Matching value for on-the-fly recording data</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;start\&quot;:\&quot;2022-09-01 00:00:00\&quot;,\&quot;end\&quot;:\&quot;2022-09-30 00:00:00\&quot;}</p>
+         * <p>{&quot;start&quot;:&quot;2022-09-01 00:00:00&quot;,&quot;end&quot;:&quot;2022-09-30 00:00:00&quot;}</p>
          */
         @NameInMap("Value")
         public String value;

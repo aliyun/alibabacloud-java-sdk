@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetRuleByIdRequest extends TeaModel {
     /**
      * <p>The business space ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;

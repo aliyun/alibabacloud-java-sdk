@@ -23,7 +23,7 @@ public class UpdateAgentResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The error message, if any.</p>
+     * <p>The error message returned if an error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -41,11 +41,7 @@ public class UpdateAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. The caller can use this field to determine whether the request was successful. Valid values:</p>
-     * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false/null: The request failed.</li>
-     * </ul>
+     * <p>Indicates whether the request is successful. A value of true indicates success, and a value of false or null indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

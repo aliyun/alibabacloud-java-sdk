@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class UploadDataSyncRequest extends TeaModel {
     /**
-     * <p>The business space ID.</p>
+     * <p>The ID of the business workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
-     * <p>A JSON string that contains all custom parameters for this operation. For more information, see the <strong>jsonStr property description</strong> below.</p>
+     * <p>The jsonStr parameter is a JSON string that contains all custom parameters for this API operation. For details, see the <strong>jsonStr property description</strong> below.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

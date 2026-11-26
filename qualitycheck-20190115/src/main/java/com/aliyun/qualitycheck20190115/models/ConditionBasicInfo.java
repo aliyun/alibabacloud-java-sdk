@@ -50,7 +50,7 @@ public class ConditionBasicInfo extends TeaModel {
      * <p>Condition name</p>
      * 
      * <strong>example:</strong>
-     * <p>xx</p>
+     * <p>示例条件</p>
      */
     @NameInMap("Name")
     public String name;

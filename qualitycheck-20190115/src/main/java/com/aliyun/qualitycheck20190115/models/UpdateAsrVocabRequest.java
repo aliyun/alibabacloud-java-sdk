@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateAsrVocabRequest extends TeaModel {
     /**
      * <p>The ID of the workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;

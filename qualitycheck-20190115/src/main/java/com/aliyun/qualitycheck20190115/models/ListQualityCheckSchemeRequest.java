@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class ListQualityCheckSchemeRequest extends TeaModel {
     /**
-     * <p>The ID of the baseMe agent.</p>
+     * <p>The workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
-     * <p>The complete JSON string. For more information, see the details that follow.</p>
+     * <p>The complete JSON string. For details, see the following information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>{
-     *       &quot;name&quot;: &quot;质检方案A&quot;
+     *       &quot;name&quot;: &quot;Quality Check Scheme A&quot;
      * }</p>
      */
     @NameInMap("JsonStr")

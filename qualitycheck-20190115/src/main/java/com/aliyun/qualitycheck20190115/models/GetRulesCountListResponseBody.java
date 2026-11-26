@@ -8,7 +8,7 @@ public class GetRulesCountListResponseBody extends TeaModel {
      * <p>Business type. This field has no practical meaning and can be ignored.</p>
      * 
      * <strong>example:</strong>
-     * <p>忽略</p>
+     * <p>0</p>
      */
     @NameInMap("BusinessType")
     public Integer businessType;

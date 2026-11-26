@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTagRequest extends TeaModel {
     /**
-     * <p>The ID of the business space.</p>
+     * <p>The workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -14,7 +14,7 @@ public class GetTagRequest extends TeaModel {
     public Long baseMeAgentId;
 
     /**
-     * <p>The complete JSON string. For more information, see the following detailed information.</p>
+     * <p>The complete JSON string. For more information, see the following details.</p>
      * 
      * <strong>example:</strong>
      * <p>“”</p>

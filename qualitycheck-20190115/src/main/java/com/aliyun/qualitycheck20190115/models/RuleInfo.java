@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RuleInfo extends TeaModel {
     /**
-     * <p>The review option. This parameter is used for compatibility with the v4.0 protocol. Valid values: <code>1</code> (Manual review) and <code>3</code> (Automatic review).</p>
+     * <p>The review option. Valid values: 1: no automatic review. 3: automatic review. This field is used for 4.0 protocol compatibility.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,13 +14,13 @@ public class RuleInfo extends TeaModel {
     public Integer autoReview;
 
     /**
-     * <p>A list of business category names.</p>
+     * <p>The list of business category names.</p>
      */
     @NameInMap("BusinessCategoryNameList")
     public java.util.List<String> businessCategoryNameList;
 
     /**
-     * <p>The check type. Valid values: <code>0</code> (Service compliance check), <code>1</code> (Service attitude check), <code>2</code> (Service professionalism check), <code>3</code> (Customer attitude check), and <code>4</code> (Service process correctness check).</p>
+     * <p>The check type. Valid values: 0: Service standard check. 1: Service attitude check. 2: Service professionalism check. 3: Customer attitude check. 4: Service process correctness check.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -29,16 +29,16 @@ public class RuleInfo extends TeaModel {
     public Long checkType;
 
     /**
-     * <p>Remarks on the rule.</p>
+     * <p>The comments.</p>
      * 
      * <strong>example:</strong>
-     * <p>违规</p>
+     * <p>Violation</p>
      */
     @NameInMap("Comments")
     public String comments;
 
     /**
-     * <p>The configuration type. This parameter is used for compatibility with the v4.0 protocol. Valid values: <code>1</code> (Simple condition configuration) and <code>2</code> (Advanced configuration). Default: <code>1</code>.</p>
+     * <p>The configuration type. This parameter is dedicated to the version 4.0 protocol. Valid values: 1: Simple condition configuration. 2: Advanced configuration. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,7 +50,7 @@ public class RuleInfo extends TeaModel {
      * <p>The name of the creator.</p>
      * 
      * <strong>example:</strong>
-     * <p>张三</p>
+     * <p>Zhang San</p>
      */
     @NameInMap("CreateEmpName")
     public String createEmpName;
@@ -65,7 +65,7 @@ public class RuleInfo extends TeaModel {
     public String createEmpid;
 
     /**
-     * <p>The creation time. This value is a Unix timestamp in milliseconds.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>1641277321000</p>
@@ -74,7 +74,7 @@ public class RuleInfo extends TeaModel {
     public String createTime;
 
     /**
-     * <p>Indicates whether editing the rule is denied. Valid values: <code>1</code> (denied), <code>0</code> or <code>null</code> (allowed).</p>
+     * <p>The edit permission. Valid values: 1: Editing is denied. 0 or null: Editing is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -83,13 +83,13 @@ public class RuleInfo extends TeaModel {
     public Integer deny;
 
     /**
-     * <p>A list of test dialogues.</p>
+     * <p>The test script.</p>
      */
     @NameInMap("Dialogues")
     public java.util.List<RuleTestDialogue> dialogues;
 
     /**
-     * <p>Indicates whether the rule is in effect. Valid values: <code>0</code> (No) and <code>1</code> (Yes).</p>
+     * <p>The effective status. Valid values: 0: Not effective. 1: Effective.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -98,7 +98,7 @@ public class RuleInfo extends TeaModel {
     public Integer effective;
 
     /**
-     * <p>The effective end time of the rule.</p>
+     * <p>The effective end time.</p>
      * 
      * <strong>example:</strong>
      * <p>OperationMode</p>
@@ -107,7 +107,7 @@ public class RuleInfo extends TeaModel {
     public String effectiveEndTime;
 
     /**
-     * <p>The effective start time of the rule.</p>
+     * <p>The effective start time.</p>
      * 
      * <strong>example:</strong>
      * <p>OperationMode</p>
@@ -116,7 +116,7 @@ public class RuleInfo extends TeaModel {
     public String effectiveStartTime;
 
     /**
-     * <p>The end time. This value is a Unix timestamp in milliseconds.</p>
+     * <p>The end time.</p>
      * 
      * <strong>example:</strong>
      * <p>1641277321000</p>
@@ -134,7 +134,7 @@ public class RuleInfo extends TeaModel {
     public Integer externalProperty;
 
     /**
-     * <p>Indicates whether the rule is effective throughout its lifecycle. Valid values: <code>0</code> (No) and <code>1</code> (Yes).</p>
+     * <p>The full lifecycle effective status. Valid values: 0: No. 1: Yes.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -143,7 +143,7 @@ public class RuleInfo extends TeaModel {
     public Integer fullCycle;
 
     /**
-     * <p>The graph flow.</p>
+     * <p>The graph flow canvas.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -152,7 +152,7 @@ public class RuleInfo extends TeaModel {
     public Object graphFlow;
 
     /**
-     * <p>Indicates whether the rule is deleted.</p>
+     * <p>The deletion status.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -161,7 +161,7 @@ public class RuleInfo extends TeaModel {
     public Integer isDelete;
 
     /**
-     * <p>Indicates whether the rule is online.</p>
+     * <p>The online status.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -170,7 +170,7 @@ public class RuleInfo extends TeaModel {
     public Integer isOnline;
 
     /**
-     * <p>The conditional expression, such as <code>a&amp;&amp;b</code>.</p>
+     * <p>The conditional expression, such as a&amp;&amp;b.</p>
      * 
      * <strong>example:</strong>
      * <p>a&amp;&amp;b</p>
@@ -179,16 +179,16 @@ public class RuleInfo extends TeaModel {
     public String lambda;
 
     /**
-     * <p>The name of the employee who last updated the rule.</p>
+     * <p>The name of the last updater.</p>
      * 
      * <strong>example:</strong>
-     * <p>张三</p>
+     * <p>Zhang San</p>
      */
     @NameInMap("LastUpdateEmpName")
     public String lastUpdateEmpName;
 
     /**
-     * <p>The ID of the employee who last updated the rule.</p>
+     * <p>The employee ID of the last updater.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -197,7 +197,7 @@ public class RuleInfo extends TeaModel {
     public String lastUpdateEmpid;
 
     /**
-     * <p>The last update time. This value is a Unix timestamp in milliseconds.</p>
+     * <p>The last update time.</p>
      * 
      * <strong>example:</strong>
      * <p>1641277321000</p>
@@ -206,7 +206,7 @@ public class RuleInfo extends TeaModel {
     public String lastUpdateTime;
 
     /**
-     * <p>The severity level of the rule. Valid values: <code>0</code> (Severe violation), <code>1</code> (Moderate violation), and <code>2</code> (Minor violation).</p>
+     * <p>The rule level. Valid values: 0: Severe violation. 1: Moderate violation. 2: Minor violation.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -215,7 +215,7 @@ public class RuleInfo extends TeaModel {
     public Integer level;
 
     /**
-     * <p>Indicates whether the conditions are met.</p>
+     * <p>The fulfillment status.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -224,7 +224,7 @@ public class RuleInfo extends TeaModel {
     public Integer meet;
 
     /**
-     * <p>Indicates whether the rule has been modified within the quality check scheme.</p>
+     * <p>Specifies whether the rule is modified in the quality inspection scheme.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -236,7 +236,7 @@ public class RuleInfo extends TeaModel {
      * <p>The rule name.</p>
      * 
      * <strong>example:</strong>
-     * <p>开头语规则</p>
+     * <p>Greeting rule</p>
      */
     @NameInMap("Name")
     public String name;
@@ -250,11 +250,14 @@ public class RuleInfo extends TeaModel {
     @NameInMap("OperationMode")
     public Integer operationMode;
 
+    /**
+     * <p>The prerequisite rule.</p>
+     */
     @NameInMap("PreqRule")
     public RuleInfoPreqRule preqRule;
 
     /**
-     * <p>The quality check type. This parameter is used for compatibility with the v4.0 protocol. Valid values: <code>0</code> (offline quality check) and <code>1</code> (real-time quality check).</p>
+     * <p>The quality check type. This parameter is used for compatibility with version 4.0 logic. Valid values: 0: Offline quality check. 1: Real-time quality check.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -272,16 +275,16 @@ public class RuleInfo extends TeaModel {
     public String rid;
 
     /**
-     * <p>The name of the rule category.</p>
+     * <p>The rule category name.</p>
      * 
      * <strong>example:</strong>
-     * <p>正向规则</p>
+     * <p>Positive rule</p>
      */
     @NameInMap("RuleCategoryName")
     public String ruleCategoryName;
 
     /**
-     * <p>Specifies whether to score the rule. This parameter is used for compatibility with the v4.0 protocol. Valid values: <code>1</code> (Do not score) and <code>3</code> (Score).</p>
+     * <p>Specifies whether to calculate the score. Valid values: 1: no scoring. 3: scoring. This field is used for 4.0 protocol compatibility.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -290,7 +293,7 @@ public class RuleInfo extends TeaModel {
     public Integer ruleScoreType;
 
     /**
-     * <p>The rule type. This parameter is used for compatibility with the v4.0 protocol. Valid values: <code>0</code> (Default) and <code>1</code> (User-created).</p>
+     * <p>The rule type. Valid values: 0: default. 1: user-created. This field is used for 4.0 logic compatibility.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -305,7 +308,7 @@ public class RuleInfo extends TeaModel {
     public SchemeCheckType schemeCheckType;
 
     /**
-     * <p>The ID of the quality check scheme to which the rule belongs.</p>
+     * <p>The ID of the associated quality check scheme.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -317,7 +320,7 @@ public class RuleInfo extends TeaModel {
      * <p>The name of the quality check scheme.</p>
      * 
      * <strong>example:</strong>
-     * <p>通用方案</p>
+     * <p>General scheme</p>
      */
     @NameInMap("SchemeName")
     public String schemeName;
@@ -332,7 +335,7 @@ public class RuleInfo extends TeaModel {
     public Long schemeRuleMappingId;
 
     /**
-     * <p>Indicates whether the scoring item is deleted. A deleted item may be displayed as grayed out.</p>
+     * <p>The deletion status of the scoring item, which is used to gray out the item when it is deleted.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -341,7 +344,7 @@ public class RuleInfo extends TeaModel {
     public Boolean scoreDeleted;
 
     /**
-     * <p>The ID of the main scoring item.</p>
+     * <p>The score category ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -353,7 +356,7 @@ public class RuleInfo extends TeaModel {
      * <p>The name of the main scoring item.</p>
      * 
      * <strong>example:</strong>
-     * <p>违规</p>
+     * <p>Violation</p>
      */
     @NameInMap("ScoreName")
     public String scoreName;
@@ -368,7 +371,7 @@ public class RuleInfo extends TeaModel {
     public Float scoreNum;
 
     /**
-     * <p>The scoring method. This parameter is used for compatibility with the v4.0 protocol. Valid values: <code>0</code> (Add/deduct points when the rule is triggered) and <code>1</code> (Assign a one-time score when the rule is triggered).</p>
+     * <p>The score calculation type. This parameter is dedicated to the version 4.0 protocol. Valid values: 0: Add or deduct points after the rule is triggered. 1: Award a one-time score after the rule is triggered.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -377,7 +380,7 @@ public class RuleInfo extends TeaModel {
     public Integer scoreNumType;
 
     /**
-     * <p>The scoring trigger. Valid values: <code>0</code> (Score when a node is hit).</p>
+     * <p>The score rule hit type. Valid values: 0: Score is calculated when a node is hit.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -386,7 +389,7 @@ public class RuleInfo extends TeaModel {
     public Integer scoreRuleHitType;
 
     /**
-     * <p>The ID of the scoring subitem.</p>
+     * <p>The sub-item ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -395,7 +398,7 @@ public class RuleInfo extends TeaModel {
     public Long scoreSubId;
 
     /**
-     * <p>The name of the scoring subitem.</p>
+     * <p>The sub-scoring item.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -404,7 +407,7 @@ public class RuleInfo extends TeaModel {
     public String scoreSubName;
 
     /**
-     * <p>Indicates whether to add or deduct points.</p>
+     * <p>The score adjustment type.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -413,7 +416,7 @@ public class RuleInfo extends TeaModel {
     public Integer scoreType;
 
     /**
-     * <p>The sort order of the rule in the quality check dimension.</p>
+     * <p>The sort order within the quality inspection dimension.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -422,7 +425,7 @@ public class RuleInfo extends TeaModel {
     public Integer sortIndex;
 
     /**
-     * <p>The start time. This value is a Unix timestamp in milliseconds.</p>
+     * <p>The start time.</p>
      * 
      * <strong>example:</strong>
      * <p>1641277321000</p>
@@ -431,7 +434,7 @@ public class RuleInfo extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The status of the rule.</p>
+     * <p>The rule status.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -440,7 +443,7 @@ public class RuleInfo extends TeaModel {
     public Integer status;
 
     /**
-     * <p>The rule category. This parameter is used for compatibility with the v4.0 protocol. Valid values: <code>10</code> (General rule for quality check schemes) and <code>11</code> (Flow rule for quality check schemes).</p>
+     * <p>The rule category. This parameter is dedicated to the version 4.0 protocol. Valid values: 10: General rule for quality check scheme. 11: Process rule for quality check scheme.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -449,7 +452,7 @@ public class RuleInfo extends TeaModel {
     public Integer targetType;
 
     /**
-     * <p>The ID of the flowchart.</p>
+     * <p>The flow canvas ID.</p>
      * 
      * <strong>example:</strong>
      * <p>111111111</p>
@@ -458,7 +461,7 @@ public class RuleInfo extends TeaModel {
     public Long taskFlowId;
 
     /**
-     * <p>The type of the flowchart. This parameter is deprecated. The default value is <code>1</code>.</p>
+     * <p><strong>[Deprecated]</strong> The task flow type. Default value: -1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -467,13 +470,13 @@ public class RuleInfo extends TeaModel {
     public Integer taskFlowType;
 
     /**
-     * <p>A list of triggers.</p>
+     * <p>The list of trigger conditions.</p>
      */
     @NameInMap("Triggers")
     public java.util.List<String> triggers;
 
     /**
-     * <p>The rule category. This parameter is used for compatibility with the v4.0 protocol. Valid values: <code>2</code> (Public opinion monitoring) and <code>3</code> (Business).</p>
+     * <p>The rule category. Valid values: 2: public opinion monitoring. 3: business. This field is used for 4.0 logic compatibility.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -482,7 +485,7 @@ public class RuleInfo extends TeaModel {
     public Integer type;
 
     /**
-     * <p>The weight of the rule.</p>
+     * <p>The weight.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -944,6 +947,12 @@ public class RuleInfo extends TeaModel {
     }
 
     public static class RuleInfoPreqRule extends TeaModel {
+        /**
+         * <p>The prerequisite rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Rid")
         public String rid;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecuteAgentRequest extends TeaModel {
     /**
-     * <p>The ID of the business workspace.</p>
+     * <p>The ID of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -14,7 +14,7 @@ public class ExecuteAgentRequest extends TeaModel {
     public Long baseMeAgentId;
 
     /**
-     * <p>The complete JSON string. For more information, see the following detailed description.</p>
+     * <p>The complete JSON string. For more information, see the following details.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -23,7 +23,7 @@ public class ExecuteAgentRequest extends TeaModel {
     public String jsonStr;
 
     /**
-     * <p>Specifies whether to enable Server-Sent Events (SSE) responses. Set to true to enable SSE responses. Default value: false.</p>
+     * <p>Specifies whether to enable Server-Sent Events (SSE) responses. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

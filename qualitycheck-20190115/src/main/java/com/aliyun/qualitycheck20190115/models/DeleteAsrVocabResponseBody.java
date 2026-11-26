@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAsrVocabResponseBody extends TeaModel {
     /**
-     * <p>The result code. A value of <strong>200</strong> means success. Any other value means failure. Use this field to identify the cause of failure.</p>
+     * <p>The result code. A value of <strong>200</strong> indicates success, and other values indicate failure. You can determine the cause of the failure based on this field.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DeleteAsrVocabResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The hotword ID you specified as vocabId.</p>
+     * <p>The hot word ID, which is the specified vocabId.</p>
      * 
      * <strong>example:</strong>
      * <p>71b1795ac8634bd8bdf4d3878480c7c2</p>
@@ -23,7 +23,7 @@ public class DeleteAsrVocabResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>Details about the error if the request fails. If the request succeeds, the value is <strong>successful</strong>.</p>
+     * <p>The error details if an error occurs, or <strong>successful</strong> if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -41,12 +41,10 @@ public class DeleteAsrVocabResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded. Use this field to check the result:</p>
+     * <p>Indicates whether the request is successful. You can determine whether the request is successful based on this field:</p>
      * <ul>
-     * <li><p><strong>true</strong> means success.</p>
-     * </li>
-     * <li><p>false or <strong>null</strong> means failure.</p>
-     * </li>
+     * <li><strong>true</strong>: Successful.</li>
+     * <li><strong>false/null</strong>: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

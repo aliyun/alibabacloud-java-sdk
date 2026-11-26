@@ -17,7 +17,7 @@ public class CreateAgentTaskRequest extends TeaModel {
      * <p>The complete <strong>JSON string</strong> information. For details, see the following sections.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;\&quot;:\&quot;\&quot;}</p>
+     * <p>{&quot;&quot;:&quot;&quot;}</p>
      */
     @NameInMap("JsonStr")
     public String jsonStr;

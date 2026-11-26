@@ -5,17 +5,20 @@ import com.aliyun.tea.*;
 
 public class DeleteAsrVocabRequest extends TeaModel {
     /**
-     * <p>BaseMeAgentId</p>
+     * <p>The workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
-     * <p>A complete JSON string. For details, see the table below.</p>
+     * <p>The complete JSON string. For more information, see the following details.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;vocabId&quot;:&quot;指定热词Id&quot;}</p>
+     * <p>{&quot;vocabId&quot;:&quot;Specified hot word ID&quot;}</p>
      */
     @NameInMap("JsonStr")
     public String jsonStr;

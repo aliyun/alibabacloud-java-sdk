@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetResultRequest extends TeaModel {
     /**
-     * <p>Workspace ID.</p>
+     * <p>The workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>12345</p>
@@ -14,7 +14,7 @@ public class GetResultRequest extends TeaModel {
     public Long baseMeAgentId;
 
     /**
-     * <p>Full JSON string. See the detailed description below.</p>
+     * <p>The complete JSON string. For more information, see the following details.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

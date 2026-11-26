@@ -23,7 +23,7 @@ public class DeleteCheckTypeToSchemeResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The message returned. If the request is successful, \<code>successful\\</code> is returned. If the request fails, an error message is returned.</p>
+     * <p>The message returned. If the request is successful, `successful` is returned. If the request fails, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>

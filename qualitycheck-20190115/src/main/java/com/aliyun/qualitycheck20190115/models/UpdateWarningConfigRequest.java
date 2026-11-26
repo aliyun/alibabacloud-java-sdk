@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateWarningConfigRequest extends TeaModel {
     /**
      * <p>workspace ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;

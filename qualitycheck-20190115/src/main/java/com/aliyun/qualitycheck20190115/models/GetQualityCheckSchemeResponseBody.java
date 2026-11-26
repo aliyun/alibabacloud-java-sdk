@@ -246,7 +246,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
          * <p>The username of the creator.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>zhangsan</p>
          */
         @NameInMap("CreateUserName")
         public String createUserName;
@@ -282,7 +282,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
          * <p>The name of the quality check plan.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>示例质检方案</p>
          */
         @NameInMap("Name")
         public String name;
@@ -363,7 +363,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
          * <p>The username of the user who last updated the plan.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>lisi</p>
          */
         @NameInMap("UpdateUserName")
         public String updateUserName;

@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListSchemeTaskConfigRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>The ID of the business workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
-     * <p>The request parameter JSON. For details, see the supplementary description of request parameters.</p>
+     * <p>The input JSON string. For more information, see the supplementary description of request parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;pageNumber&quot;:1,&quot;pageSize&quot;:10,&quot;sourceDataType&quot;:&quot;1&quot;}</p>

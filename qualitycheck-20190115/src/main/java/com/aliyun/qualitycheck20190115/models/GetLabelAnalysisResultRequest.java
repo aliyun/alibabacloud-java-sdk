@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLabelAnalysisResultRequest extends TeaModel {
     /**
-     * <p>The business space ID.</p>
+     * <p>The workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>12345</p>
@@ -14,7 +14,7 @@ public class GetLabelAnalysisResultRequest extends TeaModel {
     public Long baseMeAgentId;
 
     /**
-     * <p>The complete JSON string. For more information, see the following detailed description.</p>
+     * <p>The complete JSON string. For details, see the following information.</p>
      * 
      * <strong>example:</strong>
      * <p>“”</p>

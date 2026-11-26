@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadAudioDataRequest extends TeaModel {
     /**
-     * <p>The business space ID. In multi-business space scenarios, this parameter specifies the business space to use. Default value: the default business space.</p>
+     * <p>The workspace ID. This parameter is used to select a specific workspace in multi-workspace scenarios. Default value: the default workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -14,7 +14,7 @@ public class UploadAudioDataRequest extends TeaModel {
     public Long baseMeAgentId;
 
     /**
-     * <p>The complete JSON string. For details about the content, see the following detailed information.</p>
+     * <p>The complete JSON string. For details, see the following information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

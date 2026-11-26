@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecuteAgentResponseBody extends TeaModel {
     /**
-     * <p>The status code. A value of 200 indicates success.</p>
+     * <p>The status code. A value of 200 indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ExecuteAgentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public ExecuteAgentResponseBodyData data;
@@ -38,7 +38,7 @@ public class ExecuteAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. The caller can use this field to determine whether the request was successful. Valid values: <strong>true</strong>: The request was successful. <strong>false/null</strong>: The request failed.</p>
+     * <p>Indicates whether the request is successful. You can use this field to determine the request result. <strong>true</strong> indicates success. <strong>false</strong> or <strong>null</strong> indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class ExecuteAgentResponseBody extends TeaModel {
 
     public static class ExecuteAgentResponseBodyData extends TeaModel {
         /**
-         * <p>If streaming output is used, this value is null during generation. When generation is complete, the value is stop if the generation ended due to a stop token.</p>
+         * <p>The reason why the generation finished. For streaming output, this field is null during generation. If the generation stops due to a stop token, the value is stop.</p>
          * 
          * <strong>example:</strong>
          * <p>stop</p>
@@ -132,7 +132,7 @@ public class ExecuteAgentResponseBody extends TeaModel {
          * <p>The result returned by the large language model.</p>
          * 
          * <strong>example:</strong>
-         * <p>这段对话似乎是客服与客户之间关于一个服务或产品的讨论，但具体内容难以明确理解，因为对话中的言语比较零散和抽象。</p>
+         * <p>This conversation appears to be a discussion between a customer service representative and a customer about a service or product, but the specific content is difficult to understand clearly because the language in the conversation is relatively fragmented and abstract</p>
          */
         @NameInMap("Text")
         public String text;
@@ -147,7 +147,7 @@ public class ExecuteAgentResponseBody extends TeaModel {
         public Long totalTokens;
 
         /**
-         * <p>The number of times the plus model was used.</p>
+         * <p>The number of times the plus model is used.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -156,7 +156,7 @@ public class ExecuteAgentResponseBody extends TeaModel {
         public String tyxmPlusCount;
 
         /**
-         * <p>The number of times the turbo model was used.</p>
+         * <p>The number of times the turbo model is used.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

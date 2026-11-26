@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAgentResponseBody extends TeaModel {
     /**
-     * <p>The result code. A value of <strong>200</strong> indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</p>
+     * <p>The result code. A value of <strong>200</strong> indicates success, and other values indicate failure. You can use this field to determine the cause of the failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class CreateAgentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The AgentId of the task.</p>
+     * <p>The ID of the agent for the task.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -23,7 +23,7 @@ public class CreateAgentResponseBody extends TeaModel {
     public Long data;
 
     /**
-     * <p>The error message, if any.</p>
+     * <p>The error message. This field is returned if an error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -41,7 +41,11 @@ public class CreateAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values: true: The call was successful. false: The call failed.</p>
+     * <p>Specifies whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

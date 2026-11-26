@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AnalyzeLabelResponseBody extends TeaModel {
     /**
-     * <p>The result code. A value of <strong>200</strong> indicates success. Other values indicate failure. You can use this field to determine the cause of the failure.</p>
+     * <p>The result code. A value of <strong>200</strong> indicates success, whereas other values indicate failure. You can determine the cause of the failure based on this field.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class AnalyzeLabelResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The error message, if any.</p>
+     * <p>The error message returned if an error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -41,7 +41,11 @@ public class AnalyzeLabelResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. true: The call was successful. false: The call failed.</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

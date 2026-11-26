@@ -20,7 +20,7 @@ public class ListAgentMJobInfoResponseBody extends TeaModel {
     public java.util.List<ListAgentMJobInfoResponseBodyData> data;
 
     /**
-     * <p>The error message, if an error occurs.</p>
+     * <p>The error message returned if an error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -38,11 +38,7 @@ public class ListAgentMJobInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false/null: The request failed.</li>
-     * </ul>
+     * <p>Indicates whether the request was successful. A value of true indicates success, and a value of false or null indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -124,7 +120,7 @@ public class ListAgentMJobInfoResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The error message, if an error occurs.</p>
+         * <p>The error message returned if an error occurs.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -139,7 +135,7 @@ public class ListAgentMJobInfoResponseBody extends TeaModel {
          * <li>readyAnalysis: The task is pending analysis.</li>
          * <li>running: The task is running.</li>
          * <li>error: The task failed.</li>
-         * <li>finish: The task is complete.</li>
+         * <li>finish: The task is completed.</li>
          * <li>fileUploadUser: The user-specified file is uploaded.</li>
          * <li>fileUploadSystem: The system-generated file is uploaded.</li>
          * <li>expired: The task has expired.</li>
@@ -161,7 +157,7 @@ public class ListAgentMJobInfoResponseBody extends TeaModel {
         public String taskEndTime;
 
         /**
-         * <p>The scheduled task ID.</p>
+         * <p>The ID of the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>20250728-8B43DF47-24DB-1CED-8D74-2AB204187D45</p>

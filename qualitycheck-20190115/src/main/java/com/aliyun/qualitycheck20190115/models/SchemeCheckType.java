@@ -144,7 +144,7 @@ public class SchemeCheckType extends TeaModel {
          * <p>Rule Name</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>示例规则</p>
          */
         @NameInMap("Name")
         public String name;
@@ -207,7 +207,7 @@ public class SchemeCheckType extends TeaModel {
          * <p>Flow name</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>示例流程</p>
          */
         @NameInMap("TaskFlowName")
         public String taskFlowName;
@@ -288,7 +288,7 @@ public class SchemeCheckType extends TeaModel {
          * <p>Rule Name</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>示例规则</p>
          */
         @NameInMap("Name")
         public String name;
@@ -351,7 +351,7 @@ public class SchemeCheckType extends TeaModel {
          * <p>flow name</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>示例流程</p>
          */
         @NameInMap("TaskFlowName")
         public String taskFlowName;
@@ -447,13 +447,13 @@ public class SchemeCheckType extends TeaModel {
          * <p>flow name</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>示例流程</p>
          */
         @NameInMap("TaskFlowName")
         public String taskFlowName;
 
         /**
-         * <p>\&quot;Flow version: 0: tree, 1: graph\&quot;</p>
+         * <p>&quot;Flow version: 0: tree, 1: graph&quot;</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

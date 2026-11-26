@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteDataSetRequest extends TeaModel {
     /**
      * <p>Workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;

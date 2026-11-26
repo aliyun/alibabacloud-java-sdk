@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSchemeTaskConfigResponseBody extends TeaModel {
     /**
-     * <p>Result code. <strong>200</strong> indicates success. Other values indicate failure. Callers can use this field to determine the cause of failure.</p>
+     * <p>The result code. A value of <strong>200</strong> indicates success. Any other value indicates failure. You can determine the cause of the failure based on this field.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Total entries.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>22</p>
@@ -23,7 +23,7 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +35,7 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
     public ListSchemeTaskConfigResponseBodyData data;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -44,16 +44,16 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>This field marks the data. When querying more than 10,000 entries using GetResult, include the \<code>lastDataId\\</code> of the last entry from the previous query in each request parameter.</p>
+     * <p>The identifier of the current data record. When you use the GetResult operation to query more than 10,000 data records, you must include the lastDataId value of the last data record from the previous query result in the request parameters of each subsequent request.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>1000</p>
      */
     @NameInMap("LastDataId")
     public String lastDataId;
 
     /**
-     * <p>Provides error details on failure. For success, it is <strong>successful</strong>.</p>
+     * <p>The error details when an error occurs, or <strong>successful</strong> when the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -65,7 +65,7 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
     public ListSchemeTaskConfigResponseBodyMessages messages;
 
     /**
-     * <p>Current page.</p>
+     * <p>The current page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -74,7 +74,7 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Entries displayed per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -83,7 +83,7 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4B0A8DCD-0DDF-5E80-8B9C-0A2F68B3403B</p>
@@ -92,16 +92,16 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Internal field. Ignore it.</p>
+     * <p>An internal field. Ignore this field.</p>
      * 
      * <strong>example:</strong>
-     * <p>忽略</p>
+     * <p>Ignore</p>
      */
     @NameInMap("ResultCountId")
     public String resultCountId;
 
     /**
-     * <p>Indicates whether the request was successful. Callers can use this field to determine if the request succeeded: \<code>true\\</code> for success, \<code>false\\</code>/\<code>null\\</code> for failure.</p>
+     * <p>Indicates whether the request is successful. You can determine whether the request is successful based on this field. A value of true indicates success, and a value of false or null indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

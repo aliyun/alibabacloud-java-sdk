@@ -14,10 +14,10 @@ public class DeleteAgentRequest extends TeaModel {
     public Long baseMeAgentId;
 
     /**
-     * <p>A JSON-formatted string. For more information about the complete JSON string, see the following details.</p>
+     * <p>The JSON-formatted string. For the complete JSON string information, see the following details.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;id\&quot;:486}</p>
+     * <p>{&quot;id&quot;:486}</p>
      */
     @NameInMap("JsonStr")
     public String jsonStr;

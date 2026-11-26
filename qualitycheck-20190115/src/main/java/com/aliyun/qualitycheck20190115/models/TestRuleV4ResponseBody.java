@@ -303,7 +303,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
         public String tid;
 
         /**
-         * <p>The position of the character that follows the highlighted keyword. The character at the \<code>to\\</code> position is not included in the highlight. For example, if \<code>from\\</code> is 0 and \<code>to\\</code> is 3, the highlighted keyword consists of the characters at indices 0, 1, and 2. The maximum value is one less than the total number of characters in the sentence.</p>
+         * <p>The position of the character that follows the highlighted keyword. The character at the `to` position is not included in the highlight. For example, if `from` is 0 and `to` is 3, the highlighted keyword consists of the characters at indices 0, 1, and 2. The maximum value is one less than the total number of characters in the sentence.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -815,7 +815,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
         public String judgeNodeName;
 
         /**
-         * <p>Lambda expression. Example: a&amp;\&amp;b.</p>
+         * <p>Lambda expression. Example: a&amp;&amp;b.</p>
          * 
          * <strong>example:</strong>
          * <p>a&amp;&amp;b</p>

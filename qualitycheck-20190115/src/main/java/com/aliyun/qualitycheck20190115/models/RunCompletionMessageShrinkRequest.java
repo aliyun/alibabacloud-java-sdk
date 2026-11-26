@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class RunCompletionMessageShrinkRequest extends TeaModel {
     /**
-     * <p>A list of messages that form the conversation history and the current prompt.</p>
+     * <p>The list of messages in the model request.</p>
      */
     @NameInMap("Messages")
     public String messagesShrink;
 
     /**
-     * <p>The model specification to use. Valid values: <code>TYXM_PLUS</code> and <code>TYXM_TURBO</code>.</p>
+     * <p>The model specification. Valid values: TYXM_PLUS and TYXM_TURBO.</p>
      * 
      * <strong>example:</strong>
      * <p>TYXM_PLUS</p>
@@ -20,7 +20,7 @@ public class RunCompletionMessageShrinkRequest extends TeaModel {
     public String modelCode;
 
     /**
-     * <p>Specifies whether to stream the response using Server-Sent Events (SSE). If <code>true</code>, the response is streamed. Defaults to <code>false</code>.</p>
+     * <p>Specifies whether to enable Server-Sent Events (SSE) responses. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -20,7 +20,7 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
     public GetNextResultToVerifyResponseBodyData data;
 
     /**
-     * <p>Error details if an error occurs. If successful, the value is \&quot;successful\&quot;.</p>
+     * <p>Error details if an error occurs. If successful, the value is &quot;successful&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -38,7 +38,7 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. The caller can determine if the request was successful using this field: \<code>true\\</code> indicates success; \<code>false\\</code>/\<code>null\\</code> indicates failure.</p>
+     * <p>Indicates whether the request was successful. The caller can determine if the request was successful using this field: `true` indicates success; `false`/`null` indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -534,7 +534,7 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>Indicates whether manual verification has been performed. Possible values: \<code>false\\</code>: Not yet verified; \<code>true\\</code>: Already verified.</p>
+         * <p>Indicates whether manual verification has been performed. Possible values: `false`: Not yet verified; `true`: Already verified.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

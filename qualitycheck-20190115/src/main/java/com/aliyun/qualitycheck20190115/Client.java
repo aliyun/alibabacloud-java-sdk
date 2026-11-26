@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "Qualitycheck";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("qualitycheck", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -178,7 +181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs tag categorization.</p>
+     * <p>Analyzes tags.</p>
      * 
      * @param request AnalyzeLabelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -214,7 +217,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs tag categorization.</p>
+     * <p>Analyzes tags.</p>
      * 
      * @param request AnalyzeLabelRequest
      * @return AnalyzeLabelResponse
@@ -644,6 +647,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建HTTP回调事件配置</p>
+     * 
+     * @param request CreateHttpEventConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateHttpEventConfigResponse
+     */
+    public CreateHttpEventConfigResponse createHttpEventConfigWithOptions(CreateHttpEventConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            body.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
+            body.put("JsonStr", request.jsonStr);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateHttpEventConfig"),
+            new TeaPair("version", "2019-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateHttpEventConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建HTTP回调事件配置</p>
+     * 
+     * @param request CreateHttpEventConfigRequest
+     * @return CreateHttpEventConfigResponse
+     */
+    public CreateHttpEventConfigResponse createHttpEventConfig(CreateHttpEventConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createHttpEventConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a label mining task.</p>
      * 
      * @param request CreateMiningTaskRequest
@@ -858,7 +909,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a label node.</p>
+     * <p>Creates a tag node.</p>
      * 
      * @param request CreateTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -894,7 +945,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a label node.</p>
+     * <p>Creates a tag node.</p>
      * 
      * @param request CreateTagRequest
      * @return CreateTagResponse
@@ -1200,7 +1251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a hotword group.</p>
+     * <p>Deletes a hot word group.</p>
      * 
      * @param request DeleteAsrVocabRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1236,7 +1287,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a hotword group.</p>
+     * <p>Deletes a hot word group.</p>
      * 
      * @param request DeleteAsrVocabRequest
      * @return DeleteAsrVocabResponse
@@ -1448,6 +1499,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Deletes the HTTP callback event configuration.</p>
+     * 
+     * @param request DeleteHttpEventConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteHttpEventConfigResponse
+     */
+    public DeleteHttpEventConfigResponse deleteHttpEventConfigWithOptions(DeleteHttpEventConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            body.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
+            body.put("JsonStr", request.jsonStr);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteHttpEventConfig"),
+            new TeaPair("version", "2019-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteHttpEventConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes the HTTP callback event configuration.</p>
+     * 
+     * @param request DeleteHttpEventConfigRequest
+     * @return DeleteHttpEventConfigResponse
+     */
+    public DeleteHttpEventConfigResponse deleteHttpEventConfig(DeleteHttpEventConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteHttpEventConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>You can delete a quality check plan from the Quality Check Plan Management page by clicking the Delete button on the right side of the plan. The Apsara Stack API endpoint is ip:port/api/qcs/DeleteQualityCheckScheme.json.</p>
      * 
      * @param request DeleteQualityCheckSchemeRequest
@@ -1496,7 +1595,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This operation deletes a quality check rule. You can access it from the Quality Check Rule Configuration page in the Apsara Stack console. The API endpoint is ip:port/api/client/DeleteRule.json.</p>
+     * <p>Deletes a quality check rule. Corresponds to the frontend feature location: Quality check rule configuration - Delete. Corresponds to the Apsara Stack URL: ip:port/api/client/DeleteRule.json.</p>
      * 
      * @deprecated OpenAPI DeleteRule is deprecated, please use Qualitycheck::2019-01-15::DeleteRuleV4 instead.
      * 
@@ -1546,7 +1645,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This operation deletes a quality check rule. You can access it from the Quality Check Rule Configuration page in the Apsara Stack console. The API endpoint is ip:port/api/client/DeleteRule.json.</p>
+     * <p>Deletes a quality check rule. Corresponds to the frontend feature location: Quality check rule configuration - Delete. Corresponds to the Apsara Stack URL: ip:port/api/client/DeleteRule.json.</p>
      * 
      * @deprecated OpenAPI DeleteRule is deprecated, please use Qualitycheck::2019-01-15::DeleteRuleV4 instead.
      * 
@@ -2108,8 +2207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries data uploaded through <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>, or queries data from a dataset quality check task <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can query by task ID (taskId) or by time range.
-     * By default, only partial parameters are returned in the response. Use the requiredFields request parameter to specify which fields to include in the response.</p>
+     * <p>You can query data uploaded by calling <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>, as well as data for dataset quality check tasks submitted by calling <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can query the data by task ID or time range. By default, the response of this operation returns only a subset of parameters. You can use the requiredFields request parameter to specify the fields to be returned.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the task result of an agent node.</p>
@@ -2148,8 +2246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries data uploaded through <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>, or queries data from a dataset quality check task <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can query by task ID (taskId) or by time range.
-     * By default, only partial parameters are returned in the response. Use the requiredFields request parameter to specify which fields to include in the response.</p>
+     * <p>You can query data uploaded by calling <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>, as well as data for dataset quality check tasks submitted by calling <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can query the data by task ID or time range. By default, the response of this operation returns only a subset of parameters. You can use the requiredFields request parameter to specify the fields to be returned.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the task result of an agent node.</p>
@@ -2308,7 +2405,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the results of tag categorization analysis.</p>
+     * <p>获取HTTP回调事件配置</p>
+     * 
+     * @param request GetHttpEventConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetHttpEventConfigResponse
+     */
+    public GetHttpEventConfigResponse getHttpEventConfigWithOptions(GetHttpEventConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            body.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
+            body.put("JsonStr", request.jsonStr);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetHttpEventConfig"),
+            new TeaPair("version", "2019-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetHttpEventConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取HTTP回调事件配置</p>
+     * 
+     * @param request GetHttpEventConfigRequest
+     * @return GetHttpEventConfigResponse
+     */
+    public GetHttpEventConfigResponse getHttpEventConfig(GetHttpEventConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getHttpEventConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries tag analysis results.</p>
      * 
      * @param request GetLabelAnalysisResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2344,7 +2489,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the results of tag categorization analysis.</p>
+     * <p>Queries tag analysis results.</p>
      * 
      * @param request GetLabelAnalysisResultRequest
      * @return GetLabelAnalysisResultResponse
@@ -2548,10 +2693,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query data uploaded using <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>. You can also query data from dataset-based quality inspection tasks created with <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can search by task ID (taskId) or by time range.</p>
+     * <p>Queries data uploaded by calling <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>, and data of dataset quality check tasks submitted by calling <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can query data by task ID or time range. By default, the response includes only a subset of parameters. You can use the requiredFields request parameter to specify the fields to return.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query quality inspection results. Some fields require the requiredFields parameter to be explicitly specified in the request. Set the service endpoint (Region) to Hangzhou (cn-hangzhou).</p>
+     * <p>Queries quality check results. Some results are returned only when explicitly specified by the requiredFields request parameter. Set the region to China (Hangzhou) (cn-hangzhou).</p>
      * 
      * @param request GetResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2587,10 +2732,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query data uploaded using <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>. You can also query data from dataset-based quality inspection tasks created with <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can search by task ID (taskId) or by time range.</p>
+     * <p>Queries data uploaded by calling <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>, and data of dataset quality check tasks submitted by calling <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can query data by task ID or time range. By default, the response includes only a subset of parameters. You can use the requiredFields request parameter to specify the fields to return.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query quality inspection results. Some fields require the requiredFields parameter to be explicitly specified in the request. Set the service endpoint (Region) to Hangzhou (cn-hangzhou).</p>
+     * <p>Queries quality check results. Some results are returned only when explicitly specified by the requiredFields request parameter. Set the region to China (Hangzhou) (cn-hangzhou).</p>
      * 
      * @param request GetResultRequest
      * @return GetResultResponse
@@ -2602,7 +2747,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the quality inspection results for a specified file. The response includes the transcript, audio URL, and details of detected rule hits. You can use this information to review the file by listening to the audio, reading the transcript, and locating where rules were triggered.</p>
+     * <p>Retrieves the quality check result details of a specified file for review. The details include the transcribed text, recording URL, and information about matched check items. You can use this information to listen to the recording, view the transcribed text, and locate the matched check items to review the file.</p>
      * 
      * @param request GetResultToReviewRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2638,7 +2783,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the quality inspection results for a specified file. The response includes the transcript, audio URL, and details of detected rule hits. You can use this information to review the file by listening to the audio, reading the transcript, and locating where rules were triggered.</p>
+     * <p>Retrieves the quality check result details of a specified file for review. The details include the transcribed text, recording URL, and information about matched check items. You can use this information to listen to the recording, view the transcribed text, and locate the matched check items to review the file.</p>
      * 
      * @param request GetResultToReviewRequest
      * @return GetResultToReviewResponse
@@ -3126,7 +3271,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the configuration that is specified by its ID.</p>
+     * <p>Retrieves the specified configuration by ID.</p>
      * 
      * @deprecated OpenAPI GetSkillGroupConfig is deprecated
      * 
@@ -3166,7 +3311,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the configuration that is specified by its ID.</p>
+     * <p>Retrieves the specified configuration by ID.</p>
      * 
      * @deprecated OpenAPI GetSkillGroupConfig is deprecated
      * 
@@ -3238,7 +3383,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a label node.</p>
+     * <p>Queries the details of a tag node.</p>
      * 
      * @param request GetTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3274,7 +3419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a label node.</p>
+     * <p>Queries the details of a tag node.</p>
      * 
      * @param request GetTagRequest
      * @return GetTagResponse
@@ -3444,7 +3589,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists AI analysis assistant tasks.</p>
+     * <p>Lists the tasks of the AI analysis assistant.</p>
      * 
      * @param request ListAgentMJobInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3480,7 +3625,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists AI analysis assistant tasks.</p>
+     * <p>Lists the tasks of the AI analysis assistant.</p>
      * 
      * @param request ListAgentMJobInfoRequest
      * @return ListAgentMJobInfoResponse
@@ -3700,7 +3845,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Frontend location: Quality inspection rule configuration — List. Apsara Stack URL: ip:port/api/rule/GetRulesCountList.json.</p>
+     * <p>Corresponds to the frontend feature location: Quality Inspection Rule Configuration - List. Apsara Stack URL: ip:port/api/rule/GetRulesCountList.json.</p>
      * 
      * @param request ListRulesV4Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -3838,7 +3983,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Frontend location: Quality inspection rule configuration — List. Apsara Stack URL: ip:port/api/rule/GetRulesCountList.json.</p>
+     * <p>Corresponds to the frontend feature location: Quality Inspection Rule Configuration - List. Apsara Stack URL: ip:port/api/rule/GetRulesCountList.json.</p>
      * 
      * @param request ListRulesV4Request
      * @return ListRulesV4Response
@@ -3850,7 +3995,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This operation is used for the Task Management feature on the frontend. The Apsara Stack URL is ip:port/api/task/ListSchemeTaskInfo.json.</p>
+     * <p>Corresponds to the frontend feature location: Task Management. Apsara Stack URL: ip:port/api/task/ListSchemeTaskInfo.json.</p>
      * 
      * @param request ListSchemeTaskConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3886,7 +4031,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This operation is used for the Task Management feature on the frontend. The Apsara Stack URL is ip:port/api/task/ListSchemeTaskInfo.json.</p>
+     * <p>Corresponds to the frontend feature location: Task Management. Apsara Stack URL: ip:port/api/task/ListSchemeTaskInfo.json.</p>
      * 
      * @param request ListSchemeTaskConfigRequest
      * @return ListSchemeTaskConfigResponse
@@ -4010,7 +4155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of label nodes.</p>
+     * <p>Queries the list of tag nodes.</p>
      * 
      * @param request ListTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4046,7 +4191,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of label nodes.</p>
+     * <p>Queries the list of tag nodes.</p>
      * 
      * @param request ListTagRequest
      * @return ListTagResponse
@@ -4298,7 +4443,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can use this feature in the frontend console under Plan Management &gt; Task Result &gt; Session Group &gt; Batch Revoke. The Apsara Stack URL for this operation is <code>ip:port/api/job/RevertAssignedSessionGroup.json</code>.</p>
+     * <p>Corresponds to the frontend feature location: Quality Check Plan Management - Task Results - Session Groups - Batch Revoke. Apsara Stack URL: ip:port/api/job/RevertAssignedSessionGroup.json.</p>
      * 
      * @deprecated OpenAPI RevertAssignedSessionGroup is deprecated
      * 
@@ -4338,7 +4483,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can use this feature in the frontend console under Plan Management &gt; Task Result &gt; Session Group &gt; Batch Revoke. The Apsara Stack URL for this operation is <code>ip:port/api/job/RevertAssignedSessionGroup.json</code>.</p>
+     * <p>Corresponds to the frontend feature location: Quality Check Plan Management - Task Results - Session Groups - Batch Revoke. Apsara Stack URL: ip:port/api/job/RevertAssignedSessionGroup.json.</p>
      * 
      * @deprecated OpenAPI RevertAssignedSessionGroup is deprecated
      * 
@@ -4354,7 +4499,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This operation calls a large model using the message protocol to generate a response. You can make calls using standard HTTP for a complete response or use Server-Sent Events (SSE) for a streaming response.</p>
+     * <p>Invokes a large language model in the Message protocol format to obtain analysis results. The API supports standard HTTP and HTTP Server-Sent Events (SSE) protocols. You can select a protocol based on your requirements.</p>
      * 
      * @param tmpReq RunCompletionMessageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4400,7 +4545,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This operation calls a large model using the message protocol to generate a response. You can make calls using standard HTTP for a complete response or use Server-Sent Events (SSE) for a streaming response.</p>
+     * <p>Invokes a large language model in the Message protocol format to obtain analysis results. The API supports standard HTTP and HTTP Server-Sent Events (SSE) protocols. You can select a protocol based on your requirements.</p>
      * 
      * @param request RunCompletionMessageRequest
      * @return RunCompletionMessageResponse
@@ -4516,7 +4661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a new dataset quality check task.</p>
+     * <p>Creates a dataset quality inspection task.</p>
      * 
      * @param request SubmitQualityCheckTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4552,7 +4697,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a new dataset quality check task.</p>
+     * <p>Creates a dataset quality inspection task.</p>
      * 
      * @param request SubmitQualityCheckTaskRequest
      * @return SubmitQualityCheckTaskResponse
@@ -4564,10 +4709,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can manually review files after quality inspection. After completing the review, call this API to save the review results. This involves manually reviewing rules identified by the system as hits to determine if they are true hits or false positives. Refer to the file review feature on the console page. For more information, see <a href="https://help.aliyun.com/document_detail/139653.html#h2-u6587u4EF6u590Du68385">File Review</a>.</p>
+     * <p>Manually reviews files that have completed quality inspection. After the review is complete, call this operation to save the review results. This allows you to manually verify whether the rules identified as hits by the system are actual hits or false positives. You can refer to the file review feature in the console. For more information, see <a href="https://help.aliyun.com/document_detail/139653.html#h2-u6587u4EF6u590Du68385">File review</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Save review results. This is only supported by the legacy Smart Conversation Analysis.</p>
+     * <p>Saves review results. This operation is supported only for legacy intelligent dialogue analysis.</p>
      * 
      * @param request SubmitReviewInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4603,10 +4748,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can manually review files after quality inspection. After completing the review, call this API to save the review results. This involves manually reviewing rules identified by the system as hits to determine if they are true hits or false positives. Refer to the file review feature on the console page. For more information, see <a href="https://help.aliyun.com/document_detail/139653.html#h2-u6587u4EF6u590Du68385">File Review</a>.</p>
+     * <p>Manually reviews files that have completed quality inspection. After the review is complete, call this operation to save the review results. This allows you to manually verify whether the rules identified as hits by the system are actual hits or false positives. You can refer to the file review feature in the console. For more information, see <a href="https://help.aliyun.com/document_detail/139653.html#h2-u6587u4EF6u590Du68385">File review</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Save review results. This is only supported by the legacy Smart Conversation Analysis.</p>
+     * <p>Saves review results. This operation is supported only for legacy intelligent dialogue analysis.</p>
      * 
      * @param request SubmitReviewInfoRequest
      * @return SubmitReviewInfoResponse
@@ -4742,12 +4887,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>测试HTTP回调事件配置</p>
+     * 
+     * @param request TestHttpEventConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TestHttpEventConfigResponse
+     */
+    public TestHttpEventConfigResponse testHttpEventConfigWithOptions(TestHttpEventConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            body.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
+            body.put("JsonStr", request.jsonStr);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TestHttpEventConfig"),
+            new TeaPair("version", "2019-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TestHttpEventConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>测试HTTP回调事件配置</p>
+     * 
+     * @param request TestHttpEventConfigRequest
+     * @return TestHttpEventConfigResponse
+     */
+    public TestHttpEventConfigResponse testHttpEventConfig(TestHttpEventConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.testHttpEventConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Frontend location: Quality Check Rule Configuration &gt; Test. Apsara Stack URL: http://<ip>:<port>/api/client/TestRule.json.</p>
+     * 
+     * @deprecated OpenAPI TestRuleV4 is deprecated
      * 
      * @param request TestRuleV4Request
      * @param runtime runtime options for this request RuntimeOptions
      * @return TestRuleV4Response
      */
+    @Deprecated
+    // Deprecated
     public TestRuleV4Response testRuleV4WithOptions(TestRuleV4Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -4780,9 +4977,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Frontend location: Quality Check Rule Configuration &gt; Test. Apsara Stack URL: http://<ip>:<port>/api/client/TestRule.json.</p>
      * 
+     * @deprecated OpenAPI TestRuleV4 is deprecated
+     * 
      * @param request TestRuleV4Request
      * @return TestRuleV4Response
      */
+    @Deprecated
+    // Deprecated
     public TestRuleV4Response testRuleV4(TestRuleV4Request request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.testRuleV4WithOptions(request, runtime);
@@ -4886,7 +5087,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can access this operation from the frontend by navigating to Plan Management &gt; Create Quality Inspection Task or Edit &gt; Edit icon next to the quality inspection dimension name. The Apsara Stack endpoint is ip:port/api/qcs/UpdateCheckTypeToScheme.json.</p>
+     * <p>Updates the check type for a quality inspection scheme. Frontend location: Quality Inspection Scheme Management &gt; Create or Edit Quality Inspection Task &gt; Edit icon next to the quality inspection dimension name. Apsara Stack URL: ip:port/api/qcs/UpdateCheckTypeToScheme.json.</p>
      * 
      * @param request UpdateCheckTypeToSchemeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4922,7 +5123,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can access this operation from the frontend by navigating to Plan Management &gt; Create Quality Inspection Task or Edit &gt; Edit icon next to the quality inspection dimension name. The Apsara Stack endpoint is ip:port/api/qcs/UpdateCheckTypeToScheme.json.</p>
+     * <p>Updates the check type for a quality inspection scheme. Frontend location: Quality Inspection Scheme Management &gt; Create or Edit Quality Inspection Task &gt; Edit icon next to the quality inspection dimension name. Apsara Stack URL: ip:port/api/qcs/UpdateCheckTypeToScheme.json.</p>
      * 
      * @param request UpdateCheckTypeToSchemeRequest
      * @return UpdateCheckTypeToSchemeResponse
@@ -4930,6 +5131,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateCheckTypeToSchemeResponse updateCheckTypeToScheme(UpdateCheckTypeToSchemeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateCheckTypeToSchemeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改HTTP回调事件配置</p>
+     * 
+     * @param request UpdateHttpEventConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateHttpEventConfigResponse
+     */
+    public UpdateHttpEventConfigResponse updateHttpEventConfigWithOptions(UpdateHttpEventConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            body.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
+            body.put("JsonStr", request.jsonStr);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateHttpEventConfig"),
+            new TeaPair("version", "2019-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateHttpEventConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改HTTP回调事件配置</p>
+     * 
+     * @param request UpdateHttpEventConfigRequest
+     * @return UpdateHttpEventConfigResponse
+     */
+    public UpdateHttpEventConfigResponse updateHttpEventConfig(UpdateHttpEventConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateHttpEventConfigWithOptions(request, runtime);
     }
 
     /**
@@ -5426,7 +5675,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a label node.</p>
+     * <p>Updates a tag node.</p>
      * 
      * @param request UpdateTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5462,7 +5711,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a label node.</p>
+     * <p>Updates a tag node.</p>
      * 
      * @param request UpdateTagRequest
      * @return UpdateTagResponse
@@ -5672,36 +5921,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Process description</h3>
-     * <p>Call the API to upload audio quality inspection =&gt; Convert the recording file to text =&gt; Separate roles in the text based on the specified channel splitting method (distinguish between agent and customer) =&gt; Analyze using quality inspection rules =&gt; Quality inspection complete.</p>
+     * <h3>Workflow</h3>
+     * <p>Call the API to upload audio for quality inspection =&gt; Convert the audio file to text =&gt; Separate the text into roles (agent and customer) based on the specified track splitting method =&gt; Analyze the text by using quality inspection rules =&gt; Complete the quality inspection.</p>
      * <h3>Task execution efficiency</h3>
-     * <p>The speed of task execution depends on the speed of converting the recording file to text. Ideally, a 5-minute recording file can be transcribed within 2 minutes. However, when the transcription service has many queued tasks, there will be a queuing wait time. Generally, transcription completes within 6 hours, except for bulk uploads of large-scale data (more than 500 hours of recordings uploaded within 30 minutes). After transcription is complete, quality inspection analysis takes only milliseconds.</p>
-     * <h3>Recording file URL requirements</h3>
+     * <p>The execution speed of a task depends on the speed of converting the audio file to text. Ideally, a 5-minute audio file can be transcribed within 2 minutes. However, if the file transcription service has a large queue, a waiting time is required. Generally, the transcription is completed within 6 hours, except when a large amount of data is uploaded at a time (more than 500 hours of audio uploaded within half an hour). After the transcription is completed, the quality inspection analysis is performed in milliseconds.</p>
+     * <h3>Requirements for audio file URLs</h3>
      * <ul>
-     * <li>Supports single-channel/dual-channel WAV and MP3 format recording files. The file size must be less than 512 MB.</li>
-     * <li>The URL must be an HTTP-accessible URL address. Local file submission is not supported. The recording file access permissions must be set to public.</li>
-     * <li>The URL can only use domain names, not IP addresses. The URL cannot contain spaces. Avoid using Chinese characters.</li>
-     * <li>After converting the recording to text, the system deletes the downloaded recording file and does not retain a copy.</li>
-     * <li>If your recording URL has an access expiration period (for example, the recording is stored in Alibaba Cloud OSS and you specified an expiration period when generating the recording URL through OSS), set the expiration period to at least 12 hours, or 24 hours if possible. This is because file transcription takes time and occasional queuing may occur. If the queuing time is long, the recording is downloaded only when transcription begins. This prevents the recording URL from expiring before the download.</li>
-     * <li>After quality inspection analysis is complete, the recording is still played using the URL you provided when reviewing files in the console. Ensure that the URL remains active long-term. Otherwise, the recording cannot be played.</li>
+     * <li>Supports single-track or dual-track audio files in WAV or MP3 format. The file size must be less than 512 MB.</li>
+     * <li>The URL must be accessible over HTTP. Committing local files is not supported. The access permissions of the audio file must be public.</li>
+     * <li>The URL must contain only a domain name, not an IP address. The URL cannot contain spaces. Avoid using Chinese characters in the URL.</li>
+     * <li>After the audio is converted to text, the system deletes the downloaded audio file and does not retain a copy.</li>
+     * <li>If your audio URL has an expiration time, for example, the audio is stored in Alibaba Cloud OSS and an expiration time is specified when the URL is generated, we recommend that you set the expiration time to at least 12 hours, or preferably set the expiration time in Settings to 24 hours if conditions permit. This is because file transcription takes time and may occasionally be queued. If the queue is long, the audio is downloaded only when the transcription starts. A longer expiration time prevents the URL from expiring before the audio is downloaded.</li>
+     * <li>After the quality inspection analysis is completed, the URL you provided is still used to play the audio when you review the file in the console. Therefore, you must ensure that the URL remains active for a long time. Otherwise, the audio cannot be played.</li>
      * </ul>
-     * <h3>Role separation description</h3>
-     * <p>After the recording is converted to text, the system automatically separates the text into two conversation roles. However, the system cannot determine which role is the agent and which is the customer. You need to perform role separation based on certain rules. The accuracy of role separation is critical because the rules used for quality inspection analysis often have role detection restrictions (a rule only checks the agent or the customer). If role separation is incorrect, the accuracy of quality inspection results is significantly affected.
-     * Recording files are typically divided into two types: single-channel (mono) and dual-channel (stereo):</p>
+     * <h3>Role separation</h3>
+     * <p>After the audio is converted to text, the system automatically separates the text into two conversation roles. However, the system cannot determine which role is the agent and which is the customer. Therefore, you must separate the roles based on specific rules. The accuracy of role separation is crucial because the rules used for quality inspection analysis often have role restrictions (that is, a rule only checks the agent or the customer). Incorrect role separation greatly affects the accuracy of the quality inspection results.
+     * Audio files are generally divided into single-track (mono) and dual-track (dual-channel/stereo) types:</p>
      * <ul>
-     * <li>Single-channel recording: The voices of both the agent and customer are stored on one channel. After the recording file is converted to text, the system uses a built-in algorithm to distinguish between two roles. By setting a list of keywords that the agent is likely to say, the system analyzes the transcribed text sentence by sentence from top to bottom. When a sentence matches a keyword, the role of that sentence is determined to be the agent, and the other role is the customer. For details, see recognizeRoleDataSetId and serviceChannelKeywords in the request parameters. Due to the unpredictability of conversation content (for example, cross-talk between two roles or both people speaking simultaneously), role separation for single-channel recordings cannot be guaranteed to be 100% accurate. Save recording files as dual-channel recordings whenever possible.</li>
-     * <li>Dual-channel recording: The voices of the agent and customer are stored on two separate channels. Even if the conversation overlaps, the recording-to-text conversion can accurately distinguish between the two. Specify the agent and customer by using the serviceChannel and clientChannel request parameters.</li>
+     * <li>Single-track audio: The voices of the agent and the customer are stored on a single track. After the audio file is converted to text, the system uses a built-in algorithm to separate the conversation into two roles. You can set a list of keywords that the agent may say. The system analyzes the transcribed text sentence by sentence from top to bottom. If a sentence hits a keyword, the role of the sentence is determined to be the agent, and the other role is the customer. For details, see recognizeRoleDataSetId and serviceChannelKeywords in the request parameters. Due to the uncontrollability of the conversation content (for example, the two roles may interrupt each other or speak at the same time), role separation for single-track audio cannot be 100% accurate. We strongly recommend that you save audio files as dual-track audio.</li>
+     * <li>Dual-track audio: The voices of the agent and the customer are stored on two separate tracks. Even if the conversation overlaps, the system can accurately distinguish the roles when the audio is converted to text. You can specify the agent and the customer by using the serviceChannel and clientChannel request parameters.</li>
      * </ul>
-     * <h3>Retrieve quality inspection analysis results</h3>
-     * <p>Because recording file recognition is not real-time, you need to asynchronously retrieve quality inspection analysis results. The following three methods are available:</p>
+     * <h3>Obtain quality inspection analysis results</h3>
+     * <p>Because audio file recognition is not real-time, you must obtain the quality inspection analysis results asynchronously. You can use one of the following three methods to obtain the results:</p>
      * <ul>
-     * <li>Message notification: For details, see <a href="https://help.aliyun.com/document_detail/213237.html">MSMQ</a>. After receiving a message, invoke the GetResult operation to retrieve detailed results. (Recommended)</li>
-     * <li>Callback: Specify a callbackUrl in the request parameters. The system initiates a callback after the task is complete. After receiving the callback, invoke the GetResult operation to retrieve detailed results.</li>
-     * <li>Polling: The operation returns a task ID (taskId). Use the taskId to poll the <code>getResult</code> operation to asynchronously retrieve results. Check whether the <code>status</code> in the response parameters indicates completion. Do not set the polling interval too short. Analysis normally completes within a few minutes. Set the polling interval to 30 seconds or more. (Not recommended)</li>
+     * <li>Message notification: For details, see <a href="https://help.aliyun.com/document_detail/213237.html">MSMQ</a>. After you receive a message, call the GetResult operation to obtain the detailed results. (Recommended)</li>
+     * <li>Callback: Specify callbackUrl in the request parameters. After the node is completed, the system initiates a callback. After you receive the callback, call the GetResult operation to obtain the detailed results.</li>
+     * <li>Polling: The operation returns a node ID (taskId). You can use the taskId to poll the <code>getResult</code> operation to asynchronously obtain the results and check whether the <code>status</code> response parameter indicates completion. We recommend that you do not set the polling interval too short. Normally, the analysis is completed within a few minutes. We recommend that you set the polling interval to 30 seconds or more. (Not recommended)</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Uploads offline voice quality inspection data (recording session files). This operation is applicable to hotline agent scenarios. Scenario 1: Natively integrates with Alibaba Cloud Call Center (CCC), requiring no development. You can enable one-click push of call data to SCA. Scenario 2: Integrates with your own call center system. Each time the call center generates a recording, it pushes the recording to SCA for analysis.</p>
+     * <p>Uploads offline voice quality inspection data (recorded session files) for hotline agent scenarios. Scenario 1: Natively integrates with Alibaba Cloud Cloud Call Center (CCC) without the need for development, allowing you to push call data to Smart Conversation Analysis (SCA) with a single click. Scenario 2: Integrates with a self-managed call center system, where each generated recording is pushed to SCA for analysis.</p>
      * 
      * @param request UploadAudioDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5737,36 +5986,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Process description</h3>
-     * <p>Call the API to upload audio quality inspection =&gt; Convert the recording file to text =&gt; Separate roles in the text based on the specified channel splitting method (distinguish between agent and customer) =&gt; Analyze using quality inspection rules =&gt; Quality inspection complete.</p>
+     * <h3>Workflow</h3>
+     * <p>Call the API to upload audio for quality inspection =&gt; Convert the audio file to text =&gt; Separate the text into roles (agent and customer) based on the specified track splitting method =&gt; Analyze the text by using quality inspection rules =&gt; Complete the quality inspection.</p>
      * <h3>Task execution efficiency</h3>
-     * <p>The speed of task execution depends on the speed of converting the recording file to text. Ideally, a 5-minute recording file can be transcribed within 2 minutes. However, when the transcription service has many queued tasks, there will be a queuing wait time. Generally, transcription completes within 6 hours, except for bulk uploads of large-scale data (more than 500 hours of recordings uploaded within 30 minutes). After transcription is complete, quality inspection analysis takes only milliseconds.</p>
-     * <h3>Recording file URL requirements</h3>
+     * <p>The execution speed of a task depends on the speed of converting the audio file to text. Ideally, a 5-minute audio file can be transcribed within 2 minutes. However, if the file transcription service has a large queue, a waiting time is required. Generally, the transcription is completed within 6 hours, except when a large amount of data is uploaded at a time (more than 500 hours of audio uploaded within half an hour). After the transcription is completed, the quality inspection analysis is performed in milliseconds.</p>
+     * <h3>Requirements for audio file URLs</h3>
      * <ul>
-     * <li>Supports single-channel/dual-channel WAV and MP3 format recording files. The file size must be less than 512 MB.</li>
-     * <li>The URL must be an HTTP-accessible URL address. Local file submission is not supported. The recording file access permissions must be set to public.</li>
-     * <li>The URL can only use domain names, not IP addresses. The URL cannot contain spaces. Avoid using Chinese characters.</li>
-     * <li>After converting the recording to text, the system deletes the downloaded recording file and does not retain a copy.</li>
-     * <li>If your recording URL has an access expiration period (for example, the recording is stored in Alibaba Cloud OSS and you specified an expiration period when generating the recording URL through OSS), set the expiration period to at least 12 hours, or 24 hours if possible. This is because file transcription takes time and occasional queuing may occur. If the queuing time is long, the recording is downloaded only when transcription begins. This prevents the recording URL from expiring before the download.</li>
-     * <li>After quality inspection analysis is complete, the recording is still played using the URL you provided when reviewing files in the console. Ensure that the URL remains active long-term. Otherwise, the recording cannot be played.</li>
+     * <li>Supports single-track or dual-track audio files in WAV or MP3 format. The file size must be less than 512 MB.</li>
+     * <li>The URL must be accessible over HTTP. Committing local files is not supported. The access permissions of the audio file must be public.</li>
+     * <li>The URL must contain only a domain name, not an IP address. The URL cannot contain spaces. Avoid using Chinese characters in the URL.</li>
+     * <li>After the audio is converted to text, the system deletes the downloaded audio file and does not retain a copy.</li>
+     * <li>If your audio URL has an expiration time, for example, the audio is stored in Alibaba Cloud OSS and an expiration time is specified when the URL is generated, we recommend that you set the expiration time to at least 12 hours, or preferably set the expiration time in Settings to 24 hours if conditions permit. This is because file transcription takes time and may occasionally be queued. If the queue is long, the audio is downloaded only when the transcription starts. A longer expiration time prevents the URL from expiring before the audio is downloaded.</li>
+     * <li>After the quality inspection analysis is completed, the URL you provided is still used to play the audio when you review the file in the console. Therefore, you must ensure that the URL remains active for a long time. Otherwise, the audio cannot be played.</li>
      * </ul>
-     * <h3>Role separation description</h3>
-     * <p>After the recording is converted to text, the system automatically separates the text into two conversation roles. However, the system cannot determine which role is the agent and which is the customer. You need to perform role separation based on certain rules. The accuracy of role separation is critical because the rules used for quality inspection analysis often have role detection restrictions (a rule only checks the agent or the customer). If role separation is incorrect, the accuracy of quality inspection results is significantly affected.
-     * Recording files are typically divided into two types: single-channel (mono) and dual-channel (stereo):</p>
+     * <h3>Role separation</h3>
+     * <p>After the audio is converted to text, the system automatically separates the text into two conversation roles. However, the system cannot determine which role is the agent and which is the customer. Therefore, you must separate the roles based on specific rules. The accuracy of role separation is crucial because the rules used for quality inspection analysis often have role restrictions (that is, a rule only checks the agent or the customer). Incorrect role separation greatly affects the accuracy of the quality inspection results.
+     * Audio files are generally divided into single-track (mono) and dual-track (dual-channel/stereo) types:</p>
      * <ul>
-     * <li>Single-channel recording: The voices of both the agent and customer are stored on one channel. After the recording file is converted to text, the system uses a built-in algorithm to distinguish between two roles. By setting a list of keywords that the agent is likely to say, the system analyzes the transcribed text sentence by sentence from top to bottom. When a sentence matches a keyword, the role of that sentence is determined to be the agent, and the other role is the customer. For details, see recognizeRoleDataSetId and serviceChannelKeywords in the request parameters. Due to the unpredictability of conversation content (for example, cross-talk between two roles or both people speaking simultaneously), role separation for single-channel recordings cannot be guaranteed to be 100% accurate. Save recording files as dual-channel recordings whenever possible.</li>
-     * <li>Dual-channel recording: The voices of the agent and customer are stored on two separate channels. Even if the conversation overlaps, the recording-to-text conversion can accurately distinguish between the two. Specify the agent and customer by using the serviceChannel and clientChannel request parameters.</li>
+     * <li>Single-track audio: The voices of the agent and the customer are stored on a single track. After the audio file is converted to text, the system uses a built-in algorithm to separate the conversation into two roles. You can set a list of keywords that the agent may say. The system analyzes the transcribed text sentence by sentence from top to bottom. If a sentence hits a keyword, the role of the sentence is determined to be the agent, and the other role is the customer. For details, see recognizeRoleDataSetId and serviceChannelKeywords in the request parameters. Due to the uncontrollability of the conversation content (for example, the two roles may interrupt each other or speak at the same time), role separation for single-track audio cannot be 100% accurate. We strongly recommend that you save audio files as dual-track audio.</li>
+     * <li>Dual-track audio: The voices of the agent and the customer are stored on two separate tracks. Even if the conversation overlaps, the system can accurately distinguish the roles when the audio is converted to text. You can specify the agent and the customer by using the serviceChannel and clientChannel request parameters.</li>
      * </ul>
-     * <h3>Retrieve quality inspection analysis results</h3>
-     * <p>Because recording file recognition is not real-time, you need to asynchronously retrieve quality inspection analysis results. The following three methods are available:</p>
+     * <h3>Obtain quality inspection analysis results</h3>
+     * <p>Because audio file recognition is not real-time, you must obtain the quality inspection analysis results asynchronously. You can use one of the following three methods to obtain the results:</p>
      * <ul>
-     * <li>Message notification: For details, see <a href="https://help.aliyun.com/document_detail/213237.html">MSMQ</a>. After receiving a message, invoke the GetResult operation to retrieve detailed results. (Recommended)</li>
-     * <li>Callback: Specify a callbackUrl in the request parameters. The system initiates a callback after the task is complete. After receiving the callback, invoke the GetResult operation to retrieve detailed results.</li>
-     * <li>Polling: The operation returns a task ID (taskId). Use the taskId to poll the <code>getResult</code> operation to asynchronously retrieve results. Check whether the <code>status</code> in the response parameters indicates completion. Do not set the polling interval too short. Analysis normally completes within a few minutes. Set the polling interval to 30 seconds or more. (Not recommended)</li>
+     * <li>Message notification: For details, see <a href="https://help.aliyun.com/document_detail/213237.html">MSMQ</a>. After you receive a message, call the GetResult operation to obtain the detailed results. (Recommended)</li>
+     * <li>Callback: Specify callbackUrl in the request parameters. After the node is completed, the system initiates a callback. After you receive the callback, call the GetResult operation to obtain the detailed results.</li>
+     * <li>Polling: The operation returns a node ID (taskId). You can use the taskId to poll the <code>getResult</code> operation to asynchronously obtain the results and check whether the <code>status</code> response parameter indicates completion. We recommend that you do not set the polling interval too short. Normally, the analysis is completed within a few minutes. We recommend that you set the polling interval to 30 seconds or more. (Not recommended)</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Uploads offline voice quality inspection data (recording session files). This operation is applicable to hotline agent scenarios. Scenario 1: Natively integrates with Alibaba Cloud Call Center (CCC), requiring no development. You can enable one-click push of call data to SCA. Scenario 2: Integrates with your own call center system. Each time the call center generates a recording, it pushes the recording to SCA for analysis.</p>
+     * <p>Uploads offline voice quality inspection data (recorded session files) for hotline agent scenarios. Scenario 1: Natively integrates with Alibaba Cloud Cloud Call Center (CCC) without the need for development, allowing you to push call data to Smart Conversation Analysis (SCA) with a single click. Scenario 2: Integrates with a self-managed call center system, where each generated recording is pushed to SCA for analysis.</p>
      * 
      * @param request UploadAudioDataRequest
      * @return UploadAudioDataResponse
@@ -5850,14 +6099,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Pushes text data in a specific format to SCA for real-time quality inspection analysis based on user-specified rules, and synchronously returns the analysis results. Compared with uploaded text quality inspection, which typically uploads the complete conversation text after a conversation ends, real-time text quality inspection allows you to push text to SCA for analysis after one role finishes one or more sentences, providing higher real-time performance. Notes:</p>
+     * <p>Pushes text data to be inspected in a specific format to SCA, performs real-time quality inspection and analysis on the text data based on user-specified rules, and synchronously returns the analysis results. Compared with uploaded text quality inspection, which usually uploads the complete conversation text after a conversation ends, real-time text quality inspection can push the text to SCA for analysis after a role finishes speaking one or more sentences, providing higher real-time performance. Special notes:</p>
      * <ul>
-     * <li>If the pushed text is a single sentence from one role, some operators in the rules become ineffective due to the lack of conversation context, such as context repetition check, interruption check, and call silence check.</li>
-     * <li>Real-time quality inspection synchronously returns analysis results. SCA does not save call records, so you cannot query quality inspection results through APIs.</li>
+     * <li>If the pushed text is a single sentence from a role, some operators in the rules, such as context repetition check, interruption check, and call silence check, will become invalid due to the lack of conversation context.</li>
+     * <li>Real-time quality inspection synchronously returns analysis results. SCA does not save call records, so you cannot query the quality inspection results through the API.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Performs real-time text-based quality inspection.</p>
+     * <p>Performs real-time quality inspection on text.</p>
      * 
      * @param request UploadDataSyncRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5893,14 +6142,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Pushes text data in a specific format to SCA for real-time quality inspection analysis based on user-specified rules, and synchronously returns the analysis results. Compared with uploaded text quality inspection, which typically uploads the complete conversation text after a conversation ends, real-time text quality inspection allows you to push text to SCA for analysis after one role finishes one or more sentences, providing higher real-time performance. Notes:</p>
+     * <p>Pushes text data to be inspected in a specific format to SCA, performs real-time quality inspection and analysis on the text data based on user-specified rules, and synchronously returns the analysis results. Compared with uploaded text quality inspection, which usually uploads the complete conversation text after a conversation ends, real-time text quality inspection can push the text to SCA for analysis after a role finishes speaking one or more sentences, providing higher real-time performance. Special notes:</p>
      * <ul>
-     * <li>If the pushed text is a single sentence from one role, some operators in the rules become ineffective due to the lack of conversation context, such as context repetition check, interruption check, and call silence check.</li>
-     * <li>Real-time quality inspection synchronously returns analysis results. SCA does not save call records, so you cannot query quality inspection results through APIs.</li>
+     * <li>If the pushed text is a single sentence from a role, some operators in the rules, such as context repetition check, interruption check, and call silence check, will become invalid due to the lack of conversation context.</li>
+     * <li>Real-time quality inspection synchronously returns analysis results. SCA does not save call records, so you cannot query the quality inspection results through the API.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Performs real-time text-based quality inspection.</p>
+     * <p>Performs real-time quality inspection on text.</p>
      * 
      * @param request UploadDataSyncRequest
      * @return UploadDataSyncResponse

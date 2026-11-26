@@ -23,7 +23,7 @@ public class CreateWarningConfigResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>Error details when an error occurs. Returns \&quot;successful\&quot; on success.</p>
+     * <p>Error details when an error occurs. Returns &quot;successful&quot; on success.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>

@@ -17,7 +17,7 @@ public class UpdateRuleResponseBody extends TeaModel {
      * <p>The response data.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>100</p>
      */
     @NameInMap("Data")
     public String data;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveConfigDataSetResponseBody extends TeaModel {
     /**
-     * <p>The result code. A value of <strong>200</strong> indicates success. Any other value indicates failure. Use this field to identify the cause of failure.</p>
+     * <p>The result code. A value of <strong>200</strong> indicates success, whereas any other value indicates failure. You can use this field to identify the cause of the failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class SaveConfigDataSetResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error message if the request fails. If the request succeeds, the value is successful.</p>
+     * <p>The error details if an error occurs. The value is successful if the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -23,7 +23,7 @@ public class SaveConfigDataSetResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F050E835-4E5B-4799-BAE3-D622DC529AB3</p>
@@ -32,7 +32,7 @@ public class SaveConfigDataSetResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded. A value of true means success. A value of false or null means failure.</p>
+     * <p>Indicates whether the request is successful. A value of true indicates success, and a value of false or null indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

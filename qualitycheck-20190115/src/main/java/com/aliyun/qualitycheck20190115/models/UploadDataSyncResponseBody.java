@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadDataSyncResponseBody extends TeaModel {
     /**
-     * <p>The result code. A value of <strong>200</strong> indicates success. Other values indicate failure. You can use this field to determine the cause of failure.</p>
+     * <p>The result code. A value of <strong>200</strong> indicates success. Any other value indicates failure. The caller can determine the cause of failure based on this field.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -17,7 +17,7 @@ public class UploadDataSyncResponseBody extends TeaModel {
     public UploadDataSyncResponseBodyData data;
 
     /**
-     * <p>The error details when an error occurs. The value is <strong>successful</strong> when the request succeeds.</p>
+     * <p>The error details when an error occurs, or <strong>successful</strong> when the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -35,7 +35,7 @@ public class UploadDataSyncResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values: true and false/null.</p>
+     * <p>Indicates whether the request is successful. The caller can determine whether the request is successful based on this field. A value of true indicates success. A value of false or null indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

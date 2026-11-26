@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AssignReviewerBySessionGroupRequest extends TeaModel {
     /**
      * <p>Workspace ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;

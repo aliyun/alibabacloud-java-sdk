@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSessionGroupResponseBody extends TeaModel {
     /**
-     * <p>The result code. A value of \<code>200\\</code> indicates that the request was successful. Other values indicate that the request failed.</p>
+     * <p>The result code. A value of `200` indicates that the request was successful. Other values indicate that the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,13 +47,13 @@ public class ListSessionGroupResponseBody extends TeaModel {
      * <p>The data marker. To retrieve more than 10,000 records, include the LastDataId from the previous response in the next request.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>1000</p>
      */
     @NameInMap("LastDataId")
     public String lastDataId;
 
     /**
-     * <p>The error details if the request fails. \<code>successful\\</code> is returned if the request is successful.</p>
+     * <p>The error details if the request fails. `successful` is returned if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -101,7 +101,7 @@ public class ListSessionGroupResponseBody extends TeaModel {
     public String resultCountId;
 
     /**
-     * <p>Indicates whether the request was successful. A value of \<code>true\\</code> indicates that the request was successful. A value of \<code>false\\</code> or \<code>null\\</code> indicates that the request failed.</p>
+     * <p>Indicates whether the request was successful. A value of `true` indicates that the request was successful. A value of `false` or `null` indicates that the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

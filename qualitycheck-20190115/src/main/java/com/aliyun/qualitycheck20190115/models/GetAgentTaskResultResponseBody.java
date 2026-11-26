@@ -38,10 +38,10 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. You can use this field to determine whether the request is successful:</p>
+     * <p>Indicates whether the request is successful. You can determine whether the request is successful based on this field:</p>
      * <ul>
-     * <li><strong>true</strong>: The request is successful.</li>
-     * <li><strong>false/null</strong>: The request failed.</li>
+     * <li><strong>true</strong>: Successful.</li>
+     * <li><strong>false/null</strong>: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
     public static class GetAgentTaskResultResponseBodyDataDialogues extends TeaModel {
         /**
-         * <p>The offset of the start time of this sentence relative to the overall start time of the dialogue, in milliseconds. For example, if the total recording duration is 2 minutes and 10 seconds, and a sentence spoken by the customer starts at 1 minute and 12 seconds and ends at 1 minute and 20 seconds, the value of begin is 72000 and the value of end is 80000.</p>
+         * <p>The offset of the start time of this sentence relative to the overall start time of the conversation, in milliseconds. For example, if the total recording duration is 2 minutes and 10 seconds, and the customer starts speaking a sentence at 1 minute and 12 seconds and finishes at 1 minute and 20 seconds, the begin value is 72000 and the end value is 80000.</p>
          * 
          * <strong>example:</strong>
          * <p>980</p>
@@ -106,7 +106,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         public Long begin;
 
         /**
-         * <p>The emotion energy value, calculated as the volume in decibels divided by 10. Valid values: 1 to 10. A higher value indicates a stronger emotion.</p>
+         * <p>The emotion energy value, which is calculated as the volume in decibels divided by 10. Valid values: [1,10]. A higher value indicates a stronger emotion.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -115,7 +115,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         public Integer emotionValue;
 
         /**
-         * <p>The offset of the start time of this sentence relative to the overall start time of the dialogue, in milliseconds. For example, if the total recording duration is 2 minutes and 10 seconds, and a sentence spoken by the customer starts at 1 minute and 12 seconds and ends at 1 minute and 20 seconds, the value of begin is 72000 and the value of end is 80000.</p>
+         * <p>The offset of the start time of this sentence relative to the overall start time of the conversation, in milliseconds. For example, if the total recording duration is 2 minutes and 10 seconds, and the customer starts speaking a sentence at 1 minute and 12 seconds and finishes at 1 minute and 20 seconds, the begin value is 72000 and the end value is 80000.</p>
          * 
          * <strong>example:</strong>
          * <p>80000</p>
@@ -124,7 +124,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         public Long end;
 
         /**
-         * <p>The start time of this sentence in hours, minutes, and seconds format: hh:mm:ss.</p>
+         * <p>The start time of this sentence in the hour-minute-second format. Format: hh:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>00:08</p>
@@ -133,16 +133,16 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         public String hourMinSec;
 
         /**
-         * <p>The role of the speaker for this sentence. Valid values: agent and customer.</p>
+         * <p>The role of the speaker for this sentence. Valid values: Customer service representative, Customer.</p>
          * 
          * <strong>example:</strong>
-         * <p>agent</p>
+         * <p>Customer service representative</p>
          */
         @NameInMap("Role")
         public String role;
 
         /**
-         * <p>The average speech rate of this sentence. Unit: words per minute.</p>
+         * <p>The average speech rate of this sentence, in words per minute.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -154,7 +154,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
          * <p>The dialogue content.</p>
          * 
          * <strong>example:</strong>
-         * <p>Hello, how can I help you</p>
+         * <p>Hello, how can I help you?</p>
          */
         @NameInMap("Words")
         public String words;
@@ -227,7 +227,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
          * <p>The result returned by the large language model.</p>
          * 
          * <strong>example:</strong>
-         * <p>175/xl the fabric feels very comfortable, looks slim when worn, great clothes super good looking, quality and feel are top-notch, very satisfied with this purchase</p>
+         * <p>The 175/XL fabric feels very comfortable to the touch, and it looks quite slim-fitting when worn. It is a really nice piece of clothing and super good-looking. The quality and texture are absolutely top-notch. It was a very satisfying shopping experience</p>
          */
         @NameInMap("Text")
         public String text;
@@ -258,16 +258,16 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The sentences referenced in the reasoning.</p>
+         * <p>The sentences referenced for the judgment reason.</p>
          */
         @NameInMap("OriginalUtterances")
         public java.util.List<Integer> originalUtterances;
 
         /**
-         * <p>The reasoning for the judgment.</p>
+         * <p>The reason for the judgment.</p>
          * 
          * <strong>example:</strong>
-         * <p>Determined from the first sentence of the customer service representative</p>
+         * <p>Determined based on the first sentence of the customer service representative</p>
          */
         @NameInMap("Remarks")
         public String remarks;
@@ -322,7 +322,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
     public static class GetAgentTaskResultResponseBodyDataResponseFieldResponse extends TeaModel {
         /**
-         * <p>The list of attributes.</p>
+         * <p>The attribute list.</p>
          */
         @NameInMap("FieldVoList")
         public java.util.List<GetAgentTaskResultResponseBodyDataResponseFieldResponseFieldVoList> fieldVoList;
@@ -345,12 +345,18 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
     public static class GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildrenChildrenChildren extends TeaModel {
         /**
          * <p>The tag analysis description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Based on the customer conversation, the current tag is identified as Purchase compact refrigerators</p>
          */
         @NameInMap("Remarks")
         public String remarks;
 
         /**
          * <p>The tag name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Purchase compact refrigerators</p>
          */
         @NameInMap("TagName")
         public String tagName;
@@ -380,19 +386,25 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
     public static class GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildrenChildren extends TeaModel {
         /**
-         * <p>The list of child nodes.</p>
+         * <p>The child node list.</p>
          */
         @NameInMap("Children")
         public java.util.List<GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildrenChildrenChildren> children;
 
         /**
          * <p>The tag analysis description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Based on the customer conversation, the current tag is identified as Purchase Tier 1 energy efficiency refrigerators</p>
          */
         @NameInMap("Remarks")
         public String remarks;
 
         /**
          * <p>The tag name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Purchase Tier 1 energy efficiency refrigerators</p>
          */
         @NameInMap("TagName")
         public String tagName;
@@ -437,12 +449,18 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
         /**
          * <p>The tag analysis description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Based on the customer conversation, the current tag is identified as Purchase refrigerators</p>
          */
         @NameInMap("Remarks")
         public String remarks;
 
         /**
          * <p>The tag name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Purchase refrigerators</p>
          */
         @NameInMap("TagName")
         public String tagName;
@@ -487,12 +505,18 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
         /**
          * <p>The tag analysis description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Based on the customer conversation, the current tag is identified as Purchase appliances</p>
          */
         @NameInMap("Remarks")
         public String remarks;
 
         /**
          * <p>The tag name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Purchase appliances</p>
          */
         @NameInMap("TagName")
         public String tagName;
@@ -530,19 +554,25 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
     public static class GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagList extends TeaModel {
         /**
-         * <p>The list of child nodes.</p>
+         * <p>The child node list.</p>
          */
         @NameInMap("Children")
         public java.util.List<GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildren> children;
 
         /**
          * <p>The tag analysis description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Based on the customer dialogue, the current tag is identified as shopping</p>
          */
         @NameInMap("Remarks")
         public String remarks;
 
         /**
          * <p>The tag name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Shopping</p>
          */
         @NameInMap("TagName")
         public String tagName;
@@ -580,7 +610,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
     public static class GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponse extends TeaModel {
         /**
-         * <p>The list of child nodes.</p>
+         * <p>The child node list.</p>
          */
         @NameInMap("TagList")
         public java.util.List<GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagList> tagList;
@@ -602,7 +632,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
     public static class GetAgentTaskResultResponseBodyDataResponseServiceInspectionResponseServiceInspectionVoList extends TeaModel {
         /**
-         * <p>The inspection dimension.</p>
+         * <p>The quality inspection dimension.</p>
          * 
          * <strong>example:</strong>
          * <p>Service attitude</p>
@@ -620,16 +650,16 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         public Boolean isMatch;
 
         /**
-         * <p>The sentences referenced in the reasoning.</p>
+         * <p>The sentences referenced for the judgment reason.</p>
          */
         @NameInMap("OriginalUtterances")
         public java.util.List<String> originalUtterances;
 
         /**
-         * <p>The reasoning for the judgment.</p>
+         * <p>The reason for the judgment.</p>
          * 
          * <strong>example:</strong>
-         * <p>Determined from the first sentence of the customer service representative</p>
+         * <p>Determined based on the first sentence of the customer service representative</p>
          */
         @NameInMap("Remarks")
         public String remarks;
@@ -675,7 +705,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
     public static class GetAgentTaskResultResponseBodyDataResponseServiceInspectionResponse extends TeaModel {
         /**
-         * <p>The list of inspection items.</p>
+         * <p>The quality inspection item list.</p>
          */
         @NameInMap("ServiceInspectionVoList")
         public java.util.List<GetAgentTaskResultResponseBodyDataResponseServiceInspectionResponseServiceInspectionVoList> serviceInspectionVoList;
@@ -715,22 +745,22 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         public Boolean isMatch;
 
         /**
-         * <p>The sentences referenced in the reasoning.</p>
+         * <p>The sentences referenced for the judgment reason.</p>
          */
         @NameInMap("OriginalUtterances")
         public java.util.List<String> originalUtterances;
 
         /**
-         * <p>The reasoning for the judgment.</p>
+         * <p>The reason for the judgment.</p>
          * 
          * <strong>example:</strong>
-         * <p>Determined from the first sentence of the customer service representative</p>
+         * <p>Determined based on the first sentence of the customer service representative</p>
          */
         @NameInMap("Remarks")
         public String remarks;
 
         /**
-         * <p>The list of matched labels.</p>
+         * <p>The list of matched tags.</p>
          */
         @NameInMap("ResultLabels")
         public java.util.List<String> resultLabels;
@@ -784,7 +814,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
     public static class GetAgentTaskResultResponseBodyDataResponseTagCategoryResponse extends TeaModel {
         /**
-         * <p>The list of tags.</p>
+         * <p>The tag list.</p>
          */
         @NameInMap("TagCategoryVoList")
         public java.util.List<GetAgentTaskResultResponseBodyDataResponseTagCategoryResponseTagCategoryVoList> tagCategoryVoList;
@@ -842,7 +872,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         public Float bestVoiceprintScore;
 
         /**
-         * <p>The emotion type. Valid values:</p>
+         * <p>The emotion. Valid values:</p>
          * <ul>
          * <li>angry</li>
          * <li>disgusted</li>
@@ -889,7 +919,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         public Float genderScore;
 
         /**
-         * <p>Indicates whether the speaker is the voiceprint owner.</p>
+         * <p>Indicates whether the speaker is the target of voiceprint recognition.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -994,11 +1024,14 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
     }
 
     public static class GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogue extends TeaModel {
+        /**
+         * <p>The additional attributes of the current clause, such as speaker, voiceprint, gender, age, and emotion.</p>
+         */
         @NameInMap("Additions")
         public GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogueAdditions additions;
 
         /**
-         * <p>The start time of this sentence, which is the offset from the starting point in milliseconds.</p>
+         * <p>The start time of the sentence. This is the offset from the starting point, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>443</p>
@@ -1007,7 +1040,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         public Long begin;
 
         /**
-         * <p>The end time of this sentence, which is the offset from the starting point in milliseconds.</p>
+         * <p>The end time of the sentence. This is the offset from the starting point, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1767492840000</p>
@@ -1019,7 +1052,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
          * <p>The dialogue content.</p>
          * 
          * <strong>example:</strong>
-         * <p>Unclear</p>
+         * <p>I am not sure</p>
          */
         @NameInMap("Words")
         public String words;
@@ -1065,7 +1098,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
     public static class GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseErrors extends TeaModel {
         /**
-         * <p>The result code. A value of <strong>200</strong> indicates success. Any other value indicates failure. You can use this field to determine the cause of failure.</p>
+         * <p>The result code. A value of <strong>200</strong> indicates success, and any other value indicates failure. You can determine the cause of the failure based on this field.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -1074,7 +1107,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The error details when an error occurs, or <strong>successful</strong> when the operation succeeds.</p>
+         * <p>The error details when an error occurs, or <strong>successful</strong> when the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -1113,7 +1146,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         public java.util.List<GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogue> dialogue;
 
         /**
-         * <p>The error information of each sub-publishing module. The key is the sub-publishing module and the value is the error message.</p>
+         * <p>The error information of each sub-publishing module. The key is the sub-publishing module, and the value is the error message.</p>
          */
         @NameInMap("Errors")
         public java.util.List<GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseErrors> errors;
@@ -1143,7 +1176,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
     public static class GetAgentTaskResultResponseBodyDataResponse extends TeaModel {
         /**
-         * <p>The result of the custom prompt.</p>
+         * <p>The result returned for the custom instruction.</p>
          */
         @NameInMap("CustomerPromptResponse")
         public GetAgentTaskResultResponseBodyDataResponseCustomerPromptResponse customerPromptResponse;
@@ -1154,6 +1187,9 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         @NameInMap("FieldResponse")
         public GetAgentTaskResultResponseBodyDataResponseFieldResponse fieldResponse;
 
+        /**
+         * <p>The tag tree analysis result.</p>
+         */
         @NameInMap("MultiLevelTagResponse")
         public GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponse multiLevelTagResponse;
 
@@ -1169,6 +1205,9 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         @NameInMap("TagCategoryResponse")
         public GetAgentTaskResultResponseBodyDataResponseTagCategoryResponse tagCategoryResponse;
 
+        /**
+         * <p>The voiceprint analysis result.</p>
+         */
         @NameInMap("VoiceprintResponse")
         public GetAgentTaskResultResponseBodyDataResponseVoiceprintResponse voiceprintResponse;
 
@@ -1229,29 +1268,47 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
     public static class GetAgentTaskResultResponseBodyDataUsage extends TeaModel {
         /**
-         * <p>The number of input tokens consumed by the LLM.</p>
+         * <p>The number of input tokens for the LLM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("InputTokens")
         public String inputTokens;
 
         /**
-         * <p>The number of output tokens generated by the LLM.</p>
+         * <p>The number of output tokens for the LLM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("OutputTokens")
         public String outputTokens;
 
         /**
-         * <p>The total number of tokens consumed by this task.</p>
+         * <p>The total number of tokens accumulated for this task.</p>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>200</p>
          */
         @NameInMap("TotalTokens")
         public String totalTokens;
 
+        /**
+         * <p>The cumulative number of plus model calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TymxPlusCount")
         public String tymxPlusCount;
 
+        /**
+         * <p>The cumulative number of turbo model calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TymxTurboCount")
         public String tymxTurboCount;
 
@@ -1304,13 +1361,13 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
     public static class GetAgentTaskResultResponseBodyData extends TeaModel {
         /**
-         * <p>The dialogue data.</p>
+         * <p>The conversation data.</p>
          */
         @NameInMap("Dialogues")
         public java.util.List<GetAgentTaskResultResponseBodyDataDialogues> dialogues;
 
         /**
-         * <p>The error details when the status is not 0 or 1.</p>
+         * <p>The error details returned when the status is not 0 or 1.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -1328,7 +1385,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         public String llmRequestId;
 
         /**
-         * <p>The result of the computation task.</p>
+         * <p>The result of the computing task.</p>
          */
         @NameInMap("Response")
         public GetAgentTaskResultResponseBodyDataResponse response;
@@ -1336,10 +1393,10 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         /**
          * <p>The task status. Valid values:</p>
          * <ul>
-         * <li>1: pending</li>
-         * <li>2: running</li>
-         * <li>3: succeeded</li>
-         * <li>4: failed</li>
+         * <li>1: Pending.</li>
+         * <li>2: Running.</li>
+         * <li>3: Successful.</li>
+         * <li>4: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1358,7 +1415,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The token usage information.</p>
+         * <p>The token usage.</p>
          */
         @NameInMap("Usage")
         public GetAgentTaskResultResponseBodyDataUsage usage;

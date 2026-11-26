@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetResultToReviewResponseBody extends TeaModel {
     /**
-     * <p>Result code. <strong>200</strong> means success. Any other value means failure. Use this field to identify the cause.</p>
+     * <p>The result code. A value of <strong>200</strong> indicates success, and any other value indicates failure. You can use this field to determine the cause of the failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class GetResultToReviewResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Detailed response data.</p>
+     * <p>The detailed response data.</p>
      */
     @NameInMap("Data")
     public GetResultToReviewResponseBodyData data;
 
     /**
-     * <p>Error details if the call fails. Returns <strong>successful</strong> on success.</p>
+     * <p>The error details when an error occurs, or <strong>successful</strong> when the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -29,7 +29,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>82C91484-B2D5-4D2A-A21F-A6D73F4***</p>
@@ -38,7 +38,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded. true means success. <strong>false</strong> or <strong>null</strong> means failure.</p>
+     * <p>Indicates whether the request is successful. <strong>true</strong> indicates success, and <strong>false</strong> or <strong>null</strong> indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -1203,6 +1203,44 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
     }
 
+    public static class GetResultToReviewResponseBodyDataReviewHistoryListReviewHistoryReviewErrorRuleReviewErrorRule extends TeaModel {
+        @NameInMap("Rid")
+        public Long rid;
+
+        public static GetResultToReviewResponseBodyDataReviewHistoryListReviewHistoryReviewErrorRuleReviewErrorRule build(java.util.Map<String, ?> map) throws Exception {
+            GetResultToReviewResponseBodyDataReviewHistoryListReviewHistoryReviewErrorRuleReviewErrorRule self = new GetResultToReviewResponseBodyDataReviewHistoryListReviewHistoryReviewErrorRuleReviewErrorRule();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResultToReviewResponseBodyDataReviewHistoryListReviewHistoryReviewErrorRuleReviewErrorRule setRid(Long rid) {
+            this.rid = rid;
+            return this;
+        }
+        public Long getRid() {
+            return this.rid;
+        }
+
+    }
+
+    public static class GetResultToReviewResponseBodyDataReviewHistoryListReviewHistoryReviewErrorRule extends TeaModel {
+        @NameInMap("reviewErrorRule")
+        public java.util.List<GetResultToReviewResponseBodyDataReviewHistoryListReviewHistoryReviewErrorRuleReviewErrorRule> reviewErrorRule;
+
+        public static GetResultToReviewResponseBodyDataReviewHistoryListReviewHistoryReviewErrorRule build(java.util.Map<String, ?> map) throws Exception {
+            GetResultToReviewResponseBodyDataReviewHistoryListReviewHistoryReviewErrorRule self = new GetResultToReviewResponseBodyDataReviewHistoryListReviewHistoryReviewErrorRule();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResultToReviewResponseBodyDataReviewHistoryListReviewHistoryReviewErrorRule setReviewErrorRule(java.util.List<GetResultToReviewResponseBodyDataReviewHistoryListReviewHistoryReviewErrorRuleReviewErrorRule> reviewErrorRule) {
+            this.reviewErrorRule = reviewErrorRule;
+            return this;
+        }
+        public java.util.List<GetResultToReviewResponseBodyDataReviewHistoryListReviewHistoryReviewErrorRuleReviewErrorRule> getReviewErrorRule() {
+            return this.reviewErrorRule;
+        }
+
+    }
+
     public static class GetResultToReviewResponseBodyDataReviewHistoryListReviewHistoryReviewRightRuleReviewRightRule extends TeaModel {
         @NameInMap("rid")
         public Long rid;
@@ -1268,6 +1306,9 @@ public class GetResultToReviewResponseBody extends TeaModel {
         @NameInMap("OperatorName")
         public String operatorName;
 
+        @NameInMap("ReviewErrorRule")
+        public GetResultToReviewResponseBodyDataReviewHistoryListReviewHistoryReviewErrorRule reviewErrorRule;
+
         @NameInMap("ReviewManagerType")
         public String reviewManagerType;
 
@@ -1332,6 +1373,14 @@ public class GetResultToReviewResponseBody extends TeaModel {
         }
         public String getOperatorName() {
             return this.operatorName;
+        }
+
+        public GetResultToReviewResponseBodyDataReviewHistoryListReviewHistory setReviewErrorRule(GetResultToReviewResponseBodyDataReviewHistoryListReviewHistoryReviewErrorRule reviewErrorRule) {
+            this.reviewErrorRule = reviewErrorRule;
+            return this;
+        }
+        public GetResultToReviewResponseBodyDataReviewHistoryListReviewHistoryReviewErrorRule getReviewErrorRule() {
+            return this.reviewErrorRule;
         }
 
         public GetResultToReviewResponseBodyDataReviewHistoryListReviewHistory setReviewManagerType(String reviewManagerType) {
@@ -1481,7 +1530,16 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
     public static class GetResultToReviewResponseBodyData extends TeaModel {
         /**
-         * <p>Protocol used in the audio URL. Possible values: http, https.</p>
+         * <p>The manual review score.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("ArtificialScore")
+        public Float artificialScore;
+
+        /**
+         * <p>The protocol of the audio URL. Valid values: http and https.</p>
          * 
          * <strong>example:</strong>
          * <p>https</p>
@@ -1490,7 +1548,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
         public String audioScheme;
 
         /**
-         * <p>Audio URL without the protocol prefix (http\:// or https\://). Combine with AudioScheme to form the full URL.</p>
+         * <p>The audio URL, excluding http:// and https://. This value and AudioScheme form the complete URL.</p>
          * 
          * <strong>example:</strong>
          * <p>sca-ccc-test.oss-cn-beijing.aliyuncs.com/xxxxx</p>
@@ -1499,10 +1557,10 @@ public class GetResultToReviewResponseBody extends TeaModel {
         public String audioURL;
 
         /**
-         * <p>Review comments.</p>
+         * <p>The review comments.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Approved</p>
          */
         @NameInMap("Comments")
         public String comments;
@@ -1511,7 +1569,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
         public GetResultToReviewResponseBodyDataDialogues dialogues;
 
         /**
-         * <p>File ID.</p>
+         * <p>The file ID.</p>
          * 
          * <strong>example:</strong>
          * <p>e790e6c919d84b82b64ee*****</p>
@@ -1520,7 +1578,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
         public String fileId;
 
         /**
-         * <p>File name.</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx.wav</p>
@@ -1541,7 +1599,21 @@ public class GetResultToReviewResponseBody extends TeaModel {
         public GetResultToReviewResponseBodyDataReviewTypeIdList reviewTypeIdList;
 
         /**
-         * <p>Current task status. 0: incomplete. 1: complete. Use this field to check completion. Any other value indicates an error.</p>
+         * <p>The automated check score.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("SmartCheckScore")
+        public Float smartCheckScore;
+
+        /**
+         * <p>The current status of the task. Valid values:</p>
+         * <ul>
+         * <li>0: The task is not completed.</li>
+         * <li>1: The task is completed.
+         * You can use this field to determine whether the task is completed. Any other value indicates an error.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1550,7 +1622,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>Quality inspection score.</p>
+         * <p>The quality inspection score.</p>
          * 
          * <strong>example:</strong>
          * <p>99</p>
@@ -1559,7 +1631,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
         public Integer totalScore;
 
         /**
-         * <p>File ID.</p>
+         * <p>The file ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6fa76916-3ce6-45d8-ac64-01b7f31***</p>
@@ -1570,6 +1642,14 @@ public class GetResultToReviewResponseBody extends TeaModel {
         public static GetResultToReviewResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetResultToReviewResponseBodyData self = new GetResultToReviewResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetResultToReviewResponseBodyData setArtificialScore(Float artificialScore) {
+            this.artificialScore = artificialScore;
+            return this;
+        }
+        public Float getArtificialScore() {
+            return this.artificialScore;
         }
 
         public GetResultToReviewResponseBodyData setAudioScheme(String audioScheme) {
@@ -1650,6 +1730,14 @@ public class GetResultToReviewResponseBody extends TeaModel {
         }
         public GetResultToReviewResponseBodyDataReviewTypeIdList getReviewTypeIdList() {
             return this.reviewTypeIdList;
+        }
+
+        public GetResultToReviewResponseBodyData setSmartCheckScore(Float smartCheckScore) {
+            this.smartCheckScore = smartCheckScore;
+            return this;
+        }
+        public Float getSmartCheckScore() {
+            return this.smartCheckScore;
         }
 
         public GetResultToReviewResponseBodyData setStatus(Integer status) {

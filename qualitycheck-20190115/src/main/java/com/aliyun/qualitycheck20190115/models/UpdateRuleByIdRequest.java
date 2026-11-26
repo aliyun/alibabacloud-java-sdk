@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateRuleByIdRequest extends TeaModel {
     /**
      * <p>Workspace ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
@@ -33,7 +36,7 @@ public class UpdateRuleByIdRequest extends TeaModel {
      * <p>Returns the IDs and names of quality inspection schemes associated with this rule.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>true</p>
      */
     @NameInMap("ReturnRelatedSchemes")
     public Boolean returnRelatedSchemes;

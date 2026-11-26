@@ -18,7 +18,7 @@ public class UploadDataSyncForLLMRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;tickets\&quot;:[{\&quot;dialogue\&quot;:[{\&quot;role\&quot;:\&quot;Agent\&quot;,\&quot;words\&quot;:\&quot;Yes\&quot;,\&quot;end\&quot;:0,\&quot;beginTime\&quot;:1783909236618,\&quot;begin\&quot;:0}],\&quot;tid\&quot;:\&quot;20260713-20240612032225161783909236618\&quot;}],\&quot;commonRuleIds\&quot;:[\&quot;20773\&quot;]}</p>
+     * <p>{&quot;tickets&quot;:[{&quot;dialogue&quot;:[{&quot;role&quot;:&quot;Agent&quot;,&quot;words&quot;:&quot;Yes&quot;,&quot;end&quot;:0,&quot;beginTime&quot;:1783909236618,&quot;begin&quot;:0}],&quot;tid&quot;:&quot;20260713-20240612032225161783909236618&quot;}],&quot;commonRuleIds&quot;:[&quot;20773&quot;]}</p>
      */
     @NameInMap("JsonStr")
     public String jsonStr;

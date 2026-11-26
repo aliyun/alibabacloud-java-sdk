@@ -17,7 +17,7 @@ public class GetRuleCategoryResponseBody extends TeaModel {
     public GetRuleCategoryResponseBodyData data;
 
     /**
-     * <p>If an error occurs, this field provides error details. If the call is successful, the value is \<code>successful\\</code>.</p>
+     * <p>If an error occurs, this field provides error details. If the call is successful, the value is `successful`.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -35,7 +35,7 @@ public class GetRuleCategoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. A value of \<code>true\\</code> indicates success. A value of \<code>false\\</code> or \<code>null\\</code> indicates failure.</p>
+     * <p>Indicates whether the call was successful. A value of `true` indicates success. A value of `false` or `null` indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

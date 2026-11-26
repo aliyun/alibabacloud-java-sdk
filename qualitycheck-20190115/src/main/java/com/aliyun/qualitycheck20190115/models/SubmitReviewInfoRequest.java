@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class SubmitReviewInfoRequest extends TeaModel {
     /**
-     * <p>Workspace ID</p>
+     * <p>The workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
-     * <p>The complete JSON string information. See the following details for specific content.</p>
+     * <p>The complete JSON string. For more information, see the following details.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>{
-     *     &quot;taskId&quot;: &quot;任务ID&quot;,
-     *     &quot;vid&quot;: &quot;文件ID&quot;
+     *     &quot;taskId&quot;: &quot;Task ID&quot;,
+     *     &quot;vid&quot;: &quot;File ID&quot;
      * }</p>
      */
     @NameInMap("JsonStr")

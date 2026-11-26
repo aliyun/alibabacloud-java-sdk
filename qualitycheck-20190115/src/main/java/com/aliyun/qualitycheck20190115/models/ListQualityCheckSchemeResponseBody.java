@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListQualityCheckSchemeResponseBody extends TeaModel {
     /**
-     * <p>The status code. A value of <strong>200</strong> indicates success. Other values indicate a failure. Use this code to identify the cause of the failure.</p>
+     * <p>The result code. A value of <strong>200</strong> indicates success. Other values indicate failure. You can use this field to determine the cause of the failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
     public java.util.List<ListQualityCheckSchemeResponseBodyData> data;
 
     /**
-     * <p>The returned message. If the request is successful, \<code>successful\\</code> is returned. If the request fails, an error message is returned.</p>
+     * <p>The error message returned when an error occurs. The value is successful when the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -38,7 +38,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -65,16 +65,16 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An internal parameter. You can ignore this parameter.</p>
+     * <p>An internal field. Ignore this field.</p>
      * 
      * <strong>example:</strong>
-     * <p>XXX</p>
+     * <p>Deprecated field</p>
      */
     @NameInMap("ResultCountId")
     public String resultCountId;
 
     /**
-     * <p>Indicates whether the request was successful. A value of true indicates success. A value of <strong>false</strong> or <strong>null</strong> indicates failure.</p>
+     * <p>Indicates whether the request is successful. <strong>true</strong> indicates that the request is successful. <strong>false</strong> or <strong>null</strong> indicates that the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -161,7 +161,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
 
     public static class ListQualityCheckSchemeResponseBodyDataRuleListRules extends TeaModel {
         /**
-         * <p>The quality check dimension to which the item belongs.</p>
+         * <p>The quality check dimension to which the rule belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -173,7 +173,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
          * <p>The name of the check item.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试规则</p>
+         * <p>Test rule</p>
          */
         @NameInMap("Name")
         public String name;
@@ -188,7 +188,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         public Long rid;
 
         /**
-         * <p>Indicates whether to calculate a score. Valid values: 1 (no score) and 3 (score).</p>
+         * <p>Specifies whether the score is calculated. Valid values: 1: not calculated; 3: calculated.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -206,7 +206,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         public Integer scoreNum;
 
         /**
-         * <p>The scoring type. Valid values: 0 (Points are added or deducted each time the rule is triggered) and 1 (A one-time score is given when the rule is triggered).</p>
+         * <p>The scoring type. Valid values: 0: add or deduct points after the rule is triggered; 1: award a one-time score after the rule is triggered.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -215,7 +215,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         public Integer scoreNumType;
 
         /**
-         * <p>The scoring method. Valid values: 1 (add points) and 3 (deduct points).</p>
+         * <p>The score adjustment type. Valid values: 1: add points; 3: deduct points.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -224,7 +224,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         public Integer scoreType;
 
         /**
-         * <p>The application scenario of the check item. Valid values: 10 (common check item) and 11 (SOP flow check item).</p>
+         * <p>The common scenarios of the check item. Valid values: 10: common check item. 11: SOP flow check item.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -305,7 +305,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
 
     public static class ListQualityCheckSchemeResponseBodyDataRuleList extends TeaModel {
         /**
-         * <p>The rule information. This parameter is reserved for future use. Currently, only one rule is returned.</p>
+         * <p>The rule information. Only one rule is included here and reserved for future extensions.</p>
          */
         @NameInMap("Rules")
         public java.util.List<ListQualityCheckSchemeResponseBodyDataRuleListRules> rules;
@@ -330,7 +330,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
          * <p>The name of the quality check dimension.</p>
          * 
          * <strong>example:</strong>
-         * <p>服务规范性检测</p>
+         * <p>Service compliance check</p>
          */
         @NameInMap("CheckName")
         public String checkName;
@@ -345,7 +345,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         public Integer checkType;
 
         /**
-         * <p>The enabled status. Valid values: 0 (disabled) and 1 (enabled).</p>
+         * <p>The enable status. Valid values: 0: disabled; 1: enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -363,7 +363,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         public Integer score;
 
         /**
-         * <p>An internal parameter. You can ignore this parameter.</p>
+         * <p>An internal field. Ignore this field.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -420,7 +420,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
 
     public static class ListQualityCheckSchemeResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the scheme was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-05-10T09:34Z</p>
@@ -432,13 +432,13 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
          * <p>The name of the creator.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("CreateUserName")
         public String createUserName;
 
         /**
-         * <p>The data type of the quality check scheme. Valid values: 0 (text) and 1 (audio).</p>
+         * <p>The data type of the quality check scheme. Valid values: 0: text; 1: audio.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -450,7 +450,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>售前使用</p>
+         * <p>Pre-sales use</p>
          */
         @NameInMap("Description")
         public String description;
@@ -486,7 +486,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         public Long schemeId;
 
         /**
-         * <p>The status of the quality check scheme. Valid values: 0 (deleted), 1 (published), 2 (unpublished), and 3 (updated but not published).</p>
+         * <p>The status of the quality check scheme. Valid values: 0: deleted; 1: published; 2: unpublished; 3: updated and unpublished.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -495,7 +495,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The type of the quality check scheme template. Valid values: 1 (built-in) and 2 (user-defined).</p>
+         * <p>The type of the quality check scheme template. Valid values: 1: built-in; 2: custom.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -504,7 +504,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         public Integer templateType;
 
         /**
-         * <p>The type of the quality check scheme. Valid values: 0 (built-in) and 1 (user-defined).</p>
+         * <p>The type of the quality check scheme. Valid values: 0: built-in; 1: custom.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -513,7 +513,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         public Integer type;
 
         /**
-         * <p>The time when the scheme was last updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-05-10T10:34Z</p>
@@ -522,10 +522,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>The name of the user who last updated the scheme.</p>
+         * <p>The name of the updater.</p>
          * 
          * <strong>example:</strong>
-         * <p>李四</p>
+         * <p>Li Si</p>
          */
         @NameInMap("UpdateUserName")
         public String updateUserName;
