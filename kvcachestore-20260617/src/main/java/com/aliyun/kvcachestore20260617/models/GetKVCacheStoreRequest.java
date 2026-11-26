@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetKVCacheStoreRequest extends TeaModel {
     /**
-     * <p>The KvCacheStore instance ID.</p>
+     * <p>The ID of the KvCacheStore instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

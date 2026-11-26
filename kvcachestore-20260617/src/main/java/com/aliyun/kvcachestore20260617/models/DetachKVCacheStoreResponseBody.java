@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DetachKVCacheStoreResponseBody extends TeaModel {
     /**
-     * <p>The list of detachment results.</p>
+     * <p>The list of unmount results.</p>
      */
     @NameInMap("DetachResults")
     public java.util.List<DetachKVCacheStoreResponseBodyDetachResults> detachResults;
 
     /**
-     * <p>The request ID. This ID is returned regardless of whether the operation is successful.</p>
+     * <p>The request ID. This ID is returned regardless of whether the API call succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>B127704C-ECB1-5B0A-AA9C-8F394A6F179F</p>
@@ -42,7 +42,7 @@ public class DetachKVCacheStoreResponseBody extends TeaModel {
 
     public static class DetachKVCacheStoreResponseBodyDetachResults extends TeaModel {
         /**
-         * <p>The error code returned when the operation fails. This parameter is null if the operation succeeds.</p>
+         * <p>The error code returned when the operation fails. This field is null when the operation succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>KVCacheInstance.NotAttached</p>
@@ -51,7 +51,7 @@ public class DetachKVCacheStoreResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message returned when the operation fails. This parameter is null if the operation succeeds.</p>
+         * <p>The error message returned when the operation fails. This field is null when the operation succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>The KVCacheInstance is not in ATTACHED status.</p>
@@ -69,7 +69,7 @@ public class DetachKVCacheStoreResponseBody extends TeaModel {
         public String kvcsId;
 
         /**
-         * <p>The status of the operation. Valid values: DETACHING (the request is accepted and the detachment is in progress; this value is also returned for idempotent calls), Success (synchronous verification is passed and the asynchronous operation is complete), and Failed (the operation failed).</p>
+         * <p>The operation result. Valid values: DETACHING (the request is accepted and the asynchronous unmount operation is in progress; this value is also returned for idempotent calls), Success (synchronous verification passed and asynchronous operation completed), and Failed (the operation failed).</p>
          * 
          * <strong>example:</strong>
          * <p>DETACHING</p>
@@ -78,7 +78,7 @@ public class DetachKVCacheStoreResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The VSC ID on the compute side.</p>
+         * <p>The ID of the VSC on the compute side.</p>
          * 
          * <strong>example:</strong>
          * <p>vsc-001</p>

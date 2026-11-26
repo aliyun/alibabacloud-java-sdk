@@ -11,7 +11,7 @@ public class GetKVCacheStoreResponseBody extends TeaModel {
     public GetKVCacheStoreResponseBodyKvCacheStore kvCacheStore;
 
     /**
-     * <p>The request ID. A request ID is returned regardless of whether the call is successful.</p>
+     * <p>The ID of the request. The request ID is returned regardless of whether the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>019FB5E9-F9E8-52F5-9C56-2CDF479CBEB2</p>
@@ -42,7 +42,7 @@ public class GetKVCacheStoreResponseBody extends TeaModel {
 
     public static class GetKVCacheStoreResponseBodyKvCacheStoreTags extends TeaModel {
         /**
-         * <p>The tag key of the resource.</p>
+         * <p>The key of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>ac-cus-tag-6</p>
@@ -51,7 +51,7 @@ public class GetKVCacheStoreResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value of the resource.</p>
+         * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>advanced</p>
@@ -84,7 +84,7 @@ public class GetKVCacheStoreResponseBody extends TeaModel {
 
     public static class GetKVCacheStoreResponseBodyKvCacheStore extends TeaModel {
         /**
-         * <p>The storage capacity in GiB.</p>
+         * <p>The storage capacity, in GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -93,7 +93,7 @@ public class GetKVCacheStoreResponseBody extends TeaModel {
         public Long capacity;
 
         /**
-         * <p>The creation time in ISO 8601 format.</p>
+         * <p>The time when the instance was created. The time follows the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-18T10:00:00Z</p>
@@ -102,7 +102,7 @@ public class GetKVCacheStoreResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The instance description.</p>
+         * <p>The description of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>production kvcachestore</p>
@@ -111,12 +111,7 @@ public class GetKVCacheStoreResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The extra status information. Valid values:</p>
-         * <ul>
-         * <li>CapacityExpanding: The capacity is being expanded.</li>
-         * <li>CapacityExpandSuccess: The capacity expansion succeeded.</li>
-         * <li>CapacityExpandFail: The capacity expansion failed.</li>
-         * </ul>
+         * <p>The extra status information. Valid values: CapacityExpanding, CapacityExpandSuccess, and CapacityExpandFail.</p>
          * 
          * <strong>example:</strong>
          * <p>CapacityExpanding</p>
@@ -125,7 +120,7 @@ public class GetKVCacheStoreResponseBody extends TeaModel {
         public String extraStatus;
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The cluster number.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -134,7 +129,7 @@ public class GetKVCacheStoreResponseBody extends TeaModel {
         public String hpnZone;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>kvcs-xxxxx</p>
@@ -143,7 +138,7 @@ public class GetKVCacheStoreResponseBody extends TeaModel {
         public String kvcsId;
 
         /**
-         * <p>The file system-level mount point ID. Instances under the same file system share this mount point. For more information, use ListKVCacheInstanceAttachInfo.</p>
+         * <p>The ID of the file system-level mount point. The mount point is shared by instances in the same file system. For more information, call the ListKVCacheInstanceAttachInfo operation.</p>
          * 
          * <strong>example:</strong>
          * <p>mp-xxxxx</p>
@@ -152,7 +147,7 @@ public class GetKVCacheStoreResponseBody extends TeaModel {
         public String mountPointId;
 
         /**
-         * <p>The instance name.</p>
+         * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>production-instance</p>
@@ -161,11 +156,7 @@ public class GetKVCacheStoreResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The payment type. Valid values:</p>
-         * <ul>
-         * <li>PREPAY: subscription.</li>
-         * <li>POSTPAY: pay-as-you-go.</li>
-         * </ul>
+         * <p>The billing method. Valid values: PREPAY and POSTPAY.</p>
          * 
          * <strong>example:</strong>
          * <p>POSTPAY</p>
@@ -183,7 +174,7 @@ public class GetKVCacheStoreResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzrwkxbdvkctq</p>
@@ -192,15 +183,7 @@ public class GetKVCacheStoreResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The instance status. Valid values:</p>
-         * <ul>
-         * <li>Creating: The instance is being created.</li>
-         * <li>Available: The instance is available.</li>
-         * <li>InUse: The instance is in use.</li>
-         * <li>Stopping: The instance is being stopped.</li>
-         * <li>Stopped: The instance is stopped.</li>
-         * <li>Deleting: The instance is being deleted.</li>
-         * </ul>
+         * <p>The instance status. Valid values: Creating, Available, InUse, Stopping, Stopped, and Deleting.</p>
          * 
          * <strong>example:</strong>
          * <p>AVAILABLE</p>
@@ -209,16 +192,13 @@ public class GetKVCacheStoreResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The list of resource tags.</p>
+         * <p>The tags of the resource.</p>
          */
         @NameInMap("Tags")
         public java.util.List<GetKVCacheStoreResponseBodyKvCacheStoreTags> tags;
 
         /**
-         * <p>The instance type. Valid values:</p>
-         * <ul>
-         * <li>kvcs: KVCacheStore (CPFS).</li>
-         * </ul>
+         * <p>The instance type, such as kvcs (KVCacheStore, CPFS).</p>
          * 
          * <strong>example:</strong>
          * <p>kvcs</p>

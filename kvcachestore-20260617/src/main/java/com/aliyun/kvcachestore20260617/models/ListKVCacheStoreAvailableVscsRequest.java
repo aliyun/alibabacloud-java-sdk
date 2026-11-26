@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListKVCacheStoreAvailableVscsRequest extends TeaModel {
     /**
-     * <p>The cross-account authorization role chain, used for cross-account VSC queries in ECS or EFLO scenarios.</p>
+     * <p>The cross-account authorization role chain, which is used to query VSCs across accounts in ECS or EFLO scenarios.</p>
      */
     @NameInMap("Arns")
     public java.util.List<ListKVCacheStoreAvailableVscsRequestArns> arns;
@@ -21,11 +21,7 @@ public class ListKVCacheStoreAvailableVscsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The compute instance type. Valid values:</p>
-     * <ul>
-     * <li>ECS</li>
-     * <li>EFLO</li>
-     * </ul>
+     * <p>The compute instance type. Valid values: ECS and EFLO.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -121,11 +117,7 @@ public class ListKVCacheStoreAvailableVscsRequest extends TeaModel {
         public String roleArn;
 
         /**
-         * <p>The role type. Valid values:</p>
-         * <ul>
-         * <li>service</li>
-         * <li>user</li>
-         * </ul>
+         * <p>The role type. Valid values: service and user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

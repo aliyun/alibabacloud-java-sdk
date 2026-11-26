@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListKVCacheStoreAvailableHpnZonesResponseBody extends TeaModel {
     /**
-     * <p>The list of available HpnZones for instances.</p>
+     * <p>The list of available HpnZones for the instances.</p>
      */
     @NameInMap("InstanceHpnZones")
     public java.util.List<ListKVCacheStoreAvailableHpnZonesResponseBodyInstanceHpnZones> instanceHpnZones;
@@ -73,7 +73,7 @@ public class ListKVCacheStoreAvailableHpnZonesResponseBody extends TeaModel {
         public java.util.List<ListKVCacheStoreAvailableHpnZonesResponseBodyInstanceHpnZonesAvailableHpnZones> availableHpnZones;
 
         /**
-         * <p>The ID of the KVCacheStore instance.</p>
+         * <p>The KVCacheStore instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>kvcs-xxxxx</p>

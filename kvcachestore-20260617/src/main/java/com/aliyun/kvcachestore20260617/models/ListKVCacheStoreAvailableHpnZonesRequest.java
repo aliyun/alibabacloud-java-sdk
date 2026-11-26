@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListKVCacheStoreAvailableHpnZonesRequest extends TeaModel {
     /**
-     * <p>The IDs of the KVCacheStore instances. Separate multiple IDs with commas. You can specify 1 to 100 IDs.</p>
+     * <p>The list of KVCacheStore instance IDs. Separate multiple IDs with commas. You can specify 1 to 100 IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("KvcsIds")
