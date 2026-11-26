@@ -14,16 +14,16 @@ public class TagResourcesRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The list of resource IDs. You can add up to 50 resource IDs in a single call.</p>
+     * <p>The list of resource IDs. You can specify up to 50 resource IDs in a single call.</p>
      * <blockquote>
      * <ul>
      * <li>Supported resource types include users and access configurations:</li>
      * <li><ul>
-     * <li>User: Enter the user ID.</li>
+     * <li>If the resource type is user, specify the user ID.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>Access configuration: Enter the access configuration ID.</li>
+     * <li>If the resource type is access configuration, specify the access configuration ID.</li>
      * </ul>
      * </li>
      * </ul>
@@ -35,11 +35,11 @@ public class TagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Users and access configurations are supported.</p>
+     * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li><p>user: user.</p>
+     * <li><p>user: User.</p>
      * </li>
-     * <li><p>accessConfiguration: access configuration.</p>
+     * <li><p>accessConfiguration: Access configuration.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -100,15 +100,15 @@ public class TagResourcesRequest extends TeaModel {
          * <blockquote>
          * <ul>
          * <li><ul>
-         * <li>The key cannot start with aliyun or acs: (case-insensitive).</li>
+         * <li>The tag key cannot start with aliyun or acs: in any case.</li>
          * </ul>
          * </li>
          * <li><ul>
-         * <li>The key cannot contain http:// or https:// (case-insensitive).</li>
+         * <li>The tag key cannot contain http:// or https:// in any case.</li>
          * </ul>
          * </li>
          * <li><ul>
-         * <li>The key cannot be an empty string.</li>
+         * <li>The tag key cannot be an empty string.</li>
          * </ul>
          * </li>
          * </ul>
@@ -126,11 +126,11 @@ public class TagResourcesRequest extends TeaModel {
          * <blockquote>
          * <ul>
          * <li><ul>
-         * <li>The value cannot contain http:// or https:// (case-insensitive).</li>
+         * <li>The tag value cannot contain http:// or https:// in any case.</li>
          * </ul>
          * </li>
          * <li><ul>
-         * <li>The value cannot be an empty string.</li>
+         * <li>The tag value cannot be an empty string.</li>
          * </ul>
          * </li>
          * </ul>

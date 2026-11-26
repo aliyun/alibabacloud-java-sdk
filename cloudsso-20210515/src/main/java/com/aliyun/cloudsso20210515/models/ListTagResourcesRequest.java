@@ -14,7 +14,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The pagination token that is used to retrieve the next page of results when the response is truncated.</p>
+     * <p>The token that is used to retrieve the next page of results when the response is truncated.</p>
      * 
      * <strong>example:</strong>
      * <p>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</p>
@@ -26,28 +26,28 @@ public class ListTagResourcesRequest extends TeaModel {
      * <p>The list of resource IDs. You can specify up to 50 resource IDs in a single call.</p>
      * <blockquote>
      * <ul>
-     * <li>Supported resource types include users and access configurations:</li>
+     * <li>The resource type supports users and access configurations:</li>
      * <li><ul>
-     * <li>If the resource type is user, specify the user ID.</li>
+     * <li>If the resource type is user, enter the user ID.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>If the resource type is access configuration, specify the access configuration ID.</li>
+     * <li>If the resource type is access configuration, enter the access configuration ID.</li>
      * </ul>
      * </li>
      * </ul>
      * </blockquote>
-     * <p><notice>If the DirectoryId parameter is not specified, you must add the &quot;${DirectoryId}_&quot; prefix to the resource ID.</notice></p>
+     * <p><notice>If the DirectoryId parameter is not specified, you must add the prefix &quot;${DirectoryId}_&quot; to the resource ID.</notice></p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Users and access configurations are supported. Valid values:</p>
+     * <p>The resource type. Users and access configurations are supported.</p>
      * <ul>
-     * <li><p>user: user</p>
+     * <li><p>Set the value to user for users.</p>
      * </li>
-     * <li><p>accessConfiguration: access configuration</p>
+     * <li><p>Set the value to accessConfiguration for access configurations.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -115,7 +115,7 @@ public class ListTagResourcesRequest extends TeaModel {
          * <blockquote>
          * <ul>
          * <li><ul>
-         * <li>The tag key cannot be an empty string.</li>
+         * <li>The value cannot be an empty string.</li>
          * </ul>
          * </li>
          * </ul>

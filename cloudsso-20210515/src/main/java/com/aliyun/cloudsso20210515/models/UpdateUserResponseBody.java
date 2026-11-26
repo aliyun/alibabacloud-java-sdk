@@ -14,7 +14,7 @@ public class UpdateUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the user.</p>
+     * <p>The user information.</p>
      */
     @NameInMap("User")
     public UpdateUserResponseBodyUser user;
@@ -42,7 +42,7 @@ public class UpdateUserResponseBody extends TeaModel {
 
     public static class UpdateUserResponseBodyUser extends TeaModel {
         /**
-         * <p>The time when the user was created. The value is displayed in UTC.</p>
+         * <p>The time when the user was created (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-26T03:03:42Z</p>
@@ -96,12 +96,10 @@ public class UpdateUserResponseBody extends TeaModel {
         public String lastName;
 
         /**
-         * <p>The type of the user. Valid values:</p>
+         * <p>The provisioning type of the user. Valid values:</p>
          * <ul>
-         * <li><p>Manual: The user is manually created.</p>
-         * </li>
-         * <li><p>Synchronized: The user is synchronized from an external identity provider (IdP).</p>
-         * </li>
+         * <li>Manual: Manually created.</li>
+         * <li>Synchronized: Synchronized from an external source.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -113,10 +111,8 @@ public class UpdateUserResponseBody extends TeaModel {
         /**
          * <p>The status of the user. Valid values:</p>
          * <ul>
-         * <li><p>Enabled: The logon of the user is enabled.</p>
-         * </li>
-         * <li><p>Disabled: The logon of the user is disabled.</p>
-         * </li>
+         * <li>Enabled: Enabled.</li>
+         * <li>Disabled: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -126,7 +122,7 @@ public class UpdateUserResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the information about the user was modified. The value is displayed in UTC.</p>
+         * <p>The time when the user was updated (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-26T07:32:32Z</p>
@@ -135,7 +131,7 @@ public class UpdateUserResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>u-00q8wbq42wiltcrk****</p>
@@ -144,7 +140,7 @@ public class UpdateUserResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The username of the user.</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
          * <p>Alice</p>

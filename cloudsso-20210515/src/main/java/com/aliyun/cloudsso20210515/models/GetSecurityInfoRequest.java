@@ -1,0 +1,48 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.cloudsso20210515.models;
+
+import com.aliyun.tea.*;
+
+public class GetSecurityInfoRequest extends TeaModel {
+    /**
+     * <p>The directory ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-00fc2p61****</p>
+     */
+    @NameInMap("DirectoryId")
+    public String directoryId;
+
+    /**
+     * <p>The user ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>u-00q8wbq42wiltcrk****</p>
+     */
+    @NameInMap("UserId")
+    public String userId;
+
+    public static GetSecurityInfoRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetSecurityInfoRequest self = new GetSecurityInfoRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public GetSecurityInfoRequest setDirectoryId(String directoryId) {
+        this.directoryId = directoryId;
+        return this;
+    }
+    public String getDirectoryId() {
+        return this.directoryId;
+    }
+
+    public GetSecurityInfoRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
+    }
+
+}

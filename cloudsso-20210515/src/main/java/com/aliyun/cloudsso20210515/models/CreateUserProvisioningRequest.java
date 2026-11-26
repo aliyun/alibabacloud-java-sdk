@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateUserProvisioningRequest extends TeaModel {
     /**
-     * <p>The deletion policy. Specifies the action to take for synchronized Resource Access Management (RAM) users when a Resource Access Management (RAM) user synchronization is deleted. Valid values:</p>
+     * <p>The deletion policy. This policy specifies how to handle the synchronized Resource Access Management (RAM) users when the Resource Access Management (RAM) user synchronization is deleted. Valid values:</p>
      * <ul>
-     * <li>Delete: Delete. When a Resource Access Management (RAM) user synchronization is deleted, the system deletes the Resource Access Management (RAM) users that have been synchronized from CloudSSO to RAM.</li>
-     * <li>Keep: Keep. When a Resource Access Management (RAM) user synchronization is deleted, the system retains the Resource Access Management (RAM) users that have been synchronized from CloudSSO to RAM.</li>
+     * <li>Delete: Delete. When the Resource Access Management (RAM) user synchronization is deleted, the Resource Access Management (RAM) users that have been synchronized from CloudSSO to RAM are deleted.</li>
+     * <li>Keep: Keep. When the Resource Access Management (RAM) user synchronization is deleted, the Resource Access Management (RAM) users that have been synchronized from CloudSSO to RAM are retained.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class CreateUserProvisioningRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the directory.</p>
+     * <p>The ID of the CloudSSO directory.</p>
      * 
      * <strong>example:</strong>
      * <p>d-003qew84****</p>
@@ -36,10 +36,10 @@ public class CreateUserProvisioningRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The conflict resolution policy. Specifies the action to take when a CloudSSO user is synchronized to Resource Access Management (RAM) user with the same name already exists. Valid values:</p>
+     * <p>The conflict resolution policy. This policy specifies how to handle conflicts when a CloudSSO user is synchronized to Resource Access Management (RAM) user with the same name already exists. Valid values:</p>
      * <ul>
-     * <li>KeepBoth: Keep both. When a CloudSSO user is synchronized to Resource Access Management (RAM) user with the same name already exists, the system adds the <code>_sso</code> suffix to the username of the CloudSSO user and attempts to create a RAM user with the suffixed username.</li>
-     * <li>TakeOver: Take over. When a CloudSSO user is synchronized to Resource Access Management (RAM) user with the same name already exists, the system replaces the existing RAM user with the synchronized CloudSSO user.</li>
+     * <li>KeepBoth: Keep both. When a CloudSSO user is synchronized to Resource Access Management (RAM) user with the same name already exists, the system appends the _sso suffix to the username of the CloudSSO user and attempts to create a RAM user with the new username.</li>
+     * <li>TakeOver: Take over. When a CloudSSO user is synchronized to Resource Access Management (RAM) user with the same name already exists, the system directly replaces the existing RAM user with the synchronized CloudSSO user.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,8 +51,8 @@ public class CreateUserProvisioningRequest extends TeaModel {
     /**
      * <p>The ID of the identity for the Resource Access Management (RAM) user synchronization. Valid values:</p>
      * <ul>
-     * <li>When <code>PrincipalType</code> is set to <code>Group</code>, the value is the ID of the CloudSSO group (g-********).</li>
-     * <li>When <code>PrincipalType</code> is set to <code>User</code>, the value is the ID of the CloudSSO user (u-********).</li>
+     * <li>If <code>PrincipalType</code> is set to <code>Group</code>, the value is the ID of the CloudSSO group (g-********).</li>
+     * <li>If <code>PrincipalType</code> is set to <code>User</code>, the value is the ID of the CloudSSO user (u-********).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +84,7 @@ public class CreateUserProvisioningRequest extends TeaModel {
     public String targetId;
 
     /**
-     * <p>The type of the destination for the Resource Access Management (RAM) user synchronization. Currently, the only valid value is <code>RD-Account</code>.</p>
+     * <p>The type of the destination for the Resource Access Management (RAM) user synchronization. Currently, the value is <code>RD-Account</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>RD-Account</p>

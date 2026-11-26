@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "cloudsso";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("cloudsso", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -84,7 +87,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of adding a system policy named <code>AliyunECSFullAccess</code> to the access configuration <code>ac-00jhtfl8thteu6uj****</code>.</p>
+     * <p>This topic provides an example of adding the system policy AliyunECSFullAccess to the access configuration ac-00jhtfl8thteu6uj****.</p>
      * 
      * <b>summary</b> : 
      * <p>Adds an access policy to an access configuration.</p>
@@ -135,7 +138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of adding a system policy named <code>AliyunECSFullAccess</code> to the access configuration <code>ac-00jhtfl8thteu6uj****</code>.</p>
+     * <p>This topic provides an example of adding the system policy AliyunECSFullAccess to the access configuration ac-00jhtfl8thteu6uj****.</p>
      * 
      * <b>summary</b> : 
      * <p>Adds an access policy to an access configuration.</p>
@@ -150,11 +153,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After SCIM synchronization is enabled, you cannot add users to SCIM-synchronized groups.
-     * This topic provides an example of adding the user <code>u-00q8wbq42wiltcrk****</code> to the group <code>g-00jqzghi2n3o5hkh****</code>.</p>
+     * <p>When SCIM synchronization is enabled, you cannot add users to SCIM-synchronized user groups.
+     * This topic provides an example of adding the user <code>u-00q8wbq42wiltcrk****</code> to the user group <code>g-00jqzghi2n3o5hkh****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds a user to a group.</p>
+     * <p>Adds a user to a user group.</p>
      * 
      * @param request AddUserToGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -194,11 +197,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After SCIM synchronization is enabled, you cannot add users to SCIM-synchronized groups.
-     * This topic provides an example of adding the user <code>u-00q8wbq42wiltcrk****</code> to the group <code>g-00jqzghi2n3o5hkh****</code>.</p>
+     * <p>When SCIM synchronization is enabled, you cannot add users to SCIM-synchronized user groups.
+     * This topic provides an example of adding the user <code>u-00q8wbq42wiltcrk****</code> to the user group <code>g-00jqzghi2n3o5hkh****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds a user to a group.</p>
+     * <p>Adds a user to a user group.</p>
      * 
      * @param request AddUserToGroupRequest
      * @return AddUserToGroupResponse
@@ -211,7 +214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>You can clear the SAML IdP information only when SSO logon is disabled. Otherwise, you cannot perform this operation.
-     * This topic provides an example of clearing the configuration of the SAML IdP for the <code>d-00fc2p61****</code> directory.</p>
+     * This topic provides an example to clear the configuration of the SAML IdP in the <code>d-00fc2p61****</code> directory.</p>
      * 
      * <b>summary</b> : 
      * <p>Clears the configuration of the SAML IdP.</p>
@@ -247,7 +250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>You can clear the SAML IdP information only when SSO logon is disabled. Otherwise, you cannot perform this operation.
-     * This topic provides an example of clearing the configuration of the SAML IdP for the <code>d-00fc2p61****</code> directory.</p>
+     * This topic provides an example to clear the configuration of the SAML IdP in the <code>d-00fc2p61****</code> directory.</p>
      * 
      * <b>summary</b> : 
      * <p>Clears the configuration of the SAML IdP.</p>
@@ -262,12 +265,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is asynchronous. You can use the TaskId returned in the response to call <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> to query the task execution status.
+     * <p>This API operation is asynchronous. You can use the TaskId in the response parameter to invoke <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> and execute a query for the node status.
      * For more information about granting access to an account in a resource directory, see <a href="https://help.aliyun.com/document_detail/266726.html">Multi-account authorization overview</a>.
-     * This topic provides an example on how to assign the access configuration <code>ac-00jhtfl8thteu6uj****</code> to the CloudSSO user <code>u-00q8wbq42wiltcrk****</code> for the account <code>114240524784****</code> in a resource directory. This allows the CloudSSO user to access authorized resources in the account.</p>
+     * This topic provides an example on how to configure permissions for the CloudSSO user <code>u-00q8wbq42wiltcrk****</code> on the account in a resource directory <code>114240524784****</code> by using the access configuration <code>ac-00jhtfl8thteu6uj****</code>, so that the CloudSSO user can access the authorized resources in the account in a resource directory.</p>
      * 
      * <b>summary</b> : 
-     * <p>Configures the settings for the users or groups allowed to access an account in a resource directory, and the corresponding access permissions (access configurations).</p>
+     * <p>Configures the Settings for the users or user groups allowed to access an account in a resource directory, along with their corresponding access permissions (access configurations).</p>
      * 
      * @param request CreateAccessAssignmentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -323,12 +326,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is asynchronous. You can use the TaskId returned in the response to call <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> to query the task execution status.
+     * <p>This API operation is asynchronous. You can use the TaskId in the response parameter to invoke <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> and execute a query for the node status.
      * For more information about granting access to an account in a resource directory, see <a href="https://help.aliyun.com/document_detail/266726.html">Multi-account authorization overview</a>.
-     * This topic provides an example on how to assign the access configuration <code>ac-00jhtfl8thteu6uj****</code> to the CloudSSO user <code>u-00q8wbq42wiltcrk****</code> for the account <code>114240524784****</code> in a resource directory. This allows the CloudSSO user to access authorized resources in the account.</p>
+     * This topic provides an example on how to configure permissions for the CloudSSO user <code>u-00q8wbq42wiltcrk****</code> on the account in a resource directory <code>114240524784****</code> by using the access configuration <code>ac-00jhtfl8thteu6uj****</code>, so that the CloudSSO user can access the authorized resources in the account in a resource directory.</p>
      * 
      * <b>summary</b> : 
-     * <p>Configures the settings for the users or groups allowed to access an account in a resource directory, and the corresponding access permissions (access configurations).</p>
+     * <p>Configures the Settings for the users or user groups allowed to access an account in a resource directory, along with their corresponding access permissions (access configurations).</p>
      * 
      * @param request CreateAccessAssignmentRequest
      * @return CreateAccessAssignmentResponse
@@ -341,7 +344,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>For more information about access configurations, see <a href="https://help.aliyun.com/document_detail/266737.html">Access configuration overview</a>.
-     * This topic provides an example on how to create an access configuration named <code>ECS-Admin</code>.</p>
+     * This topic provides an example of creating an access configuration named <code>ECS-Admin</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an access configuration.</p>
@@ -397,7 +400,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>For more information about access configurations, see <a href="https://help.aliyun.com/document_detail/266737.html">Access configuration overview</a>.
-     * This topic provides an example on how to create an access configuration named <code>ECS-Admin</code>.</p>
+     * This topic provides an example of creating an access configuration named <code>ECS-Admin</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an access configuration.</p>
@@ -414,11 +417,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Usage notes</h3>
      * <p>A directory is an instance in CloudSSO. You must create a directory before you use CloudSSO. All CloudSSO resources must be maintained in the directory.
-     * You must select a region for the CloudSSO directory. Alibaba Cloud ensures that all CloudSSO-related data is stored only in this region. This is independent of where you deploy cloud resources such as ECS and ApsaraDB RDS. You can log on to and access cloud resources in any region from anywhere in the world. You can select a region based on your security and compliance requirements and the geographic location of your target users. If you do not have special security and compliance requirements, select the region closest to your target users to improve access speed. Currently, you can create directories in the following four regions: China (Shanghai), China (Hong Kong), US (Silicon Valley), and Germany (Frankfurt).
+     * You must select a region for the CloudSSO directory. Alibaba Cloud ensures that all CloudSSO-related data is stored only in this region. This is independent of where you deploy cloud resources such as ECS and ApsaraDB RDS. You can log on to and access cloud resources in any region from anywhere in the world. You can select a region based on your security and compliance requirements and the geographic location of your target users. If you do not have special security and compliance requirements, we recommend that you select the region closest to your target users to improve access speed. Currently, you can create directories in the following four regions: China (Shanghai), China (Hong Kong), US (Silicon Valley), and Germany (Frankfurt).
      * This topic provides an example on how to create a directory named <code>example</code> in the China (Shanghai) region.</p>
      * <h3>Limits</h3>
      * <ul>
-     * <li>A management account can create only one directory.</li>
+     * <li>You can create only one directory for each management account.</li>
      * <li>To change the region of the directory, you must delete the existing directory and create a new one in another region.</li>
      * </ul>
      * 
@@ -457,11 +460,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Usage notes</h3>
      * <p>A directory is an instance in CloudSSO. You must create a directory before you use CloudSSO. All CloudSSO resources must be maintained in the directory.
-     * You must select a region for the CloudSSO directory. Alibaba Cloud ensures that all CloudSSO-related data is stored only in this region. This is independent of where you deploy cloud resources such as ECS and ApsaraDB RDS. You can log on to and access cloud resources in any region from anywhere in the world. You can select a region based on your security and compliance requirements and the geographic location of your target users. If you do not have special security and compliance requirements, select the region closest to your target users to improve access speed. Currently, you can create directories in the following four regions: China (Shanghai), China (Hong Kong), US (Silicon Valley), and Germany (Frankfurt).
+     * You must select a region for the CloudSSO directory. Alibaba Cloud ensures that all CloudSSO-related data is stored only in this region. This is independent of where you deploy cloud resources such as ECS and ApsaraDB RDS. You can log on to and access cloud resources in any region from anywhere in the world. You can select a region based on your security and compliance requirements and the geographic location of your target users. If you do not have special security and compliance requirements, we recommend that you select the region closest to your target users to improve access speed. Currently, you can create directories in the following four regions: China (Shanghai), China (Hong Kong), US (Silicon Valley), and Germany (Frankfurt).
      * This topic provides an example on how to create a directory named <code>example</code> in the China (Shanghai) region.</p>
      * <h3>Limits</h3>
      * <ul>
-     * <li>A management account can create only one directory.</li>
+     * <li>You can create only one directory for each management account.</li>
      * <li>To change the region of the directory, you must delete the existing directory and create a new one in another region.</li>
      * </ul>
      * 
@@ -478,7 +481,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of creating a user group named <code>TestGroup</code>.</p>
+     * <p>This topic provides an example of creating a group named <code>TestGroup</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a user group.</p>
@@ -521,7 +524,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of creating a user group named <code>TestGroup</code>.</p>
+     * <p>This topic provides an example of creating a group named <code>TestGroup</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a user group.</p>
@@ -536,11 +539,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A SCIM credential is required for SCIM synchronization. You can create up to two SCIM credentials.
-     * This topic provides an example on how to create a SCIM credential in the directory <code>d-00fc2p61****</code>.</p>
+     * <p>SCIM credentials are required for SCIM synchronization. You can create up to two SCIM credentials.
+     * This topic provides an example of creating a SCIM server credential in the <code>d-00fc2p61****</code> directory.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a SCIM credential.</p>
+     * <p>Creates a SCIM server credential.</p>
      * 
      * @param request CreateSCIMServerCredentialRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -572,11 +575,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A SCIM credential is required for SCIM synchronization. You can create up to two SCIM credentials.
-     * This topic provides an example on how to create a SCIM credential in the directory <code>d-00fc2p61****</code>.</p>
+     * <p>SCIM credentials are required for SCIM synchronization. You can create up to two SCIM credentials.
+     * This topic provides an example of creating a SCIM server credential in the <code>d-00fc2p61****</code> directory.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a SCIM credential.</p>
+     * <p>Creates a SCIM server credential.</p>
      * 
      * @param request CreateSCIMServerCredentialRequest
      * @return CreateSCIMServerCredentialResponse
@@ -588,7 +591,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a user by calling CreateUser.</p>
+     * <p>Creates a user.</p>
      * 
      * @param request CreateUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -652,7 +655,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a user by calling CreateUser.</p>
+     * <p>Creates a user.</p>
      * 
      * @param request CreateUserRequest
      * @return CreateUserResponse
@@ -664,7 +667,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can create a Resource Access Management (RAM) user synchronization to synchronously create a Resource Access Management (RAM) user that has the same name as a CloudSSO user in a destination account in a resource directory. You can then use the Resource Access Management (RAM) user to access resources in the account.</p>
+     * <p>You can create a Resource Access Management (RAM) user synchronization to synchronously create a Resource Access Management (RAM) user that has the same name as a CloudSSO user in the destination account in a resource directory, and then use the Resource Access Management (RAM) user to access resources in the account.</p>
      * 
      * <b>summary</b> : 
      * <p>Invokes CreateUserProvisioning to create a Resource Access Management (RAM) user synchronization.</p>
@@ -727,7 +730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can create a Resource Access Management (RAM) user synchronization to synchronously create a Resource Access Management (RAM) user that has the same name as a CloudSSO user in a destination account in a resource directory. You can then use the Resource Access Management (RAM) user to access resources in the account.</p>
+     * <p>You can create a Resource Access Management (RAM) user synchronization to synchronously create a Resource Access Management (RAM) user that has the same name as a CloudSSO user in the destination account in a resource directory, and then use the Resource Access Management (RAM) user to access resources in the account.</p>
      * 
      * <b>summary</b> : 
      * <p>Invokes CreateUserProvisioning to create a Resource Access Management (RAM) user synchronization.</p>
@@ -742,8 +745,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is asynchronous. You can use the <code>TaskId</code> returned in the response to call <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> to query the task execution status.
-     * This topic provides an example of removing the authorization for the CloudSSO user <code>u-00q8wbq42wiltcrk****</code> to use the access configuration <code>ac-00jhtfl8thteu6uj****</code> on the account in a resource directory <code>114240524784****</code>.</p>
+     * <p>This API operation is asynchronous. You can use the <code>TaskId</code> parameter in the response to invoke <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> to query the node execute status.
+     * This topic provides an example on how to remove the authorization that allows the CloudSSO user u-00q8wbq42wiltcrk**** to use the access configuration ac-00jhtfl8thteu6uj**** on the account in a resource directory 114240524784****.</p>
      * 
      * <b>summary</b> : 
      * <p>Removes the authorization from an account in a resource directory.</p>
@@ -806,8 +809,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is asynchronous. You can use the <code>TaskId</code> returned in the response to call <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> to query the task execution status.
-     * This topic provides an example of removing the authorization for the CloudSSO user <code>u-00q8wbq42wiltcrk****</code> to use the access configuration <code>ac-00jhtfl8thteu6uj****</code> on the account in a resource directory <code>114240524784****</code>.</p>
+     * <p>This API operation is asynchronous. You can use the <code>TaskId</code> parameter in the response to invoke <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> to query the node execute status.
+     * This topic provides an example on how to remove the authorization that allows the CloudSSO user u-00q8wbq42wiltcrk**** to use the access configuration ac-00jhtfl8thteu6uj**** on the account in a resource directory 114240524784****.</p>
      * 
      * <b>summary</b> : 
      * <p>Removes the authorization from an account in a resource directory.</p>
@@ -959,10 +962,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Before you begin</h3>
-     * <p>Before you delete a user group, make sure that the user group is not associated with the following resources. Otherwise, the deletion failed.</p>
+     * <p>Before you delete a user group, ensure that the user group is not associated with the following resources. Otherwise, the deletion will be failed.</p>
      * <ul>
      * <li>Users: You must remove users from the user group. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</li>
-     * <li>Authorization: You must remove the authorization of the user group on the account in a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</li>
+     * <li>Authorization: You must remove the authorization of the user group on an account in a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</li>
      * </ul>
      * <h3>Usage notes</h3>
      * <p>If SCIM synchronization is enabled, you cannot delete user groups that are synchronized by using SCIM.
@@ -1006,10 +1009,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Before you begin</h3>
-     * <p>Before you delete a user group, make sure that the user group is not associated with the following resources. Otherwise, the deletion failed.</p>
+     * <p>Before you delete a user group, ensure that the user group is not associated with the following resources. Otherwise, the deletion will be failed.</p>
      * <ul>
      * <li>Users: You must remove users from the user group. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</li>
-     * <li>Authorization: You must remove the authorization of the user group on the account in a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</li>
+     * <li>Authorization: You must remove the authorization of the user group on an account in a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</li>
      * </ul>
      * <h3>Usage notes</h3>
      * <p>If SCIM synchronization is enabled, you cannot delete user groups that are synchronized by using SCIM.
@@ -1142,6 +1145,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteSCIMServerCredentialResponse deleteSCIMServerCredential(DeleteSCIMServerCredentialRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteSCIMServerCredentialWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>CloudSSO administrators can call this operation to delete the security information bound to a specified CloudSSO user. Currently, only security email addresses are supported.</p>
+     * <blockquote>
+     * <ul>
+     * <li>After the deletion, the user is no longer associated with the original security email address, and any previously unconsumed verification links and password reset links also become invalid.</li>
+     * <li>If the user is not currently bound to a security email address, calling this operation directly returns a success response.
+     * This topic provides an example of deleting the security email address of the user <code>u-00q8wbq42wiltcrk****</code> in the directory <code>d-00fc2p61****</code>.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the security information of a CloudSSO user.</p>
+     * 
+     * @param request DeleteSecurityInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSecurityInfoResponse
+     */
+    public DeleteSecurityInfoResponse deleteSecurityInfoWithOptions(DeleteSecurityInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.verifyType)) {
+            query.put("VerifyType", request.verifyType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteSecurityInfo"),
+            new TeaPair("version", "2021-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSecurityInfoResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>CloudSSO administrators can call this operation to delete the security information bound to a specified CloudSSO user. Currently, only security email addresses are supported.</p>
+     * <blockquote>
+     * <ul>
+     * <li>After the deletion, the user is no longer associated with the original security email address, and any previously unconsumed verification links and password reset links also become invalid.</li>
+     * <li>If the user is not currently bound to a security email address, calling this operation directly returns a success response.
+     * This topic provides an example of deleting the security email address of the user <code>u-00q8wbq42wiltcrk****</code> in the directory <code>d-00fc2p61****</code>.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the security information of a CloudSSO user.</p>
+     * 
+     * @param request DeleteSecurityInfoRequest
+     * @return DeleteSecurityInfoResponse
+     */
+    public DeleteSecurityInfoResponse deleteSecurityInfo(DeleteSecurityInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteSecurityInfoWithOptions(request, runtime);
     }
 
     /**
@@ -1389,6 +1464,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>禁用云SSO委派管理员账号。禁用后，该账号不能再管理云SSO；您可以随时重新启用。</p>
+     * <h2>前提条件</h2>
+     * <ul>
+     * <li>目标账号必须是资源目录的成员账号，管理账号本身不能作为委派管理员账号。</li>
+     * <li>该成员账号已由资源目录管理账号注册为云SSO委派管理员（可信服务标识为<code>cloudsso.aliyuncs.com</code>），并已通过EnableDelegateAccount启用。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Disables the delegated administrator account of CloudSSO.</p>
      * 
@@ -1421,6 +1504,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>禁用云SSO委派管理员账号。禁用后，该账号不能再管理云SSO；您可以随时重新启用。</p>
+     * <h2>前提条件</h2>
+     * <ul>
+     * <li>目标账号必须是资源目录的成员账号，管理账号本身不能作为委派管理员账号。</li>
+     * <li>该成员账号已由资源目录管理账号注册为云SSO委派管理员（可信服务标识为<code>cloudsso.aliyuncs.com</code>），并已通过EnableDelegateAccount启用。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Disables the delegated administrator account of CloudSSO.</p>
      * 
@@ -2218,6 +2309,118 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetSCIMSynchronizationStatusResponse getSCIMSynchronizationStatus(GetSCIMSynchronizationStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getSCIMSynchronizationStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>CloudSSO administrators can call this operation to query the security information (currently only security email addresses are supported) bound to a specified CloudSSO user and its verification status.</p>
+     * <blockquote>
+     * <p>If the user has not configured a security email address, the response does not include the <code>SecurityEmail</code> field.
+     * This topic provides an example to query the security information of the user <code>u-00q8wbq42wiltcrk****</code> in the <code>d-00fc2p61****</code> directory.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the security information of a specified CloudSSO user.</p>
+     * 
+     * @param request GetSecurityInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSecurityInfoResponse
+     */
+    public GetSecurityInfoResponse getSecurityInfoWithOptions(GetSecurityInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSecurityInfo"),
+            new TeaPair("version", "2021-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSecurityInfoResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>CloudSSO administrators can call this operation to query the security information (currently only security email addresses are supported) bound to a specified CloudSSO user and its verification status.</p>
+     * <blockquote>
+     * <p>If the user has not configured a security email address, the response does not include the <code>SecurityEmail</code> field.
+     * This topic provides an example to query the security information of the user <code>u-00q8wbq42wiltcrk****</code> in the <code>d-00fc2p61****</code> directory.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the security information of a specified CloudSSO user.</p>
+     * 
+     * @param request GetSecurityInfoRequest
+     * @return GetSecurityInfoResponse
+     */
+    public GetSecurityInfoResponse getSecurityInfo(GetSecurityInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSecurityInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>CloudSSO administrators can call this operation to query the security information management preferences of a specified CloudSSO directory and check whether CloudSSO users in the directory are allowed to manage their security email addresses in the CloudSSO user portal. This topic provides an example to query the security information management preferences of the <code>d-00fc2p61****</code> directory.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the security information management preferences of a CloudSSO directory.</p>
+     * 
+     * @param request GetSecurityInfoPreferenceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSecurityInfoPreferenceResponse
+     */
+    public GetSecurityInfoPreferenceResponse getSecurityInfoPreferenceWithOptions(GetSecurityInfoPreferenceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSecurityInfoPreference"),
+            new TeaPair("version", "2021-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSecurityInfoPreferenceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>CloudSSO administrators can call this operation to query the security information management preferences of a specified CloudSSO directory and check whether CloudSSO users in the directory are allowed to manage their security email addresses in the CloudSSO user portal. This topic provides an example to query the security information management preferences of the <code>d-00fc2p61****</code> directory.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the security information management preferences of a CloudSSO directory.</p>
+     * 
+     * @param request GetSecurityInfoPreferenceRequest
+     * @return GetSecurityInfoPreferenceResponse
+     */
+    public GetSecurityInfoPreferenceResponse getSecurityInfoPreference(GetSecurityInfoPreferenceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSecurityInfoPreferenceWithOptions(request, runtime);
     }
 
     /**
@@ -4016,10 +4219,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A CloudSSO administrator can reset the password of a user when the user forgets the password, the password expires, or the password poses a security risk.</p>
+     * <p>When a user forgets their password, the password expires, or the password poses a security risk, a CloudSSO administrator can reset the password for the user.</p>
      * <blockquote>
      * <p>You cannot reset user passwords after single sign-on (SSO) is enabled.
-     * This topic provides an example of resetting the password of the user u-00q8wbq42wiltcrk**** by using a system-generated password.</p>
+     * This topic provides an example of resetting the password of the user <code>u-00q8wbq42wiltcrk****</code> by using a system-generated password.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -4075,10 +4278,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A CloudSSO administrator can reset the password of a user when the user forgets the password, the password expires, or the password poses a security risk.</p>
+     * <p>When a user forgets their password, the password expires, or the password poses a security risk, a CloudSSO administrator can reset the password for the user.</p>
      * <blockquote>
      * <p>You cannot reset user passwords after single sign-on (SSO) is enabled.
-     * This topic provides an example of resetting the password of the user u-00q8wbq42wiltcrk**** by using a system-generated password.</p>
+     * This topic provides an example of resetting the password of the user <code>u-00q8wbq42wiltcrk****</code> by using a system-generated password.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -4142,6 +4345,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RetryUserProvisioningEventResponse retryUserProvisioningEvent(RetryUserProvisioningEventRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.retryUserProvisioningEventWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>CloudSSO administrators can call this operation to send a verification email to the currently unverified security information of a specified CloudSSO user. Currently, only security email addresses are supported. After the user completes verification by using the verification link in the email, the status of the security email address changes to verified (<code>active</code>).</p>
+     * <blockquote>
+     * <ul>
+     * <li>Before you call this operation, you must call <code>SetSecurityInfo</code> to set a security email address for the user, and the security email address must be in the pending verification state (<code>pending</code>). If the user does not have a security email address configured or the security email address is already verified, calling this operation returns an error.</li>
+     * <li>The verification link is valid for 72 hours. Resending the verification email generates a new verification link, and the previous link automatically becomes invalid.</li>
+     * <li>This operation is subject to rate limits. By default, you can send a maximum of one verification email per minute and five verification emails per hour for a single user.
+     * This topic provides an example on how to send a verification email to the unverified security email address of the user <code>u-00q8wbq42wiltcrk****</code> in the <code>d-00fc2p61****</code> directory.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Sends a verification message to the unverified security information of a CloudSSO user.</p>
+     * 
+     * @param request SendVerificationMessageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SendVerificationMessageResponse
+     */
+    public SendVerificationMessageResponse sendVerificationMessageWithOptions(SendVerificationMessageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.verifyType)) {
+            query.put("VerifyType", request.verifyType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SendVerificationMessage"),
+            new TeaPair("version", "2021-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SendVerificationMessageResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>CloudSSO administrators can call this operation to send a verification email to the currently unverified security information of a specified CloudSSO user. Currently, only security email addresses are supported. After the user completes verification by using the verification link in the email, the status of the security email address changes to verified (<code>active</code>).</p>
+     * <blockquote>
+     * <ul>
+     * <li>Before you call this operation, you must call <code>SetSecurityInfo</code> to set a security email address for the user, and the security email address must be in the pending verification state (<code>pending</code>). If the user does not have a security email address configured or the security email address is already verified, calling this operation returns an error.</li>
+     * <li>The verification link is valid for 72 hours. Resending the verification email generates a new verification link, and the previous link automatically becomes invalid.</li>
+     * <li>This operation is subject to rate limits. By default, you can send a maximum of one verification email per minute and five verification emails per hour for a single user.
+     * This topic provides an example on how to send a verification email to the unverified security email address of the user <code>u-00q8wbq42wiltcrk****</code> in the <code>d-00fc2p61****</code> directory.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Sends a verification message to the unverified security information of a CloudSSO user.</p>
+     * 
+     * @param request SendVerificationMessageRequest
+     * @return SendVerificationMessageResponse
+     */
+    public SendVerificationMessageResponse sendVerificationMessage(SendVerificationMessageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.sendVerificationMessageWithOptions(request, runtime);
     }
 
     /**
@@ -4487,8 +4764,146 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>CloudSSO administrators can call this operation to set or modify the security information for a specified CloudSSO user. Currently, only security email addresses are supported.</p>
+     * <blockquote>
+     * <ul>
+     * <li>Each user can be bound to only one security email address. If the user is already bound to another security email address, calling this operation replaces it with the new email address, resets the verification status to pending (<code>pending</code>), and invalidates any previously unconsumed verification and password reset links. If the provided email address is the same as the currently bound one (case-insensitive), the operation rejects the duplicate binding.</li>
+     * <li>Calling this operation does not automatically send a verification email. After the security email address is set, it remains in the pending verification state (<code>pending</code>). You must call <code>SendVerificationMessage</code> to send a verification email, and the email address takes effect (<code>active</code>) only after the user completes the verification.
+     * This topic provides an example on how to set the security email address <code>Alice@example.com</code> for the user <code>u-00q8wbq42wiltcrk****</code> in the directory <code>d-00fc2p61****</code>.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Adds tags to resources.</p>
+     * <p>Sets the security information for a CloudSSO user.</p>
+     * 
+     * @param request SetSecurityInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetSecurityInfoResponse
+     */
+    public SetSecurityInfoResponse setSecurityInfoWithOptions(SetSecurityInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityEmail)) {
+            query.put("SecurityEmail", request.securityEmail);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.verifyType)) {
+            query.put("VerifyType", request.verifyType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetSecurityInfo"),
+            new TeaPair("version", "2021-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetSecurityInfoResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>CloudSSO administrators can call this operation to set or modify the security information for a specified CloudSSO user. Currently, only security email addresses are supported.</p>
+     * <blockquote>
+     * <ul>
+     * <li>Each user can be bound to only one security email address. If the user is already bound to another security email address, calling this operation replaces it with the new email address, resets the verification status to pending (<code>pending</code>), and invalidates any previously unconsumed verification and password reset links. If the provided email address is the same as the currently bound one (case-insensitive), the operation rejects the duplicate binding.</li>
+     * <li>Calling this operation does not automatically send a verification email. After the security email address is set, it remains in the pending verification state (<code>pending</code>). You must call <code>SendVerificationMessage</code> to send a verification email, and the email address takes effect (<code>active</code>) only after the user completes the verification.
+     * This topic provides an example on how to set the security email address <code>Alice@example.com</code> for the user <code>u-00q8wbq42wiltcrk****</code> in the directory <code>d-00fc2p61****</code>.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Sets the security information for a CloudSSO user.</p>
+     * 
+     * @param request SetSecurityInfoRequest
+     * @return SetSecurityInfoResponse
+     */
+    public SetSecurityInfoResponse setSecurityInfo(SetSecurityInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setSecurityInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>CloudSSO administrators can call this operation to set the security information management preferences for a specified directory. This controls whether CloudSSO users in the directory are allowed to manage their security email addresses in the CloudSSO user portal.</p>
+     * <blockquote>
+     * <p>This configuration only controls the self-service management permissions of users in the CloudSSO user portal. It does not affect the ability of CloudSSO administrators to manage user security email addresses by using API operations.
+     * This topic provides an example to show how to disable the permission for users to manage their security email addresses in the <code>d-00fc2p61****</code> directory.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Sets the security information management preferences for a directory.</p>
+     * 
+     * @param request SetSecurityInfoPreferenceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetSecurityInfoPreferenceResponse
+     */
+    public SetSecurityInfoPreferenceResponse setSecurityInfoPreferenceWithOptions(SetSecurityInfoPreferenceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowUserManageSecurityEmail)) {
+            query.put("AllowUserManageSecurityEmail", request.allowUserManageSecurityEmail);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetSecurityInfoPreference"),
+            new TeaPair("version", "2021-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetSecurityInfoPreferenceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>CloudSSO administrators can call this operation to set the security information management preferences for a specified directory. This controls whether CloudSSO users in the directory are allowed to manage their security email addresses in the CloudSSO user portal.</p>
+     * <blockquote>
+     * <p>This configuration only controls the self-service management permissions of users in the CloudSSO user portal. It does not affect the ability of CloudSSO administrators to manage user security email addresses by using API operations.
+     * This topic provides an example to show how to disable the permission for users to manage their security email addresses in the <code>d-00fc2p61****</code> directory.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Sets the security information management preferences for a directory.</p>
+     * 
+     * @param request SetSecurityInfoPreferenceRequest
+     * @return SetSecurityInfoPreferenceResponse
+     */
+    public SetSecurityInfoPreferenceResponse setSecurityInfoPreference(SetSecurityInfoPreferenceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setSecurityInfoPreferenceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Tags resources.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4532,7 +4947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds tags to resources.</p>
+     * <p>Tags resources.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -5042,13 +5457,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can modify <code>FirstName</code>, <code>LastName</code>, <code>DisplayName</code>, <code>Email</code>, and <code>Description</code> for a user. You cannot modify <code>UserName</code> for a user.</p>
+     * <p>You can modify the <code>FirstName</code>, <code>LastName</code>, <code>DisplayName</code>, <code>Email</code>, and <code>Description</code> of a user as needed. You cannot modify the <code>UserName</code> of a user.</p>
      * <blockquote>
-     * <p>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a user that is synchronized by using SCIM.</p>
+     * <p>When SCIM synchronization is enabled, you cannot modify the information of SCIM-synchronized users.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies information about a user.</p>
+     * <p>Updates user information.</p>
      * 
      * @param request UpdateUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5104,13 +5519,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can modify <code>FirstName</code>, <code>LastName</code>, <code>DisplayName</code>, <code>Email</code>, and <code>Description</code> for a user. You cannot modify <code>UserName</code> for a user.</p>
+     * <p>You can modify the <code>FirstName</code>, <code>LastName</code>, <code>DisplayName</code>, <code>Email</code>, and <code>Description</code> of a user as needed. You cannot modify the <code>UserName</code> of a user.</p>
      * <blockquote>
-     * <p>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a user that is synchronized by using SCIM.</p>
+     * <p>When SCIM synchronization is enabled, you cannot modify the information of SCIM-synchronized users.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies information about a user.</p>
+     * <p>Updates user information.</p>
      * 
      * @param request UpdateUserRequest
      * @return UpdateUserResponse
@@ -5184,7 +5599,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a Resource Access Management (RAM) user provisioning.</p>
+     * <p>Invokes UpdateUserProvisioning to modify a Resource Access Management (RAM) user synchronization.</p>
      * 
      * @param request UpdateUserProvisioningRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5232,7 +5647,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a Resource Access Management (RAM) user provisioning.</p>
+     * <p>Invokes UpdateUserProvisioning to modify a Resource Access Management (RAM) user synchronization.</p>
      * 
      * @param request UpdateUserProvisioningRequest
      * @return UpdateUserProvisioningResponse

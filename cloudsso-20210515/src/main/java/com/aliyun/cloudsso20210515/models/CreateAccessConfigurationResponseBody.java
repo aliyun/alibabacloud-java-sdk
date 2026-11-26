@@ -121,7 +121,7 @@ public class CreateAccessConfigurationResponseBody extends TeaModel {
 
         /**
          * <p>The initial access page.</p>
-         * <p>The page address that a CloudSSO user initially accesses when using the access configuration to access an account in a resource directory.</p>
+         * <p>The URL of the initial page that is accessed when a CloudSSO user accesses an account in a resource directory by using the access configuration.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://cloudsso.console.aliyun.com">https://cloudsso.console.aliyun.com</a></p>
@@ -131,7 +131,7 @@ public class CreateAccessConfigurationResponseBody extends TeaModel {
 
         /**
          * <p>The session duration.</p>
-         * <p>The maximum duration of a session when a CloudSSO user uses the access configuration to access an account in a resource directory.</p>
+         * <p>The maximum duration of a session when a CloudSSO user accesses an account in a resource directory by using the access configuration.</p>
          * <p>Unit: seconds.</p>
          * 
          * <strong>example:</strong>
@@ -141,19 +141,19 @@ public class CreateAccessConfigurationResponseBody extends TeaModel {
         public Integer sessionDuration;
 
         /**
-         * <p>The status notification information.</p>
+         * <p>The status notifications.</p>
          */
         @NameInMap("StatusNotifications")
         public java.util.List<String> statusNotifications;
 
         /**
-         * <p>The list of tags.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<CreateAccessConfigurationResponseBodyAccessConfigurationTags> tags;
 
         /**
-         * <p>The time when the access configuration was last modified.</p>
+         * <p>The time when the access configuration was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-02T08:44:23Z</p>

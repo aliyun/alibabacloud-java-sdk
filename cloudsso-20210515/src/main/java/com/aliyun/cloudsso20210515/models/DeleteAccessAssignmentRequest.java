@@ -14,10 +14,10 @@ public class DeleteAccessAssignmentRequest extends TeaModel {
     public String accessConfigurationId;
 
     /**
-     * <p>Specifies whether to remove the access configuration deployment when you remove the last authorization that uses the access configuration on an account in a resource directory. Valid values:</p>
+     * <p>Specifies whether to remove the deployment of the access configuration provisioning when you remove the last authorization that uses the access configuration on an account in a resource directory. Valid values:</p>
      * <ul>
-     * <li>DeprovisionForLastAccessAssignmentOnAccount: Removes the access configuration deployment.</li>
-     * <li>None: Does not remove the access configuration deployment. This is the default value.</li>
+     * <li>DeprovisionForLastAccessAssignmentOnAccount: removes the deployment of the access configuration provisioning.</li>
+     * <li>None: does not remove the deployment of the access configuration provisioning. Default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class DeleteAccessAssignmentRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The Alibaba Cloud account ID of the authorization target.</p>
+     * <p>The ID of the Alibaba Cloud account to which the authorization target belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>114240524784****</p>
@@ -45,10 +45,10 @@ public class DeleteAccessAssignmentRequest extends TeaModel {
     public String originTargetId;
 
     /**
-     * <p>The CloudSSO identity ID. The value varies based on the principal type:</p>
+     * <p>The CloudSSO identity ID. Details:</p>
      * <ul>
-     * <li>If <code>PrincipalType</code> is <code>User</code>, <code>PrincipalId</code> is the CloudSSO user ID.</li>
-     * <li>If <code>PrincipalType</code> is <code>Group</code>, <code>PrincipalId</code> is the CloudSSO group ID.</li>
+     * <li>If PrincipalType is set to User, PrincipalId is the CloudSSO user ID.</li>
+     * <li>If PrincipalType is set to Group, PrincipalId is the CloudSSO group ID.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,8 +60,8 @@ public class DeleteAccessAssignmentRequest extends TeaModel {
     /**
      * <p>The CloudSSO identity type. Valid values:</p>
      * <ul>
-     * <li>User: user</li>
-     * <li>Group: group</li>
+     * <li>User: user.</li>
+     * <li>Group: group.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +71,7 @@ public class DeleteAccessAssignmentRequest extends TeaModel {
     public String principalType;
 
     /**
-     * <p>The target ID of the task.</p>
+     * <p>The ID of the task target.</p>
      * 
      * <strong>example:</strong>
      * <p>114240524784****</p>
@@ -80,9 +80,9 @@ public class DeleteAccessAssignmentRequest extends TeaModel {
     public String targetId;
 
     /**
-     * <p>The target type of the task. Valid values:</p>
+     * <p>The type of the task target. Valid values:</p>
      * <ul>
-     * <li>RD-Account: The task target is an account in a resource directory.</li>
+     * <li>RD-Account: an account in a resource directory.</li>
      * </ul>
      * 
      * <strong>example:</strong>

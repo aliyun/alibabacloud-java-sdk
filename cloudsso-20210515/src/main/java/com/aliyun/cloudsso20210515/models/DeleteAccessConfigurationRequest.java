@@ -25,8 +25,8 @@ public class DeleteAccessConfigurationRequest extends TeaModel {
     /**
      * <p>Specifies whether to forcibly remove system policies and inline policies. Valid values:</p>
      * <ul>
-     * <li>true: The system forcibly removes the associated system policies and inline policies when the access configuration is deleted.</li>
-     * <li>false (default): The system does not forcibly remove the associated system policies and inline policies when the access configuration is deleted. If these policies exist, the deletion fails. You must remove these system policies and inline policies before you delete the access configuration. For more information, see <a href="https://help.aliyun.com/document_detail/336904.html">RemovePermissionPolicyFromAccessConfiguration</a>.</li>
+     * <li>true: forcibly removes the associated system policies and inline policies when the access configuration is deleted.</li>
+     * <li>false (default): does not forcibly remove the associated system policies and inline policies when the access configuration is deleted. If these policies exist, the deletion fails. You must remove these system policies and inline policies before you delete the access configuration. For more information, see <a href="https://help.aliyun.com/document_detail/336904.html">RemovePermissionPolicyFromAccessConfiguration</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>

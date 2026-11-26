@@ -14,10 +14,10 @@ public class ResetUserPasswordRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>Specifies whether to automatically generate a password. Valid values:</p>
+     * <p>Specifies whether to automatically generate a password. This parameter is valid only when the reset method is DirectPassword. Valid values:</p>
      * <ul>
-     * <li>True: The password is automatically generated.</li>
-     * <li>False (default): The password is manually specified.</li>
+     * <li>True: Automatically generates a password.</li>
+     * <li>False (default): Manually sets a password.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class ResetUserPasswordRequest extends TeaModel {
      * <p>Format: The password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character.</p>
      * <p>Length: 8 to 32 characters.</p>
      * <blockquote>
-     * <p>If GenerateRandomPassword is set to False, you must specify Password.</p>
+     * <p>If <code>GenerateRandomPassword</code> is set to <code>False</code>, you must specify <code>Password</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class ResetUserPasswordRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>Specifies whether the user must reset the password upon the next logon. Valid values:</p>
+     * <p>Specifies whether the user must reset the password upon next logon. Valid values:</p>
      * <ul>
      * <li>True: The user must reset the password.</li>
      * <li>False (default): The user does not need to reset the password.</li>
@@ -54,6 +54,14 @@ public class ResetUserPasswordRequest extends TeaModel {
     public Boolean requirePasswordResetForNextLogin;
 
     /**
+     * <p>The reset method. Valid values:</p>
+     * <ul>
+     * <li><p>DirectPassword (default): Sets the password directly.</p>
+     * </li>
+     * <li><p>Email: Sends a password reset email.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DirectPassword</p>
      */

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteUserProvisioningRequest extends TeaModel {
     /**
-     * <p>The deletion strategy. The processing strategy for synchronized RAM users when a RAM user synchronization is deleted. Valid values:</p>
+     * <p>The deletion policy. The policy for processing synchronized RAM users when a RAM user synchronization is deleted. Valid values:</p>
      * <ul>
      * <li>Delete: Deletes the RAM users that have been synchronized from CloudSSO to Resource Access Management (RAM) user synchronization is deleted.</li>
      * <li>Keep: Retains the RAM users that have been synchronized from CloudSSO to Resource Access Management (RAM) user synchronization is deleted.</li>
      * </ul>
      * <blockquote>
-     * <p>If this parameter is left empty, the deletion strategy specified when the RAM user synchronization was created is used.</p>
+     * <p>If this parameter is left empty, the deletion policy specified when the RAM user synchronization was created is used.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateGroupRequest extends TeaModel {
     /**
-     * <p>The description of the user group.</p>
+     * <p>The description of the group.</p>
      * <p>Length: The description can be up to 1024 characters in length.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CreateGroupRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The name of the user group.</p>
+     * <p>The name of the group.</p>
      * <p>Format: The name can contain letters, digits, and the special characters <code>_-.</code>.</p>
      * <p>Length: The name can be up to 128 characters in length.</p>
      * 

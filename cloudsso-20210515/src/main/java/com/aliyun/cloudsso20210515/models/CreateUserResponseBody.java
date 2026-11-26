@@ -15,6 +15,9 @@ public class CreateUserResponseBody extends TeaModel {
 
     /**
      * <p>The user information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;UserId&quot;:&quot;u-00bikzkuzbb58luh****&quot;,&quot;UserName&quot;:&quot;<a href="mailto:AliceLee@example.onmicrosoft.com">AliceLee@example.onmicrosoft.com</a>&quot;,&quot;Status&quot;:&quot;Enabled&quot;}</p>
      */
     @NameInMap("User")
     public CreateUserResponseBodyUser user;
@@ -84,7 +87,7 @@ public class CreateUserResponseBody extends TeaModel {
 
     public static class CreateUserResponseBodyUser extends TeaModel {
         /**
-         * <p>The time when the user was created (UTC).</p>
+         * <p>The time when the user was created. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-26T03:03:42Z</p>
@@ -138,7 +141,7 @@ public class CreateUserResponseBody extends TeaModel {
         public String lastName;
 
         /**
-         * <p>The type of the user. Valid values:</p>
+         * <p>The provisioning type of the user. Valid values:</p>
          * <ul>
          * <li>Manual: Manually created.</li>
          * <li>Synchronized: Synchronized from an external source.</li>
@@ -165,12 +168,15 @@ public class CreateUserResponseBody extends TeaModel {
 
         /**
          * <p>The list of tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Key&quot;:&quot;Project&quot;,&quot;Value&quot;:&quot;Test&quot;}]</p>
          */
         @NameInMap("Tags")
         public java.util.List<CreateUserResponseBodyUserTags> tags;
 
         /**
-         * <p>The time when the user was last modified (UTC).</p>
+         * <p>The time when the user was updated. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-26T03:03:42Z</p>

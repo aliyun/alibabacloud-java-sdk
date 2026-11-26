@@ -60,7 +60,7 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
         public String accessConfigurationName;
 
         /**
-         * <p>The Alibaba Cloud account ID of the authorization target.</p>
+         * <p>The ID of the Alibaba Cloud account to which the authorization target belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>114240524784****</p>
@@ -89,8 +89,8 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
         /**
          * <p>The CloudSSO identity type. Valid values:</p>
          * <ul>
-         * <li>User: user</li>
-         * <li>Group: group</li>
+         * <li>User: user.</li>
+         * <li>Group: group.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The target ID of the task.</p>
+         * <p>The ID of the task target.</p>
          * 
          * <strong>example:</strong>
          * <p>114240524784****</p>
@@ -144,9 +144,9 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
         public String targetPathName;
 
         /**
-         * <p>The target type of the task. Valid values:</p>
+         * <p>The type of the task target. Valid values:</p>
          * <ul>
-         * <li>RD-Account: The task target is an account in a resource directory.</li>
+         * <li>RD-Account: an account in a resource directory.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
         /**
          * <p>The task type. Valid values:</p>
          * <ul>
-         * <li>DeleteAccessAssignment: The task removes an authorization from an account in a resource directory.</li>
+         * <li>DeleteAccessAssignment: the task of removing authorization from an account in a resource directory.</li>
          * </ul>
          * 
          * <strong>example:</strong>

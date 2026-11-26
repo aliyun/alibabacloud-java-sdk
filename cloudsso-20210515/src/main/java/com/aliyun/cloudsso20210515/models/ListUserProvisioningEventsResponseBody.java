@@ -207,9 +207,9 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
         /**
          * <p>The identity ID of the RAM user provisioning. Valid values:</p>
          * <ul>
-         * <li><p>If you set the <code>PrincipalType</code> parameter to <code>Group</code>, the value of this parameter is the ID of a CloudSSO user group (g-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</p>
+         * <li><p>If you set the <code>PrincipalType</code> parameter to <code>Group</code>, the value of this parameter is the ID of a CloudSSO user group (g-********).</p>
          * </li>
-         * <li><p>If you set the <code>PrincipalType</code> parameter to <code>User</code>, the value of this parameter is the ID of a CloudSSO user (u-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</p>
+         * <li><p>If you set the <code>PrincipalType</code> parameter to <code>User</code>, the value of this parameter is the ID of a CloudSSO user (u-********).</p>
          * </li>
          * </ul>
          * 
@@ -272,7 +272,7 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the object for which you create the RAM user provisioning.</p>
-         * <p>The value is fixed as the ID of the account in the resource directory.\<code>\\</code>\<code>\\</code></p>
+         * <p>The value is fixed as the ID of the account in the resource directory.````</p>
          * 
          * <strong>example:</strong>
          * <p>153218*******</p>
@@ -282,7 +282,7 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the object for which you create the RAM user provisioning.</p>
-         * <p>If <code>RD-Account</code> is returned, the value of this parameter is the name of the account that is used to access the instance.\<code>\\</code></p>
+         * <p>If <code>RD-Account</code> is returned, the value of this parameter is the name of the account that is used to access the instance.``</p>
          * 
          * <strong>example:</strong>
          * <p>exampleRdMember</p>

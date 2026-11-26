@@ -37,9 +37,9 @@ public class ListUserProvisioningsRequest extends TeaModel {
     /**
      * <p>The identity ID of the RAM user provisioning. Valid values:</p>
      * <ul>
-     * <li><p>If <code>Group</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the ID of a CloudSSO user group (g-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</p>
+     * <li><p>If <code>Group</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the ID of a CloudSSO user group (g-********).</p>
      * </li>
-     * <li><p>If <code>User</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the ID of a CloudSSO user (u-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</p>
+     * <li><p>If <code>User</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the ID of a CloudSSO user (u-********).</p>
      * </li>
      * </ul>
      * 

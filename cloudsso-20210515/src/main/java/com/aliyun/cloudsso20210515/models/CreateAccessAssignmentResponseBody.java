@@ -89,8 +89,8 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
         /**
          * <p>The CloudSSO identity type. Valid values:</p>
          * <ul>
-         * <li>User: user</li>
-         * <li>Group: group</li>
+         * <li>User: A user.</li>
+         * <li>Group: A group.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
          * <p>The task status. Valid values:</p>
          * <ul>
          * <li>InProgress: The task is in progress.</li>
-         * <li>Success: The task succeeded.</li>
+         * <li>Success: The task is successful.</li>
          * <li>Failed: The task failed.</li>
          * </ul>
          * 
@@ -144,7 +144,7 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
         public String targetPathName;
 
         /**
-         * <p>The target type of the task. Valid value: RD-Account, which indicates that the task target is an account in a resource directory.</p>
+         * <p>The target type of the task. Valid values: RD-Account: The task target is an account in a resource directory.</p>
          * 
          * <strong>example:</strong>
          * <p>RD-Account</p>
@@ -162,7 +162,7 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The task type. Valid value: CreateAccessAssignment, which indicates an authorization task for an account in a resource directory.</p>
+         * <p>The task type. Valid values: CreateAccessAssignment: The task is an authorization task for an account in a resource directory.</p>
          * 
          * <strong>example:</strong>
          * <p>CreateAccessAssignment</p>

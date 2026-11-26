@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateUserProvisioningRequest extends TeaModel {
     /**
-     * <p>The ID of the resource directory.</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>d-003qew84****</p>
@@ -14,12 +14,10 @@ public class UpdateUserProvisioningRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The new deletion policy. The policy is used to manage synchronized users when you delete the RAM user provisioning. Valid values:</p>
+     * <p>The new deletion policy. This policy specifies how to handle synchronized Resource Access Management (RAM) users when the Resource Access Management (RAM) user synchronization is deleted. Valid values:</p>
      * <ul>
-     * <li><p>Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.</p>
-     * </li>
-     * <li><p>Keep: When you delete the RAM user provisioning, the system retains the synchronized users.</p>
-     * </li>
+     * <li>Delete: Delete the users. When the Resource Access Management (RAM) user synchronization is deleted, the system deletes the Resource Access Management (RAM) users that have been synchronized from CloudSSO to Resource Access Management (RAM).</li>
+     * <li>Keep: Keep the users. When the Resource Access Management (RAM) user synchronization is deleted, the system retains the Resource Access Management (RAM) users that have been synchronized from CloudSSO to Resource Access Management (RAM).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +27,7 @@ public class UpdateUserProvisioningRequest extends TeaModel {
     public String newDeletionStrategy;
 
     /**
-     * <p>The new description of the RAM user provisioning.</p>
+     * <p>The new description of the Resource Access Management (RAM) user synchronization.</p>
      * 
      * <strong>example:</strong>
      * <p>description*****</p>
@@ -38,12 +36,10 @@ public class UpdateUserProvisioningRequest extends TeaModel {
     public String newDescription;
 
     /**
-     * <p>The new conflict handling policy. The policy is used when a RAM user has the same username as the CloudSSO user who is synchronized to RAM. Valid values:</p>
+     * <p>The new duplication strategy. This strategy specifies how to handle name conflicts when a CloudSSO user is synchronized to Resource Access Management (RAM) user with the same name already exists. Valid values:</p>
      * <ul>
-     * <li><p>KeepBoth: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system creates a RAM user whose username is the username of the CloudSSO user plus the suffix <code>_sso</code>.</p>
-     * </li>
-     * <li><p>TakeOver: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system replaces the RAM user with the CloudSSO user.</p>
-     * </li>
+     * <li>KeepBoth: Keep both users. When a CloudSSO user is synchronized to Resource Access Management (RAM) user with the same name already exists, the system appends the <code>_sso</code> suffix to the CloudSSO username and attempts to create a RAM user with the new username.</li>
+     * <li>TakeOver: Replace the existing user. When a CloudSSO user is synchronized to Resource Access Management (RAM) user with the same name already exists, the system directly replaces the existing RAM user with the synchronized CloudSSO user.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +49,7 @@ public class UpdateUserProvisioningRequest extends TeaModel {
     public String newDuplicationStrategy;
 
     /**
-     * <p>The ID of the RAM user provisioning.</p>
+     * <p>The ID of the Resource Access Management (RAM) user synchronization.</p>
      * 
      * <strong>example:</strong>
      * <p>up-002axzhapcbz6e63****</p>

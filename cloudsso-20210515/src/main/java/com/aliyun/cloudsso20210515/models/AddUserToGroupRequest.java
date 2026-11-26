@@ -14,7 +14,7 @@ public class AddUserToGroupRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The ID of the group.</p>
+     * <p>The ID of the user group.</p>
      * 
      * <strong>example:</strong>
      * <p>g-00jqzghi2n3o5hkh****</p>
