@@ -8,7 +8,7 @@ public class InvokeDataProductResponseBody extends TeaModel {
      * <p>The business result of this call, which is a JSON object. A successful call includes: contractVersion (the contract version, fixed as PRODUCT_CALL_V1), callId (the call ID, in the format of call- followed by a UUID, used for querying AI reports and troubleshooting), dataStatus (FOUND indicates that data is found, and NOT_FOUND indicates that no data is found), extend (the business result returned by the data service provider, passed through as is. The specific structure depends on the data product and may not be returned if no data is found), and reportMode (the product report mode: NONE indicates no report, PER_CALL indicates that a report is generated for each call, and WEEKLY indicates that a report is generated on a weekly basis). If the call fails or the initial request is still being processed, contractVersion and callId are still returned if a call ID has been assigned, to facilitate retrying with the original ClientToken.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;contractVersion&quot;:&quot;PRODUCT_CALL_V1&quot;,&quot;callId&quot;:&quot;call-3f2b8c1e-6d4a-4b7e-9a1c-2e5f7d8b9c0a&quot;,&quot;dataStatus&quot;:&quot;FOUND&quot;,&quot;extend&quot;:&quot;{\&quot;score\&quot;:\&quot;650\&quot;}&quot;,&quot;reportMode&quot;:&quot;NONE&quot;}</p>
+     * <p>{&quot;contractVersion&quot;:&quot;PRODUCT_CALL_V1&quot;,&quot;callId&quot;:&quot;call-3f2b8c1e-6d4a-4b7e-9a1c-2e5f7d8b9c0a&quot;,&quot;dataStatus&quot;:&quot;FOUND&quot;,&quot;extend&quot;:&quot;{&quot;score&quot;:&quot;650&quot;}&quot;,&quot;reportMode&quot;:&quot;NONE&quot;}</p>
      */
     @NameInMap("data")
     public String data;

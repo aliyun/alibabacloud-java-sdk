@@ -12,9 +12,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
         this._spi = gatewayClient;
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-beijing", "internetbankopen.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("internetbankopen", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
