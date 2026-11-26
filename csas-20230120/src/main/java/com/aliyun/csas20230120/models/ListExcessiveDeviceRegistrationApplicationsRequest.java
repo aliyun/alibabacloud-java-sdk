@@ -21,7 +21,7 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends TeaModel
     public Long currentPage;
 
     /**
-     * <p>The user\&quot;s department. The value must be 1 to 128 characters long and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (_), forward slashes (/), at signs (@), and spaces.</p>
+     * <p>The user&quot;s department. The value must be 1 to 128 characters long and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (_), forward slashes (/), at signs (@), and spaces.</p>
      * 
      * <strong>example:</strong>
      * <p>测试部</p>
@@ -32,7 +32,7 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends TeaModel
     /**
      * <p>The device ID. You can get the device ID from the <code>DeviceTag</code> parameter returned by the following operations:</p>
      * <ul>
-     * <li><p><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries the details of a user\&quot;s device.</p>
+     * <li><p><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries the details of a user&quot;s device.</p>
      * </li>
      * <li><p><a href="~~ListUserDevices~~">ListUserDevices</a>: Queries a list of devices for a user.</p>
      * </li>
@@ -75,7 +75,7 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends TeaModel
     /**
      * <p>The user ID. You can get the user ID from the <code>SaseUserId</code> parameter returned by the following operations:</p>
      * <ul>
-     * <li><p><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries the details of a user\&quot;s device.</p>
+     * <li><p><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries the details of a user&quot;s device.</p>
      * </li>
      * <li><p><a href="~~ListUserDevices~~">ListUserDevices</a>: Queries a list of devices for a user.</p>
      * </li>
@@ -94,7 +94,7 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends TeaModel
     public java.util.List<String> statuses;
 
     /**
-     * <p>The username. The value must be 1 to 128 characters long and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), asterisks (\*), at signs (@), and spaces.</p>
+     * <p>The username. The value must be 1 to 128 characters long and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), asterisks (*), at signs (@), and spaces.</p>
      * 
      * <strong>example:</strong>
      * <p>王先生</p>

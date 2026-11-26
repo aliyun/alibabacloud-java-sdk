@@ -91,7 +91,7 @@ public class GetUserGroupResponseBody extends TeaModel {
          * </li>
          * <li><p>If UserGroupType is set to <strong>department</strong>, this parameter specifies the value of the department. Example: OU=Department 1,OU=SASE DingTalk.</p>
          * </li>
-         * <li><p>If UserGroupType is set to <strong>email</strong>, this parameter specifies the value of the email address. Example: username\@example.com.</p>
+         * <li><p>If UserGroupType is set to <strong>email</strong>, this parameter specifies the value of the email address. Example: username@example.com.</p>
          * </li>
          * <li><p>If UserGroupType is set to <strong>telephone</strong>, this parameter specifies the value of the mobile phone number. Example: 13900001234.</p>
          * </li>

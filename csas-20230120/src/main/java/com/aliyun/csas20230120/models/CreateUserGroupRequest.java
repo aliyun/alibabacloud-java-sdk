@@ -108,11 +108,11 @@ public class CreateUserGroupRequest extends TeaModel {
         /**
          * <p>The value of the user group attribute.</p>
          * <ul>
-         * <li><p>If UserGroupType is set to <strong>username</strong>, this parameter specifies the username value. The value must be 1 to 128 characters long. It can contain Chinese characters, letters, digits, periods (.), underscores (_), hyphens (-), asterisks (\*), at signs (@), and spaces.</p>
+         * <li><p>If UserGroupType is set to <strong>username</strong>, this parameter specifies the username value. The value must be 1 to 128 characters long. It can contain Chinese characters, letters, digits, periods (.), underscores (_), hyphens (-), asterisks (*), at signs (@), and spaces.</p>
          * </li>
          * <li><p>If UserGroupType is set to <strong>department</strong>, this parameter specifies the department value. For example: OU=Department 1,OU=SASE DingTalk.</p>
          * </li>
-         * <li><p>If UserGroupType is set to <strong>email</strong>, this parameter specifies the email address. For example: username\@example.com.</p>
+         * <li><p>If UserGroupType is set to <strong>email</strong>, this parameter specifies the email address. For example: username@example.com.</p>
          * </li>
          * <li><p>If UserGroupType is set to <strong>telephone</strong>, this parameter specifies the mobile phone number. For example: 13900001234.</p>
          * </li>

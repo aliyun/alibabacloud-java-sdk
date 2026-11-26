@@ -119,7 +119,7 @@ public class ExportUserDevicesRequest extends TeaModel {
     public Boolean sharingStatus;
 
     /**
-     * <p>Username. Must be 1 to 128 characters long. Supports Chinese, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), asterisks (\*), at signs (@), and spaces.</p>
+     * <p>Username. Must be 1 to 128 characters long. Supports Chinese, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), asterisks (*), at signs (@), and spaces.</p>
      * 
      * <strong>example:</strong>
      * <p>王先生</p>

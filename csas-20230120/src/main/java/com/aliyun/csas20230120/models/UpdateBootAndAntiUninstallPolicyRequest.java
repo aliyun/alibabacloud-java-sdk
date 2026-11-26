@@ -107,7 +107,7 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends TeaModel {
          * <p>Dialog content.</p>
          * 
          * <strong>example:</strong>
-         * <p>After uninstalling, the device can no longer be used for company work, and it will lose access to the company\&quot;s intranet!</p>
+         * <p>After uninstalling, the device can no longer be used for company work, and it will lose access to the company&quot;s intranet!</p>
          */
         @NameInMap("Content")
         public String content;

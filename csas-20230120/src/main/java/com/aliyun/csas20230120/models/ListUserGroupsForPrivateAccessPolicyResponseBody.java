@@ -87,13 +87,13 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
         /**
          * <p>Value of the user group property.</p>
          * <ul>
-         * <li><p>If the user group type is <strong>username</strong>, this indicates the username\&quot;s value. The length is 1 to 128 characters. It supports Chinese characters and uppercase and lowercase English letters. It can contain numbers, periods (.), underscores (_), and hyphens (-).</p>
+         * <li><p>If the user group type is <strong>username</strong>, this indicates the username&quot;s value. The length is 1 to 128 characters. It supports Chinese characters and uppercase and lowercase English letters. It can contain numbers, periods (.), underscores (_), and hyphens (-).</p>
          * </li>
-         * <li><p>If the user group type is <strong>department</strong>, this indicates the department\&quot;s value, such as OU=Department 1,OU=SASE DingTalk.</p>
+         * <li><p>If the user group type is <strong>department</strong>, this indicates the department&quot;s value, such as OU=Department 1,OU=SASE DingTalk.</p>
          * </li>
-         * <li><p>If the user group type is <strong>email</strong>, this indicates the mailbox\&quot;s value, such as username\@example.com.</p>
+         * <li><p>If the user group type is <strong>email</strong>, this indicates the mailbox&quot;s value, such as username@example.com.</p>
          * </li>
-         * <li><p>If the user group type is <strong>telephone</strong>, this indicates the telephone\&quot;s value, such as 13900001234.</p>
+         * <li><p>If the user group type is <strong>telephone</strong>, this indicates the telephone&quot;s value, such as 13900001234.</p>
          * </li>
          * </ul>
          * 

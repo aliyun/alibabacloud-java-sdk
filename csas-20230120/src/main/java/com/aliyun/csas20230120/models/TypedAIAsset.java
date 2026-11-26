@@ -35,7 +35,7 @@ public class TypedAIAsset extends TeaModel {
      * <p>The description text collected for an MCP, tool, or skill. This is not returned if missing. Aggregated lists only return descriptions that are consistent within the group.</p>
      * 
      * <strong>example:</strong>
-     * <p>读取并整理指定目录中的文档。</p>
+     * <p>Read and organize the documents in the specified directory.</p>
      */
     @NameInMap("Description")
     public String description;

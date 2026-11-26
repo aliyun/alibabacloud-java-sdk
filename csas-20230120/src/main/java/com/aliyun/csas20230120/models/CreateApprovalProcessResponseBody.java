@@ -492,7 +492,7 @@ public class CreateApprovalProcessResponseBody extends TeaModel {
          * <p>The description of the approval process.</p>
          * 
          * <strong>example:</strong>
-         * <p>Process for approving employees\&quot; temporary access to internal network applications</p>
+         * <p>Process for approving employees&quot; temporary access to internal network applications</p>
          */
         @NameInMap("Description")
         public String description;

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveDeviceBelongIdentifiersRequest extends TeaModel {
     /**
+     * <p>The list of identifier record IDs to remove. You can specify 1 to 1,000 IDs per batch. All IDs must exist and belong to the current tenant. Otherwise, an InvalidParameter error is returned and no records are deleted.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("IdentifierIds")

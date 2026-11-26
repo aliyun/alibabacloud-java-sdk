@@ -15,7 +15,7 @@ public class ListUsersRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The user\&quot;s department. The value must be 1 to 128 characters long and can contain Chinese characters, letters, digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (_), slashes (/), at signs (@), and spaces.</p>
+     * <p>The user&quot;s department. The value must be 1 to 128 characters long and can contain Chinese characters, letters, digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (_), slashes (/), at signs (@), and spaces.</p>
      * 
      * <strong>example:</strong>
      * <p>测试部</p>
@@ -24,7 +24,7 @@ public class ListUsersRequest extends TeaModel {
     public String department;
 
     /**
-     * <p>The username for a fuzzy match. The value must be 1 to 128 characters long and can contain Chinese characters, letters, digits, periods (.), underscores (_), hyphens (-), asterisks (\*), at signs (@), and spaces.</p>
+     * <p>The username for a fuzzy match. The value must be 1 to 128 characters long and can contain Chinese characters, letters, digits, periods (.), underscores (_), hyphens (-), asterisks (*), at signs (@), and spaces.</p>
      * 
      * <strong>example:</strong>
      * <p>王先生</p>
@@ -43,7 +43,7 @@ public class ListUsersRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The username for an exact match. The value must be 1 to 128 characters long and can contain Chinese characters, letters, digits, periods (.), underscores (_), hyphens (-), asterisks (\*), at signs (@), and spaces.</p>
+     * <p>The username for an exact match. The value must be 1 to 128 characters long and can contain Chinese characters, letters, digits, periods (.), underscores (_), hyphens (-), asterisks (*), at signs (@), and spaces.</p>
      * 
      * <strong>example:</strong>
      * <p>王先生@alibaba.com</p>

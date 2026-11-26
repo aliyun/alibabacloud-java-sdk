@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDeviceGroupsRequest extends TeaModel {
     /**
-     * <p>The page number of the current page displayed during paging in a paged query. Valid values: 1 to 10000.</p>
+     * <p>The page number for paging in the paged query. Valid values: 1 to 10000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,13 +15,13 @@ public class ListDeviceGroupsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The IDs of the device groups. Duplicate IDs are not allowed.</p>
+     * <p>The IDs of the device groups. Duplicate values are not allowed.</p>
      */
     @NameInMap("DeviceGroupIds")
     public java.util.List<String> deviceGroupIds;
 
     /**
-     * <p>The name of the device tag. The name can be up to 128 characters in length and supports Chinese characters and uppercase and lowercase English letters. It can also contain digits, periods (.), underscores (_), and hyphens (-).</p>
+     * <p>The name of the device group. The name can be up to 128 characters in length and supports Chinese characters and English letters. It can also contain digits, periods (.), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>Public service system user group</p>
@@ -30,7 +30,7 @@ public class ListDeviceGroupsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The Settings for the number of entries per page during paging in a paged query. Valid values: 1 to 500.</p>
+     * <p>The number of entries per page in the Settings for paging in the paged query. Valid values: 1 to 500.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

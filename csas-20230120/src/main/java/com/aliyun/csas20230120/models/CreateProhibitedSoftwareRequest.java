@@ -123,7 +123,7 @@ public class CreateProhibitedSoftwareRequest extends TeaModel {
          * <p>The directory where the process is located. If you specify this parameter, only processes with the same name in this directory are matched. If you leave this parameter empty, processes in any directory are matched. The value can be up to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>C:\\autotest</p>
+         * <p>C:\autotest</p>
          */
         @NameInMap("Directory")
         public String directory;
@@ -199,7 +199,7 @@ public class CreateProhibitedSoftwareRequest extends TeaModel {
          * <p>The directory where the process is located. If you specify this parameter, only processes with the same name in this directory are matched. If you leave this parameter empty, processes in any directory are matched. The value can be up to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>C:\\autotest</p>
+         * <p>C:\autotest</p>
          */
         @NameInMap("Directory")
         public String directory;
@@ -275,7 +275,7 @@ public class CreateProhibitedSoftwareRequest extends TeaModel {
          * <p>The directory where the process is located. If you specify this parameter, only processes with the same name in this directory are matched. If you leave this parameter empty, processes in any directory are matched. The value can be up to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>C:\\autotest</p>
+         * <p>C:\autotest</p>
          */
         @NameInMap("Directory")
         public String directory;

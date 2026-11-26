@@ -434,7 +434,7 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
 
     public static class ListDynamicDisposalProcessesResponseBodyDisposalProcesses extends TeaModel {
         /**
-         * <p>User\&quot;s department.</p>
+         * <p>User&quot;s department.</p>
          * 
          * <strong>example:</strong>
          * <p>IT</p>

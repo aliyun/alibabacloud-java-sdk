@@ -63,7 +63,7 @@ public class UpdateProhibitedSoftwareResponseBody extends TeaModel {
          * <p>The directory where the process is located.</p>
          * 
          * <strong>example:</strong>
-         * <p>C:\\autotest</p>
+         * <p>C:\autotest</p>
          */
         @NameInMap("Directory")
         public String directory;
@@ -139,7 +139,7 @@ public class UpdateProhibitedSoftwareResponseBody extends TeaModel {
          * <p>The directory where the process is located.</p>
          * 
          * <strong>example:</strong>
-         * <p>C:\\autotest</p>
+         * <p>C:\autotest</p>
          */
         @NameInMap("Directory")
         public String directory;
@@ -215,7 +215,7 @@ public class UpdateProhibitedSoftwareResponseBody extends TeaModel {
          * <p>The directory where the process is located.</p>
          * 
          * <strong>example:</strong>
-         * <p>C:\\autotest</p>
+         * <p>C:\autotest</p>
          */
         @NameInMap("Directory")
         public String directory;

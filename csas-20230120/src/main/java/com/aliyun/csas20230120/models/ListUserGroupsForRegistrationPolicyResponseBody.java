@@ -91,7 +91,7 @@ public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
          * </li>
          * <li><p>If UserGroupType is <strong>department</strong>, this is the department name. Example: OU=Department 1,OU=SASE DingTalk.</p>
          * </li>
-         * <li><p>If UserGroupType is <strong>email</strong>, this is the email address. Example: username\@example.com.</p>
+         * <li><p>If UserGroupType is <strong>email</strong>, this is the email address. Example: username@example.com.</p>
          * </li>
          * <li><p>If UserGroupType is <strong>telephone</strong>, this is the phone number. Example: 13900001234.</p>
          * </li>

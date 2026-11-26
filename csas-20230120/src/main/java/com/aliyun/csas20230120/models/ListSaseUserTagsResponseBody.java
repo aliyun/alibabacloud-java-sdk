@@ -80,7 +80,7 @@ public class ListSaseUserTagsResponseBody extends TeaModel {
          * <p>The description of the user label.</p>
          * 
          * <strong>example:</strong>
-         * <p>These are the company\&quot;s employees</p>
+         * <p>These are the company&quot;s employees</p>
          */
         @NameInMap("Description")
         public String description;
