@@ -23,10 +23,10 @@ public class ListCollaborationGroupsResponseBody extends TeaModel {
     public java.util.List<ListCollaborationGroupsResponseBodyItems> items;
 
     /**
-     * <p>The common error message.</p>
+     * <p>The common error description.</p>
      * 
      * <strong>example:</strong>
-     * <p>You do not have permissions to access tenant 2147483647 because the user does not belong to the tenant</p>
+     * <p>Access denied to tenant 2147483647. The user does not belong to this tenant</p>
      */
     @NameInMap("message")
     public String message;
@@ -41,7 +41,7 @@ public class ListCollaborationGroupsResponseBody extends TeaModel {
     public Long page;
 
     /**
-     * <p>The page size.</p>
+     * <p>The number of entries on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -50,7 +50,7 @@ public class ListCollaborationGroupsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>c9cf6cb3-3f5c-4994-a8a1-c93379a6f5cf</p>
@@ -130,7 +130,7 @@ public class ListCollaborationGroupsResponseBody extends TeaModel {
 
     public static class ListCollaborationGroupsResponseBodyItems extends TeaModel {
         /**
-         * <p>The ID of the collaboration space.</p>
+         * <p>The collaboration space ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cg_9401</p>
@@ -151,13 +151,13 @@ public class ListCollaborationGroupsResponseBody extends TeaModel {
          * <p>The name of the space.</p>
          * 
          * <strong>example:</strong>
-         * <p>Workflow To-Do Test</p>
+         * <p>Workflow To-do Test</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The status of the space. Currently, only ACTIVE is returned.</p>
+         * <p>The space status. Currently, only ACTIVE is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>

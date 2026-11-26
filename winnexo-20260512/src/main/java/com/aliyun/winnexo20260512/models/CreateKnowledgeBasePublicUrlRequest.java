@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateKnowledgeBasePublicUrlRequest extends TeaModel {
     /**
-     * <p>The resource description.</p>
+     * <p>The platform application token issued by the console. If specified, the operation is performed as the user specified by opsUserId or opsUserCode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
+     * <p>The description of the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>Project design document</p>
@@ -14,7 +23,7 @@ public class CreateKnowledgeBasePublicUrlRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the destination folder in the enterprise knowledge base. This parameter is required. You must have knowledge base management permissions on the knowledge base.</p>
+     * <p>The ID of the target folder in the enterprise knowledge base. This parameter is required, and you must have knowledge base management permissions on the knowledge base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,19 +33,19 @@ public class CreateKnowledgeBasePublicUrlRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The resource name. If not specified, the URL is used.</p>
+     * <p>The name of the resource. If not specified, the URL is used.</p>
      * 
      * <strong>example:</strong>
-     * <p>Project Plan</p>
+     * <p>Project plan</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>The analysis instruction.</p>
+     * <p>The analysis instructions.</p>
      * 
      * <strong>example:</strong>
-     * <p>Extract decisions and to-do items</p>
+     * <p>Extract decisions and action items</p>
      */
     @NameInMap("notes")
     public String notes;
@@ -45,13 +54,31 @@ public class CreateKnowledgeBasePublicUrlRequest extends TeaModel {
      * <p>The name of the operating object.</p>
      * 
      * <strong>example:</strong>
-     * <p>R&amp;D Assistant</p>
+     * <p>R&amp;D assistant</p>
      */
     @NameInMap("operatingObjectName")
     public String operatingObjectName;
 
     /**
-     * <p>The URL of the public HTTP/HTTPS web page.</p>
+     * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
+
+    /**
+     * <p>The URL of the public HTTP or HTTPS web page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +88,7 @@ public class CreateKnowledgeBasePublicUrlRequest extends TeaModel {
     public String originalUrl;
 
     /**
-     * <p>The list of resource tags as JSON strings.</p>
+     * <p>The list of resource tags in JSON string format.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;R&amp;D&quot;]</p>
@@ -81,6 +108,14 @@ public class CreateKnowledgeBasePublicUrlRequest extends TeaModel {
     public static CreateKnowledgeBasePublicUrlRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateKnowledgeBasePublicUrlRequest self = new CreateKnowledgeBasePublicUrlRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateKnowledgeBasePublicUrlRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
     }
 
     public CreateKnowledgeBasePublicUrlRequest setDescription(String description) {
@@ -121,6 +156,22 @@ public class CreateKnowledgeBasePublicUrlRequest extends TeaModel {
     }
     public String getOperatingObjectName() {
         return this.operatingObjectName;
+    }
+
+    public CreateKnowledgeBasePublicUrlRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public CreateKnowledgeBasePublicUrlRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public CreateKnowledgeBasePublicUrlRequest setOriginalUrl(String originalUrl) {

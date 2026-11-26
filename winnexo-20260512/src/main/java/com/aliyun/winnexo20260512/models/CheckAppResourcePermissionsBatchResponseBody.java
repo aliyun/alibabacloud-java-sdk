@@ -23,7 +23,7 @@ public class CheckAppResourcePermissionsBatchResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -76,7 +76,7 @@ public class CheckAppResourcePermissionsBatchResponseBody extends TeaModel {
 
     public static class CheckAppResourcePermissionsBatchResponseBodyResults extends TeaModel {
         /**
-         * <p>Indicates whether the user has the required permissions.</p>
+         * <p>Indicates whether the user has the permission.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -88,13 +88,13 @@ public class CheckAppResourcePermissionsBatchResponseBody extends TeaModel {
          * <p>The target permission.</p>
          * 
          * <strong>example:</strong>
-         * <p>APP/VIEW</p>
+         * <p>VIEW</p>
          */
         @NameInMap("permission")
         public String permission;
 
         /**
-         * <p>The dot-separated resource key whose first segment is the application key.</p>
+         * <p>The dot-separated resource key. The first segment is the APP application key.</p>
          * 
          * <strong>example:</strong>
          * <p>app.demo.resource_1</p>

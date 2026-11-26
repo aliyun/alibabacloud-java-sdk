@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class RunSkillRequest extends TeaModel {
     /**
+     * <p>平台应用 Token（控制台签发）。传入后将以 opsUserId 或 opsUserCode 指定的用户身份执行</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
      * <p>The placeholder variable value that stores the error message for a fault.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +50,24 @@ public class RunSkillRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
+     * <p>代理用户编码（租户内唯一），仅当应用凭证配置为 source_uid 时使用</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>代理用户ID（WINNEXO 平台用户ID），仅当应用凭证配置为 winnexo_uid 时使用</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
+
+    /**
      * <p>The skill code (globally unique). This parameter takes priority over skillName.</p>
      * 
      * <strong>example:</strong>
@@ -70,6 +97,14 @@ public class RunSkillRequest extends TeaModel {
     public static RunSkillRequest build(java.util.Map<String, ?> map) throws Exception {
         RunSkillRequest self = new RunSkillRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RunSkillRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
     }
 
     public RunSkillRequest setArguments(java.util.Map<String, ?> arguments) {
@@ -102,6 +137,22 @@ public class RunSkillRequest extends TeaModel {
     }
     public String getOperatingObjectName() {
         return this.operatingObjectName;
+    }
+
+    public RunSkillRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public RunSkillRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public RunSkillRequest setSkillCode(String skillCode) {

@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateGroupFeishuDocShrinkRequest extends TeaModel {
     /**
+     * <p>The platform application token issued by the console. If specified, the operation is performed as the user identified by opsUserId or opsUserCode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
      * <p>The description of the AI assistant.</p>
      * 
      * <strong>example:</strong>
@@ -43,19 +52,19 @@ public class CreateGroupFeishuDocShrinkRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The image name.</p>
+     * <p>The mirror name.</p>
      * 
      * <strong>example:</strong>
-     * <p>ProjectPlan</p>
+     * <p>Project plan</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>The meeting notes content (optional). The notes are used for auxiliary analysis.</p>
+     * <p>The meeting notes content. This parameter is optional and is used for auxiliary analysis.</p>
      * 
      * <strong>example:</strong>
-     * <p>Extract decisions and to-do items</p>
+     * <p>Extract decisions and to-dos</p>
      */
     @NameInMap("notes")
     public String notes;
@@ -67,16 +76,34 @@ public class CreateGroupFeishuDocShrinkRequest extends TeaModel {
     public String objectBindingsShrink;
 
     /**
-     * <p>The name of the operating object.</p>
+     * <p>The name of the operation object.</p>
      * 
      * <strong>example:</strong>
-     * <p>R&amp;D Assistant</p>
+     * <p>R&amp;D assistant</p>
      */
     @NameInMap("operatingObjectName")
     public String operatingObjectName;
 
     /**
-     * <p>The resource tags (optional, a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;]).</p>
+     * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
+
+    /**
+     * <p>The resource tags. This parameter is optional and accepts a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;].</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;R&amp;D&quot;]</p>
@@ -91,7 +118,7 @@ public class CreateGroupFeishuDocShrinkRequest extends TeaModel {
     public String syncConfigShrink;
 
     /**
-     * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass it explicitly with --tenant-id.</p>
+     * <p>The tenant ID. This is a common parameter. For winnexo-cli, this parameter is explicitly passed by using the --tenant-id option.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -102,6 +129,14 @@ public class CreateGroupFeishuDocShrinkRequest extends TeaModel {
     public static CreateGroupFeishuDocShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateGroupFeishuDocShrinkRequest self = new CreateGroupFeishuDocShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateGroupFeishuDocShrinkRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
     }
 
     public CreateGroupFeishuDocShrinkRequest setDescription(String description) {
@@ -166,6 +201,22 @@ public class CreateGroupFeishuDocShrinkRequest extends TeaModel {
     }
     public String getOperatingObjectName() {
         return this.operatingObjectName;
+    }
+
+    public CreateGroupFeishuDocShrinkRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public CreateGroupFeishuDocShrinkRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public CreateGroupFeishuDocShrinkRequest setSourceTags(String sourceTags) {

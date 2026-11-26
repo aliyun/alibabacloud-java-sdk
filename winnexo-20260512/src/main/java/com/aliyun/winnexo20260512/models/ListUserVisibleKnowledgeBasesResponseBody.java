@@ -14,7 +14,7 @@ public class ListUserVisibleKnowledgeBasesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The result list.
+     * <p>The list of results.
      * Maximum size:
      *     50</p>
      */
@@ -31,7 +31,7 @@ public class ListUserVisibleKnowledgeBasesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request trace ID.</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -104,10 +104,10 @@ public class ListUserVisibleKnowledgeBasesResponseBody extends TeaModel {
         public Long creatorId;
 
         /**
-         * <p>The creator name.</p>
+         * <p>The creator.</p>
          * 
          * <strong>example:</strong>
-         * <p>John Doe</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("creatorName")
         public String creatorName;
@@ -116,7 +116,7 @@ public class ListUserVisibleKnowledgeBasesResponseBody extends TeaModel {
          * <p>The description of the to-do card type.</p>
          * 
          * <strong>example:</strong>
-         * <p>Product materials and user guides</p>
+         * <p>Product materials and instructions</p>
          */
         @NameInMap("description")
         public String description;
@@ -158,7 +158,7 @@ public class ListUserVisibleKnowledgeBasesResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>The last modification time.</p>
+         * <p>The last update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -170,7 +170,7 @@ public class ListUserVisibleKnowledgeBasesResponseBody extends TeaModel {
          * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>ProductKnowledgeBase</p>
+         * <p>Product knowledge base</p>
          */
         @NameInMap("name")
         public String name;

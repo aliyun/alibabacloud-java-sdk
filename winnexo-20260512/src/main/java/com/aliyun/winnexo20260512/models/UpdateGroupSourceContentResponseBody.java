@@ -14,7 +14,7 @@ public class UpdateGroupSourceContentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The description of the status code.</p>
+     * <p>The status code description.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -26,13 +26,13 @@ public class UpdateGroupSourceContentResponseBody extends TeaModel {
      * <p>The image name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Project resource</p>
+     * <p>Project material</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>The request trace ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C474BFC7-7B11-5D92-971E-74AA82EC495B</p>
@@ -59,7 +59,7 @@ public class UpdateGroupSourceContentResponseBody extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The task running status.</p>
+     * <p>The task execution status.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>

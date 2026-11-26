@@ -5,18 +5,22 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkflowTemplateShrinkRequest extends TeaModel {
     /**
-     * <p>The write action. Valid values:</p>
-     * <ul>
-     * <li>SAVE: Saves the template as a draft without taking effect, allowing node names and executors to be left empty.</li>
-     * <li>SUBMIT: Requires complete nodes, and saves and submits the template as the only effective version.
-     * Default value: SUBMIT.</li>
-     * </ul>
+     * <p>The write action. Valid values: SAVE (saves the template as a draft without taking effect, and allows node names and executors to be left empty) and SUBMIT (requires complete nodes, and saves and submits the template as the only effective version). Default value: SUBMIT.</p>
      * 
      * <strong>example:</strong>
      * <p>SUBMIT</p>
      */
     @NameInMap("action")
     public String action;
+
+    /**
+     * <p>The platform application token issued by the console. If specified, the operation is executed as the user specified by opsUserId or opsUserCode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
 
     /**
      * <p>The collaboration workspace ID.</p>
@@ -33,13 +37,31 @@ public class UpdateWorkflowTemplateShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;name&quot;:&quot;Customer Complaint Handling Process&quot;,&quot;schemaVersion&quot;:2,&quot;steps&quot;:[{&quot;stepId&quot;:&quot;collect&quot;,&quot;sortOrder&quot;:1,&quot;name&quot;:&quot;Collect Customer Information&quot;}]}</p>
+     * <p>{&quot;name&quot;:&quot;Customer Complaint Handling Process&quot;,&quot;schemaVersion&quot;:2,&quot;steps&quot;:[{&quot;stepId&quot;:&quot;collect&quot;,&quot;sortOrder&quot;:1,&quot;name&quot;:&quot;Collect Customer Information&quot;,&quot;specification&quot;:[{&quot;type&quot;:&quot;text&quot;,&quot;content&quot;:&quot;Collect Customer Information&quot;}],&quot;executorType&quot;:&quot;MEMBER&quot;,&quot;executorUserId&quot;:10086}],&quot;edges&quot;:[]}</p>
      */
     @NameInMap("definition")
     public String definitionShrink;
 
     /**
-     * <p>The submitted version number on which the new version is based. This parameter is mutually exclusive with version. If not specified, the system falls back to the current effective version.</p>
+     * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
+
+    /**
+     * <p>The submitted version number on which the new version is based. This parameter is mutually exclusive with version. If not specified, the current effective version is used as the fallback.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>
@@ -97,6 +119,14 @@ public class UpdateWorkflowTemplateShrinkRequest extends TeaModel {
         return this.action;
     }
 
+    public UpdateWorkflowTemplateShrinkRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
+    }
+
     public UpdateWorkflowTemplateShrinkRequest setCollaborationGroupId(String collaborationGroupId) {
         this.collaborationGroupId = collaborationGroupId;
         return this;
@@ -111,6 +141,22 @@ public class UpdateWorkflowTemplateShrinkRequest extends TeaModel {
     }
     public String getDefinitionShrink() {
         return this.definitionShrink;
+    }
+
+    public UpdateWorkflowTemplateShrinkRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public UpdateWorkflowTemplateShrinkRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public UpdateWorkflowTemplateShrinkRequest setSourceVersion(String sourceVersion) {

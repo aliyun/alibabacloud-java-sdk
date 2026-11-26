@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdateGraphInfoResponseBody extends TeaModel {
     /**
-     * <p>The business description of the knowledge graph. If not configured, the value is an empty string.</p>
+     * <p>The business description of the graph. If this parameter is not specified, the value is an empty string.</p>
      * 
      * <strong>example:</strong>
-     * <p>Customer domain knowledge graph</p>
+     * <p>Customer domain semantic graph</p>
      */
     @NameInMap("businessProfile")
     public String businessProfile;
 
     /**
-     * <p>SUCCESS indicates success. In failure cases, the corresponding error type is returned, such as ERR_BAD_REQUEST, ERR_VALIDATION_FAILED, or ERR_INTERNAL_SERVER_ERROR.</p>
+     * <p>The status code. A value of SUCCESS indicates success. If the request fails, the corresponding error type is returned, such as ERR_BAD_REQUEST, ERR_VALIDATION_FAILED, or ERR_INTERNAL_SERVER_ERROR.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class UpdateGraphInfoResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The display name of the knowledge graph.</p>
+     * <p>The display name.</p>
      * 
      * <strong>example:</strong>
      * <p>CRM Graph</p>
@@ -32,7 +32,7 @@ public class UpdateGraphInfoResponseBody extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The name of the knowledge graph.</p>
+     * <p>The name of the graph.</p>
      * 
      * <strong>example:</strong>
      * <p>crm_graph</p>

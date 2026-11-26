@@ -5,7 +5,34 @@ import com.aliyun.tea.*;
 
 public class ListGraphsRequest extends TeaModel {
     /**
-     * <p>The ID of the tenant to which the node belongs.</p>
+     * <p>The platform application token issued by the console. If specified, the operation is executed as the user identified by opsUserId or opsUserCode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
+     * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
+
+    /**
+     * <p>The ID of the tenant to which the task belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +44,30 @@ public class ListGraphsRequest extends TeaModel {
     public static ListGraphsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListGraphsRequest self = new ListGraphsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListGraphsRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
+    }
+
+    public ListGraphsRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public ListGraphsRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public ListGraphsRequest setTenantId(String tenantId) {

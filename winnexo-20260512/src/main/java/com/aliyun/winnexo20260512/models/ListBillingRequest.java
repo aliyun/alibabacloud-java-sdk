@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListBillingRequest extends TeaModel {
     /**
-     * <p>The unique business identifier. When bizType is set to LibraryChat, bizId specifies the document library ID.</p>
+     * <p>The platform application token issued by the console. If you specify this parameter, the request is executed as the user specified by opsUserId or opsUserCode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
+     * <p>The unique identifier of the business. When bizType is set to LibraryChat, bizId refers to the ID of the document library.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleBizId</p>
@@ -14,7 +23,7 @@ public class ListBillingRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The business type. Currently supported values: model Q&amp;A (LlmChat) and document library Q&amp;A (LibraryChat).</p>
+     * <p>The business type. Valid values: LlmChat (model Q&amp;A) and LibraryChat (document library Q&amp;A).</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -23,7 +32,7 @@ public class ListBillingRequest extends TeaModel {
     public String bizType;
 
     /**
-     * <p>The actual end timestamp of the live stream, in milliseconds.</p>
+     * <p>The actual end timestamp of the live stream. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-10-01T12:00:00Z</p>
@@ -32,7 +41,7 @@ public class ListBillingRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Specifies whether to filter out bills with zero credit consumption. Default value: true (filter out).</p>
+     * <p>Specifies whether to filter out bills with zero credit consumption. Default value: true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,20 +50,36 @@ public class ListBillingRequest extends TeaModel {
     public Boolean ignoreZero;
 
     /**
-     * <p>The operation type. Valid values:</p>
+     * <p>The operation item. Valid values:</p>
      * <ul>
-     * <li>start: indicates node creation. This is the default value. In most cases, you do not need to explicitly set this value.</li>
-     * <li>stop: stops a real-time meeting node. This value corresponds to the creation of a real-time meeting. After the meeting ends, set this value to stop and trigger the call. This value is used in real-time meeting scenarios.</li>
+     * <li>start: indicates the creation of a task. This is the default value and usually does not need to be explicitly specified.</li>
+     * <li>stop: stops a real-time meeting task. This corresponds to the creation of a real-time meeting and is set to stop to trigger a call after the meeting ends. This value is used in real-time meeting scenarios.
+     * Note: When you end a real-time recording, you must set this parameter to stop.</li>
      * </ul>
-     * <blockquote>
-     * <p>Note: When ending a real-time recording, make sure to set this parameter to stop.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
      */
     @NameInMap("operation")
     public String operation;
+
+    /**
+     * <p>The code of the proxy user, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The ID of the proxy user, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
 
     /**
      * <p>The current page number.</p>
@@ -75,7 +100,7 @@ public class ListBillingRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The query start time. The value is a UNIX timestamp in seconds.</p>
+     * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-10-01T12:00:00Z</p>
@@ -84,7 +109,7 @@ public class ListBillingRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The node status. Running is returned upon submission.</p>
+     * <p>The task status. A status of Running is returned immediately after the task is submitted.</p>
      * 
      * <strong>example:</strong>
      * <p>READY</p>
@@ -93,7 +118,7 @@ public class ListBillingRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass this parameter explicitly by using --tenant-id.</p>
+     * <p>The tenant ID. This is a common parameter. For winnexo-cli, this parameter is explicitly passed by using --tenant-id.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -102,7 +127,7 @@ public class ListBillingRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The user ID (WINNEXO platform user ID, optional filter).</p>
+     * <p>The user ID, which is the WINNEXO platform user ID. This parameter is optional for filtering.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -113,6 +138,14 @@ public class ListBillingRequest extends TeaModel {
     public static ListBillingRequest build(java.util.Map<String, ?> map) throws Exception {
         ListBillingRequest self = new ListBillingRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListBillingRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
     }
 
     public ListBillingRequest setBizId(String bizId) {
@@ -153,6 +186,22 @@ public class ListBillingRequest extends TeaModel {
     }
     public String getOperation() {
         return this.operation;
+    }
+
+    public ListBillingRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public ListBillingRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public ListBillingRequest setPage(Long page) {

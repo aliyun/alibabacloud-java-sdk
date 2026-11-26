@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class UpdateUserGroupRequest extends TeaModel {
     /**
+     * <p>The platform application token issued by the console. If specified, the operation is executed as the user identified by opsUserId or opsUserCode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
      * <p>The new description of the user group. If this parameter is not specified, the description is not modified.</p>
      * 
      * <strong>example:</strong>
@@ -23,7 +32,25 @@ public class UpdateUserGroupRequest extends TeaModel {
     public Boolean moveToRoot;
 
     /**
-     * <p>The ID of the new parent user group. If this parameter is not specified, the user group is not moved. If it is explicitly set to null, the user group is moved to the root node.</p>
+     * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
+
+    /**
+     * <p>The ID of the new parent user group. If this parameter is not specified, the user group is not moved. If this parameter is explicitly set to null, the user group is moved to the root node.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -32,7 +59,7 @@ public class UpdateUserGroupRequest extends TeaModel {
     public String parentId;
 
     /**
-     * <p>The tenant ID. This is a common parameter. In winnexo-cli, it is explicitly passed by using --tenant-id.</p>
+     * <p>The tenant ID. This is a common parameter. For winnexo-cli, explicitly pass this parameter by using <code>--tenant-id</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -64,6 +91,14 @@ public class UpdateUserGroupRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateUserGroupRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
+    }
+
     public UpdateUserGroupRequest setDescription(String description) {
         this.description = description;
         return this;
@@ -78,6 +113,22 @@ public class UpdateUserGroupRequest extends TeaModel {
     }
     public Boolean getMoveToRoot() {
         return this.moveToRoot;
+    }
+
+    public UpdateUserGroupRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public UpdateUserGroupRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public UpdateUserGroupRequest setParentId(String parentId) {

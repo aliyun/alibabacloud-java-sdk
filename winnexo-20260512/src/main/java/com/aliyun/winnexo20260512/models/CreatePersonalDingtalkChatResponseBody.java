@@ -23,7 +23,7 @@ public class CreatePersonalDingtalkChatResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The directory ID.</p>
+     * <p>The folder ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -53,7 +53,7 @@ public class CreatePersonalDingtalkChatResponseBody extends TeaModel {
      * <p>The name of the AI assistant.</p>
      * 
      * <strong>example:</strong>
-     * <p>CustomerProjectGroup</p>
+     * <p>Customer Project Group</p>
      */
     @NameInMap("name")
     public String name;
@@ -77,7 +77,7 @@ public class CreatePersonalDingtalkChatResponseBody extends TeaModel {
     public String scope;
 
     /**
-     * <p>The source ID.</p>
+     * <p>The source project ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleSourceId</p>
@@ -86,7 +86,7 @@ public class CreatePersonalDingtalkChatResponseBody extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>The task running status.</p>
+     * <p>The running status of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>PENDING</p>

@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreatePersonalDingtalkChatShrinkRequest extends TeaModel {
     /**
+     * <p>The platform application token issued by the console. If specified, the operation is performed as the user specified by opsUserId or opsUserCode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
      * <p>The DingTalk group chat session ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -15,10 +24,10 @@ public class CreatePersonalDingtalkChatShrinkRequest extends TeaModel {
     public String chatId;
 
     /**
-     * <p>The group chat name.</p>
+     * <p>The name of the group chat.</p>
      * 
      * <strong>example:</strong>
-     * <p>CustomerProjectGroup</p>
+     * <p>Customer Project Group</p>
      */
     @NameInMap("chatName")
     public String chatName;
@@ -33,7 +42,7 @@ public class CreatePersonalDingtalkChatShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The directory ID.</p>
+     * <p>The folder ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -42,7 +51,7 @@ public class CreatePersonalDingtalkChatShrinkRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The start time for collecting chat history.</p>
+     * <p>The start time for chat record collection.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +61,7 @@ public class CreatePersonalDingtalkChatShrinkRequest extends TeaModel {
     public String historyStartTime;
 
     /**
-     * <p>The meeting notes content (optional). The notes are used for auxiliary analysis.</p>
+     * <p>The content of the meeting notes (optional), which is used for auxiliary analysis.</p>
      * 
      * <strong>example:</strong>
      * <p>Focus on identifying customer demands and to-do items</p>
@@ -61,7 +70,7 @@ public class CreatePersonalDingtalkChatShrinkRequest extends TeaModel {
     public String notes;
 
     /**
-     * <p>The digital employee name (operating object name, optional).</p>
+     * <p>The name of the digital employee (the name of the operating object, optional).</p>
      * 
      * <strong>example:</strong>
      * <p>my-agent</p>
@@ -70,16 +79,34 @@ public class CreatePersonalDingtalkChatShrinkRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
-     * <p>The resource tags (optional, a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;]).</p>
+     * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
      * 
      * <strong>example:</strong>
-     * <p>[&quot;Customer&quot;,&quot;GroupChat&quot;]</p>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
+
+    /**
+     * <p>The resource tags (optional). The value is a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;].</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;Customer&quot;,&quot;Group chat&quot;]</p>
      */
     @NameInMap("sourceTags")
     public String sourceTags;
 
     /**
-     * <p>The tenant ID.</p>
+     * <p>The ID of the tenant.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -96,6 +123,14 @@ public class CreatePersonalDingtalkChatShrinkRequest extends TeaModel {
     public static CreatePersonalDingtalkChatShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePersonalDingtalkChatShrinkRequest self = new CreatePersonalDingtalkChatShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreatePersonalDingtalkChatShrinkRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
     }
 
     public CreatePersonalDingtalkChatShrinkRequest setChatId(String chatId) {
@@ -152,6 +187,22 @@ public class CreatePersonalDingtalkChatShrinkRequest extends TeaModel {
     }
     public String getOperatingObjectName() {
         return this.operatingObjectName;
+    }
+
+    public CreatePersonalDingtalkChatShrinkRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public CreatePersonalDingtalkChatShrinkRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public CreatePersonalDingtalkChatShrinkRequest setSourceTags(String sourceTags) {

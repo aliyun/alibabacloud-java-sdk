@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListWorkflowTemplatesRequest extends TeaModel {
     /**
+     * <p>The platform application token issued by the console. If specified, the operation is performed as the user identified by opsUserId or opsUserCode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
      * <p>The ID of the collaboration space.</p>
      * <p>This parameter is required.</p>
      * 
@@ -33,13 +42,31 @@ public class ListWorkflowTemplatesRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The pagination token. Obtain the token from the nextToken value in the previous response. This parameter takes precedence over page if both are specified.</p>
+     * <p>The pagination token. Use the nextToken value returned in the previous response. This parameter takes precedence over page if both are specified.</p>
      * 
      * <strong>example:</strong>
      * <p>tok_9401</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
+
+    /**
+     * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
 
     /**
      * <p>The page number. This parameter is ignored if nextToken is specified.</p>
@@ -73,6 +100,14 @@ public class ListWorkflowTemplatesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListWorkflowTemplatesRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
+    }
+
     public ListWorkflowTemplatesRequest setCollaborationGroupId(String collaborationGroupId) {
         this.collaborationGroupId = collaborationGroupId;
         return this;
@@ -103,6 +138,22 @@ public class ListWorkflowTemplatesRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListWorkflowTemplatesRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public ListWorkflowTemplatesRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public ListWorkflowTemplatesRequest setPage(Long page) {

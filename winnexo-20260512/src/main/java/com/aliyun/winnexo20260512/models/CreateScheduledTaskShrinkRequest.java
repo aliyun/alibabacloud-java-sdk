@@ -5,6 +5,24 @@ import com.aliyun.tea.*;
 
 public class CreateScheduledTaskShrinkRequest extends TeaModel {
     /**
+     * <p>平台应用 Token（控制台签发）。传入后将以 opsUserId 或 opsUserCode 指定的用户身份执行</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
+     * <p>AUTO 偏好：none=默认、performance=效果优先、credit=成本优先；创建缺省为 none，固定模型可保存但不生效</p>
+     * 
+     * <strong>example:</strong>
+     * <p>performance</p>
+     */
+    @NameInMap("autoPreference")
+    public String autoPreference;
+
+    /**
      * <p>The ID of the associated collaboration group (such as cg_101). If this parameter is passed, a group space task is created, and the caller must be a valid group member. If this parameter is empty, a personal task is created.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +73,24 @@ public class CreateScheduledTaskShrinkRequest extends TeaModel {
      */
     @NameInMap("name")
     public String name;
+
+    /**
+     * <p>代理用户编码（租户内唯一），仅当应用凭证配置为 source_uid 时使用</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>代理用户ID（WINNEXO 平台用户ID），仅当应用凭证配置为 winnexo_uid 时使用</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
 
     /**
      * <p>The output conversation mode. Default value: NEW_CONVERSATION.</p>
@@ -115,6 +151,22 @@ public class CreateScheduledTaskShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateScheduledTaskShrinkRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
+    }
+
+    public CreateScheduledTaskShrinkRequest setAutoPreference(String autoPreference) {
+        this.autoPreference = autoPreference;
+        return this;
+    }
+    public String getAutoPreference() {
+        return this.autoPreference;
+    }
+
     public CreateScheduledTaskShrinkRequest setCollaborationGroupId(String collaborationGroupId) {
         this.collaborationGroupId = collaborationGroupId;
         return this;
@@ -161,6 +213,22 @@ public class CreateScheduledTaskShrinkRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateScheduledTaskShrinkRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public CreateScheduledTaskShrinkRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public CreateScheduledTaskShrinkRequest setOutputMode(String outputMode) {

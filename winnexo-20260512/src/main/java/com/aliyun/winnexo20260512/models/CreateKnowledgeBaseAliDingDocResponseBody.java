@@ -23,7 +23,7 @@ public class CreateKnowledgeBaseAliDingDocResponseBody extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The public URL of the document (echoes the input parameter).</p>
+     * <p>The public URL of the document. This value is echoed from the request parameter.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></p>
@@ -50,7 +50,7 @@ public class CreateKnowledgeBaseAliDingDocResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The name.</p>
+     * <p>The image name.</p>
      * 
      * <strong>example:</strong>
      * <p>p-toolset-b8a1de80-e9f5-49f3-8a12-873d378889c6</p>
@@ -86,18 +86,18 @@ public class CreateKnowledgeBaseAliDingDocResponseBody extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>The refund status. Query this field to confirm the refund status during processing. Valid values:</p>
+     * <p>The refund status. If the refund is in progress, you must query and confirm the refund status. Valid values:</p>
      * <ul>
-     * <li>SUCCESS: All refunds are successful.</li>
-     * <li>FAIL: The refund failed.</li>
+     * <li>SUCCESS: Succeeded.</li>
+     * <li>FAIL: Failed.</li>
      * <li>WAIT_PAY: Waiting for refund.</li>
-     * <li>EXPIRE: The refund has expired.</li>
-     * <li>PAYING: The refund is being processed.</li>
-     * <li>TERMINATE: The refund is terminated.</li>
+     * <li>EXPIRE: Expired.</li>
+     * <li>PAYING: Refunding.</li>
+     * <li>TERMINATE: Terminated.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;observedGeneration\&quot;: 7, \&quot;servicesInstances\&quot;: {}, \&quot;observedTime\&quot;: \&quot;2025-12-17T11:57:07Z\&quot;, \&quot;servicesWithPendingChanges\&quot;: [], \&quot;latestEnvironmentDeploymentName\&quot;: \&quot;manual-1765972627273-k7GZvr\&quot;}</p>
+     * <p>{&quot;observedGeneration&quot;: 7, &quot;servicesInstances&quot;: {}, &quot;observedTime&quot;: &quot;2025-12-17T11:57:07Z&quot;, &quot;servicesWithPendingChanges&quot;: [], &quot;latestEnvironmentDeploymentName&quot;: &quot;manual-1765972627273-k7GZvr&quot;}</p>
      */
     @NameInMap("status")
     public String status;

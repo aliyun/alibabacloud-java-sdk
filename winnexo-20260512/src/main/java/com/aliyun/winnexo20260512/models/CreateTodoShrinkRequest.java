@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateTodoShrinkRequest extends TeaModel {
     /**
+     * <p>平台应用 Token（控制台签发）。传入后将以 opsUserId 或 opsUserCode 指定的用户身份执行</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
      * <p>The list of platform user IDs of the assignees. You can specify 1 to 100 IDs. Duplicate IDs are automatically removed.</p>
      * <p>This parameter is required.</p>
      * 
@@ -22,6 +31,24 @@ public class CreateTodoShrinkRequest extends TeaModel {
      */
     @NameInMap("collaborationGroupId")
     public String collaborationGroupId;
+
+    /**
+     * <p>代理用户编码（租户内唯一），仅当应用凭证配置为 source_uid 时使用</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>代理用户ID（WINNEXO 平台用户ID），仅当应用凭证配置为 winnexo_uid 时使用</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
 
     /**
      * <p>The priority.</p>
@@ -86,6 +113,14 @@ public class CreateTodoShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateTodoShrinkRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
+    }
+
     public CreateTodoShrinkRequest setAssigneeUserIdsShrink(String assigneeUserIdsShrink) {
         this.assigneeUserIdsShrink = assigneeUserIdsShrink;
         return this;
@@ -100,6 +135,22 @@ public class CreateTodoShrinkRequest extends TeaModel {
     }
     public String getCollaborationGroupId() {
         return this.collaborationGroupId;
+    }
+
+    public CreateTodoShrinkRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public CreateTodoShrinkRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public CreateTodoShrinkRequest setPriority(String priority) {

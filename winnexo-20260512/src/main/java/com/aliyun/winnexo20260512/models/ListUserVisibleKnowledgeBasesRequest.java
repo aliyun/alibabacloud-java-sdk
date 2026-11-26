@@ -5,16 +5,43 @@ import com.aliyun.tea.*;
 
 public class ListUserVisibleKnowledgeBasesRequest extends TeaModel {
     /**
-     * <p>The keyword for fuzzy match on form component data.</p>
+     * <p>The platform application token issued by the console. If specified, the operation is executed with the identity of the user specified by opsUserId or opsUserCode.</p>
      * 
      * <strong>example:</strong>
-     * <p>ProductKnowledge</p>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
+     * <p>The keyword for fuzzy search of component data in the form.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Product knowledge</p>
      */
     @NameInMap("keyword")
     public String keyword;
 
     /**
-     * <p>The tenant ID. This is a common parameter. Pass it explicitly in winnexo-cli by using --tenant-id.</p>
+     * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
+
+    /**
+     * <p>The tenant ID. This is a common parameter and is explicitly passed by winnexo-cli through --tenant-id.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -27,12 +54,36 @@ public class ListUserVisibleKnowledgeBasesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListUserVisibleKnowledgeBasesRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
+    }
+
     public ListUserVisibleKnowledgeBasesRequest setKeyword(String keyword) {
         this.keyword = keyword;
         return this;
     }
     public String getKeyword() {
         return this.keyword;
+    }
+
+    public ListUserVisibleKnowledgeBasesRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public ListUserVisibleKnowledgeBasesRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public ListUserVisibleKnowledgeBasesRequest setTenantId(String tenantId) {

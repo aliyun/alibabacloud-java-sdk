@@ -50,7 +50,7 @@ public class CreateGroupFeishuDocResponseBody extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The description of the status code.</p>
+     * <p>The status code description.</p>
      * 
      * <strong>example:</strong>
      * <p>The current zone list is illegal.</p>
@@ -59,10 +59,10 @@ public class CreateGroupFeishuDocResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The image name.</p>
+     * <p>The mirror name.</p>
      * 
      * <strong>example:</strong>
-     * <p>ProjectPlan</p>
+     * <p>Project plan</p>
      */
     @NameInMap("name")
     public String name;
@@ -97,9 +97,9 @@ public class CreateGroupFeishuDocResponseBody extends TeaModel {
     /**
      * <p>The signing status. Valid values:</p>
      * <ul>
-     * <li>CREATED: Created but not signed.</li>
-     * <li>SUCCESS: Signed successfully.</li>
-     * <li>STOP: Terminated.</li>
+     * <li>CREATED: created but not signed</li>
+     * <li>SUCCESS: signed successfully</li>
+     * <li>STOP: terminated</li>
      * </ul>
      * 
      * <strong>example:</strong>

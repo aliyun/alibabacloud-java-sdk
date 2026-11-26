@@ -14,7 +14,7 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The graph name. Call listGraphs to retrieve available graphs.</p>
+     * <p>The name of the graph. You can call the listGraphs operation to obtain the graph name.</p>
      * 
      * <strong>example:</strong>
      * <p>crm</p>
@@ -23,7 +23,7 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
     public String graphName;
 
     /**
-     * <p>Indicates whether more pages are available.</p>
+     * <p>Indicates whether more pages exist.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,13 +32,13 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
     public Boolean hasMore;
 
     /**
-     * <p>The MCP card list.</p>
+     * <p>The list of MCP cards.</p>
      */
     @NameInMap("items")
     public java.util.List<ListOperatingObjectFavoritesResponseBodyItems> items;
 
     /**
-     * <p>The status code description.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -65,7 +65,7 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
     public String objectType;
 
     /**
-     * <p>The digital employee name (operating object name).</p>
+     * <p>The name of the digital worker, which is the name of the operating object.</p>
      * 
      * <strong>example:</strong>
      * <p>customer_assistant</p>
@@ -74,7 +74,7 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
     public String operatingObjectName;
 
     /**
-     * <p>The page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -83,7 +83,7 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The request trace ID.</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -92,7 +92,7 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of results.</p>
+     * <p>The total number of Logtail pipeline configurations in the current project.</p>
      * 
      * <strong>example:</strong>
      * <p>1001</p>
@@ -195,7 +195,7 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
 
     public static class ListOperatingObjectFavoritesResponseBodyItems extends TeaModel {
         /**
-         * <p>The to-do card type description.</p>
+         * <p>The description of the to-do card type.</p>
          * 
          * <strong>example:</strong>
          * <p>Sample description</p>
@@ -204,7 +204,7 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The follow time. The value is a Unix timestamp in seconds.</p>
+         * <p>The subscription time, which is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787822400</p>
@@ -213,7 +213,7 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
         public Long followedAt;
 
         /**
-         * <p>The graph name.</p>
+         * <p>The name of the graph.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -222,7 +222,7 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
         public String graphName;
 
         /**
-         * <p>The ID of the recommended item. The value can be a <strong>feedId</strong> or a micro-application ID.</p>
+         * <p>The ID of the recommended item, which can be a <strong>feedId</strong> or a mini-app ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2676</p>
@@ -231,7 +231,7 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
         public String objectId;
 
         /**
-         * <p>The object name.</p>
+         * <p>The name of the object.</p>
          * 
          * <strong>example:</strong>
          * <p>469ac312-403c-41fb-aae3-de5260e30906</p>
@@ -240,7 +240,7 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
         public String objectName;
 
         /**
-         * <p>The bound object type, such as customer or project.</p>
+         * <p>The object type of the attached object, such as customer or project.</p>
          * 
          * <strong>example:</strong>
          * <p>table</p>

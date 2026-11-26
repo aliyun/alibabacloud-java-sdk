@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListSkillsRequest extends TeaModel {
     /**
+     * <p>The platform application token issued by the console. If specified, the operation is executed as the user specified by opsUserId or opsUserCode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
      * <p>The binding status. Valid values: BOUND (bound) and UNBOUND (unbound global skills). Must be specified together with operatingObjectName.</p>
      * 
      * <strong>example:</strong>
@@ -14,10 +23,10 @@ public class ListSkillsRequest extends TeaModel {
     public String bindStatus;
 
     /**
-     * <p>The filter expression type.</p>
+     * <p>The filter expression type. Valid values:</p>
      * <ul>
-     * <li>SQL: SQL-based filtering.</li>
-     * <li>TAG: Tag-based filtering.</li>
+     * <li>SQL: SQL filtering.</li>
+     * <li>TAG: Tag filtering.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,7 +39,7 @@ public class ListSkillsRequest extends TeaModel {
      * <p>The search keyword. Supports fuzzy search by API name or exact search by API ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>SampleKeyword</p>
+     * <p>Sample keyword</p>
      */
     @NameInMap("keyword")
     public String keyword;
@@ -43,6 +52,24 @@ public class ListSkillsRequest extends TeaModel {
      */
     @NameInMap("operatingObjectName")
     public String operatingObjectName;
+
+    /**
+     * <p>The proxy user code, which is unique within the tenant. Used only when the application credential is configured as source_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. Used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
 
     /**
      * <p>The current page number.</p>
@@ -66,7 +93,7 @@ public class ListSkillsRequest extends TeaModel {
      * <p>The tag filtering parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>string_value</p>
+     * <p>[&quot;[{\&quot;value\&quot;:\&quot;dataworks#0#1#34167#432313#T3_23030136354#86969667366\&quot;,\&quot;key\&quot;:\&quot;dataworksTag\&quot;}]&quot;]</p>
      */
     @NameInMap("tags")
     public java.util.List<String> tags;
@@ -83,6 +110,14 @@ public class ListSkillsRequest extends TeaModel {
     public static ListSkillsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSkillsRequest self = new ListSkillsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListSkillsRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
     }
 
     public ListSkillsRequest setBindStatus(String bindStatus) {
@@ -115,6 +150,22 @@ public class ListSkillsRequest extends TeaModel {
     }
     public String getOperatingObjectName() {
         return this.operatingObjectName;
+    }
+
+    public ListSkillsRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public ListSkillsRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public ListSkillsRequest setPage(Integer page) {

@@ -5,6 +5,24 @@ import com.aliyun.tea.*;
 
 public class UpdateScheduledTaskShrinkRequest extends TeaModel {
     /**
+     * <p>The platform application token issued by the console. If specified, the task is executed as the user specified by opsUserId or opsUserCode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
+     * <p>The AUTO preference. Valid values: none (default), performance (performance first), and credit (cost first). If omitted or set to null, the current value is retained. If set to an empty string, the value is reset to none. For fixed models, this parameter can be saved but does not take effect.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>credit</p>
+     */
+    @NameInMap("autoPreference")
+    public String autoPreference;
+
+    /**
      * <p>The description.</p>
      */
     @NameInMap("description")
@@ -29,7 +47,7 @@ public class UpdateScheduledTaskShrinkRequest extends TeaModel {
     public Boolean isOpen;
 
     /**
-     * <p>The execution model tier. If this parameter is not specified, the model tier is not updated.</p>
+     * <p>The execution model tier. If not specified, the model tier is not updated.</p>
      * 
      * <strong>example:</strong>
      * <p>quick</p>
@@ -47,7 +65,25 @@ public class UpdateScheduledTaskShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The output conversation mode. If this parameter is omitted, the current configuration is retained.</p>
+     * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
+
+    /**
+     * <p>The output conversation mode. If not specified, the current configuration is retained.</p>
      * 
      * <strong>example:</strong>
      * <p>SAME_CONVERSATION</p>
@@ -78,7 +114,7 @@ public class UpdateScheduledTaskShrinkRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
+     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -93,7 +129,7 @@ public class UpdateScheduledTaskShrinkRequest extends TeaModel {
     public String triggerConfigShrink;
 
     /**
-     * <p>The visibility scope adjustment for group tasks. Valid values: PRIVATE (visible only to the creator and group owner), COLLABORATIVE (visible to specified collaborators), and PUBLIC (visible to all group members). If this parameter is not specified, the visibility scope is not updated. This field is ignored for personal tasks.</p>
+     * <p>The visibility scope for group tasks. Valid values: PRIVATE (visible only to the creator and group owner), COLLABORATIVE (visible to specified collaborators), and PUBLIC (visible to all group members). If not specified, the visibility scope is not updated. This parameter is ignored for personal tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>COLLABORATIVE</p>
@@ -102,7 +138,7 @@ public class UpdateScheduledTaskShrinkRequest extends TeaModel {
     public String visibility;
 
     /**
-     * <p>The full replacement list of collaborators. This parameter takes effect only when visibility is set to COLLABORATIVE. When the visibility is changed from COLLABORATIVE to another value, the list is cleared. A maximum of 1,000 members are supported. If this parameter is not specified, the members are not updated. You do not need to specify the task creator and group creator because they are covered by the authentication layer. This field is ignored for personal tasks.</p>
+     * <p>The full replacement list of collaborators. This parameter takes effect only when visibility is set to COLLABORATIVE. A maximum of 1,000 members can be specified. If the visibility is changed from COLLABORATIVE to another value, the list is cleared. If not specified, the members are not updated. The task creator and group creator do not need to be specified because they are covered by the authentication layer. This parameter is ignored for personal tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;10001&quot;]</p>
@@ -113,6 +149,22 @@ public class UpdateScheduledTaskShrinkRequest extends TeaModel {
     public static UpdateScheduledTaskShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateScheduledTaskShrinkRequest self = new UpdateScheduledTaskShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateScheduledTaskShrinkRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
+    }
+
+    public UpdateScheduledTaskShrinkRequest setAutoPreference(String autoPreference) {
+        this.autoPreference = autoPreference;
+        return this;
+    }
+    public String getAutoPreference() {
+        return this.autoPreference;
     }
 
     public UpdateScheduledTaskShrinkRequest setDescriptionShrink(String descriptionShrink) {
@@ -153,6 +205,22 @@ public class UpdateScheduledTaskShrinkRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public UpdateScheduledTaskShrinkRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public UpdateScheduledTaskShrinkRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public UpdateScheduledTaskShrinkRequest setOutputMode(String outputMode) {

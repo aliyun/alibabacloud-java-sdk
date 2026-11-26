@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePersonalAliDingChatResponseBody extends TeaModel {
     /**
-     * <p>The DingTalk group chat session ID.</p>
+     * <p>The ID of the DingTalk group chat session.</p>
      * 
      * <strong>example:</strong>
      * <p>cidxxxxxxxx</p>
@@ -53,13 +53,13 @@ public class CreatePersonalAliDingChatResponseBody extends TeaModel {
      * <p>The skill name.</p>
      * 
      * <strong>example:</strong>
-     * <p>CustomerProjectGroup</p>
+     * <p>Customer project group</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>The request trace ID.</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -77,7 +77,7 @@ public class CreatePersonalAliDingChatResponseBody extends TeaModel {
     public String scope;
 
     /**
-     * <p>The original project ID.</p>
+     * <p>The source project ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleSourceId</p>
@@ -88,10 +88,10 @@ public class CreatePersonalAliDingChatResponseBody extends TeaModel {
     /**
      * <p>The call status. Valid values:</p>
      * <ul>
-     * <li><strong>PENDING</strong>: Waiting for acknowledgment.</li>
-     * <li><strong>SUCCESS</strong>: Succeeded.</li>
+     * <li><strong>PENDING</strong>: Awaiting acknowledgment.</li>
+     * <li><strong>SUCCESS</strong>: Success.</li>
      * <li><strong>FAILED</strong>: Failed.</li>
-     * <li><strong>TIMEOUT</strong>: Timed out.</li>
+     * <li><strong>TIMEOUT</strong>: Timeout.</li>
      * </ul>
      * 
      * <strong>example:</strong>

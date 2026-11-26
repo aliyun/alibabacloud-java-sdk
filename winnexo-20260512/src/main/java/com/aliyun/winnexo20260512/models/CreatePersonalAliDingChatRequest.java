@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreatePersonalAliDingChatRequest extends TeaModel {
     /**
-     * <p>The DingTalk group chat session ID.</p>
+     * <p>The platform application token issued by the console. If provided, the operation is executed as the user specified by opsUserId or opsUserCode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
+     * <p>The ID of the DingTalk group chat session.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +24,10 @@ public class CreatePersonalAliDingChatRequest extends TeaModel {
     public String chatId;
 
     /**
-     * <p>The group chat name.</p>
+     * <p>The name of the group chat.</p>
      * 
      * <strong>example:</strong>
-     * <p>CustomerProjectGroup</p>
+     * <p>Customer project group</p>
      */
     @NameInMap("chatName")
     public String chatName;
@@ -52,16 +61,16 @@ public class CreatePersonalAliDingChatRequest extends TeaModel {
     public String historyStartTime;
 
     /**
-     * <p>The meeting notes content (optional). This participates in auxiliary analysis.</p>
+     * <p>The content of meeting notes (optional), which is used for auxiliary analysis.</p>
      * 
      * <strong>example:</strong>
-     * <p>Focus on identifying customer demands and to-do items</p>
+     * <p>Focus on identifying customer requirements and to-do items</p>
      */
     @NameInMap("notes")
     public String notes;
 
     /**
-     * <p>The digital employee name (operating object name, optional).</p>
+     * <p>The name of the digital employee (the name of the operating object, optional).</p>
      * 
      * <strong>example:</strong>
      * <p>my-agent</p>
@@ -70,16 +79,34 @@ public class CreatePersonalAliDingChatRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
-     * <p>The resource tags (optional, a JSON string list such as [&quot;tagA&quot;,&quot;tagB&quot;]).</p>
+     * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
      * 
      * <strong>example:</strong>
-     * <p>[&quot;Customer&quot;,&quot;GroupChat&quot;]</p>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
+
+    /**
+     * <p>The resource tags (optional). The value is a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;].</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;Customer&quot;,&quot;Group chat&quot;]</p>
      */
     @NameInMap("sourceTags")
     public String sourceTags;
 
     /**
-     * <p>The tenant ID. This is a common parameter. The winnexo-cli passes this value explicitly by using --tenant-id.</p>
+     * <p>The tenant ID. This is a common parameter and is explicitly passed by using the --tenant-id option in winnexo-cli.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -96,6 +123,14 @@ public class CreatePersonalAliDingChatRequest extends TeaModel {
     public static CreatePersonalAliDingChatRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePersonalAliDingChatRequest self = new CreatePersonalAliDingChatRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreatePersonalAliDingChatRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
     }
 
     public CreatePersonalAliDingChatRequest setChatId(String chatId) {
@@ -154,6 +189,22 @@ public class CreatePersonalAliDingChatRequest extends TeaModel {
         return this.operatingObjectName;
     }
 
+    public CreatePersonalAliDingChatRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public CreatePersonalAliDingChatRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
+    }
+
     public CreatePersonalAliDingChatRequest setSourceTags(String sourceTags) {
         this.sourceTags = sourceTags;
         return this;
@@ -180,7 +231,7 @@ public class CreatePersonalAliDingChatRequest extends TeaModel {
 
     public static class CreatePersonalAliDingChatRequestUpdateFrequency extends TeaModel {
         /**
-         * <p>The cron expression for timed scheduling.</p>
+         * <p>The cron expression for the timed scheduling node.</p>
          * 
          * <strong>example:</strong>
          * <p>0 2 * * *</p>
@@ -189,7 +240,7 @@ public class CreatePersonalAliDingChatRequest extends TeaModel {
         public String cron;
 
         /**
-         * <p>Specifies whether to enable or disable the feature.</p>
+         * <p><strong>Enable or disable</strong></p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -198,7 +249,7 @@ public class CreatePersonalAliDingChatRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The preset mode (can be ignored).</p>
+         * <p>The preset mode, which can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>hourly</p>

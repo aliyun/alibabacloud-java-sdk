@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreatePersonalVoiceMeetingRequest extends TeaModel {
     /**
+     * <p>The platform application token issued by the console. If this parameter is passed, the operation is performed as the user specified by opsUserId or opsUserCode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
      * <p>The pipeline description.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +52,7 @@ public class CreatePersonalVoiceMeetingRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The name of the digital employee (operating object name, optional).</p>
+     * <p>The name of the digital employee, which is the name of the operating object. This parameter is optional.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -52,10 +61,28 @@ public class CreatePersonalVoiceMeetingRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
-     * <p>The list of resource tag JSON strings.</p>
+     * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
      * 
      * <strong>example:</strong>
-     * <p>[&quot;Key&quot;,&quot;Meeting&quot;]</p>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
+
+    /**
+     * <p>The list of resource tags in JSON string format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;Important&quot;, &quot;Meeting&quot;]</p>
      */
     @NameInMap("sourceTags")
     public String sourceTags;
@@ -72,6 +99,14 @@ public class CreatePersonalVoiceMeetingRequest extends TeaModel {
     public static CreatePersonalVoiceMeetingRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePersonalVoiceMeetingRequest self = new CreatePersonalVoiceMeetingRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreatePersonalVoiceMeetingRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
     }
 
     public CreatePersonalVoiceMeetingRequest setDescription(String description) {
@@ -112,6 +147,22 @@ public class CreatePersonalVoiceMeetingRequest extends TeaModel {
     }
     public String getOperatingObjectName() {
         return this.operatingObjectName;
+    }
+
+    public CreatePersonalVoiceMeetingRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public CreatePersonalVoiceMeetingRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public CreatePersonalVoiceMeetingRequest setSourceTags(String sourceTags) {

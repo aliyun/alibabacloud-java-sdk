@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateGroupDirectoryResponseBody extends TeaModel {
     /**
-     * <p>SUCCESS indicates success. In failure cases, the corresponding error type is returned, such as ERR_BAD_REQUEST, ERR_VALIDATION_FAILED, or ERR_INTERNAL_SERVER_ERROR.</p>
+     * <p>SUCCESS indicates success. For failures, the corresponding error type is returned, such as ERR_BAD_REQUEST, ERR_VALIDATION_FAILED, or ERR_INTERNAL_SERVER_ERROR.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -17,13 +17,13 @@ public class CreateGroupDirectoryResponseBody extends TeaModel {
      * <p>The description of the AI assistant.</p>
      * 
      * <strong>example:</strong>
-     * <p>ProjectDescription</p>
+     * <p>Project Description</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The folder ID.</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dir_example</p>
@@ -32,7 +32,7 @@ public class CreateGroupDirectoryResponseBody extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The folder type.</p>
+     * <p>The directory type.</p>
      * 
      * <strong>example:</strong>
      * <p>GROUP</p>
@@ -50,7 +50,7 @@ public class CreateGroupDirectoryResponseBody extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The root folder ID of the knowledge base.</p>
+     * <p>The knowledge base root directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dir_root</p>
@@ -59,7 +59,7 @@ public class CreateGroupDirectoryResponseBody extends TeaModel {
     public String kbRootDirectoryId;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>The current zone list is illegal.</p>
@@ -71,13 +71,13 @@ public class CreateGroupDirectoryResponseBody extends TeaModel {
      * <p>The name of the worksheet.</p>
      * 
      * <strong>example:</strong>
-     * <p>ProjectFiles</p>
+     * <p>Project Materials</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>The folder ID.</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dir_parent</p>

@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateGroupPublicUrlRequest extends TeaModel {
     /**
+     * <p>The platform application token issued by the console. If specified, the operation is performed as the user identified by opsUserId or opsUserCode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
      * <p>The description of the AI assistant.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +23,7 @@ public class CreateGroupPublicUrlRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The folder ID.</p>
+     * <p>The ID of the folder.</p>
      * 
      * <strong>example:</strong>
      * <p>dir_tenant_kb_child</p>
@@ -23,7 +32,7 @@ public class CreateGroupPublicUrlRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The project group ID.</p>
+     * <p>The ID of the project group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,31 +42,49 @@ public class CreateGroupPublicUrlRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The name.</p>
+     * <p>The name of the resource.</p>
      * 
      * <strong>example:</strong>
-     * <p>Enterprise Policy</p>
+     * <p>Corporate Policy</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>The meeting notes content. This parameter is optional. The notes participate in auxiliary analysis.</p>
+     * <p>The content of the meeting notes. This parameter is optional and is used for auxiliary analysis.</p>
      * 
      * <strong>example:</strong>
-     * <p>Extract applicable scope and key clauses</p>
+     * <p>Extract the applicable scope and key terms</p>
      */
     @NameInMap("notes")
     public String notes;
 
     /**
-     * <p>The name of the digital employee (monitored object name). This parameter is optional.</p>
+     * <p>The name of the digital employee. This parameter is optional.</p>
      * 
      * <strong>example:</strong>
      * <p>customer_assistant</p>
      */
     @NameInMap("operatingObjectName")
     public String operatingObjectName;
+
+    /**
+     * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
 
     /**
      * <p>The URL of the web page.</p>
@@ -70,16 +97,16 @@ public class CreateGroupPublicUrlRequest extends TeaModel {
     public String originalUrl;
 
     /**
-     * <p>The resource labels. This parameter is optional. Specify a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;].</p>
+     * <p>The resource tags. This parameter is optional. Specify a JSON array of strings, such as [&quot;tagA&quot;,&quot;tagB&quot;].</p>
      * 
      * <strong>example:</strong>
-     * <p>[&quot;Important&quot;,&quot;Meeting&quot;]</p>
+     * <p>[&quot;Important&quot;, &quot;Meeting&quot;]</p>
      */
     @NameInMap("sourceTags")
     public String sourceTags;
 
     /**
-     * <p>The tenant ID that takes effect.</p>
+     * <p>The ID of the tenant where the operation takes effect.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -90,6 +117,14 @@ public class CreateGroupPublicUrlRequest extends TeaModel {
     public static CreateGroupPublicUrlRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateGroupPublicUrlRequest self = new CreateGroupPublicUrlRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateGroupPublicUrlRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
     }
 
     public CreateGroupPublicUrlRequest setDescription(String description) {
@@ -138,6 +173,22 @@ public class CreateGroupPublicUrlRequest extends TeaModel {
     }
     public String getOperatingObjectName() {
         return this.operatingObjectName;
+    }
+
+    public CreateGroupPublicUrlRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public CreateGroupPublicUrlRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public CreateGroupPublicUrlRequest setOriginalUrl(String originalUrl) {

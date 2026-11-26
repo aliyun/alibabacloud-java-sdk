@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListKnowledgeBaseDirectoriesRequest extends TeaModel {
     /**
+     * <p>The platform application token issued by the console. If this parameter is passed, the request is executed as the user specified by opsUserId or opsUserCode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
      * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
@@ -14,11 +23,29 @@ public class ListKnowledgeBaseDirectoriesRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The field by which the results are sorted. Valid values:</p>
+     * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
+
+    /**
+     * <p>The field by which the returned results are sorted. Valid values:</p>
      * <ul>
-     * <li>event_time: the event creation time.</li>
-     * <li>event_execute_start_time: the event execution time.</li>
-     * <li>event_execute_finish_time: the event completion time.</li>
+     * <li>event_time: the event creation time</li>
+     * <li>event_execute_start_time: the event execution time</li>
+     * <li>event_execute_finish_time: the event completion time</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +55,7 @@ public class ListKnowledgeBaseDirectoriesRequest extends TeaModel {
     public String sortField;
 
     /**
-     * <p>The sort order. This parameter takes effect only when sortBy is specified. Valid values: ASC and DESC (case-insensitive).</p>
+     * <p>The sort order. This parameter takes effect only when sortBy is specified. Valid values: ASC and DESC. The values are case-insensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>asc</p>
@@ -37,7 +64,7 @@ public class ListKnowledgeBaseDirectoriesRequest extends TeaModel {
     public String sortOrder;
 
     /**
-     * <p>The tenant ID. This is a common parameter. You can pass this parameter explicitly by using --tenant-id in winnexo-cli.</p>
+     * <p>The tenant ID. This is a common parameter. For winnexo-cli, this parameter is explicitly passed by using --tenant-id.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -50,12 +77,36 @@ public class ListKnowledgeBaseDirectoriesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListKnowledgeBaseDirectoriesRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
+    }
+
     public ListKnowledgeBaseDirectoriesRequest setDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
     }
     public String getDirectoryId() {
         return this.directoryId;
+    }
+
+    public ListKnowledgeBaseDirectoriesRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public ListKnowledgeBaseDirectoriesRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public ListKnowledgeBaseDirectoriesRequest setSortField(String sortField) {

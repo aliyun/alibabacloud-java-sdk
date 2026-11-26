@@ -5,11 +5,38 @@ import com.aliyun.tea.*;
 
 public class CheckAppResourcePermissionsBatchShrinkRequest extends TeaModel {
     /**
+     * <p>The platform application token issued by the console. If specified, the operation is performed as the user specified by opsUserId or opsUserCode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
      * <p>The check item.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("checks")
     public String checksShrink;
+
+    /**
+     * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
 
     /**
      * <p>The ID of the target platform user.</p>
@@ -39,7 +66,7 @@ public class CheckAppResourcePermissionsBatchShrinkRequest extends TeaModel {
     public String targetUserTenantId;
 
     /**
-     * <p>The ID of the tenant to which the resource belongs. If this parameter is not specified, the current tenant of the caller is used.</p>
+     * <p>The ID of the tenant to which the resource belongs. If not specified, the current tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -52,12 +79,36 @@ public class CheckAppResourcePermissionsBatchShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CheckAppResourcePermissionsBatchShrinkRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
+    }
+
     public CheckAppResourcePermissionsBatchShrinkRequest setChecksShrink(String checksShrink) {
         this.checksShrink = checksShrink;
         return this;
     }
     public String getChecksShrink() {
         return this.checksShrink;
+    }
+
+    public CheckAppResourcePermissionsBatchShrinkRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public CheckAppResourcePermissionsBatchShrinkRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public CheckAppResourcePermissionsBatchShrinkRequest setResourceTenantId(String resourceTenantId) {

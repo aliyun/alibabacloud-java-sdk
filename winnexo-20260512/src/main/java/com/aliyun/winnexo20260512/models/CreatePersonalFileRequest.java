@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreatePersonalFileRequest extends TeaModel {
     /**
+     * <p>The platform application token issued by the console. If this parameter is passed, the operation is executed as the user specified by opsUserId or opsUserCode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
      * <p>The pipeline description.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +23,7 @@ public class CreatePersonalFileRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The folder ID.</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -23,7 +32,7 @@ public class CreatePersonalFileRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The file name extension (optional, such as pdf or docx).</p>
+     * <p>The file name extension, such as pdf or docx. This parameter is optional.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -60,7 +69,7 @@ public class CreatePersonalFileRequest extends TeaModel {
     public String filePublicUrl;
 
     /**
-     * <p>The file record ID (optional, corresponding to settings.file_record_id).</p>
+     * <p>The file record ID, which corresponds to settings.file_record_id. This parameter is optional.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleFileRecordId</p>
@@ -79,7 +88,7 @@ public class CreatePersonalFileRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The name of the digital employee (operating object name, optional).</p>
+     * <p>The name of the digital employee, which is the name of the operating object. This parameter is optional.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -88,10 +97,28 @@ public class CreatePersonalFileRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
+     * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
+
+    /**
      * <p>The list of resource tag JSON strings.</p>
      * 
      * <strong>example:</strong>
-     * <p>[&quot;Important&quot;,&quot;File&quot;]</p>
+     * <p>[&quot;Important&quot;, &quot;File&quot;]</p>
      */
     @NameInMap("sourceTags")
     public String sourceTags;
@@ -108,6 +135,14 @@ public class CreatePersonalFileRequest extends TeaModel {
     public static CreatePersonalFileRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePersonalFileRequest self = new CreatePersonalFileRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreatePersonalFileRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
     }
 
     public CreatePersonalFileRequest setDescription(String description) {
@@ -180,6 +215,22 @@ public class CreatePersonalFileRequest extends TeaModel {
     }
     public String getOperatingObjectName() {
         return this.operatingObjectName;
+    }
+
+    public CreatePersonalFileRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public CreatePersonalFileRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public CreatePersonalFileRequest setSourceTags(String sourceTags) {

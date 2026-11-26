@@ -23,7 +23,7 @@ public class BatchRemoveOperatingObjectFavoritesResponseBody extends TeaModel {
     public String graphName;
 
     /**
-     * <p>The description of the status code.</p>
+     * <p>The status code description.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -41,7 +41,7 @@ public class BatchRemoveOperatingObjectFavoritesResponseBody extends TeaModel {
     public String objectType;
 
     /**
-     * <p>The digital employee name (operating object name, optional).</p>
+     * <p>The digital worker name, which is the name of the operating object. This parameter is optional.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -50,7 +50,7 @@ public class BatchRemoveOperatingObjectFavoritesResponseBody extends TeaModel {
     public String operatingObjectName;
 
     /**
-     * <p>The number of remaining subscribed objects within the precise scope.</p>
+     * <p>The number of remaining favorited objects within the exact scope.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -59,7 +59,7 @@ public class BatchRemoveOperatingObjectFavoritesResponseBody extends TeaModel {
     public Long remainingCount;
 
     /**
-     * <p>The number of physical subscription records that are actually deleted.</p>
+     * <p>The number of physical favorite records that are actually deleted.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -86,7 +86,7 @@ public class BatchRemoveOperatingObjectFavoritesResponseBody extends TeaModel {
     public Long requestedCount;
 
     /**
-     * <p>The relationships between internal and external DingTalk users that failed to be created.</p>
+     * <p>The internal and external DingTalk user relationships that failed to be created.</p>
      */
     @NameInMap("results")
     public java.util.List<BatchRemoveOperatingObjectFavoritesResponseBodyResults> results;
@@ -178,7 +178,7 @@ public class BatchRemoveOperatingObjectFavoritesResponseBody extends TeaModel {
 
     public static class BatchRemoveOperatingObjectFavoritesResponseBodyResults extends TeaModel {
         /**
-         * <p>Indicates whether the object is subscribed after the operation.</p>
+         * <p>Indicates whether the object is favorited after the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -187,7 +187,7 @@ public class BatchRemoveOperatingObjectFavoritesResponseBody extends TeaModel {
         public Boolean isFavorited;
 
         /**
-         * <p>The aligned object ID: target ID or KR ID.</p>
+         * <p>The ID of the aligned object, which is the target ID or KR ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleObjectId</p>
@@ -196,7 +196,7 @@ public class BatchRemoveOperatingObjectFavoritesResponseBody extends TeaModel {
         public String objectId;
 
         /**
-         * <p>Indicates whether the request is processed.</p>
+         * <p>Indicates whether the request has been processed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

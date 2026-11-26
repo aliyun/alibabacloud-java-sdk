@@ -26,7 +26,7 @@ public class ListCollaborationGroupMembersResponseBody extends TeaModel {
      * <p>The common error description.</p>
      * 
      * <strong>example:</strong>
-     * <p>You do not have permissions to access tenant 2147483647 because the user does not belong to the tenant</p>
+     * <p>No permission to access tenant 2147483647. The user does not belong to this tenant</p>
      */
     @NameInMap("message")
     public String message;
@@ -50,7 +50,7 @@ public class ListCollaborationGroupMembersResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>c9cf6cb3-3f5c-4994-a8a1-c93379a6f5cf</p>
@@ -130,7 +130,7 @@ public class ListCollaborationGroupMembersResponseBody extends TeaModel {
 
     public static class ListCollaborationGroupMembersResponseBodyItems extends TeaModel {
         /**
-         * <p>The display name. This field is empty if the display name is not set.</p>
+         * <p>The display name. This field is empty if not set.</p>
          * 
          * <strong>example:</strong>
          * <p>TEST001</p>
@@ -139,7 +139,7 @@ public class ListCollaborationGroupMembersResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The enabling status of the tenant account. Only active members are returned, so this value is always true. This field does not indicate the HR employment status.</p>
+         * <p>The enabling status of the tenant account. Only active members are returned, so this value is always true. It does not represent the employment status.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

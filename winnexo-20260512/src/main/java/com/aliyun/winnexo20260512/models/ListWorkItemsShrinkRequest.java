@@ -5,16 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListWorkItemsShrinkRequest extends TeaModel {
     /**
-     * <p>The business statuses used for filtering.</p>
+     * <p>The platform application token issued by the console. If specified, the operation is executed as the user specified by opsUserId or opsUserCode.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
+     * <p>The business status filter, which supports seven states.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;PROCESSING&quot;]</p>
      */
     @NameInMap("businessStatuses")
     public String businessStatusesShrink;
 
     /**
-     * <p>The ID of the collaboration workspace.</p>
+     * <p>The collaboration workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,10 +33,10 @@ public class ListWorkItemsShrinkRequest extends TeaModel {
     public String collaborationGroupId;
 
     /**
-     * <p>The work item types used for filtering.</p>
+     * <p>The work item type filter.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>[&quot;WORKFLOW&quot;]</p>
      */
     @NameInMap("itemTypes")
     public String itemTypesShrink;
@@ -51,13 +60,31 @@ public class ListWorkItemsShrinkRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The pagination token. Obtain the token from the nextToken parameter in the previous response. This parameter takes precedence over page if both are specified.</p>
+     * <p>The pagination token, which is obtained from the nextToken value returned in the previous response. This parameter takes precedence over page if both are specified.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
+
+    /**
+     * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
 
     /**
      * <p>The page number. This parameter is ignored if nextToken is specified.</p>
@@ -78,16 +105,16 @@ public class ListWorkItemsShrinkRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The priorities used for filtering.</p>
+     * <p>The priority filter.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>[&quot;HIGH&quot;]</p>
      */
     @NameInMap("priorities")
     public String prioritiesShrink;
 
     /**
-     * <p>The personal scope used for filtering.</p>
+     * <p>The personal scope filter.</p>
      * 
      * <strong>example:</strong>
      * <p>ASSIGNED_TO_ME</p>
@@ -107,6 +134,14 @@ public class ListWorkItemsShrinkRequest extends TeaModel {
     public static ListWorkItemsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListWorkItemsShrinkRequest self = new ListWorkItemsShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListWorkItemsShrinkRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
     }
 
     public ListWorkItemsShrinkRequest setBusinessStatusesShrink(String businessStatusesShrink) {
@@ -155,6 +190,22 @@ public class ListWorkItemsShrinkRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListWorkItemsShrinkRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public ListWorkItemsShrinkRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public ListWorkItemsShrinkRequest setPage(Long page) {

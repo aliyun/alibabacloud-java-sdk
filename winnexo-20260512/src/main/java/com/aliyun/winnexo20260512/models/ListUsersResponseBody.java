@@ -20,7 +20,7 @@ public class ListUsersResponseBody extends TeaModel {
     public java.util.List<ListUsersResponseBodyItems> items;
 
     /**
-     * <p>The status code description.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -176,7 +176,7 @@ public class ListUsersResponseBody extends TeaModel {
         public String lastLoginTime;
 
         /**
-         * <p>The list of new system role codes. This is a full replacement and must contain at least one role. Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER.</p>
+         * <p>The list of new system role codes. This list fully replaces the existing roles and must contain at least one role. Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;APPLICATION_USER&quot;]</p>

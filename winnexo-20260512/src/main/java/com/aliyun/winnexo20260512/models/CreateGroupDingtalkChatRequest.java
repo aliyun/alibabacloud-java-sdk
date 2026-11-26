@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateGroupDingtalkChatRequest extends TeaModel {
     /**
-     * <p>The session ID, typically used for JSSDK.</p>
+     * <p>The platform application token issued by the console. If specified, the operation is performed as the user specified by opsUserId or opsUserCode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
+     * <p>The chat ID, which is generally used for JSSDK.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +24,10 @@ public class CreateGroupDingtalkChatRequest extends TeaModel {
     public String chatId;
 
     /**
-     * <p>The group chat name.</p>
+     * <p>The name of the group chat.</p>
      * 
      * <strong>example:</strong>
-     * <p>CustomerProjectGroup</p>
+     * <p>Customer project group</p>
      */
     @NameInMap("chatName")
     public String chatName;
@@ -27,7 +36,7 @@ public class CreateGroupDingtalkChatRequest extends TeaModel {
      * <p>The description of the AI assistant.</p>
      * 
      * <strong>example:</strong>
-     * <p>Customer chat history</p>
+     * <p>Customer group chat history</p>
      */
     @NameInMap("description")
     public String description;
@@ -52,7 +61,7 @@ public class CreateGroupDingtalkChatRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The start time for collecting chat history.</p>
+     * <p>The start time for collecting chat records.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +71,7 @@ public class CreateGroupDingtalkChatRequest extends TeaModel {
     public String historyStartTime;
 
     /**
-     * <p>The meeting notes content (optional). This participates in auxiliary analysis.</p>
+     * <p>The content of the meeting notes. This parameter is optional and is used for auxiliary analysis.</p>
      * 
      * <strong>example:</strong>
      * <p>Focus on identifying customer demands and to-do items</p>
@@ -71,7 +80,7 @@ public class CreateGroupDingtalkChatRequest extends TeaModel {
     public String notes;
 
     /**
-     * <p>The name of the digital employee (operating object name, optional).</p>
+     * <p>The name of the digital employee, which is the name of the operating object. This parameter is optional.</p>
      * 
      * <strong>example:</strong>
      * <p>my-agent</p>
@@ -80,16 +89,34 @@ public class CreateGroupDingtalkChatRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
+     * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
+
+    /**
      * <p>The source tags.</p>
      * 
      * <strong>example:</strong>
-     * <p>[&quot;Customer&quot;,&quot;GroupChat&quot;]</p>
+     * <p>[&quot;Customer&quot;,&quot;Group chat&quot;]</p>
      */
     @NameInMap("sourceTags")
     public String sourceTags;
 
     /**
-     * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass this explicitly with --tenant-id.</p>
+     * <p>The tenant ID. This is a common parameter. For winnexo-cli, explicitly pass this parameter by using --tenant-id.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -106,6 +133,14 @@ public class CreateGroupDingtalkChatRequest extends TeaModel {
     public static CreateGroupDingtalkChatRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateGroupDingtalkChatRequest self = new CreateGroupDingtalkChatRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateGroupDingtalkChatRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
     }
 
     public CreateGroupDingtalkChatRequest setChatId(String chatId) {
@@ -172,6 +207,22 @@ public class CreateGroupDingtalkChatRequest extends TeaModel {
         return this.operatingObjectName;
     }
 
+    public CreateGroupDingtalkChatRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public CreateGroupDingtalkChatRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
+    }
+
     public CreateGroupDingtalkChatRequest setSourceTags(String sourceTags) {
         this.sourceTags = sourceTags;
         return this;
@@ -198,7 +249,7 @@ public class CreateGroupDingtalkChatRequest extends TeaModel {
 
     public static class CreateGroupDingtalkChatRequestUpdateFrequency extends TeaModel {
         /**
-         * <p>The cron expression for timed scheduling.</p>
+         * <p>The cron expression for the timed scheduling node.</p>
          * 
          * <strong>example:</strong>
          * <p>0 2 * * *</p>

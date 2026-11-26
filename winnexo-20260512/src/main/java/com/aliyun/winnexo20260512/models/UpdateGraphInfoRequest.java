@@ -5,16 +5,25 @@ import com.aliyun.tea.*;
 
 public class UpdateGraphInfoRequest extends TeaModel {
     /**
-     * <p>The business description of the knowledge graph. If not configured, the value is an empty string.</p>
+     * <p>The application token issued by the console. If you specify this parameter, the operation is performed as the user specified by opsUserId or opsUserCode.</p>
      * 
      * <strong>example:</strong>
-     * <p>Customer domain knowledge graph</p>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
+     * <p>The business description of the graph. If this parameter is not specified, the value is an empty string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Customer domain semantic graph</p>
      */
     @NameInMap("businessProfile")
     public String businessProfile;
 
     /**
-     * <p>The display name of the knowledge graph.</p>
+     * <p>The display name.</p>
      * 
      * <strong>example:</strong>
      * <p>CRM Graph</p>
@@ -23,7 +32,7 @@ public class UpdateGraphInfoRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The name of the knowledge graph.</p>
+     * <p>The name of the graph.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +40,24 @@ public class UpdateGraphInfoRequest extends TeaModel {
      */
     @NameInMap("graphName")
     public String graphName;
+
+    /**
+     * <p>The code of the proxy user, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The ID of the proxy user, which is the user ID on the WINNEXO platform. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
 
     /**
      * <p>The tenant ID.</p>
@@ -44,6 +71,14 @@ public class UpdateGraphInfoRequest extends TeaModel {
     public static UpdateGraphInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateGraphInfoRequest self = new UpdateGraphInfoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateGraphInfoRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
     }
 
     public UpdateGraphInfoRequest setBusinessProfile(String businessProfile) {
@@ -68,6 +103,22 @@ public class UpdateGraphInfoRequest extends TeaModel {
     }
     public String getGraphName() {
         return this.graphName;
+    }
+
+    public UpdateGraphInfoRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public UpdateGraphInfoRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public UpdateGraphInfoRequest setTenantId(String tenantId) {

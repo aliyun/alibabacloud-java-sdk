@@ -14,7 +14,7 @@ public class CreateKnowledgeBasePublicUrlResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The ID of the destination folder in the enterprise knowledge base that was specified in the request.</p>
+     * <p>The ID of the requested target directory in the enterprise knowledge base.</p>
      * 
      * <strong>example:</strong>
      * <p>dir_tenant_child</p>
@@ -32,7 +32,7 @@ public class CreateKnowledgeBasePublicUrlResponseBody extends TeaModel {
     public String gmtCreate;
 
     /**
-     * <p>The error description. This value is empty if the request is successful.</p>
+     * <p>The error message. This parameter is empty if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>The requested resource does not exist</p>
@@ -41,16 +41,16 @@ public class CreateKnowledgeBasePublicUrlResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The resource name.</p>
+     * <p>The name of the resource.</p>
      * 
      * <strong>example:</strong>
-     * <p>Project Plan</p>
+     * <p>Project plan</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>The submitted public web page URL.</p>
+     * <p>The URL of the submitted public web page.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com">https://example.com</a></p>
@@ -59,7 +59,7 @@ public class CreateKnowledgeBasePublicUrlResponseBody extends TeaModel {
     public String originalUrl;
 
     /**
-     * <p>The request trace ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -68,7 +68,7 @@ public class CreateKnowledgeBasePublicUrlResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resource scope. The value is fixed to TENANT.</p>
+     * <p>The scope of the resource. The value is fixed to TENANT.</p>
      * 
      * <strong>example:</strong>
      * <p>TENANT</p>
@@ -86,7 +86,7 @@ public class CreateKnowledgeBasePublicUrlResponseBody extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>The resource status. A value of RUNNING indicates that the request has been accepted but the crawling and parsing are not yet complete.</p>
+     * <p>The status of the resource. A value of RUNNING indicates that the request is accepted but the crawling and parsing are not completed.</p>
      * 
      * <strong>example:</strong>
      * <p>RUNNING</p>

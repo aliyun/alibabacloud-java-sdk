@@ -44,22 +44,22 @@ public class CreateKnowledgeBaseDirectoryResponseBody extends TeaModel {
      * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
-     * <p>2025-11-14T02:18:27Z</p>
+     * <p>1763086707</p>
      */
     @NameInMap("gmtCreate")
     public Long gmtCreate;
 
     /**
-     * <p>The last modification time.</p>
+     * <p>The last update time.</p>
      * 
      * <strong>example:</strong>
-     * <p>2026-01-19T01:48:56Z</p>
+     * <p>1768787336</p>
      */
     @NameInMap("gmtModified")
     public Long gmtModified;
 
     /**
-     * <p>The description of the status code.</p>
+     * <p>The status code description.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>

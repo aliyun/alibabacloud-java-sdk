@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListOutputFilesRequest extends TeaModel {
     /**
-     * <p>The business ID used for exact filtering. The length is 1 to 128 characters. This ID is derived from file registrations or the businessId of associated workflow instances.</p>
+     * <p>The platform application token issued by the console. If provided, the operation is executed with the identity of the user specified by opsUserId or opsUserCode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
+     * <p>The business ID used for exact filtering. The length is 1 to 128 characters. This value is derived from the businessId of file registrations or associated workflow instances.</p>
      * 
      * <strong>example:</strong>
      * <p>REQ-20261012-001</p>
@@ -14,7 +23,7 @@ public class ListOutputFilesRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The ID of the collaboration workspace. The length is 1 to 64 characters. This parameter is optional. If not specified, the personal outputs of the current user are queried. If specified, the real-time permissions of the workspace members and source resources are verified.</p>
+     * <p>The ID of the collaboration workspace. The length is 1 to 64 characters. If this parameter is not provided, the personal outputs of the current user are queried. If provided, the real-time permissions of the workspace members and source resources are verified.</p>
      * 
      * <strong>example:</strong>
      * <p>cg_123e4567-e89b-42d3-a456-426614174001</p>
@@ -23,7 +32,7 @@ public class ListOutputFilesRequest extends TeaModel {
     public String collaborationGroupId;
 
     /**
-     * <p>The output detail type. Valid values: ppt, html, document, picture, slides, video, audio, email, and others.</p>
+     * <p>The type of the output detail. Valid values: ppt, html, document, picture, slides, video, audio, email, and others.</p>
      * 
      * <strong>example:</strong>
      * <p>document</p>
@@ -35,13 +44,13 @@ public class ListOutputFilesRequest extends TeaModel {
      * <p>The keyword used to match the output title or detail name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Quarterly business</p>
+     * <p>Quarterly operations</p>
      */
     @NameInMap("keyword")
     public String keyword;
 
     /**
-     * <p>The name of the digital employee (operating object). Filters results by name.</p>
+     * <p>The name of the digital employee used for filtering.</p>
      * 
      * <strong>example:</strong>
      * <p>Business Analysis Assistant</p>
@@ -50,7 +59,25 @@ public class ListOutputFilesRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
-     * <p>The page number. Pages start from 1. Default value: 1.</p>
+     * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
+
+    /**
+     * <p>The page number, starting from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +86,7 @@ public class ListOutputFilesRequest extends TeaModel {
     public Long page;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * <p>The number of items per page. Valid values: 1 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -77,7 +104,7 @@ public class ListOutputFilesRequest extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>Specifies whether to display only the outputs and output details that have sharing enabled.</p>
+     * <p>Specifies whether to display only shared outputs and output details.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -86,13 +113,13 @@ public class ListOutputFilesRequest extends TeaModel {
     public Boolean sharedOnly;
 
     /**
-     * <p>The tags used for exact filtering. All specified tags must match simultaneously. You can specify up to 20 tags. Each tag must be a non-empty string of 1 to 128 characters. Tags are derived from file registrations or the variables.tags of associated instances.</p>
+     * <p>The tags used for exact filtering. All specified tags must match simultaneously. You can specify up to 20 tags. Each tag must be a non-empty string of 1 to 128 characters. Tags are derived from the variables.tags of file registrations or associated instances.</p>
      */
     @NameInMap("tags")
     public java.util.List<String> tags;
 
     /**
-     * <p>The ID of the current execution used to exactly filter outputs.</p>
+     * <p>The execution ID used to exactly filter the outputs of the current execution.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleExecutionId</p>
@@ -112,6 +139,14 @@ public class ListOutputFilesRequest extends TeaModel {
     public static ListOutputFilesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListOutputFilesRequest self = new ListOutputFilesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListOutputFilesRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
     }
 
     public ListOutputFilesRequest setBizId(String bizId) {
@@ -152,6 +187,22 @@ public class ListOutputFilesRequest extends TeaModel {
     }
     public String getOperatingObjectName() {
         return this.operatingObjectName;
+    }
+
+    public ListOutputFilesRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public ListOutputFilesRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public ListOutputFilesRequest setPage(Long page) {

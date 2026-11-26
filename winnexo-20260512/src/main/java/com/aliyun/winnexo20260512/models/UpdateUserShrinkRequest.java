@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class UpdateUserShrinkRequest extends TeaModel {
     /**
+     * <p>The platform application token issued by the console. If specified, the operation is executed as the user identified by opsUserId or opsUserCode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
      * <p>The display name of the user.</p>
      * 
      * <strong>example:</strong>
@@ -27,10 +36,28 @@ public class UpdateUserShrinkRequest extends TeaModel {
     public Boolean isActive;
 
     /**
-     * <p>The new list of system role codes (full replacement, must contain at least one role). Valid values: SUPER_ADMIN / SYSTEM_ADMIN / SEMANTIC_ADMIN / SKILL_ADMIN / KB_ADMIN / AGENT_ADMIN / APPLICATION_USER.</p>
+     * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
      * 
      * <strong>example:</strong>
-     * <p>string_value</p>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
+
+    /**
+     * <p>The new list of system role codes. This list fully replaces the existing roles and must contain at least one role. Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;APPLICATION_USER&quot;]</p>
      */
     @NameInMap("roleCodes")
     public String roleCodesShrink;
@@ -45,16 +72,16 @@ public class UpdateUserShrinkRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The new list of user group IDs (full replacement. If not specified, the value is not modified).</p>
+     * <p>The new list of user group IDs. This list fully replaces the existing user groups. If this parameter is not specified, the user groups are not modified.</p>
      * 
      * <strong>example:</strong>
-     * <p>string_value</p>
+     * <p>[&quot;string_value&quot;]</p>
      */
     @NameInMap("userGroupIds")
     public String userGroupIdsShrink;
 
     /**
-     * <p>The ID of the target user (WINNEXO platform user ID).</p>
+     * <p>The ID of the target user, which is the WINNEXO platform user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,6 +93,14 @@ public class UpdateUserShrinkRequest extends TeaModel {
     public static UpdateUserShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateUserShrinkRequest self = new UpdateUserShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateUserShrinkRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
     }
 
     public UpdateUserShrinkRequest setDisplayName(String displayName) {
@@ -82,6 +117,22 @@ public class UpdateUserShrinkRequest extends TeaModel {
     }
     public Boolean getIsActive() {
         return this.isActive;
+    }
+
+    public UpdateUserShrinkRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public UpdateUserShrinkRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public UpdateUserShrinkRequest setRoleCodesShrink(String roleCodesShrink) {

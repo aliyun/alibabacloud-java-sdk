@@ -15,10 +15,10 @@ public class SendChatMessageResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The streamed content.</p>
+     * <p>The streaming response content.</p>
      * 
      * <strong>example:</strong>
-     * <p>yes，i\&quot;m ready</p>
+     * <p>yes，i&quot;m ready</p>
      */
     @NameInMap("content")
     public String content;
@@ -62,7 +62,7 @@ public class SendChatMessageResponseBody extends TeaModel {
     public String type;
 
     /**
-     * <p>The session work mode. Valid values: ask (quick Q&amp;A, which trims tools, skills, and connectors for single-turn direct answers), work (deep work, which is the default), and direct (direct connection mode at the request level, which does not start a sandbox and prevents context pollution, equivalent to directChat=true). The ask and work modes are session-level. The mode is fixed when a new session is created. Subsequent chats inherit the session mode by default. If the explicitly passed value is inconsistent with the session mode, a parameter error is returned. To switch modes, create a new session or fork the session. If ask is passed in multi-digital employee or task execution scenarios, it takes effect as work. This parameter is ignored when directChat is set to true.</p>
+     * <p>The session work mode. Valid values: ask (quick Q&amp;A, which trims tools, skills, and connectors for single-turn direct answers), work (deep work, which is the default), and direct (direct connection mode at the request level, which does not start the sandbox and prevents context pollution, equivalent to directChat=true). The ask and work modes are session-level. The mode is fixed when a new session is created. Subsequent chats inherit the session mode by default. If the explicitly passed value is inconsistent with the session mode, a parameter error is returned. To switch modes, create a new session or fork the current one. If ask is passed in multi-digital employee or task execution scenarios, it takes effect as work. If directChat is set to true, this parameter is ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>work</p>

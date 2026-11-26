@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class CountTodosRequest extends TeaModel {
     /**
-     * <p>The collaboration workspace ID. This parameter is optional and used for filtering. If this parameter is not specified, all workspaces are included.</p>
+     * <p>The platform application token issued by the console. If specified, the request is executed as the user identified by opsUserId or opsUserCode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
+     * <p>The collaboration workspace ID used for filtering. If not specified, all workspaces are included.</p>
      * 
      * <strong>example:</strong>
      * <p>cg_123</p>
@@ -14,7 +23,25 @@ public class CountTodosRequest extends TeaModel {
     public String collaborationGroupId;
 
     /**
-     * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
+     * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
+
+    /**
+     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -27,12 +54,36 @@ public class CountTodosRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CountTodosRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
+    }
+
     public CountTodosRequest setCollaborationGroupId(String collaborationGroupId) {
         this.collaborationGroupId = collaborationGroupId;
         return this;
     }
     public String getCollaborationGroupId() {
         return this.collaborationGroupId;
+    }
+
+    public CountTodosRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public CountTodosRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public CountTodosRequest setTenantId(String tenantId) {

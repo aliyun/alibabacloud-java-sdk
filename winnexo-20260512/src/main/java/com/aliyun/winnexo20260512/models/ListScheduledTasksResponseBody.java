@@ -187,6 +187,15 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public String abnormalReason;
 
         /**
+         * <p>任务 AUTO 偏好：none=默认、performance=效果优先、credit=成本优先</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
+         */
+        @NameInMap("autoPreference")
+        public String autoPreference;
+
+        /**
          * <p>Indicates whether the current caller can delete the task. This is valid only for the task creator and group owner. For personal tasks, the value is always true.</p>
          * 
          * <strong>example:</strong>
@@ -395,6 +404,14 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
         public String getAbnormalReason() {
             return this.abnormalReason;
+        }
+
+        public ListScheduledTasksResponseBodyItems setAutoPreference(String autoPreference) {
+            this.autoPreference = autoPreference;
+            return this;
+        }
+        public String getAutoPreference() {
+            return this.autoPreference;
         }
 
         public ListScheduledTasksResponseBodyItems setCanDelete(Boolean canDelete) {

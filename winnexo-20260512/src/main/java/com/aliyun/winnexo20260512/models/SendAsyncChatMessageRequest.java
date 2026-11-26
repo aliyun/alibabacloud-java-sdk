@@ -5,6 +5,24 @@ import com.aliyun.tea.*;
 
 public class SendAsyncChatMessageRequest extends TeaModel {
     /**
+     * <p>平台应用 Token（控制台签发）。传入后将以 opsUserId 或 opsUserCode 指定的用户身份执行</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
+     * <p>AUTO 偏好：none=默认、performance=效果优先、credit=成本优先；缺省或 null 继承会话，空白重置为 none</p>
+     * 
+     * <strong>example:</strong>
+     * <p>credit</p>
+     */
+    @NameInMap("autoPreference")
+    public String autoPreference;
+
+    /**
      * <p>The body of the user message.</p>
      * <p>This parameter is required.</p>
      * 
@@ -24,7 +42,7 @@ public class SendAsyncChatMessageRequest extends TeaModel {
     public String contentType;
 
     /**
-     * <p>The message or file entries referenced as context for the current turn.</p>
+     * <p>The references and annotations for the current turn.</p>
      * 
      * <strong>example:</strong>
      * <p>[]</p>
@@ -33,7 +51,7 @@ public class SendAsyncChatMessageRequest extends TeaModel {
     public java.util.List<SendAsyncChatMessageRequestContextItems> contextItems;
 
     /**
-     * <p>The list of digital employee names. For backward compatibility, a single string can also be passed.</p>
+     * <p>The list of digital employee names. For compatibility with the old format, a single string can also be passed.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;pcitc-magent&quot;]</p>
@@ -42,7 +60,7 @@ public class SendAsyncChatMessageRequest extends TeaModel {
     public java.util.List<String> digitalEmployeeName;
 
     /**
-     * <p>Specifies whether to enable direct connection mode. If set to true, regular scenario routing is skipped and the direct conversation scenario is entered directly.</p>
+     * <p><strong>[Deprecated]</strong> Use workMode=direct instead. If set to true, winnexo_chat is retained and processed in request-level direct mode.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -51,7 +69,7 @@ public class SendAsyncChatMessageRequest extends TeaModel {
     public Boolean directChat;
 
     /**
-     * <p>The number of recent complete direct Q&amp;A rounds carried in the current turn, excluding the current input. This parameter takes effect only when workMode is set to direct or directChat is set to true. Valid values are JSON integers from 0 to 100. If omitted, the backend processes it as 0, carrying no history but still saving the current round. Null, Boolean, string, decimal, and out-of-bounds values are processed through the original direct path, and the gateway retains the original values for backend determination. This field is ignored in work and ask modes. This parameter does not limit the history range when switching to the work mode.</p>
+     * <p>The maximum number of history rounds referenced in the current turn for the direct mode. Valid values: integers from 0 to 100. Default value: 0. Invalid values fall back to the original single-turn path. This parameter is ignored in non-direct modes.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -60,7 +78,7 @@ public class SendAsyncChatMessageRequest extends TeaModel {
     public Object directMaxHistoryRounds;
 
     /**
-     * <p>Specifies whether to enable web search. Default value: false. In task execution scenarios where taskExecution is passed, the task configuration prevails.</p>
+     * <p>Specifies whether to enable web search. Default value: false. In the task execution scenario (when taskExecution is passed), the task configuration prevails.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -69,7 +87,7 @@ public class SendAsyncChatMessageRequest extends TeaModel {
     public Boolean enableWebSearch;
 
     /**
-     * <p>The list of file references. Each item is an object, and fileId is required, which is returned by uploadChatFile.</p>
+     * <p>The list of file references. Each item is an object, and fileId is required (returned by uploadChatFile).</p>
      */
     @NameInMap("files")
     public java.util.List<SendAsyncChatMessageRequestFiles> files;
@@ -84,7 +102,7 @@ public class SendAsyncChatMessageRequest extends TeaModel {
     public String locale;
 
     /**
-     * <p>The abstract model tier. Valid values: quick, standard, and flagship. If not specified, standard is used for new sessions, and the current tier is retained for existing sessions.</p>
+     * <p>The model tier. Valid values: quick, standard, flagship, auto, or other currently available model names (case-insensitive). If not specified, the model tier of the session is inherited. For a new session, the default value is standard.</p>
      * 
      * <strong>example:</strong>
      * <p>quick</p>
@@ -93,7 +111,25 @@ public class SendAsyncChatMessageRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>Specifies whether to reuse the most recent session under the digital employee when sessionId is not provided, which applies to CLI scenarios. Default value: false, which means a new session is created.</p>
+     * <p>代理用户编码（租户内唯一），仅当应用凭证配置为 source_uid 时使用</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>代理用户ID（WINNEXO 平台用户ID），仅当应用凭证配置为 winnexo_uid 时使用</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
+
+    /**
+     * <p>Specifies whether to reuse the most recent session under the digital employee when sessionId is not provided (CLI scenario). Default value: false, which means a new session is created.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -120,7 +156,7 @@ public class SendAsyncChatMessageRequest extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>Specifies whether to use streaming generation. This API always generates background content in streaming mode and writes it to the message stream. The value does not change the response structure.</p>
+     * <p>Specifies whether to use streaming generation. This API always generates background content in streaming mode and writes it to the message stream. The value of this parameter does not change the response structure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -144,13 +180,25 @@ public class SendAsyncChatMessageRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The session work mode. Valid values:</p>
-     * <ul>
-     * <li>ask: Quick Q&amp;A mode. Trims tools, skills, and connectors for single-turn direct answers.</li>
-     * <li>work: Deep work mode. This is the default value.</li>
-     * <li>direct: Direct connection mode at the request level. Does not start a sandbox and prevents context pollution. Equivalent to setting directChat to true.
-     * The ask and work modes are session-level. Once selected during session creation, the mode is fixed and inherited by default in subsequent chats. If the explicitly passed value conflicts with the session mode, a parameter error is returned. To switch modes, create a new session or fork the current one. In scenarios with multiple digital employees or task execution, passing ask takes effect as work. This parameter is ignored when directChat is set to true.</li>
-     * </ul>
+     * <p>本轮显式覆盖是否思考；AUTO 未传时由决策模型判断，固定档未传时沿用个人设置，最终遵守模型能力与租户开关</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("thinkingEnabled")
+    public Boolean thinkingEnabled;
+
+    /**
+     * <p>本轮显式覆盖思考强度；AUTO 未传时由决策模型判断，固定档未传时沿用个人设置，最终遵守模型能力与租户开关</p>
+     * 
+     * <strong>example:</strong>
+     * <p>high</p>
+     */
+    @NameInMap("thinkingLevel")
+    public String thinkingLevel;
+
+    /**
+     * <p>The session work mode. Valid values: ask (quick Q&amp;A), work (deep work, default), and direct (direct connection mode, which does not start the sandbox, uses independent direct history controlled by directMaxHistoryRounds, and is equivalent to directChat=true). The ask and work modes are session-level. For continued chats, the session mode is inherited by default. To switch modes, create a new session or fork. In multi-digital employee or task execution scenarios, if ask is passed, it takes effect as work. If directChat is set to true, this parameter is ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>work</p>
@@ -161,6 +209,22 @@ public class SendAsyncChatMessageRequest extends TeaModel {
     public static SendAsyncChatMessageRequest build(java.util.Map<String, ?> map) throws Exception {
         SendAsyncChatMessageRequest self = new SendAsyncChatMessageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SendAsyncChatMessageRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
+    }
+
+    public SendAsyncChatMessageRequest setAutoPreference(String autoPreference) {
+        this.autoPreference = autoPreference;
+        return this;
+    }
+    public String getAutoPreference() {
+        return this.autoPreference;
     }
 
     public SendAsyncChatMessageRequest setContent(String content) {
@@ -243,6 +307,22 @@ public class SendAsyncChatMessageRequest extends TeaModel {
         return this.model;
     }
 
+    public SendAsyncChatMessageRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public SendAsyncChatMessageRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
+    }
+
     public SendAsyncChatMessageRequest setReuseLastSession(Boolean reuseLastSession) {
         this.reuseLastSession = reuseLastSession;
         return this;
@@ -291,6 +371,22 @@ public class SendAsyncChatMessageRequest extends TeaModel {
         return this.tenantId;
     }
 
+    public SendAsyncChatMessageRequest setThinkingEnabled(Boolean thinkingEnabled) {
+        this.thinkingEnabled = thinkingEnabled;
+        return this;
+    }
+    public Boolean getThinkingEnabled() {
+        return this.thinkingEnabled;
+    }
+
+    public SendAsyncChatMessageRequest setThinkingLevel(String thinkingLevel) {
+        this.thinkingLevel = thinkingLevel;
+        return this;
+    }
+    public String getThinkingLevel() {
+        return this.thinkingLevel;
+    }
+
     public SendAsyncChatMessageRequest setWorkMode(String workMode) {
         this.workMode = workMode;
         return this;
@@ -301,16 +397,16 @@ public class SendAsyncChatMessageRequest extends TeaModel {
 
     public static class SendAsyncChatMessageRequestContextItemsAnnotationFiles extends TeaModel {
         /**
-         * <p>The file name.</p>
+         * <p>The file name of the attachment.</p>
          * 
          * <strong>example:</strong>
-         * <p>SupplementaryNotes.pdf</p>
+         * <p>Supplementary notes.pdf</p>
          */
         @NameInMap("fileName")
         public String fileName;
 
         /**
-         * <p>The public access URL of the file.</p>
+         * <p>The public access URL of the attachment. This parameter is optional.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/public/file">https://example.com/public/file</a></p>
@@ -319,7 +415,7 @@ public class SendAsyncChatMessageRequest extends TeaModel {
         public String filePublicUrl;
 
         /**
-         * <p>The file record ID.</p>
+         * <p>The file record ID of the attachment. This parameter is required. It is used to verify the ownership of the attachment and provide it for session processing.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleFileRecordId</p>
@@ -328,7 +424,7 @@ public class SendAsyncChatMessageRequest extends TeaModel {
         public String fileRecordId;
 
         /**
-         * <p>The internal access URL of the file.</p>
+         * <p>The internal access URL of the attachment. This parameter is optional.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/file">https://example.com/file</a></p>
@@ -377,7 +473,7 @@ public class SendAsyncChatMessageRequest extends TeaModel {
 
     public static class SendAsyncChatMessageRequestContextItems extends TeaModel {
         /**
-         * <p>The user\&quot;s annotation on the referenced content.</p>
+         * <p>The annotation content entered by the user.</p>
          * 
          * <strong>example:</strong>
          * <p>Please verify the data for the East China region</p>
@@ -386,7 +482,7 @@ public class SendAsyncChatMessageRequest extends TeaModel {
         public String annotation;
 
         /**
-         * <p>The list of files associated with the annotation.</p>
+         * <p>The list of attachments associated with the output annotation. This parameter is only applicable when type is set to output_annotation.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -395,7 +491,7 @@ public class SendAsyncChatMessageRequest extends TeaModel {
         public java.util.List<SendAsyncChatMessageRequestContextItemsAnnotationFiles> annotationFiles;
 
         /**
-         * <p>The body of the referenced content.</p>
+         * <p>The content corresponding to the reference or annotation. For output_annotation, this parameter is optional, but annotationFiles must be provided.</p>
          * 
          * <strong>example:</strong>
          * <p>Sales revenue for this month</p>
@@ -404,7 +500,7 @@ public class SendAsyncChatMessageRequest extends TeaModel {
         public String content;
 
         /**
-         * <p>The ID of the referenced file.</p>
+         * <p>The ID of the referenced or annotated output file.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleFileId</p>
@@ -413,16 +509,16 @@ public class SendAsyncChatMessageRequest extends TeaModel {
         public String fileId;
 
         /**
-         * <p>The name of the referenced file.</p>
+         * <p>The name of the referenced or annotated output file.</p>
          * 
          * <strong>example:</strong>
-         * <p>SalesData.xlsx</p>
+         * <p>Sales data.xlsx</p>
          */
         @NameInMap("fileName")
         public String fileName;
 
         /**
-         * <p>The type of the referenced file.</p>
+         * <p>The type of the referenced or annotated output file.</p>
          * 
          * <strong>example:</strong>
          * <p>xlsx</p>
@@ -431,7 +527,7 @@ public class SendAsyncChatMessageRequest extends TeaModel {
         public String fileType;
 
         /**
-         * <p>The ID of the referenced message.</p>
+         * <p>The ID of the referenced or annotated message.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleMessageId</p>
@@ -440,7 +536,7 @@ public class SendAsyncChatMessageRequest extends TeaModel {
         public String messageId;
 
         /**
-         * <p>The name of the message sender.</p>
+         * <p>The name of the sender of the referenced or annotated message.</p>
          * 
          * <strong>example:</strong>
          * <p>Sales Assistant</p>
@@ -449,7 +545,7 @@ public class SendAsyncChatMessageRequest extends TeaModel {
         public String senderName;
 
         /**
-         * <p>The context entry type.</p>
+         * <p>The context type. Valid values: message_reference, message_selection, message_annotation, output_selection, and output_annotation.</p>
          * 
          * <strong>example:</strong>
          * <p>message_annotation</p>
@@ -538,7 +634,7 @@ public class SendAsyncChatMessageRequest extends TeaModel {
 
     public static class SendAsyncChatMessageRequestFiles extends TeaModel {
         /**
-         * <p>The file ID, which is returned by uploadChatFile.</p>
+         * <p>The file ID, returned by uploadChatFile.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -584,7 +680,7 @@ public class SendAsyncChatMessageRequest extends TeaModel {
          * <p>The display content of the segment.</p>
          * 
          * <strong>example:</strong>
-         * <p>Old session</p>
+         * <p>Previous session</p>
          */
         @NameInMap("content")
         public String content;
@@ -602,7 +698,7 @@ public class SendAsyncChatMessageRequest extends TeaModel {
          * <p>The name of the referenced object.</p>
          * 
          * <strong>example:</strong>
-         * <p>Old session</p>
+         * <p>Previous session</p>
          */
         @NameInMap("name")
         public String name;
@@ -617,7 +713,7 @@ public class SendAsyncChatMessageRequest extends TeaModel {
         public String objectId;
 
         /**
-         * <p>The referenced object type.</p>
+         * <p>The object type of the referenced object.</p>
          * 
          * <strong>example:</strong>
          * <p>conversation</p>
@@ -736,7 +832,7 @@ public class SendAsyncChatMessageRequest extends TeaModel {
         public String executionId;
 
         /**
-         * <p>The digital employee name.</p>
+         * <p>The name of the digital employee.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>

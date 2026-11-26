@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreatePersonalDingtalkChatRequest extends TeaModel {
     /**
+     * <p>The platform application token issued by the console. If specified, the operation is performed as the user specified by opsUserId or opsUserCode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
      * <p>The DingTalk group chat session ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -15,10 +24,10 @@ public class CreatePersonalDingtalkChatRequest extends TeaModel {
     public String chatId;
 
     /**
-     * <p>The group chat name.</p>
+     * <p>The name of the group chat.</p>
      * 
      * <strong>example:</strong>
-     * <p>CustomerProjectGroup</p>
+     * <p>Customer Project Group</p>
      */
     @NameInMap("chatName")
     public String chatName;
@@ -33,7 +42,7 @@ public class CreatePersonalDingtalkChatRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The directory ID.</p>
+     * <p>The folder ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -42,7 +51,7 @@ public class CreatePersonalDingtalkChatRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The start time for collecting chat history.</p>
+     * <p>The start time for chat record collection.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +61,7 @@ public class CreatePersonalDingtalkChatRequest extends TeaModel {
     public String historyStartTime;
 
     /**
-     * <p>The meeting notes content (optional). The notes are used for auxiliary analysis.</p>
+     * <p>The content of the meeting notes (optional), which is used for auxiliary analysis.</p>
      * 
      * <strong>example:</strong>
      * <p>Focus on identifying customer demands and to-do items</p>
@@ -61,7 +70,7 @@ public class CreatePersonalDingtalkChatRequest extends TeaModel {
     public String notes;
 
     /**
-     * <p>The digital employee name (operating object name, optional).</p>
+     * <p>The name of the digital employee (the name of the operating object, optional).</p>
      * 
      * <strong>example:</strong>
      * <p>my-agent</p>
@@ -70,16 +79,34 @@ public class CreatePersonalDingtalkChatRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
-     * <p>The resource tags (optional, a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;]).</p>
+     * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
      * 
      * <strong>example:</strong>
-     * <p>[&quot;Customer&quot;,&quot;GroupChat&quot;]</p>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
+
+    /**
+     * <p>The resource tags (optional). The value is a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;].</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;Customer&quot;,&quot;Group chat&quot;]</p>
      */
     @NameInMap("sourceTags")
     public String sourceTags;
 
     /**
-     * <p>The tenant ID.</p>
+     * <p>The ID of the tenant.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -96,6 +123,14 @@ public class CreatePersonalDingtalkChatRequest extends TeaModel {
     public static CreatePersonalDingtalkChatRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePersonalDingtalkChatRequest self = new CreatePersonalDingtalkChatRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreatePersonalDingtalkChatRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
     }
 
     public CreatePersonalDingtalkChatRequest setChatId(String chatId) {
@@ -154,6 +189,22 @@ public class CreatePersonalDingtalkChatRequest extends TeaModel {
         return this.operatingObjectName;
     }
 
+    public CreatePersonalDingtalkChatRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public CreatePersonalDingtalkChatRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
+    }
+
     public CreatePersonalDingtalkChatRequest setSourceTags(String sourceTags) {
         this.sourceTags = sourceTags;
         return this;
@@ -180,7 +231,7 @@ public class CreatePersonalDingtalkChatRequest extends TeaModel {
 
     public static class CreatePersonalDingtalkChatRequestUpdateFrequency extends TeaModel {
         /**
-         * <p>The cron expression for timed scheduling.</p>
+         * <p>The cron expression for the timed scheduling task.</p>
          * 
          * <strong>example:</strong>
          * <p>0 2 * * *</p>
@@ -189,7 +240,7 @@ public class CreatePersonalDingtalkChatRequest extends TeaModel {
         public String cron;
 
         /**
-         * <p>Specifies whether to enable or disable the feature.</p>
+         * <p><strong>Specifies whether to enable the feature.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -198,7 +249,7 @@ public class CreatePersonalDingtalkChatRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The preset mode (can be ignored).</p>
+         * <p>The preset mode, which can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>hourly</p>

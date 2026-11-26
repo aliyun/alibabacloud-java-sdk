@@ -17,7 +17,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
      * <p>The generated non-persistent template draft.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;schemaVersion\&quot;:2,\&quot;steps\&quot;:[]}</p>
+     * <p>{&quot;schemaVersion&quot;:2,&quot;steps&quot;:[]}</p>
      */
     @NameInMap("draft")
     public GenerateWorkflowTemplateDraftResponseBodyDraft draft;

@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListSourceUsageStatisticsRequest extends TeaModel {
     /**
-     * <p>The ID of the collaboration group to which the resource belongs, such as cg_101. If you specify this parameter, a group workspace task is created, and the caller must be a valid group member. If you leave this parameter empty, a personal task is created.</p>
+     * <p>The platform application token issued by the console. If specified, the operation is executed as the user specified by opsUserId or opsUserCode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
+     * <p>The ID of the collaboration group to which the resource belongs, such as cg_101. If specified, a group workspace task is created, and the caller must be a valid group member. If left empty, a personal task is created.</p>
      * 
      * <strong>example:</strong>
      * <p>1112</p>
@@ -27,19 +36,37 @@ public class ListSourceUsageStatisticsRequest extends TeaModel {
      * <p>The event type.</p>
      * 
      * <strong>example:</strong>
-     * <p>HealthCheck</p>
+     * <p>ALL</p>
      */
     @NameInMap("eventType")
     public String eventType;
 
     /**
-     * <p>The root IDs of the enterprise knowledge bases, which are available only for TENANT. The knowledge bases are filtered based on current directory bindings, not historical ownership. Maximum number of items: 100.</p>
+     * <p>The root IDs of enterprise knowledge bases, available only for TENANT. The IDs are filtered based on current directory bindings rather than historical ownership. A maximum of 100 items are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;kb_9401&quot;]</p>
      */
     @NameInMap("knowledgeBaseIds")
     public java.util.List<String> knowledgeBaseIds;
+
+    /**
+     * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
 
     /**
      * <p>The current page number.</p>
@@ -60,11 +87,11 @@ public class ListSourceUsageStatisticsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The report perspective. Valid values: TENANT (enterprise knowledge), GROUP (a single workspace), and ALL_GROUPS (all workspaces of the current tenant, only for platform super administrators).</p>
+     * <p>The report perspective. Valid values: TENANT for enterprise knowledge, GROUP for a single workspace, and ALL_GROUPS for all workspaces of the current tenant (available only to platform super administrators).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Report perspective: TENANT for enterprise knowledge, GROUP for a single workspace, ALL_GROUPS for all workspaces of the current tenant (platform super administrator only). Valid values: TENANT, GROUP, ALL_GROUPS</p>
+     * <p>TENANT</p>
      */
     @NameInMap("scopeType")
     public String scopeType;
@@ -73,22 +100,22 @@ public class ListSourceUsageStatisticsRequest extends TeaModel {
      * <p>The content of the sort clause.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>retrievalCount</p>
      */
     @NameInMap("sortBy")
     public String sortBy;
 
     /**
-     * <p>The sort order. This parameter takes effect only when sortBy is specified. Valid values: ASC and DESC. The values are case-insensitive.</p>
+     * <p>Specifies the sort order. This parameter takes effect only when sortBy is specified. Valid values: ASC and DESC. The values are case-insensitive.</p>
      * 
      * <strong>example:</strong>
-     * <p>asc</p>
+     * <p>ASC</p>
      */
     @NameInMap("sortOrder")
     public String sortOrder;
 
     /**
-     * <p>The IDs of the associated sources.</p>
+     * <p>The associated source IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;src_9401&quot;]</p>
@@ -129,6 +156,14 @@ public class ListSourceUsageStatisticsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListSourceUsageStatisticsRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
+    }
+
     public ListSourceUsageStatisticsRequest setCollaborationGroupId(String collaborationGroupId) {
         this.collaborationGroupId = collaborationGroupId;
         return this;
@@ -159,6 +194,22 @@ public class ListSourceUsageStatisticsRequest extends TeaModel {
     }
     public java.util.List<String> getKnowledgeBaseIds() {
         return this.knowledgeBaseIds;
+    }
+
+    public ListSourceUsageStatisticsRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public ListSourceUsageStatisticsRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public ListSourceUsageStatisticsRequest setPage(Long page) {

@@ -14,6 +14,15 @@ public class ListUsersRequest extends TeaModel {
     public java.util.List<String> accountIds;
 
     /**
+     * <p>The platform application token issued by the console. If specified, the operation is executed as the user specified by opsUserId or opsUserCode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
      * <p>Specifies whether the account is activated. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: Activated.</li>
@@ -27,13 +36,31 @@ public class ListUsersRequest extends TeaModel {
     public Boolean isActive;
 
     /**
-     * <p>The keyword for product search. Fuzzy match is supported.</p>
+     * <p>The keyword for searching products. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Sample keyword</p>
      */
     @NameInMap("keyword")
     public String keyword;
+
+    /**
+     * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
 
     /**
      * <p>The page number.</p>
@@ -57,7 +84,7 @@ public class ListUsersRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The list of new system role codes. This is a full replacement and must contain at least one role. Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER.</p>
+     * <p>The list of new system role codes. This list fully replaces the existing roles and must contain at least one role. Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;string_value&quot;]</p>
@@ -66,7 +93,7 @@ public class ListUsersRequest extends TeaModel {
     public java.util.List<String> roleCodes;
 
     /**
-     * <p>The tenant ID. This is a common parameter. winnexo-cli explicitly passes this parameter by using --tenant-id.</p>
+     * <p>The tenant ID. This is a common parameter and is explicitly passed by using the --tenant-id option in winnexo-cli.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -87,6 +114,14 @@ public class ListUsersRequest extends TeaModel {
         return this.accountIds;
     }
 
+    public ListUsersRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
+    }
+
     public ListUsersRequest setIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -101,6 +136,22 @@ public class ListUsersRequest extends TeaModel {
     }
     public String getKeyword() {
         return this.keyword;
+    }
+
+    public ListUsersRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public ListUsersRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public ListUsersRequest setPage(Long page) {

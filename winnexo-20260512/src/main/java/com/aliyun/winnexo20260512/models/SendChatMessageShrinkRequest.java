@@ -5,6 +5,24 @@ import com.aliyun.tea.*;
 
 public class SendChatMessageShrinkRequest extends TeaModel {
     /**
+     * <p>The platform application token issued by the console. If this parameter is passed, the operation is executed as the user specified by opsUserId or opsUserCode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
+     * <p>The AUTO preference. Valid values: none (default), performance (effect first), and credit (cost first). If this parameter is omitted or set to null, the session preference is inherited. If it is left blank, it is reset to none.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>performance</p>
+     */
+    @NameInMap("autoPreference")
+    public String autoPreference;
+
+    /**
      * <p>The body of the user message.</p>
      * <p>This parameter is required.</p>
      * 
@@ -33,7 +51,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String contextItemsShrink;
 
     /**
-     * <p>The list of digital employee names. For compatibility with the legacy format, a single string can be passed.</p>
+     * <p>The list of digital employee names. For compatibility with the old format, a single string can also be passed.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -42,7 +60,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String digitalEmployeeNameShrink;
 
     /**
-     * <p>Specifies whether to enable direct connection mode. If set to true, regular scenario routing is skipped and the direct conversation scenario is entered directly.</p>
+     * <p>Specifies whether to enable direct connection mode. If this parameter is set to true, regular scenario routing is skipped and the direct conversation scenario is entered directly.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -51,7 +69,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public Boolean directChat;
 
     /**
-     * <p>The number of recent complete direct Q&amp;A rounds carried in the current turn, excluding the input of the current turn. This parameter takes effect only when workMode is set to direct or directChat is set to true. Valid values: JSON integers from 0 to 100. If omitted, the backend processes it as 0, carrying no history but still saving the current turn. Null, Boolean, string, decimal, and out-of-bounds values are processed through the original direct path, and the gateway retains the original values for backend determination. This field is ignored in work and ask modes. This parameter does not limit the history range when converted to the work mode.</p>
+     * <p>The number of recent complete direct Q&amp;A rounds carried in the current turn, excluding the input of the current turn. This parameter takes effect only when workMode is set to direct or directChat is set to true. Valid values: JSON integers from 0 to 100. If this parameter is omitted, the backend processes it as 0, carrying no history but still saving the current turn. Null, Boolean values, strings, decimals, and out-of-bounds values are processed through the original direct path, and the gateway retains the original values for backend determination. This field is ignored in work and ask modes. This parameter does not limit the history range when switching to the work mode.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -69,13 +87,13 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public Boolean enableWebSearch;
 
     /**
-     * <p>The list of file references. Each item is an object, and the fileId parameter is required, which is returned by uploadChatFile.</p>
+     * <p>The list of file references. Each item is an object, and fileId is required, which is returned by uploadChatFile.</p>
      */
     @NameInMap("files")
     public String filesShrink;
 
     /**
-     * <p>The language for the current turn. Valid values: zh-CN and en-US. This parameter is used for API error messages and passed through to CodeAgent. If omitted, the current language behavior is retained and user settings are not modified.</p>
+     * <p>The language for the current turn. Valid values: zh-CN and en-US. This parameter is used for API error messages and passed through to CodeAgent. If this parameter is omitted, the current language behavior is retained and the user settings are not modified.</p>
      * 
      * <strong>example:</strong>
      * <p>en-US</p>
@@ -84,7 +102,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String locale;
 
     /**
-     * <p>The abstract model tier. Valid values: quick, standard, and flagship. If omitted, standard is used for new sessions, and the current tier is retained for existing sessions.</p>
+     * <p>The abstract model tier. Valid values: quick, standard, and flagship. If this parameter is omitted, standard is used for new sessions, and the current tier is retained for existing sessions.</p>
      * 
      * <strong>example:</strong>
      * <p>quick</p>
@@ -93,7 +111,25 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>Specifies whether to reuse the most recent session under the digital employee when sessionId is not passed, which applies to CLI scenarios. Default value: false, which indicates that a new session is created.</p>
+     * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
+
+    /**
+     * <p>Specifies whether to reuse the most recent session under the digital employee when sessionId is not passed, which applies to CLI scenarios. Default value: false, which means a new session is created.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -120,7 +156,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>Specifies whether streaming output is enabled.</p>
+     * <p>Specifies whether to use streaming output.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -129,7 +165,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public Boolean stream;
 
     /**
-     * <p>The task execution metadata returned by executeScheduledTask. If passed, the request is processed through the task execution pipeline.</p>
+     * <p>The task execution metadata returned by executeScheduledTask. If this parameter is passed, the request is processed through the task execution pipeline.</p>
      */
     @NameInMap("taskExecution")
     public String taskExecutionShrink;
@@ -144,7 +180,25 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The session work mode. Valid values: ask (quick Q&amp;A, which trims tools, skills, and connectors for single-turn direct answers), work (deep work, which is the default), and direct (direct connection mode at the request level, which does not start a sandbox and prevents context pollution, equivalent to directChat=true). The ask and work modes are session-level. The mode is fixed when a new session is created. Subsequent chats inherit the session mode by default. If the explicitly passed value is inconsistent with the session mode, a parameter error is returned. To switch modes, create a new session or fork the session. If ask is passed in multi-digital employee or task execution scenarios, it takes effect as work. This parameter is ignored when directChat is set to true.</p>
+     * <p>Specifies whether to explicitly override the thinking mode for the current turn. If this parameter is not passed in AUTO mode, the decision model determines the behavior. If it is not passed in fixed tier mode, the personal settings are retained. The final behavior complies with the model capabilities and tenant switches.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("thinkingEnabled")
+    public Boolean thinkingEnabled;
+
+    /**
+     * <p>The explicit override for the thinking intensity in the current turn. If this parameter is not passed in AUTO mode, the decision model determines the behavior. If it is not passed in fixed tier mode, the personal settings are retained. The final behavior complies with the model capabilities and tenant switches.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>medium</p>
+     */
+    @NameInMap("thinkingLevel")
+    public String thinkingLevel;
+
+    /**
+     * <p>The session work mode. Valid values: ask (quick Q&amp;A, which trims tools, skills, and connectors for single-turn direct answers), work (deep work, which is the default), and direct (direct connection mode at the request level, which does not start the sandbox and prevents context pollution, equivalent to directChat=true). The ask and work modes are session-level. The mode is fixed when a new session is created. Subsequent chats inherit the session mode by default. If the explicitly passed value is inconsistent with the session mode, a parameter error is returned. To switch modes, create a new session or fork the current one. If ask is passed in multi-digital employee or task execution scenarios, it takes effect as work. If directChat is set to true, this parameter is ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>work</p>
@@ -155,6 +209,22 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public static SendChatMessageShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SendChatMessageShrinkRequest self = new SendChatMessageShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SendChatMessageShrinkRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
+    }
+
+    public SendChatMessageShrinkRequest setAutoPreference(String autoPreference) {
+        this.autoPreference = autoPreference;
+        return this;
+    }
+    public String getAutoPreference() {
+        return this.autoPreference;
     }
 
     public SendChatMessageShrinkRequest setContent(String content) {
@@ -237,6 +307,22 @@ public class SendChatMessageShrinkRequest extends TeaModel {
         return this.model;
     }
 
+    public SendChatMessageShrinkRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public SendChatMessageShrinkRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
+    }
+
     public SendChatMessageShrinkRequest setReuseLastSession(Boolean reuseLastSession) {
         this.reuseLastSession = reuseLastSession;
         return this;
@@ -283,6 +369,22 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     }
     public String getTenantId() {
         return this.tenantId;
+    }
+
+    public SendChatMessageShrinkRequest setThinkingEnabled(Boolean thinkingEnabled) {
+        this.thinkingEnabled = thinkingEnabled;
+        return this;
+    }
+    public Boolean getThinkingEnabled() {
+        return this.thinkingEnabled;
+    }
+
+    public SendChatMessageShrinkRequest setThinkingLevel(String thinkingLevel) {
+        this.thinkingLevel = thinkingLevel;
+        return this;
+    }
+    public String getThinkingLevel() {
+        return this.thinkingLevel;
     }
 
     public SendChatMessageShrinkRequest setWorkMode(String workMode) {

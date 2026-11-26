@@ -26,7 +26,7 @@ public class DeleteWorkflowTemplateVersionResponseBody extends TeaModel {
      * <p>All remaining versions after deletion, sorted in descending order by version number.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>[{&quot;createdByUserId&quot;:1,&quot;description&quot;:&quot;Automatically generate weekly reports&quot;,&quot;gmtCreate&quot;:&quot;2026-10-19T10:00:00+08:00&quot;,&quot;gmtModified&quot;:&quot;2026-10-19T10:00:00+08:00&quot;,&quot;gmtSubmitted&quot;:&quot;2026-10-19T10:00:00+08:00&quot;,&quot;isEffective&quot;:false,&quot;name&quot;:&quot;example&quot;,&quot;sourceVersion&quot;:&quot;v1&quot;,&quot;status&quot;:&quot;DRAFT&quot;,&quot;stepCount&quot;:3,&quot;submittedByUserId&quot;:1,&quot;updatedByUserId&quot;:1,&quot;version&quot;:&quot;v2&quot;,&quot;versionDescription&quot;:&quot;Add a review step&quot;}]</p>
      */
     @NameInMap("items")
     public java.util.List<DeleteWorkflowTemplateVersionResponseBodyItems> items;

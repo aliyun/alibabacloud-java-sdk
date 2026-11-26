@@ -38,7 +38,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
     public Long page;
 
     /**
-     * <p>The page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -56,7 +56,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The maximum number of entries returned in this request.</p>
+     * <p>The maximum number of records returned in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -154,7 +154,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
         public String objectName;
 
         /**
-         * <p>The object type, such as customer. This field has a value when type is set to mention.</p>
+         * <p>The object type, such as customer. This parameter has a value only when type is set to mention.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -163,7 +163,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
         public String objectType;
 
         /**
-         * <p>The display name of the object type (such as &quot;Customer&quot;), parsed from the graph schema. The value is null when the cache is missed.</p>
+         * <p>The display name of the object type, such as Customer. This name is parsed from the graph schema. If the cache is missing, the value is null.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -256,7 +256,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>The last modification time.</p>
+         * <p>The last update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -265,7 +265,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>The ID of the data item. When tabId and orgId are the same, itemId uniquely identifies a data item. The maximum length is 128 characters.</p>
+         * <p>The ID of the data item. When tabId and orgId are the same, itemId uniquely identifies a data item. The length cannot exceed 128 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleItemId</p>
@@ -274,7 +274,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
         public String itemId;
 
         /**
-         * <p>The data type (group, user, or role).</p>
+         * <p>The data type, such as group, user, or role.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -298,7 +298,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
         public java.util.List<ListAdminKnowledgeBasesResponseBodyItemsObjectBindings> objectBindings;
 
         /**
-         * <p>The number of resources with the FAILED status. This field is returned only in the top-level knowledge base directory list.</p>
+         * <p>The number of resources in the FAILED state. This parameter is returned only when the top-level directory list of the knowledge base is queried.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -307,7 +307,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
         public Long sourceFailedCount;
 
         /**
-         * <p>The knowledge base source type. Valid values: aliding_kb_doc (DingTalk knowledge base document) and normal (common knowledge).</p>
+         * <p>The ownership type of the knowledge base. Valid values: aliding_kb_doc (DingTalk knowledge base document) and normal (common knowledge).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -316,7 +316,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
         public String sourceKind;
 
         /**
-         * <p>The number of resources with the READY status. This field is returned only in the top-level knowledge base directory list.</p>
+         * <p>The number of resources in the READY state. This parameter is returned only when the top-level directory list of the knowledge base is queried.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -325,7 +325,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
         public Long sourceReadyCount;
 
         /**
-         * <p>The resource status. This field has a value when itemType is set to resource.</p>
+         * <p>The resource status. This parameter has a value only when itemType is set to resource.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -334,7 +334,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
         public String sourceStatus;
 
         /**
-         * <p>The total number of resources in the directory and its subdirectories. This field is returned only in the top-level knowledge base directory list.</p>
+         * <p>The total number of resources in the directory and its subdirectories. This parameter is returned only when the top-level directory list of the knowledge base is queried.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

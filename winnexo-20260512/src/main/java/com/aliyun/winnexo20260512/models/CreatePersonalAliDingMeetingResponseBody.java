@@ -85,7 +85,7 @@ public class CreatePersonalAliDingMeetingResponseBody extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;observedGeneration\&quot;: 2, \&quot;servicesInstances\&quot;: {}, \&quot;observedTime\&quot;: \&quot;2026-03-05T16:00:09Z\&quot;, \&quot;servicesWithPendingChanges\&quot;: [], \&quot;latestEnvironmentDeploymentName\&quot;: \&quot;manual-1772726409137-lmvsqr\&quot;}</p>
+     * <p>{&quot;observedGeneration&quot;: 2, &quot;servicesInstances&quot;: {}, &quot;observedTime&quot;: &quot;2026-03-05T16:00:09Z&quot;, &quot;servicesWithPendingChanges&quot;: [], &quot;latestEnvironmentDeploymentName&quot;: &quot;manual-1772726409137-lmvsqr&quot;}</p>
      */
     @NameInMap("status")
     public String status;

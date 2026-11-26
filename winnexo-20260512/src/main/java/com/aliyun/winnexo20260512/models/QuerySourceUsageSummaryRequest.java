@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class QuerySourceUsageSummaryRequest extends TeaModel {
     /**
-     * <p>The ID of the collaboration group to which the resource belongs, such as cg_101. If you specify this parameter, a group workspace task is created, and the caller must be a valid group member. If you leave this parameter empty, a personal task is created.</p>
+     * <p>The platform application token issued by the console. If specified, the request is executed as the user identified by opsUserId or opsUserCode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
+     * <p>The ID of the collaboration group to which the resource belongs, such as cg_101. If specified, a group workspace task is created, and the caller must be a valid group member. If left empty, a personal task is created.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleCollaborationGroupId</p>
@@ -27,16 +36,34 @@ public class QuerySourceUsageSummaryRequest extends TeaModel {
      * <p>The event type.</p>
      * 
      * <strong>example:</strong>
-     * <p>UserOperator</p>
+     * <p>ALL</p>
      */
     @NameInMap("eventType")
     public String eventType;
 
     /**
-     * <p>The ID of the knowledge base folder.</p>
+     * <p>The IDs of the knowledge base folders.</p>
      */
     @NameInMap("knowledgeBaseIds")
     public java.util.List<String> knowledgeBaseIds;
+
+    /**
+     * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
 
     /**
      * <p>The role scope type. Valid values:</p>
@@ -47,13 +74,13 @@ public class QuerySourceUsageSummaryRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Report perspective: TENANT for enterprise knowledge, GROUP for a single workspace, and ALL_GROUPS for all workspaces of the current tenant (platform super administrator only). Valid values: TENANT, GROUP, and ALL_GROUPS</p>
+     * <p>TENANT</p>
      */
     @NameInMap("scopeType")
     public String scopeType;
 
     /**
-     * <p>The source ID.</p>
+     * <p>The source IDs.</p>
      */
     @NameInMap("sourceIds")
     public java.util.List<String> sourceIds;
@@ -62,7 +89,7 @@ public class QuerySourceUsageSummaryRequest extends TeaModel {
      * <p>The resume channel source.</p>
      * 
      * <strong>example:</strong>
-     * <p>The name of the source</p>
+     * <p>Source name content</p>
      */
     @NameInMap("sourceName")
     public String sourceName;
@@ -78,7 +105,7 @@ public class QuerySourceUsageSummaryRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The tenant ID, which is a common parameter. If you use winnexo-cli, pass this parameter explicitly by using --tenant-id.</p>
+     * <p>The tenant ID. This is a common parameter. For winnexo-cli, this parameter is explicitly passed by using --tenant-id.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -89,6 +116,14 @@ public class QuerySourceUsageSummaryRequest extends TeaModel {
     public static QuerySourceUsageSummaryRequest build(java.util.Map<String, ?> map) throws Exception {
         QuerySourceUsageSummaryRequest self = new QuerySourceUsageSummaryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QuerySourceUsageSummaryRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
     }
 
     public QuerySourceUsageSummaryRequest setCollaborationGroupId(String collaborationGroupId) {
@@ -121,6 +156,22 @@ public class QuerySourceUsageSummaryRequest extends TeaModel {
     }
     public java.util.List<String> getKnowledgeBaseIds() {
         return this.knowledgeBaseIds;
+    }
+
+    public QuerySourceUsageSummaryRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public QuerySourceUsageSummaryRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public QuerySourceUsageSummaryRequest setScopeType(String scopeType) {

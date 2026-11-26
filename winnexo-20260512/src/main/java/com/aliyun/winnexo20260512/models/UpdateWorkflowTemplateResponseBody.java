@@ -104,7 +104,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The template structure version. The current value is 2, which is independent of the business version vN.</p>
+     * <p>The schema version of the template. The current value is 2, which is independent of the business version vN.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -149,11 +149,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
     public String versionDescription;
 
     /**
-     * <p>The version status. Valid values:</p>
-     * <ul>
-     * <li>DRAFT: Draft.</li>
-     * <li>SUBMITTED: Submitted.</li>
-     * </ul>
+     * <p>The version status. Valid values: DRAFT and SUBMITTED.</p>
      * 
      * <strong>example:</strong>
      * <p>SUBMITTED</p>
@@ -331,11 +327,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
         public String ownerAgentName;
 
         /**
-         * <p>The owner type. Valid values:</p>
-         * <ul>
-         * <li>MEMBER: Human.</li>
-         * <li>AGENT: Agent.</li>
-         * </ul>
+         * <p>The owner type. Valid values: MEMBER (human) and AGENT (agent).</p>
          * 
          * <strong>example:</strong>
          * <p>MEMBER</p>
@@ -353,7 +345,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
         public Long ownerUserId;
 
         /**
-         * <p>Specifies whether to manually review the output. Default value: false. This feature can only be enabled for digital workers, and review to-do items are automatically sent to the owner.</p>
+         * <p>Specifies whether to manually review the deliverables. Default value: false. This can be enabled only for digital workers. Review tasks are automatically sent to the owner.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -365,7 +357,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
          * <p>The list of reviewer user IDs.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>[10001]</p>
          */
         @NameInMap("reviewerUserIds")
         public java.util.List<Long> reviewerUserIds;
@@ -383,16 +375,16 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
          * <p>The step processing instructions.</p>
          * 
          * <strong>example:</strong>
-         * <p>Collect customer information and submit it to the owner for review</p>
+         * <p>Collect customer information and submit it to the person in charge for review</p>
          */
         @NameInMap("specification")
         public String specification;
 
         /**
-         * <p>The ordered fragment array. Supports text, mention, skill, app, files, and web_search. Preserves reference identities and order.</p>
+         * <p>The ordered array of segments. Supports text, mention, skill, app, files, and web_search. Preserves reference identities and order.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;type&quot;:&quot;text&quot;,&quot;text&quot;:&quot;Collect customer information&quot;}]</p>
+         * <p>[{&quot;type&quot;:&quot;text&quot;,&quot;content&quot;:&quot;Collect Customer Information&quot;}]</p>
          */
         @NameInMap("specificationJson")
         public java.util.List<java.util.Map<String, ?>> specificationJson;

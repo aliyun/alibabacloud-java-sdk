@@ -32,7 +32,7 @@ public class ListSourceUsageStatisticsResponseBody extends TeaModel {
     public java.util.List<ListSourceUsageStatisticsResponseBodyItems> items;
 
     /**
-     * <p>The description of the status code.</p>
+     * <p>The status code description.</p>
      * 
      * <strong>example:</strong>
      * <p>The requested resource does not exist</p>
@@ -147,7 +147,7 @@ public class ListSourceUsageStatisticsResponseBody extends TeaModel {
 
     public static class ListSourceUsageStatisticsResponseBodyItems extends TeaModel {
         /**
-         * <p>The time of the most recent reporting and ingestion within the filtered range.</p>
+         * <p>The most recent reporting and ingestion time within the filtered range.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-02 11:20:09</p>
@@ -165,7 +165,7 @@ public class ListSourceUsageStatisticsResponseBody extends TeaModel {
         public Long retrievalCount;
 
         /**
-         * <p>The ID of the data source, which is unique within the tenant.</p>
+         * <p>The data source ID, which is unique within the tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -174,7 +174,7 @@ public class ListSourceUsageStatisticsResponseBody extends TeaModel {
         public String sourceId;
 
         /**
-         * <p>The name of the data source.</p>
+         * <p>The data source name.</p>
          * 
          * <strong>example:</strong>
          * <p>test123</p>

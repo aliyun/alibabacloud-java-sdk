@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateGroupTextRequest extends TeaModel {
     /**
+     * <p>The platform application token issued by the console. If this parameter is specified, the operation is performed as the user specified by opsUserId or opsUserCode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
      * <p>The description of the AI assistant.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +23,7 @@ public class CreateGroupTextRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The folder ID.</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dir_example</p>
@@ -33,14 +42,32 @@ public class CreateGroupTextRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The image name.</p>
+     * <p>The mirror name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ProjectResources</p>
+     * <p>Project materials</p>
      */
     @NameInMap("name")
     public String name;
+
+    /**
+     * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
 
     /**
      * <p>The source tags.</p>
@@ -52,7 +79,7 @@ public class CreateGroupTextRequest extends TeaModel {
     public String sourceTags;
 
     /**
-     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
+     * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -73,6 +100,14 @@ public class CreateGroupTextRequest extends TeaModel {
     public static CreateGroupTextRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateGroupTextRequest self = new CreateGroupTextRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateGroupTextRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
     }
 
     public CreateGroupTextRequest setDescription(String description) {
@@ -105,6 +140,22 @@ public class CreateGroupTextRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateGroupTextRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public CreateGroupTextRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public CreateGroupTextRequest setSourceTags(String sourceTags) {

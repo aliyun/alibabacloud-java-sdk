@@ -302,6 +302,24 @@ public class GetChatSessionResponseBody extends TeaModel {
 
     public static class GetChatSessionResponseBodySession extends TeaModel {
         /**
+         * <p>会话归档状态 ACTIVE/ARCHIVING/ARCHIVED</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
+         */
+        @NameInMap("conversationArchiveStatus")
+        public String conversationArchiveStatus;
+
+        /**
+         * <p>会话归档完成时间戳（秒）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1735689600</p>
+         */
+        @NameInMap("conversationArchivedTime")
+        public Long conversationArchivedTime;
+
+        /**
          * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
@@ -394,6 +412,22 @@ public class GetChatSessionResponseBody extends TeaModel {
         public static GetChatSessionResponseBodySession build(java.util.Map<String, ?> map) throws Exception {
             GetChatSessionResponseBodySession self = new GetChatSessionResponseBodySession();
             return TeaModel.build(map, self);
+        }
+
+        public GetChatSessionResponseBodySession setConversationArchiveStatus(String conversationArchiveStatus) {
+            this.conversationArchiveStatus = conversationArchiveStatus;
+            return this;
+        }
+        public String getConversationArchiveStatus() {
+            return this.conversationArchiveStatus;
+        }
+
+        public GetChatSessionResponseBodySession setConversationArchivedTime(Long conversationArchivedTime) {
+            this.conversationArchivedTime = conversationArchivedTime;
+            return this;
+        }
+        public Long getConversationArchivedTime() {
+            return this.conversationArchivedTime;
         }
 
         public GetChatSessionResponseBodySession setCreatedAt(Long createdAt) {

@@ -14,7 +14,7 @@ public class ListTodosResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether more data is available.</p>
+     * <p>Specifies whether more data is available.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -29,7 +29,7 @@ public class ListTodosResponseBody extends TeaModel {
     public java.util.List<ListTodosResponseBodyItems> items;
 
     /**
-     * <p>The effective maximum number of entries to return per page for the current request.</p>
+     * <p>The effective maximum number of entries returned per page for this request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -47,7 +47,7 @@ public class ListTodosResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The pagination token for the next page. This field is an empty string if no more data is available.</p>
+     * <p>The pagination token for the next page. This is an empty string if no more data is available.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -187,7 +187,7 @@ public class ListTodosResponseBody extends TeaModel {
         public Long assigneeCount;
 
         /**
-         * <p>The completion time in the YYYY-MM-DD HH:mm:ss format (UTC+8).</p>
+         * <p>The completion time in UTC+8. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-12 10:00:00</p>
@@ -208,13 +208,13 @@ public class ListTodosResponseBody extends TeaModel {
          * <p>The name of the user who completed the item. This field is empty if the item is not completed.</p>
          * 
          * <strong>example:</strong>
-         * <p>John Doe</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("completedByUserName")
         public String completedByUserName;
 
         /**
-         * <p>The creation time in the YYYY-MM-DD HH:mm:ss format (UTC+8).</p>
+         * <p>The creation time in UTC+8. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-12 10:00:00</p>
@@ -223,7 +223,7 @@ public class ListTodosResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The last modification time in the YYYY-MM-DD HH:mm:ss format (UTC+8).</p>
+         * <p>The last modification time in UTC+8. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-12 10:00:00</p>
@@ -232,7 +232,7 @@ public class ListTodosResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>Indicates whether the caller has read the item.</p>
+         * <p>Specifies whether the caller has read the item.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -241,7 +241,7 @@ public class ListTodosResponseBody extends TeaModel {
         public Boolean isRead;
 
         /**
-         * <p>The message ID of the assistant that sent the to-do item. This field is empty if there is no conversation source.</p>
+         * <p>The ID of the assistant message that generated the to-do item. This field is empty if there is no conversation source.</p>
          * 
          * <strong>example:</strong>
          * <p>msg-1</p>
@@ -262,7 +262,7 @@ public class ListTodosResponseBody extends TeaModel {
          * <p>The list display status for the caller.</p>
          * 
          * <strong>example:</strong>
-         * <p>TODO</p>
+         * <p>DONE</p>
          */
         @NameInMap("myDisplayState")
         public String myDisplayState;
@@ -292,10 +292,10 @@ public class ListTodosResponseBody extends TeaModel {
         public java.util.List<String> questionSummaries;
 
         /**
-         * <p>The source context. This context is passed through as-is during creation.</p>
+         * <p>The source context. This is passed through as-is during creation.</p>
          * 
          * <strong>example:</strong>
-         * <p>source=openapi</p>
+         * <p>{&quot;source&quot;:&quot;openapi&quot;}</p>
          */
         @NameInMap("sourceContext")
         public java.util.Map<String, ?> sourceContext;

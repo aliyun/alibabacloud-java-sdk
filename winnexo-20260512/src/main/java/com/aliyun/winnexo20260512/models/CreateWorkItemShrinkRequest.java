@@ -14,16 +14,25 @@ public class CreateWorkItemShrinkRequest extends TeaModel {
     public String acceptanceCriteria;
 
     /**
+     * <p>The platform application token issued by the console. If specified, the operation is performed as the user specified by opsUserId or opsUserCode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
      * <p>The stable references of the input attachments.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>[{&quot;resourceKind&quot;:&quot;FILE&quot;,&quot;resourceId&quot;:&quot;file_9401&quot;,&quot;refUrl&quot;:&quot;<a href="https://files.winnexo.aliyun.com/report.md%22,%22title%22:%22Sales">https://files.winnexo.aliyun.com/report.md&quot;,&quot;title&quot;:&quot;Sales</a> Report&quot;,&quot;contentType&quot;:&quot;text/markdown&quot;,&quot;sizeBytes&quot;:2048}]</p>
      */
     @NameInMap("attachments")
     public String attachmentsShrink;
 
     /**
-     * <p>The ID of the collaboration workspace.</p>
+     * <p>The ID of the collaboration space.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +45,7 @@ public class CreateWorkItemShrinkRequest extends TeaModel {
      * <p>The list of user IDs of the collaborators.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>[10001,10002]</p>
      */
     @NameInMap("collaboratorUserIds")
     public String collaboratorUserIdsShrink;
@@ -60,7 +69,7 @@ public class CreateWorkItemShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The type of the work item. Only WORKFLOW is supported.</p>
+     * <p>The type of the work item. Only WORKFLOW is accepted.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,7 +79,25 @@ public class CreateWorkItemShrinkRequest extends TeaModel {
     public String itemType;
 
     /**
-     * <p>The user ID of the owner. If this parameter is not specified, the ID of the caller is used.</p>
+     * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
+
+    /**
+     * <p>The user ID of the owner. If not specified, the caller is used as the owner.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -88,7 +115,7 @@ public class CreateWorkItemShrinkRequest extends TeaModel {
     public String priority;
 
     /**
-     * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
+     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -110,7 +137,7 @@ public class CreateWorkItemShrinkRequest extends TeaModel {
      * <p>The list of IDs of the bound workflow templates.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>[&quot;tpl_9401&quot;,&quot;tpl_9402&quot;]</p>
      */
     @NameInMap("workflowTemplateIds")
     public String workflowTemplateIdsShrink;
@@ -126,6 +153,14 @@ public class CreateWorkItemShrinkRequest extends TeaModel {
     }
     public String getAcceptanceCriteria() {
         return this.acceptanceCriteria;
+    }
+
+    public CreateWorkItemShrinkRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
     }
 
     public CreateWorkItemShrinkRequest setAttachmentsShrink(String attachmentsShrink) {
@@ -174,6 +209,22 @@ public class CreateWorkItemShrinkRequest extends TeaModel {
     }
     public String getItemType() {
         return this.itemType;
+    }
+
+    public CreateWorkItemShrinkRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public CreateWorkItemShrinkRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public CreateWorkItemShrinkRequest setOwnerUserId(Long ownerUserId) {

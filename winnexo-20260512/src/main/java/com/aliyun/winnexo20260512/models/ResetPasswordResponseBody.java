@@ -23,7 +23,7 @@ public class ResetPasswordResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request trace ID.</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>

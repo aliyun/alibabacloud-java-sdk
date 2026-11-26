@@ -26,13 +26,13 @@ public class CreateWorkItemResponseBody extends TeaModel {
      * <p>The list of input attachments.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>[{&quot;resourceKind&quot;:&quot;FILE&quot;,&quot;resourceId&quot;:&quot;file_9401&quot;,&quot;refUrl&quot;:&quot;<a href="https://files.winnexo.aliyun.com/report.md%22,%22title%22:%22Sales">https://files.winnexo.aliyun.com/report.md&quot;,&quot;title&quot;:&quot;Sales</a> Report&quot;,&quot;contentType&quot;:&quot;text/markdown&quot;,&quot;sizeBytes&quot;:2048}]</p>
      */
     @NameInMap("attachments")
     public java.util.List<CreateWorkItemResponseBodyAttachments> attachments;
 
     /**
-     * <p>The business status.</p>
+     * <p>The business status in the seven-state model.</p>
      * 
      * <strong>example:</strong>
      * <p>PROCESSING</p>
@@ -59,7 +59,7 @@ public class CreateWorkItemResponseBody extends TeaModel {
     public Boolean canManage;
 
     /**
-     * <p>Indicates whether the visibility scope can be adjusted independently.</p>
+     * <p>Indicates whether the caller can independently adjust the visibility scope.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -86,7 +86,7 @@ public class CreateWorkItemResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The collaboration workspace ID.</p>
+     * <p>The collaboration space ID.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -98,7 +98,7 @@ public class CreateWorkItemResponseBody extends TeaModel {
      * <p>The list of user IDs of the collaborators.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>[10001,10002]</p>
      */
     @NameInMap("collaboratorUserIds")
     public java.util.List<Long> collaboratorUserIds;
@@ -113,7 +113,7 @@ public class CreateWorkItemResponseBody extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>The creation time, in ISO 8601 format.</p>
+     * <p>The time when the item was created (ISO 8601).</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -212,7 +212,7 @@ public class CreateWorkItemResponseBody extends TeaModel {
     public String itemType;
 
     /**
-     * <p>The time when the item last entered the processing state, in ISO 8601 format.</p>
+     * <p>The time when the item last entered the processing state (ISO 8601).</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -230,10 +230,10 @@ public class CreateWorkItemResponseBody extends TeaModel {
     public Boolean legacyTopic;
 
     /**
-     * <p>The list of user IDs for visible members.</p>
+     * <p>The list of user IDs of members who can view the item.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>[10001,10002]</p>
      */
     @NameInMap("memberUserIds")
     public java.util.List<Long> memberUserIds;
@@ -248,7 +248,7 @@ public class CreateWorkItemResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The modification time, in ISO 8601 format.</p>
+     * <p>The time when the item was last modified (ISO 8601).</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -266,7 +266,7 @@ public class CreateWorkItemResponseBody extends TeaModel {
     public Long ownerUserId;
 
     /**
-     * <p>Indicates whether the item is pinned by the caller.</p>
+     * <p>Indicates whether the item is pinned to the top by the caller.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -302,7 +302,7 @@ public class CreateWorkItemResponseBody extends TeaModel {
     public Long progressTotal;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -311,7 +311,7 @@ public class CreateWorkItemResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The execution ID of the task.</p>
+     * <p>The task execution ID.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -320,7 +320,7 @@ public class CreateWorkItemResponseBody extends TeaModel {
     public String sourceExecutionId;
 
     /**
-     * <p>The source ID of the task.</p>
+     * <p>The task source ID.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -329,7 +329,7 @@ public class CreateWorkItemResponseBody extends TeaModel {
     public String sourceTaskId;
 
     /**
-     * <p>The source name of the task.</p>
+     * <p>The task source name.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -338,7 +338,7 @@ public class CreateWorkItemResponseBody extends TeaModel {
     public String sourceTaskName;
 
     /**
-     * <p>The trigger key of the task.</p>
+     * <p>The task trigger key.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -347,7 +347,7 @@ public class CreateWorkItemResponseBody extends TeaModel {
     public String sourceTriggerKey;
 
     /**
-     * <p>The source type of the task.</p>
+     * <p>The task source type.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -365,7 +365,7 @@ public class CreateWorkItemResponseBody extends TeaModel {
     public String title;
 
     /**
-     * <p>The time zone when the task is triggered.</p>
+     * <p>The task trigger time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -374,7 +374,7 @@ public class CreateWorkItemResponseBody extends TeaModel {
     public String triggerTimezone;
 
     /**
-     * <p>The trigger time of the task, in ISO 8601 format.</p>
+     * <p>The time when the task was triggered (ISO 8601).</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -383,7 +383,7 @@ public class CreateWorkItemResponseBody extends TeaModel {
     public String triggeredAt;
 
     /**
-     * <p>The optimistic version number.</p>
+     * <p>The optimistic locking version number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -419,7 +419,7 @@ public class CreateWorkItemResponseBody extends TeaModel {
     public String workItemId;
 
     /**
-     * <p>The four-state workflow status projection.</p>
+     * <p>The workflow status projection in the four-state model.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -431,7 +431,7 @@ public class CreateWorkItemResponseBody extends TeaModel {
      * <p>The list of IDs of the bound workflow templates.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>[&quot;tpl_9401&quot;,&quot;tpl_9402&quot;]</p>
      */
     @NameInMap("workflowTemplateIds")
     public java.util.List<String> workflowTemplateIds;
@@ -845,7 +845,7 @@ public class CreateWorkItemResponseBody extends TeaModel {
         public String contentType;
 
         /**
-         * <p>The access URL of the attachment, prefixed with an OpenAPI 302 redirect.</p>
+         * <p>The access URL of the attachment (OpenAPI 302 front end).</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -872,7 +872,7 @@ public class CreateWorkItemResponseBody extends TeaModel {
         public String resourceKind;
 
         /**
-         * <p>The size of the attachment in bytes.</p>
+         * <p>The attachment size in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

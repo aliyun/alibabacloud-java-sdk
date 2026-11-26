@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class SaveGroupOutputFileToGroupResourceShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the target personal directory. If not specified, the user\&quot;s default directory is automatically resolved.</p>
+     * <p>平台应用 Token（控制台签发）。传入后将以 opsUserId 或 opsUserCode 指定的用户身份执行</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
+     * <p>The ID of the target personal directory. If not specified, the user&quot;s default directory is automatically resolved.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -48,6 +57,24 @@ public class SaveGroupOutputFileToGroupResourceShrinkRequest extends TeaModel {
     public String mode;
 
     /**
+     * <p>代理用户编码（租户内唯一），仅当应用凭证配置为 source_uid 时使用</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>代理用户ID（WINNEXO 平台用户ID），仅当应用凭证配置为 winnexo_uid 时使用</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
+
+    /**
      * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass this value explicitly by using --tenant-id.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +86,14 @@ public class SaveGroupOutputFileToGroupResourceShrinkRequest extends TeaModel {
     public static SaveGroupOutputFileToGroupResourceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveGroupOutputFileToGroupResourceShrinkRequest self = new SaveGroupOutputFileToGroupResourceShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SaveGroupOutputFileToGroupResourceShrinkRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
     }
 
     public SaveGroupOutputFileToGroupResourceShrinkRequest setDirectoryId(String directoryId) {
@@ -91,6 +126,22 @@ public class SaveGroupOutputFileToGroupResourceShrinkRequest extends TeaModel {
     }
     public String getMode() {
         return this.mode;
+    }
+
+    public SaveGroupOutputFileToGroupResourceShrinkRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public SaveGroupOutputFileToGroupResourceShrinkRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public SaveGroupOutputFileToGroupResourceShrinkRequest setTenantId(String tenantId) {

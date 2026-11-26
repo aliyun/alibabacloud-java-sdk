@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class QuerySourceUsageTrendRequest extends TeaModel {
     /**
-     * <p>The ID of the collaboration group to which the resource belongs, such as cg_101. If this parameter is specified, a group workspace task is created, and the caller must be a valid group member. If this parameter is left empty, a personal task is created.</p>
+     * <p>平台应用 Token（控制台签发）。传入后将以 opsUserId 或 opsUserCode 指定的用户身份执行</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
+     * <p>The ID of the associated collaboration group, such as cg_101. If you specify this parameter, a group workspace task is created, and the caller must be a valid group member. If you leave this parameter empty, a personal task is created.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -27,16 +36,16 @@ public class QuerySourceUsageTrendRequest extends TeaModel {
      * <p>The event type.</p>
      * 
      * <strong>example:</strong>
-     * <p>MAIN</p>
+     * <p>ALL</p>
      */
     @NameInMap("eventType")
     public String eventType;
 
     /**
-     * <p>The aggregation granularity. Valid values: hourly and daily.</p>
+     * <p>The trend aggregation granularity. Valid values: DAY (daily), WEEK (weekly), and MONTH (monthly).</p>
      * 
      * <strong>example:</strong>
-     * <p>daily</p>
+     * <p>DAY</p>
      */
     @NameInMap("granularity")
     public String granularity;
@@ -51,6 +60,24 @@ public class QuerySourceUsageTrendRequest extends TeaModel {
     public java.util.List<String> knowledgeBaseIds;
 
     /**
+     * <p>代理用户编码（租户内唯一），仅当应用凭证配置为 source_uid 时使用</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>代理用户ID（WINNEXO 平台用户ID），仅当应用凭证配置为 winnexo_uid 时使用</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
+
+    /**
      * <p>The role scope type. Valid values:</p>
      * <ul>
      * <li><strong>ALL_VISIBLE</strong>: All members.</li>
@@ -59,7 +86,7 @@ public class QuerySourceUsageTrendRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Report perspective: TENANT for enterprise knowledge, GROUP for a single workspace, ALL_GROUPS for all workspaces of the current tenant (platform super administrator only). Valid values: TENANT, GROUP, and ALL_GROUPS</p>
+     * <p>TENANT</p>
      */
     @NameInMap("scopeType")
     public String scopeType;
@@ -77,7 +104,7 @@ public class QuerySourceUsageTrendRequest extends TeaModel {
      * <p>The resume channel source.</p>
      * 
      * <strong>example:</strong>
-     * <p>The naming content of the source</p>
+     * <p>Naming content of the source</p>
      */
     @NameInMap("sourceName")
     public String sourceName;
@@ -113,6 +140,14 @@ public class QuerySourceUsageTrendRequest extends TeaModel {
     public static QuerySourceUsageTrendRequest build(java.util.Map<String, ?> map) throws Exception {
         QuerySourceUsageTrendRequest self = new QuerySourceUsageTrendRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QuerySourceUsageTrendRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
     }
 
     public QuerySourceUsageTrendRequest setCollaborationGroupId(String collaborationGroupId) {
@@ -153,6 +188,22 @@ public class QuerySourceUsageTrendRequest extends TeaModel {
     }
     public java.util.List<String> getKnowledgeBaseIds() {
         return this.knowledgeBaseIds;
+    }
+
+    public QuerySourceUsageTrendRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public QuerySourceUsageTrendRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public QuerySourceUsageTrendRequest setScopeType(String scopeType) {

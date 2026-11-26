@@ -17,13 +17,13 @@ public class ListKnowledgeBaseDirectoriesResponseBody extends TeaModel {
      * <p>The directory titles.</p>
      * 
      * <strong>example:</strong>
-     * <p>string_value</p>
+     * <p>[&quot;Directory 1&quot;]</p>
      */
     @NameInMap("directories")
     public java.util.List<?> directories;
 
     /**
-     * <p>The description of the status code.</p>
+     * <p>The status code description.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>

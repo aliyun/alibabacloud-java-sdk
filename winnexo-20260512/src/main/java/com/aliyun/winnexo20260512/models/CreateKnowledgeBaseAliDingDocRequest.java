@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateKnowledgeBaseAliDingDocRequest extends TeaModel {
     /**
+     * <p>The platform application token issued by the console. If specified, the operation is performed as the user specified by <code>opsUserId</code> or <code>opsUserCode</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("appToken")
+    public String appToken;
+
+    /**
      * <p>The description of the alias.</p>
      * 
      * <strong>example:</strong>
@@ -23,7 +32,7 @@ public class CreateKnowledgeBaseAliDingDocRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The publicly accessible URL of the AliDing online document.</p>
+     * <p>The public access URL of the AliDing online document.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +42,7 @@ public class CreateKnowledgeBaseAliDingDocRequest extends TeaModel {
     public String filePublicUrl;
 
     /**
-     * <p>Not supported. This parameter is ignored.</p>
+     * <p>This parameter is not supported and is ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleKnowledgeId</p>
@@ -52,7 +61,7 @@ public class CreateKnowledgeBaseAliDingDocRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The digital employee name (operating object name, optional).</p>
+     * <p>The name of the digital employee, which is the name of the operating object. This parameter is optional.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -61,7 +70,25 @@ public class CreateKnowledgeBaseAliDingDocRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
-     * <p>The resource tags (optional, a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;]).</p>
+     * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as <code>source_uid</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
+    @NameInMap("opsUserCode")
+    public String opsUserCode;
+
+    /**
+     * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as <code>winnexo_uid</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("opsUserId")
+    public String opsUserId;
+
+    /**
+     * <p>The resource tags. This parameter is optional and accepts a JSON string array, such as <code>[&quot;tagA&quot;,&quot;tagB&quot;]</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -81,6 +108,14 @@ public class CreateKnowledgeBaseAliDingDocRequest extends TeaModel {
     public static CreateKnowledgeBaseAliDingDocRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateKnowledgeBaseAliDingDocRequest self = new CreateKnowledgeBaseAliDingDocRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateKnowledgeBaseAliDingDocRequest setAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
+    public String getAppToken() {
+        return this.appToken;
     }
 
     public CreateKnowledgeBaseAliDingDocRequest setDescription(String description) {
@@ -129,6 +164,22 @@ public class CreateKnowledgeBaseAliDingDocRequest extends TeaModel {
     }
     public String getOperatingObjectName() {
         return this.operatingObjectName;
+    }
+
+    public CreateKnowledgeBaseAliDingDocRequest setOpsUserCode(String opsUserCode) {
+        this.opsUserCode = opsUserCode;
+        return this;
+    }
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    public CreateKnowledgeBaseAliDingDocRequest setOpsUserId(String opsUserId) {
+        this.opsUserId = opsUserId;
+        return this;
+    }
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     public CreateKnowledgeBaseAliDingDocRequest setSourceTags(String sourceTags) {
