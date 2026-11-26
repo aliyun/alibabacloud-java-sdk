@@ -43,7 +43,7 @@ public class CreateAirflowShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The DAG directory scanned by Airflow.</p>
+     * <p>The directory scanned by Airflow for DAGs.</p>
      * 
      * <strong>example:</strong>
      * <p>default/dags</p>
@@ -67,19 +67,43 @@ public class CreateAirflowShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to enable Worker elasticity.</p>
+     * <p>Specifies whether to enable data lineage. For Airflow 2.x, this feature is always disabled, and the lineage specification and number of replicas are ignored.</p>
+     */
+    @NameInMap("EnableLineage")
+    public Boolean enableLineage;
+
+    /**
+     * <p>Specifies whether to enable elasticity for workers.</p>
      */
     @NameInMap("EnableServerless")
     public Boolean enableServerless;
 
     /**
-     * <p>The timeout period for the Worker to gracefully shut down.</p>
+     * <p>The timeout period for a worker to gracefully shut down.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
      */
     @NameInMap("GracefulShutdownTimeout")
     public Integer gracefulShutdownTimeout;
+
+    /**
+     * <p>The number of replicas for the lineage service. The default value is 1 when enabled. If omitted during an update, the original value is retained.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("LineageReplicas")
+    public Integer lineageReplicas;
+
+    /**
+     * <p>The specification of the lineage service. It uses the same tier as the Airflow instance specification.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SMALL</p>
+     */
+    @NameInMap("LineageSpec")
+    public String lineageSpec;
 
     /**
      * <p>The name of the OSS bucket.</p>
@@ -102,7 +126,7 @@ public class CreateAirflowShrinkRequest extends TeaModel {
     public String ossPath;
 
     /**
-     * <p>The plugin directory scanned by the Airflow instance.</p>
+     * <p>The directory scanned by the Airflow instance for plugins.</p>
      * 
      * <strong>example:</strong>
      * <p>default/plugins</p>
@@ -111,7 +135,7 @@ public class CreateAirflowShrinkRequest extends TeaModel {
     public String pluginsDir;
 
     /**
-     * <p>The path of the package installation file.</p>
+     * <p>The path to the installation package.</p>
      * 
      * <strong>example:</strong>
      * <p>default/requirements.txt</p>
@@ -130,7 +154,7 @@ public class CreateAirflowShrinkRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The startup script of the Airflow container.</p>
+     * <p>The startup script for the Airflow container.</p>
      * 
      * <strong>example:</strong>
      * <p>default/startup.sh</p>
@@ -149,7 +173,7 @@ public class CreateAirflowShrinkRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>VPC ID。</p>
+     * <p>The VPC ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -159,7 +183,7 @@ public class CreateAirflowShrinkRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The number of extended Worker node replicas.</p>
+     * <p>The number of worker node extensions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -169,7 +193,7 @@ public class CreateAirflowShrinkRequest extends TeaModel {
     public Integer workerServerlessReplicas;
 
     /**
-     * <p>The ID of the Data Management workspace.</p>
+     * <p>The DMS workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -179,7 +203,7 @@ public class CreateAirflowShrinkRequest extends TeaModel {
     public String workspaceId;
 
     /**
-     * <p>The zone ID within the region.</p>
+     * <p>The zone ID in the region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-h</p>
@@ -248,6 +272,14 @@ public class CreateAirflowShrinkRequest extends TeaModel {
         return this.description;
     }
 
+    public CreateAirflowShrinkRequest setEnableLineage(Boolean enableLineage) {
+        this.enableLineage = enableLineage;
+        return this;
+    }
+    public Boolean getEnableLineage() {
+        return this.enableLineage;
+    }
+
     public CreateAirflowShrinkRequest setEnableServerless(Boolean enableServerless) {
         this.enableServerless = enableServerless;
         return this;
@@ -262,6 +294,22 @@ public class CreateAirflowShrinkRequest extends TeaModel {
     }
     public Integer getGracefulShutdownTimeout() {
         return this.gracefulShutdownTimeout;
+    }
+
+    public CreateAirflowShrinkRequest setLineageReplicas(Integer lineageReplicas) {
+        this.lineageReplicas = lineageReplicas;
+        return this;
+    }
+    public Integer getLineageReplicas() {
+        return this.lineageReplicas;
+    }
+
+    public CreateAirflowShrinkRequest setLineageSpec(String lineageSpec) {
+        this.lineageSpec = lineageSpec;
+        return this;
+    }
+    public String getLineageSpec() {
+        return this.lineageSpec;
     }
 
     public CreateAirflowShrinkRequest setOssBucketName(String ossBucketName) {

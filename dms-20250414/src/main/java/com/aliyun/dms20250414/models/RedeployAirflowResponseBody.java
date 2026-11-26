@@ -53,7 +53,7 @@ public class RedeployAirflowResponseBody extends TeaModel {
      * <p>The redeployment result.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;Responses\&quot;: {\&quot;responses\&quot;: [{\&quot;Uuid\&quot;: \&quot;af-63ly5o1yuf076ifrpbxpka396\&quot;, \&quot;Success\&quot;: True}]}}</p>
+     * <p>true</p>
      */
     @NameInMap("Root")
     public Boolean root;

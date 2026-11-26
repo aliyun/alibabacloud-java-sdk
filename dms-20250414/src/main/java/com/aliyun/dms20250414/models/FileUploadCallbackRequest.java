@@ -42,9 +42,9 @@ public class FileUploadCallbackRequest extends TeaModel {
     public String filename;
 
     /**
-     * <p>The name of the user\&quot;s OSS bucket.</p>
+     * <p>The name of the user&quot;s OSS bucket.</p>
      * <ul>
-     * <li>Specify this parameter to use a file in the user\&quot;s OSS bucket and register the file as a data center file through the callback.</li>
+     * <li>Specify this parameter to use a file in the user&quot;s OSS bucket and register the file as a data center file through the callback.</li>
      * </ul>
      * 
      * <strong>example:</strong>

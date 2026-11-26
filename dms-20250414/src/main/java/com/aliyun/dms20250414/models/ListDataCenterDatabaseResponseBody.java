@@ -243,7 +243,7 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
         public String isInternal;
 
         /**
-         * <p>The name of the user\&quot;s OSS bucket.</p>
+         * <p>The name of the user&quot;s OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>bgc-hangzhou-test-bucket</p>
@@ -261,7 +261,7 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
         public Long size;
 
         /**
-         * <p>Indicates whether the user\&quot;s OSS bucket is used.</p>
+         * <p>Indicates whether the user&quot;s OSS bucket is used.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

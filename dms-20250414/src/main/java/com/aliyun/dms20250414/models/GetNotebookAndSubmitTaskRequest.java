@@ -9,7 +9,7 @@ public class GetNotebookAndSubmitTaskRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;dt\&quot;: \&quot;2022-10-14\&quot;}</p>
+     * <p>{&quot;dt&quot;: &quot;2022-10-14&quot;}</p>
      */
     @NameInMap("Params")
     public String params;
@@ -28,7 +28,7 @@ public class GetNotebookAndSubmitTaskRequest extends TeaModel {
      * <p>The number of retries if scheduling fails.</p>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>10</p>
      */
     @NameInMap("Retry")
     public Long retry;

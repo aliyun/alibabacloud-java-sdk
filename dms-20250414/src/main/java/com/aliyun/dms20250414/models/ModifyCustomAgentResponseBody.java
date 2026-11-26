@@ -97,7 +97,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
 
     public static class ModifyCustomAgentResponseBodyDataCallbackConfig extends TeaModel {
         /**
-         * <p>The parameters to invoke callback tool calling.</p>
+         * <p>The callback tool calling parameters to invoke.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;ID&quot;:&quot;test&quot;}</p>
@@ -190,7 +190,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
 
     public static class ModifyCustomAgentResponseBodyDataExecutionConfig extends TeaModel {
         /**
-         * <p>Specifies whether to prohibit appending data sources in a session.</p>
+         * <p>Specifies whether to disable appending data sources during the session.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -226,7 +226,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         public Boolean skipSqlConfirm;
 
         /**
-         * <p>Specifies whether to skip the confirmation for generating a web report.</p>
+         * <p>Specifies whether to skip the web report generation confirmation.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -285,8 +285,8 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         /**
          * <p>The access type. Valid values:</p>
          * <ul>
-         * <li>mcp: Access through MCP.</li>
-         * <li>dms_kb: Access through the DMS knowledge base.</li>
+         * <li>mcp: access through MCP</li>
+         * <li>dms_kb: access through the DMS knowledge base</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -487,8 +487,8 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         /**
          * <p>The custom agent type. Valid values:</p>
          * <ul>
-         * <li>Default: The system-built-in custom agent. Each workspace can have at most one Default type, and it cannot be deleted.</li>
-         * <li>Common: A common custom agent.</li>
+         * <li>Default: The built-in custom agent. Each workspace can have at most one Default agent, which cannot be deleted.</li>
+         * <li>Common: A regular custom agent.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -498,7 +498,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         public String agentType;
 
         /**
-         * <p>The ID of the Alibaba Cloud main account.</p>
+         * <p>The main Alibaba Cloud account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>16738266********</p>
@@ -572,7 +572,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
          * <p>The description of the custom agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test agent description</p>
+         * <p>Agent test description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -616,9 +616,9 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>Analysis framework:</p>
          * <ol>
-         * <li>Monitor core metrics (GMV, order volume, UV, conversion rate) on a daily, weekly, and monthly basis, and analyze trend changes and year-over-year or month-over-month fluctuations.</li>
-         * <li>Segment by new and existing customers, channels, and regions to identify growth drivers and weaknesses.</li>
-         * <li>Conduct funnel analysis based on user behavior paths (browse → add to cart → pay) to locate churn points</li>
+         * <li>Monitor core metrics (GMV, order volume, UV, conversion rate) on a daily, weekly, and monthly basis to analyze trend changes and year-over-year or month-over-month fluctuations.</li>
+         * <li>Segment by new and returning customers, channels, and regions to identify growth drivers and shortcomings.</li>
+         * <li>Conduct funnel analysis based on user behavior paths (browse -&gt; add to cart -&gt; pay) to locate churn points</li>
          * </ol>
          */
         @NameInMap("Instruction")
@@ -641,8 +641,8 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
          * <ol>
          * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both successfully paid and unpaid orders.</li>
          * <li>Order volume is the number of valid orders placed per day.</li>
-         * <li>UV (Unique Visitors) refers to the number of deduplicated users who visit the website or app.</li>
-         * <li>Conversion rate = Number of paid orders / UV, reflecting the traffic conversion efficiency</li>
+         * <li>UV (Unique Visitors) refers to the number of deduplicated users visiting the website or app.</li>
+         * <li>Conversion rate = paid orders / UV, reflecting the traffic conversion efficiency</li>
          * </ol>
          */
         @NameInMap("Knowledge")
@@ -682,7 +682,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
          * <p>The name of the custom agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test agent name</p>
+         * <p>Agent test name</p>
          */
         @NameInMap("Name")
         public String name;
@@ -763,7 +763,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
          * <p>The text report format.</p>
          * 
          * <strong>example:</strong>
-         * <p>The text report requires that all numbers be spelled out in words instead of using Arabic numerals</p>
+         * <p>For the text report, do not use Arabic numerals. Convert all numbers to Chinese numerals</p>
          */
         @NameInMap("TextReportConfig")
         public String textReportConfig;
@@ -778,7 +778,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
          * <p>The web report format.</p>
          * 
          * <strong>example:</strong>
-         * <p>The web report requires that all numbers be spelled out in words instead of using Arabic numerals</p>
+         * <p>For the web report, do not use Arabic numerals. Convert all numbers to Chinese numerals</p>
          */
         @NameInMap("WebReportConfig")
         public String webReportConfig;

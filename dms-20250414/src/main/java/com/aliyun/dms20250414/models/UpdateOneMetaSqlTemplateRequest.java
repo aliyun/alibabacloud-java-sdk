@@ -35,7 +35,7 @@ public class UpdateOneMetaSqlTemplateRequest extends TeaModel {
      * <p>The content of the SQL template.</p>
      * 
      * <strong>example:</strong>
-     * <p>select count(1) from sales where dt = \&quot;2026-08-01\&quot;</p>
+     * <p>select count(1) from sales where dt = &quot;2026-08-01&quot;</p>
      */
     @NameInMap("Expr")
     public String expr;

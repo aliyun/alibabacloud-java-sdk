@@ -23,7 +23,7 @@ public class AddUserToDataAgentWorkspaceRequest extends TeaModel {
     public String memberId;
 
     /**
-     * <p>The name of the user\&quot;s role in the workspace.</p>
+     * <p>The name of the user&quot;s role in the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>admin</p>

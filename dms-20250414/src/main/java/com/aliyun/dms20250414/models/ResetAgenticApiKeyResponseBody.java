@@ -111,7 +111,7 @@ public class ResetAgenticApiKeyResponseBody extends TeaModel {
          * <p>The type of the Agent to which the Access Token belongs. Valid values:</p>
          * <ul>
          * <li>HUMAN_BOUND: fully inherits the permissions of the associated user.</li>
-         * <li>PERMISSION_NARROW: narrows the permissions based on the associated user\&quot;s permission baseline.</li>
+         * <li>PERMISSION_NARROW: narrows the permissions based on the associated user&quot;s permission baseline.</li>
          * <li>AGENT_BOUND: inherits the permissions of the parent Agent.</li>
          * <li>STANDALONE: holds permissions as an independent identity principal.</li>
          * </ul>

@@ -11,7 +11,7 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
     public GetDataAgentTaskModelUsageResponseBodyData data;
 
     /**
-     * <p>The error code returned when a request exception occurs.</p>
+     * <p>The error code, which is returned when a request exception occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>DMS-DA-40411</p>
@@ -20,7 +20,7 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned when the call fails.</p>
+     * <p>The error message, which is returned when the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
@@ -29,7 +29,7 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
+     * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>67E910F2-***695C</p>
@@ -38,7 +38,7 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Specifies whether the request is successful. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: The request is successful.</li>
      * <li><strong>false</strong>: The request fails.</li>
@@ -97,13 +97,22 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
 
     public static class GetDataAgentTaskModelUsageResponseBodyData extends TeaModel {
         /**
-         * <p>The acceleration ratio, which indicates the speed improvement brought by subtask parallelism.</p>
+         * <p>The acceleration ratio, which is the speedup brought by the parallel execution of subtasks.</p>
          * 
          * <strong>example:</strong>
          * <p>3.8</p>
          */
         @NameInMap("AccelerationRatio")
         public Double accelerationRatio;
+
+        /**
+         * <p>The peak concurrency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("PeakConcurrency")
+        public Double peakConcurrency;
 
         /**
          * <p>The number of throttled sessions.</p>
@@ -113,6 +122,15 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
          */
         @NameInMap("RateLimitedSessionCount")
         public Long rateLimitedSessionCount;
+
+        /**
+         * <p>The total queueing time for the large language model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11220</p>
+         */
+        @NameInMap("TotalLlmQueueDuration")
+        public Double totalLlmQueueDuration;
 
         /**
          * <p>The total throttling duration of all sessions.</p>
@@ -181,12 +199,28 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
             return this.accelerationRatio;
         }
 
+        public GetDataAgentTaskModelUsageResponseBodyData setPeakConcurrency(Double peakConcurrency) {
+            this.peakConcurrency = peakConcurrency;
+            return this;
+        }
+        public Double getPeakConcurrency() {
+            return this.peakConcurrency;
+        }
+
         public GetDataAgentTaskModelUsageResponseBodyData setRateLimitedSessionCount(Long rateLimitedSessionCount) {
             this.rateLimitedSessionCount = rateLimitedSessionCount;
             return this;
         }
         public Long getRateLimitedSessionCount() {
             return this.rateLimitedSessionCount;
+        }
+
+        public GetDataAgentTaskModelUsageResponseBodyData setTotalLlmQueueDuration(Double totalLlmQueueDuration) {
+            this.totalLlmQueueDuration = totalLlmQueueDuration;
+            return this;
+        }
+        public Double getTotalLlmQueueDuration() {
+            return this.totalLlmQueueDuration;
         }
 
         public GetDataAgentTaskModelUsageResponseBodyData setTotalLlmWaitDuration(Double totalLlmWaitDuration) {

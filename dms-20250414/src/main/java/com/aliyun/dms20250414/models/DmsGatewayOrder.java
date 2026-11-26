@@ -40,6 +40,9 @@ public class DmsGatewayOrder extends TeaModel {
     @NameInMap("State")
     public String state;
 
+    @NameInMap("Tags")
+    public String tags;
+
     public static DmsGatewayOrder build(java.util.Map<String, ?> map) throws Exception {
         DmsGatewayOrder self = new DmsGatewayOrder();
         return TeaModel.build(map, self);
@@ -139,6 +142,14 @@ public class DmsGatewayOrder extends TeaModel {
     }
     public String getState() {
         return this.state;
+    }
+
+    public DmsGatewayOrder setTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    public String getTags() {
+        return this.tags;
     }
 
 }

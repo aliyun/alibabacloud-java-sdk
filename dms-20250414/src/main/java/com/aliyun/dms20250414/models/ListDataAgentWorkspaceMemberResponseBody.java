@@ -111,7 +111,7 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
         public String memberId;
 
         /**
-         * <p>The name of the user\&quot;s role in the workspace.</p>
+         * <p>The name of the user&quot;s role in the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>member</p>
@@ -248,7 +248,7 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
          * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
-         * <p>no use</p>
+         * <p>10</p>
          */
         @NameInMap("TotalElements")
         public Long totalElements;
@@ -257,7 +257,7 @@ public class ListDataAgentWorkspaceMemberResponseBody extends TeaModel {
          * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
-         * <p>no use</p>
+         * <p>1</p>
          */
         @NameInMap("TotalPages")
         public Long totalPages;

@@ -38,10 +38,10 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Specifies whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request is successful.                                 </li>
-     * <li><strong>false</strong>: The request fails.</li>
+     * <li><strong>true</strong>: The request was successful.                                 </li>
+     * <li><strong>false</strong>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
 
     public static class DescribeCustomAgentResponseBodyDataCallbackConfig extends TeaModel {
         /**
-         * <p>The parameters to invoke callback tool calling.</p>
+         * <p>The callback tool invocation parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;ID&quot;:&quot;test&quot;}</p>
@@ -106,7 +106,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public String callbackArgs;
 
         /**
-         * <p>The prompt for generating parameters to invoke callback tool calling.</p>
+         * <p>The prompt for generating callback tool invocation parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>send web report to <a href="mailto:123456@163.com">123456@163.com</a></p>
@@ -115,7 +115,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public String callbackPrompt;
 
         /**
-         * <p>The timing to invoke callback tool calling.</p>
+         * <p>The timing of callback tool invocation.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -190,7 +190,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
 
     public static class DescribeCustomAgentResponseBodyDataExecutionConfig extends TeaModel {
         /**
-         * <p>Specifies whether to prohibit appending data sources in a session.</p>
+         * <p>Specifies whether to prohibit appending data sources during the session.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -226,7 +226,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public Boolean skipSqlConfirm;
 
         /**
-         * <p>Specifies whether to skip the confirmation for drawing a web report.</p>
+         * <p>Specifies whether to skip the web report rendering confirmation.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -285,8 +285,8 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         /**
          * <p>The access type. Valid values:</p>
          * <ul>
-         * <li>mcp: MCP access</li>
-         * <li>dms_kb: DMS knowledge base access</li>
+         * <li>mcp: Accessed through MCP.</li>
+         * <li>dms_kb: Accessed through the DMS knowledge base.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -305,7 +305,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public String kbUuid;
 
         /**
-         * <p>The MCP server ID.</p>
+         * <p>The ID of the MCP server.</p>
          * 
          * <strong>example:</strong>
          * <p>nhdpt9adf6ac**********ca</p>
@@ -375,8 +375,8 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         /**
          * <p>The knowledge semantic type. Valid values:</p>
          * <ul>
-         * <li>sql_template: SQL template</li>
-         * <li>ossie_model: Ossie semantic view</li>
+         * <li>sql_template: SQL template.</li>
+         * <li>ossie_model: Ossie semantic view.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -426,7 +426,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
 
     public static class DescribeCustomAgentResponseBodyDataScheduleTaskConfig extends TeaModel {
         /**
-         * <p>The cron expression for time-based periodic scheduling.</p>
+         * <p>The cron expression for time-based scheduling.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 0 ? * 1-7</p>
@@ -435,7 +435,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>The question for the periodic task.</p>
+         * <p>The question for the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>Analyze the data and provide the report</p>
@@ -485,10 +485,10 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
 
     public static class DescribeCustomAgentResponseBodyData extends TeaModel {
         /**
-         * <p>The custom agent type. Valid values:</p>
+         * <p>The type of the custom agent. Valid values:</p>
          * <ul>
-         * <li>Default: system-built-in custom agent</li>
-         * <li>Common: common custom agent</li>
+         * <li>Default: The system-built-in custom agent.</li>
+         * <li>Common: A common custom agent.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -498,7 +498,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public String agentType;
 
         /**
-         * <p>The ID of the Alibaba Cloud main account.</p>
+         * <p>The primary Alibaba Cloud account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>16738266********</p>
@@ -516,7 +516,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public String aliyunUid;
 
         /**
-         * <p>The callback feature configuration.</p>
+         * <p>The callback configuration.</p>
          */
         @NameInMap("CallbackConfig")
         public DescribeCustomAgentResponseBodyDataCallbackConfig callbackConfig;
@@ -578,7 +578,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public Integer defaultAgent;
 
         /**
-         * <p>The custom agent description.</p>
+         * <p>The description of the custom agent.</p>
          * 
          * <strong>example:</strong>
          * <p>Description for the test agent</p>
@@ -620,7 +620,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The instructions.</p>
+         * <p>The instruction.</p>
          * 
          * <strong>example:</strong>
          * <p>Analytical framework:</p>
@@ -632,7 +632,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public String instruction;
 
         /**
-         * <p>Specifies whether a periodic task is configured.</p>
+         * <p>Specifies whether a scheduled task is configured.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -684,7 +684,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public String modifierUserName;
 
         /**
-         * <p>The custom agent name.</p>
+         * <p>The name of the custom agent.</p>
          * 
          * <strong>example:</strong>
          * <p>Test agent name</p>
@@ -693,7 +693,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The next run time of the periodic task.</p>
+         * <p>The next run time of the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>1767715200</p>
@@ -744,13 +744,13 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public String releaseTime;
 
         /**
-         * <p>The periodic task configuration.</p>
+         * <p>The scheduled task configuration.</p>
          */
         @NameInMap("ScheduleTaskConfig")
         public DescribeCustomAgentResponseBodyDataScheduleTaskConfig scheduleTaskConfig;
 
         /**
-         * <p>The custom agent status.</p>
+         * <p>The status of the custom agent.</p>
          * 
          * <strong>example:</strong>
          * <p>RELEASED</p>
@@ -785,11 +785,11 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         /**
          * <p>The web report theme. Valid values:</p>
          * <ul>
-         * <li>default: default</li>
-         * <li>journal: journal</li>
-         * <li>legacy: classic</li>
-         * <li>neobrutalism: stylized</li>
-         * <li>infographic: infographic</li>
+         * <li>default: Default.</li>
+         * <li>journal: Journal.</li>
+         * <li>legacy: Legacy.</li>
+         * <li>neobrutalism: Neobrutalism.</li>
+         * <li>infographic: Infographic.</li>
          * </ul>
          * 
          * <strong>example:</strong>

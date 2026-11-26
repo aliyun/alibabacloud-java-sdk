@@ -173,7 +173,7 @@ public class UpdateAirflowResponseBody extends TeaModel {
         public java.util.List<String> customAirflowCfg;
 
         /**
-         * <p>The directory scanned for DAGs.</p>
+         * <p>The directory for scanning DAGs.</p>
          * 
          * <strong>example:</strong>
          * <p>default/dags</p>
@@ -197,13 +197,19 @@ public class UpdateAirflowResponseBody extends TeaModel {
         public String deployErrorMsg;
 
         /**
-         * <p>The description of the Airflow instance.</p>
+         * <p>The Airflow description.</p>
          * 
          * <strong>example:</strong>
          * <p>order schedule</p>
          */
         @NameInMap("Description")
         public String description;
+
+        /**
+         * <p>Indicates whether data lineage is enabled.</p>
+         */
+        @NameInMap("EnableLineage")
+        public Boolean enableLineage;
 
         /**
          * <p>Specifies whether to enable serverless workers.</p>
@@ -230,7 +236,7 @@ public class UpdateAirflowResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
-         * <p>The timeout period for a worker to exit.</p>
+         * <p>The timeout period for worker exit.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -239,7 +245,25 @@ public class UpdateAirflowResponseBody extends TeaModel {
         public Integer gracefulShutdownTimeout;
 
         /**
-         * <p>The name of the Object Storage Service (OSS) bucket.</p>
+         * <p>The number of replicas for the lineage service. The default value is 1 when enabled. If omitted during an update, the original value is retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("LineageReplicas")
+        public Integer lineageReplicas;
+
+        /**
+         * <p>The merged lineage service specification, which uses the same tier as AppSpec.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SMALL</p>
+         */
+        @NameInMap("LineageSpec")
+        public String lineageSpec;
+
+        /**
+         * <p>The name of the OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>osstest</p>
@@ -257,7 +281,7 @@ public class UpdateAirflowResponseBody extends TeaModel {
         public String ossPath;
 
         /**
-         * <p>The directory scanned for Airflow plugins.</p>
+         * <p>The directory for scanning Airflow plugins.</p>
          * 
          * <strong>example:</strong>
          * <p>default/plugins</p>
@@ -275,7 +299,7 @@ public class UpdateAirflowResponseBody extends TeaModel {
         public String requirementFile;
 
         /**
-         * <p>The configurations of the installation package.</p>
+         * <p>The configuration of the installation package.</p>
          * 
          * <strong>example:</strong>
          * <p>jieba==0.42</p>
@@ -356,7 +380,7 @@ public class UpdateAirflowResponseBody extends TeaModel {
         public String workspaceId;
 
         /**
-         * <p>The zone ID.</p>
+         * <p>The zone.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-j</p>
@@ -441,6 +465,14 @@ public class UpdateAirflowResponseBody extends TeaModel {
             return this.description;
         }
 
+        public UpdateAirflowResponseBodyRoot setEnableLineage(Boolean enableLineage) {
+            this.enableLineage = enableLineage;
+            return this;
+        }
+        public Boolean getEnableLineage() {
+            return this.enableLineage;
+        }
+
         public UpdateAirflowResponseBodyRoot setEnableServerless(Boolean enableServerless) {
             this.enableServerless = enableServerless;
             return this;
@@ -471,6 +503,22 @@ public class UpdateAirflowResponseBody extends TeaModel {
         }
         public Integer getGracefulShutdownTimeout() {
             return this.gracefulShutdownTimeout;
+        }
+
+        public UpdateAirflowResponseBodyRoot setLineageReplicas(Integer lineageReplicas) {
+            this.lineageReplicas = lineageReplicas;
+            return this;
+        }
+        public Integer getLineageReplicas() {
+            return this.lineageReplicas;
+        }
+
+        public UpdateAirflowResponseBodyRoot setLineageSpec(String lineageSpec) {
+            this.lineageSpec = lineageSpec;
+            return this;
+        }
+        public String getLineageSpec() {
+            return this.lineageSpec;
         }
 
         public UpdateAirflowResponseBodyRoot setOssBucketName(String ossBucketName) {

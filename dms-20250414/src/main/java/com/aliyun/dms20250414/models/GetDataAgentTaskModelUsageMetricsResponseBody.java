@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
     /**
-     * <p>The list of time-series TPM metrics for model usage. The usage at each time point is returned in chronological order.</p>
+     * <p>The list of time-series metrics of TPM for model usage, which returns the usage at each time point in chronological order.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetDataAgentTaskModelUsageMetricsResponseBodyData> data;
@@ -106,6 +106,15 @@ public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
         public Long beginTime;
 
         /**
+         * <p>The concurrency value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("Concurrency")
+        public Double concurrency;
+
+        /**
          * <p>The end time of the statistical interval for the time-series point. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +124,7 @@ public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The TPM at the time-series point, which represents the number of tokens consumed in the statistical interval.</p>
+         * <p>The TPM of the time-series point, which is the number of tokens consumed in the statistical interval.</p>
          * 
          * <strong>example:</strong>
          * <p>1200</p>
@@ -134,6 +143,14 @@ public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
         }
         public Long getBeginTime() {
             return this.beginTime;
+        }
+
+        public GetDataAgentTaskModelUsageMetricsResponseBodyData setConcurrency(Double concurrency) {
+            this.concurrency = concurrency;
+            return this;
+        }
+        public Double getConcurrency() {
+            return this.concurrency;
         }
 
         public GetDataAgentTaskModelUsageMetricsResponseBodyData setEndTime(Long endTime) {

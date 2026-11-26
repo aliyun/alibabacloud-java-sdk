@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAirflowsResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The access denied details.</p>
      * 
      * <strong>example:</strong>
      * <p>NOT_FOUND</p>
@@ -14,7 +14,7 @@ public class ListAirflowsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The error code. This parameter is returned when an error occurs.</p>
+     * <p>The error code returned when an exception occurs in the request.</p>
      * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
@@ -32,7 +32,7 @@ public class ListAirflowsResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -50,7 +50,7 @@ public class ListAirflowsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The token that is used to retrieve the next page of results.</p>
+     * <p>The token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>NesLoKLEdIZrKhDT7I2gS****</p>
@@ -68,18 +68,16 @@ public class ListAirflowsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of the data.</p>
+     * <p>The data details.</p>
      */
     @NameInMap("Root")
     public ListAirflowsResponseBodyRoot root;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The request is successful.                                 </li>
+     * <li><strong>false</strong>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -167,7 +165,7 @@ public class ListAirflowsResponseBody extends TeaModel {
 
     public static class ListAirflowsResponseBodyRootList extends TeaModel {
         /**
-         * <p>The ID of the Airflow instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>af-7a6ygsh80d****</p>
@@ -185,7 +183,7 @@ public class ListAirflowsResponseBody extends TeaModel {
         public String airflowName;
 
         /**
-         * <p>The specifications of the Airflow instance.</p>
+         * <p>The specification of the Airflow instance.</p>
          * 
          * <strong>example:</strong>
          * <p>SMALL</p>
@@ -203,13 +201,13 @@ public class ListAirflowsResponseBody extends TeaModel {
         public String appType;
 
         /**
-         * <p>The custom configuration.</p>
+         * <p>The custom configurations.</p>
          */
         @NameInMap("CustomAirflowCfg")
         public java.util.List<String> customAirflowCfg;
 
         /**
-         * <p>The DAGs folder that Airflow scans.</p>
+         * <p>The DAG directory scanned by Airflow.</p>
          * 
          * <strong>example:</strong>
          * <p>default/dags</p>
@@ -218,7 +216,7 @@ public class ListAirflowsResponseBody extends TeaModel {
         public String dagsDir;
 
         /**
-         * <p>The error message returned when the deployment fails.</p>
+         * <p>The deployment error message.</p>
          * 
          * <strong>example:</strong>
          * <p>quota exists</p>
@@ -236,6 +234,12 @@ public class ListAirflowsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Indicates whether data lineage is enabled.</p>
+         */
+        @NameInMap("EnableLineage")
+        public Boolean enableLineage;
+
+        /**
          * <p>The time when the Airflow instance was created.</p>
          * 
          * <strong>example:</strong>
@@ -243,6 +247,24 @@ public class ListAirflowsResponseBody extends TeaModel {
          */
         @NameInMap("GmtCreated")
         public String gmtCreated;
+
+        /**
+         * <p>The number of replicas for the lineage service. The default value is 1 when enabled. If omitted during an update, the original value is retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("LineageReplicas")
+        public Integer lineageReplicas;
+
+        /**
+         * <p>The merged specification of the lineage service, which uses the same tier as the Airflow specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SMALL</p>
+         */
+        @NameInMap("LineageSpec")
+        public String lineageSpec;
 
         /**
          * <p>The name of the OSS bucket.</p>
@@ -254,7 +276,7 @@ public class ListAirflowsResponseBody extends TeaModel {
         public String ossBucketName;
 
         /**
-         * <p>The path in OSS.</p>
+         * <p>The OSS path.</p>
          * 
          * <strong>example:</strong>
          * <p>/airflow</p>
@@ -263,7 +285,7 @@ public class ListAirflowsResponseBody extends TeaModel {
         public String ossPath;
 
         /**
-         * <p>The plugins folder that Airflow scans.</p>
+         * <p>The plugin directory scanned by Airflow.</p>
          * 
          * <strong>example:</strong>
          * <p>default/plugins</p>
@@ -272,7 +294,7 @@ public class ListAirflowsResponseBody extends TeaModel {
         public String pluginsDir;
 
         /**
-         * <p>The path to the file that contains the dependencies.</p>
+         * <p>The file path of the dependency package.</p>
          * 
          * <strong>example:</strong>
          * <p>default/requirements.txt</p>
@@ -290,7 +312,7 @@ public class ListAirflowsResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The path to the script that is loaded when Airflow starts.</p>
+         * <p>The directory of scripts loaded when Airflow starts.</p>
          * 
          * <strong>example:</strong>
          * <p>default/startup.sh</p>
@@ -299,7 +321,7 @@ public class ListAirflowsResponseBody extends TeaModel {
         public String startupFile;
 
         /**
-         * <p>The status of the Airflow instance.</p>
+         * <p>The instance status.</p>
          * 
          * <strong>example:</strong>
          * <p>DEPLOYED</p>
@@ -335,7 +357,7 @@ public class ListAirflowsResponseBody extends TeaModel {
         public Integer workerServerlessReplicas;
 
         /**
-         * <p>The ID of the DMS workspace.</p>
+         * <p>The DMS workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8630242382****</p>
@@ -344,7 +366,7 @@ public class ListAirflowsResponseBody extends TeaModel {
         public String workspaceId;
 
         /**
-         * <p>The ID of the zone in the region.</p>
+         * <p>The zone ID in the region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
@@ -421,12 +443,36 @@ public class ListAirflowsResponseBody extends TeaModel {
             return this.description;
         }
 
+        public ListAirflowsResponseBodyRootList setEnableLineage(Boolean enableLineage) {
+            this.enableLineage = enableLineage;
+            return this;
+        }
+        public Boolean getEnableLineage() {
+            return this.enableLineage;
+        }
+
         public ListAirflowsResponseBodyRootList setGmtCreated(String gmtCreated) {
             this.gmtCreated = gmtCreated;
             return this;
         }
         public String getGmtCreated() {
             return this.gmtCreated;
+        }
+
+        public ListAirflowsResponseBodyRootList setLineageReplicas(Integer lineageReplicas) {
+            this.lineageReplicas = lineageReplicas;
+            return this;
+        }
+        public Integer getLineageReplicas() {
+            return this.lineageReplicas;
+        }
+
+        public ListAirflowsResponseBodyRootList setLineageSpec(String lineageSpec) {
+            this.lineageSpec = lineageSpec;
+            return this;
+        }
+        public String getLineageSpec() {
+            return this.lineageSpec;
         }
 
         public ListAirflowsResponseBodyRootList setOssBucketName(String ossBucketName) {
@@ -529,13 +575,13 @@ public class ListAirflowsResponseBody extends TeaModel {
 
     public static class ListAirflowsResponseBodyRoot extends TeaModel {
         /**
-         * <p>The list of data.</p>
+         * <p>The data list.</p>
          */
         @NameInMap("List")
         public java.util.List<ListAirflowsResponseBodyRootList> list;
 
         /**
-         * <p>The total number of matching Airflow instances.</p>
+         * <p>The total number of Airflow instances that meet the query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

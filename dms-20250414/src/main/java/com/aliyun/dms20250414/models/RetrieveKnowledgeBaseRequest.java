@@ -8,7 +8,7 @@ public class RetrieveKnowledgeBaseRequest extends TeaModel {
      * <p>A filter for the data, specified as a SQL <code>WHERE</code> clause.</p>
      * 
      * <strong>example:</strong>
-     * <p>title = \&quot;test\&quot; AND name like \&quot;test%\&quot;</p>
+     * <p>title = &quot;test&quot; AND name like &quot;test%&quot;</p>
      */
     @NameInMap("Filter")
     public String filter;
@@ -82,7 +82,7 @@ public class RetrieveKnowledgeBaseRequest extends TeaModel {
      * </code></pre>
      * 
      * <strong>example:</strong>
-     * <p>{ \&quot;Weight\&quot;: { \&quot;alpha\&quot;: 0.5 } }</p>
+     * <p>{ &quot;Weight&quot;: { &quot;alpha&quot;: 0.5 } }</p>
      */
     @NameInMap("HybridSearchArgs")
     public String hybridSearchArgs;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAirflowResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The access denial details.</p>
      * 
      * <strong>example:</strong>
      * <p>NOT_FOUND</p>
@@ -50,18 +50,16 @@ public class GetAirflowResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data details.</p>
      */
     @NameInMap("Root")
     public GetAirflowResponseBodyRoot root;
 
     /**
-     * <p>Indicates whether the request was successful. The following values are returned:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The request is successful.                                 </li>
+     * <li><strong>false</strong>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -175,7 +173,7 @@ public class GetAirflowResponseBody extends TeaModel {
         public java.util.List<String> customAirflowCfg;
 
         /**
-         * <p>The DAG directory that Airflow scans.</p>
+         * <p>The DAG directory scanned by Airflow.</p>
          * 
          * <strong>example:</strong>
          * <p>default/dags</p>
@@ -202,13 +200,37 @@ public class GetAirflowResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The time when the instance was created.</p>
+         * <p>Specifies whether data lineage is enabled.</p>
+         */
+        @NameInMap("EnableLineage")
+        public Boolean enableLineage;
+
+        /**
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-08-12T05:46:01.000+0000</p>
          */
         @NameInMap("GmtCreated")
         public String gmtCreated;
+
+        /**
+         * <p>The number of replicas for the lineage service. The default value is 1 when enabled. If omitted during an update, the original value is retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("LineageReplicas")
+        public Integer lineageReplicas;
+
+        /**
+         * <p>The merged lineage service specifications, which use the same tier as the application specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SMALL</p>
+         */
+        @NameInMap("LineageSpec")
+        public String lineageSpec;
 
         /**
          * <p>The name of the OSS bucket.</p>
@@ -229,7 +251,7 @@ public class GetAirflowResponseBody extends TeaModel {
         public String ossPath;
 
         /**
-         * <p>The plugin directory that Airflow scans.</p>
+         * <p>The plugin directory scanned by Airflow.</p>
          * 
          * <strong>example:</strong>
          * <p>default/plugins</p>
@@ -247,7 +269,7 @@ public class GetAirflowResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The path to the Python dependencies file (requirements.txt).</p>
+         * <p>The configuration file for dependency packages.</p>
          * 
          * <strong>example:</strong>
          * <p>default/requirements.txt</p>
@@ -256,7 +278,7 @@ public class GetAirflowResponseBody extends TeaModel {
         public String requirementFile;
 
         /**
-         * <p>The ID of the security group.</p>
+         * <p>The security group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-2ze9gj646bkv****</p>
@@ -265,7 +287,7 @@ public class GetAirflowResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The startup script that runs before Airflow starts.</p>
+         * <p>The script loaded before Airflow starts.</p>
          * 
          * <strong>example:</strong>
          * <p>default/startup.sh</p>
@@ -274,7 +296,7 @@ public class GetAirflowResponseBody extends TeaModel {
         public String startupFile;
 
         /**
-         * <p>The status of the Airflow instance.</p>
+         * <p>The Airflow instance status.</p>
          * 
          * <strong>example:</strong>
          * <p>DEPLOYED</p>
@@ -283,7 +305,7 @@ public class GetAirflowResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1931trfxkvf74v****</p>
@@ -292,7 +314,7 @@ public class GetAirflowResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2zevqv4obraqd5p****</p>
@@ -310,7 +332,7 @@ public class GetAirflowResponseBody extends TeaModel {
         public Integer workerServerlessReplicas;
 
         /**
-         * <p>The ID of the DMS workspace.</p>
+         * <p>The Data Management (DMS) workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8630242382****</p>
@@ -319,7 +341,7 @@ public class GetAirflowResponseBody extends TeaModel {
         public String workspaceId;
 
         /**
-         * <p>The zone ID.</p>
+         * <p>The zone ID in the region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
@@ -396,12 +418,36 @@ public class GetAirflowResponseBody extends TeaModel {
             return this.description;
         }
 
+        public GetAirflowResponseBodyRoot setEnableLineage(Boolean enableLineage) {
+            this.enableLineage = enableLineage;
+            return this;
+        }
+        public Boolean getEnableLineage() {
+            return this.enableLineage;
+        }
+
         public GetAirflowResponseBodyRoot setGmtCreated(String gmtCreated) {
             this.gmtCreated = gmtCreated;
             return this;
         }
         public String getGmtCreated() {
             return this.gmtCreated;
+        }
+
+        public GetAirflowResponseBodyRoot setLineageReplicas(Integer lineageReplicas) {
+            this.lineageReplicas = lineageReplicas;
+            return this;
+        }
+        public Integer getLineageReplicas() {
+            return this.lineageReplicas;
+        }
+
+        public GetAirflowResponseBodyRoot setLineageSpec(String lineageSpec) {
+            this.lineageSpec = lineageSpec;
+            return this;
+        }
+        public String getLineageSpec() {
+            return this.lineageSpec;
         }
 
         public GetAirflowResponseBodyRoot setOssBucketName(String ossBucketName) {

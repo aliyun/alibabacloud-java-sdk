@@ -115,7 +115,7 @@ public class GetDataAgentThemeUploadSignatureResponseBody extends TeaModel {
         public String ossCredential;
 
         /**
-         * <p>The signature time in the format of yyyyMMdd\&quot;T\&quot;HHmmss\&quot;Z\&quot;.</p>
+         * <p>The signature time in the format of yyyyMMdd&quot;T&quot;HHmmss&quot;Z&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>20260101T135341Z</p>

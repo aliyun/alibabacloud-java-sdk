@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataAgentSessionResponseBody extends TeaModel {
     /**
-     * <p>The returned struct.</p>
+     * <p>The returned data structure.</p>
      */
     @NameInMap("Data")
     public DescribeDataAgentSessionResponseBodyData data;
@@ -249,8 +249,8 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         /**
          * <p>The ID of the mounted capability.</p>
          * <ul>
-         * <li>If Type is set to skill, the value indicates the skill ID.</li>
-         * <li>If Type is set to dms_kb, the value indicates the knowledge base ID.</li>
+         * <li>If Type is set to skill, this parameter indicates the skill ID.</li>
+         * <li>If Type is set to dms_kb, this parameter indicates the knowledge base ID.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -260,7 +260,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The type. Valid values:</p>
+         * <p>The capability type. Valid values:</p>
          * <ul>
          * <li>skill: skill</li>
          * <li>dms_kb: knowledge base</li>
@@ -309,7 +309,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
          * <p>The OSS download URL of the session playback history.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>https://<em><strong>aliyun.com</strong></em></p>
          */
         @NameInMap("Url")
         public String url;
@@ -341,7 +341,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         /**
          * <p>The data source category. Valid values:</p>
          * <ul>
-         * <li><strong>CHAT</strong>: The data source is specified in a conversation by calling the CreateDataAgentSession or SendChatMessage operation.</li>
+         * <li><strong>CHAT</strong>: The data source is specified in the conversation by calling the CreateDataAgentSession or SendChatMessage operation.</li>
          * <li><strong>CUSTOM_AGENT</strong>: The data source comes from the preset analysis data scope in a custom agent.</li>
          * </ul>
          * 
@@ -388,7 +388,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
          * <p>The content of the historical conversation message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Help me check the sales of restaurants in the UK in 2022</p>
+         * <p>Show me the sales of restaurants in the UK in 2022</p>
          */
         @NameInMap("Content")
         public String content;
@@ -403,7 +403,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The send time of the historical conversation message.</p>
+         * <p>The time when the historical conversation message was sent.</p>
          * 
          * <strong>example:</strong>
          * <p>1790650646000</p>
@@ -461,7 +461,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
 
     public static class DescribeDataAgentSessionResponseBodyDataPreviewCustomAgentCallbackConfig extends TeaModel {
         /**
-         * <p>The callback tool invocation parameters.</p>
+         * <p>The parameters used to invoke callback tool calling.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -472,7 +472,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public String callbackArgs;
 
         /**
-         * <p>The prompt used to generate callback tool invocation parameters.</p>
+         * <p>The prompt used to generate the parameters to invoke callback tool calling.</p>
          * 
          * <strong>example:</strong>
          * <p>send web report to <a href="mailto:123456@163.com">123456@163.com</a></p>
@@ -481,7 +481,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public String callbackPrompt;
 
         /**
-         * <p>The timing for callback tool invocation.</p>
+         * <p>The timing to invoke callback tool calling.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -556,13 +556,13 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
 
     public static class DescribeDataAgentSessionResponseBodyDataPreviewCustomAgentExecutionConfig extends TeaModel {
         /**
-         * <p>The tendency of the agent to ask follow-up questions to clarify requirements. <strong>This parameter takes effect only when SkipAskHuman is set to false and SkipPlan is set to false.</strong> Valid values: 0 to 1.</p>
-         * <p>The following list describes some tendency values:</p>
+         * <p>The tendency of the agent to ask follow-up questions to clarify requirements. <strong>This parameter takes effect only when SkipAskHuman is set to false and SkipPlan is set to false.</strong> Valid values: 0 to 1.
+         * The following list describes some tendency values:</p>
          * <ul>
-         * <li>0.0: Do not ask questions. The agent does not ask the user any questions, skips confirmation after generating a plan, and directly executes the plan.</li>
+         * <li>0.0: Do not ask questions. The agent does not ask the user questions, skips confirmation after generating the plan, and directly executes the plan.</li>
          * <li>0.1: Confirm the plan only. The agent confirms the generated plan only once and does not ask additional questions about requirements or details.</li>
          * <li>0.4: Ask questions when the task is blocked. The agent handles the task autonomously by default and asks questions only when the task cannot proceed or be completed.</li>
-         * <li>0.7: Ask questions when key criteria are uncertain. The agent proactively asks questions when there is critical ambiguity in the goals, scope, business criteria, or acceptance criteria.</li>
+         * <li>0.7: Ask questions when key criteria are uncertain. The agent proactively asks questions when critical ambiguity exists in the goals, scope, business criteria, or acceptance criteria.</li>
          * <li>1.0: Fully align throughout the process. The agent proactively clarifies requirements during planning and execution, and continuously confirms when encountering important ambiguities, assumptions, or solution branches.</li>
          * </ul>
          * 
@@ -573,7 +573,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public Double clarificationTendency;
 
         /**
-         * <p>Indicates whether appending data sources in the session is prohibited.</p>
+         * <p>Specifies whether to prohibit appending data sources in the session.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -582,7 +582,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public Boolean forbiddenAppendDataSource;
 
         /**
-         * <p>Indicates whether user inquiries during the process are prohibited.</p>
+         * <p>Specifies whether to prohibit user inquiries during the process.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -591,7 +591,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public Boolean skipAskHuman;
 
         /**
-         * <p>Indicates whether the plan confirmation step is skipped.</p>
+         * <p>Specifies whether to skip the plan confirmation step.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -600,7 +600,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public Boolean skipPlan;
 
         /**
-         * <p>Indicates whether all SQL confirmations are skipped.</p>
+         * <p>Specifies whether to skip all SQL confirmations.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -609,7 +609,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public Boolean skipSqlConfirm;
 
         /**
-         * <p>Indicates whether the confirmation for generating a web report is skipped.</p>
+         * <p>Specifies whether to skip the confirmation for generating web reports.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -674,10 +674,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
 
     public static class DescribeDataAgentSessionResponseBodyDataPreviewCustomAgentKnowledgeConfigList extends TeaModel {
         /**
-         * <p>The access type. If this parameter is not specified, the default value is mcp. Valid values:</p>
+         * <p>The access type. If you do not specify this parameter, the default value is mcp. Valid values:</p>
          * <ul>
-         * <li>mcp: MCP access. You must specify the McpServerId parameter.</li>
-         * <li>dms_kb: DMS knowledge base access. You must specify the KbUuid parameter.</li>
+         * <li>mcp: Access through MCP. You must specify the McpServerId parameter.</li>
+         * <li>dms_kb: Access through a DMS knowledge base. You must specify the KbUuid parameter.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -817,7 +817,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
 
     public static class DescribeDataAgentSessionResponseBodyDataPreviewCustomAgentScheduleTaskConfig extends TeaModel {
         /**
-         * <p>The cron expression for scheduled runs.</p>
+         * <p>The cron expression for scheduled execution.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 0 ? * 1-7</p>
@@ -826,7 +826,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>The question for scheduled runs.</p>
+         * <p>The question for scheduled execution.</p>
          * 
          * <strong>example:</strong>
          * <p>Analyze the data and provide the report</p>
@@ -876,7 +876,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
 
     public static class DescribeDataAgentSessionResponseBodyDataPreviewCustomAgent extends TeaModel {
         /**
-         * <p>The Alibaba Cloud main account ID.</p>
+         * <p>The ID of the Alibaba Cloud main account.</p>
          * 
          * <strong>example:</strong>
          * <p>16738266********</p>
@@ -1170,11 +1170,11 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         /**
          * <p>The web report theme. Valid values:</p>
          * <ul>
-         * <li>default: default</li>
-         * <li>journal: journal</li>
-         * <li>legacy: legacy</li>
-         * <li>neobrutalism: stylized</li>
-         * <li>infographic: infographic</li>
+         * <li>default: Default.</li>
+         * <li>journal: Journal.</li>
+         * <li>legacy: Legacy.</li>
+         * <li>neobrutalism: Neobrutalism.</li>
+         * <li>infographic: Infographic.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1473,7 +1473,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
 
     public static class DescribeDataAgentSessionResponseBodyDataRecallResults extends TeaModel {
         /**
-         * <p>The content of the recalled knowledge chunk.</p>
+         * <p>The content of the recalled knowledge block.</p>
          * 
          * <strong>example:</strong>
          * <p>sky is blue</p>
@@ -1482,7 +1482,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The similarity score of this data entry. The scoring algorithm is related to the algorithm specified when the index is created, such as l2, ip, or cosine.</p>
+         * <p>The similarity score of this data entry. The scoring algorithm is related to the algorithm specified during index creation, such as l2, ip, or cosine.</p>
          * 
          * <strong>example:</strong>
          * <p>0.65</p>
@@ -1543,7 +1543,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         /**
          * <p>The usage stage of the custom agent. Valid values:</p>
          * <ul>
-         * <li><strong>debug</strong>: Debug stage.</li>
+         * <li><strong>debug</strong>: Debugging stage.</li>
          * <li><strong>prod</strong>: Production stage.</li>
          * </ul>
          * 
@@ -1563,7 +1563,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public Boolean enableSearch;
 
         /**
-         * <p>The encryption key for storing artifacts in OSS, including built-in and user OSS. This key is typically specified in CreateDataAgentSession.</p>
+         * <p>The encryption key for storing artifacts in OSS, including built-in and user OSS. This is typically specified in CreateDataAgentSession.</p>
          * 
          * <strong>example:</strong>
          * <p>ay***1Te</p>
@@ -1621,9 +1621,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
 
         /**
          * <p>The report page width.</p>
+         * <p>Unit: mm.</p>
          * 
          * <strong>example:</strong>
-         * <p>300mm</p>
+         * <p>300</p>
          */
         @NameInMap("ReportPageWidth")
         public Long reportPageWidth;
@@ -1829,7 +1830,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public java.util.List<DescribeDataAgentSessionResponseBodyDataMessages> messages;
 
         /**
-         * <p>The custom agent for the intelligent development session preview.</p>
+         * <p>The custom agent for intelligent development session preview.</p>
          */
         @NameInMap("PreviewCustomAgent")
         public DescribeDataAgentSessionResponseBodyDataPreviewCustomAgent previewCustomAgent;
@@ -1841,7 +1842,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public java.util.List<DescribeDataAgentSessionResponseBodyDataRecallResults> recallResults;
 
         /**
-         * <p>Indicates whether the session is favorited by the current logged-on user.</p>
+         * <p>Indicates whether the item is favorited by the current logged-on user.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

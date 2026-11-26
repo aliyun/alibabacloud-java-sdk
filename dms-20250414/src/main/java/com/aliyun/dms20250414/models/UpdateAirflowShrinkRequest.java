@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAirflowShrinkRequest extends TeaModel {
     /**
-     * <p>The unique key ID of the Airflow instance.</p>
+     * <p>The unique key ID of Airflow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class UpdateAirflowShrinkRequest extends TeaModel {
     public String airflowName;
 
     /**
-     * <p>The specification description of the Airflow instance.</p>
+     * <p>The specification description of Airflow.</p>
      * 
      * <strong>example:</strong>
      * <p>SMALL</p>
@@ -57,7 +57,7 @@ public class UpdateAirflowShrinkRequest extends TeaModel {
     public String dataMountInfoListShrink;
 
     /**
-     * <p>The description of the Airflow instance.</p>
+     * <p>The description of Airflow.</p>
      * 
      * <strong>example:</strong>
      * <p>test airflow</p>
@@ -66,19 +66,43 @@ public class UpdateAirflowShrinkRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Specifies whether to enable data lineage. For Airflow 2.x, this feature is always disabled, and the lineage specifications and number of replicas are ignored.</p>
+     */
+    @NameInMap("EnableLineage")
+    public Boolean enableLineage;
+
+    /**
      * <p>Specifies whether to enable serverless workers.</p>
      */
     @NameInMap("EnableServerless")
     public Boolean enableServerless;
 
     /**
-     * <p>The timeout period for a worker to exit.</p>
+     * <p>The timeout period for worker exit.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
      */
     @NameInMap("GracefulShutdownTimeout")
     public Integer gracefulShutdownTimeout;
+
+    /**
+     * <p>The number of replicas for the lineage service. The default value is 1 when enabled. If omitted during an update, the original value is retained.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("LineageReplicas")
+    public Integer lineageReplicas;
+
+    /**
+     * <p>The merged lineage service specification, which uses the same tier as AppSpec.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SMALL</p>
+     */
+    @NameInMap("LineageSpec")
+    public String lineageSpec;
 
     /**
      * <p>The plugin directory scanned by Airflow.</p>
@@ -99,7 +123,7 @@ public class UpdateAirflowShrinkRequest extends TeaModel {
     public String requirementFile;
 
     /**
-     * <p>The script loaded at startup of the Airflow instance.</p>
+     * <p>The script loaded when the Airflow instance starts.</p>
      * 
      * <strong>example:</strong>
      * <p>default/startup.sh</p>
@@ -187,6 +211,14 @@ public class UpdateAirflowShrinkRequest extends TeaModel {
         return this.description;
     }
 
+    public UpdateAirflowShrinkRequest setEnableLineage(Boolean enableLineage) {
+        this.enableLineage = enableLineage;
+        return this;
+    }
+    public Boolean getEnableLineage() {
+        return this.enableLineage;
+    }
+
     public UpdateAirflowShrinkRequest setEnableServerless(Boolean enableServerless) {
         this.enableServerless = enableServerless;
         return this;
@@ -201,6 +233,22 @@ public class UpdateAirflowShrinkRequest extends TeaModel {
     }
     public Integer getGracefulShutdownTimeout() {
         return this.gracefulShutdownTimeout;
+    }
+
+    public UpdateAirflowShrinkRequest setLineageReplicas(Integer lineageReplicas) {
+        this.lineageReplicas = lineageReplicas;
+        return this;
+    }
+    public Integer getLineageReplicas() {
+        return this.lineageReplicas;
+    }
+
+    public UpdateAirflowShrinkRequest setLineageSpec(String lineageSpec) {
+        this.lineageSpec = lineageSpec;
+        return this;
+    }
+    public String getLineageSpec() {
+        return this.lineageSpec;
     }
 
     public UpdateAirflowShrinkRequest setPluginsDir(String pluginsDir) {

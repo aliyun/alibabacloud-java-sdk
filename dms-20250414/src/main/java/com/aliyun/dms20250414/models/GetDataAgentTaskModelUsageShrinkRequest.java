@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataAgentTaskModelUsageShrinkRequest extends TeaModel {
     /**
-     * <p>The start time of the query time range. The value is a UNIX timestamp in seconds. The recommended interval length is no more than one month.</p>
+     * <p>The start time of the query time range. The value is a UNIX timestamp in seconds. The recommended time range is no more than one month.</p>
      * 
      * <strong>example:</strong>
      * <p>1735660800</p>
@@ -23,7 +23,7 @@ public class GetDataAgentTaskModelUsageShrinkRequest extends TeaModel {
     public String DMSUnit;
 
     /**
-     * <p>The end time of the query time range. The value is a UNIX timestamp in seconds. The recommended interval length is no more than one month.</p>
+     * <p>The end time of the query time range. The value is a UNIX timestamp in seconds. The recommended time range is no more than one month.</p>
      * 
      * <strong>example:</strong>
      * <p>1735747200</p>

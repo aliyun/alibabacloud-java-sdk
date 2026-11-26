@@ -7,7 +7,7 @@ public class ListCustomAgentRequest extends TeaModel {
     /**
      * <p>The custom agent type. Valid values:</p>
      * <ul>
-     * <li>Default: system built-in custom agent</li>
+     * <li>Default: built-in custom agent</li>
      * <li>Common: regular custom agent</li>
      * </ul>
      * 
@@ -48,7 +48,7 @@ public class ListCustomAgentRequest extends TeaModel {
      * <p>The search keyword. Supports fuzzy search for custom agent names and descriptions.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test agent</p>
+     * <p>Test Agent</p>
      */
     @NameInMap("SearchKey")
     public String searchKey;

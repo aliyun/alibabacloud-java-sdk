@@ -7,8 +7,8 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
     /**
      * <p>The type of the custom agent. Valid values:</p>
      * <ul>
-     * <li>Default: The system-built-in custom agent. Each workspace can have at most one Default agent, and it cannot be deleted.</li>
-     * <li>Common: A common custom agent.</li>
+     * <li>Default: the system-built-in custom agent. Each workspace can have at most one Default agent, which cannot be deleted.</li>
+     * <li>Common: a common custom agent.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,8 +26,8 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
     /**
      * <p>The creation source. Valid values:</p>
      * <ul>
-     * <li>Empty (default): Create the agent by using a form.</li>
-     * <li>SmartNew: Create the agent by using intelligent development.</li>
+     * <li>Default (leave empty): created by using a form.</li>
+     * <li>SmartNew: intelligent development.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,23 +46,23 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
     public String DMSUnit;
 
     /**
-     * <p>The specified data scope in <strong>JSON character string format</strong>.</p>
+     * <p>The specified data scope in <strong>JSON string format</strong>.</p>
      * <ul>
      * <li>General parameter description:<ul>
-     * <li>tableFlag: Set to true to specify the data scope.</li>
-     * <li>scope: Set to personal as a fixed value.</li>
-     * <li>personal: The parameters for file and database types.</li>
+     * <li>tableFlag: true indicates that the data scope is specified.</li>
+     * <li>scope: personal is a fixed value.</li>
+     * <li>personal: the parameters passed for file and database types.</li>
      * </ul>
      * </li>
      * </ul>
      * <p><strong>File type</strong>. Pass parameters in the following format:</p>
      * <ul>
-     * <li>DataSourceType: Set to remote_data_center as a fixed value.</li>
-     * <li>FileId: The file ID.</li>
-     * <li>Database: The database name returned by the ListDataCenterTable operation, which is usually the file name.</li>
-     * <li>Tables: The table names returned by the ListDataCenterTable operation.</li>
-     * <li>TableIds: The table IDs returned by the ListDataCenterTable operation.</li>
-     * <li>RegionId: The current region.</li>
+     * <li>DataSourceType: remote_data_center is a fixed value.</li>
+     * <li>FileId: the file ID.</li>
+     * <li>Database: the database name returned by the ListDataCenterTable operation, which is usually the file name.</li>
+     * <li>Tables: the table names returned by the ListDataCenterTable operation.</li>
+     * <li>TableIds: the table IDs returned by the ListDataCenterTable operation.</li>
+     * <li>RegionId: the current region.</li>
      * </ul>
      * <pre><code>{
      *   &quot;tableFlag&quot;: true,
@@ -83,16 +83,16 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
      * </code></pre>
      * <p><strong>Database type</strong>. Pass parameters in the following format:</p>
      * <ul>
-     * <li>DataSourceType: Set to database as a fixed value.</li>
-     * <li>DmsInstanceId: The DMS instance ID returned by the data center operation.</li>
-     * <li>DmsDatabaseId: The DMS database ID returned by the data center operation.</li>
-     * <li>FileId: The instance name. <strong>[Deprecated]</strong></li>
-     * <li>DbName: The database name returned by the data center operation.</li>
-     * <li>Database: The database name returned by the data center operation.</li>
-     * <li>Tables: The table names returned by the data center operation.</li>
-     * <li>TableIds: The table IDs returned by the data center operation.</li>
-     * <li>Engine: The database engine type, such as mysql or postgresql.</li>
-     * <li>RegionId: The current region.</li>
+     * <li>DataSourceType: database is a fixed value.</li>
+     * <li>DmsInstanceId: the DMS instance ID returned by the data center operation.</li>
+     * <li>DmsDatabaseId: the DMS database ID returned by the data center operation.</li>
+     * <li>FileId: the instance name. (Deprecated)</li>
+     * <li>DbName: the database name returned by the data center operation.</li>
+     * <li>Database: the database name returned by the data center operation.</li>
+     * <li>Tables: the table names returned by the data center operation.</li>
+     * <li>TableIds: the table IDs returned by the data center operation.</li>
+     * <li>Engine: the engine type (mysql or postgresql).</li>
+     * <li>RegionId: the current region.</li>
      * </ul>
      * <pre><code>{
      *   &quot;tableFlag&quot;: true,
@@ -151,16 +151,16 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
     /**
      * <p>The instruction.</p>
      * <ul>
-     * <li>Input limit: Up to 10,000 characters.</li>
+     * <li>Input limit: up to 10,000 characters.</li>
      * </ul>
      * 
      * <strong>example:</strong>
      * <p>Core metric definitions:</p>
      * <ol>
      * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders.</li>
-     * <li>Order volume refers to the number of valid orders placed per day.</li>
+     * <li>Order volume is the number of valid orders placed per day.</li>
      * <li>UV (Unique Visitors) refers to the number of deduplicated users who visit the website or app.</li>
-     * <li>Conversion rate = Number of paid orders / UV, reflecting the traffic conversion efficiency</li>
+     * <li>Conversion rate = Number of paid orders / UV, which reflects the traffic conversion efficiency</li>
      * </ol>
      */
     @NameInMap("Instruction")
@@ -169,16 +169,16 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
     /**
      * <p>The knowledge.</p>
      * <ul>
-     * <li>Input limit: Up to 10,000 characters.</li>
+     * <li>Input limit: up to 10,000 characters.</li>
      * </ul>
      * 
      * <strong>example:</strong>
      * <p>Core metric definitions:</p>
      * <ol>
      * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders.</li>
-     * <li>Order volume refers to the number of valid orders placed per day.</li>
+     * <li>Order volume is the number of valid orders placed per day.</li>
      * <li>UV (Unique Visitors) refers to the number of deduplicated users who visit the website or app.</li>
-     * <li>Conversion rate = Number of paid orders / UV, reflecting the traffic conversion efficiency</li>
+     * <li>Conversion rate = Number of paid orders / UV, which reflects the traffic conversion efficiency</li>
      * </ol>
      */
     @NameInMap("Knowledge")

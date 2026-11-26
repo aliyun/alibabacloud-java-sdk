@@ -627,12 +627,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableLineage)) {
+            query.put("EnableLineage", request.enableLineage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.enableServerless)) {
             query.put("EnableServerless", request.enableServerless);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.gracefulShutdownTimeout)) {
             query.put("GracefulShutdownTimeout", request.gracefulShutdownTimeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lineageReplicas)) {
+            query.put("LineageReplicas", request.lineageReplicas);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lineageSpec)) {
+            query.put("LineageSpec", request.lineageSpec);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ossBucketName)) {
@@ -1511,7 +1523,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After the reverse endpoint is deleted, the data source can no longer establish connections and cannot be restored by calling the enable API.</p>
+     * <p>After deletion, no new connections can be established for this data source, and it cannot be recovered by calling the enable operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Submits an asynchronous deletion request for a VPC endpoint and returns the acceptance result.</p>
@@ -1546,7 +1558,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After the reverse endpoint is deleted, the data source can no longer establish connections and cannot be restored by calling the enable API.</p>
+     * <p>After deletion, no new connections can be established for this data source, and it cannot be recovered by calling the enable operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Submits an asynchronous deletion request for a VPC endpoint and returns the acceptance result.</p>
@@ -2325,7 +2337,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the detailed description of a custom agent based on the custom agent ID.</p>
+     * <p>Queries the details of a custom agent by custom agent ID.</p>
      * 
      * @param request DescribeCustomAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2361,7 +2373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the detailed description of a custom agent based on the custom agent ID.</p>
+     * <p>Queries the details of a custom agent by custom agent ID.</p>
      * 
      * @param request DescribeCustomAgentRequest
      * @return DescribeCustomAgentResponse
@@ -3221,7 +3233,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration and status of an Airflow instance.</p>
+     * <p>Queries the details of an Airflow instance.</p>
      * 
      * @param request GetAirflowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3257,7 +3269,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration and status of an Airflow instance.</p>
+     * <p>Queries the details of an Airflow instance.</p>
      * 
      * @param request GetAirflowRequest
      * @return GetAirflowResponse
@@ -3435,7 +3447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total number of model calls, total tokens consumed, and peak TPM. This data is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</p>
+     * <p>Queries the model usage summary data of DataAgent analysis tasks within a specified time range, including the number of models used, total number of model calls, total tokens consumed, and peak TPM. This data is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total number of calls, total tokens consumed, and peak TPM.</p>
@@ -3496,7 +3508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total number of model calls, total tokens consumed, and peak TPM. This data is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</p>
+     * <p>Queries the model usage summary data of DataAgent analysis tasks within a specified time range, including the number of models used, total number of model calls, total tokens consumed, and peak TPM. This data is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total number of calls, total tokens consumed, and peak TPM.</p>
@@ -3511,10 +3523,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analysis task model usage within a specified time range. It returns the number of tokens consumed in each statistical interval at a minute-level granularity to help you analyze the trend of model usage over time.</p>
+     * <p>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analytical task model usage within a specified time range, and returns the number of tokens consumed in each statistical interval at a minute-level granularity to analyze the trend of model usage over time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analysis task model usage within a specified time range, returning token consumption at each time point at a minute-level granularity.</p>
+     * <p>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analytical task model usage within a specified time range, and returns the token consumption at each time point at a minute-level granularity.</p>
      * 
      * @param tmpReq GetDataAgentTaskModelUsageMetricsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3572,10 +3584,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analysis task model usage within a specified time range. It returns the number of tokens consumed in each statistical interval at a minute-level granularity to help you analyze the trend of model usage over time.</p>
+     * <p>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analytical task model usage within a specified time range, and returns the number of tokens consumed in each statistical interval at a minute-level granularity to analyze the trend of model usage over time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analysis task model usage within a specified time range, returning token consumption at each time point at a minute-level granularity.</p>
+     * <p>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analytical task model usage within a specified time range, and returns the token consumption at each time point at a minute-level granularity.</p>
      * 
      * @param request GetDataAgentTaskModelUsageMetricsRequest
      * @return GetDataAgentTaskModelUsageMetricsResponse
@@ -3729,6 +3741,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetListMcpServerToolsResultResponse getListMcpServerToolsResult(GetListMcpServerToolsResultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getListMcpServerToolsResultWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the OAuth authorization URL required for the current user to bind a Lark account. After the user completes the authorization, the system automatically binds their Lark account.</p>
+     * 
+     * @param request GetMyAgenticNotificationChannelAuthorizeUrlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMyAgenticNotificationChannelAuthorizeUrlResponse
+     */
+    public GetMyAgenticNotificationChannelAuthorizeUrlResponse getMyAgenticNotificationChannelAuthorizeUrlWithOptions(GetMyAgenticNotificationChannelAuthorizeUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
+            query.put("Channel", request.channel);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMyAgenticNotificationChannelAuthorizeUrl"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMyAgenticNotificationChannelAuthorizeUrlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the OAuth authorization URL required for the current user to bind a Lark account. After the user completes the authorization, the system automatically binds their Lark account.</p>
+     * 
+     * @param request GetMyAgenticNotificationChannelAuthorizeUrlRequest
+     * @return GetMyAgenticNotificationChannelAuthorizeUrlResponse
+     */
+    public GetMyAgenticNotificationChannelAuthorizeUrlResponse getMyAgenticNotificationChannelAuthorizeUrl(GetMyAgenticNotificationChannelAuthorizeUrlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getMyAgenticNotificationChannelAuthorizeUrlWithOptions(request, runtime);
     }
 
     /**
@@ -6289,6 +6345,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the personal notification channel configurations of the current user in the current tenant, including channel status and bound identity information.</p>
+     * 
+     * @param request ListMyAgenticNotificationChannelConfigsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMyAgenticNotificationChannelConfigsResponse
+     */
+    public ListMyAgenticNotificationChannelConfigsResponse listMyAgenticNotificationChannelConfigsWithOptions(ListMyAgenticNotificationChannelConfigsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
+            query.put("Channel", request.channel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMyAgenticNotificationChannelConfigs"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMyAgenticNotificationChannelConfigsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the personal notification channel configurations of the current user in the current tenant, including channel status and bound identity information.</p>
+     * 
+     * @param request ListMyAgenticNotificationChannelConfigsRequest
+     * @return ListMyAgenticNotificationChannelConfigsResponse
+     */
+    public ListMyAgenticNotificationChannelConfigsResponse listMyAgenticNotificationChannelConfigs(ListMyAgenticNotificationChannelConfigsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listMyAgenticNotificationChannelConfigsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves a list of OSSIE models.</p>
      * 
      * @param request ListOneMetaOssieModelsRequest
@@ -7267,10 +7375,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>The default value of <code>message_type</code> is <code>primary</code>. Set it to <code>additional</code> or <code>cancel</code> when you need to append information or cancel the session.</li>
-     * <li>The <code>reply_to</code> field specifies the agent message to which this message responds. The default value is <code>0</code>.</li>
-     * <li>The <code>question</code> field is required when <code>message_type</code> is set to <code>additional</code>.</li>
-     * <li>You can use <code>quoted_message</code> to quote previous user messages.</li>
+     * <li>The default value of message_type is primary. Set this parameter to additional or cancel when you need to append information or cancel the session.</li>
+     * <li>The reply_to field specifies the agent message to which this message responds. The default value is 0.</li>
+     * <li>The question field is required when message_type is set to additional.</li>
+     * <li>You can use quoted_message to quote previous messages from the user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7382,10 +7490,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>The default value of <code>message_type</code> is <code>primary</code>. Set it to <code>additional</code> or <code>cancel</code> when you need to append information or cancel the session.</li>
-     * <li>The <code>reply_to</code> field specifies the agent message to which this message responds. The default value is <code>0</code>.</li>
-     * <li>The <code>question</code> field is required when <code>message_type</code> is set to <code>additional</code>.</li>
-     * <li>You can use <code>quoted_message</code> to quote previous user messages.</li>
+     * <li>The default value of message_type is primary. Set this parameter to additional or cancel when you need to append information or cancel the session.</li>
+     * <li>The reply_to field specifies the agent message to which this message responds. The default value is 0.</li>
+     * <li>The question field is required when message_type is set to additional.</li>
+     * <li>You can use quoted_message to quote previous messages from the user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7457,10 +7565,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Sets the quota for a specific workspace.</p>
+     * <p>Sets the workspace quota.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sets the quota for a workspace.</p>
+     * <p>Sets the workspace quota.</p>
      * 
      * @param request SetWorkspaceQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7508,10 +7616,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Sets the quota for a specific workspace.</p>
+     * <p>Sets the workspace quota.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sets the quota for a workspace.</p>
+     * <p>Sets the workspace quota.</p>
      * 
      * @param request SetWorkspaceQuotaRequest
      * @return SetWorkspaceQuotaResponse
@@ -8025,12 +8133,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableLineage)) {
+            query.put("EnableLineage", request.enableLineage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.enableServerless)) {
             query.put("EnableServerless", request.enableServerless);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.gracefulShutdownTimeout)) {
             query.put("GracefulShutdownTimeout", request.gracefulShutdownTimeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lineageReplicas)) {
+            query.put("LineageReplicas", request.lineageReplicas);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lineageSpec)) {
+            query.put("LineageSpec", request.lineageSpec);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pluginsDir)) {
@@ -8087,7 +8207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the accuracy test item.</p>
+     * <p>Updates an accuracy test item.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates the content of an accuracy test item.</p>
@@ -8174,7 +8294,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the accuracy test item.</p>
+     * <p>Updates an accuracy test item.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates the content of an accuracy test item.</p>
@@ -8469,6 +8589,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateKnowledgeBaseResponse updateKnowledgeBase(UpdateKnowledgeBaseRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateKnowledgeBaseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the notification channel switch or Lark account binding information for the current user.</p>
+     * 
+     * @param request UpdateMyAgenticNotificationChannelConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateMyAgenticNotificationChannelConfigResponse
+     */
+    public UpdateMyAgenticNotificationChannelConfigResponse updateMyAgenticNotificationChannelConfigWithOptions(UpdateMyAgenticNotificationChannelConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
+            body.put("Channel", request.channel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            body.put("Config", request.config);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
+            body.put("Enabled", request.enabled);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateMyAgenticNotificationChannelConfig"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateMyAgenticNotificationChannelConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the notification channel switch or Lark account binding information for the current user.</p>
+     * 
+     * @param request UpdateMyAgenticNotificationChannelConfigRequest
+     * @return UpdateMyAgenticNotificationChannelConfigResponse
+     */
+    public UpdateMyAgenticNotificationChannelConfigResponse updateMyAgenticNotificationChannelConfig(UpdateMyAgenticNotificationChannelConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateMyAgenticNotificationChannelConfigWithOptions(request, runtime);
     }
 
     /**

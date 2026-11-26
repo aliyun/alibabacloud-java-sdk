@@ -248,7 +248,7 @@ public class ListDataAgentAccuracyTestTasksResponseBody extends TeaModel {
          * <p>The status of the custom agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>0 PENDING,1 RUNNING,2 COMPLETED,3 STOPPED,4 FAILED</p>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public Integer status;
