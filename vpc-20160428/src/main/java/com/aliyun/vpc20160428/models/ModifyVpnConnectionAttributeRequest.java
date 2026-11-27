@@ -152,7 +152,7 @@ public class ModifyVpnConnectionAttributeRequest extends TeaModel {
      * <ul>
      * <li><p><strong>IkeConfig.Psk</strong>: The pre-shared key used for authentication between the VPN gateway and the data center.</p>
      * <ul>
-     * <li>The key must be 1 to 100 characters in length and can contain digits, letters, and the following special characters: <code>~!`@#$%^&amp;*()_-+={}[]|;:\\&quot;,.&lt;&gt;/?</code> It cannot contain spaces.</li>
+     * <li>The key must be 1 to 100 characters in length and can contain digits, letters, and the following special characters: <code>~!`@#$%^&amp;*()_-+={}[]|;:\&quot;,.&lt;&gt;/?</code> It cannot contain spaces.</li>
      * <li>If you do not specify a pre-shared key, the system randomly generates a 16-character string as the pre-shared key. You can call the <a href="https://help.aliyun.com/document_detail/2526951.html">DescribeVpnConnection</a> operation to query the automatically generated pre-shared key.<blockquote>
      * <p>The pre-shared key on the IPsec-VPN connection side must be the same as the authentication key on the data center side. Otherwise, the connection between the data center and the VPN gateway cannot be established.</p>
      * </blockquote>
@@ -640,7 +640,7 @@ public class ModifyVpnConnectionAttributeRequest extends TeaModel {
         /**
          * <p>The pre-shared key used for authentication between the tunnel and the peer.</p>
          * <ul>
-         * <li><p>The key must be 1 to 100 characters in length and can contain digits, letters, and the following special characters: <code>~!`@#$%^&amp;*()_-+={}[]|;:\\&quot;,.&lt;&gt;/?</code> It cannot contain spaces.</p>
+         * <li><p>The key must be 1 to 100 characters in length and can contain digits, letters, and the following special characters: <code>~!`@#$%^&amp;*()_-+={}[]|;:\&quot;,.&lt;&gt;/?</code> It cannot contain spaces.</p>
          * </li>
          * <li><p>If you do not specify a pre-shared key, the system randomly generates a 16-character string as the pre-shared key. You can call the <a href="https://help.aliyun.com/document_detail/2526951.html">DescribeVpnConnection</a> operation to query the automatically generated pre-shared key.</p>
          * </li>

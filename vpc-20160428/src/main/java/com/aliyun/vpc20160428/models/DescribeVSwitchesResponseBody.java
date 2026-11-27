@@ -180,6 +180,9 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("EnableDns64")
+        public Boolean enableDns64;
+
         @NameInMap("EnabledIpv6")
         public Boolean enabledIpv6;
 
@@ -257,6 +260,14 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setEnableDns64(Boolean enableDns64) {
+            this.enableDns64 = enableDns64;
+            return this;
+        }
+        public Boolean getEnableDns64() {
+            return this.enableDns64;
         }
 
         public DescribeVSwitchesResponseBodyVSwitchesVSwitch setEnabledIpv6(Boolean enabledIpv6) {

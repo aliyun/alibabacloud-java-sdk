@@ -71,11 +71,11 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
     public String duration;
 
     /**
-     * <p>The EIP binding mode of the NAT gateway. Valid values:</p>
+     * <p>The EIP attach mode of the NAT gateway. Valid values:</p>
      * <ul>
-     * <li><strong>MULTI_BINDED</strong> (default): multi-EIP NIC-visible mode.</li>
-     * <li><strong>NAT</strong>: NAT mode, which is compatible with IPv4 gateways.<blockquote>
-     * <p>When the EIP binding mode of the NAT gateway is set to NAT mode, the EIP occupies a private IP address of the vSwitch to which the NAT gateway belongs. Make sure that the vSwitch has sufficient private IP addresses. If the vSwitch to which the NAT gateway belongs does not have available idle private IP addresses, you cannot bind new EIPs. When the EIP binding mode of the NAT gateway is set to NAT mode, the NAT gateway supports a maximum of 50 EIPs.</p>
+     * <li><strong>MULTI_BINDED</strong> (default): multi-EIP to network interface controller (NIC) mode.</li>
+     * <li><strong>NAT</strong>: standard mode, which is compatible with IPv4 gateways.<blockquote>
+     * <p>If the EIP attach mode of the NAT gateway is set to the standard mode, the EIP occupies a private IP address of the vSwitch to which the NAT gateway belongs. Make sure that the vSwitch has sufficient private IP addresses. If the vSwitch does not have available idle private IP addresses, you cannot attach new EIPs. In the standard mode, a NAT gateway supports up to 50 EIPs.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -102,7 +102,7 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
     /**
      * <p>The billing method of the NAT gateway. Valid values:</p>
      * <p><strong>PostPaid</strong> (default): pay-as-you-go.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/48126.html">Internet NAT gateway billing</a> and <a href="https://help.aliyun.com/document_detail/270913.html">VPC NAT gateway billing</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/48126.html">Billing of Internet NAT gateways</a> and <a href="https://help.aliyun.com/document_detail/270913.html">Billing of VPC NAT gateways</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>PostPaid</p>
@@ -120,7 +120,7 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
     public String internetChargeType;
 
     /**
-     * <p>The IP prefix CIDR block that is used to create NAT IP addresses in batches. Use an unallocated reserved CIDR block in the vSwitch to which the NAT gateway belongs.</p>
+     * <p>The IP prefix CIDR block that is used to create NAT IP addresses in batches. Specify an unallocated reserved CIDR block in the vSwitch to which the NAT gateway belongs.</p>
      * <blockquote>
      * <p>This parameter takes effect only for VPC NAT gateways.</p>
      * </blockquote>
@@ -132,8 +132,14 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
     public String ipv4Prefix;
 
     /**
+     * <p>The IPv6 configuration.</p>
+     */
+    @NameInMap("Ipv6Config")
+    public String ipv6ConfigShrink;
+
+    /**
      * <p>The name of the NAT gateway.</p>
-     * <p>The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character, and can contain digits, underscores (_), and hyphens (-).</p>
+     * <p>The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and can contain digits, underscores (_), and hyphens (-).</p>
      * <p>If you do not specify this parameter, the system generates a default name for the NAT gateway.</p>
      * 
      * <strong>example:</strong>
@@ -143,7 +149,7 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The private IP address that is allocated to the NAT gateway. Use an unallocated IP address in the vSwitch CIDR block of the NAT gateway. If this parameter is left empty, an IP address is randomly allocated.</p>
+     * <p>The private IP address that is occupied by the NAT gateway. Specify an unallocated IP address from the vSwitch CIDR block to which the NAT gateway belongs. If this parameter is left empty, the system randomly allocates an IP address.</p>
      * <blockquote>
      * <p>This parameter takes effect only for VPC NAT gateways.</p>
      * </blockquote>
@@ -381,6 +387,14 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
         return this.ipv4Prefix;
     }
 
+    public CreateNatGatewayShrinkRequest setIpv6ConfigShrink(String ipv6ConfigShrink) {
+        this.ipv6ConfigShrink = ipv6ConfigShrink;
+        return this;
+    }
+    public String getIpv6ConfigShrink() {
+        return this.ipv6ConfigShrink;
+    }
+
     public CreateNatGatewayShrinkRequest setName(String name) {
         this.name = name;
         return this;
@@ -512,7 +526,7 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
 
     public static class CreateNatGatewayShrinkRequestTag extends TeaModel {
         /**
-         * <p>The tag key. You can use the Tag.N.Key format when you call API operations. Valid values of N: 1 to 20. If you specify this parameter, it cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
+         * <p>The tag key. To specify a tag key in an API request, use the Tag.N.Key format, where N ranges from 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length, and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -521,7 +535,7 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. You can use the Tag.N.Value format when you call API operations. Valid values of N: 1 to 20. If you specify this parameter, it cannot be an empty string. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
+         * <p>The tag value. To specify a tag value in an API request, use the Tag.N.Value format, where N ranges from 1 to 20. The tag value cannot be an empty string. It can be up to 128 characters in length, and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

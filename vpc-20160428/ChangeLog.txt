@@ -1,3 +1,8 @@
+2026-11-27 Version: 8.5.0
+- Support API CreateNatRateLimitRule.
+- Support API ListNatRateLimitRules.
+
+
 2026-11-17 Version: 8.4.1
 - Update API CancelCommonBandwidthPackageIpBandwidth: add request parameters IpInstanceId.
 - Update API CancelCommonBandwidthPackageIpBandwidth: add request parameters IpType.

@@ -92,6 +92,9 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         @NameInMap("EipAffinity")
         public String eipAffinity;
 
+        @NameInMap("MatchType")
+        public String matchType;
+
         @NameInMap("NatGatewayId")
         public String natGatewayId;
 
@@ -119,6 +122,9 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("TunnelIndex")
+        public String tunnelIndex;
+
         public static DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry build(java.util.Map<String, ?> map) throws Exception {
             DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry self = new DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry();
             return TeaModel.build(map, self);
@@ -130,6 +136,14 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
         public String getEipAffinity() {
             return this.eipAffinity;
+        }
+
+        public DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry setMatchType(String matchType) {
+            this.matchType = matchType;
+            return this;
+        }
+        public String getMatchType() {
+            return this.matchType;
         }
 
         public DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry setNatGatewayId(String natGatewayId) {
@@ -202,6 +216,14 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry setTunnelIndex(String tunnelIndex) {
+            this.tunnelIndex = tunnelIndex;
+            return this;
+        }
+        public String getTunnelIndex() {
+            return this.tunnelIndex;
         }
 
     }

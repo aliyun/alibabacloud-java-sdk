@@ -22,9 +22,6 @@ public class CreateExpressConnectTrafficQosRuleRequest extends TeaModel {
      * <blockquote>
      * <p>You cannot specify this parameter together with the <strong>SrcIPv6Cidr</strong> or <strong>DstIPv6Cidr</strong> parameter.</p>
      * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p><code>1.1.**.**</code>/24</p>
      */
     @NameInMap("DstCidr")
     public String dstCidr;
@@ -221,9 +218,6 @@ public class CreateExpressConnectTrafficQosRuleRequest extends TeaModel {
      * <blockquote>
      * <p>You cannot specify this parameter together with the <strong>SrcIPv6Cidr</strong> or <strong>DstIPv6Cidr</strong> parameter.</p>
      * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p><code>1.1.**.**</code>/24</p>
      */
     @NameInMap("SrcCidr")
     public String srcCidr;

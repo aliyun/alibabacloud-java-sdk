@@ -35,7 +35,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of NAT gateways queried.</p>
+     * <p>The total number of NAT gateways returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -276,6 +276,25 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpv6Config extends TeaModel {
+        @NameInMap("Ipv6Enabled")
+        public Boolean ipv6Enabled;
+
+        public static DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpv6Config build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpv6Config self = new DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpv6Config();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpv6Config setIpv6Enabled(Boolean ipv6Enabled) {
+            this.ipv6Enabled = ipv6Enabled;
+            return this;
+        }
+        public Boolean getIpv6Enabled() {
+            return this.ipv6Enabled;
+        }
+
+    }
+
     public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo extends TeaModel {
         @NameInMap("EniInstanceId")
         public String eniInstanceId;
@@ -297,6 +316,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
+
+        @NameInMap("PrivateIpv6Address")
+        public String privateIpv6Address;
 
         @NameInMap("VswitchId")
         public String vswitchId;
@@ -360,6 +382,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
         public String getPrivateIpAddress() {
             return this.privateIpAddress;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo setPrivateIpv6Address(String privateIpv6Address) {
+            this.privateIpv6Address = privateIpv6Address;
+            return this;
+        }
+        public String getPrivateIpv6Address() {
+            return this.privateIpv6Address;
         }
 
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo setVswitchId(String vswitchId) {
@@ -498,6 +528,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
         @NameInMap("IpPrefixList")
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpPrefixList ipPrefixList;
+
+        @NameInMap("Ipv6Config")
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpv6Config ipv6Config;
 
         @NameInMap("Name")
         public String name;
@@ -691,6 +724,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpPrefixList getIpPrefixList() {
             return this.ipPrefixList;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setIpv6Config(DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpv6Config ipv6Config) {
+            this.ipv6Config = ipv6Config;
+            return this;
+        }
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpv6Config getIpv6Config() {
+            return this.ipv6Config;
         }
 
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setName(String name) {

@@ -47,8 +47,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-zhangjiakou-na62-a01", "vpc.cn-zhangjiakou.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "vpc-nebula.cn-qingdao-nebula.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "vpc-nebula.cn-shenzhen-cloudstone.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "vpc.aliyuncs.com"),
-            new TeaPair("cn-nanjing", "vpc-smarthosting.cn-hangzhou-cloudstone.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "vpc.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("vpc", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -517,7 +516,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds an Elastic IP Address (EIP) to a specified Internet Shared Bandwidth instance.</p>
+     * <p>Adds an elastic IP address (EIP) to a specified shared bandwidth instance.</p>
      * 
      * @param request AddGlobalAccelerationInstanceIpRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -573,7 +572,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds an Elastic IP Address (EIP) to a specified Internet Shared Bandwidth instance.</p>
+     * <p>Adds an elastic IP address (EIP) to a specified shared bandwidth instance.</p>
      * 
      * @param request AddGlobalAccelerationInstanceIpRequest
      * @return AddGlobalAccelerationInstanceIpResponse
@@ -772,7 +771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The <strong>AddSourcesToTrafficMirrorSession</strong> operation is asynchronous. After you call this operation, the system returns a request ID, but the traffic mirror sources are not added yet. The system is still adding the traffic mirror sources in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the status of the traffic mirror sources:<ul>
+     * <li>The <strong>AddSourcesToTrafficMirrorSession</strong> operation is asynchronous. The system returns a request ID, but the traffic mirror sources are not immediately added. The addition task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the addition status of the traffic mirror sources:<ul>
      * <li>If the traffic mirror session is in the <strong>Modifying</strong> state, the traffic mirror sources are being added.</li>
      * <li>If the traffic mirror session is in the <strong>Created</strong> state, the traffic mirror sources are added.</li>
      * </ul>
@@ -781,7 +780,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds traffic mirror sources to a traffic mirror session.</p>
+     * <p>Adds one or more traffic mirror sources to a traffic mirror session.</p>
      * 
      * @param request AddSourcesToTrafficMirrorSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -846,7 +845,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The <strong>AddSourcesToTrafficMirrorSession</strong> operation is asynchronous. After you call this operation, the system returns a request ID, but the traffic mirror sources are not added yet. The system is still adding the traffic mirror sources in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the status of the traffic mirror sources:<ul>
+     * <li>The <strong>AddSourcesToTrafficMirrorSession</strong> operation is asynchronous. The system returns a request ID, but the traffic mirror sources are not immediately added. The addition task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the addition status of the traffic mirror sources:<ul>
      * <li>If the traffic mirror session is in the <strong>Modifying</strong> state, the traffic mirror sources are being added.</li>
      * <li>If the traffic mirror session is in the <strong>Created</strong> state, the traffic mirror sources are added.</li>
      * </ul>
@@ -855,7 +854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds traffic mirror sources to a traffic mirror session.</p>
+     * <p>Adds one or more traffic mirror sources to a traffic mirror session.</p>
      * 
      * @param request AddSourcesToTrafficMirrorSessionRequest
      * @return AddSourcesToTrafficMirrorSessionResponse
@@ -3927,10 +3926,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;<ph>This operation supports only the creation of pay-as-you-go Internet Shared Bandwidth instances. To create a subscription Internet Shared Bandwidth instance, see <a href="https://help.aliyun.com/document_detail/65223.html">Create an Internet Shared Bandwidth instance</a>.</ph></p>
+     * <p>&lt;props=&quot;china&quot;&gt;<ph>This operation only supports creating pay-as-you-go Internet Shared Bandwidth instances. For information about how to create a subscription Internet Shared Bandwidth instance, see <a href="https://help.aliyun.com/document_detail/65223.html">Create an Internet Shared Bandwidth instance</a>.</ph></p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an Internet Shared Bandwidth instance by calling the CreateCommonBandwidthPackage operation.</p>
+     * <p>Creates an Internet Shared Bandwidth instance.</p>
      * 
      * @param request CreateCommonBandwidthPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4022,10 +4021,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;<ph>This operation supports only the creation of pay-as-you-go Internet Shared Bandwidth instances. To create a subscription Internet Shared Bandwidth instance, see <a href="https://help.aliyun.com/document_detail/65223.html">Create an Internet Shared Bandwidth instance</a>.</ph></p>
+     * <p>&lt;props=&quot;china&quot;&gt;<ph>This operation only supports creating pay-as-you-go Internet Shared Bandwidth instances. For information about how to create a subscription Internet Shared Bandwidth instance, see <a href="https://help.aliyun.com/document_detail/65223.html">Create an Internet Shared Bandwidth instance</a>.</ph></p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an Internet Shared Bandwidth instance by calling the CreateCommonBandwidthPackage operation.</p>
+     * <p>Creates an Internet Shared Bandwidth instance.</p>
      * 
      * @param request CreateCommonBandwidthPackageRequest
      * @return CreateCommonBandwidthPackageResponse
@@ -6637,9 +6636,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>When you call this operation, take note of the following items:</p>
      * <ul>
-     * <li>When you create a NAT gateway for the first time, the system automatically creates a service-linked role named AliyunServiceRoleForNatgw and attaches an access policy named AliyunServiceRolePolicyForNatgw to the role. This grants the NAT gateway the permissions to access other cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/174251.html">Service-linked roles</a>.</li>
-     * <li>After an enhanced Internet NAT gateway is created, the system automatically adds a route entry whose destination CIDR block is 0.0.0.0/0 and whose next hop is the NAT gateway to the route table of the VPC. This routes traffic to the NAT gateway.</li>
-     * <li><strong>CreateNatGateway</strong> is an asynchronous operation. The system first returns the instance ID of the NAT gateway (Internet NAT gateway or VPC NAT gateway), but the NAT gateway instance is not yet created, and the creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/36054.html">DescribeNatGateways</a> to query the status of the NAT gateway.<ul>
+     * <li>When you create a NAT gateway for the first time, the system automatically creates a service-linked role named AliyunServiceRoleForNatgw and associates an access policy named AliyunServiceRolePolicyForNatgw with the role. This grants the NAT gateway the permissions to access other cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/174251.html">Service-linked roles</a>.</li>
+     * <li>After an enhanced Internet NAT gateway is created, the system automatically adds a route entry whose destination CIDR block is 0.0.0.0/0 and next hop is the NAT gateway to the route table of the VPC. This route entry is used to route traffic to the NAT gateway.</li>
+     * <li>The <strong>CreateNatGateway</strong> operation is asynchronous. The system first returns the instance ID of the NAT gateway (Internet NAT gateway or VPC NAT gateway), but the NAT gateway instance is not yet created and the creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/36054.html">DescribeNatGateways</a> operation to query the status of the NAT gateway.<ul>
      * <li>If the NAT gateway is in the <strong>Creating</strong> state, the NAT gateway is being created. In this state, you can only perform query operations.</li>
      * <li>If the NAT gateway is in the <strong>Available</strong> state, the NAT gateway is created.</li>
      * </ul>
@@ -6660,6 +6659,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.accessMode)) {
             request.accessModeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.accessMode, "AccessMode", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ipv6Config)) {
+            request.ipv6ConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ipv6Config, "Ipv6Config", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6705,6 +6708,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ipv4Prefix)) {
             query.put("Ipv4Prefix", request.ipv4Prefix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv6ConfigShrink)) {
+            query.put("Ipv6Config", request.ipv6ConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
@@ -6792,9 +6799,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>When you call this operation, take note of the following items:</p>
      * <ul>
-     * <li>When you create a NAT gateway for the first time, the system automatically creates a service-linked role named AliyunServiceRoleForNatgw and attaches an access policy named AliyunServiceRolePolicyForNatgw to the role. This grants the NAT gateway the permissions to access other cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/174251.html">Service-linked roles</a>.</li>
-     * <li>After an enhanced Internet NAT gateway is created, the system automatically adds a route entry whose destination CIDR block is 0.0.0.0/0 and whose next hop is the NAT gateway to the route table of the VPC. This routes traffic to the NAT gateway.</li>
-     * <li><strong>CreateNatGateway</strong> is an asynchronous operation. The system first returns the instance ID of the NAT gateway (Internet NAT gateway or VPC NAT gateway), but the NAT gateway instance is not yet created, and the creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/36054.html">DescribeNatGateways</a> to query the status of the NAT gateway.<ul>
+     * <li>When you create a NAT gateway for the first time, the system automatically creates a service-linked role named AliyunServiceRoleForNatgw and associates an access policy named AliyunServiceRolePolicyForNatgw with the role. This grants the NAT gateway the permissions to access other cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/174251.html">Service-linked roles</a>.</li>
+     * <li>After an enhanced Internet NAT gateway is created, the system automatically adds a route entry whose destination CIDR block is 0.0.0.0/0 and next hop is the NAT gateway to the route table of the VPC. This route entry is used to route traffic to the NAT gateway.</li>
+     * <li>The <strong>CreateNatGateway</strong> operation is asynchronous. The system first returns the instance ID of the NAT gateway (Internet NAT gateway or VPC NAT gateway), but the NAT gateway instance is not yet created and the creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/36054.html">DescribeNatGateways</a> operation to query the status of the NAT gateway.<ul>
      * <li>If the NAT gateway is in the <strong>Creating</strong> state, the NAT gateway is being created. In this state, you can only perform query operations.</li>
      * <li>If the NAT gateway is in the <strong>Available</strong> state, the NAT gateway is created.</li>
      * </ul>
@@ -7021,6 +7028,108 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateNatIpCidrResponse createNatIpCidr(CreateNatIpCidrRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createNatIpCidrWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation creates a rate limiting rule for an enhanced Internet NAT gateway or a VPC NAT gateway. The term NAT gateway in this document refers to both types unless otherwise specified.
+     * When you call this operation to add a rate limiting rule, take note of the following items:</p>
+     * <ul>
+     * <li>The CreateNatRateLimitRule operation is asynchronous. The system returns a rate limiting rule ID, but the rule is not immediately added. The addition task is still running in the background.<ul>
+     * <li>If the rule is in the Creating state, the source IP address rate limiting rule is being created. In this state, you can only perform query operations.</li>
+     * <li>If the rule is in the Available state, the source IP address rate limiting rule is created.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a rate limiting rule to throttle traffic from specified source CIDR blocks.</p>
+     * 
+     * @param request CreateNatRateLimitRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateNatRateLimitRuleResponse
+     */
+    public CreateNatRateLimitRuleResponse createNatRateLimitRuleWithOptions(CreateNatRateLimitRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bandwidthLimit)) {
+            query.put("BandwidthLimit", request.bandwidthLimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.matchType)) {
+            query.put("MatchType", request.matchType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.natGatewayId)) {
+            query.put("NatGatewayId", request.natGatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleDescription)) {
+            query.put("RuleDescription", request.ruleDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceCIDRs)) {
+            query.put("SourceCIDRs", request.sourceCIDRs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tunnelIndex)) {
+            query.put("TunnelIndex", request.tunnelIndex);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateNatRateLimitRule"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateNatRateLimitRuleResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation creates a rate limiting rule for an enhanced Internet NAT gateway or a VPC NAT gateway. The term NAT gateway in this document refers to both types unless otherwise specified.
+     * When you call this operation to add a rate limiting rule, take note of the following items:</p>
+     * <ul>
+     * <li>The CreateNatRateLimitRule operation is asynchronous. The system returns a rate limiting rule ID, but the rule is not immediately added. The addition task is still running in the background.<ul>
+     * <li>If the rule is in the Creating state, the source IP address rate limiting rule is being created. In this state, you can only perform query operations.</li>
+     * <li>If the rule is in the Available state, the source IP address rate limiting rule is created.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a rate limiting rule to throttle traffic from specified source CIDR blocks.</p>
+     * 
+     * @param request CreateNatRateLimitRuleRequest
+     * @return CreateNatRateLimitRuleResponse
+     */
+    public CreateNatRateLimitRuleResponse createNatRateLimitRule(CreateNatRateLimitRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createNatRateLimitRuleWithOptions(request, runtime);
     }
 
     /**
@@ -7654,15 +7763,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The <strong>CreateRouteEntry</strong> operation is asynchronous. The system returns an instance ID, but custom route entry creation is not yet complete and a background task is still running. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the creation status of custom route entry:<ul>
+     * <li>The <strong>CreateRouteEntry</strong> operation is asynchronous. After you send the request, the system returns an instance ID, but custom route entry is not immediately created. A background task is still running. You can call the <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> operation to query the status of custom route entry:<ul>
      * <li>If custom route entry is in the <strong>Creating</strong> state, custom route entry is being created.</li>
      * <li>If custom route entry is in the <strong>Created</strong> state, custom route entry is created.</li>
      * </ul>
      * </li>
-     * <li>The <strong>CreateRouteEntry</strong> operation does not support concurrent creation of custom route entries in the same VPC or on the same VBR.</li>
-     * <li>The <strong>CreateRouteEntry</strong> operation may return the <strong>TaskConflict</strong> error code in concurrent scenarios. Retry the operation as needed.
+     * <li>You cannot use the <strong>CreateRouteEntry</strong> operation to concurrently create custom route entries in the same VPC or on the same VBR.</li>
+     * <li>The <strong>CreateRouteEntry</strong> operation may return the <strong>TaskConflict</strong> error code in case of concurrency. Retry the request as needed.
      * <strong>When you use this operation to add a custom route entry to the route table of a vRouter, take note of the following items:</strong><blockquote>
-     * <p>If the route entry to be added is a prefix list route, the route quota is calculated based on whether the sum of the number of existing routes and the maximum number of route entries for the prefix list route exceeds the route quota limit.</p>
+     * <p>When the route to be added is a prefix list route, the route quota is calculated based on whether the sum of the number of existing routes and the maximum number of route entries for the prefix list route exceeds the route quota limit.</p>
      * </blockquote>
      * </li>
      * <li>A route table can contain at most 200 custom route entries.</li>
@@ -7670,10 +7779,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>The destination CIDR block (<strong>DestinationCidrBlock</strong>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <code>100.64.0.0/10</code> for cloud services, but cannot be the same as <code>100.64.0.0/10</code>.
      * <notice>The system route whose destination CIDR block is <code>100.64.0.0/10</code> is used for communication between cloud services in the VPC. Proceed with caution when you configure a more specific route. Incorrect configurations may cause cloud services to become inaccessible.</notice></li>
      * <li>Route entries in the same route table cannot have the same destination CIDR block (<strong>DestinationCidrBlock</strong>).</li>
-     * <li>If the specified destination CIDR block (<strong>DestinationCidrBlock</strong>) is an IP address, it is processed as a 32-bit subnet mask.</li>
-     * <li>You can point more than one custom routing entry to the same next hop (<strong>NextHopId</strong>).</li>
+     * <li>If the specified destination CIDR block (<strong>DestinationCidrBlock</strong>) is an IP address, it is processed as a CIDR block with a 32-bit subnet mask.</li>
+     * <li>Multiple custom route entries can point to the same next hop (<strong>NextHopId</strong>).</li>
      * <li>The next hop (<strong>NextHopId</strong>) of a custom route entry must be in the same VPC as the route table.</li>
-     * <li>You can use the <strong>NextHopList</strong> parameter settings to configure equal-cost multi-path (ECMP) routing:<ul>
+     * <li>You can configure equal-cost multi-path (ECMP) routing through the <strong>NextHopList</strong> parameter settings:<ul>
      * <li><p>When you add a regular (non-ECMP) custom route, you must specify the <strong>DestinationCidrBlock</strong>, <strong>NextHopType</strong>, and <strong>NextHopId</strong> parameters, and you cannot specify the <strong>NextHopList</strong> parameter.   </p>
      * </li>
      * <li><p>When you add an ECMP route, you must specify the <strong>DestinationCidrBlock</strong> and <strong>NextHopList</strong> parameters, and you cannot specify the <strong>NextHopType</strong> and <strong>NextHopId</strong> parameters.</p>
@@ -7688,19 +7797,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li><p>The <strong>NextHopList</strong> parameter is not supported.   </p>
      * </li>
      * <li><p>The destination CIDR block (<strong>DestinationCidrBlock</strong>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <code>100.64.0.0/10</code> for cloud services, but cannot be the same as <code>100.64.0.0/10</code>.
-     * <notice>The system route whose destination CIDR block is <code>100.64.0.0/10</code> is used for communication between cloud services in the VPC. Proceed with caution when you configure a more specific route. A configuration fault may prevent normal access and use of cloud services.</notice></p>
+     * <notice>The system route whose destination CIDR block is <code>100.64.0.0/10</code> is used for communication between cloud services in the VPC. Proceed with caution when you configure a more specific route. Incorrect configurations may cause cloud services to become inaccessible.</notice></p>
      * </li>
      * <li><p>Route entries in the same route table cannot have the same destination CIDR block (<strong>DestinationCidrBlock</strong>).   </p>
      * </li>
-     * <li><p>If the specified destination CIDR block (<strong>DestinationCidrBlock</strong>) is an IP address, it is processed as a 32-bit subnet mask.   </p>
+     * <li><p>If the specified destination CIDR block (<strong>DestinationCidrBlock</strong>) is an IP address, it is processed as a CIDR block with a 32-bit subnet mask.   </p>
      * </li>
-     * <li><p>You can point more than one custom routing entry to the same next hop (<strong>NextHopId</strong>).  </p>
+     * <li><p>Multiple custom route entries can point to the same next hop (<strong>NextHopId</strong>).  </p>
      * </li>
      * <li><p>The next hop (<strong>NextHopId</strong>) of a custom route entry must be a vRouter interface associated with the VBR.  </p>
      * </li>
-     * <li><p>You can create a route entry on a VBR only when the VBR is in the <strong>Active</strong> state, the associated Express Connect circuit is in the <strong>Enabled</strong> state, and the VBR is not locked due to overdue payments.  </p>
+     * <li><p>You can create a route entry on a VBR only when the VBR is in the <strong>Active</strong> state, the associated Express Connect circuit is in the <strong>Enabled</strong> state, and the VBR is not locked due to an overdue payment.  </p>
      * </li>
-     * <li><p>Only regular (non-ECMP) routing is supported. You must specify the <strong>DestinationCidrBlock</strong>, <strong>NextHopType</strong>, and <strong>NextHopId</strong> parameters, and you cannot specify the <strong>NextHopList</strong> parameter.</p>
+     * <li><p>Only regular (non-ECMP) routes can be added. You must specify the <strong>DestinationCidrBlock</strong>, <strong>NextHopType</strong>, and <strong>NextHopId</strong> parameters, and you cannot specify the <strong>NextHopList</strong> parameter.</p>
      * </li>
      * </ul>
      * 
@@ -7790,15 +7899,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The <strong>CreateRouteEntry</strong> operation is asynchronous. The system returns an instance ID, but custom route entry creation is not yet complete and a background task is still running. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the creation status of custom route entry:<ul>
+     * <li>The <strong>CreateRouteEntry</strong> operation is asynchronous. After you send the request, the system returns an instance ID, but custom route entry is not immediately created. A background task is still running. You can call the <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> operation to query the status of custom route entry:<ul>
      * <li>If custom route entry is in the <strong>Creating</strong> state, custom route entry is being created.</li>
      * <li>If custom route entry is in the <strong>Created</strong> state, custom route entry is created.</li>
      * </ul>
      * </li>
-     * <li>The <strong>CreateRouteEntry</strong> operation does not support concurrent creation of custom route entries in the same VPC or on the same VBR.</li>
-     * <li>The <strong>CreateRouteEntry</strong> operation may return the <strong>TaskConflict</strong> error code in concurrent scenarios. Retry the operation as needed.
+     * <li>You cannot use the <strong>CreateRouteEntry</strong> operation to concurrently create custom route entries in the same VPC or on the same VBR.</li>
+     * <li>The <strong>CreateRouteEntry</strong> operation may return the <strong>TaskConflict</strong> error code in case of concurrency. Retry the request as needed.
      * <strong>When you use this operation to add a custom route entry to the route table of a vRouter, take note of the following items:</strong><blockquote>
-     * <p>If the route entry to be added is a prefix list route, the route quota is calculated based on whether the sum of the number of existing routes and the maximum number of route entries for the prefix list route exceeds the route quota limit.</p>
+     * <p>When the route to be added is a prefix list route, the route quota is calculated based on whether the sum of the number of existing routes and the maximum number of route entries for the prefix list route exceeds the route quota limit.</p>
      * </blockquote>
      * </li>
      * <li>A route table can contain at most 200 custom route entries.</li>
@@ -7806,10 +7915,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>The destination CIDR block (<strong>DestinationCidrBlock</strong>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <code>100.64.0.0/10</code> for cloud services, but cannot be the same as <code>100.64.0.0/10</code>.
      * <notice>The system route whose destination CIDR block is <code>100.64.0.0/10</code> is used for communication between cloud services in the VPC. Proceed with caution when you configure a more specific route. Incorrect configurations may cause cloud services to become inaccessible.</notice></li>
      * <li>Route entries in the same route table cannot have the same destination CIDR block (<strong>DestinationCidrBlock</strong>).</li>
-     * <li>If the specified destination CIDR block (<strong>DestinationCidrBlock</strong>) is an IP address, it is processed as a 32-bit subnet mask.</li>
-     * <li>You can point more than one custom routing entry to the same next hop (<strong>NextHopId</strong>).</li>
+     * <li>If the specified destination CIDR block (<strong>DestinationCidrBlock</strong>) is an IP address, it is processed as a CIDR block with a 32-bit subnet mask.</li>
+     * <li>Multiple custom route entries can point to the same next hop (<strong>NextHopId</strong>).</li>
      * <li>The next hop (<strong>NextHopId</strong>) of a custom route entry must be in the same VPC as the route table.</li>
-     * <li>You can use the <strong>NextHopList</strong> parameter settings to configure equal-cost multi-path (ECMP) routing:<ul>
+     * <li>You can configure equal-cost multi-path (ECMP) routing through the <strong>NextHopList</strong> parameter settings:<ul>
      * <li><p>When you add a regular (non-ECMP) custom route, you must specify the <strong>DestinationCidrBlock</strong>, <strong>NextHopType</strong>, and <strong>NextHopId</strong> parameters, and you cannot specify the <strong>NextHopList</strong> parameter.   </p>
      * </li>
      * <li><p>When you add an ECMP route, you must specify the <strong>DestinationCidrBlock</strong> and <strong>NextHopList</strong> parameters, and you cannot specify the <strong>NextHopType</strong> and <strong>NextHopId</strong> parameters.</p>
@@ -7824,19 +7933,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li><p>The <strong>NextHopList</strong> parameter is not supported.   </p>
      * </li>
      * <li><p>The destination CIDR block (<strong>DestinationCidrBlock</strong>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <code>100.64.0.0/10</code> for cloud services, but cannot be the same as <code>100.64.0.0/10</code>.
-     * <notice>The system route whose destination CIDR block is <code>100.64.0.0/10</code> is used for communication between cloud services in the VPC. Proceed with caution when you configure a more specific route. A configuration fault may prevent normal access and use of cloud services.</notice></p>
+     * <notice>The system route whose destination CIDR block is <code>100.64.0.0/10</code> is used for communication between cloud services in the VPC. Proceed with caution when you configure a more specific route. Incorrect configurations may cause cloud services to become inaccessible.</notice></p>
      * </li>
      * <li><p>Route entries in the same route table cannot have the same destination CIDR block (<strong>DestinationCidrBlock</strong>).   </p>
      * </li>
-     * <li><p>If the specified destination CIDR block (<strong>DestinationCidrBlock</strong>) is an IP address, it is processed as a 32-bit subnet mask.   </p>
+     * <li><p>If the specified destination CIDR block (<strong>DestinationCidrBlock</strong>) is an IP address, it is processed as a CIDR block with a 32-bit subnet mask.   </p>
      * </li>
-     * <li><p>You can point more than one custom routing entry to the same next hop (<strong>NextHopId</strong>).  </p>
+     * <li><p>Multiple custom route entries can point to the same next hop (<strong>NextHopId</strong>).  </p>
      * </li>
      * <li><p>The next hop (<strong>NextHopId</strong>) of a custom route entry must be a vRouter interface associated with the VBR.  </p>
      * </li>
-     * <li><p>You can create a route entry on a VBR only when the VBR is in the <strong>Active</strong> state, the associated Express Connect circuit is in the <strong>Enabled</strong> state, and the VBR is not locked due to overdue payments.  </p>
+     * <li><p>You can create a route entry on a VBR only when the VBR is in the <strong>Active</strong> state, the associated Express Connect circuit is in the <strong>Enabled</strong> state, and the VBR is not locked due to an overdue payment.  </p>
      * </li>
-     * <li><p>Only regular (non-ECMP) routing is supported. You must specify the <strong>DestinationCidrBlock</strong>, <strong>NextHopType</strong>, and <strong>NextHopId</strong> parameters, and you cannot specify the <strong>NextHopList</strong> parameter.</p>
+     * <li><p>Only regular (non-ECMP) routes can be added. You must specify the <strong>DestinationCidrBlock</strong>, <strong>NextHopType</strong>, and <strong>NextHopId</strong> parameters, and you cannot specify the <strong>NextHopList</strong> parameter.</p>
      * </li>
      * </ul>
      * 
@@ -7962,14 +8071,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>CreateRouteTargetGroup</strong> is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the routing target group instance is not yet created. The creation task continues in the background. You can invoke <strong>ListRouteTargetGroup</strong> to query the creation status of the routing target group:<ul>
-     * <li>If the routing target group is in the <strong>Pending</strong> state, the routing target group is being created.</li>
-     * <li>If the routing target group is in the <strong>Available</strong>, <strong>Unavailable</strong>, <strong>Switched</strong>, or <strong>Abnormal</strong> state, the routing target group is created.</li>
+     * <li>The <strong>CreateRouteTargetGroup</strong> operation is asynchronous. The system returns an instance ID, but the routing target group instance is not yet created and the background creation node is still in progress. You can invoke <strong>ListRouteTargetGroup</strong> to query the creation status of the routing target group:<ul>
+     * <li>When the routing target group is in the <strong>Pending</strong> state, it indicates that the routing target group is being created.</li>
+     * <li>When the routing target group is in the <strong>Available</strong>, <strong>Unavailable</strong>, <strong>Switched</strong>, or <strong>Abnormal</strong> state, it indicates that the routing target group is created.</li>
      * </ul>
      * </li>
-     * <li><strong>Active/standby mode</strong>: When you create a routing target group, configure primary and secondary instances that are in different zones and of the same type.</li>
-     * <li><strong>Primary instance</strong>: The weight is 100. The primary instance handles all traffic under normal conditions and takes effect when health checks are successful.</li>
-     * <li><strong>Secondary instance</strong>: The weight is 0. The secondary instance takes over traffic when the primary instance fails, serving as disaster recovery and backup.</li>
+     * <li><strong>Active/standby pattern</strong>: When you create a routing target group, you must configure primary and secondary instances that are of the same type and located in different zones.</li>
+     * <li><strong>Primary instance</strong>: The weight is 100. It carries all traffic under normal circumstances and takes effect when the health check is normal.</li>
+     * <li><strong>Secondary instance</strong>: The weight is 0. It takes over traffic after the primary instance fails and serves as disaster recovery and backup.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7988,6 +8097,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.configMode)) {
             query.put("ConfigMode", request.configMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipVersion)) {
+            query.put("IpVersion", request.ipVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -8038,14 +8155,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>CreateRouteTargetGroup</strong> is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the routing target group instance is not yet created. The creation task continues in the background. You can invoke <strong>ListRouteTargetGroup</strong> to query the creation status of the routing target group:<ul>
-     * <li>If the routing target group is in the <strong>Pending</strong> state, the routing target group is being created.</li>
-     * <li>If the routing target group is in the <strong>Available</strong>, <strong>Unavailable</strong>, <strong>Switched</strong>, or <strong>Abnormal</strong> state, the routing target group is created.</li>
+     * <li>The <strong>CreateRouteTargetGroup</strong> operation is asynchronous. The system returns an instance ID, but the routing target group instance is not yet created and the background creation node is still in progress. You can invoke <strong>ListRouteTargetGroup</strong> to query the creation status of the routing target group:<ul>
+     * <li>When the routing target group is in the <strong>Pending</strong> state, it indicates that the routing target group is being created.</li>
+     * <li>When the routing target group is in the <strong>Available</strong>, <strong>Unavailable</strong>, <strong>Switched</strong>, or <strong>Abnormal</strong> state, it indicates that the routing target group is created.</li>
      * </ul>
      * </li>
-     * <li><strong>Active/standby mode</strong>: When you create a routing target group, configure primary and secondary instances that are in different zones and of the same type.</li>
-     * <li><strong>Primary instance</strong>: The weight is 100. The primary instance handles all traffic under normal conditions and takes effect when health checks are successful.</li>
-     * <li><strong>Secondary instance</strong>: The weight is 0. The secondary instance takes over traffic when the primary instance fails, serving as disaster recovery and backup.</li>
+     * <li><strong>Active/standby pattern</strong>: When you create a routing target group, you must configure primary and secondary instances that are of the same type and located in different zones.</li>
+     * <li><strong>Primary instance</strong>: The weight is 100. It carries all traffic under normal circumstances and takes effect when the health check is normal.</li>
+     * <li><strong>Secondary instance</strong>: The weight is 0. It takes over traffic after the primary instance fails and serves as disaster recovery and backup.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8256,19 +8373,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>This operation adds an SNAT entry to an enhanced Internet NAT gateway or a VPC NAT gateway. The term <strong>NAT gateway</strong> in this document refers to both types unless otherwise specified.
-     * Note the following information when you call this operation to add an SNAT entry:</p>
+     * When you call this operation to create an SNAT entry, note the following items:</p>
      * <ul>
-     * <li><p>The <strong>CreateSnatEntry</strong> operation is asynchronous. The system first returns an SNAT entry ID, but the SNAT entry is not yet added. The addition task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/42677.html">DescribeSnatTableEntries</a> operation to query the status of the SNAT entry:</p>
+     * <li><p>The <strong>CreateSnatEntry</strong> operation is asynchronous. The system returns an SNAT entry ID, but the SNAT entry is not immediately created. The creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/42677.html">DescribeSnatTableEntries</a> operation to query the status of the SNAT entry:</p>
      * <ul>
-     * <li>If the SNAT entry is in the <strong>Pending</strong> state, the SNAT entry is being added. In this state, you can only perform query operations.</li>
-     * <li>If the SNAT entry is in the <strong>Available</strong> state, the SNAT entry is added.</li>
+     * <li>If the SNAT entry is in the <strong>Pending</strong> state, the SNAT entry is being created. In this state, you can only perform query operations.</li>
+     * <li>If the SNAT entry is in the <strong>Available</strong> state, the SNAT entry is created.</li>
      * </ul>
      * </li>
      * <li><p>The vSwitch and ECS instance specified in the SNAT entry must belong to the VPC to which the NAT gateway belongs.</p>
      * </li>
      * <li><p>Each vSwitch and ECS instance can belong to only one SNAT entry.</p>
      * </li>
-     * <li><p>If a high-availability virtual IP address (HaVip) is associated with the vSwitch, you cannot add an SNAT entry.</p>
+     * <li><p>If a high-availability virtual IP address (HAVIP) exists in the vSwitch, you cannot create an SNAT entry.</p>
      * </li>
      * </ul>
      * 
@@ -8292,6 +8409,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.eipAffinity)) {
             query.put("EipAffinity", request.eipAffinity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.matchType)) {
+            query.put("MatchType", request.matchType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.networkInterfaceId)) {
@@ -8358,19 +8479,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>This operation adds an SNAT entry to an enhanced Internet NAT gateway or a VPC NAT gateway. The term <strong>NAT gateway</strong> in this document refers to both types unless otherwise specified.
-     * Note the following information when you call this operation to add an SNAT entry:</p>
+     * When you call this operation to create an SNAT entry, note the following items:</p>
      * <ul>
-     * <li><p>The <strong>CreateSnatEntry</strong> operation is asynchronous. The system first returns an SNAT entry ID, but the SNAT entry is not yet added. The addition task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/42677.html">DescribeSnatTableEntries</a> operation to query the status of the SNAT entry:</p>
+     * <li><p>The <strong>CreateSnatEntry</strong> operation is asynchronous. The system returns an SNAT entry ID, but the SNAT entry is not immediately created. The creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/42677.html">DescribeSnatTableEntries</a> operation to query the status of the SNAT entry:</p>
      * <ul>
-     * <li>If the SNAT entry is in the <strong>Pending</strong> state, the SNAT entry is being added. In this state, you can only perform query operations.</li>
-     * <li>If the SNAT entry is in the <strong>Available</strong> state, the SNAT entry is added.</li>
+     * <li>If the SNAT entry is in the <strong>Pending</strong> state, the SNAT entry is being created. In this state, you can only perform query operations.</li>
+     * <li>If the SNAT entry is in the <strong>Available</strong> state, the SNAT entry is created.</li>
      * </ul>
      * </li>
      * <li><p>The vSwitch and ECS instance specified in the SNAT entry must belong to the VPC to which the NAT gateway belongs.</p>
      * </li>
      * <li><p>Each vSwitch and ECS instance can belong to only one SNAT entry.</p>
      * </li>
-     * <li><p>If a high-availability virtual IP address (HaVip) is associated with the vSwitch, you cannot add an SNAT entry.</p>
+     * <li><p>If a high-availability virtual IP address (HAVIP) exists in the vSwitch, you cannot create an SNAT entry.</p>
      * </li>
      * </ul>
      * 
@@ -8821,7 +8942,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The <strong>CreateTrafficMirrorSession</strong> operation is asynchronous. The system returns an instance ID, but the traffic mirror session is not immediately created. The creation task continues to run in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the creation status of the traffic mirror session:</p>
+     * <p>The <strong>CreateTrafficMirrorSession</strong> operation is asynchronous. After you call this operation, the system returns an instance ID, but the traffic mirror session is not yet created and the creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the creation status of the traffic mirror session:</p>
      * <ul>
      * <li>If the traffic mirror session is in the <strong>Creating</strong> state, the traffic mirror session is being created.</li>
      * <li>If the traffic mirror session is in the <strong>Created</strong> state, the traffic mirror session is created.</li>
@@ -8932,7 +9053,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The <strong>CreateTrafficMirrorSession</strong> operation is asynchronous. The system returns an instance ID, but the traffic mirror session is not immediately created. The creation task continues to run in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the creation status of the traffic mirror session:</p>
+     * <p>The <strong>CreateTrafficMirrorSession</strong> operation is asynchronous. After you call this operation, the system returns an instance ID, but the traffic mirror session is not yet created and the creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the creation status of the traffic mirror session:</p>
      * <ul>
      * <li>If the traffic mirror session is in the <strong>Creating</strong> state, the traffic mirror session is being created.</li>
      * <li>If the traffic mirror session is in the <strong>Created</strong> state, the traffic mirror session is created.</li>
@@ -10159,15 +10280,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Notice: </p>
      * </blockquote>
      * <ul>
-     * <li>In the scenario where an IPsec-VPN connection is associated with a transit router, the IPsec-VPN connection is upgraded to the dual-tunnel mode. When you create an IPsec-VPN connection, apart from the required parameters, you can only configure the following request parameters related to the dual-tunnel mode: <strong>ClientToken</strong>, <strong>Name</strong>, <strong>NetworkType</strong>, <strong>EffectImmediately</strong>, the <strong>Tags</strong> array, <strong>ResourceGroupId</strong>, the <strong>TunnelOptionsSpecification</strong> array, and <strong>EnableTunnelsBgp</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/2853535.html">Instructions for dual-tunnel IPsec-VPN connections associated with transit routers</a>.</li>
-     * <li>By default, an IPsec-VPN connection created by calling the <code>CreateVpnAttachment</code> operation is not associated with any resource. You can call the <a href="https://help.aliyun.com/document_detail/443993.html">CreateTransitRouterVpnAttachment</a> operation to associate the IPsec-VPN connection with a transit router instance. After the association, the system assigns a gateway IP address to the IPsec-VPN connection. You can call the <a href="https://help.aliyun.com/document_detail/2526951.html">DescribeVpnConnection</a> operation to view the IP address.</li>
+     * <li>When you bindIPsec-VPN connections to a transit router, the connections have been upgraded to dual-tunnel mode. When you create an IPsec-VPN connection, in addition to the required parameters, only the following request parameters for dual-tunnel mode are supported: <strong>ClientToken</strong>, <strong>Name</strong>, <strong>NetworkType</strong>, <strong>EffectImmediately</strong>, <strong>Tags</strong> array, <strong>ResourceGroupId</strong>, <strong>TunnelOptionsSpecification</strong> array, and <strong>EnableTunnelsBgp</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/2853535.html">Dual-tunnel IPsec-VPN connections bound to a transit router</a>.</li>
+     * <li>An IPsec-VPN connection created by calling the <code>CreateVpnAttachment</code> operation is not bound to any resource by default. You can call the <a href="https://help.aliyun.com/document_detail/443993.html">CreateTransitRouterVpnAttachment</a> operation to bind the IPsec-VPN connection to a transit router instance. After the IPsec-VPN connection is bound to a transit router instance, the system assigns a gateway IP address to the IPsec-VPN connection. You can call the <a href="https://help.aliyun.com/document_detail/2526951.html">DescribeVpnConnection</a> operation to view the gateway IP address.</li>
      * </ul>
      * <h3>Before you begin</h3>
-     * <p>Before you create an IPsec-VPN connection, make sure that you have created a customer gateway in the region where the IPsec-VPN connection resides. For more information, see <a href="https://help.aliyun.com/document_detail/120368.html">CreateCustomerGateway</a>.</p>
-     * <p>If you want to add BGP configurations to the IPsec-VPN connection, make sure that an autonomous system number (ASN) is added to the customer gateway.</p>
+     * <p>Before you create an IPsec-VPN connection, make sure that you have created a customer gateway in the region where the IPsec-VPN connection will be deployed. For more information, see <a href="https://help.aliyun.com/document_detail/120368.html">CreateCustomerGateway</a>.
+     * If you want to add BGP configurations to the IPsec-VPN connection, make sure that an autonomous system number has been added to the customer gateway.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an IPsec-VPN connection to associate with a transit router instance.</p>
+     * <p>Creates an IPsec-VPN connection to be associated with a transit router instance by calling the CreateVpnAttachment operation.</p>
      * 
      * @param request CreateVpnAttachmentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10306,15 +10427,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Notice: </p>
      * </blockquote>
      * <ul>
-     * <li>In the scenario where an IPsec-VPN connection is associated with a transit router, the IPsec-VPN connection is upgraded to the dual-tunnel mode. When you create an IPsec-VPN connection, apart from the required parameters, you can only configure the following request parameters related to the dual-tunnel mode: <strong>ClientToken</strong>, <strong>Name</strong>, <strong>NetworkType</strong>, <strong>EffectImmediately</strong>, the <strong>Tags</strong> array, <strong>ResourceGroupId</strong>, the <strong>TunnelOptionsSpecification</strong> array, and <strong>EnableTunnelsBgp</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/2853535.html">Instructions for dual-tunnel IPsec-VPN connections associated with transit routers</a>.</li>
-     * <li>By default, an IPsec-VPN connection created by calling the <code>CreateVpnAttachment</code> operation is not associated with any resource. You can call the <a href="https://help.aliyun.com/document_detail/443993.html">CreateTransitRouterVpnAttachment</a> operation to associate the IPsec-VPN connection with a transit router instance. After the association, the system assigns a gateway IP address to the IPsec-VPN connection. You can call the <a href="https://help.aliyun.com/document_detail/2526951.html">DescribeVpnConnection</a> operation to view the IP address.</li>
+     * <li>When you bindIPsec-VPN connections to a transit router, the connections have been upgraded to dual-tunnel mode. When you create an IPsec-VPN connection, in addition to the required parameters, only the following request parameters for dual-tunnel mode are supported: <strong>ClientToken</strong>, <strong>Name</strong>, <strong>NetworkType</strong>, <strong>EffectImmediately</strong>, <strong>Tags</strong> array, <strong>ResourceGroupId</strong>, <strong>TunnelOptionsSpecification</strong> array, and <strong>EnableTunnelsBgp</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/2853535.html">Dual-tunnel IPsec-VPN connections bound to a transit router</a>.</li>
+     * <li>An IPsec-VPN connection created by calling the <code>CreateVpnAttachment</code> operation is not bound to any resource by default. You can call the <a href="https://help.aliyun.com/document_detail/443993.html">CreateTransitRouterVpnAttachment</a> operation to bind the IPsec-VPN connection to a transit router instance. After the IPsec-VPN connection is bound to a transit router instance, the system assigns a gateway IP address to the IPsec-VPN connection. You can call the <a href="https://help.aliyun.com/document_detail/2526951.html">DescribeVpnConnection</a> operation to view the gateway IP address.</li>
      * </ul>
      * <h3>Before you begin</h3>
-     * <p>Before you create an IPsec-VPN connection, make sure that you have created a customer gateway in the region where the IPsec-VPN connection resides. For more information, see <a href="https://help.aliyun.com/document_detail/120368.html">CreateCustomerGateway</a>.</p>
-     * <p>If you want to add BGP configurations to the IPsec-VPN connection, make sure that an autonomous system number (ASN) is added to the customer gateway.</p>
+     * <p>Before you create an IPsec-VPN connection, make sure that you have created a customer gateway in the region where the IPsec-VPN connection will be deployed. For more information, see <a href="https://help.aliyun.com/document_detail/120368.html">CreateCustomerGateway</a>.
+     * If you want to add BGP configurations to the IPsec-VPN connection, make sure that an autonomous system number has been added to the customer gateway.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an IPsec-VPN connection to associate with a transit router instance.</p>
+     * <p>Creates an IPsec-VPN connection to be associated with a transit router instance by calling the CreateVpnAttachment operation.</p>
      * 
      * @param request CreateVpnAttachmentRequest
      * @return CreateVpnAttachmentResponse
@@ -12909,14 +13030,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you delete an IPv6 gateway, delete the IPv6 egress-only rules first. For more information, see <a href="https://help.aliyun.com/document_detail/102201.html">DeleteIpv6EgressOnlyRule</a>.</p>
+     * <p>Before you delete an IPv6 gateway, delete the IPv6 egress-only rules. For more information, see <a href="https://help.aliyun.com/document_detail/102201.html">DeleteIpv6EgressOnlyRule</a>.</p>
      * <ul>
-     * <li>The <strong>DeleteIpv6Gateway</strong> operation is asynchronous. After a request is sent, the system returns a request ID. However, the IPv6 gateway is not yet deleted. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/102226.html">DescribeIpv6GatewayAttribute</a> to query the deletion status of the IPv6 gateway:<ul>
+     * <li>The <strong>DeleteIpv6Gateway</strong> operation is asynchronous. After you send the request, the system returns a request ID, but the IPv6 gateway is not immediately deleted. The deletion task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/102226.html">DescribeIpv6GatewayAttribute</a> operation to query the deletion status of the IPv6 gateway:<ul>
      * <li>If the IPv6 gateway is in the <strong>Deleting</strong> state, the IPv6 gateway is being deleted.</li>
      * <li>If the specified IPv6 gateway cannot be found, the IPv6 gateway is deleted.</li>
      * </ul>
      * </li>
-     * <li>The <strong>DeleteIpv6Gateway</strong> operation does not support concurrent deletion of the same IPv6 gateway.</li>
+     * <li>You cannot call the <strong>DeleteIpv6Gateway</strong> operation to concurrently delete the same IPv6 gateway.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -12984,14 +13105,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you delete an IPv6 gateway, delete the IPv6 egress-only rules first. For more information, see <a href="https://help.aliyun.com/document_detail/102201.html">DeleteIpv6EgressOnlyRule</a>.</p>
+     * <p>Before you delete an IPv6 gateway, delete the IPv6 egress-only rules. For more information, see <a href="https://help.aliyun.com/document_detail/102201.html">DeleteIpv6EgressOnlyRule</a>.</p>
      * <ul>
-     * <li>The <strong>DeleteIpv6Gateway</strong> operation is asynchronous. After a request is sent, the system returns a request ID. However, the IPv6 gateway is not yet deleted. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/102226.html">DescribeIpv6GatewayAttribute</a> to query the deletion status of the IPv6 gateway:<ul>
+     * <li>The <strong>DeleteIpv6Gateway</strong> operation is asynchronous. After you send the request, the system returns a request ID, but the IPv6 gateway is not immediately deleted. The deletion task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/102226.html">DescribeIpv6GatewayAttribute</a> operation to query the deletion status of the IPv6 gateway:<ul>
      * <li>If the IPv6 gateway is in the <strong>Deleting</strong> state, the IPv6 gateway is being deleted.</li>
      * <li>If the specified IPv6 gateway cannot be found, the IPv6 gateway is deleted.</li>
      * </ul>
      * </li>
-     * <li>The <strong>DeleteIpv6Gateway</strong> operation does not support concurrent deletion of the same IPv6 gateway.</li>
+     * <li>You cannot call the <strong>DeleteIpv6Gateway</strong> operation to concurrently delete the same IPv6 gateway.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -14082,9 +14203,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>DeleteRouteTargetGroup</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the route target group is not yet deleted. The deletion task continues to run in the background. You can call ListRouteTargetGroup to query the deletion status of the route target group:<ul>
+     * <li>The <strong>DeleteRouteTargetGroup</strong> operation is asynchronous. After you call this operation, the system returns a request ID, but the route target group is not immediately deleted. The deletion task is still running in the background. You can call the ListRouteTargetGroup operation to query the deletion status of the route target group:<ul>
      * <li>If the route target group is in the <strong>Deleting</strong> state, the route target group is being deleted.</li>
-     * <li>If the specified route target group cannot be found, the route target group is deleted.</li>
+     * <li>If the specified route target group cannot be queried, the route target group is deleted.</li>
      * </ul>
      * </li>
      * </ul>
@@ -14101,6 +14222,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.forceDelete)) {
@@ -14139,9 +14264,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>DeleteRouteTargetGroup</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the route target group is not yet deleted. The deletion task continues to run in the background. You can call ListRouteTargetGroup to query the deletion status of the route target group:<ul>
+     * <li>The <strong>DeleteRouteTargetGroup</strong> operation is asynchronous. After you call this operation, the system returns a request ID, but the route target group is not immediately deleted. The deletion task is still running in the background. You can call the ListRouteTargetGroup operation to query the deletion status of the route target group:<ul>
      * <li>If the route target group is in the <strong>Deleting</strong> state, the route target group is being deleted.</li>
-     * <li>If the specified route target group cannot be found, the route target group is deleted.</li>
+     * <li>If the specified route target group cannot be queried, the route target group is deleted.</li>
      * </ul>
      * </li>
      * </ul>
@@ -19009,7 +19134,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries the details of Internet NAT gateways and VPC NAT gateways. The term NAT gateway in this document refers to both types unless otherwise specified.</p>
+     * <p>This operation queries the details of Internet NAT gateways and VPC NAT gateways. The term NAT gateway in this document refers to both types.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of NAT gateways that meet specified conditions in a specified region.</p>
@@ -19120,7 +19245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries the details of Internet NAT gateways and VPC NAT gateways. The term NAT gateway in this document refers to both types unless otherwise specified.</p>
+     * <p>This operation queries the details of Internet NAT gateways and VPC NAT gateways. The term NAT gateway in this document refers to both types.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of NAT gateways that meet specified conditions in a specified region.</p>
@@ -19551,7 +19676,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the available regions.</p>
+     * <p>Queries available regions by calling the DescribeRegions operation.</p>
      * 
      * @param request DescribeRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19603,7 +19728,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the available regions.</p>
+     * <p>Queries available regions by calling the DescribeRegions operation.</p>
      * 
      * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
@@ -22810,6 +22935,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>目前该接口已标记为弃用。</p>
+     * 
      * <b>summary</b> : 
      * <p>Shuts down ClassicLink.</p>
      * 
@@ -22870,6 +22998,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>目前该接口已标记为弃用。</p>
+     * 
      * <b>summary</b> : 
      * <p>Shuts down ClassicLink.</p>
      * 
@@ -23350,6 +23481,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>目前该接口已标记为弃用。</p>
+     * 
      * <b>summary</b> : 
      * <p>Enables ClassicLink.</p>
      * 
@@ -23410,6 +23544,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>目前该接口已标记为弃用。</p>
+     * 
      * <b>summary</b> : 
      * <p>Enables ClassicLink.</p>
      * 
@@ -23727,10 +23864,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries the details of an Internet NAT gateway or a VPC NAT gateway. The term &quot;NAT gateway&quot; in this document refers to both Internet NAT gateways and VPC NAT gateways.</p>
+     * <p>This operation queries the details of an Internet NAT gateway or a VPC NAT gateway. The term &quot;NAT gateway&quot; in this document refers to both types unless otherwise specified.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a NAT gateway instance.</p>
+     * <p>Queries the details of a NAT gateway.</p>
      * 
      * @param request GetNatGatewayAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23786,10 +23923,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries the details of an Internet NAT gateway or a VPC NAT gateway. The term &quot;NAT gateway&quot; in this document refers to both Internet NAT gateways and VPC NAT gateways.</p>
+     * <p>This operation queries the details of an Internet NAT gateway or a VPC NAT gateway. The term &quot;NAT gateway&quot; in this document refers to both types unless otherwise specified.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a NAT gateway instance.</p>
+     * <p>Queries the details of a NAT gateway.</p>
      * 
      * @param request GetNatGatewayAttributeRequest
      * @return GetNatGatewayAttributeResponse
@@ -25600,6 +25737,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the list of rate limiting rules.</p>
+     * 
+     * @param request ListNatRateLimitRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListNatRateLimitRulesResponse
+     */
+    public ListNatRateLimitRulesResponse listNatRateLimitRulesWithOptions(ListNatRateLimitRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.natGatewayId)) {
+            query.put("NatGatewayId", request.natGatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleIds)) {
+            query.put("RuleIds", request.ruleIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceCIDR)) {
+            query.put("SourceCIDR", request.sourceCIDR);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListNatRateLimitRules"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListNatRateLimitRulesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of rate limiting rules.</p>
+     * 
+     * @param request ListNatRateLimitRulesRequest
+     * @return ListNatRateLimitRulesResponse
+     */
+    public ListNatRateLimitRulesResponse listNatRateLimitRules(ListNatRateLimitRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listNatRateLimitRulesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the device-level capabilities supported by an Express Connect circuit.</p>
      * 
      * @param request ListPhysicalConnectionFeaturesRequest
@@ -25932,10 +26145,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of route target groups.</p>
+     * <p>Queries route target groups.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists route target groups.</p>
+     * <p>Queries route target groups.</p>
      * 
      * @param request ListRouteTargetGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -25946,6 +26159,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipVersion)) {
+            query.put("IpVersion", request.ipVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
@@ -25999,10 +26216,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of route target groups.</p>
+     * <p>Queries route target groups.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists route target groups.</p>
+     * <p>Queries route target groups.</p>
      * 
      * @param request ListRouteTargetGroupsRequest
      * @return ListRouteTargetGroupsResponse
@@ -29334,7 +29551,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The NAT gateways supported by this operation include Internet NAT gateways and VPC NAT gateways. The term &quot;NAT gateway&quot; in this document refers to both types without distinction.</p>
+     * <p>The NAT gateways involved in this operation include Internet NAT gateways and VPC NAT gateways. The term &quot;NAT gateway&quot; in this document refers to both types unless otherwise specified.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the attributes of a NAT gateway.</p>
@@ -29347,6 +29564,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ModifyNatGatewayAttributeShrinkRequest request = new ModifyNatGatewayAttributeShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ipv6Config)) {
+            request.ipv6ConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ipv6Config, "Ipv6Config", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.logDelivery)) {
             request.logDeliveryShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.logDelivery, "LogDelivery", "json");
         }
@@ -29366,6 +29587,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.icmpReplyEnabled)) {
             query.put("IcmpReplyEnabled", request.icmpReplyEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv6ConfigShrink)) {
+            query.put("Ipv6Config", request.ipv6ConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.logDeliveryShrink)) {
@@ -29419,7 +29644,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The NAT gateways supported by this operation include Internet NAT gateways and VPC NAT gateways. The term &quot;NAT gateway&quot; in this document refers to both types without distinction.</p>
+     * <p>The NAT gateways involved in this operation include Internet NAT gateways and VPC NAT gateways. The term &quot;NAT gateway&quot; in this document refers to both types unless otherwise specified.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the attributes of a NAT gateway.</p>
@@ -31007,16 +31232,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>ModifyVSwitchAttribute</strong> is an asynchronous operation. After you call this operation, the system returns a request ID, but the vSwitch configuration has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> to query the modification status of the vSwitch:<ul>
-     * <li>If the vSwitch is in the <strong>Pending</strong> state, the configuration is being modified.</li>
+     * <li>The <strong>ModifyVSwitchAttribute</strong> operation is asynchronous. The system returns a request ID, but the configurations of the vSwitch are not immediately modified. The modification task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> operation to query the modification status of the vSwitch:<ul>
+     * <li>If the vSwitch is in the <strong>Pending</strong> state, the configurations of the vSwitch are being modified.</li>
      * <li>If the vSwitch is in the <strong>Available</strong> state, the vSwitch is available.</li>
      * </ul>
      * </li>
-     * <li><strong>ModifyVSwitchAttribute</strong> does not support concurrent modifications to the same vSwitch.</li>
+     * <li>The <strong>ModifyVSwitchAttribute</strong> operation does not support concurrent modifications to the configurations of the same vSwitch.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a specified vSwitch.</p>
+     * <p>Modifies the configurations of a specified vSwitch.</p>
      * 
      * @param request ModifyVSwitchAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31027,6 +31252,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableDns64)) {
+            query.put("EnableDns64", request.enableDns64);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableIPv6)) {
@@ -31093,16 +31322,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>ModifyVSwitchAttribute</strong> is an asynchronous operation. After you call this operation, the system returns a request ID, but the vSwitch configuration has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> to query the modification status of the vSwitch:<ul>
-     * <li>If the vSwitch is in the <strong>Pending</strong> state, the configuration is being modified.</li>
+     * <li>The <strong>ModifyVSwitchAttribute</strong> operation is asynchronous. The system returns a request ID, but the configurations of the vSwitch are not immediately modified. The modification task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> operation to query the modification status of the vSwitch:<ul>
+     * <li>If the vSwitch is in the <strong>Pending</strong> state, the configurations of the vSwitch are being modified.</li>
      * <li>If the vSwitch is in the <strong>Available</strong> state, the vSwitch is available.</li>
      * </ul>
      * </li>
-     * <li><strong>ModifyVSwitchAttribute</strong> does not support concurrent modifications to the same vSwitch.</li>
+     * <li>The <strong>ModifyVSwitchAttribute</strong> operation does not support concurrent modifications to the configurations of the same vSwitch.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a specified vSwitch.</p>
+     * <p>Modifies the configurations of a specified vSwitch.</p>
      * 
      * @param request ModifyVSwitchAttributeRequest
      * @return ModifyVSwitchAttributeResponse
@@ -33756,7 +33985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes an EIP from an Internet Shared Bandwidth instance.</p>
+     * <p>Removes an elastic IP address (EIP) from an Internet Shared Bandwidth instance.</p>
      * 
      * @param request RemoveGlobalAccelerationInstanceIpRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -33812,7 +34041,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes an EIP from an Internet Shared Bandwidth instance.</p>
+     * <p>Removes an elastic IP address (EIP) from an Internet Shared Bandwidth instance.</p>
      * 
      * @param request RemoveGlobalAccelerationInstanceIpRequest
      * @return RemoveGlobalAccelerationInstanceIpResponse
@@ -33897,9 +34126,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>RemoveSourcesFromTrafficMirrorSession</strong> is an asynchronous operation. After a request is sent, the system returns a request ID, but the traffic mirror sources have not been removed yet. The removal task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> to query the status of the traffic mirror session:<ul>
+     * <li><strong>RemoveSourcesFromTrafficMirrorSession</strong> is an asynchronous operation. After you call this operation, the system returns a request ID, but the traffic mirror sources are not immediately removed. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> to query the status of the traffic mirror session:<ul>
      * <li>If the traffic mirror session is in the <strong>Modifying</strong> state, the traffic mirror sources are being removed.</li>
-     * <li>If the traffic mirror session is in the <strong>Created</strong> state, the traffic mirror sources have been removed.</li>
+     * <li>If the traffic mirror session is in the <strong>Created</strong> state, the traffic mirror sources are removed.</li>
      * </ul>
      * </li>
      * <li><strong>RemoveSourcesFromTrafficMirrorSession</strong> does not support concurrent removal of traffic mirror sources from the same traffic mirror session.</li>
@@ -33971,9 +34200,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>RemoveSourcesFromTrafficMirrorSession</strong> is an asynchronous operation. After a request is sent, the system returns a request ID, but the traffic mirror sources have not been removed yet. The removal task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> to query the status of the traffic mirror session:<ul>
+     * <li><strong>RemoveSourcesFromTrafficMirrorSession</strong> is an asynchronous operation. After you call this operation, the system returns a request ID, but the traffic mirror sources are not immediately removed. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> to query the status of the traffic mirror session:<ul>
      * <li>If the traffic mirror session is in the <strong>Modifying</strong> state, the traffic mirror sources are being removed.</li>
-     * <li>If the traffic mirror session is in the <strong>Created</strong> state, the traffic mirror sources have been removed.</li>
+     * <li>If the traffic mirror session is in the <strong>Created</strong> state, the traffic mirror sources are removed.</li>
      * </ul>
      * </li>
      * <li><strong>RemoveSourcesFromTrafficMirrorSession</strong> does not support concurrent removal of traffic mirror sources from the same traffic mirror session.</li>
@@ -34688,10 +34917,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs an active/standby switchover for a route target group.</p>
+     * <p>Performs a primary/secondary switchover for a route target group.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs an active/standby switchover for a route target group.</p>
+     * <p>Performs a primary/secondary switchover for a route target group.</p>
      * 
      * @param request SwitchActiveRouteTargetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -34702,6 +34931,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -34735,10 +34968,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs an active/standby switchover for a route target group.</p>
+     * <p>Performs a primary/secondary switchover for a route target group.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs an active/standby switchover for a route target group.</p>
+     * <p>Performs a primary/secondary switchover for a route target group.</p>
      * 
      * @param request SwitchActiveRouteTargetRequest
      * @return SwitchActiveRouteTargetResponse
@@ -36865,15 +37098,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The <strong>UpdateRouteTargetGroup</strong> operation is asynchronous. The system returns a request ID, but the route target group is not yet updated. The update task is still running in the background. You can call the ListRouteTargetGroup operation to query the update status of the route target group:<ul>
-     * <li>If the route target group is in the <strong>Updating</strong> state, the route target group is being updated.</li>
-     * <li>If the route target group is in the <strong>Available</strong>, <strong>Unavailable</strong>, <strong>Switched</strong>, or <strong>Abnormal</strong> state, the route target group is updated.</li>
+     * <li>The <strong>UpdateRouteTargetGroup</strong> operation is asynchronous. After you call this operation, the system returns a request ID, but the update task is still running in the background. You can call ListRouteTargetGroup to query the update status of the route target group:<ul>
+     * <li>When the route target group is in the <strong>Updating</strong> state, the route target group is being updated.</li>
+     * <li>When the route target group is in the <strong>Available</strong>, <strong>Unavailable</strong>, <strong>Switched</strong>, or <strong>Abnormal</strong> state, the update is complete.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates the information of a route target group instance, including the name, description, and disabled members.</p>
+     * <p>Updates the information about a route target group instance, including the name, description, and disabled members.</p>
      * 
      * @param request UpdateRouteTargetGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -36884,6 +37117,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipVersion)) {
+            query.put("IpVersion", request.ipVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -36926,15 +37167,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The <strong>UpdateRouteTargetGroup</strong> operation is asynchronous. The system returns a request ID, but the route target group is not yet updated. The update task is still running in the background. You can call the ListRouteTargetGroup operation to query the update status of the route target group:<ul>
-     * <li>If the route target group is in the <strong>Updating</strong> state, the route target group is being updated.</li>
-     * <li>If the route target group is in the <strong>Available</strong>, <strong>Unavailable</strong>, <strong>Switched</strong>, or <strong>Abnormal</strong> state, the route target group is updated.</li>
+     * <li>The <strong>UpdateRouteTargetGroup</strong> operation is asynchronous. After you call this operation, the system returns a request ID, but the update task is still running in the background. You can call ListRouteTargetGroup to query the update status of the route target group:<ul>
+     * <li>When the route target group is in the <strong>Updating</strong> state, the route target group is being updated.</li>
+     * <li>When the route target group is in the <strong>Available</strong>, <strong>Unavailable</strong>, <strong>Switched</strong>, or <strong>Abnormal</strong> state, the update is complete.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates the information of a route target group instance, including the name, description, and disabled members.</p>
+     * <p>Updates the information about a route target group instance, including the name, description, and disabled members.</p>
      * 
      * @param request UpdateRouteTargetGroupRequest
      * @return UpdateRouteTargetGroupResponse

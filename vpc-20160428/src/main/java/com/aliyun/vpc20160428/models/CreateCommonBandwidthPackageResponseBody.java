@@ -14,7 +14,7 @@ public class CreateCommonBandwidthPackageResponseBody extends TeaModel {
     public String bandwidthPackageId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>FF39F653-033E-4CD9-9EDF-3CCA5A71FBC3</p>
@@ -23,7 +23,7 @@ public class CreateCommonBandwidthPackageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxazdjdhd****</p>

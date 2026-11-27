@@ -17,7 +17,7 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
     public String natGatewayId;
 
     /**
-     * <p>The IDs of the elastic network interfaces (ENIs) (network interface controller (NIC)) to query.</p>
+     * <p>The IDs of the elastic network interfaces (ENIs) to query.</p>
      */
     @NameInMap("NetworkInterfaceIds")
     public java.util.List<String> networkInterfaceIds;
@@ -29,7 +29,7 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the list. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in a paging query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for paging in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,8 +47,8 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the NAT gateway is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
+     * <p>The region ID of the NAT gateway.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,7 +74,7 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
 
     /**
      * <p>The name of the SNAT entry.</p>
-     * <p>The name must be 2 to 128 characters in length, and must start with a letter or Chinese character. It can contain digits, underscores (_), and hyphens (-).</p>
+     * <p>The name must be 2 to 128 characters in length, and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>SnatEntry-1</p>
@@ -84,9 +84,9 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li><p>When you query SNAT entries of an Internet NAT gateway, this parameter specifies the EIP in the SNAT entry.</p>
+     * <li><p>When you query the SNAT entries of an Internet NAT gateway, this parameter specifies the elastic IP address (EIP) in the SNAT entry.</p>
      * </li>
-     * <li><p>When you query SNAT entries of a VPC NAT gateway, this parameter specifies the NAT IP address in the SNAT entry.</p>
+     * <li><p>When you query the SNAT entries of a VPC NAT gateway, this parameter specifies the NAT IP address in the SNAT entry.</p>
      * </li>
      * </ul>
      * 
@@ -120,9 +120,9 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
     /**
      * <p>The ID of the vSwitch.</p>
      * <ul>
-     * <li><p>When you query SNAT entries of an Internet NAT gateway, this parameter specifies that all ECS instances in the vSwitch can access the Internet through SNAT rules.</p>
+     * <li><p>When you query the SNAT entries of an Internet NAT gateway, this parameter specifies that all ECS instances in the vSwitch can access the Internet by using SNAT rules.</p>
      * </li>
-     * <li><p>When you query SNAT entries of a VPC NAT gateway, this parameter specifies that all ECS instances in the vSwitch can access external networks through SNAT rules.</p>
+     * <li><p>When you query the SNAT entries of a VPC NAT gateway, this parameter specifies that all ECS instances in the vSwitch can access external networks by using SNAT rules.</p>
      * </li>
      * </ul>
      * 

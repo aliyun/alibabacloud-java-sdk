@@ -7,7 +7,7 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
     /**
      * <p>The configuration mode of the route target group. Valid values:</p>
      * <ul>
-     * <li><strong>Active-Standby</strong>: Active/standby mode.</li>
+     * <li><strong>Active-Standby</strong>: active/standby mode.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,17 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The ID of the region where the VPC to which the route target group belongs is deployed. You can call the DescribeRegions operation to query the region ID.</p>
+     * <p>The IP version.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IPv4</p>
+     */
+    @NameInMap("IpVersion")
+    public String ipVersion;
+
+    /**
+     * <p>The ID of the region where the VPC to which the route target group belongs is deployed. You can call the DescribeRegions operation to query region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-qingdao</p>
@@ -62,7 +72,7 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
     public String routeTargetGroupDescription;
 
     /**
-     * <p>The routing target group instance ID.</p>
+     * <p>The ID of the route target group.</p>
      * 
      * <strong>example:</strong>
      * <p>rtg-xxxx</p>
@@ -86,16 +96,16 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
     public java.util.List<GetRouteTargetGroupResponseBodyRouteTargetMemberList> routeTargetMemberList;
 
     /**
-     * <p>The status of the routing target group. Valid values:</p>
+     * <p>The status of the route target group. Valid values:</p>
      * <ul>
-     * <li><strong>Recovering</strong>: The system is switching back to the primary instance.</li>
-     * <li><strong>Switched</strong>: The active/standby switchover is completed.</li>
-     * <li><strong>Available</strong>: The routing target group is available.</li>
-     * <li><strong>Abnormal</strong>: Secondary instance failures.</li>
-     * <li><strong>Pending</strong>: The routing target group is being created.</li>
-     * <li><strong>Switching</strong>: An active/standby switchover is in progress.</li>
-     * <li><strong>Deleting</strong>: The routing target group is being deleted.</li>
-     * <li><strong>Unavailable</strong>: Both primary and secondary instances have instance failures.</li>
+     * <li><strong>Recovering</strong>: Switching back to the primary instance.</li>
+     * <li><strong>Switched</strong>: Primary and secondary instances switched.</li>
+     * <li><strong>Available</strong>: Active.</li>
+     * <li><strong>Abnormal</strong>: The secondary instance is abnormal.</li>
+     * <li><strong>Pending</strong>: Creating.</li>
+     * <li><strong>Switching</strong>: Switching between primary and secondary instances.</li>
+     * <li><strong>Deleting</strong>: Delete in progress.</li>
+     * <li><strong>Unavailable</strong>: Both primary and secondary instances are abnormal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -138,6 +148,14 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
     }
     public String getCreateTime() {
         return this.createTime;
+    }
+
+    public GetRouteTargetGroupResponseBody setIpVersion(String ipVersion) {
+        this.ipVersion = ipVersion;
+        return this;
+    }
+    public String getIpVersion() {
+        return this.ipVersion;
     }
 
     public GetRouteTargetGroupResponseBody setRegionId(String regionId) {
@@ -227,7 +245,7 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
          * <li><strong>Enable</strong>: Enabled.</li>
          * <li><strong>Disable</strong>: Disabled.</li>
          * </ul>
-         * <p>You can replace only a disabled route target group member with another instance. You cannot modify an enabled route target group member.</p>
+         * <p>Only disabled route target group members can be replaced with other instances. Enabled route target group members cannot be modified.</p>
          * 
          * <strong>example:</strong>
          * <p>Enable</p>
@@ -249,7 +267,7 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
         public String healthCheckStatus;
 
         /**
-         * <p>The routing target group member instance ID.</p>
+         * <p>The instance ID of the route target group member.</p>
          * 
          * <strong>example:</strong>
          * <p>ep-xxxx</p>
@@ -258,9 +276,10 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
         public String memberId;
 
         /**
-         * <p>The type of the route target group member. Valid values:</p>
+         * <p>The type of the route target group member.</p>
+         * <p>Currently supported types:</p>
          * <ul>
-         * <li><strong>GatewayLoadBalancerEndpoint</strong>: Gateway load balancer endpoint.</li>
+         * <li><strong>GatewayLoadBalancerEndpoint</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>

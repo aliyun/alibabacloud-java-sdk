@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateCommonBandwidthPackageRequest extends TeaModel {
     /**
-     * <p>The maximum bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s. </p>
-     * <p>&lt;props=&quot;intl&quot;&gt;<ph>Default value range: <strong>1</strong> to <strong>1000</strong>. Default value: <strong>1</strong>.</ph></p>
+     * <p>The peak bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s. </p>
+     * <p>&lt;props=&quot;intl&quot;&gt;<ph>Valid values: <strong>1</strong> to <strong>1000</strong>. Default value: <strong>1</strong>.</ph></p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>If <strong>InternetChargeType</strong> is set to <strong>PayByBandwidth</strong>, which indicates the billing method is pay-by-bandwidth, the default value range of <strong>Bandwidth</strong> is <strong>2</strong> to <strong>20000</strong>.</li>
-     * <li>If <strong>InternetChargeType</strong> is set to <strong>PayBy95</strong>, which indicates the billing method is enhanced 95th percentile, the default value range of <strong>Bandwidth</strong> is <strong>200</strong> to <strong>20000</strong>.</li>
-     * <li>If <strong>InternetChargeType</strong> is set to <strong>PayByDominantTraffic</strong>, which indicates the billing method is pay-by-dominant-traffic, the default value range of <strong>Bandwidth</strong> is <strong>1</strong> to <strong>2000</strong>.</li>
+     * <li>If <strong>InternetChargeType</strong> is set to <strong>PayByBandwidth</strong>, which indicates that the billing method of the Internet Shared Bandwidth instance is pay-by-bandwidth, the valid values of <strong>Bandwidth</strong> are <strong>2</strong> to <strong>20000</strong>.</li>
+     * <li>If <strong>InternetChargeType</strong> is set to <strong>PayBy95</strong>, which indicates that the billing method of the Internet Shared Bandwidth instance is pay-by-enhanced-95th-percentile, the valid values of <strong>Bandwidth</strong> are <strong>200</strong> to <strong>20000</strong>.</li>
+     * <li>If <strong>InternetChargeType</strong> is set to <strong>PayByDominantTraffic</strong>, which indicates that the billing method of the Internet Shared Bandwidth instance is pay-by-dominant-traffic, the valid values of <strong>Bandwidth</strong> are <strong>1</strong> to <strong>2000</strong>.</li>
      * </ul>
-     * <p> Default value: <strong>1000</strong>.</p>
+     * <p>Default value: <strong>1000</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,9 +24,9 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
 
     /**
      * <p>The description of the Internet Shared Bandwidth instance.</p>
-     * <p>The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description must be 0 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -48,10 +48,10 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The line type. Valid values:</p>
      * <ul>
-     * <li><strong>BGP</strong> (default): BGP (multi-ISP) lines. All regions support BGP (multi-ISP) lines.</li>
-     * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro lines. Currently, only Hong Kong (China), Singapore, Japan (Tokyo), Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok) regions support BGP (Multi-ISP) Pro Internet Shared Bandwidth instances.</li>
+     * <li><strong>BGP</strong> (default): BGP (multi-ISP) line. BGP (multi-ISP) lines are supported in all regions.</li>
+     * <li><strong>BGP_PRO</strong>: BGP (multi-ISP) Pro line. BGP (multi-ISP) Pro Internet Shared Bandwidth is supported only in the Hong Kong (China), Singapore, Japan (Tokyo), Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok) regions.</li>
      * </ul>
-     * <p>If you are a single-ISP bandwidth whitelist user, you can also select the following types:</p>
+     * <p>If your account is added to the whitelist for single-ISP bandwidth, you can also select the following values:</p>
      * <ul>
      * <li><strong>ChinaTelecom</strong>: China Telecom</li>
      * <li><strong>ChinaUnicom</strong>: China Unicom</li>
@@ -60,7 +60,7 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
      * <li><strong>ChinaUnicom_L2</strong>: China Unicom L2</li>
      * <li><strong>ChinaMobile_L2</strong>: China Mobile L2</li>
      * </ul>
-     * <p>If you are a China (Hangzhou) Finance Cloud user, this field is required. Set the value to <strong>BGP_FinanceCloud</strong>.</p>
+     * <p>If you use Alibaba Finance Cloud in the China (Hangzhou) region, this parameter is required. Set the value to <strong>BGP_FinanceCloud</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>BGP</p>
@@ -74,7 +74,7 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
      * <li><strong>PayByBandwidth</strong> (default): pay-by-bandwidth.</li>
-     * <li><strong>PayBy95</strong>: enhanced 95th percentile.</li>
+     * <li><strong>PayBy95</strong>: pay-by-enhanced-95th-percentile.</li>
      * <li><strong>PayByDominantTraffic</strong>: pay-by-dominant-traffic.</li>
      * </ul>
      * 
@@ -86,7 +86,7 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
 
     /**
      * <p>The name of the Internet Shared Bandwidth instance.</p>
-     * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name must be 0 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>test123</p>
@@ -101,10 +101,10 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The minimum bandwidth commitment percentage of the Internet Shared Bandwidth instance. Set the value to <strong>20</strong>.</p>
-     * <p> &lt;props=&quot;china&quot;&gt;<ph>This parameter is required when <strong>InternetChargeType</strong> is set to <strong>PayBy95</strong>.</ph></p>
+     * <p>The minimum bandwidth percentage of the Internet Shared Bandwidth instance. Set the value to <strong>20</strong>.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;<ph>This parameter is required when <strong>InternetChargeType</strong> is set to <strong>PayBy95</strong>.</ph></p>
      * <blockquote>
-     * <p>Only the China site supports this parameter.</p>
+     * <p>This parameter is supported only on the Alibaba Cloud China site.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
 
     /**
      * <p>The region ID of the Internet Shared Bandwidth instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -125,7 +125,7 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxazdjdhd****</p>
@@ -142,13 +142,13 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The security protection level.</p>
      * <ul>
-     * <li><p>If you do not set this parameter, Anti-DDoS Origin Basic is used by default.</p>
+     * <li><p>If this parameter is left empty, Anti-DDoS Basic is used by default.</p>
      * </li>
-     * <li><p>If you set this parameter to <strong>AntiDDoS_Enhanced</strong>, Anti-DDoS Origin Enhanced is used.</p>
+     * <li><p>If this parameter is set to <strong>AntiDDoS_Enhanced</strong>, Anti-DDoS (Enhanced) is used.</p>
      * </li>
      * </ul>
-     * <p>&lt;props=&quot;china&quot;&gt;<ph>This parameter can be configured when <strong>InternetChargeType</strong> is set to <strong>PayBy95</strong>.</ph></p>
-     * <p>You can specify up to 10 security protection levels.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;<ph>You can configure this parameter when <strong>InternetChargeType</strong> is set to <strong>PayBy95</strong>.</ph></p>
+     * <p>You can add up to 10 security protection levels.</p>
      * <blockquote>
      * <p><strong>[Deprecated]</strong> This parameter is deprecated.</p>
      * </blockquote>
@@ -160,14 +160,14 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
     public java.util.List<String> securityProtectionTypes;
 
     /**
-     * <p>The list of tags for the Internet Shared Bandwidth instance.</p>
+     * <p>The list of tags of the Internet Shared Bandwidth instance.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateCommonBandwidthPackageRequestTag> tag;
 
     /**
      * <p>The zone of the Internet Shared Bandwidth instance.
-     * This parameter is required when you create an Internet Shared Bandwidth instance for a cloud box.</p>
+     * This parameter is required when you create an Internet Shared Bandwidth instance for a CloudBox.</p>
      * 
      * <strong>example:</strong>
      * <p>ap-southeast-1-lzdvn-cb</p>
@@ -310,8 +310,8 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
 
     public static class CreateCommonBandwidthPackageRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>A tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot specify an empty string.</p>
+         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -320,8 +320,8 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can specify an empty string.</p>
+         * <p>A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

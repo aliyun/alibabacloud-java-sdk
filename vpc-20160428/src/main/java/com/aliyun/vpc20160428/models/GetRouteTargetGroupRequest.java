@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class GetRouteTargetGroupRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can generate the value from your client to ensure that it is unique among different requests. The ClientToken parameter supports only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class GetRouteTargetGroupRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the region to which the route target group belongs. You can call the DescribeRegions operation to query the region ID.</p>
+     * <p>The ID of the region to which the route target group belongs. You can call the DescribeRegions operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class GetRouteTargetGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The routing target group member instance ID.</p>
+     * <p>The ID of the route target group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,7 +82,7 @@ public class GetRouteTargetGroupRequest extends TeaModel {
 
     public static class GetRouteTargetGroupRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot enter an empty string.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, it cannot be an empty string.</p>
          * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
@@ -92,7 +92,7 @@ public class GetRouteTargetGroupRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can enter an empty string.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
          * <p>A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>

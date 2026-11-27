@@ -64,6 +64,7 @@ public class DescribeVpnConnectionsRequest extends TeaModel {
 
     /**
      * <p>The list of tags bound to the IPsec-VPN connection.</p>
+     * <p>You can specify up to 20 tags at a time.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeVpnConnectionsRequestTag> tag;
@@ -201,6 +202,8 @@ public class DescribeVpnConnectionsRequest extends TeaModel {
 
         /**
          * <p>The tag value.</p>
+         * <p>The tag value can be up to 128 characters in length and can be an empty string. The tag value cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>Each tag key corresponds to a tag value. You can specify up to 20 tag values at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>TagValue</p>

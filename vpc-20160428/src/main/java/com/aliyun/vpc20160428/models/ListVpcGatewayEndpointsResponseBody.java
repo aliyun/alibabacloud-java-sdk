@@ -202,7 +202,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
          * <p>For more information about the syntax and structure of access policies, see <a href="https://help.aliyun.com/document_detail/93739.html">Policy syntax and structure</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\n  \&quot;Version\&quot;: \&quot;1\&quot;,\n  \&quot;Statement\&quot;: [\n    {\n      \&quot;Effect\&quot;: \&quot;Allow\&quot;,\n      \&quot;Action\&quot;: \&quot;<em>\&quot;,\n      \&quot;Principal\&quot;: \&quot;</em>\&quot;,\n      \&quot;Resource\&quot;: \&quot;*\&quot;\n    }\n  ]\n}</p>
+         * <p>{\n  &quot;Version&quot;: &quot;1&quot;,\n  &quot;Statement&quot;: [\n    {\n      &quot;Effect&quot;: &quot;Allow&quot;,\n      &quot;Action&quot;: &quot;<em>&quot;,\n      &quot;Principal&quot;: &quot;</em>&quot;,\n      &quot;Resource&quot;: &quot;*&quot;\n    }\n  ]\n}</p>
          */
         @NameInMap("PolicyDocument")
         public String policyDocument;

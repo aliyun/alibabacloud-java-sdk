@@ -49,7 +49,7 @@ public class GrantInstanceToVbrShrinkRequest extends TeaModel {
     public String vbrInstanceIdsShrink;
 
     /**
-     * <p>The ID of the Alibaba Cloud account that owns the VBR instance to be authorized. This account must be different from the caller\&quot;s account. You cannot specify the caller\&quot;s own account ID. This operation is used for cross-account authorization.</p>
+     * <p>The ID of the Alibaba Cloud account that owns the VBR instance to be authorized. This account must be different from the caller&quot;s account. You cannot specify the caller&quot;s own account ID. This operation is used for cross-account authorization.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

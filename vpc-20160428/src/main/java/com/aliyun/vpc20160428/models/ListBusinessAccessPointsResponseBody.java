@@ -115,7 +115,7 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
          * <p>The name of the Express Connect circuit access point.</p>
          * 
          * <strong>example:</strong>
-         * <p>杭州-萧山-B</p>
+         * <p>Hangzhou-Xiaoshan-B</p>
          */
         @NameInMap("AccessPointName")
         public String accessPointName;

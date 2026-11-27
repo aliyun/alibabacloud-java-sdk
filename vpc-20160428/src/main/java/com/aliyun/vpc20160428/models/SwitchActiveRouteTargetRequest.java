@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class SwitchActiveRouteTargetRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters. If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, and you must make sure that the value is unique among different requests. The client token can contain only ASCII characters. Note: If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</p>
      * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88e9fe6****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
+
+    /**
+     * <p>Specifies whether to perform a dry run without actually performing the operation.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
 
     /**
      * <p>The region ID of the route target group.</p>
@@ -25,7 +31,7 @@ public class SwitchActiveRouteTargetRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The instance ID of the route target group.</p>
+     * <p>The instance ID of the routing target group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +57,14 @@ public class SwitchActiveRouteTargetRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public SwitchActiveRouteTargetRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public SwitchActiveRouteTargetRequest setRegionId(String regionId) {
@@ -79,8 +93,8 @@ public class SwitchActiveRouteTargetRequest extends TeaModel {
 
     public static class SwitchActiveRouteTargetRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, the value cannot be an empty string.</p>
+         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -89,8 +103,8 @@ public class SwitchActiveRouteTargetRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, the value can be an empty string.</p>
+         * <p>A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

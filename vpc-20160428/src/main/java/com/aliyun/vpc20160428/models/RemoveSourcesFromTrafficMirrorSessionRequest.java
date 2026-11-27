@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class RemoveSourcesFromTrafficMirrorSessionRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>The client generates the value. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</p>
+     * <p>You can use the client to generate the value, and you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,11 +18,11 @@ public class RemoveSourcesFromTrafficMirrorSessionRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform a dry run on the request. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs a dry run without removing the traffic mirror sources. The system checks the required parameters, request format, and limits. If the request fails the check, an error message is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</p>
+     * <li><p><strong>true</strong>: performs a dry run and does not remove the traffic mirror sources. The system checks whether the required parameters are specified, the request format, and the limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): sends the request. After the request passes the check, the traffic mirror sources are removed.</p>
+     * <li><p><strong>false</strong> (default): sends a normal request and removes the traffic mirror sources if the request passes the check.</p>
      * </li>
      * </ul>
      * 
@@ -39,7 +39,7 @@ public class RemoveSourcesFromTrafficMirrorSessionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the traffic mirror session. You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list. For more information about the regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</p>
+     * <p>The region ID of the traffic mirror session. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list. For more information about the regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class RemoveSourcesFromTrafficMirrorSessionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The instance ID of the traffic mirror session from which you want to delete traffic mirror sources.</p>
+     * <p>The instance ID of the traffic mirror session from which you want to delete the traffic mirror sources.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class RemoveSourcesFromTrafficMirrorSessionRequest extends TeaModel {
     public String trafficMirrorSessionId;
 
     /**
-     * <p>The instance ID of the traffic mirror source that you want to delete. The maximum value of <strong>N</strong> is <strong>10</strong>.</p>
+     * <p>The instance IDs of the traffic mirror sources that you want to delete. The maximum value of <strong>N</strong> is <strong>10</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

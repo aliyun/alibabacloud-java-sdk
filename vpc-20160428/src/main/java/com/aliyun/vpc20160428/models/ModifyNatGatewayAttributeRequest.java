@@ -15,15 +15,15 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The EIP attach pattern of the NAT gateway. Valid values: You can leave this parameter empty. If you specify a value, only <strong>NAT</strong> is allowed, which indicates the standard EIP attach pattern.</p>
+     * <p>The EIP attach mode of the NAT gateway. Valid values: Leave this parameter empty or set it to <strong>NAT</strong>, which indicates the standard EIP mode.</p>
      * <blockquote>
      * <ul>
-     * <li>You can only change the pattern from <strong>MULTI_BINDED</strong> to <strong>NAT</strong>. You cannot change the pattern from <strong>NAT</strong> to <strong>MULTI_BINDED</strong>. For more information about the <strong>MULTI_BINDED</strong> pattern, see <a href="https://help.aliyun.com/document_detail/120219.html">CreateNatGateway</a>.</li>
+     * <li>You can only change the mode from <strong>MULTI_BINDED</strong> to <strong>NAT</strong>. You cannot change the mode from <strong>NAT</strong> to <strong>MULTI_BINDED</strong>. For more information about the <strong>MULTI_BINDED</strong> mode, see <a href="https://help.aliyun.com/document_detail/120219.html">CreateNatGateway</a>.</li>
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>During the EIP attach pattern switchover procedure, network connectivity may experience a transient connection at the second level (the duration of the transient connection increases with the number of EIPs. Currently, configuration changes are supported for NAT gateways with up to five EIPs attached), so execute the switchover operation during off-peak hours.</li>
-     * <li>After the EIP attach pattern is changed to <strong>NAT</strong>, the Internet NAT gateway becomes compatible with the IPv4 gateway. However, when you attach a public EIP, a private IP address in the vSwitch where the NAT gateway resides is occupied. Ensure that the vSwitch has sufficient private IP addresses. If no available private IP address exists in the vSwitch, you cannot attach a new EIP.</li>
+     * <li>During the EIP attach mode switch procedure, network connectivity may experience a transient connection that lasts for a few seconds (the duration of the transient connection increases with the number of EIPs. Currently, configuration changes are supported only for NAT gateways with up to five EIPs attached). We recommend that you execute the switch operation during off-peak hours.</li>
+     * <li>After the EIP attach mode is changed to <strong>NAT</strong>, the Internet NAT gateway becomes compatible with the IPv4 gateway. However, attaching a public EIP consumes a private IP address from the vSwitch where the NAT gateway resides. Ensure that the vSwitch has sufficient private IP addresses. If no idle private IP address is available in the vSwitch, you cannot attach new EIPs.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,9 +35,9 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the session log feature. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: enables the session log feature.</p>
+     * <li><p><strong>true</strong>: The session log feature is enabled.</p>
      * </li>
-     * <li><p><strong>false</strong>: disables the session log feature.</p>
+     * <li><p><strong>false</strong>: The session log feature is disabled.</p>
      * </li>
      * </ul>
      * 
@@ -50,8 +50,8 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable ICMP echo reply. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong> (default): enables ICMP echo reply.</li>
-     * <li><strong>false</strong>: disables ICMP echo reply.</li>
+     * <li><strong>true</strong> (default): Enabled.</li>
+     * <li><strong>false</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,6 +59,12 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
      */
     @NameInMap("IcmpReplyEnabled")
     public Boolean icmpReplyEnabled;
+
+    /**
+     * <p>The IPv6 configuration.</p>
+     */
+    @NameInMap("Ipv6Config")
+    public ModifyNatGatewayAttributeRequestIpv6Config ipv6Config;
 
     /**
      * <p>The session log configuration.</p>
@@ -146,6 +152,14 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
         return this.icmpReplyEnabled;
     }
 
+    public ModifyNatGatewayAttributeRequest setIpv6Config(ModifyNatGatewayAttributeRequestIpv6Config ipv6Config) {
+        this.ipv6Config = ipv6Config;
+        return this;
+    }
+    public ModifyNatGatewayAttributeRequestIpv6Config getIpv6Config() {
+        return this.ipv6Config;
+    }
+
     public ModifyNatGatewayAttributeRequest setLogDelivery(ModifyNatGatewayAttributeRequestLogDelivery logDelivery) {
         this.logDelivery = logDelivery;
         return this;
@@ -210,9 +224,40 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public static class ModifyNatGatewayAttributeRequestIpv6Config extends TeaModel {
+        /**
+         * <p>Specifies whether to enable IPv6. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Disabled.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("Ipv6Enabled")
+        public Boolean ipv6Enabled;
+
+        public static ModifyNatGatewayAttributeRequestIpv6Config build(java.util.Map<String, ?> map) throws Exception {
+            ModifyNatGatewayAttributeRequestIpv6Config self = new ModifyNatGatewayAttributeRequestIpv6Config();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyNatGatewayAttributeRequestIpv6Config setIpv6Enabled(Boolean ipv6Enabled) {
+            this.ipv6Enabled = ipv6Enabled;
+            return this;
+        }
+        public Boolean getIpv6Enabled() {
+            return this.ipv6Enabled;
+        }
+
+    }
+
     public static class ModifyNatGatewayAttributeRequestLogDelivery extends TeaModel {
         /**
-         * <p>The session log delivery type. Valid values: <strong>sls</strong>, which indicates Simple Log Service.</p>
+         * <p>The destination type for session logs. Valid value: <strong>sls</strong>, which indicates Simple Log Service.</p>
          * 
          * <strong>example:</strong>
          * <p>sls</p>
@@ -221,7 +266,7 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
         public String logDeliveryType;
 
         /**
-         * <p>The session log delivery destination. Valid values: acs:log:${regionName}:${projectOwnerAliUid}:project/${projectName}/logstore/${logstoreName}.</p>
+         * <p>The destination address for session logs. Format: acs:log:${regionName}:${projectOwnerAliUid}:project/${projectName}/logstore/${logstoreName}.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:log:cn-hangzhou:0000:project/nat_session_log_project/logstore/session_log_test</p>

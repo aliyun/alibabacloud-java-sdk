@@ -15,6 +15,12 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The type of resource associated with the IPsec-VPN connection.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><strong>CEN</strong>: The IPsec-VPN connection is attached to a transit router instance.</li>
+     * <li><strong>VPNGW</strong>: The IPsec-VPN connection is attached to a VPN gateway instance.</li>
+     * <li><strong>NO_ASSOCIATED</strong>: The IPsec-VPN connection is not attached to any resource.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>CEN</p>
@@ -52,6 +58,11 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the IPsec-VPN connection configuration takes effect immediately.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: yes.</li>
+     * <li><strong>false</strong>: no.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -135,6 +146,11 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The network type of the IPsec-VPN connection.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><strong>public</strong>: public network.</li>
+     * <li><strong>private</strong>: private network.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>public</p>
@@ -805,6 +821,10 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The negotiation mode of the IKE version. Valid values:</p>
+         * <ul>
+         * <li><strong>main</strong>: main mode. This mode ensures high security during negotiation.</li>
+         * <li><strong>aggressive</strong>: aggressive mode. This mode features fast negotiation and a high success rate.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>main</p>
@@ -1024,6 +1044,11 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the DPD feature is enabled for the tunnel.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enabled.</li>
+         * <li><strong>false</strong>: disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1033,6 +1058,11 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the NAT traversal feature is enabled for the tunnel.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enabled.</li>
+         * <li><strong>false</strong>: disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1051,6 +1081,11 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The role of the tunnel.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>master</strong>: The tunnel is the master tunnel.</li>
+         * <li><strong>slave</strong>: The tunnel is the backup tunnel.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>master</p>
@@ -1095,6 +1130,10 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The creation order of the tunnel.</p>
+         * <ul>
+         * <li><strong>1</strong>: the first tunnel.</li>
+         * <li><strong>2</strong>: the second tunnel.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1215,6 +1254,11 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the health check feature is enabled for the IPsec-VPN connection.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enabled.</li>
+         * <li><strong>false</strong>: disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1320,6 +1364,11 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
     public static class ModifyVpnAttachmentAttributeResponseBodyVpnBgpConfig extends TeaModel {
         /**
          * <p>Indicates whether the BGP feature is enabled for the IPsec-VPN connection.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enabled.</li>
+         * <li><strong>false</strong>: disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1365,6 +1414,13 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The BGP negotiation status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p><strong>success</strong>: normal.</p>
+         * </li>
+         * <li><p><strong>false</strong>: abnormal.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>

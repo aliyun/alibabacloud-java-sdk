@@ -303,7 +303,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;VpnEnableBgp\&quot;:\&quot;true\&quot;,\&quot;VisuallySsl\&quot;:\&quot;true\&quot;,\&quot;PbrPriority\&quot;:\&quot;true\&quot;,\&quot;VpnNewImage\&quot;:\&quot;true\&quot;,\&quot;description\&quot;:\&quot;Forwarding 1.3.24\&quot;,\&quot;VpnVersion\&quot;:\&quot;v1.2.4\&quot;,\&quot;IDaaSNewVersion\&quot;:\&quot;true\&quot;}</p>
+     * <p>{&quot;VpnEnableBgp&quot;:&quot;true&quot;,&quot;VisuallySsl&quot;:&quot;true&quot;,&quot;PbrPriority&quot;:&quot;true&quot;,&quot;VpnNewImage&quot;:&quot;true&quot;,&quot;description&quot;:&quot;Forwarding 1.3.24&quot;,&quot;VpnVersion&quot;:&quot;v1.2.4&quot;,&quot;IDaaSNewVersion&quot;:&quot;true&quot;}</p>
      */
     @NameInMap("Tag")
     public String tag;

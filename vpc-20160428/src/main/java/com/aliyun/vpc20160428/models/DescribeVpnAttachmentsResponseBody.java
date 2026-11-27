@@ -193,7 +193,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;description\&quot;:\&quot;forwarding1.7.22\&quot;,\&quot;VisuallySsl\&quot;:\&quot;true\&quot;,\&quot;PbrPriority\&quot;:\&quot;true\&quot;,\&quot;BGPSupport\&quot;:\&quot;true\&quot;,\&quot;IDaaSNewVersion\&quot;:\&quot;true\&quot;}</p>
+         * <p>{&quot;description&quot;:&quot;forwarding1.7.22&quot;,&quot;VisuallySsl&quot;:&quot;true&quot;,&quot;PbrPriority&quot;:&quot;true&quot;,&quot;BGPSupport&quot;:&quot;true&quot;,&quot;IDaaSNewVersion&quot;:&quot;true&quot;}</p>
          */
         @NameInMap("Tag")
         public String tag;

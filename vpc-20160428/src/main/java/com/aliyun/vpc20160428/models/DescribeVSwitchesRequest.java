@@ -8,7 +8,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
      * <p>Specifies whether to only precheck the request. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: The system prechecks the request without creating resources. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): The system sends a normal request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</li>
+     * <li><strong>false</strong> (default): The system sends a normal request. If the request passes the precheck, the system returns an HTTP 2xx status code and performs the operation.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,8 +39,8 @@ public class DescribeVSwitchesRequest extends TeaModel {
     /**
      * <p>Specifies whether to query the IPv6 single-stack vSwitches in the specified region. Valid values:</p>
      * <ul>
-     * <li>true: Queries the IPv6 single-stack vSwitches in the specified region.</li>
-     * <li>false: Does not query the IPv6 single-stack vSwitches in the specified region.</li>
+     * <li><strong>true</strong>: Queries the IPv6 single-stack vSwitches in the specified region.</li>
+     * <li><strong>false</strong>: Does not query the IPv6 single-stack vSwitches in the specified region.</li>
      * </ul>
      * <p>If you do not specify this parameter, the system queries all vSwitches in the specified region by default.</p>
      * 
@@ -85,7 +85,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -146,7 +146,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
 
     /**
      * <p>The name of the vSwitch.</p>
-     * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>vSwitch</p>
@@ -155,7 +155,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public String vSwitchName;
 
     /**
-     * <p>The Alibaba Cloud account ID of the resource ownership.</p>
+     * <p>The Alibaba Cloud account ID for resource ownership.</p>
      * 
      * <strong>example:</strong>
      * <p>2546073170691****</p>
@@ -343,7 +343,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
 
     public static class DescribeVSwitchesRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot specify an empty string.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot enter an empty string.</p>
          * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
@@ -353,7 +353,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can specify an empty string.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can enter an empty string.</p>
          * <p>A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>

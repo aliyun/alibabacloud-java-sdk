@@ -15,8 +15,8 @@ public class RemoveGlobalAccelerationInstanceIpRequest extends TeaModel {
     public String globalAccelerationInstanceId;
 
     /**
-     * <p>The ID of the EIP instance. </p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36018.html">DescribeEipAddresses</a> operation to query the EIP instance ID.</p>
+     * <p>The ID of the EIP. </p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36018.html">DescribeEipAddresses</a> operation to query the EIP ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class RemoveGlobalAccelerationInstanceIpRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region where the Internet Shared Bandwidth instance is located. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The region where the Internet Shared Bandwidth instance is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

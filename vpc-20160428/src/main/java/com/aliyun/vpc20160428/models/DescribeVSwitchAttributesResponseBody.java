@@ -41,7 +41,20 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether the IPv6 CIDR block is enabled and configured for the vSwitch. Valid values:</p>
+     * <p>Specifies whether DNS64 is enabled for the vSwitch. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: DNS64 is enabled.</li>
+     * <li><strong>false</strong>: DNS64 is disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("EnableDns64")
+    public Boolean enableDns64;
+
+    /**
+     * <p>Specifies whether the IPv6 CIDR block feature is enabled and configured for the vSwitch. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: Enabled.</li>
      * <li><strong>false</strong>: Disabled.</li>
@@ -63,7 +76,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public String ipv6CidrBlock;
 
     /**
-     * <p>Indicates whether the vSwitch is an IPv6 single-stack vSwitch. Valid values:</p>
+     * <p>Specifies whether the vSwitch is an IPv6 single-stack vSwitch. Valid values:</p>
      * <ul>
      * <li>true: The vSwitch is an IPv6 single-stack vSwitch.</li>
      * <li>false: The vSwitch is not an IPv6 single-stack vSwitch.</li>
@@ -98,9 +111,9 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public String networkAclId;
 
     /**
-     * <p>The Alibaba Cloud account ID of the resource owner.</p>
+     * <p>The Alibaba Cloud account ID of the resource ownership.</p>
      * <blockquote>
-     * <p>Notice: This value is of the Long type and may cause precision loss in some programming languages. Use it with caution.</p>
+     * <p>Notice: This value is of the Long type. Precision loss may occur in some programming languages. Use it with caution.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -134,11 +147,11 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public DescribeVSwitchAttributesResponseBodyRouteTable routeTable;
 
     /**
-     * <p>The share type of the vSwitch.</p>
+     * <p>The sharing type of the vSwitch.</p>
      * <ul>
-     * <li>If the value is empty, the vSwitch is a standard vSwitch.</li>
-     * <li>If the value is <strong>Shared</strong>, the vSwitch is a shared vSwitch.</li>
-     * <li>If the value is <strong>Sharing</strong>, the vSwitch is being shared.</li>
+     * <li>If the value is empty, the vSwitch is a regular vSwitch.</li>
+     * <li><strong>Shared</strong>: The vSwitch is a shared vSwitch.</li>
+     * <li><strong>Sharing</strong>: The vSwitch is being shared with other users.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -150,9 +163,9 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     /**
      * <p>The status of the vSwitch. Valid values:</p>
      * <ul>
-     * <li><p><strong>Pending</strong>: Configuring. </p>
+     * <li><p><strong>Pending</strong>: The vSwitch is being configured. </p>
      * </li>
-     * <li><p><strong>Available</strong>: Available.</p>
+     * <li><p><strong>Available</strong>: The vSwitch is available.</p>
      * </li>
      * </ul>
      * 
@@ -236,6 +249,14 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public DescribeVSwitchAttributesResponseBody setEnableDns64(Boolean enableDns64) {
+        this.enableDns64 = enableDns64;
+        return this;
+    }
+    public Boolean getEnableDns64() {
+        return this.enableDns64;
     }
 
     public DescribeVSwitchAttributesResponseBody setEnabledIpv6(Boolean enabledIpv6) {
@@ -379,9 +400,9 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         /**
          * <p>The type of the route table. Valid values:</p>
          * <ul>
-         * <li><p><strong>System</strong>: System route table.</p>
+         * <li><p><strong>System</strong>: system route table.</p>
          * </li>
-         * <li><p><strong>Custom</strong>: Custom route table.</p>
+         * <li><p><strong>Custom</strong>: custom route table.</p>
          * </li>
          * </ul>
          * 

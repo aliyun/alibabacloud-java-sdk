@@ -100,7 +100,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
          * <p>The default access policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>{   \&quot;Version\&quot; : \&quot;1\&quot;,   \&quot;Statement\&quot; : [ {     \&quot;Effect\&quot; : \&quot;Allow\&quot;,     \&quot;Action\&quot; : \&quot;<em>\&quot;,     \&quot;Principal\&quot; : \&quot;</em>\&quot;,     \&quot;Resource\&quot; : \&quot;*\&quot;   } ] }</p>
+         * <p>{   &quot;Version&quot; : &quot;1&quot;,   &quot;Statement&quot; : [ {     &quot;Effect&quot; : &quot;Allow&quot;,     &quot;Action&quot; : &quot;<em>&quot;,     &quot;Principal&quot; : &quot;</em>&quot;,     &quot;Resource&quot; : &quot;*&quot;   } ] }</p>
          */
         @NameInMap("DefaultPolicyDocument")
         public String defaultPolicyDocument;

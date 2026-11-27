@@ -58,7 +58,7 @@ public class CreateTrafficMirrorSessionRequest extends TeaModel {
      * <ul>
      * <li><p>The value of this parameter affects the length of the packet received by the traffic mirror destination. For more information, see the mirrored packet length and MTU limits in <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</p>
      * </li>
-     * <li><p>This parameter is available only in specific regions. For more information, see the description of the mirrored packet length parameter in <a href="https://help.aliyun.com/document_detail/207514.html">Create and manage traffic mirroring</a>.</p>
+     * <li><p>This parameter is available only in specific regions. For more information, see the description of the mirrored packet length parameter in <a href="https://help.aliyun.com/document_detail/207514.html">Create and manage traffic mirrors</a>.</p>
      * </li>
      * </ul>
      * 
@@ -122,7 +122,7 @@ public class CreateTrafficMirrorSessionRequest extends TeaModel {
 
     /**
      * <p>The description of the traffic mirror session.</p>
-     * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>This is a trafficmirrorsession.</p>
@@ -132,7 +132,7 @@ public class CreateTrafficMirrorSessionRequest extends TeaModel {
 
     /**
      * <p>The name of the traffic mirror session.</p>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -141,7 +141,7 @@ public class CreateTrafficMirrorSessionRequest extends TeaModel {
     public String trafficMirrorSessionName;
 
     /**
-     * <p>The instance ID of the traffic mirror source. Currently, network interface controllers (NICs) are supported as traffic mirror sources. The default value of <strong>N</strong> is <strong>1</strong>, which means that you can add only one traffic mirror source to a traffic mirror session.</p>
+     * <p>The instance ID of the traffic mirror source. Currently, elastic network interface controllers (NICs) are supported as traffic mirror sources. The default value of <strong>N</strong> is <strong>1</strong>, which means that you can add only one traffic mirror source to a traffic mirror session.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -151,7 +151,7 @@ public class CreateTrafficMirrorSessionRequest extends TeaModel {
     public java.util.List<String> trafficMirrorSourceIds;
 
     /**
-     * <p>The instance ID of the traffic mirror destination. Currently, network interface controllers (NICs) and internal-facing SLB instances are supported as traffic mirror destinations.</p>
+     * <p>The instance ID of the traffic mirror destination. Currently, elastic network interface controllers (NICs) and internal-facing SLB instances are supported as traffic mirror destinations.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -163,9 +163,9 @@ public class CreateTrafficMirrorSessionRequest extends TeaModel {
     /**
      * <p>The type of the traffic mirror destination. Valid values:</p>
      * <ul>
-     * <li><p><strong>NetworkInterface</strong>: network interface controllers (NICs).</p>
+     * <li><p><strong>NetworkInterface</strong>: elastic network interface controller (NIC).</p>
      * </li>
-     * <li><p><strong>SLB</strong>: internal-facing SLB instances.</p>
+     * <li><p><strong>SLB</strong>: internal-facing SLB instance.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -178,7 +178,7 @@ public class CreateTrafficMirrorSessionRequest extends TeaModel {
 
     /**
      * <p>The VXLAN network identifier (VNI) that is used to distinguish different mirrored data. Valid values: <strong>0</strong> to <strong>16777215</strong>.</p>
-     * <p>You can use the VNI to distinguish the mirrored data of different sessions at the traffic mirror destination. You can specify a custom VNI or let the system randomly allocate the value. If you want the system to randomly allocate the VNI, do not specify this parameter.</p>
+     * <p>You can use the VNI to distinguish the mirrored data of different sessions at the traffic mirror destination. You can specify a custom VNI or let the system randomly allocate a VNI. If you want the system to randomly allocate a VNI, do not specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -345,7 +345,7 @@ public class CreateTrafficMirrorSessionRequest extends TeaModel {
 
     public static class CreateTrafficMirrorSessionRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot specify an empty string.</p>
          * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
@@ -355,7 +355,7 @@ public class CreateTrafficMirrorSessionRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can specify an empty string.</p>
          * <p>A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>

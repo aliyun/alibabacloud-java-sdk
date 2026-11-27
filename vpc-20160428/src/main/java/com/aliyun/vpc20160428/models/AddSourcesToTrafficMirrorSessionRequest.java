@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class AddSourcesToTrafficMirrorSessionRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, and you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can generate the parameter value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</p>
      * <blockquote>
      * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
@@ -18,11 +18,11 @@ public class AddSourcesToTrafficMirrorSessionRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to only precheck the request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run on the request. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: prechecks the request without adding the traffic mirror sources. The system checks whether the required parameters are specified, the request format, and the limits. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</p>
+     * <li><p><strong>true</strong>: performs a dry run and does not add the traffic mirror sources. The system checks whether the required parameters are specified, the request format is valid, and the limits are met. If the request fails the dry run, the system returns an error. If the request passes the dry run, the system returns the <code>DryRunOperation</code> error code.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): sends the request. After the request passes the precheck, the traffic mirror sources are added.</p>
+     * <li><p><strong>false</strong> (default): sends a normal request. If the request passes the dry run, the system adds the traffic mirror sources.</p>
      * </li>
      * </ul>
      * 
@@ -57,7 +57,7 @@ public class AddSourcesToTrafficMirrorSessionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The instance ID of the traffic mirror session to which you want to add traffic mirror sources.</p>
+     * <p>The instance ID of the traffic mirror session for which you want to add traffic mirror sources.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,7 +67,7 @@ public class AddSourcesToTrafficMirrorSessionRequest extends TeaModel {
     public String trafficMirrorSessionId;
 
     /**
-     * <p>The instance IDs of the traffic mirror sources that you want to add. Currently, elastic network interfaces (ENIs) are supported as traffic mirror sources. The default value of <strong>N</strong> is <strong>1</strong>, which indicates that you can add only one traffic mirror source to a traffic mirror session.</p>
+     * <p>The instance IDs of the traffic mirror sources that you want to add. Currently, only elastic network interfaces (ENIs) are supported as traffic mirror sources. The default value of <strong>N</strong> is <strong>1</strong>, which indicates that only one traffic mirror source can be added to a traffic mirror session.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,13 +5,28 @@ import com.aliyun.tea.*;
 
 public class UpdateRouteTargetGroupRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, and you must ensure that the value is unique among different requests. The client token can contain only ASCII characters. Note: If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters. Note: If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
+
+    /**
+     * <p>Specifies whether to perform a dry run without executing the actual operation.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
+     * <p>The IP version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IPv4</p>
+     */
+    @NameInMap("IpVersion")
+    public String ipVersion;
 
     /**
      * <p>The region ID of the route target group instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
@@ -34,7 +49,7 @@ public class UpdateRouteTargetGroupRequest extends TeaModel {
     public String routeTargetGroupDescription;
 
     /**
-     * <p>The instance ID of the routing target group.</p>
+     * <p>The routing target group instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,6 +90,22 @@ public class UpdateRouteTargetGroupRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public UpdateRouteTargetGroupRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    public UpdateRouteTargetGroupRequest setIpVersion(String ipVersion) {
+        this.ipVersion = ipVersion;
+        return this;
+    }
+    public String getIpVersion() {
+        return this.ipVersion;
     }
 
     public UpdateRouteTargetGroupRequest setRegionId(String regionId) {
@@ -119,7 +150,7 @@ public class UpdateRouteTargetGroupRequest extends TeaModel {
 
     public static class UpdateRouteTargetGroupRequestRouteTargetMemberList extends TeaModel {
         /**
-         * <p>The instance ID of the member in the routing target group.</p>
+         * <p>The routing target group member instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ep-xxxx</p>
@@ -128,7 +159,7 @@ public class UpdateRouteTargetGroupRequest extends TeaModel {
         public String memberId;
 
         /**
-         * <p>The type of the member in the route target group.</p>
+         * <p>The type of the route target group member.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li><strong>GatewayLoadBalancerEndpoint</strong></li>
@@ -142,7 +173,7 @@ public class UpdateRouteTargetGroupRequest extends TeaModel {
         public String memberType;
 
         /**
-         * <p>The weight of the member in the route target group. Valid values:</p>
+         * <p>The weight of the route target group member. Valid values:</p>
          * <ul>
          * <li>100: The member is the primary instance.</li>
          * <li>0: The member is the secondary instance.</li>

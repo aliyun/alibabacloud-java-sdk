@@ -7,8 +7,8 @@ public class DescribeVSwitchAttributesRequest extends TeaModel {
     /**
      * <p>Specifies whether to only precheck the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The system prechecks the request without querying the configuration information of the vSwitch. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): The system sends a normal request. If the request passes the precheck, an HTTP 2xx status code is returned and the configuration information of the vSwitch is queried.</li>
+     * <li><strong>true</strong>: sends a precheck request without querying the vSwitch configurations. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): sends a regular request. If the request passes the precheck, the HTTP 2xx status code is returned and the vSwitch configurations are queried.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DescribeVSwitchAttributesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the VPC to which the route table belongs.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
