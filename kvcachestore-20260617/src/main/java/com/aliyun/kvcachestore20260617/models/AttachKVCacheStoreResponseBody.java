@@ -11,7 +11,7 @@ public class AttachKVCacheStoreResponseBody extends TeaModel {
     public java.util.List<AttachKVCacheStoreResponseBodyAttachResults> attachResults;
 
     /**
-     * <p>The request ID. This ID is returned regardless of whether the API call is successful.</p>
+     * <p>The request ID. This ID is returned regardless of whether the API call succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>F7BEF1E2-7E56-5BF1-8E36-77A51C5812F1</p>
@@ -69,7 +69,7 @@ public class AttachKVCacheStoreResponseBody extends TeaModel {
         public String kvcsId;
 
         /**
-         * <p>The operation result. Valid values: ATTACHING (the request is accepted and the asynchronous mounting is in progress), ATTACHED (idempotent: the mounting is complete), Success (synchronous verification passed and asynchronous mounting is complete), and Failed (the operation failed).</p>
+         * <p>The operation result. Valid values: ATTACHING (the request is accepted and the asynchronous mounting is in progress), ATTACHED (idempotent: the mounting is already complete), Success (synchronous verification passed and asynchronous mounting is complete), and Failed (the operation failed).</p>
          * 
          * <strong>example:</strong>
          * <p>ATTACHING</p>

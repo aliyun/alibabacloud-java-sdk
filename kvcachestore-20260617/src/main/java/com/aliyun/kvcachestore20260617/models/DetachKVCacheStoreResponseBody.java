@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DetachKVCacheStoreResponseBody extends TeaModel {
     /**
-     * <p>The list of unmount results.</p>
+     * <p>The list of detach results.</p>
      */
     @NameInMap("DetachResults")
     public java.util.List<DetachKVCacheStoreResponseBodyDetachResults> detachResults;
 
     /**
-     * <p>The request ID. This ID is returned regardless of whether the API call succeeds.</p>
+     * <p>The request ID. This ID is returned regardless of whether the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>B127704C-ECB1-5B0A-AA9C-8F394A6F179F</p>
@@ -42,7 +42,7 @@ public class DetachKVCacheStoreResponseBody extends TeaModel {
 
     public static class DetachKVCacheStoreResponseBodyDetachResults extends TeaModel {
         /**
-         * <p>The error code returned when the operation fails. This field is null when the operation succeeds.</p>
+         * <p>The error code returned when the operation fails. This parameter is null when the operation succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>KVCacheInstance.NotAttached</p>
@@ -51,13 +51,22 @@ public class DetachKVCacheStoreResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message returned when the operation fails. This field is null when the operation succeeds.</p>
+         * <p>The error message returned when the operation fails. This parameter is null when the operation succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>The KVCacheInstance is not in ATTACHED status.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
+
+        /**
+         * <p>The ID of the compute instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-hdska8721321</p>
+         */
+        @NameInMap("InstanceId")
+        public String instanceId;
 
         /**
          * <p>KVCacheStore KvcsId</p>
@@ -69,7 +78,12 @@ public class DetachKVCacheStoreResponseBody extends TeaModel {
         public String kvcsId;
 
         /**
-         * <p>The operation result. Valid values: DETACHING (the request is accepted and the asynchronous unmount operation is in progress; this value is also returned for idempotent calls), Success (synchronous verification passed and asynchronous operation completed), and Failed (the operation failed).</p>
+         * <p>The operation result. Valid values:</p>
+         * <ul>
+         * <li>DETACHING: The request is accepted and the asynchronous detach operation is in progress. This value is also returned for idempotent calls.</li>
+         * <li>Success: The synchronous verification is passed and the asynchronous operation is complete.</li>
+         * <li>Failed: The operation failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>DETACHING</p>
@@ -105,6 +119,14 @@ public class DetachKVCacheStoreResponseBody extends TeaModel {
         }
         public String getErrorMessage() {
             return this.errorMessage;
+        }
+
+        public DetachKVCacheStoreResponseBodyDetachResults setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public DetachKVCacheStoreResponseBodyDetachResults setKvcsId(String kvcsId) {

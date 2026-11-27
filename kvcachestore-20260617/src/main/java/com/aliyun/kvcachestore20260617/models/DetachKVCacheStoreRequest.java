@@ -14,7 +14,7 @@ public class DetachKVCacheStoreRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The region ID. Example: cn-hangzhou.</p>
+     * <p>The region ID, such as cn-hangzhou.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DetachKVCacheStoreRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The list of resources to unmount. You can specify up to 100 resources.</p>
+     * <p>The list of resources to detach. You can specify up to 100 resources.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceIds")
@@ -61,6 +61,15 @@ public class DetachKVCacheStoreRequest extends TeaModel {
 
     public static class DetachKVCacheStoreRequestResourceIds extends TeaModel {
         /**
+         * <p>The ID of the compute instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-hdska8721321</p>
+         */
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        /**
          * <p>KVCacheStore KvcsId</p>
          * <p>This parameter is required.</p>
          * 
@@ -72,7 +81,6 @@ public class DetachKVCacheStoreRequest extends TeaModel {
 
         /**
          * <p>The ID of the VSC on the compute side.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>vsc-uf6cpove22nrjnpenwkyal</p>
@@ -83,6 +91,14 @@ public class DetachKVCacheStoreRequest extends TeaModel {
         public static DetachKVCacheStoreRequestResourceIds build(java.util.Map<String, ?> map) throws Exception {
             DetachKVCacheStoreRequestResourceIds self = new DetachKVCacheStoreRequestResourceIds();
             return TeaModel.build(map, self);
+        }
+
+        public DetachKVCacheStoreRequestResourceIds setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public DetachKVCacheStoreRequestResourceIds setKvcsId(String kvcsId) {
