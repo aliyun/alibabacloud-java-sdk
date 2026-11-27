@@ -72,7 +72,7 @@ public class CreateAddonReleaseResponseBody extends TeaModel {
          * <p>The phase status.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;phase\&quot;: \&quot;Created\&quot;, \&quot;executionDetails\&quot;: [], \&quot;invocations\&quot;: [], \&quot;latestExecError\&quot;: {\&quot;message\&quot;: \&quot;\&quot;, \&quot;code\&quot;: \&quot;\&quot;, \&quot;requestId\&quot;: \&quot;\&quot;, \&quot;extraInfo\&quot;: \&quot;\&quot;, \&quot;title\&quot;: \&quot;\&quot;}}</p>
+         * <p>{&quot;phase&quot;: &quot;Created&quot;, &quot;executionDetails&quot;: [], &quot;invocations&quot;: [], &quot;latestExecError&quot;: {&quot;message&quot;: &quot;&quot;, &quot;code&quot;: &quot;&quot;, &quot;requestId&quot;: &quot;&quot;, &quot;extraInfo&quot;: &quot;&quot;, &quot;title&quot;: &quot;&quot;}}</p>
          */
         @NameInMap("status")
         public String status;

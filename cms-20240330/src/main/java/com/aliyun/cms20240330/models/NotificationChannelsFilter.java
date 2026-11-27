@@ -8,7 +8,7 @@ public class NotificationChannelsFilter extends TeaModel {
      * <p>The list of notification contacts in the rule contains any value in the array. This uses OR logic and corresponds to V1 notification.contacts.</p>
      * 
      * <strong>example:</strong>
-     * <p>[&quot;张三&quot;,&quot;李四&quot;]</p>
+     * <p>[&quot;Zhang San&quot;,&quot;Li Si&quot;]</p>
      */
     @NameInMap("containsContacts")
     public java.util.List<String> containsContacts;
@@ -44,7 +44,7 @@ public class NotificationChannelsFilter extends TeaModel {
      * <p>The list of notification contact groups in the rule contains any value in the array. This uses OR logic and corresponds to V1 notification.groups.</p>
      * 
      * <strong>example:</strong>
-     * <p>[&quot;运维组&quot;,&quot;SRE团队&quot;]</p>
+     * <p>[&quot;O&amp;M team&quot;,&quot;SRE team&quot;]</p>
      */
     @NameInMap("containsGroups")
     public java.util.List<String> containsGroups;

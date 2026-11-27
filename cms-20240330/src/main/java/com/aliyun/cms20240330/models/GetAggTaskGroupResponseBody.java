@@ -110,8 +110,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
          * interval: &quot;60s&quot;
          * rules:<ul>
          * <li>record: &quot;node_namespace_pod:kube_pod_info:&quot;
-         * expr: &quot;max(label_replace(kube_pod_info{job=\&quot;kubernetes-pods-kube-state-metrics\&quot;\
-         *   }, \&quot;pod\&quot;, \&quot;$1\&quot;, \&quot;pod\&quot;, \&quot;(.*)\&quot;)) by (node, namespace, pod, cluster)&quot;</li>
+         * expr: &quot;max(label_replace(kube_pod_info{job=&quot;kubernetes-pods-kube-state-metrics&quot;<br>  }, &quot;pod&quot;, &quot;$1&quot;, &quot;pod&quot;, &quot;(.*)&quot;)) by (node, namespace, pod, cluster)&quot;</li>
          * </ul>
          * </li>
          * </ul>

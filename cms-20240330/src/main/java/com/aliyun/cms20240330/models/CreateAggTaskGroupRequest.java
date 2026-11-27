@@ -15,8 +15,7 @@ public class CreateAggTaskGroupRequest extends TeaModel {
      * interval: &quot;60s&quot;
      * rules:<ul>
      * <li>record: &quot;node_namespace_pod:kube_pod_info:&quot;
-     * expr: &quot;max(label_replace(kube_pod_info{job=\&quot;kubernetes-pods-kube-state-metrics\&quot;\
-     *   }, \&quot;pod\&quot;, \&quot;$1\&quot;, \&quot;pod\&quot;, \&quot;(.*)\&quot;)) by (node, namespace, pod, cluster)&quot;</li>
+     * expr: &quot;max(label_replace(kube_pod_info{job=&quot;kubernetes-pods-kube-state-metrics&quot;<br>  }, &quot;pod&quot;, &quot;$1&quot;, &quot;pod&quot;, &quot;(.*)&quot;)) by (node, namespace, pod, cluster)&quot;</li>
      * </ul>
      * </li>
      * </ul>
@@ -101,7 +100,7 @@ public class CreateAggTaskGroupRequest extends TeaModel {
      * <p>The precheck configuration. By default, this parameter is not configured. The input string must be valid JSON.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;policy&quot;:&quot;skip&quot;,&quot;prometheusId&quot;:&quot;xxx&quot;,&quot;query&quot;:&quot;scalar(sum(count_over_time(up{job=\&quot;_arms/kubelet/cadvisor\&quot;}[15s])) / 21)&quot;,&quot;threshold&quot;:0.5,&quot;timeout&quot;:15,&quot;type&quot;:&quot;promql&quot;}</p>
+     * <p>{&quot;policy&quot;:&quot;skip&quot;,&quot;prometheusId&quot;:&quot;xxx&quot;,&quot;query&quot;:&quot;scalar(sum(count_over_time(up{job=&quot;_arms/kubelet/cadvisor&quot;}[15s])) / 21)&quot;,&quot;threshold&quot;:0.5,&quot;timeout&quot;:15,&quot;type&quot;:&quot;promql&quot;}</p>
      */
     @NameInMap("precheckString")
     public String precheckString;

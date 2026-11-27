@@ -18,7 +18,7 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>集成名</p>
+     * <p>Integration name</p>
      */
     @NameInMap("alertEventIntegrationPolicyName")
     public String alertEventIntegrationPolicyName;

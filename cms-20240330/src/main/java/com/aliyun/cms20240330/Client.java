@@ -2091,6 +2091,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public CreateServiceResponse createServiceWithOptions(String workspace, CreateServiceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("dryRun", request.dryRun);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.attributes)) {
             body.put("attributes", request.attributes);
@@ -2130,6 +2135,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -2170,8 +2176,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public CreateServiceObservabilityResponse createServiceObservabilityWithOptions(String workspace, String type, CreateServiceObservabilityRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("dryRun", request.dryRun);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateServiceObservability"),
@@ -3867,7 +3879,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an application observability service.</p>
+     * <p>Deletes RUM symbol files.</p>
+     * 
+     * @param request DeleteRumSymbolFilesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteRumSymbolFilesResponse
+     */
+    public DeleteRumSymbolFilesResponse deleteRumSymbolFilesWithOptions(DeleteRumSymbolFilesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filePaths)) {
+            body.put("filePaths", request.filePaths);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceId)) {
+            body.put("serviceId", request.serviceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            body.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteRumSymbolFiles"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/rum/symbolFiles/delete"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRumSymbolFilesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes RUM symbol files.</p>
+     * 
+     * @param request DeleteRumSymbolFilesRequest
+     * @return DeleteRumSymbolFilesResponse
+     */
+    public DeleteRumSymbolFilesResponse deleteRumSymbolFiles(DeleteRumSymbolFilesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteRumSymbolFilesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes the application observability service.</p>
      * 
      * @param request DeleteServiceRequest
      * @param headers map
@@ -3876,8 +3943,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public DeleteServiceResponse deleteServiceWithOptions(String workspace, String serviceId, DeleteServiceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("dryRun", request.dryRun);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteService"),
@@ -3895,7 +3968,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an application observability service.</p>
+     * <p>Deletes the application observability service.</p>
      * 
      * @param request DeleteServiceRequest
      * @return DeleteServiceResponse
@@ -6332,6 +6405,223 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getPrometheusViewWithOptions(prometheusViewId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the signature parameters required for uploading RUM symbol files.</p>
+     * 
+     * @param request GetRumSymbolFileParamsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRumSymbolFileParamsResponse
+     */
+    public GetRumSymbolFileParamsResponse getRumSymbolFileParamsWithOptions(GetRumSymbolFileParamsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.debugId)) {
+            body.put("debugId", request.debugId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileKind)) {
+            body.put("fileKind", request.fileKind);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
+            body.put("fileName", request.fileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceId)) {
+            body.put("serviceId", request.serviceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            body.put("version", request.version);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            body.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRumSymbolFileParams"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/rum/symbolFile/upload/policies"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRumSymbolFileParamsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the signature parameters required for uploading RUM symbol files.</p>
+     * 
+     * @param request GetRumSymbolFileParamsRequest
+     * @return GetRumSymbolFileParamsResponse
+     */
+    public GetRumSymbolFileParamsResponse getRumSymbolFileParams(GetRumSymbolFileParamsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getRumSymbolFileParamsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the symbol files uploaded by RUM users and supports filtering by platform, file type, version, and keywords.</p>
+     * 
+     * @param request GetRumSymbolFilesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRumSymbolFilesResponse
+     */
+    public GetRumSymbolFilesResponse getRumSymbolFilesWithOptions(GetRumSymbolFilesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.artifactType)) {
+            body.put("artifactType", request.artifactType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keywords)) {
+            body.put("keywords", request.keywords);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.platform)) {
+            body.put("platform", request.platform);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceId)) {
+            body.put("serviceId", request.serviceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            body.put("version", request.version);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            body.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRumSymbolFiles"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/rum/symbolFiles/query"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRumSymbolFilesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the symbol files uploaded by RUM users and supports filtering by platform, file type, version, and keywords.</p>
+     * 
+     * @param request GetRumSymbolFilesRequest
+     * @return GetRumSymbolFilesResponse
+     */
+    public GetRumSymbolFilesResponse getRumSymbolFiles(GetRumSymbolFilesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getRumSymbolFilesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the symbolicated stack for RUM.</p>
+     * 
+     * @param request GetRumSymbolicStackRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRumSymbolicStackResponse
+     */
+    public GetRumSymbolicStackResponse getRumSymbolicStackWithOptions(GetRumSymbolicStackRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileInfo)) {
+            body.put("fileInfo", request.fileInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.images)) {
+            body.put("images", request.images);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pid)) {
+            body.put("pid", request.pid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceId)) {
+            body.put("serviceId", request.serviceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stack)) {
+            body.put("stack", request.stack);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stackType)) {
+            body.put("stackType", request.stackType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.threadId)) {
+            body.put("threadId", request.threadId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            body.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRumSymbolicStack"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/rum/symbolic"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRumSymbolicStackResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the symbolicated stack for RUM.</p>
+     * 
+     * @param request GetRumSymbolicStackRequest
+     * @return GetRumSymbolicStackResponse
+     */
+    public GetRumSymbolicStackResponse getRumSymbolicStack(GetRumSymbolicStackRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getRumSymbolicStackWithOptions(request, headers, runtime);
     }
 
     /**
@@ -12166,7 +12456,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates an application observability service.</p>
+     * <p>Updates the application observability service.</p>
      * 
      * @param request UpdateServiceRequest
      * @param headers map
@@ -12175,6 +12465,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public UpdateServiceResponse updateServiceWithOptions(String workspace, String serviceId, UpdateServiceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("dryRun", request.dryRun);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.attributes)) {
             body.put("attributes", request.attributes);
@@ -12194,6 +12489,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -12212,7 +12508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates an application observability service.</p>
+     * <p>Updates the application observability service.</p>
      * 
      * @param request UpdateServiceRequest
      * @return UpdateServiceResponse

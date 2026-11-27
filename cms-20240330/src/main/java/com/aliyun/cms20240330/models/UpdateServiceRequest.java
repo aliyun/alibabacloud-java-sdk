@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateServiceRequest extends TeaModel {
     /**
-     * <p>The extended properties.</p>
+     * <p>The extended attributes.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;language&quot;:&quot;java&quot;}</p>
@@ -39,6 +39,12 @@ public class UpdateServiceRequest extends TeaModel {
      */
     @NameInMap("serviceStatus")
     public String serviceStatus;
+
+    /**
+     * <p>Specifies whether to perform a dry run of the request. Valid values: true: sends a check request and does not perform the actual operation. false: sends a normal request. Default value: false.</p>
+     */
+    @NameInMap("dryRun")
+    public Boolean dryRun;
 
     public static UpdateServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateServiceRequest self = new UpdateServiceRequest();
@@ -75,6 +81,14 @@ public class UpdateServiceRequest extends TeaModel {
     }
     public String getServiceStatus() {
         return this.serviceStatus;
+    }
+
+    public UpdateServiceRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
 }

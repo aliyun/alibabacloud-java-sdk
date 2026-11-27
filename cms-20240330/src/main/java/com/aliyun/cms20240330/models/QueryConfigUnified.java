@@ -81,7 +81,7 @@ public class QueryConfigUnified extends TeaModel {
      * <p>The query expression or Search Processing Language (SPL) statement. Recommended when the type is PROMETHEUS_SINGLE_QUERY. Optional when the type is UMODEL_METRICSET_QUERY for custom SPL. Required when the type is UMODEL_LOGSET_QUERY, where an SPL query statement must be provided and validated by the business layer.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Sample value</p>
      */
     @NameInMap("expr")
     public String expr;
@@ -138,7 +138,7 @@ public class QueryConfigUnified extends TeaModel {
      * <p>The raw V1 query JSON string returned as a fallback when the type is UNKNOWN_QUERY and parsing fails in the read path. This string includes the field values that triggered the failure, such as filter.operator=ABC. The frontend displays this field in read-only mode when it is not empty.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Sample value</p>
      */
     @NameInMap("legacyRaw")
     public String legacyRaw;
@@ -156,7 +156,7 @@ public class QueryConfigUnified extends TeaModel {
      * <p>The name of the logset when the type is UMODEL_LOGSET_QUERY.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称</p>
+     * <p>Sample name</p>
      */
     @NameInMap("logSet")
     public String logSet;
@@ -165,7 +165,7 @@ public class QueryConfigUnified extends TeaModel {
      * <p>The measure group key. This parameter is optional when the type is APM_MULTI_QUERY and corresponds to alertMetricInput.groupKey in V1.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Sample value</p>
      */
     @NameInMap("measureGroupKey")
     public String measureGroupKey;
@@ -223,7 +223,7 @@ public class QueryConfigUnified extends TeaModel {
      * <p>The CloudMonitor namespace, which is the cloud service name, when the type is CLOUD_MONITORING_QUERY.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称</p>
+     * <p>Sample name</p>
      */
     @NameInMap("namespace")
     public String namespace;

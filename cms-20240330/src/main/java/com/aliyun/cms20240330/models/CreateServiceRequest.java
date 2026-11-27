@@ -84,6 +84,12 @@ public class CreateServiceRequest extends TeaModel {
     @NameInMap("tags")
     public java.util.List<CreateServiceRequestTags> tags;
 
+    /**
+     * <p>Specifies whether to perform a dry run. Valid values: true: performs a dry run. The system checks the request but does not perform actual operations. false: sends a normal request. Default value: false.</p>
+     */
+    @NameInMap("dryRun")
+    public Boolean dryRun;
+
     public static CreateServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceRequest self = new CreateServiceRequest();
         return TeaModel.build(map, self);
@@ -159,6 +165,14 @@ public class CreateServiceRequest extends TeaModel {
     }
     public java.util.List<CreateServiceRequestTags> getTags() {
         return this.tags;
+    }
+
+    public CreateServiceRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public static class CreateServiceRequestTags extends TeaModel {

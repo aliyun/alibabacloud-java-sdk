@@ -35,7 +35,7 @@ public class CloudMonitoringSimpleEscalationEntry extends TeaModel {
      * <p>The precondition.</p>
      * 
      * <strong>example:</strong>
-     * <p>连续3次</p>
+     * <p>3 consecutive times</p>
      */
     @NameInMap("preCondition")
     public String preCondition;

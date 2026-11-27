@@ -8,7 +8,7 @@ public class ManageAlertRulesResult extends TeaModel {
      * <p>The V2 alert rule.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;uuid&quot;:&quot;cms_v2_81d01768-fee9-459f-af49-ab2704f1db2b&quot;,&quot;displayName&quot;:&quot;drill-e2e-验证规则&quot;,&quot;enabled&quot;:true}</p>
+     * <p>{&quot;uuid&quot;:&quot;cms_v2_81d01768-fee9-459f-af49-ab2704f1db2b&quot;,&quot;displayName&quot;:&quot;drill-e2e-verification rule&quot;,&quot;enabled&quot;:true}</p>
      */
     @NameInMap("alertRule")
     public AlertRuleV2 alertRule;

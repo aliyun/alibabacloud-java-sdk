@@ -88,7 +88,7 @@ public class UpdateIntegrationPolicyRequest extends TeaModel {
          * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;Id\&quot;: \&quot;kgqie6hm\&quot;, \&quot;Name\&quot;: \&quot;Sheet1\&quot;}]</p>
+         * <p>[{&quot;Id&quot;: &quot;kgqie6hm&quot;, &quot;Name&quot;: &quot;Sheet1&quot;}]</p>
          */
         @NameInMap("value")
         public String value;

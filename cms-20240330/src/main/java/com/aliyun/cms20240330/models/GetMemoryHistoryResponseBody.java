@@ -147,7 +147,7 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
          * <p>The old memory.</p>
          * 
          * <strong>example:</strong>
-         * <p>I really don\&quot;t like Python at all.</p>
+         * <p>I really don&quot;t like Python at all.</p>
          */
         @NameInMap("oldMemory")
         public String oldMemory;

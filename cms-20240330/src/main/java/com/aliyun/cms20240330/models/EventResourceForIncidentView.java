@@ -44,7 +44,7 @@ public class EventResourceForIncidentView extends TeaModel {
      * <p>The tags.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{\&quot;value\&quot;:\&quot;测试\&quot;,\&quot;key\&quot;:\&quot;环境\&quot;}]</p>
+     * <p>[{&quot;value&quot;:&quot;测试&quot;,&quot;key&quot;:&quot;环境&quot;}]</p>
      */
     @NameInMap("tags")
     public String tags;

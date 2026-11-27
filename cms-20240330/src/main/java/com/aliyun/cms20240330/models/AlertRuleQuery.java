@@ -63,7 +63,7 @@ public class AlertRuleQuery extends TeaModel {
      * <p>Applicable query type: PROMQL_QUERY. The query expression in PromQL.</p>
      * 
      * <strong>example:</strong>
-     * <p>sum(sum(max_over_time(kube_pod_status_phase{phase=~\&quot;Pending\&quot;,job=\&quot;_kube-state-metrics\&quot;}[5m])) by (pod)) &gt; 1000</p>
+     * <p>sum(sum(max_over_time(kube_pod_status_phase{phase=~&quot;Pending&quot;,job=&quot;_kube-state-metrics&quot;}[5m])) by (pod)) &gt; 1000</p>
      */
     @NameInMap("expr")
     public String expr;
@@ -857,7 +857,7 @@ public class AlertRuleQuery extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>sum by (rpc,acs_arms_service_id,pid,rpcType) (sum_over_time_lorc(arms_app_requests_count_ign_destid_endpoint_parent_ppid_prpc{callKind=~\&quot;http|rpc|custom_entry|server|consumer\&quot;,pid=\&quot;gaddp9ap8q@cb005ffdf44b8ac\&quot;,source=\&quot;apm\&quot;}[1m]))</p>
+         * <p>sum by (rpc,acs_arms_service_id,pid,rpcType) (sum_over_time_lorc(arms_app_requests_count_ign_destid_endpoint_parent_ppid_prpc{callKind=~&quot;http|rpc|custom_entry|server|consumer&quot;,pid=&quot;gaddp9ap8q@cb005ffdf44b8ac&quot;,source=&quot;apm&quot;}[1m]))</p>
          */
         @NameInMap("expr")
         public String expr;

@@ -20,7 +20,7 @@ public class GetEntityStoreDataRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>.entity with(domain=\&quot;acs\&quot;, type=\&quot;acs.k8s.node\&quot;) | limit 0, 10</p>
+     * <p>.entity with(domain=&quot;acs&quot;, type=&quot;acs.k8s.node&quot;) | limit 0, 10</p>
      */
     @NameInMap("query")
     public String query;

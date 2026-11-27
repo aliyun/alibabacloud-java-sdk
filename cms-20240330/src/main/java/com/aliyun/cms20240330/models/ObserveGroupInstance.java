@@ -5,79 +5,118 @@ import com.aliyun.tea.*;
 
 public class ObserveGroupInstance extends TeaModel {
     /**
-     * <p>实体分类（由 entityType 适配）。</p>
+     * <p>The entity category adapted from entityType.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("category")
     public String category;
 
     /**
-     * <p>监控维度键值对。</p>
+     * <p>The key-value pairs of the monitoring dimensions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;userId&quot;:&quot;1234567890123456&quot;,&quot;instanceId&quot;:&quot;i-bp1gj8wyq4fxk28k6iy2&quot;}</p>
      */
     @NameInMap("dimension")
     public java.util.Map<String, String> dimension;
 
     /**
-     * <p>实体域（如 acs）。</p>
+     * <p>The entity domain, such as acs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs</p>
      */
     @NameInMap("entityDomain")
     public String entityDomain;
 
     /**
-     * <p>UModel 实体 ID，与实体域和类型共同标识成员。</p>
+     * <p>The UModel entity ID, which corresponds to the <strong>entity_id</strong> field of the entity and identifies a member of the observation group together with entityDomain and entityType.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1gj8wyq4fxk28k6iy2</p>
      */
     @NameInMap("entityId")
     public String entityId;
 
     /**
-     * <p>实体角色，main 为主实体、related 为关联子实体。</p>
+     * <p>The role of the entity in the observation group. main indicates the primary entity directly matched by the management rule. related indicates the child entity managed through associations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>main</p>
      */
     @NameInMap("entityRole")
     public String entityRole;
 
     /**
-     * <p>实体类型（如 acs.ecs.instance）。</p>
+     * <p>The entity type, such as acs.ecs.instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs.ecs.instance</p>
      */
     @NameInMap("entityType")
     public String entityType;
 
     /**
-     * <p>所属观测分组 ID。</p>
+     * <p>The ID of the observation group to which the entity belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>og-845e0a26455f437c</p>
      */
     @NameInMap("groupId")
     public String groupId;
 
     /**
-     * <p>实例 ID。</p>
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1gj8wyq4fxk28k6iy2</p>
      */
     @NameInMap("instanceId")
     public String instanceId;
 
     /**
-     * <p>实例名称。</p>
+     * <p>The instance name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs-prod-01</p>
      */
     @NameInMap("instanceName")
     public String instanceName;
 
     /**
-     * <p>实例所属地域 ID。</p>
+     * <p>The ID of the region to which the instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("regionId")
     public String regionId;
 
     /**
-     * <p>实例所属资源组 ID。</p>
+     * <p>The ID of the resource group to which the instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm3gn5i6bigbi</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>实例标签键值对。</p>
+     * <p>The key-value pairs of the instance tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;env&quot;:&quot;prod&quot;}</p>
      */
     @NameInMap("tags")
     public java.util.Map<String, String> tags;
 
     /**
-     * <p>实例归属的用户 UID。</p>
+     * <p>The UID of the user that owns the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234567890123456</p>
      */
     @NameInMap("userId")
     public String userId;

@@ -17,7 +17,7 @@ public class Queries extends TeaModel {
      * <p>The query expression, which is PromQL for PROMETHEUS_MULTI_QUERY and SPL for SLS_MULTI_QUERY.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Sample value</p>
      */
     @NameInMap("expr")
     public String expr;
@@ -35,7 +35,7 @@ public class Queries extends TeaModel {
      * <p>The metric name for UMODEL_METRICSET_MULTI_QUERY.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称</p>
+     * <p>Sample name</p>
      */
     @NameInMap("metric")
     public String metric;
@@ -44,7 +44,7 @@ public class Queries extends TeaModel {
      * <p>The metric set name for UMODEL_METRICSET_MULTI_QUERY.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称</p>
+     * <p>Sample name</p>
      */
     @NameInMap("metricSet")
     public String metricSet;
@@ -53,7 +53,7 @@ public class Queries extends TeaModel {
      * <p>The query name for PROMETHEUS_MULTI_QUERY or UMODEL_METRICSET_MULTI_QUERY, such as $A or $B, which is referenced by condition triggers.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例名称</p>
+     * <p>Sample name</p>
      */
     @NameInMap("name")
     public String name;
