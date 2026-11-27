@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateNamespaceRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable cross-zone high availability.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -22,7 +24,7 @@ public class CreateNamespaceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The namespace name.</p>
+     * <p>The name of the namespace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -105,7 +107,7 @@ public class CreateNamespaceRequest extends TeaModel {
         /**
          * <p>The memory size. Unit: GB.</p>
          * <blockquote>
-         * <p>The memory size must be 4 times the number of CPUs.</p>
+         * <p>The memory size must be four times the number of CPUs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

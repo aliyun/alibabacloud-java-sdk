@@ -29,7 +29,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>67F33190-946B-1105-B6A1-E2DF0426DD51</p>
@@ -38,10 +38,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li>true: Successful.</li>
-     * <li>false: Failed.</li>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
 
     public static class DescribeNamespacesResponseBodyNamespacesElasticResourceSpec extends TeaModel {
         /**
-         * <p>The maximum CPU limit for pay-as-you-go resources.</p>
+         * <p>The CPU limit for pay-as-you-go resources.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -140,7 +140,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
-         * <p>The maximum memory limit for pay-as-you-go resources. Unit: GB.</p>
+         * <p>The memory limit for pay-as-you-go resources. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -173,7 +173,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
 
     public static class DescribeNamespacesResponseBodyNamespacesGuaranteedResourceSpec extends TeaModel {
         /**
-         * <p>The number of CPUs for subscription resources.</p>
+         * <p>The number of CPU cores for subscription resources.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -215,7 +215,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
 
     public static class DescribeNamespacesResponseBodyNamespacesResourceSpec extends TeaModel {
         /**
-         * <p>The number of CPUs.</p>
+         * <p>The number of CPU cores.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -257,7 +257,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
 
     public static class DescribeNamespacesResponseBodyNamespacesResourceUsed extends TeaModel {
         /**
-         * <p>The number of CPUs used.</p>
+         * <p>The number of used CPU cores.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -266,7 +266,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         public Float cpu;
 
         /**
-         * <p>The number of compute units (CUs) used.</p>
+         * <p>The number of used compute units (CUs).</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -275,7 +275,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         public Float cu;
 
         /**
-         * <p>The amount of memory used.</p>
+         * <p>The amount of used memory.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -357,6 +357,9 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     }
 
     public static class DescribeNamespacesResponseBodyNamespaces extends TeaModel {
+        /**
+         * <p>The elastic resource specifications of the namespace.</p>
+         */
         @NameInMap("ElasticResourceSpec")
         public DescribeNamespacesResponseBodyNamespacesElasticResourceSpec elasticResourceSpec;
 
@@ -370,7 +373,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1629879567394</p>
@@ -385,7 +388,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         public DescribeNamespacesResponseBodyNamespacesGuaranteedResourceSpec guaranteedResourceSpec;
 
         /**
-         * <p>Indicates whether zone-disaster recovery is enabled for the namespace.</p>
+         * <p>Indicates whether high availability across zones is enabled for the namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -417,11 +420,11 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         /**
          * <p>The status of the namespace. Valid values:</p>
          * <ul>
-         * <li>CREATING: Being created.</li>
-         * <li>DELETING: Being deleted.</li>
-         * <li>MODIFYING: Resource specifications are being modified.</li>
-         * <li>SUCCESS: The last operation was successful.</li>
-         * <li>FAILED: The last operation failed.</li>
+         * <li>CREATING: The namespace is being created.</li>
+         * <li>DELETING: The namespace is being deleted.</li>
+         * <li>MODIFYING: The resource specifications are being modified.</li>
+         * <li>SUCCESS: The previous operation was successful.</li>
+         * <li>FAILED: The previous operation failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

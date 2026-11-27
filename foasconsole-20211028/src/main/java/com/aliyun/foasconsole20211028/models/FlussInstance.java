@@ -4,113 +4,158 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class FlussInstance extends TeaModel {
+    /**
+     * <p>The running state information of the cluster.</p>
+     */
     @NameInMap("ClusterState")
     public ClusterState clusterState;
 
     /**
-     * <p>The cluster status.</p>
+     * <p>The status of the Fluss cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RUNNING</p>
      */
     @NameInMap("ClusterStatus")
     public String clusterStatus;
 
     /**
-     * <p>The URL of the instance management console.</p>
+     * <p>The console access URL of the Fluss instance.</p>
      */
     @NameInMap("ConsoleUrl")
     public String consoleUrl;
 
     /**
-     * <p>The disk size, in GB.</p>
+     * <p>The disk size of a single TabletServer node, in GiB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>900</p>
      */
     @NameInMap("DiskSize")
     public Long diskSize;
 
     /**
-     * <p>Specifies whether high availability (HA) is enabled.</p>
+     * <p>Specifies whether multi-zone high availability is enabled.</p>
      */
     @NameInMap("Ha")
     public Boolean ha;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The ID of the Fluss instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f-cn-zvp2q0z****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The instance name.</p>
+     * <p>The name of the Fluss instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fluss-test</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
-     * <p>The order state.</p>
+     * <p>The order status of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
      */
     @NameInMap("OrderState")
     public String orderState;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The ID of the region where the instance resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The creation time of the resource, as a UNIX timestamp in milliseconds.</p>
+     * <p>The creation time of the instance, represented as a UNIX timestamp in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1629879567394</p>
      */
     @NameInMap("ResourceCreateTime")
     public Long resourceCreateTime;
 
     /**
-     * <p>The expiration time of the resource, as a UNIX timestamp in milliseconds.</p>
+     * <p>The time when the instance expires, represented as a UNIX timestamp in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1637337600000</p>
      */
     @NameInMap("ResourceExpiredTime")
     public Long resourceExpiredTime;
 
     /**
-     * <p>The tablet server model.</p>
+     * <p>The TabletServer node specifications.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4 RCU</p>
      */
     @NameInMap("TabletServerModel")
     public String tabletServerModel;
 
     /**
-     * <p>The number of tablet servers.</p>
+     * <p>The number of TabletServer nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("TabletServerNum")
     public Long tabletServerNum;
 
     /**
-     * <p>The tablet server type.</p>
+     * <p>The type of TabletServer node specifications.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4 RCU</p>
      */
     @NameInMap("TabletServerType")
     public String tabletServerType;
 
     /**
-     * <p>The number of compute units (CUs) for post-tiering.</p>
+     * <p>The upper limit of elastic compute resources for the lake-stream synchronization service, in CUs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TieringPostCu")
     public Long tieringPostCu;
 
     /**
-     * <p>The number of compute units (CUs) for pre-tiering.</p>
+     * <p>The base compute resource count for the lake-stream synchronization service, in CUs.</p>
      */
     @NameInMap("TieringPreCu")
     public Long tieringPreCu;
 
     /**
-     * <p>The Alibaba Cloud account ID (UID).</p>
+     * <p>The UID of the Alibaba Cloud account to which the instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>183899668736****</p>
      */
     @NameInMap("Uid")
     public String uid;
 
     /**
-     * <p>The VSwitch details.</p>
+     * <p>The list of zone and vSwitch configurations used by the instance.</p>
      */
     @NameInMap("VSwitches")
     public java.util.List<FlussVswitch> vSwitches;
 
     /**
-     * <p>The VPC ID.</p>
+     * <p>The ID of the VPC to which the instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-2ze9*******nxfmfcdi</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

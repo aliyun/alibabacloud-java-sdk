@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceSpecShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies whether the workspace has zone-disaster recovery resources.</p>
+     * <p>Specifies whether the workspace has cross-zone high-availability resources.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,19 +14,19 @@ public class ModifyInstanceSpecShrinkRequest extends TeaModel {
     public Boolean ha;
 
     /**
-     * <p>The zone-disaster recovery resource specifications.</p>
+     * <p>The description of the cross-zone high-availability resources.</p>
      */
     @NameInMap("HaResourceSpec")
     public String haResourceSpecShrink;
 
     /**
-     * <p>The vSwitch group in the secondary zone for zone-disaster recovery.</p>
+     * <p>The vSwitch group in the secondary zone for cross-zone high availability.</p>
      */
     @NameInMap("HaVSwitchIds")
     public String haVSwitchIdsShrink;
 
     /**
-     * <p>The order instance ID.</p>
+     * <p>The instance ID of the order.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

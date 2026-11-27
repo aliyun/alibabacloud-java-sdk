@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateNamespaceShrinkRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable cross-zone high availability.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -22,7 +24,7 @@ public class CreateNamespaceShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The namespace name.</p>
+     * <p>The name of the namespace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

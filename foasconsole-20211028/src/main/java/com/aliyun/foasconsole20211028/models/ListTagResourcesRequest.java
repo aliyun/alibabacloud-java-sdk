@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The token for the next query.</p>
+     * <p>The token used to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>27AE00</p>
@@ -24,7 +24,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The order instance IDs.</p>
+     * <p>The IDs of the order instances. You can call DescribeInstances to query the instance IDs of the workspace.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -40,7 +40,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag list. A maximum of 20 items are supported.</p>
+     * <p>The list of tags. You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstancesShrinkRequest extends TeaModel {
     /**
-     * <p>The processor architecture. Valid values: X86 and ARM.</p>
+     * <p>The processor architecture. Valid values: x86 and ARM.</p>
      * 
      * <strong>example:</strong>
      * <p>X86</p>
@@ -68,7 +68,7 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
-     * <p>The number of entries per page for a paged query. Maximum value: 100. Default value: 10.</p>
+     * <p>The number of entries to return on each page in the paging Settings for a paged query. Maximum value: 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

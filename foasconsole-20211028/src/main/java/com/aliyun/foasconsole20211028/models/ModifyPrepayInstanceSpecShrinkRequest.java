@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyPrepayInstanceSpecShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable zone-disaster recovery resources for the workspace.</p>
+     * <p>Specifies whether cross-zone high-availability resources are enabled for the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -17,7 +17,7 @@ public class ModifyPrepayInstanceSpecShrinkRequest extends TeaModel {
     public Boolean ha;
 
     /**
-     * <p>The resource specifications for zone-disaster recovery.</p>
+     * <p>The resource specifications for cross-zone high availability.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -26,7 +26,7 @@ public class ModifyPrepayInstanceSpecShrinkRequest extends TeaModel {
     public String haResourceSpecShrink;
 
     /**
-     * <p>The list of vSwitch IDs in the secondary zone for zone-disaster recovery.</p>
+     * <p>The list of vSwitch IDs in the secondary zone for cross-zone high availability.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -35,7 +35,10 @@ public class ModifyPrepayInstanceSpecShrinkRequest extends TeaModel {
     public String haVSwitchIdsShrink;
 
     /**
-     * <p>The ID of the secondary zone for zone-disaster recovery.</p>
+     * <p>The ID of the secondary zone for cross-zone high availability.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hongkong-b</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -44,7 +47,7 @@ public class ModifyPrepayInstanceSpecShrinkRequest extends TeaModel {
     public String haZoneId;
 
     /**
-     * <p>The order instance ID.</p>
+     * <p>The instance ID of the order.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +67,7 @@ public class ModifyPrepayInstanceSpecShrinkRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The resource specification information.</p>
+     * <p>The resource specifications.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceSpec")

@@ -23,7 +23,7 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The list of region information.</p>
+     * <p>The list of regions.</p>
      */
     @NameInMap("Regions")
     public java.util.List<DescribeSupportedRegionsResponseBodyRegions> regions;
@@ -51,7 +51,7 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of regions returned.</p>
+     * <p>The number of regions returned.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

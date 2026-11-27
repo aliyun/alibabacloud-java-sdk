@@ -74,12 +74,12 @@ public class ConvertHybridInstanceRequest extends TeaModel {
         /**
          * <p>The memory size. Unit: GB.</p>
          * <blockquote>
-         * <p>The memory size must be 4 times the number of CPUs.</p>
+         * <p>The memory size must be four times the number of CPUs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>40GB</p>
+         * <p>40</p>
          */
         @NameInMap("MemoryGB")
         public Integer memoryGB;

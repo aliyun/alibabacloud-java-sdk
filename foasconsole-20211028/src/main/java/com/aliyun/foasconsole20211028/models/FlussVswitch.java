@@ -4,9 +4,18 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class FlussVswitch extends TeaModel {
+    /**
+     * <p>The list of vSwitch IDs in the zone.</p>
+     */
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;
 
+    /**
+     * <p>The ID of the zone to which the vSwitch belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing-g</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

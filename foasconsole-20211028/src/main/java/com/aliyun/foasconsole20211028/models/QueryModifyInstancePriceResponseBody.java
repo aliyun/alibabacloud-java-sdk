@@ -20,7 +20,7 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -68,7 +68,7 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         public String cheapRate;
 
         /**
-         * <p>The list price total after the price reduction.</p>
+         * <p>The reduced total list price.</p>
          * 
          * <strong>example:</strong>
          * <p>6000</p>
@@ -77,7 +77,7 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         public String cheapStandAmount;
 
         /**
-         * <p>Indicates whether to display the price reduction percentage.</p>
+         * <p>Indicates whether to display the price reduction margin.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -95,7 +95,7 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         public String monthPrice;
 
         /**
-         * <p>The original list price total.</p>
+         * <p>The original total list price.</p>
          * 
          * <strong>example:</strong>
          * <p>12000</p>
@@ -104,7 +104,7 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         public String originalStandAmount;
 
         /**
-         * <p>The price reduction start time in ISO 8601 format.</p>
+         * <p>The start time of the price reduction, in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-04T21:10:26+08:00</p>
@@ -169,25 +169,25 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
 
     public static class QueryModifyInstancePriceResponseBodyPriceInfoOptionalPromotions extends TeaModel {
         /**
-         * <p>The coupon description.</p>
+         * <p>The description of the coupon.</p>
          * 
          * <strong>example:</strong>
-         * <p>¥1,391.5 coupon (valid until 03/23/2022)</p>
+         * <p>CNY 1,391.5 coupon (valid until 03/23/2022)</p>
          */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
         /**
-         * <p>The coupon name.</p>
+         * <p>The name of the coupon.</p>
          * 
          * <strong>example:</strong>
-         * <p>¥1,391.5 coupon</p>
+         * <p>CNY 1,391.5 coupon</p>
          */
         @NameInMap("PromotionName")
         public String promotionName;
 
         /**
-         * <p>The coupon number.</p>
+         * <p>The ID of the coupon.</p>
          * 
          * <strong>example:</strong>
          * <p>500011220010099</p>
@@ -196,7 +196,7 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         public String promotionOptionNo;
 
         /**
-         * <p>Indicates whether the coupon is selected. Valid values:</p>
+         * <p>Specifies whether the coupon is selected. Valid values:</p>
          * <ul>
          * <li><p>true: Selected.</p>
          * </li>
@@ -251,16 +251,16 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
 
     public static class QueryModifyInstancePriceResponseBodyPriceInfoRules extends TeaModel {
         /**
-         * <p>The promotion rule description.</p>
+         * <p>The description of the promotion rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>Purchase for 1 year or more and enjoy a 15% discount off the list price</p>
+         * <p>Get a 15% discount on the list price for a 1-year subscription</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The promotion ID.</p>
+         * <p>The ID of the promotion.</p>
          * 
          * <strong>example:</strong>
          * <p>587</p>
@@ -326,16 +326,16 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         public Float discountAmount;
 
         /**
-         * <p>Indicates whether the enterprise discount is applied.</p>
+         * <p>Indicates whether a key account discount is applied.</p>
          * 
          * <strong>example:</strong>
-         * <p>Yes</p>
+         * <p>true</p>
          */
         @NameInMap("IsContractActivity")
         public Boolean isContractActivity;
 
         /**
-         * <p>The Lingxiao request ID of the call.</p>
+         * <p>The request ID of the Lingxiao system call.</p>
          * 
          * <strong>example:</strong>
          * <p>67F33190-946B-1105-B6A1-E2DF0426DD51</p>
@@ -374,7 +374,7 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         public java.util.List<QueryModifyInstancePriceResponseBodyPriceInfoRules> rules;
 
         /**
-         * <p>The discounted price based on the list discount.</p>
+         * <p>The discounted price based on the list price.</p>
          * 
          * <strong>example:</strong>
          * <p>1231</p>
@@ -383,7 +383,7 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         public String standDiscountPrice;
 
         /**
-         * <p>The list discount price or direct sales contract discount price.</p>
+         * <p>The list price discount or direct sales contract discount.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>

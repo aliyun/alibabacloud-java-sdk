@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAiServiceProtectionRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable manual shutdown protection.</p>
+     * <p>Specifies whether to enable protection against manual shutdown operations.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,11 +15,11 @@ public class ModifyAiServiceProtectionRequest extends TeaModel {
     public Boolean deletionProtection;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. It must match the region where the API endpoint is deployed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
+     * <p>cn-beijing</p>
      */
     @NameInMap("Region")
     public String region;

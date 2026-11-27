@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryCreateInstancePriceResponseBody extends TeaModel {
     /**
-     * <p>The price information, including the price and promotion rules.</p>
+     * <p>The price information, including the price and discount rules.</p>
      */
     @NameInMap("PriceInfo")
     public QueryCreateInstancePriceResponseBodyPriceInfo priceInfo;
@@ -20,7 +20,7 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -56,37 +56,52 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
 
     public static class QueryCreateInstancePriceResponseBodyPriceInfoDepreciateInfo extends TeaModel {
         /**
-         * <p>The price reduction ratio.</p>
+         * <p>The price reduction rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34%</p>
          */
         @NameInMap("CheapRate")
         public String cheapRate;
 
         /**
-         * <p>The total list price after the price reduction.</p>
+         * <p>The total price on the official website after the price reduction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8000</p>
          */
         @NameInMap("CheapStandAmount")
         public String cheapStandAmount;
 
         /**
-         * <p>Indicates whether to display the price reduction percentage.</p>
+         * <p>Indicates whether to display the price reduction rate.</p>
          */
         @NameInMap("IsShow")
         public Boolean isShow;
 
         /**
-         * <p>The monthly equivalent price.</p>
+         * <p>The equivalent monthly price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("MonthPrice")
         public String monthPrice;
 
         /**
-         * <p>The original total list price.</p>
+         * <p>The original total price on the official website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12000</p>
          */
         @NameInMap("OriginalStandAmount")
         public String originalStandAmount;
 
         /**
-         * <p>The start time of the price reduction.</p>
+         * <p>The start time of the price reduction, in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-08-21T02:06:00Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -146,9 +161,170 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
 
     }
 
+    public static class QueryCreateInstancePriceResponseBodyPriceInfoModulePrices extends TeaModel {
+        /**
+         * <p>The discount amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>648.0</p>
+         */
+        @NameInMap("DiscountAmount")
+        public Float discountAmount;
+
+        /**
+         * <p>The unit price of the module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>183600.0000</p>
+         */
+        @NameInMap("FinalUnitFee")
+        public String finalUnitFee;
+
+        /**
+         * <p>The module code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>overhead_cu</p>
+         */
+        @NameInMap("ModuleCode")
+        public String moduleCode;
+
+        /**
+         * <p>The module name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Control and Management Services</p>
+         */
+        @NameInMap("ModuleName")
+        public String moduleName;
+
+        /**
+         * <p>The original amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4320.0</p>
+         */
+        @NameInMap("OriginalAmount")
+        public Float originalAmount;
+
+        /**
+         * <p>The payment amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3672.0</p>
+         */
+        @NameInMap("PayAmount")
+        public Float payAmount;
+
+        /**
+         * <p>The billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yearPrice</p>
+         */
+        @NameInMap("PriceType")
+        public String priceType;
+
+        /**
+         * <p>The pricing unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Yuan/CU</p>
+         */
+        @NameInMap("PriceUnit")
+        public String priceUnit;
+
+        /**
+         * <p>The order quantity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Quantity")
+        public String quantity;
+
+        public static QueryCreateInstancePriceResponseBodyPriceInfoModulePrices build(java.util.Map<String, ?> map) throws Exception {
+            QueryCreateInstancePriceResponseBodyPriceInfoModulePrices self = new QueryCreateInstancePriceResponseBodyPriceInfoModulePrices();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryCreateInstancePriceResponseBodyPriceInfoModulePrices setDiscountAmount(Float discountAmount) {
+            this.discountAmount = discountAmount;
+            return this;
+        }
+        public Float getDiscountAmount() {
+            return this.discountAmount;
+        }
+
+        public QueryCreateInstancePriceResponseBodyPriceInfoModulePrices setFinalUnitFee(String finalUnitFee) {
+            this.finalUnitFee = finalUnitFee;
+            return this;
+        }
+        public String getFinalUnitFee() {
+            return this.finalUnitFee;
+        }
+
+        public QueryCreateInstancePriceResponseBodyPriceInfoModulePrices setModuleCode(String moduleCode) {
+            this.moduleCode = moduleCode;
+            return this;
+        }
+        public String getModuleCode() {
+            return this.moduleCode;
+        }
+
+        public QueryCreateInstancePriceResponseBodyPriceInfoModulePrices setModuleName(String moduleName) {
+            this.moduleName = moduleName;
+            return this;
+        }
+        public String getModuleName() {
+            return this.moduleName;
+        }
+
+        public QueryCreateInstancePriceResponseBodyPriceInfoModulePrices setOriginalAmount(Float originalAmount) {
+            this.originalAmount = originalAmount;
+            return this;
+        }
+        public Float getOriginalAmount() {
+            return this.originalAmount;
+        }
+
+        public QueryCreateInstancePriceResponseBodyPriceInfoModulePrices setPayAmount(Float payAmount) {
+            this.payAmount = payAmount;
+            return this;
+        }
+        public Float getPayAmount() {
+            return this.payAmount;
+        }
+
+        public QueryCreateInstancePriceResponseBodyPriceInfoModulePrices setPriceType(String priceType) {
+            this.priceType = priceType;
+            return this;
+        }
+        public String getPriceType() {
+            return this.priceType;
+        }
+
+        public QueryCreateInstancePriceResponseBodyPriceInfoModulePrices setPriceUnit(String priceUnit) {
+            this.priceUnit = priceUnit;
+            return this;
+        }
+        public String getPriceUnit() {
+            return this.priceUnit;
+        }
+
+        public QueryCreateInstancePriceResponseBodyPriceInfoModulePrices setQuantity(String quantity) {
+            this.quantity = quantity;
+            return this;
+        }
+        public String getQuantity() {
+            return this.quantity;
+        }
+
+    }
+
     public static class QueryCreateInstancePriceResponseBodyPriceInfoOptionalPromotions extends TeaModel {
         /**
-         * <p>The coupon description.</p>
+         * <p>The description of the coupon.</p>
          * 
          * <strong>example:</strong>
          * <p>¥1,391.5 coupon (valid until 03/23/2022)</p>
@@ -157,7 +333,7 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
         public String promotionDesc;
 
         /**
-         * <p>The coupon name.</p>
+         * <p>The name of the coupon.</p>
          * 
          * <strong>example:</strong>
          * <p>¥1,391.5 coupon</p>
@@ -166,7 +342,7 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
         public String promotionName;
 
         /**
-         * <p>The coupon ID.</p>
+         * <p>The ID of the coupon.</p>
          * 
          * <strong>example:</strong>
          * <p>500011220010099</p>
@@ -175,7 +351,7 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
         public String promotionOptionNo;
 
         /**
-         * <p>Indicates whether the coupon is selected. Valid values:</p>
+         * <p>Specifies whether the coupon is selected. Valid values:</p>
          * <ul>
          * <li>true: Selected.</li>
          * <li>false: Not selected.</li>
@@ -231,13 +407,13 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
          * <p>The description of the promotion rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>Purchase for one year or longer and enjoy a 15% discount off the list price</p>
+         * <p>Enjoy a 15% discount on the official website price for a 1-year subscription</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The promotion ID.</p>
+         * <p>The ID of the promotion rule.</p>
          * 
          * <strong>example:</strong>
          * <p>587</p>
@@ -303,13 +479,13 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
         public Float discountAmount;
 
         /**
-         * <p>Indicates whether an enterprise discount is applied.</p>
+         * <p>Indicates whether the key account promotion is applied.</p>
          */
         @NameInMap("IsContractActivity")
         public Boolean isContractActivity;
 
         /**
-         * <p>The Lingxiao request ID of the call.</p>
+         * <p>The Lingxiao request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>67F33190-946B-1105-B6A1-E2DF0426DD51</p>
@@ -321,10 +497,16 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>An unpaid order exists. Pay for or cancel the existing order first</p>
+         * <p>Unpaid orders exist. Pay for or cancel the existing orders first</p>
          */
         @NameInMap("Message")
         public String message;
+
+        /**
+         * <p>The module prices.</p>
+         */
+        @NameInMap("ModulePrices")
+        public java.util.List<QueryCreateInstancePriceResponseBodyPriceInfoModulePrices> modulePrices;
 
         /**
          * <p>The coupon group information.</p>
@@ -333,7 +515,7 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
         public java.util.List<QueryCreateInstancePriceResponseBodyPriceInfoOptionalPromotions> optionalPromotions;
 
         /**
-         * <p>The original price.</p>
+         * <p>The original amount.</p>
          * 
          * <strong>example:</strong>
          * <p>4368</p>
@@ -348,19 +530,25 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
         public java.util.List<QueryCreateInstancePriceResponseBodyPriceInfoRules> rules;
 
         /**
-         * <p>The promotional price based on the standard discount from the official website.</p>
+         * <p>The discounted price based on the official website discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21321</p>
          */
         @NameInMap("StandDiscountPrice")
         public String standDiscountPrice;
 
         /**
-         * <p>The standard discounted price on the official website or the direct sales contract discounted price.</p>
+         * <p>The discounted price on the official website or the discounted price in the direct sales contract.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32432</p>
          */
         @NameInMap("StandPrice")
         public String standPrice;
 
         /**
-         * <p>The final price, which is the original price minus the discount.</p>
+         * <p>The final amount, which is the original amount minus the discount.</p>
          * 
          * <strong>example:</strong>
          * <p>3712.8</p>
@@ -427,6 +615,14 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
         }
         public String getMessage() {
             return this.message;
+        }
+
+        public QueryCreateInstancePriceResponseBodyPriceInfo setModulePrices(java.util.List<QueryCreateInstancePriceResponseBodyPriceInfoModulePrices> modulePrices) {
+            this.modulePrices = modulePrices;
+            return this;
+        }
+        public java.util.List<QueryCreateInstancePriceResponseBodyPriceInfoModulePrices> getModulePrices() {
+            return this.modulePrices;
         }
 
         public QueryCreateInstancePriceResponseBodyPriceInfo setOptionalPromotions(java.util.List<QueryCreateInstancePriceResponseBodyPriceInfoOptionalPromotions> optionalPromotions) {

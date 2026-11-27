@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeNamespacesShrinkRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable high availability across zones.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -12,7 +14,7 @@ public class DescribeNamespacesShrinkRequest extends TeaModel {
     public Boolean ha;
 
     /**
-     * <p>The order instance ID.</p>
+     * <p>The instance ID of the order.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +24,7 @@ public class DescribeNamespacesShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The namespace name.</p>
+     * <p>The name of the namespace.</p>
      * 
      * <strong>example:</strong>
      * <p>di-590843445844225</p>

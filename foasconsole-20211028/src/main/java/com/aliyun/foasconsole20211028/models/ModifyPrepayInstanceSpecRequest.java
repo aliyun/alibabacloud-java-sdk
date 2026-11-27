@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable zone-disaster recovery resources for the workspace.</p>
+     * <p>Specifies whether cross-zone high-availability resources are enabled for the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -17,7 +17,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public Boolean ha;
 
     /**
-     * <p>The resource specifications for zone-disaster recovery.</p>
+     * <p>The resource specifications for cross-zone high availability.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -26,7 +26,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public ModifyPrepayInstanceSpecRequestHaResourceSpec haResourceSpec;
 
     /**
-     * <p>The list of vSwitch IDs in the secondary zone for zone-disaster recovery.</p>
+     * <p>The list of vSwitch IDs in the secondary zone for cross-zone high availability.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -35,7 +35,10 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public java.util.List<String> haVSwitchIds;
 
     /**
-     * <p>The ID of the secondary zone for zone-disaster recovery.</p>
+     * <p>The ID of the secondary zone for cross-zone high availability.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hongkong-b</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -44,7 +47,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public String haZoneId;
 
     /**
-     * <p>The order instance ID.</p>
+     * <p>The instance ID of the order.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +67,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The resource specification information.</p>
+     * <p>The resource specifications.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceSpec")
@@ -133,7 +136,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
 
     public static class ModifyPrepayInstanceSpecRequestHaResourceSpec extends TeaModel {
         /**
-         * <p>The number of CPUs for zone-disaster recovery resources.</p>
+         * <p>The number of CPUs for cross-zone high-availability resources.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -142,7 +145,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
         public Integer cpu;
 
         /**
-         * <p>The memory size of zone-disaster recovery resources, in GB. The value must be 4 times the number of CPUs.</p>
+         * <p>The memory size of cross-zone high-availability resources, in GB. The value must be four times the number of CPUs.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -187,7 +190,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
         /**
          * <p>The memory size.</p>
          * <blockquote>
-         * <p>The memory size must be 4 times the number of CPUs.</p>
+         * <p>The memory size must be four times the number of CPUs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

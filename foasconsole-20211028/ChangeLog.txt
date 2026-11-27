@@ -1,3 +1,8 @@
+2026-11-27 Version: 2.4.0
+- Support API ChangeResourceGroup.
+- Update API QueryCreateInstancePrice: add response parameters Body.PriceInfo.ModulePrices.
+
+
 2026-09-23 Version: 2.3.2
 - Generated java 2021-10-28 for foasconsole.
 

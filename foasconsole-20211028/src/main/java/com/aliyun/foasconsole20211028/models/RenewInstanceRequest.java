@@ -25,13 +25,7 @@ public class RenewInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The subscription period. Valid values:</p>
-     * <ul>
-     * <li>Month: month.</li>
-     * <li>Year: year.</li>
-     * <li>Hour: hour.</li>
-     * <li>Day: day.</li>
-     * </ul>
+     * <p>The subscription period.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +34,12 @@ public class RenewInstanceRequest extends TeaModel {
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
+    /**
+     * <p>The coupon code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500043499350689</p>
+     */
     @NameInMap("PromotionCode")
     public String promotionCode;
 
@@ -53,6 +53,13 @@ public class RenewInstanceRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>Specifies whether to use a coupon. Valid values:</p>
+     * <ul>
+     * <li>true: Use a coupon.</li>
+     * <li>false: Do not use a coupon.</li>
+     * </ul>
+     */
     @NameInMap("UsePromotionCode")
     public Boolean usePromotionCode;
 

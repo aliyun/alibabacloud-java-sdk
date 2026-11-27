@@ -15,7 +15,7 @@ public class ConvertInstanceShrinkRequest extends TeaModel {
     public Integer duration;
 
     /**
-     * <p>The order instance ID.</p>
+     * <p>The instance ID of the order.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class ConvertInstanceShrinkRequest extends TeaModel {
     public Boolean isAutoRenew;
 
     /**
-     * <p>The resource specifications of the namespace.</p>
+     * <p>The resource specifications of the workspace.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NamespaceResourceSpecs")
@@ -51,6 +51,12 @@ public class ConvertInstanceShrinkRequest extends TeaModel {
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
+    /**
+     * <p>The coupon code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500043499350689</p>
+     */
     @NameInMap("PromotionCode")
     public String promotionCode;
 
@@ -64,6 +70,13 @@ public class ConvertInstanceShrinkRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>Specifies whether to use a coupon. Valid values:</p>
+     * <ul>
+     * <li>true: Use a coupon.</li>
+     * <li>false: Do not use a coupon.</li>
+     * </ul>
+     */
     @NameInMap("UsePromotionCode")
     public Boolean usePromotionCode;
 

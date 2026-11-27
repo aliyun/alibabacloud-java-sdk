@@ -4,12 +4,27 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class StageWithWeight extends TeaModel {
+    /**
+     * <p>The ordinal number of the execution stage.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("StepIndex")
     public Integer stepIndex;
 
+    /**
+     * <p>The name of the execution stage.</p>
+     */
     @NameInMap("StepName")
     public String stepName;
 
+    /**
+     * <p>The weight of the stage in the overall progress.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Weight")
     public Integer weight;
 

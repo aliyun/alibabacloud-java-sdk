@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteNamespaceRequest extends TeaModel {
     /**
-     * <p>The order instance ID.</p>
+     * <p>The instance ID of the order.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteNamespaceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The namespace name.</p>
+     * <p>The name of the namespace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

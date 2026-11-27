@@ -5,31 +5,43 @@ import com.aliyun.tea.*;
 
 public class FlussResourceSpec extends TeaModel {
     /**
-     * <p>Disk size per node, in GB.</p>
+     * <p>The disk capacity of a single TabletServer node, in GiB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>900</p>
      */
     @NameInMap("DiskSizeInGB")
     public Long diskSizeInGB;
 
     /**
-     * <p>Instance type of the slave nodes.</p>
+     * <p>The node specifications of the TabletServer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4 RCU</p>
      */
     @NameInMap("SlaveModel")
     public String slaveModel;
 
     /**
-     * <p>Number of slave nodes.</p>
+     * <p>The number of TabletServer nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("SlaveNum")
     public Long slaveNum;
 
     /**
-     * <p>Number of CUs for the post-tiering stage.</p>
+     * <p>The maximum number of elastic compute resources for the lake-stream synchronization service, in CUs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TieringPostCu")
     public Long tieringPostCu;
 
     /**
-     * <p>Number of compute units (CUs) for the pre-tiering stage.</p>
+     * <p>The baseline resource count of the lake-stream synchronization service, in CUs.</p>
      */
     @NameInMap("TieringPreCu")
     public Long tieringPreCu;

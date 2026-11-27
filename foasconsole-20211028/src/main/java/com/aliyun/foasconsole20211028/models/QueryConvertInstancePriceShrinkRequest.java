@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryConvertInstancePriceShrinkRequest extends TeaModel {
     /**
-     * <p>The number of pricing cycles.</p>
+     * <p>The duration of the billing cycle.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class QueryConvertInstancePriceShrinkRequest extends TeaModel {
     public Integer duration;
 
     /**
-     * <p>The order instance ID.</p>
+     * <p>The instance ID of the order.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,14 +35,14 @@ public class QueryConvertInstancePriceShrinkRequest extends TeaModel {
     public Boolean isAutoRenew;
 
     /**
-     * <p>The resource specifications of the namespace.</p>
+     * <p>The resource specifications of the workspace.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NamespaceResourceSpecs")
     public String namespaceResourceSpecsShrink;
 
     /**
-     * <p>The pricing cycle. Only Year and Month are supported.</p>
+     * <p>The billing cycle. Only Year and Month are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +51,12 @@ public class QueryConvertInstancePriceShrinkRequest extends TeaModel {
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
+    /**
+     * <p>The coupon code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500043499350689</p>
+     */
     @NameInMap("PromotionCode")
     public String promotionCode;
 
@@ -64,6 +70,13 @@ public class QueryConvertInstancePriceShrinkRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>Specifies whether to use a coupon. Valid values:</p>
+     * <ul>
+     * <li>true: Uses a coupon.</li>
+     * <li>false: Does not use a coupon.</li>
+     * </ul>
+     */
     @NameInMap("UsePromotionCode")
     public Boolean usePromotionCode;
 

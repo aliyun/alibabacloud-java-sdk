@@ -4,15 +4,36 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class ClusterStage extends TeaModel {
+    /**
+     * <p>The ordinal number of the current execution stage.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("CurrentStage")
     public Integer currentStage;
 
+    /**
+     * <p>The execution information of the current stage.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Creating resources</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The execution status of the current stage.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CREATING</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The list of execution stages and their weights.</p>
+     */
     @NameInMap("TotalStageWithWeight")
     public java.util.List<StageWithWeight> totalStageWithWeight;
 

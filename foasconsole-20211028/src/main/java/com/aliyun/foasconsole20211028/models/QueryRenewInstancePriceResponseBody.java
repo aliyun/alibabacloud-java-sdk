@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryRenewInstancePriceResponseBody extends TeaModel {
     /**
-     * <p>The price information, including the price and promotion rules.</p>
+     * <p>The price information, including the price and discount rules.</p>
      */
     @NameInMap("PriceInfo")
     public QueryRenewInstancePriceResponseBodyPriceInfo priceInfo;
@@ -20,7 +20,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -59,7 +59,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
 
     public static class QueryRenewInstancePriceResponseBodyPriceInfoDepreciateInfo extends TeaModel {
         /**
-         * <p>The price reduction ratio.</p>
+         * <p>The price reduction rate.</p>
          * 
          * <strong>example:</strong>
          * <p>34%</p>
@@ -68,7 +68,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
         public String cheapRate;
 
         /**
-         * <p>The total list price after the price reduction.</p>
+         * <p>The reduced total list price.</p>
          * 
          * <strong>example:</strong>
          * <p>8000</p>
@@ -77,7 +77,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
         public String cheapStandAmount;
 
         /**
-         * <p>Indicates whether the price reduction percentage is displayed.</p>
+         * <p>Indicates whether to display the price reduction margin.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -172,7 +172,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
          * <p>The coupon description.</p>
          * 
          * <strong>example:</strong>
-         * <p>￥1,391.5 coupon (valid until 03/23/2022)</p>
+         * <p>CNY 1,391.5 coupon (valid until 03/23/2022)</p>
          */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
@@ -181,13 +181,13 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
          * <p>The coupon name.</p>
          * 
          * <strong>example:</strong>
-         * <p>￥1,391.5 coupon</p>
+         * <p>CNY 1,391.5 coupon</p>
          */
         @NameInMap("PromotionName")
         public String promotionName;
 
         /**
-         * <p>The coupon number.</p>
+         * <p>The coupon ID.</p>
          * 
          * <strong>example:</strong>
          * <p>500011220010099</p>
@@ -196,7 +196,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
         public String promotionOptionNo;
 
         /**
-         * <p>Indicates whether the coupon is selected. Valid values:</p>
+         * <p>Specifies whether the coupon is selected. Valid values:</p>
          * <ul>
          * <li><p>true: Selected.</p>
          * </li>
@@ -251,10 +251,10 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
 
     public static class QueryRenewInstancePriceResponseBodyPriceInfoRules extends TeaModel {
         /**
-         * <p>The description of the promotion rule.</p>
+         * <p>The promotion rule description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Purchase for 1 year or more and enjoy a 15% discount off the list price</p>
+         * <p>Get a 15% discount on the list price for a 1-year subscription</p>
          */
         @NameInMap("Description")
         public String description;
@@ -326,7 +326,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
         public Float discountAmount;
 
         /**
-         * <p>Indicates whether an enterprise discount is applied.</p>
+         * <p>Indicates whether an enterprise agreement discount is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -335,7 +335,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
         public Boolean isContractActivity;
 
         /**
-         * <p>The Lingxiao request ID of the call.</p>
+         * <p>The request ID of the Lingxiao call.</p>
          * 
          * <strong>example:</strong>
          * <p>67F33190-946B-1105-B6A1-E2DF0426DD51</p>
@@ -347,7 +347,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>An unpaid order exists. Pay for or cancel the existing order first</p>
+         * <p>Unpaid orders exist. Pay for or cancel the existing orders first</p>
          */
         @NameInMap("Message")
         public String message;
@@ -374,7 +374,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
         public java.util.List<QueryRenewInstancePriceResponseBodyPriceInfoRules> rules;
 
         /**
-         * <p>The promotional price based on the standard website discount.</p>
+         * <p>The discounted price based on the list price discount.</p>
          * 
          * <strong>example:</strong>
          * <p>21321</p>
@@ -383,7 +383,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
         public String standDiscountPrice;
 
         /**
-         * <p>The list price with the website discount or direct sales contract discount applied.</p>
+         * <p>The list price discount or direct sales contract discount.</p>
          * 
          * <strong>example:</strong>
          * <p>32432</p>
@@ -392,7 +392,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
         public String standPrice;
 
         /**
-         * <p>The final price, which is the original price minus the discount amount.</p>
+         * <p>The final price, which is the original price minus the discount.</p>
          * 
          * <strong>example:</strong>
          * <p>3712.8</p>
