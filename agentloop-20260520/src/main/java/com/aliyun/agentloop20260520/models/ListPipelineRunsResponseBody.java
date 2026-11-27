@@ -23,7 +23,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID. You can use this ID to locate the request when troubleshooting issues.</p>
+     * <p>The request ID, which is used to locate the request during troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
@@ -38,7 +38,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
     public java.util.List<ListPipelineRunsResponseBodyRuns> runs;
 
     /**
-     * <p>The total number of pipeline runs that meet the filter conditions.</p>
+     * <p>The total number of pipeline runs that meet the filtering conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -102,7 +102,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         public String agentSpaceName;
 
         /**
-         * <p>The current attempt number.</p>
+         * <p>The current number of retries.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -139,7 +139,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         public String finishTime;
 
         /**
-         * <p>The start time of the data window. The value is a UNIX timestamp in seconds.</p>
+         * <p>The start time of the data window in UNIX seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1735660800</p>
@@ -148,7 +148,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         public Long fromTime;
 
         /**
-         * <p>The maximum number of attempts.</p>
+         * <p>The maximum number of retries.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -167,7 +167,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         public String nextRetryTime;
 
         /**
-         * <p>The name of the pipeline.</p>
+         * <p>The pipeline name.</p>
          * 
          * <strong>example:</strong>
          * <p>my-pipeline</p>
@@ -185,7 +185,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         public String runId;
 
         /**
-         * <p>The start time of the execution in ISO 8601 UTC format.</p>
+         * <p>The execution start time in ISO 8601 UTC format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -195,7 +195,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The run statistics metrics, including processedRows (number of processed rows), processedBytes (number of processed bytes), outputRows (number of output rows), outputBytes (number of output bytes), elapsedMs (elapsed time in milliseconds), cpuSec (CPU seconds), cpuCores (number of CPU cores), and tokenCount (number of consumed tokens).</p>
+         * <p>The run statistics, including processedRows (number of processed rows), processedBytes (number of processed bytes), outputRows (number of output rows), outputBytes (number of output bytes), elapsedMs (elapsed time in milliseconds), cpuSec (CPU seconds), cpuCores (number of CPU cores), and tokenCount (number of consumed tokens).</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;processedRows&quot;:1000,&quot;elapsedMs&quot;:2500}</p>
@@ -213,13 +213,31 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The end time of the data window. The value is a UNIX timestamp in seconds.</p>
+         * <p>The frozen task version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("taskVersion")
+        public Integer taskVersion;
+
+        /**
+         * <p>The end time of the data window in UNIX seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1735747200</p>
          */
         @NameInMap("toTime")
         public Long toTime;
+
+        /**
+         * <p>The total number of input records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("totalCount")
+        public Long totalCount;
 
         /**
          * <p>The trigger time in ISO 8601 UTC format.</p>
@@ -349,12 +367,28 @@ public class ListPipelineRunsResponseBody extends TeaModel {
             return this.status;
         }
 
+        public ListPipelineRunsResponseBodyRuns setTaskVersion(Integer taskVersion) {
+            this.taskVersion = taskVersion;
+            return this;
+        }
+        public Integer getTaskVersion() {
+            return this.taskVersion;
+        }
+
         public ListPipelineRunsResponseBodyRuns setToTime(Long toTime) {
             this.toTime = toTime;
             return this;
         }
         public Long getToTime() {
             return this.toTime;
+        }
+
+        public ListPipelineRunsResponseBodyRuns setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Long getTotalCount() {
+            return this.totalCount;
         }
 
         public ListPipelineRunsResponseBodyRuns setTriggerTime(String triggerTime) {

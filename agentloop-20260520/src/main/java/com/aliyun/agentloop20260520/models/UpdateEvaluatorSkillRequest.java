@@ -27,13 +27,13 @@ public class UpdateEvaluatorSkillRequest extends TeaModel {
      * <p>The display name of the skill.</p>
      * 
      * <strong>example:</strong>
-     * <p>Read Trace Context</p>
+     * <p>Read trace context</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
     /**
-     * <p>Specifies whether the skill is enabled.</p>
+     * <p>Specifies whether to enable the skill.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -42,6 +42,8 @@ public class UpdateEvaluatorSkillRequest extends TeaModel {
     public Boolean enable;
 
     /**
+     * <p>The target evaluator version for updating the skill. If omitted, the latestVersion of the evaluator is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>v2</p>
      */
@@ -52,7 +54,7 @@ public class UpdateEvaluatorSkillRequest extends TeaModel {
      * <p>The list of skill files. If specified, the content of the skill files is updated.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;# Trace Context Loader&quot;,&quot;remark&quot;:&quot;Primary skill description&quot;}]</p>
+     * <p>[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;# Trace Context Loader&quot;,&quot;remark&quot;:&quot;Main skill description&quot;}]</p>
      */
     @NameInMap("files")
     public java.util.List<UpdateEvaluatorSkillRequestFiles> files;
@@ -152,7 +154,7 @@ public class UpdateEvaluatorSkillRequest extends TeaModel {
          * <p>The remark for the file.</p>
          * 
          * <strong>example:</strong>
-         * <p>Primary skill description</p>
+         * <p>Main skill description</p>
          */
         @NameInMap("remark")
         public String remark;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetEvaluatorSkillRequest extends TeaModel {
     /**
-     * <p>The AgentSpace name.</p>
+     * <p>The name of the AgentSpace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,8 @@ public class GetEvaluatorSkillRequest extends TeaModel {
     public String agentSpace;
 
     /**
+     * <p>The version number of the custom evaluator to which the queried skill belongs. If omitted, the latestVersion of the evaluator is used. The revision number of the skill itself is specified by version.</p>
+     * 
      * <strong>example:</strong>
      * <p>v2</p>
      */
@@ -22,7 +24,7 @@ public class GetEvaluatorSkillRequest extends TeaModel {
     public String evaluatorVersion;
 
     /**
-     * <p>The skill version.</p>
+     * <p>The version of the skill.</p>
      * 
      * <strong>example:</strong>
      * <p>1782816000000</p>

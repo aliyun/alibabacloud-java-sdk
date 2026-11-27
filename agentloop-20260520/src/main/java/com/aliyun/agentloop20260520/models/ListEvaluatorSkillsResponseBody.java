@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEvaluatorSkillsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries per page used in this request.</p>
+     * <p>The maximum number of results per page used in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -35,7 +35,7 @@ public class ListEvaluatorSkillsResponseBody extends TeaModel {
      * <p>The list of skill summaries.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;skillName&quot;:&quot;trace_context_loader&quot;,&quot;displayName&quot;:&quot;Trace Context Loader&quot;,&quot;enable&quot;:true}]</p>
+     * <p>[{&quot;skillName&quot;:&quot;trace_context_loader&quot;,&quot;displayName&quot;:&quot;Read trace context&quot;,&quot;enable&quot;:true}]</p>
      */
     @NameInMap("skills")
     public java.util.List<ListEvaluatorSkillsResponseBodySkills> skills;
@@ -96,7 +96,7 @@ public class ListEvaluatorSkillsResponseBody extends TeaModel {
 
     public static class ListEvaluatorSkillsResponseBodySkills extends TeaModel {
         /**
-         * <p>The creation time. Declared as int64 in CloudSpec. The backend currently returns the StarOps <code>createTime</code> string field.</p>
+         * <p>The creation time. CloudSpec declares this field as int64, but the current backend returns the StarOps <code>createTime</code> string field.</p>
          * 
          * <strong>example:</strong>
          * <p>1782816000</p>
@@ -108,7 +108,7 @@ public class ListEvaluatorSkillsResponseBody extends TeaModel {
          * <p>The skill description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Reads trace context to assist evaluation</p>
+         * <p>Read trace context to assist evaluation</p>
          */
         @NameInMap("description")
         public String description;
@@ -117,13 +117,13 @@ public class ListEvaluatorSkillsResponseBody extends TeaModel {
          * <p>The display name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Trace Context Loader</p>
+         * <p>Read trace context</p>
          */
         @NameInMap("displayName")
         public String displayName;
 
         /**
-         * <p>Indicates whether the skill is enabled.</p>
+         * <p>Specifies whether the skill is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -132,7 +132,7 @@ public class ListEvaluatorSkillsResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The latest version. This field is declared in CloudSpec but is not currently populated in the backend response.</p>
+         * <p>The latest version. This field is declared in CloudSpec but is not populated in the current backend response.</p>
          * 
          * <strong>example:</strong>
          * <p>1782816000000</p>
@@ -150,7 +150,7 @@ public class ListEvaluatorSkillsResponseBody extends TeaModel {
         public String skillName;
 
         /**
-         * <p>The update time. Declared as int64 in CloudSpec. The backend currently returns the StarOps <code>updateTime</code> string field.</p>
+         * <p>The update time. CloudSpec declares this field as int64, but the current backend returns the StarOps <code>updateTime</code> string field.</p>
          * 
          * <strong>example:</strong>
          * <p>1782816600</p>

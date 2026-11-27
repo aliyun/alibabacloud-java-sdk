@@ -14,7 +14,7 @@ public class UpdateEvaluatorRequest extends TeaModel {
     public java.util.List<String> annotations;
 
     /**
-     * <p>The configuration of the new version. This parameter is typically required when <code>version</code> is specified.</p>
+     * <p>The configuration for the new version. This parameter is typically required when version is specified.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;prompt&quot;:&quot;Evaluate task completion more strictly&quot;}</p>
@@ -23,6 +23,8 @@ public class UpdateEvaluatorRequest extends TeaModel {
     public java.util.Map<String, ?> config;
 
     /**
+     * <p>Specifies whether to create a new draft. Set to true to create a new draft, or false to update a specified existing draft. When this parameter is specified, the version status defaults to DRAFT.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -30,7 +32,7 @@ public class UpdateEvaluatorRequest extends TeaModel {
     public Boolean createVersion;
 
     /**
-     * <p>The evaluator description.</p>
+     * <p>The description of the evaluator.</p>
      * 
      * <strong>example:</strong>
      * <p>Determines whether the agent completes the user task</p>
@@ -42,7 +44,7 @@ public class UpdateEvaluatorRequest extends TeaModel {
      * <p>The display name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Task completion of the chain</p>
+     * <p>Pipeline task completion</p>
      */
     @NameInMap("displayName")
     public String displayName;
@@ -57,13 +59,17 @@ public class UpdateEvaluatorRequest extends TeaModel {
     public java.util.Map<String, ?> properties;
 
     /**
+     * <p>The complete list of business skills saved for the standard agent evaluator in this request. Pass an empty array to clear the business skills for this version.</p>
+     * 
      * <strong>example:</strong>
-     * <p>[{&quot;skillName&quot;:&quot;fact-check&quot;,&quot;files&quot;:[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;---\nname: fact-check\ndescription: 核对回答中的事实依据\n---\n逐项核对回答中的事实，并列出依据。&quot;}]}]</p>
+     * <p>[{&quot;skillName&quot;:&quot;fact-check&quot;,&quot;files&quot;:[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;---\nname: fact-check\ndescription: Verify factual basis in responses\n---\nVerify the facts in the response item by item and list the basis.&quot;}]}]</p>
      */
     @NameInMap("skills")
     public java.util.List<UpdateEvaluatorRequestSkills> skills;
 
     /**
+     * <p>The status of the evaluator version to be written. Only DRAFT is supported when explicitly specified. To publish a draft, call UpdateEvaluatorVersionStatus.</p>
+     * 
      * <strong>example:</strong>
      * <p>DRAFT</p>
      */
@@ -89,7 +95,7 @@ public class UpdateEvaluatorRequest extends TeaModel {
     public String versionDescription;
 
     /**
-     * <p>The idempotency token. CloudSpec declares this query parameter, but the backend does not currently perform idempotency comparison.</p>
+     * <p>The idempotency token. CloudSpec declares this query parameter, but the backend does not currently perform idempotency checks.</p>
      * 
      * <strong>example:</strong>
      * <p>a1b2c3d4-1234-5678-90ab-cdef12345678</p>
@@ -192,16 +198,20 @@ public class UpdateEvaluatorRequest extends TeaModel {
 
     public static class UpdateEvaluatorRequestSkillsFiles extends TeaModel {
         /**
+         * <p>The text content of the file.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          * <h2>name: fact-check
-         * description: 核对回答中的事实依据</h2>
-         * <p>逐项核对回答中的事实，并列出依据。</p>
+         * description: Verify factual basis in responses</h2>
+         * <p>Verify the facts in the response item by item and list the basis</p>
          */
         @NameInMap("content")
         public String content;
 
         /**
+         * <p>The path of the file relative to the root directory of the skill.</p>
+         * 
          * <strong>example:</strong>
          * <p>SKILL.md</p>
          */
@@ -233,20 +243,26 @@ public class UpdateEvaluatorRequest extends TeaModel {
 
     public static class UpdateEvaluatorRequestSkills extends TeaModel {
         /**
+         * <p>The description of the skill purpose.</p>
+         * 
          * <strong>example:</strong>
-         * <p>核对回答中的事实依据</p>
+         * <p>Verify factual basis in responses</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
+         * <p>The display name of the skill.</p>
+         * 
          * <strong>example:</strong>
-         * <p>事实核查</p>
+         * <p>Fact-checking</p>
          */
         @NameInMap("displayName")
         public String displayName;
 
         /**
+         * <p>Specifies whether to enable the skill. Default value: true.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -254,13 +270,17 @@ public class UpdateEvaluatorRequest extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>The complete list of files for the skill, which must include SKILL.md in the root directory.</p>
+         * 
          * <strong>example:</strong>
-         * <p>[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;---\nname: fact-check\ndescription: 核对回答中的事实依据\n---\n逐项核对回答中的事实，并列出依据。&quot;}]</p>
+         * <p>[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;---\nname: fact-check\ndescription: Verify factual basis in responses\n---\nVerify the facts in the response item by item and list the basis.&quot;}]</p>
          */
         @NameInMap("files")
         public java.util.List<UpdateEvaluatorRequestSkillsFiles> files;
 
         /**
+         * <p>The name of the skill, which must be unique in the list of skills submitted in this request.</p>
+         * 
          * <strong>example:</strong>
          * <p>fact-check</p>
          */

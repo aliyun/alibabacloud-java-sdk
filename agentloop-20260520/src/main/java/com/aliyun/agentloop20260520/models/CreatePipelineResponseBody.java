@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePipelineResponseBody extends TeaModel {
     /**
-     * <p>The request ID used to locate the request for troubleshooting.</p>
+     * <p>The request ID. You can use the ID to troubleshoot issues and locate the request.</p>
      * 
      * <strong>example:</strong>
      * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>

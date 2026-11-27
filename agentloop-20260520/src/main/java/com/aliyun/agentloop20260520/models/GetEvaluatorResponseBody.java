@@ -45,6 +45,8 @@ public class GetEvaluatorResponseBody extends TeaModel {
 
     public static class GetEvaluatorResponseBodyEvaluatorSkills extends TeaModel {
         /**
+         * <p>The skill revision number used by this evaluator version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1770386951147366810</p>
          */
@@ -52,20 +54,26 @@ public class GetEvaluatorResponseBody extends TeaModel {
         public String currentVersion;
 
         /**
+         * <p>The description of the skill purpose.</p>
+         * 
          * <strong>example:</strong>
-         * <p>核对回答中的事实依据</p>
+         * <p>Verify the factual basis in the response</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
+         * <p>The display name of the skill.</p>
+         * 
          * <strong>example:</strong>
-         * <p>事实核查</p>
+         * <p>Fact-checking</p>
          */
         @NameInMap("displayName")
         public String displayName;
 
         /**
+         * <p>Indicates whether the skill is enabled in the queried evaluator version.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -73,6 +81,8 @@ public class GetEvaluatorResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>The skill name.</p>
+         * 
          * <strong>example:</strong>
          * <p>fact-check</p>
          */
@@ -128,7 +138,7 @@ public class GetEvaluatorResponseBody extends TeaModel {
 
     public static class GetEvaluatorResponseBodyEvaluatorVersions extends TeaModel {
         /**
-         * <p>The version creation time, in seconds-level UNIX timestamp.</p>
+         * <p>The time when the version was created. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1782816000</p>
@@ -137,6 +147,8 @@ public class GetEvaluatorResponseBody extends TeaModel {
         public Long createdAt;
 
         /**
+         * <p>Indicates whether this version can be selected when creating an evaluation task or an experiment plan.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -144,6 +156,8 @@ public class GetEvaluatorResponseBody extends TeaModel {
         public Boolean selectable;
 
         /**
+         * <p>The version status. DRAFT indicates a draft. PUBLISHED indicates that the version is published. OFFLINE indicates that the version is offline.</p>
+         * 
          * <strong>example:</strong>
          * <p>PUBLISHED</p>
          */
@@ -151,6 +165,8 @@ public class GetEvaluatorResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The time when the version was last updated. The value is a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1795478400</p>
          */
@@ -241,7 +257,7 @@ public class GetEvaluatorResponseBody extends TeaModel {
         public String agentSpace;
 
         /**
-         * <p>The list of annotations.</p>
+         * <p>The list of annotation tags.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;__en&quot;]</p>
@@ -250,16 +266,16 @@ public class GetEvaluatorResponseBody extends TeaModel {
         public java.util.List<String> annotations;
 
         /**
-         * <p>The configuration of the current version.</p>
+         * <p>The current version configuration.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;prompt&quot;:&quot;Please evaluate the task completion&quot;}</p>
+         * <p>{&quot;prompt&quot;:&quot;Evaluate the task completion&quot;}</p>
          */
         @NameInMap("config")
         public java.util.Map<String, ?> config;
 
         /**
-         * <p>The creation time, in seconds-level UNIX timestamp.</p>
+         * <p>The creation time. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1782816000</p>
@@ -268,7 +284,7 @@ public class GetEvaluatorResponseBody extends TeaModel {
         public Long createdAt;
 
         /**
-         * <p>The version number returned in the current response.</p>
+         * <p>The current version number.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -280,7 +296,7 @@ public class GetEvaluatorResponseBody extends TeaModel {
          * <p>The evaluator description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Determines whether the Agent has completed the user task</p>
+         * <p>Determines whether the agent completed the user task</p>
          */
         @NameInMap("description")
         public String description;
@@ -289,7 +305,7 @@ public class GetEvaluatorResponseBody extends TeaModel {
          * <p>The display name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Trace task completion</p>
+         * <p>Workflow task completion</p>
          */
         @NameInMap("displayName")
         public String displayName;
@@ -331,6 +347,8 @@ public class GetEvaluatorResponseBody extends TeaModel {
         public java.util.Map<String, ?> properties;
 
         /**
+         * <p>Indicates whether this version can be selected when creating an evaluation task or an experiment plan.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -338,13 +356,17 @@ public class GetEvaluatorResponseBody extends TeaModel {
         public Boolean selectable;
 
         /**
+         * <p>The list of business skill summaries for the queried evaluator version.</p>
+         * 
          * <strong>example:</strong>
-         * <p>[{&quot;skillName&quot;:&quot;fact-check&quot;,&quot;displayName&quot;:&quot;事实核查&quot;,&quot;description&quot;:&quot;核对回答中的事实依据&quot;,&quot;enable&quot;:true,&quot;currentVersion&quot;:&quot;1770386951147366810&quot;}]</p>
+         * <p>[{&quot;skillName&quot;:&quot;fact-check&quot;,&quot;displayName&quot;:&quot;Fact-checking&quot;,&quot;description&quot;:&quot;Verify the factual basis in the response&quot;,&quot;enable&quot;:true,&quot;currentVersion&quot;:&quot;1770386951147366810&quot;}]</p>
          */
         @NameInMap("skills")
         public java.util.List<GetEvaluatorResponseBodyEvaluatorSkills> skills;
 
         /**
+         * <p>The version status. DRAFT indicates a draft. PUBLISHED indicates that the version is published. OFFLINE indicates that the version is offline.</p>
+         * 
          * <strong>example:</strong>
          * <p>PUBLISHED</p>
          */
@@ -361,7 +383,7 @@ public class GetEvaluatorResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The update time, in seconds-level UNIX timestamp.</p>
+         * <p>The update time. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1782816600</p>

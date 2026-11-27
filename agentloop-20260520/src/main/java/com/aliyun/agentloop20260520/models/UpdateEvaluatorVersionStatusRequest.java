@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateEvaluatorVersionStatusRequest extends TeaModel {
     /**
-     * <p>The expected current status. Valid values: DRAFT, PUBLISHED, and OFFLINE. If the specified value does not match the actual status, the API operation returns a 409 error.</p>
+     * <p>The expected current status. Valid values: DRAFT, PUBLISHED, and OFFLINE. If the specified value does not match the actual status, the API returns a 409 error.</p>
      * 
      * <strong>example:</strong>
      * <p>DRAFT</p>
@@ -14,7 +14,11 @@ public class UpdateEvaluatorVersionStatusRequest extends TeaModel {
     public String expectedStatus;
 
     /**
-     * <p>The target status. PUBLISHED indicates publishing a draft for the first time or bringing an offline version back online. OFFLINE indicates taking a published version offline.</p>
+     * <p>The target status. Valid values:</p>
+     * <ul>
+     * <li>PUBLISHED: Publishes a draft for the first time or brings an offline version back online.</li>
+     * <li>OFFLINE: Takes a published version offline.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +38,7 @@ public class UpdateEvaluatorVersionStatusRequest extends TeaModel {
     public String version;
 
     /**
-     * <p>The version description that you can provide when publishing a draft for the first time. The maximum length is 256 characters.</p>
+     * <p>The version description provided when a draft is published for the first time. The maximum length is 256 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>Added scoring rules for answer accuracy</p>

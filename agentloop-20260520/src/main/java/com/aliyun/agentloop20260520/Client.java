@@ -1105,6 +1105,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("pipeline", request.pipeline);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.pipelineKind)) {
+            body.put("pipelineKind", request.pipelineKind);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pipelineName)) {
             body.put("pipelineName", request.pipelineName);
         }
@@ -2451,10 +2455,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Invokes GetPipelineRun to retrieve the details of a single pipeline run, including the data window, execute status, retry information, run statistics, and fault message.</p>
+     * <p>Invokes GetPipelineRun to retrieve the details of a single pipeline run, including the data window, execute status, retry information, run statistics, and the error message for the fault.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a single run, including the data window, execute status, retry information, run statistics, and fault message.</p>
+     * <p>Queries the details of a single run, including the data window, execute status, retry information, run statistics, and the error message for the fault.</p>
      * 
      * @param request GetPipelineRunRequest
      * @param headers map
@@ -2482,10 +2486,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Invokes GetPipelineRun to retrieve the details of a single pipeline run, including the data window, execute status, retry information, run statistics, and fault message.</p>
+     * <p>Invokes GetPipelineRun to retrieve the details of a single pipeline run, including the data window, execute status, retry information, run statistics, and the error message for the fault.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a single run, including the data window, execute status, retry information, run statistics, and fault message.</p>
+     * <p>Queries the details of a single run, including the data window, execute status, retry information, run statistics, and the error message for the fault.</p>
      * 
      * @param request GetPipelineRunRequest
      * @return GetPipelineRunResponse
@@ -2992,7 +2996,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of skills for an evaluator.</p>
+     * <p>Queries the list of evaluator skills.</p>
      * 
      * @param request ListEvaluatorSkillsRequest
      * @param headers map
@@ -3038,7 +3042,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of skills for an evaluator.</p>
+     * <p>Queries the list of evaluator skills.</p>
      * 
      * @param request ListEvaluatorSkillsRequest
      * @return ListEvaluatorSkillsResponse
@@ -3394,7 +3398,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls the ListPipelineRuns operation to query the pipeline run history. You can filter the results by status, trigger type, and time range, and use cursor-based pagination.</p>
+     * <p>Calls ListPipelineRuns to query the pipeline run history. Supports filtering by status, trigger type, and time range, and uses cursor-based pagination.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the run history. Supports filtering by status, trigger type, and time range, and uses cursor-based pagination.</p>
@@ -3451,7 +3455,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls the ListPipelineRuns operation to query the pipeline run history. You can filter the results by status, trigger type, and time range, and use cursor-based pagination.</p>
+     * <p>Calls ListPipelineRuns to query the pipeline run history. Supports filtering by status, trigger type, and time range, and uses cursor-based pagination.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the run history. Supports filtering by status, trigger type, and time range, and uses cursor-based pagination.</p>
@@ -3467,7 +3471,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status, and cursor-based pagination.</p>
+     * <p>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status, and uses cursor-based pagination.</p>
      * 
      * @param request ListPipelinesRequest
      * @param headers map
@@ -3483,6 +3487,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
             query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pipelineKind)) {
+            query.put("pipelineKind", request.pipelineKind);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pipelineName)) {
@@ -3521,7 +3529,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status, and cursor-based pagination.</p>
+     * <p>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status, and uses cursor-based pagination.</p>
      * 
      * @param request ListPipelinesRequest
      * @return ListPipelinesResponse

@@ -15,6 +15,8 @@ public class ListEvaluatorSkillsRequest extends TeaModel {
     public String agentSpace;
 
     /**
+     * <p>The custom evaluator version for which to query the list of skills. If omitted, the latestVersion of the evaluator is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>v2</p>
      */
@@ -22,7 +24,7 @@ public class ListEvaluatorSkillsRequest extends TeaModel {
     public String evaluatorVersion;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The maximum number of results per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEvaluatorSkillRequest extends TeaModel {
     /**
-     * <p>The AgentSpace name.</p>
+     * <p>The name of the AgentSpace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class CreateEvaluatorSkillRequest extends TeaModel {
     public String agentSpace;
 
     /**
-     * <p>The skill description.</p>
+     * <p>The description of the skill.</p>
      * 
      * <strong>example:</strong>
-     * <p>Reads trace context to assist evaluation</p>
+     * <p>Read trace context to assist evaluation</p>
      */
     @NameInMap("description")
     public String description;
@@ -27,7 +27,7 @@ public class CreateEvaluatorSkillRequest extends TeaModel {
      * <p>The display name of the skill.</p>
      * 
      * <strong>example:</strong>
-     * <p>Trace Context Loader</p>
+     * <p>Read Trace Context</p>
      */
     @NameInMap("displayName")
     public String displayName;
@@ -42,6 +42,8 @@ public class CreateEvaluatorSkillRequest extends TeaModel {
     public Boolean enable;
 
     /**
+     * <p>The target evaluator version number for creating the skill. If omitted, the latestVersion of the evaluator is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>v2</p>
      */
@@ -59,7 +61,7 @@ public class CreateEvaluatorSkillRequest extends TeaModel {
     public java.util.List<CreateEvaluatorSkillRequestFiles> files;
 
     /**
-     * <p>The skill name.</p>
+     * <p>The name of the skill.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,7 +71,7 @@ public class CreateEvaluatorSkillRequest extends TeaModel {
     public String skillName;
 
     /**
-     * <p>The idempotency token. CloudSpec declares this query parameter, but the backend does not currently perform idempotency comparison.</p>
+     * <p>The idempotency token. CloudSpec declares this query parameter, but the backend does not currently perform idempotency checks.</p>
      * 
      * <strong>example:</strong>
      * <p>a1b2c3d4-1234-5678-90ab-cdef12345678</p>
@@ -168,7 +170,7 @@ public class CreateEvaluatorSkillRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The remark for the file.</p>
+         * <p>The remark of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>Main skill description</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPipelinesResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries per page specified in the request.</p>
+     * <p>The maximum number of entries per page that is specified in the request. This value is echoed in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,7 +29,7 @@ public class ListPipelinesResponseBody extends TeaModel {
     public java.util.List<ListPipelinesResponseBodyPipelines> pipelines;
 
     /**
-     * <p>The request ID, which is used to locate the request during troubleshooting.</p>
+     * <p>The request ID, which is used to locate the request when you troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
@@ -93,7 +93,7 @@ public class ListPipelinesResponseBody extends TeaModel {
 
     public static class ListPipelinesResponseBodyPipelinesExecutePolicyContinuous extends TeaModel {
         /**
-         * <p>The bootstrap history start time as a UNIX timestamp in seconds. It has the same precision as runOnce or scheduled fromTime. Millisecond values greater than or equal to 1e12 are automatically converted. The cursor starts from the grid-aligned time and catches up window by window. After catching up, it switches to minute intervals. By default, it starts from the current time and only processes incremental data.</p>
+         * <p>The historical start time for bootstrap. The value is a UNIX timestamp in seconds, which has the same precision as runOnce/scheduled.fromTime. Millisecond values greater than or equal to 1e12 are automatically converted. The cursor starts from this time aligned to the grid and catches up window by window. After catching up, it switches to minute intervals. By default, it starts from the current time and processes only incremental data.</p>
          * 
          * <strong>example:</strong>
          * <p>1735660800</p>
@@ -118,7 +118,7 @@ public class ListPipelinesResponseBody extends TeaModel {
 
     public static class ListPipelinesResponseBodyPipelinesExecutePolicyRunOnce extends TeaModel {
         /**
-         * <p>The start time of the time slice as a UNIX timestamp in seconds.</p>
+         * <p>The start time of the time slice. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1735660800</p>
@@ -127,7 +127,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         public Long fromTime;
 
         /**
-         * <p>The end time of the time slice as a UNIX timestamp in seconds.</p>
+         * <p>The end time of the time slice. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1735747200</p>
@@ -160,7 +160,7 @@ public class ListPipelinesResponseBody extends TeaModel {
 
     public static class ListPipelinesResponseBodyPipelinesExecutePolicyScheduled extends TeaModel {
         /**
-         * <p>The scheduling start time as a UNIX timestamp in seconds.</p>
+         * <p>The start time of the scheduling. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1735660800</p>
@@ -202,7 +202,7 @@ public class ListPipelinesResponseBody extends TeaModel {
 
     public static class ListPipelinesResponseBodyPipelinesExecutePolicy extends TeaModel {
         /**
-         * <p>The continuous execution configuration. This is used when the type is trace. The processing frequency is a fixed value managed by the server.</p>
+         * <p>The continuous execution configuration. This configuration is used when type is set to trace. The processing frequency is a fixed value managed by the server.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;fromTime&quot;:1735660800}</p>
@@ -211,7 +211,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         public ListPipelinesResponseBodyPipelinesExecutePolicyContinuous continuous;
 
         /**
-         * <p>The scheduling mode. Valid values: RunOnce for single execution, Scheduled for periodic execution, and Continuous for continuous execution. Continuous mode is only for trace data sources. The processing frequency is a fixed value managed by the server, and data is automatically processed at minute intervals after the trace is completed.</p>
+         * <p>The scheduling mode. Valid values: RunOnce (single execution), Scheduled (periodic execution), and Continuous (continuous execution, applicable only to trace data sources; the processing frequency is a fixed value managed by the server, and automatic processing occurs at the minute level after trace completion).</p>
          * 
          * <strong>example:</strong>
          * <p>RunOnce</p>
@@ -220,7 +220,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         public String mode;
 
         /**
-         * <p>The parameters for single execution. This field has a value only when the mode is RunOnce.</p>
+         * <p>The parameters for single execution. This field has a value only when mode is set to RunOnce.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;fromTime&quot;:1735660800,&quot;toTime&quot;:1735664400}</p>
@@ -229,7 +229,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         public ListPipelinesResponseBodyPipelinesExecutePolicyRunOnce runOnce;
 
         /**
-         * <p>The parameters for periodic scheduling. This field has a value only when the mode is Scheduled.</p>
+         * <p>The parameters for periodic scheduling. This field has a value only when mode is set to Scheduled.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;interval&quot;:&quot;1h&quot;,&quot;fromTime&quot;:1735660800}</p>
@@ -272,6 +272,87 @@ public class ListPipelinesResponseBody extends TeaModel {
         }
         public ListPipelinesResponseBodyPipelinesExecutePolicyScheduled getScheduled() {
             return this.scheduled;
+        }
+
+    }
+
+    public static class ListPipelinesResponseBodyPipelinesPipelineNodes extends TeaModel {
+        /**
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stage_1</p>
+         */
+        @NameInMap("id")
+        public String id;
+
+        /**
+         * <p>The node parameters. This is a key-value structure that varies based on the node type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;stageId&quot;:&quot;stage_1&quot;}</p>
+         */
+        @NameInMap("parameters")
+        public java.util.Map<String, ?> parameters;
+
+        /**
+         * <p>The node type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>annotation-stage</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        public static ListPipelinesResponseBodyPipelinesPipelineNodes build(java.util.Map<String, ?> map) throws Exception {
+            ListPipelinesResponseBodyPipelinesPipelineNodes self = new ListPipelinesResponseBodyPipelinesPipelineNodes();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPipelinesResponseBodyPipelinesPipelineNodes setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public ListPipelinesResponseBodyPipelinesPipelineNodes setParameters(java.util.Map<String, ?> parameters) {
+            this.parameters = parameters;
+            return this;
+        }
+        public java.util.Map<String, ?> getParameters() {
+            return this.parameters;
+        }
+
+        public ListPipelinesResponseBodyPipelinesPipelineNodes setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class ListPipelinesResponseBodyPipelinesPipeline extends TeaModel {
+        /**
+         * <p>The list of orchestration nodes.</p>
+         */
+        @NameInMap("nodes")
+        public java.util.List<ListPipelinesResponseBodyPipelinesPipelineNodes> nodes;
+
+        public static ListPipelinesResponseBodyPipelinesPipeline build(java.util.Map<String, ?> map) throws Exception {
+            ListPipelinesResponseBodyPipelinesPipeline self = new ListPipelinesResponseBodyPipelinesPipeline();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPipelinesResponseBodyPipelinesPipeline setNodes(java.util.List<ListPipelinesResponseBodyPipelinesPipelineNodes> nodes) {
+            this.nodes = nodes;
+            return this;
+        }
+        public java.util.List<ListPipelinesResponseBodyPipelinesPipelineNodes> getNodes() {
+            return this.nodes;
         }
 
     }
@@ -326,7 +407,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         public ListPipelinesResponseBodyPipelinesSinkConditionDefaultSinkDataset dataset;
 
         /**
-         * <p>The default destination type. Currently, only dataset is supported.</p>
+         * <p>The default sink type. Only dataset is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>dataset</p>
@@ -401,13 +482,13 @@ public class ListPipelinesResponseBody extends TeaModel {
 
     public static class ListPipelinesResponseBodyPipelinesSinkConditionRoutesSink extends TeaModel {
         /**
-         * <p>The destination dataset of the route.</p>
+         * <p>The destination dataset for the route.</p>
          */
         @NameInMap("dataset")
         public ListPipelinesResponseBodyPipelinesSinkConditionRoutesSinkDataset dataset;
 
         /**
-         * <p>The destination type of the route. Currently, only dataset is supported.</p>
+         * <p>The sink type for the route. Only dataset is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>dataset</p>
@@ -451,7 +532,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         public String expression;
 
         /**
-         * <p>The ID of the route.</p>
+         * <p>The route ID.</p>
          * 
          * <strong>example:</strong>
          * <p>refund</p>
@@ -460,7 +541,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The write destination of the route.</p>
+         * <p>The sink for the route.</p>
          */
         @NameInMap("sink")
         public ListPipelinesResponseBodyPipelinesSinkConditionRoutesSink sink;
@@ -498,13 +579,13 @@ public class ListPipelinesResponseBody extends TeaModel {
 
     public static class ListPipelinesResponseBodyPipelinesSinkCondition extends TeaModel {
         /**
-         * <p>The default write destination used when no conditional route is matched.</p>
+         * <p>The default sink used when no conditional route is matched.</p>
          */
         @NameInMap("defaultSink")
         public ListPipelinesResponseBodyPipelinesSinkConditionDefaultSink defaultSink;
 
         /**
-         * <p>The route matching mode. Currently, only all is supported.</p>
+         * <p>The route matching mode. Only all is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>all</p>
@@ -593,19 +674,19 @@ public class ListPipelinesResponseBody extends TeaModel {
 
     public static class ListPipelinesResponseBodyPipelinesSink extends TeaModel {
         /**
-         * <p>The conditional routing configuration. This is used only when the sink type is condition.</p>
+         * <p>The conditional routing configuration. This parameter is used only when the sink type is condition.</p>
          */
         @NameInMap("condition")
         public ListPipelinesResponseBodyPipelinesSinkCondition condition;
 
         /**
-         * <p>The destination dataset configuration for the dataset sink. This is used only when the sink type is dataset.</p>
+         * <p>The destination dataset configuration for the dataset sink. This parameter is used only when the sink type is dataset.</p>
          */
         @NameInMap("dataset")
         public ListPipelinesResponseBodyPipelinesSinkDataset dataset;
 
         /**
-         * <p>The destination type. Valid values: dataset, condition.</p>
+         * <p>The sink type. Valid values: dataset and condition.</p>
          * 
          * <strong>example:</strong>
          * <p>condition</p>
@@ -655,7 +736,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         public String dataset;
 
         /**
-         * <p>The data filter condition for the dataset.</p>
+         * <p>The filter conditions for the dataset data.</p>
          * 
          * <strong>example:</strong>
          * <p>status = &quot;pending&quot;</p>
@@ -697,7 +778,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The type of the field. Valid values: text, long, double, and json.</p>
+         * <p>The data type of the field. Valid values: text, long, double, and json.</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>
@@ -730,7 +811,7 @@ public class ListPipelinesResponseBody extends TeaModel {
 
     public static class ListPipelinesResponseBodyPipelinesSourceLogstore extends TeaModel {
         /**
-         * <p>The name of the SLS Logstore.</p>
+         * <p>The name of the Simple Log Service Logstore.</p>
          * 
          * <strong>example:</strong>
          * <p>my-sls-logstore</p>
@@ -739,7 +820,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         public String logstore;
 
         /**
-         * <p>The name of the SLS project.</p>
+         * <p>The name of the Simple Log Service project.</p>
          * 
          * <strong>example:</strong>
          * <p>my-sls-project</p>
@@ -748,7 +829,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         public String project;
 
         /**
-         * <p>The data filtered query statement, which uses the SLS query and analysis syntax.</p>
+         * <p>The filtered query statement (Simple Log Service query and analysis syntax).</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -791,7 +872,7 @@ public class ListPipelinesResponseBody extends TeaModel {
 
     public static class ListPipelinesResponseBodyPipelinesSourceTrajectoryEnrich extends TeaModel {
         /**
-         * <p>The list of enrichment columns. This parameter is retained for compatibility. The current implementation outputs only the fixed column agent_trajectory, and this parameter no longer affects the output.</p>
+         * <p>The list of enrichment columns. This parameter is retained for compatibility. The current implementation outputs a single fixed column named agent_trajectory, and this parameter no longer affects the output.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;input&quot;,&quot;output&quot;,&quot;session_id&quot;]</p>
@@ -833,7 +914,7 @@ public class ListPipelinesResponseBody extends TeaModel {
 
     public static class ListPipelinesResponseBodyPipelinesSourceTrajectory extends TeaModel {
         /**
-         * <p>The trajectory enrichment configuration. It mounts trajectory data into the scrubbing result based on the trace_id. When writing to the dataset, the data is stored in the fixed column agent_trajectory, and the column value is the trajectory JSON content.</p>
+         * <p>The trajectory enrichment configuration. It mounts trajectory data into the scrubbing results based on the trace_id. When writing to a dataset, the data is stored in a fixed column named agent_trajectory, and the column value contains the trajectory JSON content.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;enabled&quot;:true,&quot;columns&quot;:[&quot;input&quot;,&quot;output&quot;]}</p>
@@ -858,7 +939,7 @@ public class ListPipelinesResponseBody extends TeaModel {
 
     public static class ListPipelinesResponseBodyPipelinesSource extends TeaModel {
         /**
-         * <p>The dataset datasource config in the current AgentSpace.</p>
+         * <p>The dataset datasource config under the current AgentSpace.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;dataset&quot;:&quot;my-dataset&quot;,&quot;filter&quot;:&quot;status = &quot;pending&quot;&quot;}</p>
@@ -867,7 +948,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         public ListPipelinesResponseBodyPipelinesSourceDataset dataset;
 
         /**
-         * <p>The input fields and their types, applicable to all data source types.</p>
+         * <p>The input fields and their data types. This applies to all data source types.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;name&quot;:&quot;question&quot;,&quot;type&quot;:&quot;text&quot;}]</p>
@@ -876,7 +957,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         public java.util.List<ListPipelinesResponseBodyPipelinesSourceInputFields> inputFields;
 
         /**
-         * <p>The Simple Log Service (SLS) Logstore datasource config.</p>
+         * <p>The Simple Log Service Logstore datasource config.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;project&quot;:&quot;my-sls-project&quot;,&quot;logstore&quot;:&quot;agent-logs&quot;}</p>
@@ -885,7 +966,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         public ListPipelinesResponseBodyPipelinesSourceLogstore logstore;
 
         /**
-         * <p>The trajectory data configuration. This parameter is optional and takes effect only when the type is trace. It obtains ATIF standard trajectory data from the trajectory scrubbing service and extends it by feature.</p>
+         * <p>The trajectory data configuration. This configuration is optional and takes effect only when type is set to trace. It obtains ATIF standard trajectory data from the trajectory scrubbing service and extends it based on features.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;enrich&quot;:{&quot;enabled&quot;:true,&quot;columns&quot;:[&quot;input&quot;,&quot;output&quot;]}}</p>
@@ -894,7 +975,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         public ListPipelinesResponseBodyPipelinesSourceTrajectory trajectory;
 
         /**
-         * <p>The data source type. Valid values: logstore, dataset, and trace. The trace value indicates a trajectory signal-driven processing mode. The validity of the enumerated values is verified by the server.</p>
+         * <p>The type of the data source. Valid values: logstore, dataset, and trace. The trace type indicates a processing mode driven by trajectory signals. The validity of the enumerated values is verified by the server.</p>
          * 
          * <strong>example:</strong>
          * <p>dataset</p>
@@ -951,7 +1032,16 @@ public class ListPipelinesResponseBody extends TeaModel {
 
     public static class ListPipelinesResponseBodyPipelines extends TeaModel {
         /**
-         * <p>The time when the pipeline was created, in ISO 8601 UTC format.</p>
+         * <p>The timestamp of the committed watermark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1767225600</p>
+         */
+        @NameInMap("committedWatermark")
+        public Long committedWatermark;
+
+        /**
+         * <p>The time when the pipeline was created. The time is in the ISO 8601 standard in UTC.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -979,6 +1069,57 @@ public class ListPipelinesResponseBody extends TeaModel {
         public ListPipelinesResponseBodyPipelinesExecutePolicy executePolicy;
 
         /**
+         * <p>The ID of the last run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>run-20260101-0001</p>
+         */
+        @NameInMap("lastRunId")
+        public String lastRunId;
+
+        /**
+         * <p>The status of the last run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
+        @NameInMap("lastRunStatus")
+        public String lastRunStatus;
+
+        /**
+         * <p>The timestamp for the next scheduled trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1767229200</p>
+         */
+        @NameInMap("nextTriggerTime")
+        public Long nextTriggerTime;
+
+        /**
+         * <p>The reason why scheduling is paused.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>manual</p>
+         */
+        @NameInMap("pausedReason")
+        public String pausedReason;
+
+        /**
+         * <p>The pipeline orchestration configuration.</p>
+         */
+        @NameInMap("pipeline")
+        public ListPipelinesResponseBodyPipelinesPipeline pipeline;
+
+        /**
+         * <p>The pipeline type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ORCHESTRATION</p>
+         */
+        @NameInMap("pipelineKind")
+        public String pipelineKind;
+
+        /**
          * <p>The name of the pipeline.</p>
          * 
          * <strong>example:</strong>
@@ -997,7 +1138,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The scheduling status. Valid values: None for no scheduling in RunOnce pipelines, Active, Paused, and Terminated.</p>
+         * <p>The schedule status. Valid values: None (no scheduling, for RunOnce pipelines), Active, Paused, and Terminated.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -1006,7 +1147,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         public String scheduleStatus;
 
         /**
-         * <p>The scheduling type. Valid values: RunOnce for single execution, Scheduled for periodic scheduling, and Continuous for continuous execution driven by trace source signals.</p>
+         * <p>The schedule type. Valid values: RunOnce (single execution), Scheduled (periodic scheduling), and Continuous (continuous execution, driven by trace source signals).</p>
          * 
          * <strong>example:</strong>
          * <p>RunOnce</p>
@@ -1015,7 +1156,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         public String scheduleType;
 
         /**
-         * <p>The pipeline sink, which is the destination for data writing.</p>
+         * <p>The pipeline sink, which is the destination for writing data.</p>
          */
         @NameInMap("sink")
         public ListPipelinesResponseBodyPipelinesSink sink;
@@ -1030,7 +1171,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         public ListPipelinesResponseBodyPipelinesSource source;
 
         /**
-         * <p>The time when the pipeline was last updated. The time is in the ISO 8601 UTC format.</p>
+         * <p>The time when the pipeline was last updated. The time is in the ISO 8601 standard in UTC.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -1038,6 +1179,15 @@ public class ListPipelinesResponseBody extends TeaModel {
          */
         @NameInMap("updateTime")
         public String updateTime;
+
+        /**
+         * <p>The version number of the pipeline configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("version")
+        public Integer version;
 
         /**
          * <p>The workspace associated with the pipeline.</p>
@@ -1051,6 +1201,14 @@ public class ListPipelinesResponseBody extends TeaModel {
         public static ListPipelinesResponseBodyPipelines build(java.util.Map<String, ?> map) throws Exception {
             ListPipelinesResponseBodyPipelines self = new ListPipelinesResponseBodyPipelines();
             return TeaModel.build(map, self);
+        }
+
+        public ListPipelinesResponseBodyPipelines setCommittedWatermark(Long committedWatermark) {
+            this.committedWatermark = committedWatermark;
+            return this;
+        }
+        public Long getCommittedWatermark() {
+            return this.committedWatermark;
         }
 
         public ListPipelinesResponseBodyPipelines setCreateTime(String createTime) {
@@ -1075,6 +1233,54 @@ public class ListPipelinesResponseBody extends TeaModel {
         }
         public ListPipelinesResponseBodyPipelinesExecutePolicy getExecutePolicy() {
             return this.executePolicy;
+        }
+
+        public ListPipelinesResponseBodyPipelines setLastRunId(String lastRunId) {
+            this.lastRunId = lastRunId;
+            return this;
+        }
+        public String getLastRunId() {
+            return this.lastRunId;
+        }
+
+        public ListPipelinesResponseBodyPipelines setLastRunStatus(String lastRunStatus) {
+            this.lastRunStatus = lastRunStatus;
+            return this;
+        }
+        public String getLastRunStatus() {
+            return this.lastRunStatus;
+        }
+
+        public ListPipelinesResponseBodyPipelines setNextTriggerTime(Long nextTriggerTime) {
+            this.nextTriggerTime = nextTriggerTime;
+            return this;
+        }
+        public Long getNextTriggerTime() {
+            return this.nextTriggerTime;
+        }
+
+        public ListPipelinesResponseBodyPipelines setPausedReason(String pausedReason) {
+            this.pausedReason = pausedReason;
+            return this;
+        }
+        public String getPausedReason() {
+            return this.pausedReason;
+        }
+
+        public ListPipelinesResponseBodyPipelines setPipeline(ListPipelinesResponseBodyPipelinesPipeline pipeline) {
+            this.pipeline = pipeline;
+            return this;
+        }
+        public ListPipelinesResponseBodyPipelinesPipeline getPipeline() {
+            return this.pipeline;
+        }
+
+        public ListPipelinesResponseBodyPipelines setPipelineKind(String pipelineKind) {
+            this.pipelineKind = pipelineKind;
+            return this;
+        }
+        public String getPipelineKind() {
+            return this.pipelineKind;
         }
 
         public ListPipelinesResponseBodyPipelines setPipelineName(String pipelineName) {
@@ -1131,6 +1337,14 @@ public class ListPipelinesResponseBody extends TeaModel {
         }
         public String getUpdateTime() {
             return this.updateTime;
+        }
+
+        public ListPipelinesResponseBodyPipelines setVersion(Integer version) {
+            this.version = version;
+            return this;
+        }
+        public Integer getVersion() {
+            return this.version;
         }
 
         public ListPipelinesResponseBodyPipelines setWorkspace(String workspace) {
