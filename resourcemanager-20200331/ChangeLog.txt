@@ -1,3 +1,10 @@
+2026-11-27 Version: 2.6.3
+- Update API CreateResourceGroup: add request parameters ClientToken.
+- Update API CreateResourceGroup: add request parameters DryRun.
+- Update API DeleteResourceGroup: add request parameters ClientToken.
+- Update API DeleteResourceGroup: add request parameters DryRun.
+
+
 2026-10-16 Version: 2.6.2
 - Update API ListResources: add request parameters Count.
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListResourceGroupsWithAuthDetailsRequest extends TeaModel {
     /**
-     * <p>The display name of the resource group. This parameter is used as a filter condition. Fuzzy match is supported.</p>
+     * <p>The display name of the resource group, which is used as a filter condition for the query. Fuzzy match is supported.</p>
      * <p>The name can be up to 50 characters in length.</p>
      * 
      * <strong>example:</strong>
@@ -17,11 +17,11 @@ public class ListResourceGroupsWithAuthDetailsRequest extends TeaModel {
     /**
      * <p>Specifies whether to return tag information. Valid values:</p>
      * <ul>
-     * <li><p>false (default): Does not return tag information.</p>
+     * <li><p>false: does not return tag information. This is the default value.</p>
      * </li>
-     * <li><p>true: Returns tag information.</p>
+     * <li><p>true: returns tag information.</p>
      * <blockquote>
-     * <p>If you specify tag-based filter conditions, tag information is always returned regardless of the value of <code>IncludeTags</code>.</p>
+     * <p>When you specify a tag filter condition, tag information is returned regardless of the value of <code>IncludeTags</code>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -33,8 +33,8 @@ public class ListResourceGroupsWithAuthDetailsRequest extends TeaModel {
     public Boolean includeTags;
 
     /**
-     * <p>The unique identifier of the resource group. This parameter is used as a filter condition. Fuzzy match is supported.</p>
-     * <p>The identifier can be up to 50 characters in length and can contain letters, digits, and hyphens (-).</p>
+     * <p>The unique identifier of the resource group, which is used as a filter condition for the query. Fuzzy match is supported.</p>
+     * <p>The identifier can be up to 50 characters in length, and can contain letters, digits, and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>prod-rg</p>
@@ -52,7 +52,7 @@ public class ListResourceGroupsWithAuthDetailsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -61,7 +61,7 @@ public class ListResourceGroupsWithAuthDetailsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The list of resource group IDs.</p>
+     * <p>The IDs of the resource groups.</p>
      */
     @NameInMap("ResourceGroupIds")
     public java.util.List<String> resourceGroupIds;
@@ -76,17 +76,17 @@ public class ListResourceGroupsWithAuthDetailsRequest extends TeaModel {
     public String resourceRegionId;
 
     /**
-     * <p>The list of resource types.</p>
+     * <p>The resource types.</p>
      */
     @NameInMap("ResourceTypes")
     public java.util.List<ListResourceGroupsWithAuthDetailsRequestResourceTypes> resourceTypes;
 
     /**
-     * <p>The status of the resource group. This parameter is used as a filter condition. Valid values:</p>
+     * <p>The status of the resource group, which is used as a filter condition for the query. Valid values:</p>
      * <ul>
-     * <li>Creating: Being created.</li>
-     * <li>OK: Created.</li>
-     * <li>PendingDelete: Pending deletion.</li>
+     * <li>Creating: The resource group is being created.</li>
+     * <li>OK: The resource group is created.</li>
+     * <li>PendingDelete: The resource group is pending deletion.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -189,7 +189,7 @@ public class ListResourceGroupsWithAuthDetailsRequest extends TeaModel {
     public static class ListResourceGroupsWithAuthDetailsRequestResourceTypes extends TeaModel {
         /**
          * <p>The resource type.</p>
-         * <p>You can obtain the resource type from the <strong>Resource Type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
+         * <p>You can obtain the value from the <strong>Resource Type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>instance</p>
@@ -198,8 +198,8 @@ public class ListResourceGroupsWithAuthDetailsRequest extends TeaModel {
         public String resourceTypeCode;
 
         /**
-         * <p>The cloud service code.</p>
-         * <p>You can obtain the cloud service code from the <strong>Cloud Service Code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
+         * <p>The code of the cloud service.</p>
+         * <p>You can obtain the value from the <strong>Cloud Service Code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>

@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListResourceGroupCapabilityRequest extends TeaModel {
     /**
-     * <p>The resource type.</p>
-     * <p>You can obtain the resource type from the <strong>Resource Type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
+     * <p>The resource type. You can obtain the resource type from the <strong>Resource Type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>instance</p>
@@ -15,8 +14,7 @@ public class ListResourceGroupCapabilityRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The cloud service ID.</p>
-     * <p>You can obtain the cloud service ID from the <strong>Cloud Service Code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
+     * <p>The cloud service ID. You can obtain the cloud service ID from the <strong>Service Code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs</p>

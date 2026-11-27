@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelChangeAccountEmailRequest extends TeaModel {
     /**
-     * <p>The member account ID.</p>
+     * <p>The member ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

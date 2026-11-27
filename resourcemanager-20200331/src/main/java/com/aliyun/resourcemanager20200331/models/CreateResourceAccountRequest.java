@@ -6,11 +6,11 @@ import com.aliyun.tea.*;
 public class CreateResourceAccountRequest extends TeaModel {
     /**
      * <p>The prefix of the account name. If you leave this parameter empty, the system randomly generates a prefix.</p>
-     * <p>&lt;props=&quot;china&quot;&gt;Length: 2 to 50 characters.</p>
-     * <p>&lt;props=&quot;intl&quot;&gt;Length: 2 to 37 characters.</p>
-     * <p>Format: Can contain letters, digits, and special characters <code>_.-</code>. Must start and end with a letter or digit. Consecutive special characters <code>_.-</code> are not allowed.</p>
-     * <p>The full account name is in the format of <AccountNamePrefix>@<ResourceDirectoryId>.aliyunid.com. Example: <code>alice@rd-3G****.aliyunid.com</code>.</p>
-     * <p>The account name must be unique within the resource directory.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The length ranges from 2 to 50 characters.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;The length ranges from 2 to 37 characters.</p>
+     * <p>Format: The prefix can contain letters, digits, and special characters such as underscores (_), periods (.), and hyphens (-). It must start and end with a letter or a digit, and cannot contain consecutive special characters.</p>
+     * <p>The format of the complete account name is <AccountNamePrefix>@<ResourceDirectoryId>.aliyunid.com. Example: alice@rd-3G****.aliyunid.com.</p>
+     * <p>The account name must be unique in the resource directory.</p>
      * 
      * <strong>example:</strong>
      * <p>alice</p>
@@ -20,9 +20,9 @@ public class CreateResourceAccountRequest extends TeaModel {
 
     /**
      * <p>The display name of the member.</p>
-     * <p>Length: 2 to 50 characters.</p>
-     * <p>Format: Can contain letters, digits, underscores (_), periods (.), hyphens (-), and spaces.</p>
-     * <p>The display name must be unique within the resource directory.</p>
+     * <p>The name must be 2 to 50 characters in length.</p>
+     * <p>Format: The name can contain Chinese characters, letters, digits, underscores (_), periods (.), hyphens (-), and spaces.</p>
+     * <p>The display name must be unique in the resource directory.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class CreateResourceAccountRequest extends TeaModel {
     public String parentFolderId;
 
     /**
-     * <p>The ID of the billing account. If you leave this parameter empty, the newly created member pays for its own resource consumption.</p>
+     * <p>The ID of the settlement account. If you leave this parameter empty, the newly created member pays its own bills.</p>
      * 
      * <strong>example:</strong>
      * <p>12323344****</p>
@@ -52,11 +52,11 @@ public class CreateResourceAccountRequest extends TeaModel {
     /**
      * <p>The identity type of the member. Valid values:</p>
      * <ul>
-     * <li>resell (default): reseller account. The created member automatically establishes a reseller relationship with your distributor. You must use the management account to pay for the new member.</li>
-     * <li>non_resell: non-reseller account. The created member is a regular Alibaba Cloud account that has no relationship with your current distributor. This account purchases resources directly from Alibaba Cloud and pays for its own resource consumption.</li>
+     * <li>resell: reseller account. This is the default value. The created member automatically establishes a reseller relationship with your reseller. You must use the management account to pay for the new member.</li>
+     * <li>non_resell: non-reseller account. The created member is a regular Alibaba Cloud account and has no relationship with your current reseller. The account purchases resources directly from Alibaba Cloud and pays its own bills.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is supported only for China site (Chinese mainland) distributor customers.</p>
+     * <p>This parameter is supported only for reseller customers on the international site.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -7,8 +7,8 @@ public class GetResourceGroupRequest extends TeaModel {
     /**
      * <p>Specifies whether to return tag information. Valid values:</p>
      * <ul>
-     * <li>false (default): does not return tag information.</li>
-     * <li>true: returns tag information.</li>
+     * <li>false (default): Tag information is not returned.</li>
+     * <li>true: Tag information is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,8 +18,8 @@ public class GetResourceGroupRequest extends TeaModel {
     public Boolean includeTags;
 
     /**
-     * <p>The resource group ID.</p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> to query resource group IDs.</p>
+     * <p>The ID of the resource group.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the ID of the resource group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

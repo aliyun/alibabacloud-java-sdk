@@ -100,7 +100,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The time when the resource group was created (UTC).</p>
+         * <p>The time when the resource group was created. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-06-05T14:39:13+08:00</p>
@@ -141,8 +141,8 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         /**
          * <p>The status of the resource group. Valid values:</p>
          * <ul>
-         * <li>Creating: Being created.</li>
-         * <li>OK: Created.</li>
+         * <li>Creating: The resource group is being created.</li>
+         * <li>OK: The resource group is created.</li>
          * </ul>
          * 
          * <strong>example:</strong>

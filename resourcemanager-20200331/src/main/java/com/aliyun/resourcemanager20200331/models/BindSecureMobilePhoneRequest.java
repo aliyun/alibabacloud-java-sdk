@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindSecureMobilePhoneRequest extends TeaModel {
     /**
-     * <p>The member ID.</p>
+     * <p>The ID of the member.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,16 +15,16 @@ public class BindSecureMobilePhoneRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>The secure phone number.</p>
-     * <p>The phone number must be the same as the one that you specified when you called <a href="https://help.aliyun.com/document_detail/372556.html">SendVerificationCodeForBindSecureMobilePhone</a> to authenticate and obtain the verification code.</p>
-     * <p>Format: <Country code>-<Phone number>.</p>
+     * <p>The secure secure phone number.</p>
+     * <p>The secure phone number must be the same as the one specified when you call the <a href="https://help.aliyun.com/document_detail/372556.html">SendVerificationCodeForBindSecureMobilePhone</a> operation to obtain the verification code.</p>
+     * <p>Format: <code>&lt;Country code&gt;-&lt;Secure phone number&gt;</code>.</p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <blockquote>
-     * <p>Only the Chinese mainland phone numbers in the <code>86-&lt;Phone number&gt;</code> format are supported.</p>
+     * <p>Only secure phone numbers in the Chinese mainland in the <code>86-&lt;Secure phone number&gt;</code> format are supported.</p>
      * </blockquote>
      * <p>&lt;props=&quot;intl&quot;&gt;</p>
      * <blockquote>
-     * <p>The Chinese mainland phone numbers in the <code>86-&lt;Phone number&gt;</code> format are not supported.</p>
+     * <p>Secure phone numbers in the Chinese mainland in the <code>86-&lt;Secure phone number&gt;</code> format are not supported.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -36,7 +36,7 @@ public class BindSecureMobilePhoneRequest extends TeaModel {
 
     /**
      * <p>The verification code.</p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/372556.html">SendVerificationCodeForBindSecureMobilePhone</a> to obtain the verification code.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/372556.html">SendVerificationCodeForBindSecureMobilePhone</a> operation to obtain the verification code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

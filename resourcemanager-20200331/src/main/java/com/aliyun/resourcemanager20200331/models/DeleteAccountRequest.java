@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteAccountRequest extends TeaModel {
     /**
-     * <p>The ID of the check item that you can choose to abandon and continue with the member deletion.</p>
-     * <p>You can obtain this ID from the AbandonableChecks response parameter of <a href="https://help.aliyun.com/document_detail/448775.html">GetAccountDeletionCheckResult</a>.</p>
+     * <p>The ID of the check item that you can abandon to continue the member deletion.</p>
+     * <p>You can obtain the ID from the AbandonableChecks response parameter of <a href="https://help.aliyun.com/document_detail/448775.html">GetAccountDeletionCheckResult</a>.</p>
      */
     @NameInMap("AbandonableCheckId")
     public java.util.List<String> abandonableCheckId;
 
     /**
-     * <p>The ID of the member to delete.</p>
+     * <p>The ID of the member to be deleted.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

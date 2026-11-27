@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MoveResourcesResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C00B89D3-3247-11DE-95D8-A7C01FB0AB4F</p>
@@ -44,7 +44,7 @@ public class MoveResourcesResponseBody extends TeaModel {
         /**
          * <p>The error code.</p>
          * <blockquote>
-         * <p>This parameter is returned only when the resource transfer fails.</p>
+         * <p>This parameter is returned when the resource transfer fails.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -56,7 +56,7 @@ public class MoveResourcesResponseBody extends TeaModel {
         /**
          * <p>The error message.</p>
          * <blockquote>
-         * <p>This parameter is returned only when the resource transfer fails.</p>
+         * <p>This parameter is returned when the resource transfer fails.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class MoveResourcesResponseBody extends TeaModel {
         public String errorMsg;
 
         /**
-         * <p>The region ID of the resource.</p>
+         * <p>The ID of the region to which the resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -75,7 +75,7 @@ public class MoveResourcesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>C00B89D3-3247-11DE-95D8-A7C01FB0AB4F</p>
@@ -84,7 +84,7 @@ public class MoveResourcesResponseBody extends TeaModel {
         public String requestId;
 
         /**
-         * <p>The resource ID.</p>
+         * <p>The ID of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>i-23v38****</p>
@@ -102,7 +102,7 @@ public class MoveResourcesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The cloud service code.</p>
+         * <p>The code of the cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>

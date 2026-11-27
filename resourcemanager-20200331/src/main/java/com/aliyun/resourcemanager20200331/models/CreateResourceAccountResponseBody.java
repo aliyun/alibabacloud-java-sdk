@@ -51,7 +51,7 @@ public class CreateResourceAccountResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The name of the account.</p>
+         * <p>The account name.</p>
          * 
          * <strong>example:</strong>
          * <p>alice@rd-3g****.aliyunid.com</p>
@@ -78,10 +78,10 @@ public class CreateResourceAccountResponseBody extends TeaModel {
         public String folderId;
 
         /**
-         * <p>The method used by the member to join the resource directory. Valid values:</p>
+         * <p>The method by which the member joined. Valid values:</p>
          * <ul>
-         * <li>invited: invited.</li>
-         * <li>created: created.</li>
+         * <li>invited: The member is invited.</li>
+         * <li>created: The member is created.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -91,7 +91,7 @@ public class CreateResourceAccountResponseBody extends TeaModel {
         public String joinMethod;
 
         /**
-         * <p>The time when the member joined the resource directory (UTC).</p>
+         * <p>The time when the member joined. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-31T03:37:39.456Z</p>
@@ -100,7 +100,7 @@ public class CreateResourceAccountResponseBody extends TeaModel {
         public String joinTime;
 
         /**
-         * <p>The time when the member was last modified (UTC).</p>
+         * <p>The time when the member was modified. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-31T03:37:39.456Z</p>
@@ -118,7 +118,7 @@ public class CreateResourceAccountResponseBody extends TeaModel {
         public String resourceDirectoryId;
 
         /**
-         * <p>The join status of the member. The value CreateSuccess indicates that the member is created.</p>
+         * <p>The join status of the member. A value of CreateSuccess indicates that the member is created.</p>
          * 
          * <strong>example:</strong>
          * <p>CreateSuccess</p>
@@ -127,7 +127,7 @@ public class CreateResourceAccountResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The type of the member. The value ResourceAccount indicates a resource account.</p>
+         * <p>The type of the member. A value of ResourceAccount indicates a resource account.</p>
          * 
          * <strong>example:</strong>
          * <p>ResourceAccount</p>

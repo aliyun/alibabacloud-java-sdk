@@ -42,7 +42,7 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
 
     public static class InviteAccountToResourceDirectoryResponseBodyHandshake extends TeaModel {
         /**
-         * <p>The creation time of the invitation (UTC).</p>
+         * <p>The time when the invitation was created. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-08-10T09:55:41Z</p>
@@ -51,7 +51,7 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The expiration time of the invitation (UTC).</p>
+         * <p>The expiration time of the invitation. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-08-24T09:55:41Z</p>
@@ -87,7 +87,7 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
         public String masterAccountName;
 
         /**
-         * <p>The modification time of the invitation (UTC).</p>
+         * <p>The time when the invitation was modified. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-08-10T09:55:41Z</p>
@@ -96,7 +96,7 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>The remarks.</p>
+         * <p>The note.</p>
          * 
          * <strong>example:</strong>
          * <p>Welcome to join</p>
@@ -116,11 +116,11 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
         /**
          * <p>The status of the invitation. Valid values:</p>
          * <ul>
-         * <li>Pending: Waiting for confirmation.</li>
-         * <li>Accepted: Accepted.</li>
-         * <li>Cancelled: Canceled.</li>
-         * <li>Declined: Rejected.</li>
-         * <li>Expired: Expired.</li>
+         * <li>Pending: pending confirmation.</li>
+         * <li>Accepted: accepted.</li>
+         * <li>Cancelled: canceled.</li>
+         * <li>Declined: declined.</li>
+         * <li>Expired: timed out.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID or logon email address of the account that is invited.</p>
+         * <p>The ID or logon email address of the invited account.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
@@ -142,7 +142,7 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
          * <p>The type of the invited account. Valid values:</p>
          * <ul>
          * <li>Account: account ID.</li>
-         * <li>Email: logon email address of the account.</li>
+         * <li>Email: logon email address.</li>
          * </ul>
          * 
          * <strong>example:</strong>

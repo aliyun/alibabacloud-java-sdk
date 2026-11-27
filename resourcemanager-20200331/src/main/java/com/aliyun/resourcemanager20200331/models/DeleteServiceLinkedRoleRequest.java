@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteServiceLinkedRoleRequest extends TeaModel {
     /**
-     * <p>The role name.</p>
+     * <p>The name of the role.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -15,11 +15,11 @@ public class DetachControlPolicyRequest extends TeaModel {
     public String policyId;
 
     /**
-     * <p>The ID of the target node. Valid values:</p>
+     * <p>The target node. Valid values:</p>
      * <ul>
-     * <li>Root ID: detaches the control policy from the Root resource folder.</li>
-     * <li>Resource folder ID: detaches the control policy from a resource folder.</li>
-     * <li>Member ID: detaches the control policy from a member.</li>
+     * <li>Root ID: Dissociates the control policy from the Root folder.</li>
+     * <li>Folder ID: Dissociates the control policy from a folder.</li>
+     * <li>Member ID: Dissociates the control policy from a member.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

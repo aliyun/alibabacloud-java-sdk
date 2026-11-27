@@ -63,7 +63,7 @@ public class GetPolicyVersionResponseBody extends TeaModel {
          * <p>The content of the access policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>{ \&quot;Statement\&quot;: [{ \&quot;Action\&quot;: [\&quot;oss:<em>\&quot;], \&quot;Effect\&quot;: \&quot;Allow\&quot;, \&quot;Resource\&quot;: [\&quot;acs:oss:</em>:<em>:</em>\&quot;]}], \&quot;Version\&quot;: \&quot;1\&quot;}</p>
+         * <p>{ &quot;Statement&quot;: [{ &quot;Action&quot;: [&quot;oss:<em>&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: [&quot;acs:oss:</em>:<em>:</em>&quot;]}], &quot;Version&quot;: &quot;1&quot;}</p>
          */
         @NameInMap("PolicyDocument")
         public String policyDocument;

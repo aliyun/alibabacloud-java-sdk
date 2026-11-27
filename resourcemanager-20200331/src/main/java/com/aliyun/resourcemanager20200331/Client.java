@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "ResourceManager";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "central";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("resourcemanager", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -28,11 +31,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After the invited Alibaba Cloud account successfully joins a resource directory, the account becomes a member of the resource directory. The resource directory uses the name of the invited Alibaba Cloud account as the display name and account name of the member by default.
-     * This topic provides an example on how the invited Alibaba Cloud account <code>177242285274****</code> accepts an invitation from the resource directory <code>rd-3G****</code>. The handshake ID is <code>h-Ih8IuPfvV0t0****</code>.</p>
+     * <p>After an invited Alibaba Cloud account successfully joins a resource directory, it becomes a member of the resource directory. By default, the resource directory uses the name of the invited Alibaba Cloud account as the member name and account name of the member. This topic provides an example where the invited Alibaba Cloud account <code>177242285274****</code> accepts an invitation from the resource directory <code>rd-3G****</code>. The invitation ID is <code>h-Ih8IuPfvV0t0****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Accepts an invitation by the invited Alibaba Cloud account by calling AcceptHandshake.</p>
+     * <p>Accepts an invitation for an invited Alibaba Cloud account.</p>
      * 
      * @param request AcceptHandshakeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -64,11 +66,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After the invited Alibaba Cloud account successfully joins a resource directory, the account becomes a member of the resource directory. The resource directory uses the name of the invited Alibaba Cloud account as the display name and account name of the member by default.
-     * This topic provides an example on how the invited Alibaba Cloud account <code>177242285274****</code> accepts an invitation from the resource directory <code>rd-3G****</code>. The handshake ID is <code>h-Ih8IuPfvV0t0****</code>.</p>
+     * <p>After an invited Alibaba Cloud account successfully joins a resource directory, it becomes a member of the resource directory. By default, the resource directory uses the name of the invited Alibaba Cloud account as the member name and account name of the member. This topic provides an example where the invited Alibaba Cloud account <code>177242285274****</code> accepts an invitation from the resource directory <code>rd-3G****</code>. The invitation ID is <code>h-Ih8IuPfvV0t0****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Accepts an invitation by the invited Alibaba Cloud account by calling AcceptHandshake.</p>
+     * <p>Accepts an invitation for an invited Alibaba Cloud account.</p>
      * 
      * @param request AcceptHandshakeRequest
      * @return AcceptHandshakeResponse
@@ -80,14 +81,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After the control policy is attached, the resource folder or member immediately becomes subject to the control policy. Make sure that the result of the attach operation is as expected to avoid affecting your business.
-     * The system attaches the system policy FullAliyunAccess to resource folders and members by default.
-     * A control policy takes effect on the entire node to which it is attached. A control policy attached to a parent resource folder also takes effect on its child resource folders and members.
-     * Each node (resource folder or member) can have a maximum of 10 control policies attached.
-     * This topic provides an example on how to attach the custom policy <code>cp-jExXAqIYkwHN****</code> to the resource folder <code>fd-ZDNPiT****</code>.</p>
+     * <p>After a control policy is attached, the folder or member is immediately governed by the control policy. Make sure that the attach operation produces the expected results to avoid disrupting your business.
+     * By default, the system attaches the system policy FullAliyunAccess to folders and members.
+     * A control policy takes effect on all nodes under the node to which it is attached. For example, a control policy attached to a parent folder also takes effect on its child folders and members.
+     * You can attach a maximum of 10 control policies to each node (folder or member).
+     * This topic provides an example on how to attach the custom policy <code>cp-jExXAqIYkwHN****</code> to the folder <code>fd-ZDNPiT****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Attaches a control policy to a specified target.</p>
+     * <p>Attaches a control policy.</p>
      * 
      * @param request AttachControlPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -123,14 +124,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After the control policy is attached, the resource folder or member immediately becomes subject to the control policy. Make sure that the result of the attach operation is as expected to avoid affecting your business.
-     * The system attaches the system policy FullAliyunAccess to resource folders and members by default.
-     * A control policy takes effect on the entire node to which it is attached. A control policy attached to a parent resource folder also takes effect on its child resource folders and members.
-     * Each node (resource folder or member) can have a maximum of 10 control policies attached.
-     * This topic provides an example on how to attach the custom policy <code>cp-jExXAqIYkwHN****</code> to the resource folder <code>fd-ZDNPiT****</code>.</p>
+     * <p>After a control policy is attached, the folder or member is immediately governed by the control policy. Make sure that the attach operation produces the expected results to avoid disrupting your business.
+     * By default, the system attaches the system policy FullAliyunAccess to folders and members.
+     * A control policy takes effect on all nodes under the node to which it is attached. For example, a control policy attached to a parent folder also takes effect on its child folders and members.
+     * You can attach a maximum of 10 control policies to each node (folder or member).
+     * This topic provides an example on how to attach the custom policy <code>cp-jExXAqIYkwHN****</code> to the folder <code>fd-ZDNPiT****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Attaches a control policy to a specified target.</p>
+     * <p>Attaches a control policy.</p>
      * 
      * @param request AttachControlPolicyRequest
      * @return AttachControlPolicyResponse
@@ -142,7 +143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invokes AttachPolicy to add an access policy to an authorization object (a Resource Access Management (RAM) user, RAM user group, or RAM role), which is authorization. After the authorization is complete, the authorized object obtains access permissions on resources within the specified resource group or Alibaba Cloud account.</p>
+     * <p>Invokes AttachPolicy to add an access policy to a principal (a Resource Access Management (RAM) user, RAM user group, or RAM role) for authorization. After the authorization is complete, the principal obtains access permissions to resources in the specified resource group or Alibaba Cloud account.</p>
      * 
      * @param request AttachPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -190,7 +191,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invokes AttachPolicy to add an access policy to an authorization object (a Resource Access Management (RAM) user, RAM user group, or RAM role), which is authorization. After the authorization is complete, the authorized object obtains access permissions on resources within the specified resource group or Alibaba Cloud account.</p>
+     * <p>Invokes AttachPolicy to add an access policy to a principal (a Resource Access Management (RAM) user, RAM user group, or RAM role) for authorization. After the authorization is complete, the principal obtains access permissions to resources in the specified resource group or Alibaba Cloud account.</p>
      * 
      * @param request AttachPolicyRequest
      * @return AttachPolicyResponse
@@ -202,12 +203,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is used only to set a secure phone number for a resource account for the first time. It cannot be used to modify an existing secure phone number.
-     * To ensure that the system can record the specific author of management operations, use a Resource Access Management (RAM) user or RAM role under the management account that has the resource folder management permission (AliyunResourceDirectoryFullAccess) to invoke this API operation.
-     * This topic provides an example of how to set a secure phone number for the member <code>138660628348****</code>.</p>
+     * <p>This API operation is used only to set the secure secure phone number for a resource account for the first time. You cannot use this operation to modify an existing secure secure phone number.
+     * To ensure that the system can record the specific operator of management operations, call this API operation as a Resource Access Management (RAM) user or RAM role that has the AliyunResourceDirectoryFullAccess permission under the management account.
+     * This topic provides an example on how to set the secure secure phone number for the member <code>138660628348****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sets a secure phone number for a member of the resource account type.</p>
+     * <p>Invokes BindSecureMobilePhone to configure the secure phone number Settings for a member of the resource account type.</p>
      * 
      * @param request BindSecureMobilePhoneRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -247,12 +248,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is used only to set a secure phone number for a resource account for the first time. It cannot be used to modify an existing secure phone number.
-     * To ensure that the system can record the specific author of management operations, use a Resource Access Management (RAM) user or RAM role under the management account that has the resource folder management permission (AliyunResourceDirectoryFullAccess) to invoke this API operation.
-     * This topic provides an example of how to set a secure phone number for the member <code>138660628348****</code>.</p>
+     * <p>This API operation is used only to set the secure secure phone number for a resource account for the first time. You cannot use this operation to modify an existing secure secure phone number.
+     * To ensure that the system can record the specific operator of management operations, call this API operation as a Resource Access Management (RAM) user or RAM role that has the AliyunResourceDirectoryFullAccess permission under the management account.
+     * This topic provides an example on how to set the secure secure phone number for the member <code>138660628348****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sets a secure phone number for a member of the resource account type.</p>
+     * <p>Invokes BindSecureMobilePhone to configure the secure phone number Settings for a member of the resource account type.</p>
      * 
      * @param request BindSecureMobilePhoneRequest
      * @return BindSecureMobilePhoneResponse
@@ -263,8 +264,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>调用前，目标成员需存在待验证的邮箱修改记录，否则返回 404 EntityNotExists.EmailModifyRecord。邮箱修改记录可通过 ChangeAccountEmail 发起。
+     * 目标成员处于删除中状态时，相关操作会返回 409 NotSupportedOperation.DeletingAccount，请等待删除流程结束或先取消删除。</p>
+     * 
      * <b>summary</b> : 
-     * <p>Cancels the modification of a member account email address.</p>
+     * <p>Cancels the modification of a member email address.</p>
      * 
      * @param request CancelChangeAccountEmailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -295,8 +300,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>调用前，目标成员需存在待验证的邮箱修改记录，否则返回 404 EntityNotExists.EmailModifyRecord。邮箱修改记录可通过 ChangeAccountEmail 发起。
+     * 目标成员处于删除中状态时，相关操作会返回 409 NotSupportedOperation.DeletingAccount，请等待删除流程结束或先取消删除。</p>
+     * 
      * <b>summary</b> : 
-     * <p>Cancels the modification of a member account email address.</p>
+     * <p>Cancels the modification of a member email address.</p>
      * 
      * @param request CancelChangeAccountEmailRequest
      * @return CancelChangeAccountEmailResponse
@@ -308,7 +317,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels the creation of a member of the cloud account type in a resource directory.</p>
+     * <p>Cancels the creation of a cloud account member in a resource directory.</p>
      * 
      * @param request CancelCreateCloudAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -340,7 +349,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels the creation of a member of the cloud account type in a resource directory.</p>
+     * <p>Cancels the creation of a cloud account member in a resource directory.</p>
      * 
      * @param request CancelCreateCloudAccountRequest
      * @return CancelCreateCloudAccountResponse
@@ -352,10 +361,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to cancel the handshake whose ID is <code>h-ycm4rp****</code>.</p>
+     * <p>This topic provides an example of canceling an invitation with the ID <code>h-ycm4rp****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Cancels a handshake.</p>
+     * <p>Cancels an invitation.</p>
      * 
      * @param request CancelHandshakeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -387,10 +396,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to cancel the handshake whose ID is <code>h-ycm4rp****</code>.</p>
+     * <p>This topic provides an example of canceling an invitation with the ID <code>h-ycm4rp****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Cancels a handshake.</p>
+     * <p>Cancels an invitation.</p>
      * 
      * @param request CancelHandshakeRequest
      * @return CancelHandshakeResponse
@@ -402,7 +411,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels the upgrade of a resource directory resource account to an Alibaba Cloud account.</p>
+     * <p>Cancels the upgrade of a resource account to a cloud account.</p>
      * 
      * @param request CancelPromoteResourceAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -434,7 +443,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels the upgrade of a resource directory resource account to an Alibaba Cloud account.</p>
+     * <p>Cancels the upgrade of a resource account to a cloud account.</p>
      * 
      * @param request CancelPromoteResourceAccountRequest
      * @return CancelPromoteResourceAccountResponse
@@ -446,7 +455,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the email address of a member account by calling ChangeAccountEmail.</p>
+     * <p>Modifies the email address of a member.</p>
      * 
      * @param request ChangeAccountEmailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -482,7 +491,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the email address of a member account by calling ChangeAccountEmail.</p>
+     * <p>Modifies the email address of a member.</p>
      * 
      * @param request ChangeAccountEmailRequest
      * @return ChangeAccountEmailResponse
@@ -494,10 +503,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before deleting a member account, call this API to perform a pre-deletion condition check on the target member account.</p>
+     * <p>Before you delete a member, call this API to check the deletion conditions for the target member.</p>
      * 
      * <b>summary</b> : 
-     * <p>Calls CheckAccountDelete to perform a member account deletion check task.</p>
+     * <p>Executes a member deletion check task.</p>
      * 
      * @param request CheckAccountDeleteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -529,10 +538,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before deleting a member account, call this API to perform a pre-deletion condition check on the target member account.</p>
+     * <p>Before you delete a member, call this API to check the deletion conditions for the target member.</p>
      * 
      * <b>summary</b> : 
-     * <p>Calls CheckAccountDelete to perform a member account deletion check task.</p>
+     * <p>Executes a member deletion check task.</p>
      * 
      * @param request CheckAccountDeleteRequest
      * @return CheckAccountDeleteResponse
@@ -940,10 +949,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In a resource directory, a member serves as a resource container and is a resource grouping unit. A member typically represents a project or application. Resources in each member are physically isolated from resources in other members.</p>
+     * <p>In a resource directory, a member serves as a resource container and a resource grouping unit. Members typically represent projects or applications. Resources in each member are physically isolated from resources in other members.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a member of the resource account type by calling CreateResourceAccount.</p>
+     * <p>Creates a member of the resource account type.</p>
      * 
      * @param request CreateResourceAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -995,10 +1004,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In a resource directory, a member serves as a resource container and is a resource grouping unit. A member typically represents a project or application. Resources in each member are physically isolated from resources in other members.</p>
+     * <p>In a resource directory, a member serves as a resource container and a resource grouping unit. Members typically represent projects or applications. Resources in each member are physically isolated from resources in other members.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a member of the resource account type by calling CreateResourceAccount.</p>
+     * <p>Creates a member of the resource account type.</p>
      * 
      * @param request CreateResourceAccountRequest
      * @return CreateResourceAccountResponse
@@ -1011,7 +1020,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You can create a maximum of 30 resource groups within an Alibaba Cloud account.</p>
+     * <p>You can create a maximum of 30 resource groups under an Alibaba Cloud account.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -1024,8 +1033,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateResourceGroupResponse createResourceGroupWithOptions(CreateResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
             query.put("DisplayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
@@ -1056,7 +1073,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You can create a maximum of 30 resource groups within an Alibaba Cloud account.</p>
+     * <p>You can create a maximum of 30 resource groups under an Alibaba Cloud account.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -1224,11 +1241,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before deleting a member, call <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> and <a href="https://help.aliyun.com/document_detail/448775.html">GetAccountDeletionCheckResult</a> to perform a pre-deletion check on the member. Only members that meet the deletion conditions can be successfully deleted by calling DeleteAccount.
-     * After you successfully submit a member deletion request, you can call <a href="https://help.aliyun.com/document_detail/449001.html">GetAccountDeletionStatus</a> to query the deletion status. Once a member is deleted, all resources and data in the member are deleted. You can no longer log on to or use the member, and the data cannot be recovered. Proceed with caution. For more information about member deletion, see <a href="https://help.aliyun.com/document_detail/446078.html">Delete a member of the resource account type</a>.</p>
+     * <p>Before you delete a member, call <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> and <a href="https://help.aliyun.com/document_detail/448775.html">GetAccountDeletionCheckResult</a> to check the deletion conditions for the member. You can successfully delete a member by calling DeleteAccount only if the member meets the deletion conditions.
+     * After you successfully submit a member deletion request, you can call <a href="https://help.aliyun.com/document_detail/449001.html">GetAccountDeletionStatus</a> to query the deletion status. Once a member is deleted, all resources and data in the member are deleted. You cannot log on to or use the member again, and the data cannot be recovered. Proceed with caution. For more information about member deletion, see <a href="https://help.aliyun.com/document_detail/446078.html">Delete a member of the resource account type</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a member of the resource account type by calling DeleteAccount.</p>
+     * <p>Deletes a member of the resource account type.</p>
      * 
      * @param tmpReq DeleteAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1270,11 +1287,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before deleting a member, call <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> and <a href="https://help.aliyun.com/document_detail/448775.html">GetAccountDeletionCheckResult</a> to perform a pre-deletion check on the member. Only members that meet the deletion conditions can be successfully deleted by calling DeleteAccount.
-     * After you successfully submit a member deletion request, you can call <a href="https://help.aliyun.com/document_detail/449001.html">GetAccountDeletionStatus</a> to query the deletion status. Once a member is deleted, all resources and data in the member are deleted. You can no longer log on to or use the member, and the data cannot be recovered. Proceed with caution. For more information about member deletion, see <a href="https://help.aliyun.com/document_detail/446078.html">Delete a member of the resource account type</a>.</p>
+     * <p>Before you delete a member, call <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> and <a href="https://help.aliyun.com/document_detail/448775.html">GetAccountDeletionCheckResult</a> to check the deletion conditions for the member. You can successfully delete a member by calling DeleteAccount only if the member meets the deletion conditions.
+     * After you successfully submit a member deletion request, you can call <a href="https://help.aliyun.com/document_detail/449001.html">GetAccountDeletionStatus</a> to query the deletion status. Once a member is deleted, all resources and data in the member are deleted. You cannot log on to or use the member again, and the data cannot be recovered. Proceed with caution. For more information about member deletion, see <a href="https://help.aliyun.com/document_detail/446078.html">Delete a member of the resource account type</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a member of the resource account type by calling DeleteAccount.</p>
+     * <p>Deletes a member of the resource account type.</p>
      * 
      * @param request DeleteAccountRequest
      * @return DeleteAccountResponse
@@ -1286,7 +1303,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an automatic group transfer rule.</p>
+     * <p>Deletes an auto-grouping rule.</p>
      * 
      * @param request DeleteAutoGroupingRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1318,7 +1335,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an automatic group transfer rule.</p>
+     * <p>Deletes an auto-grouping rule.</p>
      * 
      * @param request DeleteAutoGroupingRuleRequest
      * @return DeleteAutoGroupingRuleResponse
@@ -1330,8 +1347,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>To delete a custom control policy that is attached to a resource folder or member accounts, invoke <a href="https://help.aliyun.com/document_detail/208331.html">DetachControlPolicy</a> to detach the policy first.
-     * This topic provides an example on how to delete the custom control policy cp-SImPt8GCEwiq****.</p>
+     * <p>If a custom control policy is attached to resource folders or member accounts, you must invoke <a href="https://help.aliyun.com/document_detail/208331.html">DetachControlPolicy</a> to detach it before you can delete it.
+     * This topic provides an example of deleting the custom control policy <code>cp-SImPt8GCEwiq****</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a custom control policy.</p>
@@ -1366,8 +1383,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>To delete a custom control policy that is attached to a resource folder or member accounts, invoke <a href="https://help.aliyun.com/document_detail/208331.html">DetachControlPolicy</a> to detach the policy first.
-     * This topic provides an example on how to delete the custom control policy cp-SImPt8GCEwiq****.</p>
+     * <p>If a custom control policy is attached to resource folders or member accounts, you must invoke <a href="https://help.aliyun.com/document_detail/208331.html">DetachControlPolicy</a> to detach it before you can delete it.
+     * This topic provides an example of deleting the custom control policy <code>cp-SImPt8GCEwiq****</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a custom control policy.</p>
@@ -1383,7 +1400,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before deleting a folder, make sure that the folder does not contain any member accounts or subfolders.</p>
+     * <p>Before deleting a folder, ensure that the folder contains no members or subfolders.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -1420,7 +1437,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before deleting a folder, make sure that the folder does not contain any member accounts or subfolders.</p>
+     * <p>Before deleting a folder, ensure that the folder contains no members or subfolders.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -1438,8 +1455,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>Before deleting an access policy, delete all non-default versions of the policy. For information about how to delete a policy version, see <a href="https://help.aliyun.com/document_detail/159041.html">DeletePolicyVersion</a>.</li>
-     * <li>Before deleting an access policy, make sure that the policy is not referenced, meaning it is not attached to any Resource Access Management (RAM) user, user group, or RAM role. For information about how to remove an authorization, see <a href="https://help.aliyun.com/document_detail/159168.html">DetachPolicy</a>.</li>
+     * <li>Before deleting an access policy, you must delete all non-default versions of the policy. For more information about how to delete an access policy version, see <a href="https://help.aliyun.com/document_detail/159041.html">DeletePolicyVersion</a>.</li>
+     * <li>Before deleting an access policy, ensure that the policy is not referenced (that is, not granted to Resource Access Management (RAM) users, user groups, or RAM roles). For more information about how to remove authorization, see <a href="https://help.aliyun.com/document_detail/159168.html">DetachPolicy</a>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -1478,8 +1495,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>Before deleting an access policy, delete all non-default versions of the policy. For information about how to delete a policy version, see <a href="https://help.aliyun.com/document_detail/159041.html">DeletePolicyVersion</a>.</li>
-     * <li>Before deleting an access policy, make sure that the policy is not referenced, meaning it is not attached to any Resource Access Management (RAM) user, user group, or RAM role. For information about how to remove an authorization, see <a href="https://help.aliyun.com/document_detail/159168.html">DetachPolicy</a>.</li>
+     * <li>Before deleting an access policy, you must delete all non-default versions of the policy. For more information about how to delete an access policy version, see <a href="https://help.aliyun.com/document_detail/159041.html">DeletePolicyVersion</a>.</li>
+     * <li>Before deleting an access policy, ensure that the policy is not referenced (that is, not granted to Resource Access Management (RAM) users, user groups, or RAM roles). For more information about how to remove authorization, see <a href="https://help.aliyun.com/document_detail/159168.html">DetachPolicy</a>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -1501,7 +1518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a version of an access policy.</p>
+     * <p>Deletes an access policy version.</p>
      * 
      * @param request DeletePolicyVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1542,7 +1559,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a version of an access policy.</p>
+     * <p>Deletes an access policy version.</p>
      * 
      * @param request DeletePolicyVersionRequest
      * @return DeletePolicyVersionResponse
@@ -1555,7 +1572,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before you delete a resource group, delete all resources in the resource group.</p>
+     * <p>Before deleting a resource group, delete the resources in the resource group.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -1568,6 +1585,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteResourceGroupResponse deleteResourceGroupWithOptions(DeleteResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
@@ -1592,7 +1617,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before you delete a resource group, delete all resources in the resource group.</p>
+     * <p>Before deleting a resource group, delete the resources in the resource group.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -1697,11 +1722,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>If the delegated administrator account being removed has historical management tasks in the trusted service, the removal may affect the normal use of the trusted service. Carefully consider the potential impact before performing the removal.</p>
+     * <p>If the delegated administrator account to be removed has historical management tasks in the trusted service, the removal operation may affect the normal use of the trusted service. Carefully consider the potential impact before removing the account.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Calls the DeregisterDelegatedAdministrator operation to remove the delegated administrator account of a trusted service.</p>
+     * <p>Removes the delegated administrator account for a trusted service.</p>
      * 
      * @param request DeregisterDelegatedAdministratorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1738,11 +1763,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>If the delegated administrator account being removed has historical management tasks in the trusted service, the removal may affect the normal use of the trusted service. Carefully consider the potential impact before performing the removal.</p>
+     * <p>If the delegated administrator account to be removed has historical management tasks in the trusted service, the removal operation may affect the normal use of the trusted service. Carefully consider the potential impact before removing the account.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Calls the DeregisterDelegatedAdministrator operation to remove the delegated administrator account of a trusted service.</p>
+     * <p>Removes the delegated administrator account for a trusted service.</p>
      * 
      * @param request DeregisterDelegatedAdministratorRequest
      * @return DeregisterDelegatedAdministratorResponse
@@ -1754,14 +1779,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before closing a resource directory, make sure that you have completed the following operations:</p>
+     * <p>Before closing the resource directory, ensure that the following operations are completed:</p>
      * <ul>
-     * <li>All members in the resource directory have been removed. For information about how to remove a member, see <a href="https://help.aliyun.com/document_detail/159431.html">RemoveCloudAccount</a>.</li>
-     * <li>All folders except the Root folder in the resource directory have been deleted. For information about how to delete a folder, see <a href="https://help.aliyun.com/document_detail/159432.html">DeleteFolder</a>.</li>
+     * <li>All members in the resource directory have been removed. For more information about how to remove a member, see <a href="https://help.aliyun.com/document_detail/159431.html">RemoveCloudAccount</a>.</li>
+     * <li>All folders except the Root folder in the resource directory have been deleted. For more information about how to delete a folder, see <a href="https://help.aliyun.com/document_detail/159432.html">DeleteFolder</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Closes a resource directory by calling DestroyResourceDirectory. This operation is irreversible. Proceed with caution.</p>
+     * <p>Closes the resource directory. This operation is irreversible. Proceed with caution.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DestroyResourceDirectoryResponse
@@ -1784,14 +1809,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before closing a resource directory, make sure that you have completed the following operations:</p>
+     * <p>Before closing the resource directory, ensure that the following operations are completed:</p>
      * <ul>
-     * <li>All members in the resource directory have been removed. For information about how to remove a member, see <a href="https://help.aliyun.com/document_detail/159431.html">RemoveCloudAccount</a>.</li>
-     * <li>All folders except the Root folder in the resource directory have been deleted. For information about how to delete a folder, see <a href="https://help.aliyun.com/document_detail/159432.html">DeleteFolder</a>.</li>
+     * <li>All members in the resource directory have been removed. For more information about how to remove a member, see <a href="https://help.aliyun.com/document_detail/159431.html">RemoveCloudAccount</a>.</li>
+     * <li>All folders except the Root folder in the resource directory have been deleted. For more information about how to delete a folder, see <a href="https://help.aliyun.com/document_detail/159432.html">DeleteFolder</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Closes a resource directory by calling DestroyResourceDirectory. This operation is irreversible. Proceed with caution.</p>
+     * <p>Closes the resource directory. This operation is irreversible. Proceed with caution.</p>
      * @return DestroyResourceDirectoryResponse
      */
     public DestroyResourceDirectoryResponse destroyResourceDirectory() throws Exception {
@@ -1801,12 +1826,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After the control policy is detached, the resource folder or member that was previously associated with the policy immediately loses the governance enforced by the policy. Make sure that the result of the detach operation is as expected to avoid impact on your business.
-     * Both system policies and custom control policies can be detached. However, the last control policy associated with a resource folder or member cannot be detached.
-     * This topic provides an example on how to detach the custom policy <code>cp-jExXAqIYkwHN****</code> from the resource folder <code>fd-ZDNPiT****</code>.</p>
+     * <p>After the dissociation succeeds, the folder or member immediately loses the governance applied by the control policy. Make sure that the dissociation produces the expected results to avoid affecting your business.
+     * Both system policies and custom control policies can be dissociated. However, you cannot dissociate the last control policy associated with a folder or member.
+     * This topic provides an example to show how to dissociate the custom policy cp-jExXAqIYkwHN**** from the folder fd-ZDNPiT****.</p>
      * 
      * <b>summary</b> : 
-     * <p>Detaches a control policy from a resource folder or member.</p>
+     * <p>Dissociates a control policy.</p>
      * 
      * @param request DetachControlPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1842,12 +1867,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After the control policy is detached, the resource folder or member that was previously associated with the policy immediately loses the governance enforced by the policy. Make sure that the result of the detach operation is as expected to avoid impact on your business.
-     * Both system policies and custom control policies can be detached. However, the last control policy associated with a resource folder or member cannot be detached.
-     * This topic provides an example on how to detach the custom policy <code>cp-jExXAqIYkwHN****</code> from the resource folder <code>fd-ZDNPiT****</code>.</p>
+     * <p>After the dissociation succeeds, the folder or member immediately loses the governance applied by the control policy. Make sure that the dissociation produces the expected results to avoid affecting your business.
+     * Both system policies and custom control policies can be dissociated. However, you cannot dissociate the last control policy associated with a folder or member.
+     * This topic provides an example to show how to dissociate the custom policy cp-jExXAqIYkwHN**** from the folder fd-ZDNPiT****.</p>
      * 
      * <b>summary</b> : 
-     * <p>Detaches a control policy from a resource folder or member.</p>
+     * <p>Dissociates a control policy.</p>
      * 
      * @param request DetachControlPolicyRequest
      * @return DetachControlPolicyResponse
@@ -1859,7 +1884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Detaches an access policy from a specified identity. After the policy is detached, the identity loses the permissions to manage resources in the specified resource group or Alibaba Cloud account.</p>
+     * <p>Removes a specified access policy from a specified object. After the authorization is removed, the object loses permissions to operate on resources in the current resource group or account.</p>
      * 
      * @param request DetachPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1907,7 +1932,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Detaches an access policy from a specified identity. After the policy is detached, the identity loses the permissions to manage resources in the specified resource group or Alibaba Cloud account.</p>
+     * <p>Removes a specified access policy from a specified object. After the authorization is removed, the object loses permissions to operate on resources in the current resource group or account.</p>
      * 
      * @param request DetachPolicyRequest
      * @return DetachPolicyResponse
@@ -1919,7 +1944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the attached-resource allocation feature for associated resources.</p>
+     * <p>Disables the associated resource transfer feature.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DisableAssociatedTransferResponse
@@ -1942,7 +1967,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the attached-resource allocation feature for associated resources.</p>
+     * <p>Disables the associated resource transfer feature.</p>
      * @return DisableAssociatedTransferResponse
      */
     public DisableAssociatedTransferResponse disableAssociatedTransfer() throws Exception {
@@ -1952,7 +1977,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables automatic resource group transfer. After this feature is disabled, the custom condition rules and attached-resource transfer rules that have been configured are deleted. The resource groups of existing resources are not affected. If needed, you can re-enable this feature 1 minute after disabling it.</p>
+     * <p>Disables automatic resource grouping. After the automatic grouping feature is disabled, configured custom condition rules and follow-grouping rules for associated resources are deleted, but the resource groups of existing resources remain unaffected. If needed, you can re-enable this feature 1 minute after disabling it.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DisableAutoGroupingResponse
@@ -1975,7 +2000,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables automatic resource group transfer. After this feature is disabled, the custom condition rules and attached-resource transfer rules that have been configured are deleted. The resource groups of existing resources are not affected. If needed, you can re-enable this feature 1 minute after disabling it.</p>
+     * <p>Disables automatic resource grouping. After the automatic grouping feature is disabled, configured custom condition rules and follow-grouping rules for associated resources are deleted, but the resource groups of existing resources remain unaffected. If needed, you can re-enable this feature 1 minute after disabling it.</p>
      * @return DisableAutoGroupingResponse
      */
     public DisableAutoGroupingResponse disableAutoGrouping() throws Exception {
@@ -1985,9 +2010,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you disable the control policy feature, all control policies that are attached to resource folders and member accounts are automatically detached. However, the control policies are not deleted. They cannot be attached to any target nodes.</p>
+     * <p>After you disable the control policy feature, all control policies attached to folders and member accounts are automatically detached. The control policies are not deleted, but they can no longer be attached to any target nodes.</p>
      * <blockquote>
-     * <p>Disabling the control policy feature affects the permissions of resource folders and member accounts in the entire resource directory. Proceed with caution.</p>
+     * <p>Disabling the control policy feature affects the permissions of folders and member accounts in the entire resource directory. Proceed with caution.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -2014,9 +2039,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you disable the control policy feature, all control policies that are attached to resource folders and member accounts are automatically detached. However, the control policies are not deleted. They cannot be attached to any target nodes.</p>
+     * <p>After you disable the control policy feature, all control policies attached to folders and member accounts are automatically detached. The control policies are not deleted, but they can no longer be attached to any target nodes.</p>
      * <blockquote>
-     * <p>Disabling the control policy feature affects the permissions of resource folders and member accounts in the entire resource directory. Proceed with caution.</p>
+     * <p>Disabling the control policy feature affects the permissions of folders and member accounts in the entire resource directory. Proceed with caution.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -2063,7 +2088,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the attached-resource allocation feature for resource group transfers.</p>
+     * <p>Enables the associated resource group transfer feature.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableAssociatedTransferResponse
@@ -2086,7 +2111,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the attached-resource allocation feature for resource group transfers.</p>
+     * <p>Enables the associated resource group transfer feature.</p>
      * @return EnableAssociatedTransferResponse
      */
     public EnableAssociatedTransferResponse enableAssociatedTransfer() throws Exception {
@@ -2096,7 +2121,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables automatic grouping. After automatic grouping is enabled, you can create, update, delete, and query automatic grouping rules.</p>
+     * <p>Enables automatic grouping. After you enable this feature, you can create, update, delete, and query automatic grouping rules.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableAutoGroupingResponse
@@ -2119,7 +2144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables automatic grouping. After automatic grouping is enabled, you can create, update, delete, and query automatic grouping rules.</p>
+     * <p>Enables automatic grouping. After you enable this feature, you can create, update, delete, and query automatic grouping rules.</p>
      * @return EnableAutoGroupingResponse
      */
     public EnableAutoGroupingResponse enableAutoGrouping() throws Exception {
@@ -2129,10 +2154,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A resource directory control policy is an access control policy based on the resource structure (resource folders or member accounts). It allows you to centrally manage the access permissions border for resource access at each level of the resource directory and establish overall or localized access control principles for your enterprise. Control policies define only the access permissions border and do not actually grant permissions. You must also set permissions by using Resource Access Management (RAM) in a member account before the corresponding identity can have access permissions to resources. For more information, see <a href="https://help.aliyun.com/document_detail/178671.html">Overview of control policies</a>.</p>
+     * <p>A control policy in Resource Directory is an access control policy based on the resource structure (folders or member accounts). It allows you to manage permission boundaries for resource access across all levels of the resource directory in a unified manner and establish enterprise-wide or specific access control principles. Control policies only define permission boundaries and do not grant permissions. You must also configure permissions in the Resource Access Management (RAM) Settings of a member account before the corresponding identity has access permissions to resources. For more information, see <a href="https://help.aliyun.com/document_detail/178671.html">Control policy overview</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables the control policy feature by calling EnableControlPolicy.</p>
+     * <p>Enables the control policy feature.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableControlPolicyResponse
@@ -2155,10 +2180,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A resource directory control policy is an access control policy based on the resource structure (resource folders or member accounts). It allows you to centrally manage the access permissions border for resource access at each level of the resource directory and establish overall or localized access control principles for your enterprise. Control policies define only the access permissions border and do not actually grant permissions. You must also set permissions by using Resource Access Management (RAM) in a member account before the corresponding identity can have access permissions to resources. For more information, see <a href="https://help.aliyun.com/document_detail/178671.html">Overview of control policies</a>.</p>
+     * <p>A control policy in Resource Directory is an access control policy based on the resource structure (folders or member accounts). It allows you to manage permission boundaries for resource access across all levels of the resource directory in a unified manner and establish enterprise-wide or specific access control principles. Control policies only define permission boundaries and do not grant permissions. You must also configure permissions in the Resource Access Management (RAM) Settings of a member account before the corresponding identity has access permissions to resources. For more information, see <a href="https://help.aliyun.com/document_detail/178671.html">Control policy overview</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables the control policy feature by calling EnableControlPolicy.</p>
+     * <p>Enables the control policy feature.</p>
      * @return EnableControlPolicyResponse
      */
     public EnableControlPolicyResponse enableControlPolicy() throws Exception {
@@ -2232,7 +2257,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables resource group event notifications by calling EnableResourceGroupNotification.</p>
+     * <p>Enables event notifications for resource groups.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableResourceGroupNotificationResponse
@@ -2255,7 +2280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables resource group event notifications by calling EnableResourceGroupNotification.</p>
+     * <p>Enables event notifications for resource groups.</p>
      * @return EnableResourceGroupNotificationResponse
      */
     public EnableResourceGroupNotificationResponse enableResourceGroupNotification() throws Exception {
@@ -2313,11 +2338,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you call <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> to perform a member deletion check task, you can call GetAccountDeletionCheckResult to query the result of the member deletion check. If the deletion check requirements are met, the member account can be deleted. Otherwise, manually handle the non-compliant items until all requirements are met.
-     * This topic provides an example on how to query the deletion check result of the member account <code>179855839641****</code> that you want to delete. The response shows that the member account does not meet the deletion requirements.</p>
+     * <p>After you call <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> to execute a member deletion check task, you can call GetAccountDeletionCheckResult to query the result of the member deletion check. If the member meets the deletion check requirements, the member can be deleted. Otherwise, manually handle the non-compliant items until the requirements are met.
+     * This topic provides an example to query the deletion check result of the member <code>179855839641****</code> to be deleted. The returned result shows that the member does not meet the deletion requirements.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the result of a member deletion check by calling GetAccountDeletionCheckResult.</p>
+     * <p>Queries the member deletion check result.</p>
      * 
      * @param request GetAccountDeletionCheckResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2349,11 +2374,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you call <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> to perform a member deletion check task, you can call GetAccountDeletionCheckResult to query the result of the member deletion check. If the deletion check requirements are met, the member account can be deleted. Otherwise, manually handle the non-compliant items until all requirements are met.
-     * This topic provides an example on how to query the deletion check result of the member account <code>179855839641****</code> that you want to delete. The response shows that the member account does not meet the deletion requirements.</p>
+     * <p>After you call <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> to execute a member deletion check task, you can call GetAccountDeletionCheckResult to query the result of the member deletion check. If the member meets the deletion check requirements, the member can be deleted. Otherwise, manually handle the non-compliant items until the requirements are met.
+     * This topic provides an example to query the deletion check result of the member <code>179855839641****</code> to be deleted. The returned result shows that the member does not meet the deletion requirements.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the result of a member deletion check by calling GetAccountDeletionCheckResult.</p>
+     * <p>Queries the member deletion check result.</p>
      * 
      * @param request GetAccountDeletionCheckResultRequest
      * @return GetAccountDeletionCheckResultResponse
@@ -2459,7 +2484,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of automatic resource group transfer settings by calling GetAutoGroupingStatus.</p>
+     * <p>Queries the status of automatic grouping settings.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAutoGroupingStatusResponse
@@ -2482,7 +2507,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of automatic resource group transfer settings by calling GetAutoGroupingStatus.</p>
+     * <p>Queries the status of automatic grouping settings.</p>
      * @return GetAutoGroupingStatusResponse
      */
     public GetAutoGroupingStatusResponse getAutoGroupingStatus() throws Exception {
@@ -2623,10 +2648,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to retrieve the information about the handshake whose ID is <code>h-ycm4rp****</code>.</p>
+     * <p>This topic provides an example of retrieving the invitation information for the invitation whose ID is <code>h-ycm4rp****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves handshake information by calling GetHandshake.</p>
+     * <p>Retrieves the invitation information.</p>
      * 
      * @param request GetHandshakeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2658,10 +2683,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to retrieve the information about the handshake whose ID is <code>h-ycm4rp****</code>.</p>
+     * <p>This topic provides an example of retrieving the invitation information for the invitation whose ID is <code>h-ycm4rp****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves handshake information by calling GetHandshake.</p>
+     * <p>Retrieves the invitation information.</p>
      * 
      * @param request GetHandshakeRequest
      * @return GetHandshakeResponse
@@ -2673,7 +2698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the billing account information of a member account by calling GetPayerForAccount.</p>
+     * <p>Retrieves the billing account information of a member.</p>
      * 
      * @param request GetPayerForAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2705,7 +2730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the billing account information of a member account by calling GetPayerForAccount.</p>
+     * <p>Retrieves the billing account information of a member.</p>
      * 
      * @param request GetPayerForAccountRequest
      * @return GetPayerForAccountResponse
@@ -2821,10 +2846,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to use a management account to query the details of the resource directory created by the management account.</p>
+     * <p>This topic provides an example on how to query the details of a resource directory enabled by a management account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries resource directory information. When called by a management account, returns the details of the resource directory created by the management account. When called by a member, returns the details of the resource directory to which the member belongs.</p>
+     * <p>Retrieves the information about a resource directory. When called by a management account, the operation returns the details of the resource directory enabled by the management account. When called by a member, the operation returns the details of the resource directory to which the member belongs.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetResourceDirectoryResponse
@@ -2847,10 +2872,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to use a management account to query the details of the resource directory created by the management account.</p>
+     * <p>This topic provides an example on how to query the details of a resource directory enabled by a management account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries resource directory information. When called by a management account, returns the details of the resource directory created by the management account. When called by a member, returns the details of the resource directory to which the member belongs.</p>
+     * <p>Retrieves the information about a resource directory. When called by a management account, the operation returns the details of the resource directory enabled by the management account. When called by a member, the operation returns the details of the resource directory to which the member belongs.</p>
      * @return GetResourceDirectoryResponse
      */
     public GetResourceDirectoryResponse getResourceDirectory() throws Exception {
@@ -2908,7 +2933,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the administrator settings of a resource group.</p>
+     * <p>Queries the resource group administrator settings.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetResourceGroupAdminSettingResponse
@@ -2931,7 +2956,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the administrator settings of a resource group.</p>
+     * <p>Queries the resource group administrator settings.</p>
      * @return GetResourceGroupAdminSettingResponse
      */
     public GetResourceGroupAdminSettingResponse getResourceGroupAdminSetting() throws Exception {
@@ -2941,7 +2966,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the notification settings of a resource group by calling GetResourceGroupNotificationSetting.</p>
+     * <p>Queries the notification settings of a resource group.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetResourceGroupNotificationSettingResponse
@@ -2964,7 +2989,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the notification settings of a resource group by calling GetResourceGroupNotificationSetting.</p>
+     * <p>Queries the notification settings of a resource group.</p>
      * @return GetResourceGroupNotificationSettingResponse
      */
     public GetResourceGroupNotificationSettingResponse getResourceGroupNotificationSetting() throws Exception {
@@ -3078,7 +3103,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of a task that deletes a service-linked role.</p>
+     * <p>Retrieves the status of a task that deletes a service-linked role.</p>
      * 
      * @param request GetServiceLinkedRoleDeletionStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3110,7 +3135,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of a task that deletes a service-linked role.</p>
+     * <p>Retrieves the status of a task that deletes a service-linked role.</p>
      * 
      * @param request GetServiceLinkedRoleDeletionStatusRequest
      * @return GetServiceLinkedRoleDeletionStatusResponse
@@ -3171,7 +3196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to invite the external account <code>someone@example.com</code> to join a resource directory.</p>
+     * <p>This topic provides an example of inviting an external account <code>someone@example.com</code> to join a resource directory.</p>
      * 
      * <b>summary</b> : 
      * <p>Invites an external account to join a resource directory.</p>
@@ -3218,7 +3243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to invite the external account <code>someone@example.com</code> to join a resource directory.</p>
+     * <p>This topic provides an example of inviting an external account <code>someone@example.com</code> to join a resource directory.</p>
      * 
      * <b>summary</b> : 
      * <p>Invites an external account to join a resource directory.</p>
@@ -3233,10 +3258,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The management account of the resource directory and the delegated administrator accounts of trusted services can call this operation.</p>
+     * <p>The management account of the resource directory and the delegated administrator account of a trusted service can call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of all member accounts in a resource directory by calling ListAccounts.</p>
+     * <p>Queries all member accounts in a resource directory.</p>
      * 
      * @param request ListAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3280,10 +3305,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The management account of the resource directory and the delegated administrator accounts of trusted services can call this operation.</p>
+     * <p>The management account of the resource directory and the delegated administrator account of a trusted service can call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of all member accounts in a resource directory by calling ListAccounts.</p>
+     * <p>Queries all member accounts in a resource directory.</p>
      * 
      * @param request ListAccountsRequest
      * @return ListAccountsResponse
@@ -3295,7 +3320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of member accounts in a resource folder by calling ListAccountsForParent.</p>
+     * <p>Queries the members in a folder.</p>
      * 
      * @param request ListAccountsForParentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3347,7 +3372,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of member accounts in a resource folder by calling ListAccountsForParent.</p>
+     * <p>Queries the members in a folder.</p>
      * 
      * @param request ListAccountsForParentRequest
      * @return ListAccountsForParentResponse
@@ -3403,7 +3428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the settings of the associated resource group transfer feature.</p>
+     * <p>Retrieves the associated transfer settings.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAssociatedTransferSettingResponse
@@ -3426,7 +3451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the settings of the associated resource group transfer feature.</p>
+     * <p>Retrieves the associated transfer settings.</p>
      * @return ListAssociatedTransferSettingResponse
      */
     public ListAssociatedTransferSettingResponse listAssociatedTransferSetting() throws Exception {
@@ -3682,7 +3707,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of delegated administrator accounts for a trusted service.</p>
+     * <p>Queries the delegated administrator accounts for a trusted service.</p>
      * 
      * @param request ListDelegatedAdministratorsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3722,7 +3747,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of delegated administrator accounts for a trusted service.</p>
+     * <p>Queries the delegated administrator accounts for a trusted service.</p>
      * 
      * @param request ListDelegatedAdministratorsRequest
      * @return ListDelegatedAdministratorsResponse
@@ -3734,7 +3759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the trusted services for which a specified member is set as a delegated administrator account.</p>
+     * <p>Queries the trusted services for which a specified member is configured as a delegated administrator account.</p>
      * 
      * @param request ListDelegatedServicesForAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3766,7 +3791,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the trusted services for which a specified member is set as a delegated administrator account.</p>
+     * <p>Queries the trusted services for which a specified member is configured as a delegated administrator account.</p>
      * 
      * @param request ListDelegatedServicesForAccountRequest
      * @return ListDelegatedServicesForAccountResponse
@@ -3844,10 +3869,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the invitation records of the current management account <code>172841235500****</code>.</p>
+     * <p>This topic provides an example of querying the invitation records for the current management account <code>172841235500****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the invitation records under the current account.</p>
+     * <p>Queries the invitation records for the current account.</p>
      * 
      * @param request ListHandshakesForAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3883,10 +3908,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the invitation records of the current management account <code>172841235500****</code>.</p>
+     * <p>This topic provides an example of querying the invitation records for the current management account <code>172841235500****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the invitation records under the current account.</p>
+     * <p>Queries the invitation records for the current account.</p>
      * 
      * @param request ListHandshakesForAccountRequest
      * @return ListHandshakesForAccountResponse
@@ -4138,7 +4163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the capability items of resource groups.</p>
+     * <p>Lists the capabilities of resource groups.</p>
      * 
      * @param request ListResourceGroupCapabilityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4178,7 +4203,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the capability items of resource groups.</p>
+     * <p>Lists the capabilities of resource groups.</p>
      * 
      * @param request ListResourceGroupCapabilityRequest
      * @return ListResourceGroupCapabilityResponse
@@ -4190,10 +4215,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query all resource groups under the current account. You can also filter resource groups by resource group status, resource group ID, resource group identifier, or resource group display name.</p>
+     * <p>You can call this operation to query all resource groups within the current account. You can also query specific resource groups by resource group status, resource group ID, resource group identifier, or resource group display name.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of resource groups.</p>
+     * <p>Queries a list of resource groups.</p>
      * 
      * @param request ListResourceGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4257,10 +4282,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query all resource groups under the current account. You can also filter resource groups by resource group status, resource group ID, resource group identifier, or resource group display name.</p>
+     * <p>You can call this operation to query all resource groups within the current account. You can also query specific resource groups by resource group status, resource group ID, resource group identifier, or resource group display name.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of resource groups.</p>
+     * <p>Queries a list of resource groups.</p>
      * 
      * @param request ListResourceGroupsRequest
      * @return ListResourceGroupsResponse
@@ -4272,7 +4297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists resource groups along with user authorization details.</p>
+     * <p>Queries resource groups and user authorization details.</p>
      * 
      * @param request ListResourceGroupsWithAuthDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4340,7 +4365,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists resource groups along with user authorization details.</p>
+     * <p>Queries resource groups and user authorization details.</p>
      * 
      * @param request ListResourceGroupsWithAuthDetailsRequest
      * @return ListResourceGroupsWithAuthDetailsResponse
@@ -4490,7 +4515,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tag key list of resource directory member accounts by calling ListTagKeys.</p>
+     * <p>Queries the tag keys of resource directory members.</p>
      * 
      * @param request ListTagKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4534,7 +4559,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tag key list of resource directory member accounts by calling ListTagKeys.</p>
+     * <p>Queries the tag keys of resource directory members.</p>
      * 
      * @param request ListTagKeysRequest
      * @return ListTagKeysResponse
@@ -4546,7 +4571,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tags that are attached to a resource group or a resource directory member.</p>
+     * <p>Queries the tags bound to resource groups or resource directory members.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4594,7 +4619,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tags that are attached to a resource group or a resource directory member.</p>
+     * <p>Queries the tags bound to resource groups or resource directory members.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -4607,10 +4632,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Usage notes</h3>
-     * <p>This topic provides an example on how to query the tag values of the tag key k1. The response shows that the tag value corresponding to the tag key k1 is v1.</p>
+     * <p>This topic provides an example to query the tag values for the tag key k1. The response shows that the tag value for the tag key k1 is v1.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the tag values of a specified tag key by calling ListTagValues.</p>
+     * <p>Queries the tag values for a specified tag key.</p>
      * 
      * @param request ListTagValuesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4659,10 +4684,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Usage notes</h3>
-     * <p>This topic provides an example on how to query the tag values of the tag key k1. The response shows that the tag value corresponding to the tag key k1 is v1.</p>
+     * <p>This topic provides an example to query the tag values for the tag key k1. The response shows that the tag value for the tag key k1 is v1.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the tag values of a specified tag key by calling ListTagValues.</p>
+     * <p>Queries the tag values for a specified tag key.</p>
      * 
      * @param request ListTagValuesRequest
      * @return ListTagValuesResponse
@@ -4673,6 +4698,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>调用本接口前，请先开启管控策略功能（EnableControlPolicy），可通过 GetControlPolicyEnablementStatus 确认状态为 Enabled（已开启）。功能未开启时，管控策略无法绑定到任何节点。</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the nodes to which a control policy is attached.</p>
      * 
@@ -4713,6 +4741,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>调用本接口前，请先开启管控策略功能（EnableControlPolicy），可通过 GetControlPolicyEnablementStatus 确认状态为 Enabled（已开启）。功能未开启时，管控策略无法绑定到任何节点。</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the nodes to which a control policy is attached.</p>
      * 
@@ -4908,11 +4939,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Supports batch transfer of resources across regions, cloud services, and resource groups.
-     * For cloud services that support resource group transfer, see the <strong>API</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
+     * <p>You can transfer resources in batches across regions, cloud services, and resource groups.
+     * For cloud services that support resource groups, see the <strong>API</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Calls MoveResources to move resources from one resource group to another.</p>
+     * <p>Moves resources from one resource group to another.</p>
      * 
      * @param request MoveResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4948,11 +4979,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Supports batch transfer of resources across regions, cloud services, and resource groups.
-     * For cloud services that support resource group transfer, see the <strong>API</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
+     * <p>You can transfer resources in batches across regions, cloud services, and resource groups.
+     * For cloud services that support resource groups, see the <strong>API</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Calls MoveResources to move resources from one resource group to another.</p>
+     * <p>Moves resources from one resource group to another.</p>
      * 
      * @param request MoveResourcesRequest
      * @return MoveResourcesResponse
@@ -4963,6 +4994,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>本接口仅支持升级资源账号类型的成员；成员类型或状态不匹配时返回 409 AccountTypeOrStatusMismatch，成员处于删除中状态时不支持升级。</p>
+     * 
      * <b>summary</b> : 
      * <p>Upgrades a resource account to an Alibaba Cloud account. This is an asynchronous operation.</p>
      * 
@@ -4999,6 +5033,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>本接口仅支持升级资源账号类型的成员；成员类型或状态不匹配时返回 409 AccountTypeOrStatusMismatch，成员处于删除中状态时不支持升级。</p>
+     * 
      * <b>summary</b> : 
      * <p>Upgrades a resource account to an Alibaba Cloud account. This is an asynchronous operation.</p>
      * 
@@ -5012,16 +5049,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After the settings are complete, the delegated administrator account is granted authorization to access the organizational information of the resource directory, which provides visibility into the organization members and structure. The delegated administrator account executes service-related management operations on behalf of the management account in the specified trusted service.
+     * <p>After the Settings are applied, the delegated administrator account receives authorization to access the organization information of the resource folder, which provides visibility into the organization members and structure. The delegated administrator account executes service-related management operations on behalf of the management account of the resource folder in the specified trusted service.
      * Limits:</p>
      * <ul>
-     * <li>Only some trusted services support the delegated administrator feature. For more information, see <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</li>
-     * <li>Only the management account of the resource directory and authorized Resource Access Management (RAM) users and RAM roles under the management account can invoke this API operation.</li>
-     * <li>The maximum number of delegated administrator accounts that can be added is defined by each trusted service.</li>
+     * <li>Only specific trusted services support the delegated administrator feature. For more information, see <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</li>
+     * <li>Only the management account of the resource folder and its authorized Resource Access Management (RAM) users and RAM roles can invoke this API.</li>
+     * <li>The maximum number of delegated administrator accounts that can be added for a trusted service is defined by the trusted service.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Sets a member account in a resource directory as a delegated administrator account for a trusted service.</p>
+     * <p>Invokes RegisterDelegatedAdministrator to configure the Settings of member accounts in a resource folder as delegated administrators for a trusted service.</p>
      * 
      * @param request RegisterDelegatedAdministratorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5057,16 +5094,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After the settings are complete, the delegated administrator account is granted authorization to access the organizational information of the resource directory, which provides visibility into the organization members and structure. The delegated administrator account executes service-related management operations on behalf of the management account in the specified trusted service.
+     * <p>After the Settings are applied, the delegated administrator account receives authorization to access the organization information of the resource folder, which provides visibility into the organization members and structure. The delegated administrator account executes service-related management operations on behalf of the management account of the resource folder in the specified trusted service.
      * Limits:</p>
      * <ul>
-     * <li>Only some trusted services support the delegated administrator feature. For more information, see <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</li>
-     * <li>Only the management account of the resource directory and authorized Resource Access Management (RAM) users and RAM roles under the management account can invoke this API operation.</li>
-     * <li>The maximum number of delegated administrator accounts that can be added is defined by each trusted service.</li>
+     * <li>Only specific trusted services support the delegated administrator feature. For more information, see <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</li>
+     * <li>Only the management account of the resource folder and its authorized Resource Access Management (RAM) users and RAM roles can invoke this API.</li>
+     * <li>The maximum number of delegated administrator accounts that can be added for a trusted service is defined by the trusted service.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Sets a member account in a resource directory as a delegated administrator account for a trusted service.</p>
+     * <p>Invokes RegisterDelegatedAdministrator to configure the Settings of member accounts in a resource folder as delegated administrators for a trusted service.</p>
      * 
      * @param request RegisterDelegatedAdministratorRequest
      * @return RegisterDelegatedAdministratorResponse
@@ -5077,8 +5114,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>本接口仅适用于云账号类型的成员。资源账号类型的成员不能通过本接口移除，需通过 DeleteAccount 删除。
+     * 移除前需确认该账号未被可信服务使用；被可信服务使用时返回 409 Deny.TrustedService，请先将该账号从可信服务中解除使用。
+     * 成员类型或状态不匹配时返回 409 AccountTypeOrStatusMismatch。
+     * 若目标云账号是可信服务的委派管理员，需先调用 DeregisterDelegatedAdministrator 移除其委派管理员身份，否则无法移除。</p>
+     * 
      * <b>summary</b> : 
-     * <p>Removes a member of the cloud account type. After the member is removed, it exists as an independent Alibaba Cloud account and is no longer managed by the management account of the resource directory.</p>
+     * <p>Removes a member of the cloud account type. After removal, the member exists as an independent Alibaba Cloud account and is no longer managed by the management account of the resource directory.</p>
      * 
      * @param request RemoveCloudAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5109,8 +5152,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>本接口仅适用于云账号类型的成员。资源账号类型的成员不能通过本接口移除，需通过 DeleteAccount 删除。
+     * 移除前需确认该账号未被可信服务使用；被可信服务使用时返回 409 Deny.TrustedService，请先将该账号从可信服务中解除使用。
+     * 成员类型或状态不匹配时返回 409 AccountTypeOrStatusMismatch。
+     * 若目标云账号是可信服务的委派管理员，需先调用 DeregisterDelegatedAdministrator 移除其委派管理员身份，否则无法移除。</p>
+     * 
      * <b>summary</b> : 
-     * <p>Removes a member of the cloud account type. After the member is removed, it exists as an independent Alibaba Cloud account and is no longer managed by the management account of the resource directory.</p>
+     * <p>Removes a member of the cloud account type. After removal, the member exists as an independent Alibaba Cloud account and is no longer managed by the management account of the resource directory.</p>
      * 
      * @param request RemoveCloudAccountRequest
      * @return RemoveCloudAccountResponse
@@ -5209,8 +5258,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>调用前，目标成员需存在待验证的邮箱修改记录，否则返回 404 EntityNotExists.EmailModifyRecord。邮箱修改记录可通过 ChangeAccountEmail 发起。</p>
+     * 
      * <b>summary</b> : 
-     * <p>Resends the confirmation email for changing the email address of a member account.</p>
+     * <p>Resends the confirmation email for changing the email address of a member.</p>
      * 
      * @param request RetryChangeAccountEmailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5241,8 +5293,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>调用前，目标成员需存在待验证的邮箱修改记录，否则返回 404 EntityNotExists.EmailModifyRecord。邮箱修改记录可通过 ChangeAccountEmail 发起。</p>
+     * 
      * <b>summary</b> : 
-     * <p>Resends the confirmation email for changing the email address of a member account.</p>
+     * <p>Resends the confirmation email for changing the email address of a member.</p>
      * 
      * @param request RetryChangeAccountEmailRequest
      * @return RetryChangeAccountEmailResponse
@@ -5311,7 +5366,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Each Alibaba Cloud account can send up to 100 verification codes per day.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sends a verification code to the secure phone number of a new management account when you call SendVerificationCodeForEnableRD to enable a resource directory by creating a new management account.</p>
+     * <p>Sends a verification code to the secure phone number of a new management account when you enable a resource directory by creating a new management account.</p>
      * 
      * @param request SendVerificationCodeForEnableRDRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5346,7 +5401,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Each Alibaba Cloud account can send up to 100 verification codes per day.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sends a verification code to the secure phone number of a new management account when you call SendVerificationCodeForEnableRD to enable a resource directory by creating a new management account.</p>
+     * <p>Sends a verification code to the secure phone number of a new management account when you enable a resource directory by creating a new management account.</p>
      * 
      * @param request SendVerificationCodeForEnableRDRequest
      * @return SendVerificationCodeForEnableRDResponse
@@ -5409,7 +5464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can delete members of the resource account type only after the member deletion permission is enabled.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables or disables the member deletion permission by calling SetMemberDeletionPermission.</p>
+     * <p>Enables or disables the member deletion permission.</p>
      * 
      * @param request SetMemberDeletionPermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5444,7 +5499,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can delete members of the resource account type only after the member deletion permission is enabled.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables or disables the member deletion permission by calling SetMemberDeletionPermission.</p>
+     * <p>Enables or disables the member deletion permission.</p>
      * 
      * @param request SetMemberDeletionPermissionRequest
      * @return SetMemberDeletionPermissionResponse
@@ -5456,7 +5511,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Attaches labels to resource groups or member accounts of a resource directory.</p>
+     * <p>Attaches tags to a resource group or a member of a resource directory.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5496,7 +5551,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Attaches labels to resource groups or member accounts of a resource directory.</p>
+     * <p>Attaches tags to a resource group or a member of a resource directory.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -5508,7 +5563,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unbinds tags from resource groups or resource directory members.</p>
+     * <p>Removes tags from resource groups or members of a resource directory.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5552,7 +5607,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unbinds tags from resource groups or resource directory members.</p>
+     * <p>Removes tags from resource groups or members of a resource directory.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -5566,13 +5621,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Before you begin</h3>
      * <ul>
-     * <li>To ensure that the system can record the specific operator of management operations, use a Resource Access Management (RAM) user or RAM role under the management account that has the resource folder management permission (AliyunResourceDirectoryFullAccess) to invoke this API operation.</li>
-     * <li>For the conditions that must be met to switch a resource account to a cloud account, see <a href="https://help.aliyun.com/document_detail/111233.html">Switch a resource account to a cloud account</a>.</li>
-     * <li>For the conditions that must be met to switch a cloud account to a resource account, see <a href="https://help.aliyun.com/document_detail/209980.html">Switch a cloud account to a resource account</a>.</li>
+     * <li>To ensure that the system can record the specific operator of management operations, call this API as a Resource Access Management (RAM) user or RAM role that has the resource directory management permissions (AliyunResourceDirectoryFullAccess) under the management account.</li>
+     * <li>For the conditions that must be met when switching a resource account to a cloud account, refer to <a href="https://help.aliyun.com/document_detail/111233.html">Switch a resource account to a cloud account</a>.</li>
+     * <li>For the conditions that must be met when switching a cloud account to a resource account, refer to <a href="https://help.aliyun.com/document_detail/209980.html">Switch a cloud account to a resource account</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the name of a member or switches the member type by calling UpdateAccount.</p>
+     * <p>Modifies the name of a member or switches the member type.</p>
      * 
      * @param request UpdateAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5614,13 +5669,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Before you begin</h3>
      * <ul>
-     * <li>To ensure that the system can record the specific operator of management operations, use a Resource Access Management (RAM) user or RAM role under the management account that has the resource folder management permission (AliyunResourceDirectoryFullAccess) to invoke this API operation.</li>
-     * <li>For the conditions that must be met to switch a resource account to a cloud account, see <a href="https://help.aliyun.com/document_detail/111233.html">Switch a resource account to a cloud account</a>.</li>
-     * <li>For the conditions that must be met to switch a cloud account to a resource account, see <a href="https://help.aliyun.com/document_detail/209980.html">Switch a cloud account to a resource account</a>.</li>
+     * <li>To ensure that the system can record the specific operator of management operations, call this API as a Resource Access Management (RAM) user or RAM role that has the resource directory management permissions (AliyunResourceDirectoryFullAccess) under the management account.</li>
+     * <li>For the conditions that must be met when switching a resource account to a cloud account, refer to <a href="https://help.aliyun.com/document_detail/111233.html">Switch a resource account to a cloud account</a>.</li>
+     * <li>For the conditions that must be met when switching a cloud account to a resource account, refer to <a href="https://help.aliyun.com/document_detail/209980.html">Switch a cloud account to a resource account</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the name of a member or switches the member type by calling UpdateAccount.</p>
+     * <p>Modifies the name of a member or switches the member type.</p>
      * 
      * @param request UpdateAccountRequest
      * @return UpdateAccountResponse
@@ -5686,7 +5741,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls UpdateAutoGroupingConfig to update the automatic group transfer settings. Currently, only the setting for whether to enable existing associated resources to follow the group transfer task is supported.</p>
+     * <p>Updates the automatic group transfer settings. Currently, you can only specify whether to transfer existing associated resources along with the group transfer task.</p>
      * 
      * @param request UpdateAutoGroupingConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5718,7 +5773,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls UpdateAutoGroupingConfig to update the automatic group transfer settings. Currently, only the setting for whether to enable existing associated resources to follow the group transfer task is supported.</p>
+     * <p>Updates the automatic group transfer settings. Currently, you can only specify whether to transfer existing associated resources along with the group transfer task.</p>
      * 
      * @param request UpdateAutoGroupingConfigRequest
      * @return UpdateAutoGroupingConfigResponse
@@ -5928,7 +5983,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the display name of a resource group.</p>
+     * <p>Updates the display name of a resource group.</p>
      * 
      * @param request UpdateResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5964,7 +6019,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the display name of a resource group.</p>
+     * <p>Updates the display name of a resource group.</p>
      * 
      * @param request UpdateResourceGroupRequest
      * @return UpdateResourceGroupResponse
@@ -5976,7 +6031,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the administrator settings of a resource group by calling UpdateResourceGroupAdminSetting.</p>
+     * <p>Updates the administrator settings of a resource group.</p>
      * 
      * @param request UpdateResourceGroupAdminSettingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6008,7 +6063,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the administrator settings of a resource group by calling UpdateResourceGroupAdminSetting.</p>
+     * <p>Updates the administrator settings of a resource group.</p>
      * 
      * @param request UpdateResourceGroupAdminSettingRequest
      * @return UpdateResourceGroupAdminSettingResponse

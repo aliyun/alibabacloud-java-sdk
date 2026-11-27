@@ -19,7 +19,7 @@ public class ListAccountsForParentRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
-     * <p>Minimum value: 1. Default value: 1.</p>
+     * <p>Starting value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class ListAccountsForParentRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the resource folder.</p>
+     * <p>The ID of the folder.</p>
      * 
      * <strong>example:</strong>
      * <p>fd-bVaRIG****</p>
@@ -57,7 +57,7 @@ public class ListAccountsForParentRequest extends TeaModel {
     public String queryKeyword;
 
     /**
-     * <p>The tags used to filter member accounts.</p>
+     * <p>The tags used to filter results.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListAccountsForParentRequestTag> tag;

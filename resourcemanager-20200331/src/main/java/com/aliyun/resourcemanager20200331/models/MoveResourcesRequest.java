@@ -15,9 +15,9 @@ public class MoveResourcesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The list of resources to move.</p>
+     * <p>The list of resources to be transferred.</p>
      * <blockquote>
-     * <p>A maximum of 10 resources can be moved at a time. Move resources in batches if you have more than 10.</p>
+     * <p>You can transfer up to 10 resources at a time. To transfer more resources, transfer them in batches.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -47,7 +47,7 @@ public class MoveResourcesRequest extends TeaModel {
 
     public static class MoveResourcesRequestResources extends TeaModel {
         /**
-         * <p>The region ID of the resource.</p>
+         * <p>The ID of the region to which the resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -56,7 +56,7 @@ public class MoveResourcesRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The resource ID.</p>
+         * <p>The ID of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>i-23v38****</p>
@@ -66,7 +66,7 @@ public class MoveResourcesRequest extends TeaModel {
 
         /**
          * <p>The resource type.</p>
-         * <p>You can obtain the value from the <strong>Resource Type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
+         * <p>You can obtain the value from the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>instance</p>
@@ -75,8 +75,8 @@ public class MoveResourcesRequest extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The cloud service code.</p>
-         * <p>You can obtain the value from the <strong>Cloud Service Code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
+         * <p>The code of the cloud service.</p>
+         * <p>You can obtain the value from the <strong>Cloud service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>

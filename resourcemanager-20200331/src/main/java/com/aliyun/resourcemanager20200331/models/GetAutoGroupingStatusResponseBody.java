@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetAutoGroupingStatusResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the attached-resource allocation for existing resources is enabled. Valid values:</p>
+     * <p>Specifies whether automatic grouping for existing resources is enabled. Valid values:</p>
      * <ul>
      * <li>true: Enabled.</li>
-     * <li>false: Not enabled.</li>
+     * <li>false: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,12 +18,12 @@ public class GetAutoGroupingStatusResponseBody extends TeaModel {
     public Boolean enableExistedResourcesTransfer;
 
     /**
-     * <p>The status of automatic resource group transfer. Valid values:</p>
+     * <p>The activation status of automatic grouping. Valid values:</p>
      * <ul>
-     * <li>Enabling: Being enabled.</li>
-     * <li>Enable: Enabled.</li>
-     * <li>Partial_Enable: Attached-resource allocation is enabled, but custom condition-based resource group transfer is not enabled. To enable custom condition-based resource group transfer, call <a href="~~EnableAutoGrouping~~">EnableAutoGrouping</a>.</li>
-     * <li>Disable: Not enabled.</li>
+     * <li>Enabling: Activating.</li>
+     * <li>Enable: Activated.</li>
+     * <li>Partial_Enable: Automatic grouping for associated resources is activated, but automatic grouping based on custom conditions is not activated. To activate automatic grouping based on custom conditions, call <a href="~~EnableAutoGrouping~~">EnableAutoGrouping</a>.</li>
+     * <li>Disable: Not activated.</li>
      * </ul>
      * 
      * <strong>example:</strong>

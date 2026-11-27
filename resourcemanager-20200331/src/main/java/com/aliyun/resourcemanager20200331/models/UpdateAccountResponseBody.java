@@ -78,10 +78,10 @@ public class UpdateAccountResponseBody extends TeaModel {
         public String folderId;
 
         /**
-         * <p>The method used by the member to join the resource directory. Valid values:</p>
+         * <p>The method by which the member joined the resource directory. Valid values:</p>
          * <ul>
-         * <li>invited: invited.</li>
-         * <li>created: created.</li>
+         * <li>invited: Invited.</li>
+         * <li>created: Created.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -91,7 +91,7 @@ public class UpdateAccountResponseBody extends TeaModel {
         public String joinMethod;
 
         /**
-         * <p>The time when the member joined the resource directory (UTC).</p>
+         * <p>The time when the member joined the resource directory. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2015-01-23T12:33:18Z</p>
@@ -100,7 +100,7 @@ public class UpdateAccountResponseBody extends TeaModel {
         public String joinTime;
 
         /**
-         * <p>The time when the member was last modified (UTC).</p>
+         * <p>The time when the member was modified. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2015-01-23T12:33:18Z</p>
@@ -118,7 +118,7 @@ public class UpdateAccountResponseBody extends TeaModel {
         public String resourceDirectoryId;
 
         /**
-         * <p>The join status of the member. Valid values:</p>
+         * <p>The status of the member joining the resource directory. Valid values:</p>
          * <ul>
          * <li>CreateSuccess: Created.</li>
          * <li>InviteSuccess: Invited.</li>
@@ -135,8 +135,8 @@ public class UpdateAccountResponseBody extends TeaModel {
         /**
          * <p>The type of the member. Valid values:</p>
          * <ul>
-         * <li>CloudAccount: cloud account.</li>
-         * <li>ResourceAccount: resource account.</li>
+         * <li>CloudAccount: Cloud account.</li>
+         * <li>ResourceAccount: Resource account.</li>
          * </ul>
          * 
          * <strong>example:</strong>

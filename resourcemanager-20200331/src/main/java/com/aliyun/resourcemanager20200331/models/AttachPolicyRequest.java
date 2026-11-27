@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class AttachPolicyRequest extends TeaModel {
     /**
-     * <p>Policy Name of the access policy.</p>
-     * <p>Policy Name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
+     * <p>The access policy name.</p>
+     * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class AttachPolicyRequest extends TeaModel {
     public String policyName;
 
     /**
-     * <p>The type of the access policy. Valid values:</p>
+     * <p>The access policy type. Valid values:</p>
      * <ul>
      * <li>Custom: custom access policy.</li>
      * <li>System: system access policy.</li>
@@ -30,14 +30,14 @@ public class AttachPolicyRequest extends TeaModel {
     public String policyType;
 
     /**
-     * <p>The name of the authorization object. The format varies based on the object type:</p>
+     * <p>The name of the principal for authorization. The format is as follows:</p>
      * <ul>
-     * <li>Resource Access Management (RAM) user: <UserName>@<AccountAlias>.onaliyun.com, where <UserName> is the RAM username and <AccountAlias> is the account alias.</li>
+     * <li>RAM user: <UserName>@<AccountAlias>.onaliyun.com, where <UserName> is the RAM username and <AccountAlias> is the account alias.</li>
      * <li>RAM user group: <GroupName>@group.<AccountAlias>.onaliyun.com, where <GroupName> is the RAM user group name and <AccountAlias> is the account alias.</li>
      * <li>RAM role: <RoleName>@role.<AccountAlias>.onaliyunservice.com, where <RoleName> is the RAM role name and <AccountAlias> is the account alias.</li>
      * </ul>
      * <blockquote>
-     * <p>The account alias is part of the default domain name. Invoke <a href="https://help.aliyun.com/document_detail/186720.html">GetDefaultDomain</a> to obtain the account alias.</p>
+     * <p>The account alias is a part of the default domain name. You can invoke the <a href="https://help.aliyun.com/document_detail/186720.html">GetDefaultDomain</a> operation to obtain the account alias.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -48,12 +48,15 @@ public class AttachPolicyRequest extends TeaModel {
     public String principalName;
 
     /**
-     * <p>The authorization object type. Valid values:</p>
+     * <p>The type of the principal for authorization. Valid values:</p>
      * <ul>
-     * <li>IMSUser: Resource Access Management (RAM) user.</li>
+     * <li>IMSUser: RAM user.</li>
      * <li>IMSGroup: RAM user group.</li>
      * <li>ServiceRole: RAM role.</li>
      * </ul>
+     * <blockquote>
+     * <p>ServiceRole refers to a regular RAM role. The access policy of a service-linked role is predefined by the cloud service and cannot be modified, nor can you associate an access policy with it by calling this operation.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,8 +68,8 @@ public class AttachPolicyRequest extends TeaModel {
     /**
      * <p>The authorization scope. Valid values:</p>
      * <ul>
-     * <li>Resource group ID: The permissions take effect within the specified resource group.</li>
-     * <li>Alibaba Cloud account ID: The ID of the Alibaba Cloud account to which the principal belongs. The permissions take effect within the Alibaba Cloud account.</li>
+     * <li>Resource group ID: The policy takes effect only within the specified resource group.</li>
+     * <li>Alibaba Cloud account ID: The ID of the Alibaba Cloud account to which the principal belongs. The policy takes effect within the Alibaba Cloud account.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

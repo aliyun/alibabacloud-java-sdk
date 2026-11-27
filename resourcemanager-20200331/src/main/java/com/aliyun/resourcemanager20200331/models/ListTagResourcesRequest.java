@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * <p>Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to start the next query.</p>
+     * <p>The token used to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -24,19 +24,19 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The resource group ID or resource directory member ID. This parameter is used as a filter condition.</p>
+     * <p>The ID of the resource group or the ID of the resource directory member. This parameter is used as a filter condition for the query.</p>
      * <blockquote>
-     * <p>To query the tags that are attached to a resource directory member, you must specify both <code>ResourceId</code> and <code>ResourceType</code>, and set <code>ResourceType</code> to <code>Account</code>.</p>
+     * <p>When you query the tags bound to a resource directory member, you must specify both <code>ResourceId</code> and <code>ResourceType</code>, and set <code>ResourceType</code> to <code>Account</code>.</p>
      * </blockquote>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. This parameter is used as a filter condition. Valid values:</p>
+     * <p>The resource type. This parameter is used as a filter condition for the query. Valid values:</p>
      * <ul>
-     * <li>ResourceGroup (default): queries the tags of a resource group.</li>
-     * <li>Account: queries the tags of a resource directory member.</li>
+     * <li>ResourceGroup (default): Queries the tags of resource groups.</li>
+     * <li>Account: Queries the tags of resource directory members.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags. This parameter is used as a filter condition.</p>
+     * <p>The tags. This parameter is used as a filter condition for the query.</p>
      * <p>You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")

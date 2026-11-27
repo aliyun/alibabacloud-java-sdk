@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHandshakeRequest extends TeaModel {
     /**
-     * <p>The handshake ID.</p>
+     * <p>The invitation ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

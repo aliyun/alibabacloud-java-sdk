@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
     /**
-     * <p>The reason why the deletion task failed.</p>
+     * <p>The reason for the deletion task failure.</p>
      */
     @NameInMap("Reason")
     public GetServiceLinkedRoleDeletionStatusResponseBodyReason reason;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>07194EB1-DB50-4513-A51D-99B30D635AEF</p>
@@ -20,9 +20,9 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task status. Valid values:</p>
+     * <p>The status of the task. Valid values:</p>
      * <ul>
-     * <li>SUCCEEDED: The deletion was successful.</li>
+     * <li>SUCCEEDED: The deletion succeeded.</li>
      * <li>IN_PROGRESS: The deletion is in progress.</li>
      * <li>FAILED: The deletion failed.</li>
      * <li>NOT_STARTED: The deletion has not started.</li>
@@ -134,7 +134,7 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
 
     public static class GetServiceLinkedRoleDeletionStatusResponseBodyReason extends TeaModel {
         /**
-         * <p>The error message.</p>
+         * <p>The failure message.</p>
          * 
          * <strong>example:</strong>
          * <p>Service-Linked Role acs:ram::196813227629****:role/aliyunserviceroleforhdr cannot be deleted as it is in use by hdr.aliyuncs.com.</p>

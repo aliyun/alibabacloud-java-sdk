@@ -17,9 +17,9 @@ public class AttachControlPolicyRequest extends TeaModel {
     /**
      * <p>The target node. Valid values:</p>
      * <ul>
-     * <li>Root ID: attaches the control policy to the Root resource folder.</li>
-     * <li>Resource folder ID: attaches the control policy to a resource folder.</li>
-     * <li>Member ID: attaches the control policy to a member.</li>
+     * <li>Root ID: Attaches the control policy to the Root folder.</li>
+     * <li>Folder ID: Attaches the control policy to a folder.</li>
+     * <li>Member ID: Attaches the control policy to a member.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetResourceGroupResourceCountsResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
@@ -60,7 +60,7 @@ public class GetResourceGroupResourceCountsResponseBody extends TeaModel {
         public String groupByKey;
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-9gLOoK****</p>

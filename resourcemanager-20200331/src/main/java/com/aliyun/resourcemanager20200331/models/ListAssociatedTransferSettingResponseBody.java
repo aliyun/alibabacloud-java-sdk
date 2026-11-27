@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAssociatedTransferSettingResponseBody extends TeaModel {
     /**
-     * <p>The settings of the associated resource group transfer feature.</p>
+     * <p>The associated transfer settings.</p>
      */
     @NameInMap("AssociatedTransferSetting")
     public ListAssociatedTransferSettingResponseBodyAssociatedTransferSetting associatedTransferSetting;
@@ -60,7 +60,7 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
         public String associatedService;
 
         /**
-         * <p>The resource type of the master resource.</p>
+         * <p>The resource type of the primary resource.</p>
          * 
          * <strong>example:</strong>
          * <p>instance</p>
@@ -69,7 +69,7 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
         public String masterResourceType;
 
         /**
-         * <p>The cloud service code of the master resource.</p>
+         * <p>The cloud service code of the primary resource.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>
@@ -78,10 +78,10 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
         public String masterService;
 
         /**
-         * <p>The status of the associated resource group transfer feature. Valid values:</p>
+         * <p>The enabling status of the associated transfer feature. Valid values:</p>
          * <ul>
-         * <li>Enable: enabled.</li>
-         * <li>Disable: disabled.</li>
+         * <li>Enable: Enabled.</li>
+         * <li>Disable: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
 
     public static class ListAssociatedTransferSettingResponseBodyAssociatedTransferSetting extends TeaModel {
         /**
-         * <p>The Alibaba Cloud account ID.</p>
+         * <p>The ID of the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>121998723923****</p>
@@ -148,10 +148,10 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>Indicates whether the task for transferring existing associated resources to the same resource group is started. Valid values:</p>
+         * <p>Specifies whether to transfer existing associated resources along with the resource group. Valid values:</p>
          * <ul>
-         * <li>false: The task is not started.</li>
-         * <li>true: The task is started.</li>
+         * <li>false: Existing associated resources are not transferred along with the resource group.</li>
+         * <li>true: Existing associated resources are transferred along with the resource group.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -161,16 +161,16 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
         public String enableExistingResourcesTransfer;
 
         /**
-         * <p>The rule settings of the associated resource group transfer feature.</p>
+         * <p>The rule settings for the associated transfer feature.</p>
          */
         @NameInMap("RuleSettings")
         public java.util.List<ListAssociatedTransferSettingResponseBodyAssociatedTransferSettingRuleSettings> ruleSettings;
 
         /**
-         * <p>The status of the associated resource group transfer feature. Valid values:</p>
+         * <p>The enabling status of the associated transfer feature. Valid values:</p>
          * <ul>
-         * <li>Enable: enabled.</li>
-         * <li>Disable: disabled.</li>
+         * <li>Enable: Enabled.</li>
+         * <li>Disable: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

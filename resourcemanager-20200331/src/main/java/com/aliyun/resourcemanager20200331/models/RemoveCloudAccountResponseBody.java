@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveCloudAccountResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>

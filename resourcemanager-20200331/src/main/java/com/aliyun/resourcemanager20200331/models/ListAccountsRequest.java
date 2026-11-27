@@ -7,7 +7,7 @@ public class ListAccountsRequest extends TeaModel {
     /**
      * <p>Specifies whether to return tag information. Valid values:</p>
      * <ul>
-     * <li>false (default): does not return tag information.</li>
+     * <li>false: does not return tag information. This is the default value.</li>
      * <li>true: returns tag information.</li>
      * </ul>
      * 
@@ -18,8 +18,7 @@ public class ListAccountsRequest extends TeaModel {
     public Boolean includeTags;
 
     /**
-     * <p>The page number.</p>
-     * <p>Minimum value: 1. Default value: 1.</p>
+     * <p>The page number. Starting value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -28,8 +27,7 @@ public class ListAccountsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
-     * <p>Valid values: 1 to 100. Default value: 10.</p>
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +36,7 @@ public class ListAccountsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The tags used to filter member accounts.</p>
+     * <p>The tags used to filter results.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListAccountsRequestTag> tag;

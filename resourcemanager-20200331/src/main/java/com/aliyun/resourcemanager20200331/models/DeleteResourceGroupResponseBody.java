@@ -118,7 +118,7 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-9gLOoK****</p>
@@ -141,9 +141,9 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
         /**
          * <p>The status of the resource group. Valid values:</p>
          * <ul>
-         * <li>Creating: Being created.</li>
-         * <li>OK: Created.</li>
-         * <li>PendingDelete: Pending deletion.</li>
+         * <li>Creating: The resource group is being created.</li>
+         * <li>OK: The resource group is created.</li>
+         * <li>PendingDelete: The resource group is pending deletion.</li>
          * </ul>
          * 
          * <strong>example:</strong>

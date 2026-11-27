@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateResourceGroupRequest extends TeaModel {
     /**
+     * <p>The client token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
      * <p>The display name of the resource group.</p>
      * <p>The name must be 1 to 50 characters in length.</p>
      * <p>This parameter is required.</p>
@@ -16,8 +25,14 @@ public class CreateResourceGroupRequest extends TeaModel {
     public String displayName;
 
     /**
+     * <p>Specifies whether to perform a dry run.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>The unique identifier of the resource group.</p>
-     * <p>The identifier must be 2 to 50 characters in length and can contain letters, digits, and hyphens (-). It must start with a letter.</p>
+     * <p>The name must be 2 to 50 characters in length and can contain letters, digits, and hyphens (-). It must start with a letter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,12 +52,28 @@ public class CreateResourceGroupRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateResourceGroupRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
     public CreateResourceGroupRequest setDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     public String getDisplayName() {
         return this.displayName;
+    }
+
+    public CreateResourceGroupRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateResourceGroupRequest setName(String name) {
@@ -64,7 +95,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public static class CreateResourceGroupRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>k1</p>
@@ -74,7 +105,7 @@ public class CreateResourceGroupRequest extends TeaModel {
 
         /**
          * <p>The tag value.</p>
-         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>

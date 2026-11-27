@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class InviteAccountToResourceDirectoryRequest extends TeaModel {
     /**
-     * <p>The remarks.</p>
-     * <p>Maximum length: 1024 characters.</p>
+     * <p>The note. The note can be up to 1,024 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>Welcome to join</p>
@@ -21,7 +20,7 @@ public class InviteAccountToResourceDirectoryRequest extends TeaModel {
     public java.util.List<InviteAccountToResourceDirectoryRequestTag> tag;
 
     /**
-     * <p>The ID or logon email address of the account that is invited.</p>
+     * <p>The ID or logon email address of the invited account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,10 +30,10 @@ public class InviteAccountToResourceDirectoryRequest extends TeaModel {
     public String targetEntity;
 
     /**
-     * <p>The type of the account that is invited. Valid values:</p>
+     * <p>The type of the invited account. Valid values:</p>
      * <ul>
      * <li>Account: account ID.</li>
-     * <li>Email: logon email address of the account.</li>
+     * <li>Email: logon email address.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

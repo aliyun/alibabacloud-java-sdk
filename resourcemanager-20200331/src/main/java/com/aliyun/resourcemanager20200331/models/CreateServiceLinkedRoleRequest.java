@@ -6,8 +6,9 @@ import com.aliyun.tea.*;
 public class CreateServiceLinkedRoleRequest extends TeaModel {
     /**
      * <p>The suffix of the role name.</p>
-     * <p>The total length of the role name (including the suffix) must be 1 to 64 characters and can contain letters, digits, periods (.), and hyphens (-).</p>
+     * <p>The total length of the role name (including the suffix) is 1 to 64 characters and can contain letters, digits, periods (.), and hyphens (-).</p>
      * <p>For example, if the suffix is <code>Example</code>, the role name is <code>ServiceLinkedRoleName_Example</code>, and the maximum length cannot exceed 64 characters.</p>
+     * <p>Only some service-linked roles support custom suffixes. If a custom suffix is not supported, the 400 InvalidParameter.CustomSuffix.NotAllowed error is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>Example</p>
@@ -17,7 +18,7 @@ public class CreateServiceLinkedRoleRequest extends TeaModel {
 
     /**
      * <p>The description of the service-linked role.</p>
-     * <p>Only service-linked roles that allow custom suffixes can have a custom role description. Otherwise, the role description uses a preset value and cannot be modified.</p>
+     * <p>You can specify a description only for service-linked roles that support custom suffixes. Otherwise, the description uses a preset value and cannot be modified.</p>
      * <p>The description must be 1 to 1,024 characters in length.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +29,7 @@ public class CreateServiceLinkedRoleRequest extends TeaModel {
 
     /**
      * <p>The service name.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/461722.html">Cloud services that support service-linked roles</a>.</p>
+     * <p>The value is the service identifier of the cloud service, such as <code>polardb.aliyuncs.com</code>. For more information, see <a href="https://help.aliyun.com/document_detail/461722.html">Cloud services that support service-linked roles</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

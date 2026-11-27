@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AcceptHandshakeResponseBody extends TeaModel {
     /**
-     * <p>The handshake information.</p>
+     * <p>The invitation information.</p>
      */
     @NameInMap("Handshake")
     public AcceptHandshakeResponseBodyHandshake handshake;
@@ -42,7 +42,7 @@ public class AcceptHandshakeResponseBody extends TeaModel {
 
     public static class AcceptHandshakeResponseBodyHandshake extends TeaModel {
         /**
-         * <p>The creation time of the handshake (UTC).</p>
+         * <p>The time when the invitation was created. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-06T02:15:40Z</p>
@@ -51,7 +51,7 @@ public class AcceptHandshakeResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The expiration time of the handshake (UTC).</p>
+         * <p>The expiration time of the invitation. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-20T02:15:40Z</p>
@@ -60,7 +60,7 @@ public class AcceptHandshakeResponseBody extends TeaModel {
         public String expireTime;
 
         /**
-         * <p>The handshake ID.</p>
+         * <p>The invitation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>h-Ih8IuPfvV0t0****</p>
@@ -87,7 +87,7 @@ public class AcceptHandshakeResponseBody extends TeaModel {
         public String masterAccountName;
 
         /**
-         * <p>The modification time of the handshake (UTC).</p>
+         * <p>The time when the invitation was modified. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-06T02:16:40Z</p>
@@ -96,16 +96,16 @@ public class AcceptHandshakeResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>The remarks.</p>
+         * <p>The note.</p>
          * 
          * <strong>example:</strong>
-         * <p>Welcome to join us</p>
+         * <p>Welcome to join</p>
          */
         @NameInMap("Note")
         public String note;
 
         /**
-         * <p>The resource directory ID.</p>
+         * <p>The ID of the resource directory.</p>
          * 
          * <strong>example:</strong>
          * <p>rd-3G****</p>
@@ -114,13 +114,13 @@ public class AcceptHandshakeResponseBody extends TeaModel {
         public String resourceDirectoryId;
 
         /**
-         * <p>The status of the handshake. Valid values:</p>
+         * <p>The invitation status. Valid values:</p>
          * <ul>
-         * <li>Pending: waiting for confirmation.</li>
-         * <li>Accepted: accepted.</li>
-         * <li>Cancelled: canceled.</li>
-         * <li>Declined: rejected.</li>
-         * <li>Expired: expired.</li>
+         * <li>Pending: pending confirmation</li>
+         * <li>Accepted: accepted</li>
+         * <li>Cancelled: canceled</li>
+         * <li>Declined: declined</li>
+         * <li>Expired: expired</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class AcceptHandshakeResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The Alibaba Cloud account ID or logon email address of the invited account.</p>
+         * <p>The Alibaba Cloud account ID or logon mailbox of the invited Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>177242285274****</p>
@@ -141,8 +141,8 @@ public class AcceptHandshakeResponseBody extends TeaModel {
         /**
          * <p>The type of the invited Alibaba Cloud account. Valid values:</p>
          * <ul>
-         * <li>Account: Alibaba Cloud account ID.</li>
-         * <li>Email: logon email address of the Alibaba Cloud account.</li>
+         * <li>Account: the Alibaba Cloud account ID</li>
+         * <li>Email: the logon mailbox of the Alibaba Cloud account</li>
          * </ul>
          * 
          * <strong>example:</strong>

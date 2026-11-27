@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the <code>NextToken</code> parameter is returned for the next query. Valid values:</p>
+     * <p>The token used to start the next query. Valid values:</p>
      * <ul>
-     * <li>If <code>NextToken</code> is empty, which is displayed as <code>&quot;NextToken&quot;: &quot;&quot;</code>, no next query exists.</li>
-     * <li>If <code>NextToken</code> is returned with a value, the value is the token that is used to start the next query.</li>
+     * <li>If <code>NextToken</code> is empty, which means <code>&quot;NextToken&quot;: &quot;&quot;</code>, no more results are available.</li>
+     * <li>If <code>NextToken</code> has a value, the value is the token used to start the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
@@ -63,7 +63,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
         /**
-         * <p>The resource group ID or resource directory member ID.</p>
+         * <p>The ID of the resource group or the ID of the resource directory member.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekz6bre2uq****</p>

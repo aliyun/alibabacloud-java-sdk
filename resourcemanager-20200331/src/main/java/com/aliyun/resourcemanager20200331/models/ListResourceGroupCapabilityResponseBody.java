@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListResourceGroupCapabilityResponseBody extends TeaModel {
     /**
-     * <p>The list of capability items.</p>
+     * <p>The list of capabilities.</p>
      */
     @NameInMap("Capabilities")
     public java.util.List<ListResourceGroupCapabilityResponseBodyCapabilities> capabilities;
@@ -42,7 +42,7 @@ public class ListResourceGroupCapabilityResponseBody extends TeaModel {
 
     public static class ListResourceGroupCapabilityResponseBodyCapabilities extends TeaModel {
         /**
-         * <p>The resource center resource type code.</p>
+         * <p>The Resource Center resource type code.</p>
          * 
          * <strong>example:</strong>
          * <p>ACS::ECS::Instance</p>
@@ -51,8 +51,7 @@ public class ListResourceGroupCapabilityResponseBody extends TeaModel {
         public String resourceCenterResourceType;
 
         /**
-         * <p>The resource type.</p>
-         * <p>You can obtain the resource type from the <strong>Resource Type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
+         * <p>The resource type. You can obtain the resource type from the <strong>Resource Type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>instance</p>
@@ -61,8 +60,7 @@ public class ListResourceGroupCapabilityResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The cloud service code.</p>
-         * <p>You can obtain the cloud service code from the <strong>Cloud Service Code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
+         * <p>The cloud service code. You can obtain the cloud service code from the <strong>Service Code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>

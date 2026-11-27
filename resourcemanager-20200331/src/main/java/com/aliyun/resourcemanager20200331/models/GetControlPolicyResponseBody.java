@@ -85,7 +85,7 @@ public class GetControlPolicyResponseBody extends TeaModel {
          * <p>The content of the control policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;Version\&quot;:\&quot;1\&quot;,\&quot;Statement\&quot;:[{\&quot;Effect\&quot;:\&quot;Deny\&quot;,\&quot;Action\&quot;:[\&quot;ram:UpdateRole\&quot;,\&quot;ram:DeleteRole\&quot;,\&quot;ram:AttachPolicyToRole\&quot;,\&quot;ram:DetachPolicyFromRole\&quot;],\&quot;Resource\&quot;:\&quot;acs:ram:<em>:</em>:role/ResourceDirectoryAccountAccessRole\&quot;}]}</p>
+         * <p>{&quot;Version&quot;:&quot;1&quot;,&quot;Statement&quot;:[{&quot;Effect&quot;:&quot;Deny&quot;,&quot;Action&quot;:[&quot;ram:UpdateRole&quot;,&quot;ram:DeleteRole&quot;,&quot;ram:AttachPolicyToRole&quot;,&quot;ram:DetachPolicyFromRole&quot;],&quot;Resource&quot;:&quot;acs:ram:<em>:</em>:role/ResourceDirectoryAccountAccessRole&quot;}]}</p>
          */
         @NameInMap("PolicyDocument")
         public String policyDocument;

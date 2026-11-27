@@ -7,8 +7,8 @@ public class SetMemberDeletionPermissionRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable or disable the member deletion permission. Valid values:</p>
      * <ul>
-     * <li>Enabled: enables the member deletion permission.</li>
-     * <li>Disabled: disables the member deletion permission.</li>
+     * <li>Enabled: Enabled.</li>
+     * <li>Disabled: Disabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

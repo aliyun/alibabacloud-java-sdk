@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPayerForAccountRequest extends TeaModel {
     /**
-     * <p>The ID of the member account.</p>
+     * <p>The ID of the member accounts.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

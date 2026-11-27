@@ -222,7 +222,7 @@ public class CreateAutoGroupingRuleRequest extends TeaModel {
          * <p>The scope condition for automatic allocation. Specifies the scope of resources to be automatically allocated.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;children&quot;:[{&quot;desired&quot;:&quot;{\&quot;env\&quot;:\&quot;online\&quot;, \&quot;project\&quot;:\&quot;A\&quot;}&quot;,&quot;featurePath&quot;:&quot;$.tags&quot;,&quot;featureSource&quot;:&quot;RESOURCE&quot;,&quot;operator&quot;:&quot;TagMatchAll&quot;}],&quot;operator&quot;:&quot;and&quot;}</p>
+         * <p>{&quot;children&quot;:[{&quot;desired&quot;:&quot;{&quot;env&quot;:&quot;online&quot;, &quot;project&quot;:&quot;A&quot;}&quot;,&quot;featurePath&quot;:&quot;$.tags&quot;,&quot;featureSource&quot;:&quot;RESOURCE&quot;,&quot;operator&quot;:&quot;TagMatchAll&quot;}],&quot;operator&quot;:&quot;and&quot;}</p>
          */
         @NameInMap("AutoGroupingScopeCondition")
         public String autoGroupingScopeCondition;
