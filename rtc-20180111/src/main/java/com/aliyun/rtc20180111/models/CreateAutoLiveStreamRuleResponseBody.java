@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAutoLiveStreamRuleResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>760bad53276431c499e30dc36f6b26be</p>
      */
@@ -12,6 +14,8 @@ public class CreateAutoLiveStreamRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the relay rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>12</p>
      */

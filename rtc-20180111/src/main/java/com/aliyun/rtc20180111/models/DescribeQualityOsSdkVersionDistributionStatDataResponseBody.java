@@ -4,10 +4,15 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends TeaModel {
+    /**
+     * <p>The list of data for operating systems and SDK versions in quality statistics.</p>
+     */
     @NameInMap("QualityOsSdkVersionStatDataList")
     public java.util.List<DescribeQualityOsSdkVersionDistributionStatDataResponseBodyQualityOsSdkVersionStatDataList> qualityOsSdkVersionStatDataList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
      */
@@ -37,6 +42,8 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
 
     public static class DescribeQualityOsSdkVersionDistributionStatDataResponseBodyQualityOsSdkVersionStatDataList extends TeaModel {
         /**
+         * <p>The audio delay, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>248</p>
          */
@@ -44,6 +51,8 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
         public Long audioDelay;
 
         /**
+         * <p>The audio high-quality transmission rate, represented by four decimal places.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9987</p>
          */
@@ -51,6 +60,8 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
         public String audioHighQualityTransmissionRate;
 
         /**
+         * <p>The audio stuttering rate, represented by four decimal places.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0011</p>
          */
@@ -58,6 +69,8 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
         public String audioStuckRate;
 
         /**
+         * <p>The call duration ratio, represented by four decimal places. For example, 1.0000 indicates that the call duration ratio is 100%.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0984</p>
          */
@@ -65,6 +78,8 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
         public String callDurationRatio;
 
         /**
+         * <p>The 5-second channel join success rate, represented by four decimal places.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.8276</p>
          */
@@ -72,6 +87,8 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
         public String joinChannelSucFiveSecRate;
 
         /**
+         * <p>The channel join success rate, represented by four decimal places.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.8276</p>
          */
@@ -79,6 +96,8 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
         public String joinChannelSucRate;
 
         /**
+         * <p>The SDK version name, such as 1.0.0 or 1.1.1.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.1.0.210316.dev--release/rtcsdk_v2.1</p>
          */
@@ -86,6 +105,8 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
         public String name;
 
         /**
+         * <p>The operating system name, such as iOS or Android.</p>
+         * 
          * <strong>example:</strong>
          * <p>macOS</p>
          */
@@ -93,6 +114,8 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
         public String os;
 
         /**
+         * <p>The video delay, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>333</p>
          */
@@ -100,6 +123,8 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
         public Long videoDelay;
 
         /**
+         * <p>The first video frame rendering time, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>5643</p>
          */
@@ -107,6 +132,8 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
         public Long videoFirstPicDuration;
 
         /**
+         * <p>The video high-quality transmission rate, represented by four decimal places.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9997</p>
          */
@@ -114,6 +141,8 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
         public String videoHighQualityTransmissionRate;
 
         /**
+         * <p>The video stuttering rate, represented by four decimal places.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0054</p>
          */

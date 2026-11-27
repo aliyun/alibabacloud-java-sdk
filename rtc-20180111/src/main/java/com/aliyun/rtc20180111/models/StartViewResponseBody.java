@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartViewResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FA2F9DE9-8EAD-580E-87DF-A3D25EE87C37</p>
      */
@@ -12,6 +14,8 @@ public class StartViewResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task ID for the current request.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */

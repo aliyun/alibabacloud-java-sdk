@@ -10,10 +10,19 @@ public class DescribeChannelResponseBody extends TeaModel {
     @NameInMap("Channel")
     public DescribeChannelResponseBodyChannel channel;
 
+    /**
+     * <p>Indicates whether the channel exists. Valid values:  </p>
+     * <ul>
+     * <li><strong>true</strong>: The channel exists.  </li>
+     * <li><strong>false</strong>: The channel does not exist.</li>
+     * </ul>
+     */
     @NameInMap("ChannelExist")
     public Boolean channelExist;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CF8</p>
      */
@@ -51,6 +60,8 @@ public class DescribeChannelResponseBody extends TeaModel {
 
     public static class DescribeChannelResponseBodyChannel extends TeaModel {
         /**
+         * <p>channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>testid</p>
          */
@@ -58,6 +69,8 @@ public class DescribeChannelResponseBody extends TeaModel {
         public String channelId;
 
         /**
+         * <p>The UNIX timestamp (in seconds) indicating when the channel started (UTC).</p>
+         * 
          * <strong>example:</strong>
          * <p>1557909133</p>
          */

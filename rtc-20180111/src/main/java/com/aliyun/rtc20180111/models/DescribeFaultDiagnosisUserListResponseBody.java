@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
-     * <p>2</p>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
      */
@@ -26,12 +32,17 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
-     * <p>20</p>
+     * <p>1</p>
      */
     @NameInMap("TotalCnt")
     public Integer totalCnt;
 
+    /**
+     * <p>The detailed list of users with faults.</p>
+     */
     @NameInMap("UserList")
     public java.util.List<DescribeFaultDiagnosisUserListResponseBodyUserList> userList;
 
@@ -82,6 +93,8 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
 
     public static class DescribeFaultDiagnosisUserListResponseBodyUserListFaultList extends TeaModel {
         /**
+         * <p>The fault type.</p>
+         * 
          * <strong>example:</strong>
          * <p>JOIN_SLOW</p>
          */
@@ -105,6 +118,8 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
 
     public static class DescribeFaultDiagnosisUserListResponseBodyUserList extends TeaModel {
         /**
+         * <p>The creation timestamp of the channel. The time is a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1614936817</p>
          */
@@ -112,6 +127,8 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
         public Long channelCreatedTs;
 
         /**
+         * <p>The ID of the channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>904</p>
          */
@@ -119,6 +136,8 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
         public String channelId;
 
         /**
+         * <p>The time when the user first joined the channel. The time is a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1614936817</p>
          */
@@ -126,18 +145,25 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
         public Long createdTs;
 
         /**
+         * <p>The time when the user last left the channel. The time is a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1614936817</p>
          */
         @NameInMap("DestroyedTs")
         public Long destroyedTs;
 
+        /**
+         * <p>The list of faults.</p>
+         */
         @NameInMap("FaultList")
         public java.util.List<DescribeFaultDiagnosisUserListResponseBodyUserListFaultList> faultList;
 
         /**
+         * <p>The ID of the user.</p>
+         * 
          * <strong>example:</strong>
-         * <p>123456</p>
+         * <p>testuserid</p>
          */
         @NameInMap("UserId")
         public String userId;

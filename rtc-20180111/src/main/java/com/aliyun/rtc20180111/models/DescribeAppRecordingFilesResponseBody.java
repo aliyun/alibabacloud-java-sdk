@@ -4,10 +4,15 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppRecordingFilesResponseBody extends TeaModel {
+    /**
+     * <p>List of recording files.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeAppRecordingFilesResponseBodyItems> items;
 
     /**
+     * <p>Page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>Number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -31,6 +38,8 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total count.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -84,6 +93,8 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
 
     public static class DescribeAppRecordingFilesResponseBodyItems extends TeaModel {
         /**
+         * <p>User-defined bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>rtc-bucket</p>
          */
@@ -91,6 +102,8 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
         public String bucket;
 
         /**
+         * <p>Channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>testchannelId</p>
          */
@@ -98,6 +111,8 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
         public String channelId;
 
         /**
+         * <p>Recording file creation timestamp, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1712376032000</p>
          */
@@ -105,6 +120,8 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
         public Long fileCreateTs;
 
         /**
+         * <p>Recording file duration, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -112,6 +129,8 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
         public Integer fileDuration;
 
         /**
+         * <p>Path where the recording file is stored. Use the SDK of your cloud provider&quot;s Object Storage Service to access the file. For Alibaba Cloud OSS, see <a href="https://help.aliyun.com/zh/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">here</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>record/appid/12_task_local1/1712279809158_1712279844691/playlist.mp4</p>
          */
@@ -119,6 +138,8 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
         public String filePath;
 
         /**
+         * <p>Recording file size, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -126,6 +147,8 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
         public Integer fileSize;
 
         /**
+         * <p>See region used in the recording task.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -133,6 +156,8 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
         public Integer region;
 
         /**
+         * <p>Recording task start timestamp, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1712376012000</p>
          */
@@ -140,6 +165,8 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
         public Long startTs;
 
         /**
+         * <p>Recording task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>test001</p>
          */
@@ -147,6 +174,8 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>See vendor used when starting the recording task.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

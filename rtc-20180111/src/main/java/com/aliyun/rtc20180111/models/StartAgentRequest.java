@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartAgentRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class StartAgentRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The ID of the channel to join. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,12 +25,17 @@ public class StartAgentRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>The configuration for the agent to join a Real-Time Communication (RTC) channel.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("RtcConfig")
     public StartAgentRequestRtcConfig rtcConfig;
 
     /**
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +45,7 @@ public class StartAgentRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +54,9 @@ public class StartAgentRequest extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>The configuration for AI voice chat.</p>
+     */
     @NameInMap("VoiceChatConfig")
     public StartAgentRequestVoiceChatConfig voiceChatConfig;
 
@@ -103,10 +114,14 @@ public class StartAgentRequest extends TeaModel {
     }
 
     public static class StartAgentRequestRtcConfig extends TeaModel {
+        /**
+         * <p>The list of user IDs subscribed by the agent. Currently, only one user ID is supported.</p>
+         */
         @NameInMap("TargetUserIds")
         public java.util.List<String> targetUserIds;
 
         /**
+         * <p>The user ID of the agent in the RTC channel.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +130,19 @@ public class StartAgentRequest extends TeaModel {
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The maximum duration threshold for user inactivity, in seconds.
+         * When the duration of any of the following states reaches this threshold, the agent automatically stops and exits the channel:</p>
+         * <ol>
+         * <li>All users in the targetUserIds list have left the channel.</li>
+         * <li>The users in the targetUserIds list have not joined the channel.</li>
+         * </ol>
+         * <p>Default value: 30.
+         * Valid values: 5 to 180.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("UserInactivityTimeout")
         public Integer userInactivityTimeout;
 
@@ -150,6 +178,14 @@ public class StartAgentRequest extends TeaModel {
     }
 
     public static class StartAgentRequestVoiceChatConfigASRConfigVadConfig extends TeaModel {
+        /**
+         * <p>The minimum duration of continuous human voice signals required to avoid false interruptions, in milliseconds.
+         * Valid values: 0 to 3000.
+         * Default value: 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("InterruptSpeechDuration")
         public Integer interruptSpeechDuration;
 
@@ -169,10 +205,23 @@ public class StartAgentRequest extends TeaModel {
     }
 
     public static class StartAgentRequestVoiceChatConfigASRConfig extends TeaModel {
+        /**
+         * <p>If this parameter is not specified, the model automatically identifies the language.
+         * Currently supported language codes:</p>
+         * <ul>
+         * <li>zh: Chinese, including Mandarin and dialects such as Shanghainese, Wu, Minnan, Northeastern, Gansu, Guizhou, Henan, Hubei, Hunan, Jiangxi, Ningxia, Shanxi, Shaanxi, Shandong, Sichuan, Tianjin, Yunnan, and Cantonese.</li>
+         * <li>en: English.</li>
+         * <li>ja: Japanese.</li>
+         * <li>yue: Cantonese.</li>
+         * <li>ko: Korean.</li>
+         * </ul>
+         */
         @NameInMap("LanguageHints")
         public java.util.List<String> languageHints;
 
         /**
+         * <p>The voice segmentation detection threshold. Default value: 800. Unit: milliseconds. Recommended range: 200 to 6000.</p>
+         * 
          * <strong>example:</strong>
          * <p>800</p>
          */
@@ -180,6 +229,8 @@ public class StartAgentRequest extends TeaModel {
         public Integer maxSentenceSilence;
 
         /**
+         * <p>Specifies whether semantic or voice segmentation is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -187,16 +238,23 @@ public class StartAgentRequest extends TeaModel {
         public Boolean semanticPunctuationEnabled;
 
         /**
+         * <p>No configuration is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>zh</p>
          */
         @NameInMap("SourceLanguage")
         public String sourceLanguage;
 
+        /**
+         * <p>The Voice Activity Detection (VAD) configuration.</p>
+         */
         @NameInMap("VadConfig")
         public StartAgentRequestVoiceChatConfigASRConfigVadConfig vadConfig;
 
         /**
+         * <p>The ID of the supported hot word.</p>
+         * 
          * <strong>example:</strong>
          * <p>vocab-xxx-24ee19fa8cfb4d52902170a0xxxxxxxx</p>
          */
@@ -259,18 +317,59 @@ public class StartAgentRequest extends TeaModel {
     }
 
     public static class StartAgentRequestVoiceChatConfigAgentSilenceConfig extends TeaModel {
+        /**
+         * <p>The timeout period for silence reminders, in seconds.
+         * This reminder can be triggered multiple times. If the agent remains silent after a silence reminder timeout, the reminder is triggered again upon the next timeout.
+         * Valid values: 5 to 600.
+         * Default value: 0. A value of 0 indicates that no reminder is sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AlertTimeout")
         public Integer alertTimeout;
 
+        /**
+         * <p>The content of the silence prompt message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>**</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The switch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
+        /**
+         * <p>The script strategy for silence reminders. Valid values:</p>
+         * <ul>
+         * <li>1: Broadcast the prompt message specified by Content to the user by voice.</li>
+         * <li>2: Send the prompt message specified by Content and the conversation history to the LLM, and broadcast the generated reply by voice.
+         * Default value: 1.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Strategy")
         public Integer strategy;
 
+        /**
+         * <p>The silence timeout period for triggering the agent silence timeout webhook, in seconds.
+         * This webhook can be triggered multiple times. If the agent remains silent after a webhook silence timeout, the webhook is triggered again upon the next timeout.
+         * Valid values: 10 to 600.
+         * Default value: 0. A value of 0 indicates that the webhook is not triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("WebhookTriggerTimeout")
         public Integer webhookTriggerTimeout;
 
@@ -323,15 +422,26 @@ public class StartAgentRequest extends TeaModel {
 
     public static class StartAgentRequestVoiceChatConfigAmbientSoundConfig extends TeaModel {
         /**
+         * <p>The ambient sound ID. Built-in and download modes are planned. Currently, only the built-in mode is supported.</p>
+         * <ul>
+         * <li>If this parameter is not specified or is left empty, ambient sound is disabled.</li>
+         * <li>Built-in mode: The agent provides the following default ambient sounds: white_noise (white noise) and office (office environment).</li>
+         * <li>Download mode: You can specify a custom soundId in the console (which must be different from built-in IDs) and provide a URL. The agent will download and bind the sound internally.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>office</p>
+         * <p>white_noise</p>
          */
         @NameInMap("SoundId")
         public String soundId;
 
         /**
+         * <p>The volume of the ambient sound.
+         * Default value: 50 (original volume).
+         * Valid values: 0 to 100.</p>
+         * 
          * <strong>example:</strong>
-         * <p>100</p>
+         * <p>50</p>
          */
         @NameInMap("Volume")
         public Integer volume;
@@ -360,9 +470,19 @@ public class StartAgentRequest extends TeaModel {
     }
 
     public static class StartAgentRequestVoiceChatConfigBackChannelConfig extends TeaModel {
+        /**
+         * <p>Specifies whether to enable backchannel responses after the user finishes speaking. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("UserTurnEnd")
         public Boolean userTurnEnd;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Version")
         public Integer version;
 
@@ -390,6 +510,12 @@ public class StartAgentRequest extends TeaModel {
     }
 
     public static class StartAgentRequestVoiceChatConfigInterruptConfig extends TeaModel {
+        /**
+         * <p>Specifies whether to enable semantic interruption. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SemanticsInterrupt")
         public Boolean semanticsInterrupt;
 
@@ -410,19 +536,33 @@ public class StartAgentRequest extends TeaModel {
 
     public static class StartAgentRequestVoiceChatConfigLLMConfig extends TeaModel {
         /**
+         * <p>The API key of the service provider.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxxxxxxxxx</p>
          */
         @NameInMap("ApiKey")
         public String apiKey;
 
+        /**
+         * <p>The agent application ID. You must specify either Model or AppId. If both are specified, AppId takes precedence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e****</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The custom parameters.</p>
+         */
         @NameInMap("BizParams")
         public Object bizParams;
 
         /**
+         * <p>The number of historical conversation turns provided to the LLM.
+         * Default value: 3.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -430,6 +570,10 @@ public class StartAgentRequest extends TeaModel {
         public Integer historyDepth;
 
         /**
+         * <p>The maximum number of tokens for the output text.
+         * Default value: 8192.
+         * The maximum value for DeepSeek and Qwen models is 8192.</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -437,16 +581,28 @@ public class StartAgentRequest extends TeaModel {
         public Integer maxToken;
 
         /**
+         * <p>The model name.
+         * Supported models under the aliyun provider:
+         * [&quot;qwen-plus&quot;, &quot;deepseek-r1&quot;, &quot;qwen-omni-turbo&quot;]</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
          */
         @NameInMap("Model")
         public String model;
 
+        /**
+         * <p>The custom user parameters in key-value pairs. This parameter is deprecated. Use the BizParams parameter instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;verification_code&quot;: &quot;xxx&quot;}</p>
+         */
         @NameInMap("Params")
         public java.util.Map<String, ?> params;
 
         /**
+         * <p>The prompt used to instruct the model on the role or behavior to adopt.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxx</p>
          */
@@ -454,6 +610,11 @@ public class StartAgentRequest extends TeaModel {
         public String prompt;
 
         /**
+         * <p>The sampling temperature used to control the randomness and creativity of the generated text. A higher value indicates higher randomness.
+         * Default value: 0.7.
+         * Valid values: 0 to 2, excluding 2.
+         * Note: This parameter does not take effect for deepseek-r1.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.7</p>
          */
@@ -467,6 +628,10 @@ public class StartAgentRequest extends TeaModel {
         public java.util.List<?> tools;
 
         /**
+         * <p>The sampling range used to control the diversity of output tokens. The model samples from tokens whose cumulative probability exceeds this value to ensure the sampling range is not too broad. A higher value indicates a richer variety of output tokens.
+         * Valid values: 0 to 1, excluding 0.
+         * Default value: 0.8.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.8</p>
          */
@@ -474,6 +639,8 @@ public class StartAgentRequest extends TeaModel {
         public Double topP;
 
         /**
+         * <p>The endpoint URL for integrating a third-party LLM.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://xxxxx">https://xxxxx</a></p>
          */
@@ -481,6 +648,8 @@ public class StartAgentRequest extends TeaModel {
         public String url;
 
         /**
+         * <p>The name of the service provider when a cloud service provider is integrated. Examples: aliyun for Model Studio, thirdparty.</p>
+         * 
          * <strong>example:</strong>
          * <p>aliyun</p>
          */
@@ -608,16 +777,26 @@ public class StartAgentRequest extends TeaModel {
 
     public static class StartAgentRequestVoiceChatConfigTTSConfig extends TeaModel {
         /**
+         * <p>The API key of the service provider.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxxxx</p>
          */
         @NameInMap("ApiKey")
         public String apiKey;
 
+        /**
+         * <p>The configuration to filter out characters within specified brackets from text-to-speech conversion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[1,2]</p>
+         */
         @NameInMap("FilterBrackets")
         public java.util.List<Integer> filterBrackets;
 
         /**
+         * <p>The model name. Example: cosyvoice-v1.</p>
+         * 
          * <strong>example:</strong>
          * <p>cosyvoice-v1</p>
          */
@@ -625,6 +804,10 @@ public class StartAgentRequest extends TeaModel {
         public String model;
 
         /**
+         * <p>The pitch.
+         * Valid values: 0.5 to 2.0.
+         * Default value: 1.0.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -632,6 +815,10 @@ public class StartAgentRequest extends TeaModel {
         public Double pitch;
 
         /**
+         * <p>The speech rate.
+         * Valid values: 0.5 to 2.0.
+         * Default value: 1.0.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -639,6 +826,8 @@ public class StartAgentRequest extends TeaModel {
         public Double rate;
 
         /**
+         * <p>The service provider. Example: aliyun for Model Studio.</p>
+         * 
          * <strong>example:</strong>
          * <p>aliyun</p>
          */
@@ -646,6 +835,10 @@ public class StartAgentRequest extends TeaModel {
         public String vendor;
 
         /**
+         * <p>The voice. If you select the Alibaba Cloud cosyvoice-v1 model, the default voice is longxiaoxia.
+         * Available voices:
+         * longwan, longcheng, longhua, longxiaochun, longxiaoxia, longxiaocheng, longxiaobai, longlaotie, longshu, longshuo, longjing, longmiao, longyue, longyuan, longfei, longjielidou, longtong, longxiang, loongstella, and loongbella.</p>
+         * 
          * <strong>example:</strong>
          * <p>longxiaoxia</p>
          */
@@ -653,6 +846,10 @@ public class StartAgentRequest extends TeaModel {
         public String voice;
 
         /**
+         * <p>The volume.
+         * Valid values: 0 to 100.
+         * Default value: 50.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -731,47 +928,100 @@ public class StartAgentRequest extends TeaModel {
     }
 
     public static class StartAgentRequestVoiceChatConfig extends TeaModel {
+        /**
+         * <p>The Automatic Speech Recognition (ASR) configuration.</p>
+         */
         @NameInMap("ASRConfig")
         public StartAgentRequestVoiceChatConfigASRConfig ASRConfig;
 
+        /**
+         * <p>The configuration for agent behavior during silence timeout. When a user joins the channel but does not interact effectively with the agent (the user does not speak), the agent is in a silent state. You can configure the agent to broadcast a voice messaging reminder or send a webhook notification during this silent state.</p>
+         */
         @NameInMap("AgentSilenceConfig")
         public StartAgentRequestVoiceChatConfigAgentSilenceConfig agentSilenceConfig;
 
+        /**
+         * <p>The ambient sound settings.</p>
+         */
         @NameInMap("AmbientSoundConfig")
         public StartAgentRequestVoiceChatConfigAmbientSoundConfig ambientSoundConfig;
 
+        /**
+         * <p>The backchannel settings.</p>
+         */
         @NameInMap("BackChannelConfig")
         public StartAgentRequestVoiceChatConfigBackChannelConfig backChannelConfig;
 
         /**
+         * <p>The chat mode. Valid values:</p>
+         * <ul>
+         * <li>1: natural conversation mode. This is the default value.</li>
+         * <li>2: walkie-talkie mode.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("ChatMode")
         public Integer chatMode;
 
+        /**
+         * <p>Specifies whether to enable visual understanding. If enabled, the large language model (LLM) must support multimodal data.</p>
+         */
         @NameInMap("EnableVideoUnderstanding")
         public Boolean enableVideoUnderstanding;
 
+        /**
+         * <p>The greeting message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Good morning, my friend</p>
+         */
         @NameInMap("Greeting")
         public String greeting;
 
+        /**
+         * <p>The interrupt settings.</p>
+         */
         @NameInMap("InterruptConfig")
         public StartAgentRequestVoiceChatConfigInterruptConfig interruptConfig;
 
         /**
+         * <p>The interrupt mode. Valid values:</p>
+         * <ul>
+         * <li>1: voice interruption supported. This is the default value.</li>
+         * <li>2: voice interruption disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("InterruptMode")
         public Integer interruptMode;
 
+        /**
+         * <p>The large language model (LLM) configuration.</p>
+         */
         @NameInMap("LLMConfig")
         public StartAgentRequestVoiceChatConfigLLMConfig LLMConfig;
 
+        /**
+         * <p>The text-to-speech (TTS) configuration.</p>
+         */
         @NameInMap("TTSConfig")
         public StartAgentRequestVoiceChatConfigTTSConfig TTSConfig;
 
+        /**
+         * <p>After visual understanding is enabled, you can specify the video stream that the agent prioritizes for understanding. The agent can understand only one video stream when both the camera stream and the screen sharing stream are pushed simultaneously.</p>
+         * <ol>
+         * <li>The agent prioritizes the camera stream.</li>
+         * <li>The agent prioritizes the screen sharing stream.</li>
+         * </ol>
+         * <p>By default, the camera stream is prioritized.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("preferVideo")
         public Integer preferVideo;
 

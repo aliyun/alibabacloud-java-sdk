@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveUsersRequest extends TeaModel {
     /**
+     * <p>Application ID. You can create and query it in the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RemoveUsersRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The ID of the joined channel. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class RemoveUsersRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>User List. Valid values of N: 1 to 30.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Users")
@@ -59,6 +62,7 @@ public class RemoveUsersRequest extends TeaModel {
 
     public static class RemoveUsersRequestUsers extends TeaModel {
         /**
+         * <p>User ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

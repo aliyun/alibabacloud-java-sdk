@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCloudRecordShrinkRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query it in the console. Only one ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,14 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>Background images.</p>
+     */
     @NameInMap("Backgrounds")
     public java.util.List<UpdateCloudRecordShrinkRequestBackgrounds> backgrounds;
 
     /**
+     * <p>The existing channel ID. Only one ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,19 +30,43 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
     @NameInMap("ChannelId")
     public String channelId;
 
+    /**
+     * <p>Global clock watermarks.</p>
+     */
     @NameInMap("ClockWidgets")
     public java.util.List<UpdateCloudRecordShrinkRequestClockWidgets> clockWidgets;
 
+    /**
+     * <p>Global image watermarks.</p>
+     */
     @NameInMap("Images")
     public java.util.List<UpdateCloudRecordShrinkRequestImages> images;
 
+    /**
+     * <p>A list that specifies users for layout generation. It supports both blacklists and whitelists.</p>
+     * <p>Whitelist: Specifies the users whose video streams are subscribed to in the channel.</p>
+     * <ul>
+     * <li><p>The auto-fill feature uses this list for sequential filling.</p>
+     * </li>
+     * <li><p>During multi-layout switching, only users in the whitelist are included.</p>
+     * </li>
+     * </ul>
+     * <p>Blacklist: Specifies the users whose video streams are not subscribed to in the channel.</p>
+     * <ul>
+     * <li>During multi-layout switching, only users not in the blacklist are included.</li>
+     * </ul>
+     */
     @NameInMap("LayoutSpecifiedUsers")
     public String layoutSpecifiedUsersShrink;
 
+    /**
+     * <p>Cell settings.</p>
+     */
     @NameInMap("Panes")
     public java.util.List<UpdateCloudRecordShrinkRequestPanes> panes;
 
     /**
+     * <p>The task ID for this cloud recording. Only one ID is supported. It can contain letters, digits, underscores (_), and hyphens (-), with a maximum length of 55 bytes.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +76,10 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The template ID.</p>
+     * <blockquote>
+     * <p>Notice: To update the layout, change the template ID. Resolution updates are not supported.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +88,9 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>Global text watermarks.</p>
+     */
     @NameInMap("Texts")
     public java.util.List<UpdateCloudRecordShrinkRequestTexts> texts;
 
@@ -145,6 +181,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
 
     public static class UpdateCloudRecordShrinkRequestBackgrounds extends TeaModel {
         /**
+         * <p>Transparency.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9</p>
          */
@@ -152,6 +190,16 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Double alpha;
 
         /**
+         * <p>The cropping mode. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: Crop while maintaining aspect ratio.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Maintain aspect ratio with padding.</p>
+         * </li>
+         * <li><p><strong>3</strong>: Stretch to fill.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -159,6 +207,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Integer backgroundCropMode;
 
         /**
+         * <p>Height.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,6 +217,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Double height;
 
         /**
+         * <p>The z-axis layer.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -175,6 +226,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Integer layer;
 
         /**
+         * <p>The image URL.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,6 +236,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public String url;
 
         /**
+         * <p>Width.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,6 +246,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Double width;
 
         /**
+         * <p>The horizontal coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,6 +256,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Double x;
 
         /**
+         * <p>The vertical coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -283,6 +338,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
 
     public static class UpdateCloudRecordShrinkRequestClockWidgetsBoxColor extends TeaModel {
         /**
+         * <p>B.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -290,6 +347,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Integer b;
 
         /**
+         * <p>G.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -297,6 +356,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Integer g;
 
         /**
+         * <p>R.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -336,6 +397,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
 
     public static class UpdateCloudRecordShrinkRequestClockWidgetsFontColor extends TeaModel {
         /**
+         * <p>B.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -343,6 +406,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Integer b;
 
         /**
+         * <p>G.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -350,6 +415,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Integer g;
 
         /**
+         * <p>R.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -389,6 +456,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
 
     public static class UpdateCloudRecordShrinkRequestClockWidgets extends TeaModel {
         /**
+         * <p>Transparency.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9</p>
          */
@@ -396,6 +465,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Double alpha;
 
         /**
+         * <p>Rectangle box transparency.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.6</p>
          */
@@ -403,36 +474,75 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Double boxAlpha;
 
         /**
+         * <p>Rectangle box border width.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
         @NameInMap("BoxBorderw")
         public Integer boxBorderw;
 
+        /**
+         * <p>Rectangle box color.</p>
+         */
         @NameInMap("BoxColor")
         public UpdateCloudRecordShrinkRequestClockWidgetsBoxColor boxColor;
 
         /**
+         * <p>Font.</p>
+         * <ul>
+         * <li><p><strong>0</strong>: Alibaba PuHuiTi Regular</p>
+         * </li>
+         * <li><p><strong>1</strong>: Alibaba PuHuiTi Light</p>
+         * </li>
+         * <li><p><strong>2</strong>: Alibaba PuHuiTi Medium</p>
+         * </li>
+         * <li><p><strong>3</strong>: Alibaba PuHuiTi Bold</p>
+         * </li>
+         * <li><p><strong>4</strong>: Alibaba PuHuiTi Heavy</p>
+         * </li>
+         * <li><p><strong>5</strong>: Ali Mama ShuHeiTi</p>
+         * </li>
+         * <li><p><strong>6</strong>: DingTalk JinBuTi</p>
+         * </li>
+         * <li><p><strong>7</strong>: Ali Mama DaoLiTi</p>
+         * </li>
+         * <li><p><strong>8</strong>: Ali Mama DongFang DaKai</p>
+         * </li>
+         * <li><p><strong>9</strong>: Ali Mama FangYuanTi</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("Font")
         public Integer font;
 
+        /**
+         * <p>Font color.</p>
+         */
         @NameInMap("FontColor")
         public UpdateCloudRecordShrinkRequestClockWidgetsFontColor fontColor;
 
         /**
+         * <p>Clock font size.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
         @NameInMap("FontSize")
         public Integer fontSize;
 
+        /**
+         * <p>Whether to draw a rectangle box.</p>
+         */
         @NameInMap("HasBox")
         public Boolean hasBox;
 
         /**
+         * <p>The z-axis layer.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -440,6 +550,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Integer layer;
 
         /**
+         * <p>The horizontal coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -449,6 +560,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Double x;
 
         /**
+         * <p>The vertical coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -458,6 +570,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Double y;
 
         /**
+         * <p>Time zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -569,6 +683,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
 
     public static class UpdateCloudRecordShrinkRequestImages extends TeaModel {
         /**
+         * <p>Transparency.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9</p>
          */
@@ -576,6 +692,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Double alpha;
 
         /**
+         * <p>Height.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -585,6 +702,16 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Double height;
 
         /**
+         * <p>The cropping mode. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: Crop while maintaining aspect ratio.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Maintain aspect ratio with padding.</p>
+         * </li>
+         * <li><p><strong>3</strong>: Stretch to fill.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -592,6 +719,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Integer imageCropMode;
 
         /**
+         * <p>The z-axis layer.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -599,6 +728,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Integer layer;
 
         /**
+         * <p>The image URL. The image content cannot be updated during stream ingest.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -608,6 +738,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public String url;
 
         /**
+         * <p>Width.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -617,6 +748,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Double width;
 
         /**
+         * <p>The horizontal coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -626,6 +758,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Double x;
 
         /**
+         * <p>The vertical coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -707,6 +840,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
 
     public static class UpdateCloudRecordShrinkRequestPanesBackgrounds extends TeaModel {
         /**
+         * <p>Transparency.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9</p>
          */
@@ -714,6 +849,16 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Double alpha;
 
         /**
+         * <p>When to display.</p>
+         * <ul>
+         * <li><p>streamOnly: Display only when the user has a video stream (default).</p>
+         * </li>
+         * <li><p>backup: Display only when the user has no video stream.</p>
+         * </li>
+         * <li><p>always: Always display.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>backup</p>
          */
@@ -721,6 +866,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public String display;
 
         /**
+         * <p>Height.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -730,6 +876,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Double height;
 
         /**
+         * <p>The z-axis layer.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -737,6 +885,16 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Integer layer;
 
         /**
+         * <p>The cropping mode. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: Crop while maintaining aspect ratio.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Maintain aspect ratio with padding.</p>
+         * </li>
+         * <li><p><strong>3</strong>: Stretch to fill.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -744,6 +902,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Integer paneBackgroundCropMode;
 
         /**
+         * <p>The background image URL.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -753,6 +912,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public String url;
 
         /**
+         * <p>Width.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -762,6 +922,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Double width;
 
         /**
+         * <p>The horizontal coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -771,6 +932,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Double x;
 
         /**
+         * <p>The vertical coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -860,6 +1022,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
 
     public static class UpdateCloudRecordShrinkRequestPanesImages extends TeaModel {
         /**
+         * <p>Transparency.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9</p>
          */
@@ -867,6 +1031,16 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Double alpha;
 
         /**
+         * <p>When to display the watermark.</p>
+         * <ul>
+         * <li><p>streamOnly: Display only when the user has a video stream (default).</p>
+         * </li>
+         * <li><p>backup: Display only when the user has no video stream.</p>
+         * </li>
+         * <li><p>always: Always display.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>backup</p>
          */
@@ -874,6 +1048,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public String display;
 
         /**
+         * <p>Height.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -883,6 +1058,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Double height;
 
         /**
+         * <p>The z-axis layer.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -890,6 +1067,16 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Integer layer;
 
         /**
+         * <p>The cropping mode. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: Crop while maintaining aspect ratio.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Maintain aspect ratio with padding.</p>
+         * </li>
+         * <li><p><strong>3</strong>: Stretch to fill.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -897,6 +1084,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Integer paneImageCropMode;
 
         /**
+         * <p>The image URL. The image content cannot be updated during stream ingest.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -906,6 +1094,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public String url;
 
         /**
+         * <p>Width.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -915,6 +1104,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Double width;
 
         /**
+         * <p>The horizontal coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -924,6 +1114,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Double x;
 
         /**
+         * <p>The vertical coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1013,6 +1204,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
 
     public static class UpdateCloudRecordShrinkRequestPanesTextsBoxColor extends TeaModel {
         /**
+         * <p>B.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -1020,6 +1213,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Integer b;
 
         /**
+         * <p>G.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -1027,6 +1222,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Integer g;
 
         /**
+         * <p>R.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -1066,6 +1263,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
 
     public static class UpdateCloudRecordShrinkRequestPanesTextsFontColor extends TeaModel {
         /**
+         * <p>B.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -1073,6 +1272,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Integer b;
 
         /**
+         * <p>G.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -1080,6 +1281,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Integer g;
 
         /**
+         * <p>R.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -1119,6 +1322,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
 
     public static class UpdateCloudRecordShrinkRequestPanesTexts extends TeaModel {
         /**
+         * <p>Watermark transparency.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9</p>
          */
@@ -1126,6 +1331,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Double alpha;
 
         /**
+         * <p>Rectangle box transparency.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.6</p>
          */
@@ -1133,16 +1340,31 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Double boxAlpha;
 
         /**
+         * <p>Rectangle box border width.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
         @NameInMap("BoxBorderw")
         public Integer boxBorderw;
 
+        /**
+         * <p>Rectangle box color.</p>
+         */
         @NameInMap("BoxColor")
         public UpdateCloudRecordShrinkRequestPanesTextsBoxColor boxColor;
 
         /**
+         * <p>When to display the watermark.</p>
+         * <ul>
+         * <li><p>streamOnly: Display only when the user has a video stream (default).</p>
+         * </li>
+         * <li><p>backup: Display only when the user has no video stream.</p>
+         * </li>
+         * <li><p>always: Always display.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>backup</p>
          */
@@ -1150,26 +1372,60 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public String display;
 
         /**
+         * <p>Font.</p>
+         * <ul>
+         * <li><p><strong>0</strong>: Alibaba PuHuiTi Regular</p>
+         * </li>
+         * <li><p><strong>1</strong>: Alibaba PuHuiTi Light</p>
+         * </li>
+         * <li><p><strong>2</strong>: Alibaba PuHuiTi Medium</p>
+         * </li>
+         * <li><p><strong>3</strong>: Alibaba PuHuiTi Bold</p>
+         * </li>
+         * <li><p><strong>4</strong>: Alibaba PuHuiTi Heavy</p>
+         * </li>
+         * <li><p><strong>5</strong>: Ali Mama ShuHeiTi</p>
+         * </li>
+         * <li><p><strong>6</strong>: DingTalk JinBuTi</p>
+         * </li>
+         * <li><p><strong>7</strong>: Ali Mama DaoLiTi</p>
+         * </li>
+         * <li><p><strong>8</strong>: Ali Mama DongFang DaKai</p>
+         * </li>
+         * <li><p><strong>9</strong>: Ali Mama FangYuanTi</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("Font")
         public Integer font;
 
+        /**
+         * <p>Font color.</p>
+         */
         @NameInMap("FontColor")
         public UpdateCloudRecordShrinkRequestPanesTextsFontColor fontColor;
 
         /**
+         * <p>Font size.</p>
+         * 
          * <strong>example:</strong>
          * <p>36</p>
          */
         @NameInMap("FontSize")
         public Integer fontSize;
 
+        /**
+         * <p>Whether to draw a rectangle box.</p>
+         */
         @NameInMap("HasBox")
         public Boolean hasBox;
 
         /**
+         * <p>The z-axis layer.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1177,6 +1433,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Integer layer;
 
         /**
+         * <p>The watermark content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1186,6 +1443,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public String texture;
 
         /**
+         * <p>The horizontal coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1195,6 +1453,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Double x;
 
         /**
+         * <p>The vertical coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1316,6 +1575,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
 
     public static class UpdateCloudRecordShrinkRequestPanesWhiteboard extends TeaModel {
         /**
+         * <p>The whiteboard ID. Default value: default.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -1338,13 +1599,29 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
     }
 
     public static class UpdateCloudRecordShrinkRequestPanes extends TeaModel {
+        /**
+         * <p>Background images.</p>
+         */
         @NameInMap("Backgrounds")
         public java.util.List<UpdateCloudRecordShrinkRequestPanesBackgrounds> backgrounds;
 
+        /**
+         * <p>Local image watermarks for the pane.</p>
+         */
         @NameInMap("Images")
         public java.util.List<UpdateCloudRecordShrinkRequestPanesImages> images;
 
         /**
+         * <p>The cropping mode. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: Crop while maintaining aspect ratio.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Maintain aspect ratio with padding.</p>
+         * </li>
+         * <li><p><strong>3</strong>: Stretch to fill.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -1352,6 +1629,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Integer paneCropMode;
 
         /**
+         * <p>The pane ID, starting from 0.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1360,10 +1638,21 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         @NameInMap("PaneId")
         public Integer paneId;
 
+        /**
+         * <p>Reserves a pane for a user who goes offline. The default value is true. If true, the pane for a specified user or wildcard user remains as a placeholder. If false, the pane is filled with a video stream based on the Auto Fill order.</p>
+         */
         @NameInMap("ReservePaneForOfflineUser")
         public Boolean reservePaneForOfflineUser;
 
         /**
+         * <p>The media source for the cell. You can specify a userId to target a specific user. Wildcard characters are also supported:</p>
+         * <ul>
+         * <li><p><strong>$ActiveSpeaker</strong>: The current active speaker in the channel.</p>
+         * </li>
+         * <li><p><strong>$ScreenShare</strong>: A screen-sharing user. If multiple users share their screens, they are filled in sequence.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>22</p>
          */
@@ -1371,22 +1660,48 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public String source;
 
         /**
+         * <p>The media type of the cell. Valid values:</p>
+         * <ul>
+         * <li><p><strong>video</strong>: Camera or screen sharing stream (default).</p>
+         * </li>
+         * <li><p><strong>camera</strong>: Camera stream.</p>
+         * </li>
+         * <li><p><strong>screen</strong>: Screen sharing stream.</p>
+         * </li>
+         * <li><p><strong>whiteboard</strong>: Whiteboard.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>video</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
+        /**
+         * <p>Local text watermarks for the pane.</p>
+         */
         @NameInMap("Texts")
         public java.util.List<UpdateCloudRecordShrinkRequestPanesTexts> texts;
 
         /**
+         * <p>The fill order when SourceType is video.</p>
+         * <ul>
+         * <li><p>screenFirst: Prioritize screen sharing (default).</p>
+         * </li>
+         * <li><p>cameraFirst: Prioritize camera.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>cameraFirst</p>
          */
         @NameInMap("VideoOrder")
         public String videoOrder;
 
+        /**
+         * <p>Whiteboard configuration.</p>
+         */
         @NameInMap("Whiteboard")
         public UpdateCloudRecordShrinkRequestPanesWhiteboard whiteboard;
 
@@ -1479,6 +1794,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
 
     public static class UpdateCloudRecordShrinkRequestTextsBoxColor extends TeaModel {
         /**
+         * <p>B.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -1486,6 +1803,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Integer b;
 
         /**
+         * <p>G.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -1493,6 +1812,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Integer g;
 
         /**
+         * <p>R.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -1532,6 +1853,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
 
     public static class UpdateCloudRecordShrinkRequestTextsFontColor extends TeaModel {
         /**
+         * <p>B.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -1539,6 +1862,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Integer b;
 
         /**
+         * <p>G.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -1546,6 +1871,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Integer g;
 
         /**
+         * <p>R.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -1585,6 +1912,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
 
     public static class UpdateCloudRecordShrinkRequestTexts extends TeaModel {
         /**
+         * <p>Watermark transparency.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.1</p>
          */
@@ -1592,6 +1921,8 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Double alpha;
 
         /**
+         * <p>Rectangle box transparency.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.6</p>
          */
@@ -1599,36 +1930,75 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Double boxAlpha;
 
         /**
+         * <p>Rectangle box border width.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
         @NameInMap("BoxBorderw")
         public Integer boxBorderw;
 
+        /**
+         * <p>Rectangle box color.</p>
+         */
         @NameInMap("BoxColor")
         public UpdateCloudRecordShrinkRequestTextsBoxColor boxColor;
 
         /**
+         * <p>Font.</p>
+         * <ul>
+         * <li><p><strong>0</strong>: Alibaba PuHuiTi Regular</p>
+         * </li>
+         * <li><p><strong>1</strong>: Alibaba PuHuiTi Light</p>
+         * </li>
+         * <li><p><strong>2</strong>: Alibaba PuHuiTi Medium</p>
+         * </li>
+         * <li><p><strong>3</strong>: Alibaba PuHuiTi Bold</p>
+         * </li>
+         * <li><p><strong>4</strong>: Alibaba PuHuiTi Heavy</p>
+         * </li>
+         * <li><p><strong>5</strong>: Ali Mama ShuHeiTi</p>
+         * </li>
+         * <li><p><strong>6</strong>: DingTalk JinBuTi</p>
+         * </li>
+         * <li><p><strong>7</strong>: Ali Mama DaoLiTi</p>
+         * </li>
+         * <li><p><strong>8</strong>: Ali Mama DongFang DaKai</p>
+         * </li>
+         * <li><p><strong>9</strong>: Ali Mama FangYuanTi</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("Font")
         public Integer font;
 
+        /**
+         * <p>Font color.</p>
+         */
         @NameInMap("FontColor")
         public UpdateCloudRecordShrinkRequestTextsFontColor fontColor;
 
         /**
+         * <p>Font size.</p>
+         * 
          * <strong>example:</strong>
          * <p>36</p>
          */
         @NameInMap("FontSize")
         public Integer fontSize;
 
+        /**
+         * <p>Whether to draw a rectangle box.</p>
+         */
         @NameInMap("HasBox")
         public Boolean hasBox;
 
         /**
+         * <p>The z-axis layer.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1636,6 +2006,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Integer layer;
 
         /**
+         * <p>The watermark content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1645,6 +2016,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public String texture;
 
         /**
+         * <p>The horizontal coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1654,6 +2026,7 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public Double x;
 
         /**
+         * <p>The vertical coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

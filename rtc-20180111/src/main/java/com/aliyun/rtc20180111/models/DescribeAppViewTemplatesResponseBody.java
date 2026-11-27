@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAppViewTemplatesResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>B0A2FCBC-43A4-428F-BC1D-3F4F85837F76</p>
@@ -13,10 +13,15 @@ public class DescribeAppViewTemplatesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Template list</p>
+     */
     @NameInMap("Templates")
     public java.util.List<DescribeAppViewTemplatesResponseBodyTemplates> templates;
 
     /**
+     * <p>Total number of records</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -24,6 +29,8 @@ public class DescribeAppViewTemplatesResponseBody extends TeaModel {
     public Long totalNum;
 
     /**
+     * <p>Total number of pages</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -69,16 +76,23 @@ public class DescribeAppViewTemplatesResponseBody extends TeaModel {
 
     public static class DescribeAppViewTemplatesResponseBodyTemplates extends TeaModel {
         /**
+         * <p>Creation time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-09-04T06:22:15Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>List of layout IDs</p>
+         */
         @NameInMap("LayoutIds")
         public java.util.List<String> layoutIds;
 
         /**
+         * <p>Encoding option</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -86,13 +100,17 @@ public class DescribeAppViewTemplatesResponseBody extends TeaModel {
         public Integer mediaEncode;
 
         /**
+         * <p>Template name</p>
+         * 
          * <strong>example:</strong>
-         * <p>模版名称</p>
+         * <p>模板名称</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>Template ID</p>
+         * 
          * <strong>example:</strong>
          * <p>Bj6D****</p>
          */

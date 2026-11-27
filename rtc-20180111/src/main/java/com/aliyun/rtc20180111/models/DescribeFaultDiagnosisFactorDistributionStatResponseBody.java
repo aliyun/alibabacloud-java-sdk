@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeFaultDiagnosisFactorDistributionStatResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Statistics on the distribution of impact factors.</p>
+     */
     @NameInMap("StatList")
     public java.util.List<DescribeFaultDiagnosisFactorDistributionStatResponseBodyStatList> statList;
 
@@ -37,6 +42,8 @@ public class DescribeFaultDiagnosisFactorDistributionStatResponseBody extends Te
 
     public static class DescribeFaultDiagnosisFactorDistributionStatResponseBodyStatList extends TeaModel {
         /**
+         * <p>Impact factor ID. For details, see the list of impact factor ID values below.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -44,6 +51,8 @@ public class DescribeFaultDiagnosisFactorDistributionStatResponseBody extends Te
         public String factorId;
 
         /**
+         * <p>Number of impacted users.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -51,6 +60,8 @@ public class DescribeFaultDiagnosisFactorDistributionStatResponseBody extends Te
         public Integer userCount;
 
         /**
+         * <p>Proportion of impacted users.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9239</p>
          */

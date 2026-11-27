@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeRtcPeakChannelCntDataRequest extends TeaModel {
     /**
+     * <p>The application ID. Only a single ID can be specified.</p>
+     * <p>By default, all application IDs are queried.</p>
+     * 
      * <strong>example:</strong>
      * <p>yourAppId</p>
      */
@@ -12,6 +15,9 @@ public class DescribeRtcPeakChannelCntDataRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The end time for the data query. Specify the time in the UTC format: yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>The end time must be later than the start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2018-01-29T00:00:00Z</p>
      */
@@ -19,6 +25,9 @@ public class DescribeRtcPeakChannelCntDataRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The time granularity for the data query, in seconds.</p>
+     * <p>Valid values: <strong>3600</strong> (1 hour) or <strong>86400</strong> (1 day). Default value: <strong>3600</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>3600</p>
      */
@@ -29,6 +38,8 @@ public class DescribeRtcPeakChannelCntDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The service area. CN: China (default value).</p>
+     * 
      * <strong>example:</strong>
      * <p>CN</p>
      */
@@ -36,6 +47,8 @@ public class DescribeRtcPeakChannelCntDataRequest extends TeaModel {
     public String serviceArea;
 
     /**
+     * <p>The start time for the data query. Specify the time in the UTC format: yyyy-MM-ddTHH:mm:ssZ.</p>
+     * 
      * <strong>example:</strong>
      * <p>2018-01-29T00:00:00Z</p>
      */

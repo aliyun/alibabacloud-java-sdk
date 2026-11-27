@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyMPULayoutRequest extends TeaModel {
     /**
+     * <p>The ID of the application. Only a single ID is supported. You can create and query application IDs in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ModifyMPULayoutRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The maximum number of audio mixing tracks. Valid values: <strong>0</strong> to <strong>6</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -21,6 +24,7 @@ public class ModifyMPULayoutRequest extends TeaModel {
     public Integer audioMixCount;
 
     /**
+     * <p>The ID of the layout. For more information about how to obtain the layout ID, see <a href="https://help.aliyun.com/document_detail/162192.html">CreateMPULayout</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class ModifyMPULayoutRequest extends TeaModel {
     public Long layoutId;
 
     /**
+     * <p>The name of the layout.</p>
+     * 
      * <strong>example:</strong>
      * <p>LayoutName</p>
      */
@@ -39,6 +45,9 @@ public class ModifyMPULayoutRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The list of panes in the layout.</p>
+     */
     @NameInMap("Panes")
     public java.util.List<ModifyMPULayoutRequestPanes> panes;
 
@@ -97,6 +106,8 @@ public class ModifyMPULayoutRequest extends TeaModel {
 
     public static class ModifyMPULayoutRequestPanes extends TeaModel {
         /**
+         * <p>The height of the pane, represented as a normalized percentage. Valid values: <strong>0.0 &lt; Height ≤ 1.0</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.2456</p>
          */
@@ -104,6 +115,12 @@ public class ModifyMPULayoutRequest extends TeaModel {
         public Float height;
 
         /**
+         * <p>Specifies the major pane. Each layout can have only one major pane. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Secondary pane.</li>
+         * <li><strong>1</strong>: Major pane.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -111,6 +128,8 @@ public class ModifyMPULayoutRequest extends TeaModel {
         public Integer majorPane;
 
         /**
+         * <p>The ID of the pane. Panes are sorted from top left to bottom right, starting from 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -118,6 +137,8 @@ public class ModifyMPULayoutRequest extends TeaModel {
         public Integer paneId;
 
         /**
+         * <p>The width of the pane, represented as a normalized percentage. Valid values: <strong>0.0 &lt; Width ≤ 1.0</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.2456</p>
          */
@@ -125,6 +146,8 @@ public class ModifyMPULayoutRequest extends TeaModel {
         public Float width;
 
         /**
+         * <p>The X-coordinate, represented as a normalized percentage. Valid values: <strong>0.0 ≤ X ≤ 1.0</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.7576</p>
          */
@@ -132,6 +155,8 @@ public class ModifyMPULayoutRequest extends TeaModel {
         public Float x;
 
         /**
+         * <p>The Y-coordinate, represented as a normalized percentage. Valid values: <strong>0.0 ≤ Y ≤ 1.0</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.7576</p>
          */
@@ -139,6 +164,8 @@ public class ModifyMPULayoutRequest extends TeaModel {
         public Float y;
 
         /**
+         * <p>The Z-order. A value of 0 indicates the bottom layer, 1 indicates the layer above 0, and so on.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

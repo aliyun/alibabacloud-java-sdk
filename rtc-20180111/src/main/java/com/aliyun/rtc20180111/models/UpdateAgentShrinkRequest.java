@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAgentShrinkRequest extends TeaModel {
     /**
+     * <p>The application ID. Specify only one ID. You can create and query applications in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateAgentShrinkRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The existing channel ID. Specify only one ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class UpdateAgentShrinkRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>The task ID. Specify only one ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +34,9 @@ public class UpdateAgentShrinkRequest extends TeaModel {
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>Configuration for AI voice conversation.</p>
+     */
     @NameInMap("VoiceChatConfig")
     public String voiceChatConfigShrink;
 

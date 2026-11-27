@@ -15,6 +15,7 @@ public class DescribeFaultDiagnosisFactorDistributionStatRequest extends TeaMode
     public String appId;
 
     /**
+     * <p>End Time of the query, expressed as a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +25,7 @@ public class DescribeFaultDiagnosisFactorDistributionStatRequest extends TeaMode
     public Long endTs;
 
     /**
+     * <p>Start Time of the query, expressed as a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

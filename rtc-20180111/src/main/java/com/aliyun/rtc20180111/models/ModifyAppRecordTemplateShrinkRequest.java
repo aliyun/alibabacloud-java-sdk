@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAppRecordTemplateShrinkRequest extends TeaModel {
     /**
+     * <p>Application ID. Create and query through the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ModifyAppRecordTemplateShrinkRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>Idempotency parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>53200b81-b761-4c10-842a-a0726d97xxxx</p>
      */
@@ -21,6 +24,7 @@ public class ModifyAppRecordTemplateShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Recording template.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RecordTemplate")

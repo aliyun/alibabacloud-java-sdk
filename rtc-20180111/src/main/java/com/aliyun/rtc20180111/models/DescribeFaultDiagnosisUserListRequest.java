@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFaultDiagnosisUserListRequest extends TeaModel {
     /**
-     * <p>APP ID。</p>
+     * <p>The app ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,8 @@ public class DescribeFaultDiagnosisUserListRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The ID of the channel to search.</p>
+     * 
      * <strong>example:</strong>
      * <p>311</p>
      */
@@ -22,6 +24,7 @@ public class DescribeFaultDiagnosisUserListRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>The end time of the query. The time is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +34,17 @@ public class DescribeFaultDiagnosisUserListRequest extends TeaModel {
     public Long endTs;
 
     /**
+     * <p>The fault types to filter. Separate multiple fault types with commas (,). Valid values:</p>
+     * <ul>
+     * <li><strong>JOIN_SLOW</strong>: Slow channel joining.</li>
+     * <li><strong>AUDIO_STUCK</strong>: Audio stuttering. </li>
+     * <li><strong>VIDEO_STUCK</strong>: Video stuttering.</li>
+     * <li><strong>VIDEO_VAGUE</strong>: Blurry video.</li>
+     * <li><strong>HIGH_DELAY</strong>: High call latency.</li>
+     * <li><strong>FIRST_FRAME_SLOW</strong>: Slow first frame rendering.</li>
+     * </ul>
+     * <p>For more information about fault types, see <a href="https://help.aliyun.com/document_detail/2639494.html">Fault types</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>JOIN_SLOW,AUDIO_STUCK</p>
      */
@@ -38,6 +52,7 @@ public class DescribeFaultDiagnosisUserListRequest extends TeaModel {
     public String faultTypes;
 
     /**
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +62,7 @@ public class DescribeFaultDiagnosisUserListRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,6 +72,7 @@ public class DescribeFaultDiagnosisUserListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The start time of the query. The time is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,6 +82,8 @@ public class DescribeFaultDiagnosisUserListRequest extends TeaModel {
     public Long startTs;
 
     /**
+     * <p>The ID of the user to search.</p>
+     * 
      * <strong>example:</strong>
      * <p>c906531af5f9****</p>
      */

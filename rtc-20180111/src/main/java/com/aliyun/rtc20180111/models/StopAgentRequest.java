@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopAgentRequest extends TeaModel {
     /**
+     * <p>The application ID. Only a single ID is supported. You can create and query application IDs in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class StopAgentRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The joined channel. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class StopAgentRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>The task ID. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

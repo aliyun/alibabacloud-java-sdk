@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteEventSubscribeRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query applications in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class DeleteEventSubscribeRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The subscription ID. For more information, see <a href="https://help.aliyun.com/document_detail/274447.html">CreateEventSubscribe</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

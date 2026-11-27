@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartCategoryCallbackRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class StartCategoryCallbackRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The callback.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Callback")
@@ -42,6 +44,7 @@ public class StartCategoryCallbackRequest extends TeaModel {
 
     public static class StartCategoryCallbackRequestCallback extends TeaModel {
         /**
+         * <p>The callback code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

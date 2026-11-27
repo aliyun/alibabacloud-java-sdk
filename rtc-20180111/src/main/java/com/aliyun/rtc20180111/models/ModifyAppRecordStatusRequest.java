@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAppRecordStatusRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ModifyAppRecordStatusRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The idempotency parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>53200b81-b761-4c10-842a-a0726xxxx</p>
      */

@@ -4,6 +4,9 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeCallbacksResponseBody extends TeaModel {
+    /**
+     * <p>A list of subscribed events for the application.</p>
+     */
     @NameInMap("Callbacks")
     public java.util.List<DescribeCallbacksResponseBodyCallbacks> callbacks;
 
@@ -39,6 +42,8 @@ public class DescribeCallbacksResponseBody extends TeaModel {
 
     public static class DescribeCallbacksResponseBodyCallbacks extends TeaModel {
         /**
+         * <p>The callback code.</p>
+         * 
          * <strong>example:</strong>
          * <p>RecordEvent</p>
          */
@@ -46,6 +51,8 @@ public class DescribeCallbacksResponseBody extends TeaModel {
         public String category;
 
         /**
+         * <p>The callback validation status. 0 indicates validating. 1 indicates validation successful. 2 indicates validation failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -53,6 +60,8 @@ public class DescribeCallbacksResponseBody extends TeaModel {
         public String checkStatus;
 
         /**
+         * <p>The callback validation code.</p>
+         * 
          * <strong>example:</strong>
          * <p>RESPONSE_INVALID</p>
          */
@@ -60,6 +69,8 @@ public class DescribeCallbacksResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The webhook address.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
          */
@@ -67,6 +78,8 @@ public class DescribeCallbacksResponseBody extends TeaModel {
         public String conf;
 
         /**
+         * <p>The callback validation message.</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -74,12 +87,26 @@ public class DescribeCallbacksResponseBody extends TeaModel {
         public String msg;
 
         /**
+         * <p>The callback status. 0 indicates enabled. 1 indicates disabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The sub-events. For more information, see Callback overview.
+         * Recording events:</p>
+         * <ul>
+         * <li><p><strong>2010</strong>: The service status of the recording changes.</p>
+         * </li>
+         * <li><p><strong>2011</strong>: The status of the recording audio stream changes.</p>
+         * </li>
+         * <li><p><strong>2012</strong>: The status of the recording video stream changes.</p>
+         * </li>
+         * </ul>
+         */
         @NameInMap("SubEvent")
         public java.util.List<Integer> subEvent;
 

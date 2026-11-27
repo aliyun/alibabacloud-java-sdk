@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyAppLayoutResponseBody extends TeaModel {
     /**
+     * <p>Layout ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>167466539798442****</p>
      */

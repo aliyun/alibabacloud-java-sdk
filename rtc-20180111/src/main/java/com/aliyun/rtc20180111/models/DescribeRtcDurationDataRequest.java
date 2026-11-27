@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeRtcDurationDataRequest extends TeaModel {
     /**
+     * <p>The ID of the application. You can specify only one ID.</p>
+     * <p>If you leave this parameter empty, data for all your applications is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>yourAppId</p>
      */
@@ -12,6 +15,9 @@ public class DescribeRtcDurationDataRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The end of the time range to query. Specify the time in UTC format: yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>The end time must be later than the start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-02-04T07:00:00Z</p>
      */
@@ -19,6 +25,9 @@ public class DescribeRtcDurationDataRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The time granularity of the query, in seconds.</p>
+     * <p>Valid values are <strong>3600</strong> (1 hour) and <strong>86400</strong> (1 day). The default value is <strong>3600</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>3600</p>
      */
@@ -29,6 +38,8 @@ public class DescribeRtcDurationDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The area where the service is deployed. The default value is CN, which indicates China.</p>
+     * 
      * <strong>example:</strong>
      * <p>CN</p>
      */
@@ -36,6 +47,8 @@ public class DescribeRtcDurationDataRequest extends TeaModel {
     public String serviceArea;
 
     /**
+     * <p>The start of the time range to query. Specify the time in UTC format: yyyy-MM-ddTHH:mm:ssZ.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-02-04T05:00:00Z</p>
      */

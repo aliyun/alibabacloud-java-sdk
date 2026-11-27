@@ -8,6 +8,8 @@ public class DescribeSystemLayoutListResponseBody extends TeaModel {
     public DescribeSystemLayoutListResponseBodyLayouts layouts;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
      */
@@ -15,6 +17,8 @@ public class DescribeSystemLayoutListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -22,6 +26,8 @@ public class DescribeSystemLayoutListResponseBody extends TeaModel {
     public Long totalNum;
 
     /**
+     * <p>Total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

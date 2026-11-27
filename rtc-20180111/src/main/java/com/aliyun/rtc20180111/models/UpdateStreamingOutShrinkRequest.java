@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateStreamingOutShrinkRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,13 +14,20 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The background image.</p>
+     */
     @NameInMap("Backgrounds")
     public java.util.List<UpdateStreamingOutShrinkRequestBackgrounds> backgrounds;
 
+    /**
+     * <p>The global background color.</p>
+     */
     @NameInMap("BgColor")
     public UpdateStreamingOutShrinkRequestBgColor bgColor;
 
     /**
+     * <p>The ID of an existing channel. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,32 +36,67 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
     @NameInMap("ChannelId")
     public String channelId;
 
+    /**
+     * <p>The global clock watermark.</p>
+     */
     @NameInMap("ClockWidgets")
     public java.util.List<UpdateStreamingOutShrinkRequestClockWidgets> clockWidgets;
 
     /**
+     * <p>The crop mode. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: Crops the image while maintaining the aspect ratio.</li>
+     * <li><strong>2</strong>: Adds padding to the image while maintaining the aspect ratio.</li>
+     * <li><strong>3</strong>: Stretches the image to fill the area.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("CropMode")
     public Integer cropMode;
 
+    /**
+     * <p>The global image watermark.</p>
+     */
     @NameInMap("Images")
     public java.util.List<UpdateStreamingOutShrinkRequestImages> images;
 
+    /**
+     * <p>The specified user list for layout generation, which includes two types: blacklist and whitelist.</p>
+     * <p>Whitelist: specifies the users in the room whose video streams are subscribed to.</p>
+     * <ul>
+     * <li>After the setting is applied, automatic padding is performed in sequence based on this list.</li>
+     * <li>When switching between multiple layouts in a template, only users in the whitelist are considered.</li>
+     * </ul>
+     * <p>Blacklist: specifies the users in the room whose video streams are not subscribed to.</p>
+     * <ul>
+     * <li>When switching between multiple layouts in a template, only users not in the blacklist are considered.</li>
+     * </ul>
+     */
     @NameInMap("LayoutSpecifiedUsers")
     public String layoutSpecifiedUsersShrink;
 
+    /**
+     * <p>The pane settings. You can configure up to 16 panes.</p>
+     */
     @NameInMap("Panes")
     public java.util.List<UpdateStreamingOutShrinkRequestPanes> panes;
 
+    /**
+     * <p>The global region background color.</p>
+     */
     @NameInMap("RegionColor")
     public UpdateStreamingOutShrinkRequestRegionColor regionColor;
 
+    /**
+     * <p>The list of specified users for audio mixing.</p>
+     */
     @NameInMap("SpecMixedUserList")
     public java.util.List<String> specMixedUserList;
 
     /**
+     * <p>The ID of the bypass live streaming task. Only a single ID is supported. The ID can contain uppercase and lowercase letters, digits, underscores (_), and hyphens (-), and can be up to 55 bytes in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,6 +106,10 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The template ID.</p>
+     * <blockquote>
+     * <p>Notice: When you update the template ID, you can only update the layout. The resolution cannot be updated.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,6 +118,9 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>The global text watermark.</p>
+     */
     @NameInMap("Texts")
     public java.util.List<UpdateStreamingOutShrinkRequestTexts> texts;
 
@@ -193,6 +243,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
 
     public static class UpdateStreamingOutShrinkRequestBackgrounds extends TeaModel {
         /**
+         * <p>The transparency.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9</p>
          */
@@ -200,6 +252,13 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Double alpha;
 
         /**
+         * <p>The crop mode. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Crops the image while maintaining the aspect ratio.</li>
+         * <li><strong>2</strong>: Adds padding to the image while maintaining the aspect ratio.</li>
+         * <li><strong>3</strong>: Stretches the image to fill the area.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -207,6 +266,7 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Integer backgroundCropMode;
 
         /**
+         * <p>The height.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,6 +276,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Double height;
 
         /**
+         * <p>The Z-axis layer.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -223,6 +285,7 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Integer layer;
 
         /**
+         * <p>The image URL.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -232,6 +295,7 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public String url;
 
         /**
+         * <p>The width.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,6 +305,7 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Double width;
 
         /**
+         * <p>The X-coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -250,6 +315,7 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Double x;
 
         /**
+         * <p>The Y-coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -331,6 +397,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
 
     public static class UpdateStreamingOutShrinkRequestBgColor extends TeaModel {
         /**
+         * <p>The blue component.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -338,6 +406,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Integer b;
 
         /**
+         * <p>The green component.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -345,6 +415,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Integer g;
 
         /**
+         * <p>The red component.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -384,6 +456,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
 
     public static class UpdateStreamingOutShrinkRequestClockWidgetsBoxColor extends TeaModel {
         /**
+         * <p>The blue component.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -391,6 +465,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Integer b;
 
         /**
+         * <p>The green component.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -398,6 +474,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Integer g;
 
         /**
+         * <p>The red component.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -437,6 +515,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
 
     public static class UpdateStreamingOutShrinkRequestClockWidgetsFontColor extends TeaModel {
         /**
+         * <p>The blue component.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -444,6 +524,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Integer b;
 
         /**
+         * <p>The green component.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -451,6 +533,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Integer g;
 
         /**
+         * <p>The red component.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -490,6 +574,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
 
     public static class UpdateStreamingOutShrinkRequestClockWidgets extends TeaModel {
         /**
+         * <p>The transparency.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9</p>
          */
@@ -497,6 +583,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Double alpha;
 
         /**
+         * <p>The transparency of the rectangle.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.6</p>
          */
@@ -504,36 +592,65 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Double boxAlpha;
 
         /**
+         * <p>The border width of the rectangle.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
         @NameInMap("BoxBorderw")
         public Integer boxBorderw;
 
+        /**
+         * <p>The color of the rectangle.</p>
+         */
         @NameInMap("BoxColor")
         public UpdateStreamingOutShrinkRequestClockWidgetsBoxColor boxColor;
 
         /**
+         * <p>The font. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Alibaba PuHuiTi Regular</li>
+         * <li><strong>1</strong>: Alibaba PuHuiTi Light</li>
+         * <li><strong>2</strong>: Alibaba PuHuiTi Medium</li>
+         * <li><strong>3</strong>: Alibaba PuHuiTi Bold</li>
+         * <li><strong>4</strong>: Alibaba PuHuiTi Heavy</li>
+         * <li><strong>5</strong>: Alimama ShuHeiTi</li>
+         * <li><strong>6</strong>: DingTalk JinBuTi</li>
+         * <li><strong>7</strong>: Alimama DaoLiTi</li>
+         * <li><strong>8</strong>: Alimama DongFangDaKai</li>
+         * <li><strong>9</strong>: Alimama FangYuanTi</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("Font")
         public Integer font;
 
+        /**
+         * <p>The font color.</p>
+         */
         @NameInMap("FontColor")
         public UpdateStreamingOutShrinkRequestClockWidgetsFontColor fontColor;
 
         /**
+         * <p>The clock font size.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
         @NameInMap("FontSize")
         public Integer fontSize;
 
+        /**
+         * <p>Specifies whether to display the rectangle.</p>
+         */
         @NameInMap("HasBox")
         public Boolean hasBox;
 
         /**
+         * <p>The Z-axis layer.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -541,6 +658,7 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Integer layer;
 
         /**
+         * <p>The X-coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -550,6 +668,7 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Double x;
 
         /**
+         * <p>The Y-coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -559,6 +678,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Double y;
 
         /**
+         * <p>The time zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -670,6 +791,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
 
     public static class UpdateStreamingOutShrinkRequestImages extends TeaModel {
         /**
+         * <p>The transparency.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9</p>
          */
@@ -677,6 +800,7 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Double alpha;
 
         /**
+         * <p>The height.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -686,6 +810,13 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Double height;
 
         /**
+         * <p>The crop mode. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Crops the image while maintaining the aspect ratio.</li>
+         * <li><strong>2</strong>: Adds padding to the image while maintaining the aspect ratio.</li>
+         * <li><strong>3</strong>: Stretches the image to fill the area.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -693,6 +824,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Integer imageCropMode;
 
         /**
+         * <p>The Z-axis layer.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -700,6 +833,7 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Integer layer;
 
         /**
+         * <p>The image URL. The image content cannot be updated during stream ingest.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -709,6 +843,7 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public String url;
 
         /**
+         * <p>The width.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -718,6 +853,7 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Double width;
 
         /**
+         * <p>The X-coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -727,6 +863,7 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Double x;
 
         /**
+         * <p>The Y-coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -808,6 +945,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
 
     public static class UpdateStreamingOutShrinkRequestPanesBackgrounds extends TeaModel {
         /**
+         * <p>The transparency.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9</p>
          */
@@ -815,6 +954,13 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Double alpha;
 
         /**
+         * <p>The condition for displaying the watermark. Valid values:</p>
+         * <ul>
+         * <li>streamOnly: Displayed when the current user has a video stream. This is the default value.</li>
+         * <li>backup: Displayed when the current user does not have a video stream.</li>
+         * <li>always: Always displayed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>backup</p>
          */
@@ -822,29 +968,40 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public String display;
 
         /**
+         * <p>The height.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>0.2</p>
+         * <p>0.79</p>
          */
         @NameInMap("Height")
         public Double height;
 
         /**
+         * <p>The Z-axis layer.</p>
+         * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>1</p>
          */
         @NameInMap("Layer")
         public Integer layer;
 
         /**
+         * <p>The crop mode. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Crops the image while maintaining the aspect ratio.</li>
+         * <li><strong>2</strong>: Adds padding to the image while maintaining the aspect ratio.</li>
+         * <li><strong>3</strong>: Stretches the image to fill the area.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>1</p>
          */
         @NameInMap("PaneBackgroundCropMode")
         public Integer paneBackgroundCropMode;
 
         /**
+         * <p>The image URL.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -854,15 +1011,17 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public String url;
 
         /**
+         * <p>The width.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>0.2</p>
+         * <p>0.3</p>
          */
         @NameInMap("Width")
         public Double width;
 
         /**
+         * <p>The X-coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -872,10 +1031,11 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Double x;
 
         /**
+         * <p>The Y-coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>0.2</p>
+         * <p>0.95</p>
          */
         @NameInMap("Y")
         public Double y;
@@ -961,6 +1121,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
 
     public static class UpdateStreamingOutShrinkRequestPanesImages extends TeaModel {
         /**
+         * <p>The transparency.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9</p>
          */
@@ -968,6 +1130,13 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Double alpha;
 
         /**
+         * <p>The condition for displaying the watermark. Valid values:</p>
+         * <ul>
+         * <li>streamOnly: Displayed when the current user has a video stream. This is the default value.</li>
+         * <li>backup: Displayed when the current user does not have a video stream.</li>
+         * <li>always: Always displayed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>backup</p>
          */
@@ -975,6 +1144,7 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public String display;
 
         /**
+         * <p>The height.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -984,6 +1154,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Double height;
 
         /**
+         * <p>The Z-axis layer.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -991,6 +1163,13 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Integer layer;
 
         /**
+         * <p>The crop mode. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Crops the image while maintaining the aspect ratio.</li>
+         * <li><strong>2</strong>: Adds padding to the image while maintaining the aspect ratio.</li>
+         * <li><strong>3</strong>: Stretches the image to fill the area.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -998,6 +1177,7 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Integer paneImageCropMode;
 
         /**
+         * <p>The image URL. The image content cannot be updated during stream ingest.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1007,6 +1187,7 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public String url;
 
         /**
+         * <p>The width.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1016,6 +1197,7 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Double width;
 
         /**
+         * <p>The X-coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1025,6 +1207,7 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Double x;
 
         /**
+         * <p>The Y-coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1114,6 +1297,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
 
     public static class UpdateStreamingOutShrinkRequestPanesTextsBoxColor extends TeaModel {
         /**
+         * <p>The blue component.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -1121,6 +1306,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Integer b;
 
         /**
+         * <p>The green component.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -1128,6 +1315,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Integer g;
 
         /**
+         * <p>The red component.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -1167,6 +1356,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
 
     public static class UpdateStreamingOutShrinkRequestPanesTextsFontColor extends TeaModel {
         /**
+         * <p>The blue component.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -1174,6 +1365,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Integer b;
 
         /**
+         * <p>The green component.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -1181,6 +1374,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Integer g;
 
         /**
+         * <p>The red component.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -1220,6 +1415,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
 
     public static class UpdateStreamingOutShrinkRequestPanesTexts extends TeaModel {
         /**
+         * <p>The transparency of the watermark.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9</p>
          */
@@ -1227,6 +1424,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Double alpha;
 
         /**
+         * <p>The transparency of the rectangle.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.6</p>
          */
@@ -1234,43 +1433,79 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Double boxAlpha;
 
         /**
+         * <p>The border width of the rectangle.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
         @NameInMap("BoxBorderw")
         public Integer boxBorderw;
 
+        /**
+         * <p>The color of the rectangle.</p>
+         */
         @NameInMap("BoxColor")
         public UpdateStreamingOutShrinkRequestPanesTextsBoxColor boxColor;
 
         /**
+         * <p>The condition for displaying the watermark. Valid values:</p>
+         * <ul>
+         * <li>streamOnly: Displayed when the current user has a video stream. This is the default value.</li>
+         * <li>backup: Displayed when the current user does not have a video stream.</li>
+         * <li>always: Always displayed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>backup</p>
+         * <p>always</p>
          */
         @NameInMap("Display")
         public String display;
 
         /**
+         * <p>The font. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Alibaba PuHuiTi Regular</li>
+         * <li><strong>1</strong>: Alibaba PuHuiTi Light</li>
+         * <li><strong>2</strong>: Alibaba PuHuiTi Medium</li>
+         * <li><strong>3</strong>: Alibaba PuHuiTi Bold</li>
+         * <li><strong>4</strong>: Alibaba PuHuiTi Heavy</li>
+         * <li><strong>5</strong>: Alimama ShuHeiTi</li>
+         * <li><strong>6</strong>: DingTalk JinBuTi</li>
+         * <li><strong>7</strong>: Alimama DaoLiTi</li>
+         * <li><strong>8</strong>: Alimama DongFangDaKai</li>
+         * <li><strong>9</strong>: Alimama FangYuanTi</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("Font")
         public Integer font;
 
+        /**
+         * <p>The font color.</p>
+         */
         @NameInMap("FontColor")
         public UpdateStreamingOutShrinkRequestPanesTextsFontColor fontColor;
 
         /**
+         * <p>The font size.</p>
+         * 
          * <strong>example:</strong>
          * <p>36</p>
          */
         @NameInMap("FontSize")
         public Integer fontSize;
 
+        /**
+         * <p>Specifies whether to display the rectangle.</p>
+         */
         @NameInMap("HasBox")
         public Boolean hasBox;
 
         /**
+         * <p>The Z-axis layer.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1278,15 +1513,17 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Integer layer;
 
         /**
+         * <p>The watermark content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>文字水印</p>
+         * <p>Text watermark</p>
          */
         @NameInMap("Texture")
         public String texture;
 
         /**
+         * <p>The X-coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1296,6 +1533,7 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Double x;
 
         /**
+         * <p>The Y-coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1417,6 +1655,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
 
     public static class UpdateStreamingOutShrinkRequestPanesWhiteboard extends TeaModel {
         /**
+         * <p>The whiteboard ID. Default value: default.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -1439,13 +1679,26 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
     }
 
     public static class UpdateStreamingOutShrinkRequestPanes extends TeaModel {
+        /**
+         * <p>The background image of the pane.</p>
+         */
         @NameInMap("Backgrounds")
         public java.util.List<UpdateStreamingOutShrinkRequestPanesBackgrounds> backgrounds;
 
+        /**
+         * <p>The local image watermarks for the pane.</p>
+         */
         @NameInMap("Images")
         public java.util.List<UpdateStreamingOutShrinkRequestPanesImages> images;
 
         /**
+         * <p>The crop mode. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Crops the image while maintaining the aspect ratio.</li>
+         * <li><strong>2</strong>: Adds padding to the image while maintaining the aspect ratio.</li>
+         * <li><strong>3</strong>: Stretches the image to fill the area.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -1453,16 +1706,27 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Integer paneCropMode;
 
         /**
+         * <p>The pane ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("PaneId")
         public Integer paneId;
 
+        /**
+         * <p>Specifies whether to reserve the pane as a placeholder for offline users. Default value: true. A value of true indicates that the pane is forcibly reserved as a placeholder when the specific user or wildcard user specified for the grid is offline. A value of false indicates that video streams are displayed in the automatic fill order when the specific user or wildcard user specified for the grid is offline.</p>
+         */
         @NameInMap("ReservePaneForOfflineUser")
         public Boolean reservePaneForOfflineUser;
 
         /**
+         * <p>The media source of the pane. You can specify a userId. To specify a specific user type, you can use wildcard configurations. The following types are supported:</p>
+         * <ul>
+         * <li><strong>$ActiveSpeaker</strong>: The current speaker in the channel.</li>
+         * <li><strong>$ScreenShare</strong>: The user who is sharing their screen. If multiple users are sharing their screens in the channel, the panes are filled in chronological order.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>22</p>
          */
@@ -1470,22 +1734,42 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public String source;
 
         /**
+         * <p>The media type of the pane. Valid values:</p>
+         * <ul>
+         * <li><strong>video</strong>: The user camera or screen sharing stream. This is the default value.</li>
+         * <li><strong>camera</strong>: The camera stream.</li>
+         * <li><strong>screen</strong>: The screen sharing stream.</li>
+         * <li><strong>whiteboard</strong>: The whiteboard.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>video</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
+        /**
+         * <p>The local text watermarks for the pane.</p>
+         */
         @NameInMap("Texts")
         public java.util.List<UpdateStreamingOutShrinkRequestPanesTexts> texts;
 
         /**
+         * <p>The fill order when SourceType is set to video. Valid values:</p>
+         * <ul>
+         * <li>screenFirst: Screen sharing takes precedence. This is the default value.</li>
+         * <li>cameraFirst: The camera takes precedence.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>cameraFirst</p>
          */
         @NameInMap("VideoOrder")
         public String videoOrder;
 
+        /**
+         * <p>The whiteboard configurations.</p>
+         */
         @NameInMap("Whiteboard")
         public UpdateStreamingOutShrinkRequestPanesWhiteboard whiteboard;
 
@@ -1578,6 +1862,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
 
     public static class UpdateStreamingOutShrinkRequestRegionColor extends TeaModel {
         /**
+         * <p>The blue component.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -1585,6 +1871,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Integer b;
 
         /**
+         * <p>The green component.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -1592,6 +1880,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Integer g;
 
         /**
+         * <p>The red component.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -1631,6 +1921,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
 
     public static class UpdateStreamingOutShrinkRequestTextsBoxColor extends TeaModel {
         /**
+         * <p>The blue component.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -1638,6 +1930,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Integer b;
 
         /**
+         * <p>The green component.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -1645,6 +1939,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Integer g;
 
         /**
+         * <p>The red component.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -1684,6 +1980,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
 
     public static class UpdateStreamingOutShrinkRequestTextsFontColor extends TeaModel {
         /**
+         * <p>The blue component.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -1691,6 +1989,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Integer b;
 
         /**
+         * <p>The green component.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -1698,6 +1998,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Integer g;
 
         /**
+         * <p>The red component.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -1737,6 +2039,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
 
     public static class UpdateStreamingOutShrinkRequestTexts extends TeaModel {
         /**
+         * <p>The transparency of the watermark.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.1</p>
          */
@@ -1744,6 +2048,8 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Double alpha;
 
         /**
+         * <p>The transparency of the rectangle.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.6</p>
          */
@@ -1751,36 +2057,65 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Double boxAlpha;
 
         /**
+         * <p>The border width of the rectangle.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
         @NameInMap("BoxBorderw")
         public Integer boxBorderw;
 
+        /**
+         * <p>The color of the rectangle.</p>
+         */
         @NameInMap("BoxColor")
         public UpdateStreamingOutShrinkRequestTextsBoxColor boxColor;
 
         /**
+         * <p>The font. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Alibaba PuHuiTi Regular</li>
+         * <li><strong>1</strong>: Alibaba PuHuiTi Light</li>
+         * <li><strong>2</strong>: Alibaba PuHuiTi Medium</li>
+         * <li><strong>3</strong>: Alibaba PuHuiTi Bold</li>
+         * <li><strong>4</strong>: Alibaba PuHuiTi Heavy</li>
+         * <li><strong>5</strong>: Alimama ShuHeiTi</li>
+         * <li><strong>6</strong>: DingTalk JinBuTi</li>
+         * <li><strong>7</strong>: Alimama DaoLiTi</li>
+         * <li><strong>8</strong>: Alimama DongFangDaKai</li>
+         * <li><strong>9</strong>: Alimama FangYuanTi</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("Font")
         public Integer font;
 
+        /**
+         * <p>The font color.</p>
+         */
         @NameInMap("FontColor")
         public UpdateStreamingOutShrinkRequestTextsFontColor fontColor;
 
         /**
+         * <p>The font size.</p>
+         * 
          * <strong>example:</strong>
          * <p>36</p>
          */
         @NameInMap("FontSize")
         public Integer fontSize;
 
+        /**
+         * <p>Specifies whether to display the rectangle.</p>
+         */
         @NameInMap("HasBox")
         public Boolean hasBox;
 
         /**
+         * <p>The Z-axis layer.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1788,15 +2123,17 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Integer layer;
 
         /**
+         * <p>The watermark content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>文字水印</p>
+         * <p>Text watermark</p>
          */
         @NameInMap("Texture")
         public String texture;
 
         /**
+         * <p>The X-coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1806,6 +2143,7 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public Double x;
 
         /**
+         * <p>The Y-coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeQualityAreaDistributionStatDataRequest extends TeaModel {
     /**
-     * <p>APP ID</p>
+     * <p>The app ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,7 @@ public class DescribeQualityAreaDistributionStatDataRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,13 +25,16 @@ public class DescribeQualityAreaDistributionStatDataRequest extends TeaModel {
     public Long endDate;
 
     /**
+     * <p>The name of the parent region. For example, the parent region of Hangzhou is Zhejiang Province, and the parameter is set to China_Zhejiang Province. If this parameter is left empty, the statistics are collected at the country level worldwide, such as China and the United Kingdom.</p>
+     * 
      * <strong>example:</strong>
-     * <p>中国</p>
+     * <p>China_Zhejiang Province</p>
      */
     @NameInMap("ParentArea")
     public String parentArea;
 
     /**
+     * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

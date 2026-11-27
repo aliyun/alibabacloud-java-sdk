@@ -4,25 +4,42 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
+    /**
+     * <p>Basic call information, returned when QueryCallUserInfo=false.</p>
+     */
     @NameInMap("CallInfo")
     public DescribeFaultDiagnosisUserDetailResponseBodyCallInfo callInfo;
 
+    /**
+     * <p>List of impact factors. An empty list indicates that the impact factors are unknown.</p>
+     */
     @NameInMap("FactorList")
     public java.util.List<DescribeFaultDiagnosisUserDetailResponseBodyFactorList> factorList;
 
+    /**
+     * <p>Abnormal metrics.</p>
+     */
     @NameInMap("FaultMetricData")
     public DescribeFaultDiagnosisUserDetailResponseBodyFaultMetricData faultMetricData;
 
+    /**
+     * <p>List of Network carriers</p>
+     */
     @NameInMap("NetworkOperators")
     public java.util.List<String> networkOperators;
 
     /**
+     * <p>The Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>[responses_200_schema_properties_UserDetail_properties_CreatedTs_type]integer</p>
+     */
     @NameInMap("UserDetail")
     public DescribeFaultDiagnosisUserDetailResponseBodyUserDetail userDetail;
 
@@ -90,6 +107,12 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         public String appId;
 
         /**
+         * <p>Call status. Valid values:</p>
+         * <ul>
+         * <li><strong>IN</strong>: In progress.</li>
+         * <li><strong>OUT</strong>: Ended.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>IN</p>
          */
@@ -97,6 +120,8 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         public String callStatus;
 
         /**
+         * <p>Channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>311</p>
          */
@@ -104,6 +129,8 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         public String channelId;
 
         /**
+         * <p>The time when the call was created, represented as a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1620957905</p>
          */
@@ -111,6 +138,8 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         public Long createdTs;
 
         /**
+         * <p>The time when the call was released, represented as a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1620958150</p>
          */
@@ -118,6 +147,8 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         public Long destroyedTs;
 
         /**
+         * <p>Call duration in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -181,6 +212,8 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
 
     public static class DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItemsEventList extends TeaModel {
         /**
+         * <p>Event Name.</p>
+         * 
          * <strong>example:</strong>
          * <p>开始发布</p>
          */
@@ -188,6 +221,12 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         public String eventName;
 
         /**
+         * <p>Event Type. Valid values:</p>
+         * <ul>
+         * <li><strong>USER</strong>: User event.</li>
+         * <li><strong>SYSTEM</strong>: System event.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>USER</p>
          */
@@ -195,6 +234,8 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         public String eventType;
 
         /**
+         * <p>The time of the first management event occurrence, represented as a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1614936817</p>
          */
@@ -233,10 +274,15 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItems extends TeaModel {
+        /**
+         * <p>Event List.</p>
+         */
         @NameInMap("EventList")
         public java.util.List<DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItemsEventList> eventList;
 
         /**
+         * <p>[responses_200_schema_properties_FaultMetricData_properties_Nodes_description]List of metric coordinate points.</p>
+         * 
          * <strong>example:</strong>
          * <p>1614936817</p>
          */
@@ -267,10 +313,19 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatas extends TeaModel {
+        /**
+         * <p>List of event data.</p>
+         */
         @NameInMap("EventDataItems")
         public java.util.List<DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItems> eventDataItems;
 
         /**
+         * <p>Source role. Valid values:</p>
+         * <ul>
+         * <li><strong>SENDER</strong>: Publisher (upstream).</li>
+         * <li><strong>RECEIVER</strong>: Subscriber (downstream).</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SENDER</p>
          */
@@ -278,6 +333,8 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         public String role;
 
         /**
+         * <p>User ID</p>
+         * 
          * <strong>example:</strong>
          * <p>0a497933****</p>
          */
@@ -316,10 +373,15 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedMetricDatasNodes extends TeaModel {
+        /**
+         * <p>[responses_200_schema_properties_FactorList_items_properties_RelatedEventDatas_items_properties_EventDataItems_items_properties_EventList_items_properties_Ts_title]The time of the first management event occurrence, represented as a UNIX timestamp in seconds.</p>
+         */
         @NameInMap("Ext")
         public java.util.Map<String, ?> ext;
 
         /**
+         * <p>[responses_200_schema_properties_FactorList_items_properties_FactorId_title]Factor ID: 1: Poor publisher-side Network; 2: Poor subscriber-side Network; 3: Poor publisher-side device Performance; 4: Publisher-side camera shutdown; 5: Publisher-side app moved to background Run</p>
+         * 
          * <strong>example:</strong>
          * <p>1615892596</p>
          */
@@ -327,6 +389,8 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         public String x;
 
         /**
+         * <p>[responses_200_schema_properties_RequestId_title]The Request ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -365,10 +429,19 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedMetricDatas extends TeaModel {
+        /**
+         * <p>[responses_200_schema_properties_FactorList_items_properties_RelatedEventDatas_items_properties_EventDataItems_items_properties_EventList_items_properties_EventName_type]string</p>
+         */
         @NameInMap("Nodes")
         public java.util.List<DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedMetricDatasNodes> nodes;
 
         /**
+         * <p>Source role. Valid values:</p>
+         * <ul>
+         * <li><strong>SENDER</strong>: Publisher.</li>
+         * <li><strong>RECEIVER</strong>: Subscriber.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SENDER</p>
          */
@@ -376,6 +449,8 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         public String role;
 
         /**
+         * <p>Metric type, consistent with the metric types defined in the end-to-end metrics API.</p>
+         * 
          * <strong>example:</strong>
          * <p>AUDIO_STUCK</p>
          */
@@ -383,6 +458,8 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>User ID of the publisher from which the data originates.</p>
+         * 
          * <strong>example:</strong>
          * <p>0a497933****</p>
          */
@@ -430,6 +507,8 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
 
     public static class DescribeFaultDiagnosisUserDetailResponseBodyFactorList extends TeaModel {
         /**
+         * <p>The factor ID. For details, see the factor ID values below.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -437,15 +516,23 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         public String factorId;
 
         /**
+         * <p>Abnormal source: LOCAL indicates the local end; REMOTE indicates the remote end.</p>
+         * 
          * <strong>example:</strong>
          * <p>LOCAL</p>
          */
         @NameInMap("FaultSource")
         public String faultSource;
 
+        /**
+         * <p>Associated management events, grouped by time. Coordinate data is returned when FaultType is AUDIO_STUCK, VIDEO_STUCK, VIDEO_VAGUE, or HIGH_DELAY.</p>
+         */
         @NameInMap("RelatedEventDatas")
         public java.util.List<DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatas> relatedEventDatas;
 
+        /**
+         * <p>Associated metrics and coordinate data, returned when FaultType is AUDIO_STUCK, VIDEO_STUCK, VIDEO_VAGUE, or HIGH_DELAY.</p>
+         */
         @NameInMap("RelatedMetricDatas")
         public java.util.List<DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedMetricDatas> relatedMetricDatas;
 
@@ -490,6 +577,8 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
 
     public static class DescribeFaultDiagnosisUserDetailResponseBodyFaultMetricDataNodes extends TeaModel {
         /**
+         * <p>指标趋势图中x轴横坐标，单位时间为1分钟。</p>
+         * 
          * <strong>example:</strong>
          * <p>1620957900</p>
          */
@@ -497,6 +586,8 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         public String x;
 
         /**
+         * <p>指标趋势图中y轴纵坐标。</p>
+         * 
          * <strong>example:</strong>
          * <p>0.4540</p>
          */
@@ -527,6 +618,9 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisUserDetailResponseBodyFaultMetricData extends TeaModel {
+        /**
+         * <p>List of metric coordinate points.</p>
+         */
         @NameInMap("Nodes")
         public java.util.List<DescribeFaultDiagnosisUserDetailResponseBodyFaultMetricDataNodes> nodes;
 
@@ -547,6 +641,8 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
 
     public static class DescribeFaultDiagnosisUserDetailResponseBodyUserDetailOnlinePeriods extends TeaModel {
         /**
+         * <p>Time of joining the call, represented as a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1620957919</p>
          */
@@ -554,6 +650,8 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         public Long joinTs;
 
         /**
+         * <p>Time of leaving the call, represented as a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1620958150</p>
          */
@@ -585,6 +683,8 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
 
     public static class DescribeFaultDiagnosisUserDetailResponseBodyUserDetail extends TeaModel {
         /**
+         * <p>Call creation time, represented as a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1620957919</p>
          */
@@ -592,6 +692,8 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         public Long createdTs;
 
         /**
+         * <p>[responses_200_schema_properties_UserDetail_properties_OnlineDuration_type]integer</p>
+         * 
          * <strong>example:</strong>
          * <p>1620958150</p>
          */
@@ -599,6 +701,8 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         public Long destroyedTs;
 
         /**
+         * <p>[responses_200_schema_properties_FactorList_title]List of impact factors. An empty value indicates that the impact factors are unknown.</p>
+         * 
          * <strong>example:</strong>
          * <p>231</p>
          */
@@ -606,6 +710,8 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         public Long duration;
 
         /**
+         * <p>Geographic location information, such as: Beijing City - Beijing Municipality.</p>
+         * 
          * <strong>example:</strong>
          * <p>浙江省-杭州市</p>
          */
@@ -613,6 +719,8 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         public String location;
 
         /**
+         * <p>[responses_200_schema_properties_UserDetail_properties_OnlinePeriods_items_properties_JoinTs_title]Time of joining the call, represented as a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>4G</p>
          */
@@ -620,16 +728,23 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         public String network;
 
         /**
+         * <p>Online duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>231</p>
          */
         @NameInMap("OnlineDuration")
         public Long onlineDuration;
 
+        /**
+         * <p>Online period information.</p>
+         */
         @NameInMap("OnlinePeriods")
         public java.util.List<DescribeFaultDiagnosisUserDetailResponseBodyUserDetailOnlinePeriods> onlinePeriods;
 
         /**
+         * <p>[responses_200_schema_properties_UserDetail_properties_OnlinePeriods_type]array</p>
+         * 
          * <strong>example:</strong>
          * <p>iOS</p>
          */
@@ -637,6 +752,8 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         public String os;
 
         /**
+         * <p>[responses_200_schema_properties_UserDetail_properties_Location_title]Geographic location information, such as: Beijing City - Beijing Municipality</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
          */
@@ -644,6 +761,8 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         public String sdkVersion;
 
         /**
+         * <p>[responses_200_schema_properties_UserDetail_properties_OnlinePeriods_items_properties_LeaveTs_title]Time of leaving the call, represented as a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0a497933****</p>
          */

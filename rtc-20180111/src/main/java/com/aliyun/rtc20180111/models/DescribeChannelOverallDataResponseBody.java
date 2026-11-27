@@ -4,16 +4,27 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeChannelOverallDataResponseBody extends TeaModel {
+    /**
+     * <p>Basic communication information.</p>
+     */
     @NameInMap("CallInfo")
     public DescribeChannelOverallDataResponseBodyCallInfo callInfo;
 
+    /**
+     * <p>List of metric data.</p>
+     */
     @NameInMap("MetricDatas")
     public java.util.List<DescribeChannelOverallDataResponseBodyMetricDatas> metricDatas;
 
+    /**
+     * <p>Overview data.</p>
+     */
     @NameInMap("OverallData")
     public DescribeChannelOverallDataResponseBodyOverallData overallData;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
      */
@@ -59,6 +70,8 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
 
     public static class DescribeChannelOverallDataResponseBodyCallInfo extends TeaModel {
         /**
+         * <p>Application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rjdhtnqy</p>
          */
@@ -66,6 +79,14 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
         public String appId;
 
         /**
+         * <p>Communication status. Valid values:  </p>
+         * <ul>
+         * <li><p><strong>IN</strong>: In progress.  </p>
+         * </li>
+         * <li><p><strong>OUT</strong>: Ended.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>IN</p>
          */
@@ -73,6 +94,8 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
         public String callStatus;
 
         /**
+         * <p>Channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
@@ -80,6 +103,8 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
         public String channelId;
 
         /**
+         * <p>The UNIX timestamp when the channel was created, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1615860711</p>
          */
@@ -87,6 +112,8 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
         public Long createdTs;
 
         /**
+         * <p>The UNIX timestamp when the channel was released, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1615860811</p>
          */
@@ -94,6 +121,8 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
         public Long destroyedTs;
 
         /**
+         * <p>Channel duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -156,10 +185,15 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
     }
 
     public static class DescribeChannelOverallDataResponseBodyMetricDatasNodes extends TeaModel {
+        /**
+         * <p>Extension data.</p>
+         */
         @NameInMap("Ext")
         public java.util.Map<String, ?> ext;
 
         /**
+         * <p>X-axis coordinate in the Trend Indicator.</p>
+         * 
          * <strong>example:</strong>
          * <p>1612418625</p>
          */
@@ -167,6 +201,8 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
         public String x;
 
         /**
+         * <p>Y-axis coordinate in the Trend Indicator.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -205,10 +241,19 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
     }
 
     public static class DescribeChannelOverallDataResponseBodyMetricDatas extends TeaModel {
+        /**
+         * <p>List of coordinate points for the Trend Indicator.</p>
+         */
         @NameInMap("Nodes")
         public java.util.List<DescribeChannelOverallDataResponseBodyMetricDatasNodes> nodes;
 
         /**
+         * <p>Metric Type. Valid values:</p>
+         * <ul>
+         * <li><strong>CALL_QUALITY</strong>: Call quality.</li>
+         * <li><strong>CONN_NUM</strong>: Distribution of time intervals for successful channel joins.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CALL_QUALITY</p>
          */
@@ -240,6 +285,8 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
 
     public static class DescribeChannelOverallDataResponseBodyOverallData extends TeaModel {
         /**
+         * <p>Average communication connection time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.5</p>
          */
@@ -247,6 +294,8 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
         public Float connAvgTime;
 
         /**
+         * <p>Connection success rate within 5 seconds, represented as a decimal. For example, 1.0 indicates a 100% connection success rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.91</p>
          */
@@ -254,6 +303,8 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
         public Float fiveSecJoinRate;
 
         /**
+         * <p>Overall audio stuttering rate, represented as a decimal. For example, 0.02 indicates an audio stuttering rate of 2%.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.02</p>
          */
@@ -261,6 +312,8 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
         public Float totalAudioStuckRate;
 
         /**
+         * <p>Overall video stuttering rate, represented as a decimal. For example, 0.02 indicates a video stuttering rate of 2%.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.02</p>
          */
@@ -268,6 +321,8 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
         public Float totalVideoStuckRate;
 
         /**
+         * <p>Overall video blur rate, represented as a decimal. For example, 0.02 indicates a video blur rate of 2%.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.02</p>
          */

@@ -14,6 +14,8 @@ public class CreateAppRecordTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The template ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>lD7muaxx</p>
      */

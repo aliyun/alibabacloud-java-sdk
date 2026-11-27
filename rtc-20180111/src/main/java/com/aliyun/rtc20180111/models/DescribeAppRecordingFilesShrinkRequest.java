@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAppRecordingFilesShrinkRequest extends TeaModel {
     /**
-     * <p>APP ID。</p>
+     * <p>App ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,8 @@ public class DescribeAppRecordingFilesShrinkRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>Channel ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>311</p>
      */
@@ -22,6 +24,8 @@ public class DescribeAppRecordingFilesShrinkRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>The query range specifies the start time of the recording task. It is defined as a closed interval and measured in milliseconds (ms).</p>
+     * 
      * <strong>example:</strong>
      * <p>1712376532000</p>
      */
@@ -29,6 +33,8 @@ public class DescribeAppRecordingFilesShrinkRequest extends TeaModel {
     public Long endTs;
 
     /**
+     * <p>Page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +42,8 @@ public class DescribeAppRecordingFilesShrinkRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>Number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -43,12 +51,17 @@ public class DescribeAppRecordingFilesShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Query range start time (open interval) for recording tasks, in milliseconds. If not specified, defaults to the past 3 days. You can query recordings up to one year old.</p>
+     * 
      * <strong>example:</strong>
      * <p>1712376032000</p>
      */
     @NameInMap("StartTs")
     public Long startTs;
 
+    /**
+     * <p>List of recording task IDs.</p>
+     */
     @NameInMap("TaskIds")
     public String taskIdsShrink;
 

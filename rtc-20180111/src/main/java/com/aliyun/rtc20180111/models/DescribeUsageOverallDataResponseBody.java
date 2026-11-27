@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeUsageOverallDataResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The usage overview data list.</p>
+     */
     @NameInMap("UsageOverallData")
     public java.util.List<DescribeUsageOverallDataResponseBodyUsageOverallData> usageOverallData;
 
@@ -37,6 +42,8 @@ public class DescribeUsageOverallDataResponseBody extends TeaModel {
 
     public static class DescribeUsageOverallDataResponseBodyUsageOverallDataNodes extends TeaModel {
         /**
+         * <p>The x-axis coordinate in the metric trends chart.</p>
+         * 
          * <strong>example:</strong>
          * <p>1615824000</p>
          */
@@ -44,6 +51,8 @@ public class DescribeUsageOverallDataResponseBody extends TeaModel {
         public String x;
 
         /**
+         * <p>The y-axis coordinate in the metric trends chart.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -74,10 +83,15 @@ public class DescribeUsageOverallDataResponseBody extends TeaModel {
     }
 
     public static class DescribeUsageOverallDataResponseBodyUsageOverallData extends TeaModel {
+        /**
+         * <p>The list of coordinate points for the metric trends chart.</p>
+         */
         @NameInMap("Nodes")
         public java.util.List<DescribeUsageOverallDataResponseBodyUsageOverallDataNodes> nodes;
 
         /**
+         * <p>The queried metric type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ONLINE_USER_PEAK</p>
          */

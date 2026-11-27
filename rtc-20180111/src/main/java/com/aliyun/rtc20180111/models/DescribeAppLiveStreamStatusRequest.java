@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAppLiveStreamStatusRequest extends TeaModel {
     /**
+     * <p>The ID of the application. You can create and query the application ID in the console. You can specify only one application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeAppLiveStreamStatusRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>A parameter that ensures the idempotence of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */

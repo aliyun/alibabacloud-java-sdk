@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of details about top publishing users.</p>
+     */
     @NameInMap("TopPubUserDetailList")
     public java.util.List<DescribeChannelTopPubUserListResponseBodyTopPubUserDetailList> topPubUserDetailList;
 
@@ -37,6 +42,8 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
 
     public static class DescribeChannelTopPubUserListResponseBodyTopPubUserDetailListOnlinePeriods extends TeaModel {
         /**
+         * <p>The time when the user joined the channel. The value is a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1615893327</p>
          */
@@ -44,6 +51,8 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
         public Long joinTs;
 
         /**
+         * <p>The time when the user left the channel. The value is a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1615893442</p>
          */
@@ -75,6 +84,8 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
 
     public static class DescribeChannelTopPubUserListResponseBodyTopPubUserDetailList extends TeaModel {
         /**
+         * <p>The time when the user first joined the channel. The value is a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1615893327</p>
          */
@@ -82,6 +93,8 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
         public Long createdTs;
 
         /**
+         * <p>The time when the user last left the channel. The value is a UNIX timestamp in seconds. The value is 0 if the call has not ended.</p>
+         * 
          * <strong>example:</strong>
          * <p>1615893442</p>
          */
@@ -89,30 +102,41 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
         public Long destroyedTs;
 
         /**
+         * <p>The total duration in seconds.</p>
+         * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>115</p>
          */
         @NameInMap("Duration")
         public Long duration;
 
         /**
+         * <p>The geographic location, such as Beijing-Beijing.</p>
+         * 
          * <strong>example:</strong>
-         * <p>浙江省-杭州市</p>
+         * <p>Zhejiang-Hangzhou</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
+         * <p>The communication duration in seconds.</p>
+         * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>115</p>
          */
         @NameInMap("OnlineDuration")
         public Long onlineDuration;
 
+        /**
+         * <p>The list of online periods for the user.</p>
+         */
         @NameInMap("OnlinePeriods")
         public java.util.List<DescribeChannelTopPubUserListResponseBodyTopPubUserDetailListOnlinePeriods> onlinePeriods;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>testuserid</p>
          */

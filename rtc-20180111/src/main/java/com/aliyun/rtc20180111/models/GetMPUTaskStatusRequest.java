@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMPUTaskStatusRequest extends TeaModel {
     /**
+     * <p>The application ID. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class GetMPUTaskStatusRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The task ID. Only a single ID is supported. The value must be the same as the TaskId parameter in the <a href="https://help.aliyun.com/document_detail/93183.html">StartMpuTask</a> request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

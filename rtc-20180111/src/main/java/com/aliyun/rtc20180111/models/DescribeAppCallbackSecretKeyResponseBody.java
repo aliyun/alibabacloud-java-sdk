@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAppCallbackSecretKeyResponseBody extends TeaModel {
     /**
+     * <p>Callback key.</p>
+     * 
      * <strong>example:</strong>
      * <p>a656b296a30xxxxxxxxxx1cd4</p>
      */

@@ -4,6 +4,9 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeAllCallbackResponseBody extends TeaModel {
+    /**
+     * <p>List of callback events.</p>
+     */
     @NameInMap("Callbacks")
     public java.util.List<DescribeAllCallbackResponseBodyCallbacks> callbacks;
 
@@ -39,6 +42,8 @@ public class DescribeAllCallbackResponseBody extends TeaModel {
 
     public static class DescribeAllCallbackResponseBodyCallbacksSubEvent extends TeaModel {
         /**
+         * <p>Subscribed sub-event code.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000</p>
          */
@@ -46,6 +51,8 @@ public class DescribeAllCallbackResponseBody extends TeaModel {
         public Integer event;
 
         /**
+         * <p>Subscribed sub-event name.</p>
+         * 
          * <strong>example:</strong>
          * <p>录制开始</p>
          */
@@ -53,6 +60,8 @@ public class DescribeAllCallbackResponseBody extends TeaModel {
         public String eventName;
 
         /**
+         * <p>Subscription event type: 0 for system, 1 for custom.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -92,6 +101,8 @@ public class DescribeAllCallbackResponseBody extends TeaModel {
 
     public static class DescribeAllCallbackResponseBodyCallbacks extends TeaModel {
         /**
+         * <p>Event code.</p>
+         * 
          * <strong>example:</strong>
          * <p>RecordEvent</p>
          */
@@ -99,12 +110,17 @@ public class DescribeAllCallbackResponseBody extends TeaModel {
         public String category;
 
         /**
+         * <p>Event name.</p>
+         * 
          * <strong>example:</strong>
          * <p>录制回调</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>List of subscribed sub-events.</p>
+         */
         @NameInMap("SubEvent")
         public java.util.List<DescribeAllCallbackResponseBodyCallbacksSubEvent> subEvent;
 

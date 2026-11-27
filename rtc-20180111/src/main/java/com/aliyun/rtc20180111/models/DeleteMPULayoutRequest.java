@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMPULayoutRequest extends TeaModel {
     /**
+     * <p>The application ID. Only a single ID is supported. You can create and query application IDs in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteMPULayoutRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The layout ID. Only a single ID is supported. To obtain a layout ID, see <a href="https://help.aliyun.com/document_detail/162192.html">CreateMPULayout</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

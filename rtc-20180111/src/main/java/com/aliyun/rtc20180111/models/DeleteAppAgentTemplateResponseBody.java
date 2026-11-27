@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteAppAgentTemplateResponseBody extends TeaModel {
     /**
+     * <p>The template ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1223131213231313213</p>
      */

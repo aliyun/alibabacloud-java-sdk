@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAppRecordTemplateRequest extends TeaModel {
     /**
+     * <p>Application ID. Create and query through the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ModifyAppRecordTemplateRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>Idempotency parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>53200b81-b761-4c10-842a-a0726d97xxxx</p>
      */
@@ -21,6 +24,7 @@ public class ModifyAppRecordTemplateRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Recording template.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RecordTemplate")
@@ -57,6 +61,8 @@ public class ModifyAppRecordTemplateRequest extends TeaModel {
 
     public static class ModifyAppRecordTemplateRequestRecordTemplate extends TeaModel {
         /**
+         * <p>Delayed stop recording time. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>180</p>
          */
@@ -64,6 +70,10 @@ public class ModifyAppRecordTemplateRequest extends TeaModel {
         public Integer delayStopTime;
 
         /**
+         * <p>The naming convention for recording files.</p>
+         * <blockquote>
+         * <p>To ensure unique recording file names, use the following naming convention: <code>record/{AppId}/{ChannelId}/{TaskId}/{EscapedStartTime}/{EscapedEndTime}</code>.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -73,6 +83,7 @@ public class ModifyAppRecordTemplateRequest extends TeaModel {
         public String filePrefix;
 
         /**
+         * <p>Recording file split duration (greater than or equal to 1800). Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -82,18 +93,22 @@ public class ModifyAppRecordTemplateRequest extends TeaModel {
         public Integer fileSplitInterval;
 
         /**
+         * <p>Recording file format. Currently, only .m3u8, .mp4, and .flv are supported.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Formats")
         public java.util.List<String> formats;
 
         /**
+         * <p>Layout ID list, up to 16.</p>
+         * <p>Note: The layouts in the list must not have the same number of data sources.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("LayoutIds")
         public java.util.List<String> layoutIds;
 
         /**
+         * <p>Encoding options.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,6 +118,7 @@ public class ModifyAppRecordTemplateRequest extends TeaModel {
         public Integer mediaEncode;
 
         /**
+         * <p>Template name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -112,6 +128,7 @@ public class ModifyAppRecordTemplateRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>Template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

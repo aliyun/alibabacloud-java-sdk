@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableAutoLiveStreamRuleRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query the ID in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class EnableAutoLiveStreamRuleRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The bypass rule ID. You can query the ID in the console or call the <a href="https://help.aliyun.com/document_detail/353198.html">DescribeAutoLiveStreamRule</a> operation to obtain the bypass rule ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

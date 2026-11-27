@@ -14,6 +14,22 @@ public class DescribeCloudRecordStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <ul>
+     * <li>0: The task has started and is waiting for users to join.</li>
+     * <li>100: The task has not started.</li>
+     * <li>101: Recording is in progress.</li>
+     * <li>102: The recording file is being uploaded.</li>
+     * <li>200: Recording is completed (channel ended).</li>
+     * <li>201: Recording is completed (stopped by user).</li>
+     * <li>400: Recording failed (internal server error).</li>
+     * <li>401: Recording failed (failed to write to user storage).</li>
+     * <li>402: Recording failed (failed to start user storage).</li>
+     * <li>403: Recording failed (recording duration too short).</li>
+     * <li>404: Recording failed (incorrect user storage key).</li>
+     * <li>405: Recording failed (bucket does not exist).</li>
+     * <li>406: Recording failed (access to user storage denied).</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

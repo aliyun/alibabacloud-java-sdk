@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEndPointEventListRequest extends TeaModel {
     /**
-     * <p>APP ID。</p>
+     * <p>The app ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,7 @@ public class DescribeEndPointEventListRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The channel ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +25,7 @@ public class DescribeEndPointEventListRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>The start time of the event query time range. This time cannot be earlier than the actual creation time of the channel or 30 days ago. The time is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +35,8 @@ public class DescribeEndPointEventListRequest extends TeaModel {
     public Long createdTs;
 
     /**
+     * <p>The end time of the event query time range. This time cannot be later than the release time of the channel. The time is a UNIX timestamp in seconds. If this parameter is left empty, the current time is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>1614936817</p>
      */
@@ -40,6 +44,7 @@ public class DescribeEndPointEventListRequest extends TeaModel {
     public Long destroyedTs;
 
     /**
+     * <p>The list of user IDs. Separate multiple user IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,11 +4,14 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudNotePhrasesResponseBody extends TeaModel {
+    /**
+     * <p>The hotword lists.</p>
+     */
     @NameInMap("Phrases")
     public java.util.List<DescribeCloudNotePhrasesResponseBodyPhrases> phrases;
 
     /**
-     * <p>Id of the request。</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>3A26E1E3-3CBB-599E-AD68-CB78F5A42FA1</p>
@@ -17,6 +20,8 @@ public class DescribeCloudNotePhrasesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -24,6 +29,8 @@ public class DescribeCloudNotePhrasesResponseBody extends TeaModel {
     public Long totalNum;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -69,6 +76,8 @@ public class DescribeCloudNotePhrasesResponseBody extends TeaModel {
 
     public static class DescribeCloudNotePhrasesResponseBodyPhrasesWordWeights extends TeaModel {
         /**
+         * <p>The weight value.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -76,8 +85,10 @@ public class DescribeCloudNotePhrasesResponseBody extends TeaModel {
         public Integer weight;
 
         /**
+         * <p>The hotword.</p>
+         * 
          * <strong>example:</strong>
-         * <p>苹果</p>
+         * <p>Apple</p>
          */
         @NameInMap("Word")
         public String word;
@@ -107,6 +118,8 @@ public class DescribeCloudNotePhrasesResponseBody extends TeaModel {
 
     public static class DescribeCloudNotePhrasesResponseBodyPhrases extends TeaModel {
         /**
+         * <p>The creation time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC time).</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-03-04T06:22:15Z</p>
          */
@@ -114,13 +127,17 @@ public class DescribeCloudNotePhrasesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>水果描述</p>
+         * <p>Fruit description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The hotword list ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1qweadca332121212</p>
          */
@@ -128,13 +145,16 @@ public class DescribeCloudNotePhrasesResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The hotword list name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>水果</p>
+         * <p>Fruit</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The hotword weights.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("WordWeights")

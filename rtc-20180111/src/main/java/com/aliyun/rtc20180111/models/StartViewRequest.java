@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartViewRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,14 @@ public class StartViewRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The global background color.</p>
+     */
     @NameInMap("BgColor")
     public StartViewRequestBgColor bgColor;
 
     /**
+     * <p>The ID of an existing channel. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,19 +31,38 @@ public class StartViewRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>The crop mode. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: proportional cropping</li>
+     * <li><strong>2</strong>: proportional padding (default)</li>
+     * <li><strong>3</strong>: stretch to fill</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("CropMode")
     public Integer cropMode;
 
+    /**
+     * <p>The global pane background color.</p>
+     */
     @NameInMap("RegionColor")
     public StartViewRequestRegionColor regionColor;
 
+    /**
+     * <p>Specifies whether to allow starting the task when the channel does not exist. Valid values:</p>
+     * <ul>
+     * <li>true: Yes.</li>
+     * <li>false: No (default).</li>
+     * </ul>
+     */
     @NameInMap("StartWithoutChannel")
     public Boolean startWithoutChannel;
 
     /**
+     * <p>The wait time for the task when the channel is not started, in seconds. This parameter is valid only when the StartWithoutChannel parameter is set to true. Valid values: 30 to 120.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -46,6 +70,7 @@ public class StartViewRequest extends TeaModel {
     public Integer startWithoutChannelWaitTime;
 
     /**
+     * <p>The task ID for the current request. Only a single ID is supported. The ID can contain letters, digits, underscores (_), and hyphens (-), and can be up to 55 bytes in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +80,7 @@ public class StartViewRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,12 +90,21 @@ public class StartViewRequest extends TeaModel {
     public String templateId;
 
     /**
+     * <p>The stream property. Valid values:</p>
+     * <ul>
+     * <li>main: main stream</li>
+     * <li>screen-cast: shared stream</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>main</p>
      */
     @NameInMap("ViewContent")
     public String viewContent;
 
+    /**
+     * <p>The list of user IDs of Session Initiation Protocol (SIP) devices that are allowed to view the main stream or shared stream.</p>
+     */
     @NameInMap("ViewSubscribers")
     public java.util.List<String> viewSubscribers;
 
@@ -168,7 +203,7 @@ public class StartViewRequest extends TeaModel {
 
     public static class StartViewRequestBgColor extends TeaModel {
         /**
-         * <p>B。</p>
+         * <p>The B value.</p>
          * 
          * <strong>example:</strong>
          * <p>255</p>
@@ -177,7 +212,7 @@ public class StartViewRequest extends TeaModel {
         public Integer b;
 
         /**
-         * <p>G。</p>
+         * <p>The G value.</p>
          * 
          * <strong>example:</strong>
          * <p>255</p>
@@ -186,7 +221,7 @@ public class StartViewRequest extends TeaModel {
         public Integer g;
 
         /**
-         * <p>R。</p>
+         * <p>The R value.</p>
          * 
          * <strong>example:</strong>
          * <p>255</p>
@@ -227,7 +262,7 @@ public class StartViewRequest extends TeaModel {
 
     public static class StartViewRequestRegionColor extends TeaModel {
         /**
-         * <p>B。</p>
+         * <p>The B value.</p>
          * 
          * <strong>example:</strong>
          * <p>255</p>
@@ -236,7 +271,7 @@ public class StartViewRequest extends TeaModel {
         public Integer b;
 
         /**
-         * <p>G。</p>
+         * <p>The G value.</p>
          * 
          * <strong>example:</strong>
          * <p>255</p>
@@ -245,7 +280,7 @@ public class StartViewRequest extends TeaModel {
         public Integer g;
 
         /**
-         * <p>R。</p>
+         * <p>The R value.</p>
          * 
          * <strong>example:</strong>
          * <p>255</p>

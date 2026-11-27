@@ -4,13 +4,20 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class CreateAppAgentTemplateShrinkRequest extends TeaModel {
+    /**
+     * <p>The agent silence configuration.</p>
+     */
     @NameInMap("AgentSilenceConfig")
     public String agentSilenceConfigShrink;
 
+    /**
+     * <p>The ambient environment configuration for the agent. If this parameter is not specified, the ambient environment configuration is not used.</p>
+     */
     @NameInMap("AmbientSoundConfig")
     public String ambientSoundConfigShrink;
 
     /**
+     * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,54 +26,107 @@ public class CreateAppAgentTemplateShrinkRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The speech-to-text settings.</p>
+     */
     @NameInMap("AsrConfig")
     public String asrConfigShrink;
 
+    /**
+     * <p>The agent backchannel configuration.</p>
+     */
     @NameInMap("BackChannelConfig")
     public String backChannelConfigShrink;
 
     /**
+     * <p>The conversation mode. Valid values:</p>
+     * <ul>
+     * <li>1: Natural conversation mode (default).</li>
+     * <li>2: Walkie-talkie mode.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("ChatMode")
     public Integer chatMode;
 
+    /**
+     * <p>Specifies whether to enable video understanding. If enabled, the LLM must support multimodal data.</p>
+     */
     @NameInMap("EnableVideoUnderstanding")
     public Boolean enableVideoUnderstanding;
 
+    /**
+     * <p>The greeting message. The maximum length is 500 characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Good morning, my friend!</p>
+     */
     @NameInMap("Greeting")
     public String greeting;
 
+    /**
+     * <p>The agent interruption configuration.</p>
+     */
     @NameInMap("InterruptConfig")
     public String interruptConfigShrink;
 
     /**
+     * <p>The interruption mode. Valid values:</p>
+     * <ul>
+     * <li>1: Interruption allowed (default).</li>
+     * <li>2: Interruption disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("InterruptMode")
     public Integer interruptMode;
 
+    /**
+     * <p>The large language model settings.</p>
+     */
     @NameInMap("LlmConfig")
     public String llmConfigShrink;
 
     /**
+     * <p>The template name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>智能体模版</p>
+     * <p>Agent template</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The preferred video stream for the agent to process when visual understanding is enabled. The agent can process only one video stream at a time. When both the camera stream and the screen sharing stream are pushed simultaneously, this parameter specifies the preferred stream. Valid values:</p>
+     * <ul>
+     * <li>1: The agent preferentially processes the camera stream.</li>
+     * <li>2: The agent preferentially processes the screen sharing stream.
+     * Default value: 1.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PreferVideo")
     public Integer preferVideo;
 
+    /**
+     * <p>The text-to-speech settings.</p>
+     */
     @NameInMap("TtsConfig")
     public String ttsConfigShrink;
 
     /**
+     * <p>The agent type. Valid values:</p>
+     * <ul>
+     * <li>1: Voice call (default).</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

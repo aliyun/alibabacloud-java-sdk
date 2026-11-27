@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateRecordTaskRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateRecordTaskRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The channel ID. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,6 +27,9 @@ public class UpdateRecordTaskRequest extends TeaModel {
     @NameInMap("CropMode")
     public Long cropMode;
 
+    /**
+     * <p>The array of layout IDs.</p>
+     */
     @NameInMap("LayoutIds")
     public java.util.List<Long> layoutIds;
 
@@ -34,16 +39,27 @@ public class UpdateRecordTaskRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>Specifies the users whose audio streams are subscribed to in the channel.</p>
+     */
     @NameInMap("SubSpecAudioUsers")
     public java.util.List<String> subSpecAudioUsers;
 
+    /**
+     * <p>Specifies the users whose camera streams are subscribed to in the channel.</p>
+     */
     @NameInMap("SubSpecCameraUsers")
     public java.util.List<String> subSpecCameraUsers;
 
+    /**
+     * <p>Specifies the users whose screen sharing streams are subscribed to in the channel.</p>
+     */
     @NameInMap("SubSpecShareScreenUsers")
     public java.util.List<String> subSpecShareScreenUsers;
 
     /**
+     * <p>Specifies the list of users to which the task subscribes.</p>
+     * 
      * <strong>example:</strong>
      * <p>userID</p>
      */
@@ -51,6 +67,7 @@ public class UpdateRecordTaskRequest extends TeaModel {
     public java.util.List<String> subSpecUsers;
 
     /**
+     * <p>The task ID. Only a single ID is supported. The value must be the same as the TaskId request parameter of <a href="https://help.aliyun.com/document_detail/193528.html">StartRecordTask</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,6 +80,7 @@ public class UpdateRecordTaskRequest extends TeaModel {
     public String taskProfile;
 
     /**
+     * <p>The configuration template ID. For more information about how to obtain the template ID, see <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,15 +89,27 @@ public class UpdateRecordTaskRequest extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>Specifies the users whose audio streams are not subscribed to in the channel.</p>
+     */
     @NameInMap("UnsubSpecAudioUsers")
     public java.util.List<String> unsubSpecAudioUsers;
 
+    /**
+     * <p>Specifies the users whose camera streams are not subscribed to in the channel.</p>
+     */
     @NameInMap("UnsubSpecCameraUsers")
     public java.util.List<String> unsubSpecCameraUsers;
 
+    /**
+     * <p>Specifies the users whose screen sharing streams are not subscribed to in the channel.</p>
+     */
     @NameInMap("UnsubSpecShareScreenUsers")
     public java.util.List<String> unsubSpecShareScreenUsers;
 
+    /**
+     * <p>The list of layout parameters.</p>
+     */
     @NameInMap("UserPanes")
     public java.util.List<UpdateRecordTaskRequestUserPanes> userPanes;
 
@@ -226,6 +256,13 @@ public class UpdateRecordTaskRequest extends TeaModel {
 
     public static class UpdateRecordTaskRequestUserPanesImages extends TeaModel {
         /**
+         * <p>Specifies whether to display the image. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong> (None): Not displayed.</li>
+         * <li><strong>1</strong> (Always): Always displayed.</li>
+         * <li><strong>2</strong> (Backup): Displayed when the current user has no video stream.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -233,6 +270,8 @@ public class UpdateRecordTaskRequest extends TeaModel {
         public Integer display;
 
         /**
+         * <p>The height of the pane, as a normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.2456</p>
          */
@@ -240,6 +279,8 @@ public class UpdateRecordTaskRequest extends TeaModel {
         public Float height;
 
         /**
+         * <p>The HTTP or HTTPS URL of the image.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com/image.jpg">https://www.example.com/image.jpg</a></p>
          */
@@ -247,6 +288,8 @@ public class UpdateRecordTaskRequest extends TeaModel {
         public String url;
 
         /**
+         * <p>The width of the pane, as a normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.2456</p>
          */
@@ -254,6 +297,8 @@ public class UpdateRecordTaskRequest extends TeaModel {
         public Float width;
 
         /**
+         * <p>The X-coordinate, as a normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.7576</p>
          */
@@ -261,6 +306,8 @@ public class UpdateRecordTaskRequest extends TeaModel {
         public Float x;
 
         /**
+         * <p>The Y-coordinate, as a normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.7576</p>
          */
@@ -268,6 +315,8 @@ public class UpdateRecordTaskRequest extends TeaModel {
         public Float y;
 
         /**
+         * <p>The Z-order. 0 indicates the bottom layer, 1 indicates the layer above 0, and so on.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -339,6 +388,8 @@ public class UpdateRecordTaskRequest extends TeaModel {
 
     public static class UpdateRecordTaskRequestUserPanesTexts extends TeaModel {
         /**
+         * <p>The text color in RGB format. The calculation formula is R + G × 256 + B × 65536. Valid values of R (red), G (green), and B (blue): <strong>0 to 255</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -346,6 +397,8 @@ public class UpdateRecordTaskRequest extends TeaModel {
         public Integer fontColor;
 
         /**
+         * <p>The font size. Valid values: <strong>(0, 72]</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -353,6 +406,16 @@ public class UpdateRecordTaskRequest extends TeaModel {
         public Integer fontSize;
 
         /**
+         * <p>The font type. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong> (default): NOTO_SERIF_CJKSC_REGULAR.</li>
+         * <li><strong>1</strong>: ALIBABA_PUHUITI_REGULAR.</li>
+         * <li><strong>2</strong>: ALIBABA_PUHUITI_BOLD.</li>
+         * <li><strong>3</strong>: ALIBABA_PUHUITI_Heavy.</li>
+         * <li><strong>4</strong>: ALIBABA_PUHUITI_LIGHT.</li>
+         * <li><strong>5</strong>: ALIBABA_PUHUITI_MEDIUM.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -360,6 +423,8 @@ public class UpdateRecordTaskRequest extends TeaModel {
         public Integer fontType;
 
         /**
+         * <p>The text content.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -367,6 +432,8 @@ public class UpdateRecordTaskRequest extends TeaModel {
         public String text;
 
         /**
+         * <p>The X-coordinate, as a normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.7576</p>
          */
@@ -374,6 +441,8 @@ public class UpdateRecordTaskRequest extends TeaModel {
         public Float x;
 
         /**
+         * <p>The Y-coordinate, as a normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.7576</p>
          */
@@ -381,6 +450,8 @@ public class UpdateRecordTaskRequest extends TeaModel {
         public Float y;
 
         /**
+         * <p>The Z-order. 0 indicates the bottom layer, 1 indicates the layer above 0, and so on.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -451,10 +522,18 @@ public class UpdateRecordTaskRequest extends TeaModel {
     }
 
     public static class UpdateRecordTaskRequestUserPanes extends TeaModel {
+        /**
+         * <p>The list of image panes in the current layout.</p>
+         */
         @NameInMap("Images")
         public java.util.List<UpdateRecordTaskRequestUserPanesImages> images;
 
         /**
+         * <p>The pane ID. Valid values of N: <strong>1 to 16</strong>. Valid values of PaneId: <strong>0 to 15</strong>.</p>
+         * <blockquote>
+         * <p>If the user specified by PaneId is not found, other streams are displayed by default. The streams are determined based on the order in which users join the channel.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -462,16 +541,28 @@ public class UpdateRecordTaskRequest extends TeaModel {
         public Integer paneId;
 
         /**
+         * <p>The video input source of the user corresponding to the layout. Valid values:</p>
+         * <ul>
+         * <li><strong>camera</strong> (default): the video stream.</li>
+         * <li><strong>shareScreen</strong>: the screen sharing stream.</li>
+         * </ul>
+         * <p>Valid values of N: <strong>1 to 16</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>camera</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
+        /**
+         * <p>The list of text panes in the current layout.</p>
+         */
         @NameInMap("Texts")
         public java.util.List<UpdateRecordTaskRequestUserPanesTexts> texts;
 
         /**
+         * <p>The ID of the user corresponding to the layout pane. Valid values of N: <strong>1 to 16</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestId</p>
          */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeChannelParticipantsRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeChannelParticipantsRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The ID of the joined channel. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,14 @@ public class DescribeChannelParticipantsRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li><p><strong>asc</strong>: Ascending order.</p>
+     * </li>
+     * <li><p><strong>desc</strong>: Descending order. This is the default value.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>asc</p>
      */
@@ -33,6 +43,8 @@ public class DescribeChannelParticipantsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +52,8 @@ public class DescribeChannelParticipantsRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of users to return on each page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

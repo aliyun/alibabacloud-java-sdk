@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCallbackMetaShrinkRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyCallbackMetaShrinkRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The callback configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Callback")

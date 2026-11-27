@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEndPointMetricDataRequest extends TeaModel {
     /**
-     * <p>APP ID。</p>
+     * <p>The app ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,7 @@ public class DescribeEndPointMetricDataRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The channel ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +25,7 @@ public class DescribeEndPointMetricDataRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>The start time of the query time range. This time cannot be earlier than the actual creation time of the channel or more than 30 days ago. The time is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +35,11 @@ public class DescribeEndPointMetricDataRequest extends TeaModel {
     public Long createdTs;
 
     /**
+     * <p>The end time of the query time range. This time cannot be later than the release time of the channel. The time is a UNIX timestamp in seconds. If this parameter is left empty, the current time is used.</p>
+     * <blockquote>
+     * <p>If the specified end time is later than the release time of the channel, the data from the start time to the release time of the channel is returned, and a maximum of data from the last 3 hours is returned.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1614936817</p>
      */
@@ -40,6 +47,7 @@ public class DescribeEndPointMetricDataRequest extends TeaModel {
     public Long destroyedTs;
 
     /**
+     * <p>The list of metric enumerations. Separate multiple metrics with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +57,11 @@ public class DescribeEndPointMetricDataRequest extends TeaModel {
     public String metrics;
 
     /**
+     * <p>The call IDs of the communication streams for the publisher. Separate multiple IDs with commas (,).</p>
+     * <blockquote>
+     * <p>You can specify either PubUserId or PubCallIdList.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>testcall1,testcall2</p>
      */
@@ -56,13 +69,20 @@ public class DescribeEndPointMetricDataRequest extends TeaModel {
     public String pubCallIdList;
 
     /**
+     * <p>The user ID of the publisher.</p>
+     * <blockquote>
+     * <p>You can specify either PubUserId or PubCallIdList.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
-     * <p>testuserid</p>
+     * <p>testuserid2</p>
      */
     @NameInMap("PubUserId")
     public String pubUserId;
 
     /**
+     * <p>The user ID of the subscriber.</p>
+     * 
      * <strong>example:</strong>
      * <p>testuserid</p>
      */

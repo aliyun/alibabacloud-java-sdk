@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAppLayoutRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CreateAppLayoutRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The client token.</p>
+     * 
      * <strong>example:</strong>
      * <p>53200b81-b761-4c10-842a-a0726d97xxxx</p>
      */
@@ -21,6 +24,7 @@ public class CreateAppLayoutRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The layout.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Layout")
@@ -57,6 +61,8 @@ public class CreateAppLayoutRequest extends TeaModel {
 
     public static class CreateAppLayoutRequestLayoutPanes extends TeaModel {
         /**
+         * <p>The height of the pane, represented as a normalized percentage. Valid values: 0.0 &lt; Height ≤ 1.0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.25</p>
          */
@@ -64,6 +70,8 @@ public class CreateAppLayoutRequest extends TeaModel {
         public Double height;
 
         /**
+         * <p>The ID of the pane. The value starts from 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -71,6 +79,8 @@ public class CreateAppLayoutRequest extends TeaModel {
         public Long paneId;
 
         /**
+         * <p>The width of the pane, represented as a normalized percentage. Valid values: 0.0 &lt; Width ≤ 1.0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.25</p>
          */
@@ -78,6 +88,8 @@ public class CreateAppLayoutRequest extends TeaModel {
         public Double width;
 
         /**
+         * <p>The X coordinate, represented as a normalized percentage. Valid values: 0.0 ≤ X ≤ 1.0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.25</p>
          */
@@ -85,6 +97,8 @@ public class CreateAppLayoutRequest extends TeaModel {
         public Double x;
 
         /**
+         * <p>The Y coordinate, represented as a normalized percentage. Valid values: 0.0 ≤ Y ≤ 1.0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.25</p>
          */
@@ -92,6 +106,8 @@ public class CreateAppLayoutRequest extends TeaModel {
         public Double y;
 
         /**
+         * <p>The Z-order of the pane. A value of 0 indicates the bottom layer, 1 indicates the layer above 0, and so on.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -155,15 +171,17 @@ public class CreateAppLayoutRequest extends TeaModel {
 
     public static class CreateAppLayoutRequestLayout extends TeaModel {
         /**
+         * <p>The name of the layout.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>布局</p>
+         * <p>Layout</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The list of panes.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Panes")

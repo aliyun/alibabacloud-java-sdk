@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyViewLayoutRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,14 @@ public class ModifyViewLayoutRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The background images.</p>
+     */
     @NameInMap("Backgrounds")
     public java.util.List<ModifyViewLayoutRequestBackgrounds> backgrounds;
 
     /**
+     * <p>The ID of an existing channel. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,19 +30,32 @@ public class ModifyViewLayoutRequest extends TeaModel {
     @NameInMap("ChannelId")
     public String channelId;
 
+    /**
+     * <p>The global clock watermark.</p>
+     */
     @NameInMap("ClockWidgets")
     public java.util.List<ModifyViewLayoutRequestClockWidgets> clockWidgets;
 
+    /**
+     * <p>The global image watermark.</p>
+     */
     @NameInMap("Images")
     public java.util.List<ModifyViewLayoutRequestImages> images;
 
+    /**
+     * <p>The blacklists and whitelists settings.</p>
+     */
     @NameInMap("LayoutSpecifiedUsers")
     public ModifyViewLayoutRequestLayoutSpecifiedUsers layoutSpecifiedUsers;
 
+    /**
+     * <p>The pane settings. You can configure up to 16 panes.</p>
+     */
     @NameInMap("Panes")
     public java.util.List<ModifyViewLayoutRequestPanes> panes;
 
     /**
+     * <p>The task ID. Only a single ID is supported. The ID can contain letters, digits, underscores (_), and hyphens (-), and can be up to 55 bytes in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +65,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +74,9 @@ public class ModifyViewLayoutRequest extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>The global text watermark.</p>
+     */
     @NameInMap("Texts")
     public java.util.List<ModifyViewLayoutRequestTexts> texts;
 
@@ -145,6 +167,8 @@ public class ModifyViewLayoutRequest extends TeaModel {
 
     public static class ModifyViewLayoutRequestBackgrounds extends TeaModel {
         /**
+         * <p>The opacity of the image.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9</p>
          */
@@ -152,6 +176,13 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Double alpha;
 
         /**
+         * <p>The crop mode of the image. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Crops the image while maintaining the aspect ratio.</li>
+         * <li><strong>2</strong>: Maintains the aspect ratio and adds padding.</li>
+         * <li><strong>3</strong>: Stretches the image to fill the area.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -159,6 +190,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Integer backgroundCropMode;
 
         /**
+         * <p>The height.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,6 +200,8 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Double height;
 
         /**
+         * <p>The z-axis layer.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -175,6 +209,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Integer layer;
 
         /**
+         * <p>The URL of the image.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,6 +219,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public String url;
 
         /**
+         * <p>The width.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,6 +229,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Double width;
 
         /**
+         * <p>The x-coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,6 +239,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Double x;
 
         /**
+         * <p>The y-coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -283,7 +321,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
 
     public static class ModifyViewLayoutRequestClockWidgetsBoxColor extends TeaModel {
         /**
-         * <p>B。</p>
+         * <p>The blue component.</p>
          * 
          * <strong>example:</strong>
          * <p>255</p>
@@ -292,7 +330,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Integer b;
 
         /**
-         * <p>G。</p>
+         * <p>The green component.</p>
          * 
          * <strong>example:</strong>
          * <p>255</p>
@@ -301,7 +339,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Integer g;
 
         /**
-         * <p>R。</p>
+         * <p>The red component.</p>
          * 
          * <strong>example:</strong>
          * <p>255</p>
@@ -342,7 +380,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
 
     public static class ModifyViewLayoutRequestClockWidgetsFontColor extends TeaModel {
         /**
-         * <p>B。</p>
+         * <p>The blue component.</p>
          * 
          * <strong>example:</strong>
          * <p>255</p>
@@ -351,7 +389,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Integer b;
 
         /**
-         * <p>G。</p>
+         * <p>The green component.</p>
          * 
          * <strong>example:</strong>
          * <p>255</p>
@@ -360,7 +398,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Integer g;
 
         /**
-         * <p>R。</p>
+         * <p>The red component.</p>
          * 
          * <strong>example:</strong>
          * <p>255</p>
@@ -401,6 +439,8 @@ public class ModifyViewLayoutRequest extends TeaModel {
 
     public static class ModifyViewLayoutRequestClockWidgets extends TeaModel {
         /**
+         * <p>The opacity of the image.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9</p>
          */
@@ -408,6 +448,8 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Double alpha;
 
         /**
+         * <p>The opacity of the text box.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.6</p>
          */
@@ -415,36 +457,65 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Double boxAlpha;
 
         /**
+         * <p>The border width of the text box.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
         @NameInMap("BoxBorderw")
         public Integer boxBorderw;
 
+        /**
+         * <p>The border color of the text box.</p>
+         */
         @NameInMap("BoxColor")
         public ModifyViewLayoutRequestClockWidgetsBoxColor boxColor;
 
         /**
+         * <p>The font. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Alibaba PuHuiTi Regular</li>
+         * <li><strong>1</strong>: Alibaba PuHuiTi Light</li>
+         * <li><strong>2</strong>: Alibaba PuHuiTi Medium</li>
+         * <li><strong>3</strong>: Alibaba PuHuiTi Bold</li>
+         * <li><strong>4</strong>: Alibaba PuHuiTi Heavy</li>
+         * <li><strong>5</strong>: Alimama ShuHeiTi</li>
+         * <li><strong>6</strong>: DingTalk JinBuTi</li>
+         * <li><strong>7</strong>: Alimama DaoLiTi</li>
+         * <li><strong>8</strong>: Alimama DongFangDaKai</li>
+         * <li><strong>9</strong>: Alimama FangYuanTi</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("Font")
         public Integer font;
 
+        /**
+         * <p>The font color.</p>
+         */
         @NameInMap("FontColor")
         public ModifyViewLayoutRequestClockWidgetsFontColor fontColor;
 
         /**
+         * <p>The clock font size.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
         @NameInMap("FontSize")
         public Integer fontSize;
 
+        /**
+         * <p>Specifies whether to display a text box.</p>
+         */
         @NameInMap("HasBox")
         public Boolean hasBox;
 
         /**
+         * <p>The z-axis layer.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -452,6 +523,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Integer layer;
 
         /**
+         * <p>The x-coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -461,6 +533,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Double x;
 
         /**
+         * <p>The y-coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -470,6 +543,8 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Double y;
 
         /**
+         * <p>The time zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -581,6 +656,8 @@ public class ModifyViewLayoutRequest extends TeaModel {
 
     public static class ModifyViewLayoutRequestImages extends TeaModel {
         /**
+         * <p>The opacity of the image.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9</p>
          */
@@ -588,6 +665,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Double alpha;
 
         /**
+         * <p>The height.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -597,6 +675,13 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Double height;
 
         /**
+         * <p>The crop mode of the image. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Crops the image while maintaining the aspect ratio.</li>
+         * <li><strong>2</strong>: Maintains the aspect ratio and adds padding.</li>
+         * <li><strong>3</strong>: Stretches the image to fill the area.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -604,6 +689,8 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Integer imageCropMode;
 
         /**
+         * <p>The z-axis layer.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -611,6 +698,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Integer layer;
 
         /**
+         * <p>The URL of the image.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -620,6 +708,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public String url;
 
         /**
+         * <p>The width.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -629,6 +718,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Double width;
 
         /**
+         * <p>The x-coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -638,6 +728,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Double x;
 
         /**
+         * <p>The y-coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -719,12 +810,14 @@ public class ModifyViewLayoutRequest extends TeaModel {
 
     public static class ModifyViewLayoutRequestLayoutSpecifiedUsers extends TeaModel {
         /**
+         * <p>The list of specified user IDs.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Ids")
         public java.util.List<String> ids;
 
         /**
+         * <p>The user list type. Valid values: black: Blacklist. white: Whitelist.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -758,6 +851,8 @@ public class ModifyViewLayoutRequest extends TeaModel {
 
     public static class ModifyViewLayoutRequestPanesImages extends TeaModel {
         /**
+         * <p>The opacity of the image.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9</p>
          */
@@ -765,6 +860,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Double alpha;
 
         /**
+         * <p>The height.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -774,6 +870,8 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Double height;
 
         /**
+         * <p>The z-axis layer.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -781,6 +879,13 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Integer layer;
 
         /**
+         * <p>The crop mode of the image. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Crops the image while maintaining the aspect ratio.</li>
+         * <li><strong>2</strong>: Maintains the aspect ratio and adds padding.</li>
+         * <li><strong>3</strong>: Stretches the image to fill the area.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -788,6 +893,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Integer paneImageCropMode;
 
         /**
+         * <p>The URL of the image.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -797,6 +903,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public String url;
 
         /**
+         * <p>The width.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -806,6 +913,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Double width;
 
         /**
+         * <p>The x-coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -815,6 +923,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Double x;
 
         /**
+         * <p>The y-coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -896,7 +1005,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
 
     public static class ModifyViewLayoutRequestPanesTextsBoxColor extends TeaModel {
         /**
-         * <p>B。</p>
+         * <p>The blue component.</p>
          * 
          * <strong>example:</strong>
          * <p>255</p>
@@ -905,7 +1014,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Integer b;
 
         /**
-         * <p>G。</p>
+         * <p>The green component.</p>
          * 
          * <strong>example:</strong>
          * <p>255</p>
@@ -914,7 +1023,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Integer g;
 
         /**
-         * <p>R。</p>
+         * <p>The red component.</p>
          * 
          * <strong>example:</strong>
          * <p>255</p>
@@ -955,7 +1064,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
 
     public static class ModifyViewLayoutRequestPanesTextsFontColor extends TeaModel {
         /**
-         * <p>B。</p>
+         * <p>The blue component.</p>
          * 
          * <strong>example:</strong>
          * <p>255</p>
@@ -964,7 +1073,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Integer b;
 
         /**
-         * <p>G。</p>
+         * <p>The green component.</p>
          * 
          * <strong>example:</strong>
          * <p>255</p>
@@ -973,7 +1082,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Integer g;
 
         /**
-         * <p>R。</p>
+         * <p>The red component.</p>
          * 
          * <strong>example:</strong>
          * <p>255</p>
@@ -1014,6 +1123,8 @@ public class ModifyViewLayoutRequest extends TeaModel {
 
     public static class ModifyViewLayoutRequestPanesTexts extends TeaModel {
         /**
+         * <p>The opacity of the watermark.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9</p>
          */
@@ -1021,6 +1132,8 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Double alpha;
 
         /**
+         * <p>The opacity of the text box.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.6</p>
          */
@@ -1028,36 +1141,65 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Double boxAlpha;
 
         /**
+         * <p>The border width of the text box.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
         @NameInMap("BoxBorderw")
         public Integer boxBorderw;
 
+        /**
+         * <p>The border color of the text box.</p>
+         */
         @NameInMap("BoxColor")
         public ModifyViewLayoutRequestPanesTextsBoxColor boxColor;
 
         /**
+         * <p>The font. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Alibaba PuHuiTi Regular</li>
+         * <li><strong>1</strong>: Alibaba PuHuiTi Light</li>
+         * <li><strong>2</strong>: Alibaba PuHuiTi Medium</li>
+         * <li><strong>3</strong>: Alibaba PuHuiTi Bold</li>
+         * <li><strong>4</strong>: Alibaba PuHuiTi Heavy</li>
+         * <li><strong>5</strong>: Alimama ShuHeiTi</li>
+         * <li><strong>6</strong>: DingTalk JinBuTi</li>
+         * <li><strong>7</strong>: Alimama DaoLiTi</li>
+         * <li><strong>8</strong>: Alimama DongFangDaKai</li>
+         * <li><strong>9</strong>: Alimama FangYuanTi</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("Font")
         public Integer font;
 
+        /**
+         * <p>The font color.</p>
+         */
         @NameInMap("FontColor")
         public ModifyViewLayoutRequestPanesTextsFontColor fontColor;
 
         /**
+         * <p>The font size.</p>
+         * 
          * <strong>example:</strong>
          * <p>36</p>
          */
         @NameInMap("FontSize")
         public Integer fontSize;
 
+        /**
+         * <p>Specifies whether to display a text box.</p>
+         */
         @NameInMap("HasBox")
         public Boolean hasBox;
 
         /**
+         * <p>The z-axis layer.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1065,15 +1207,17 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Integer layer;
 
         /**
+         * <p>The content of the watermark.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>文字水印</p>
+         * <p>Text watermark</p>
          */
         @NameInMap("Texture")
         public String texture;
 
         /**
+         * <p>The x-coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1083,6 +1227,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Double x;
 
         /**
+         * <p>The y-coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1195,10 +1340,20 @@ public class ModifyViewLayoutRequest extends TeaModel {
     }
 
     public static class ModifyViewLayoutRequestPanes extends TeaModel {
+        /**
+         * <p>The image watermarks for the pane.</p>
+         */
         @NameInMap("Images")
         public java.util.List<ModifyViewLayoutRequestPanesImages> images;
 
         /**
+         * <p>The crop mode of the image. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Crops the image while maintaining the aspect ratio.</li>
+         * <li><strong>2</strong>: Maintains the aspect ratio and adds padding.</li>
+         * <li><strong>3</strong>: Stretches the image to fill the area.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -1206,6 +1361,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Integer paneCropMode;
 
         /**
+         * <p>The ID of the pane. The ID starts from 0.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1215,6 +1371,12 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public String paneId;
 
         /**
+         * <p>The media source of the pane. You can specify a userId. To specify a specific user type, you can use wildcard configurations. The following types are supported:</p>
+         * <ul>
+         * <li><strong>$ActiveSpeaker</strong>: The active speaker in the current channel.</li>
+         * <li><strong>$ScreenShare</strong>: The user who is sharing the screen. If multiple users are sharing their screens in the channel, the panes are filled in chronological order.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>22</p>
          */
@@ -1222,12 +1384,22 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public String source;
 
         /**
+         * <p>The media type of the pane. Valid values:</p>
+         * <ul>
+         * <li><strong>video</strong>: The camera or screen sharing stream of the user. This is the default value.</li>
+         * <li><strong>camera</strong>: The camera stream.</li>
+         * <li><strong>screen</strong>: The screen sharing stream.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>video</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
+        /**
+         * <p>The text watermarks for the pane.</p>
+         */
         @NameInMap("Texts")
         public java.util.List<ModifyViewLayoutRequestPanesTexts> texts;
 
@@ -1288,7 +1460,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
 
     public static class ModifyViewLayoutRequestTextsBoxColor extends TeaModel {
         /**
-         * <p>B。</p>
+         * <p>The blue component.</p>
          * 
          * <strong>example:</strong>
          * <p>255</p>
@@ -1297,7 +1469,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Integer b;
 
         /**
-         * <p>G。</p>
+         * <p>The green component.</p>
          * 
          * <strong>example:</strong>
          * <p>255</p>
@@ -1306,7 +1478,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Integer g;
 
         /**
-         * <p>R。</p>
+         * <p>The red component.</p>
          * 
          * <strong>example:</strong>
          * <p>255</p>
@@ -1347,7 +1519,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
 
     public static class ModifyViewLayoutRequestTextsFontColor extends TeaModel {
         /**
-         * <p>B。</p>
+         * <p>The blue component.</p>
          * 
          * <strong>example:</strong>
          * <p>255</p>
@@ -1356,7 +1528,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Integer b;
 
         /**
-         * <p>G。</p>
+         * <p>The green component.</p>
          * 
          * <strong>example:</strong>
          * <p>255</p>
@@ -1365,7 +1537,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Integer g;
 
         /**
-         * <p>R。</p>
+         * <p>The red component.</p>
          * 
          * <strong>example:</strong>
          * <p>255</p>
@@ -1406,6 +1578,8 @@ public class ModifyViewLayoutRequest extends TeaModel {
 
     public static class ModifyViewLayoutRequestTexts extends TeaModel {
         /**
+         * <p>The opacity of the watermark.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.1</p>
          */
@@ -1413,6 +1587,8 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Double alpha;
 
         /**
+         * <p>The opacity of the text box.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.6</p>
          */
@@ -1420,36 +1596,65 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Double boxAlpha;
 
         /**
+         * <p>The border width of the text box.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
         @NameInMap("BoxBorderw")
         public Integer boxBorderw;
 
+        /**
+         * <p>The border color of the text box.</p>
+         */
         @NameInMap("BoxColor")
         public ModifyViewLayoutRequestTextsBoxColor boxColor;
 
         /**
+         * <p>The font. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Alibaba PuHuiTi Regular</li>
+         * <li><strong>1</strong>: Alibaba PuHuiTi Light</li>
+         * <li><strong>2</strong>: Alibaba PuHuiTi Medium</li>
+         * <li><strong>3</strong>: Alibaba PuHuiTi Bold</li>
+         * <li><strong>4</strong>: Alibaba PuHuiTi Heavy</li>
+         * <li><strong>5</strong>: Alimama ShuHeiTi</li>
+         * <li><strong>6</strong>: DingTalk JinBuTi</li>
+         * <li><strong>7</strong>: Alimama DaoLiTi</li>
+         * <li><strong>8</strong>: Alimama DongFangDaKai</li>
+         * <li><strong>9</strong>: Alimama FangYuanTi</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("Font")
         public Integer font;
 
+        /**
+         * <p>The font color.</p>
+         */
         @NameInMap("FontColor")
         public ModifyViewLayoutRequestTextsFontColor fontColor;
 
         /**
+         * <p>The font size.</p>
+         * 
          * <strong>example:</strong>
          * <p>36</p>
          */
         @NameInMap("FontSize")
         public Integer fontSize;
 
+        /**
+         * <p>Specifies whether to display a text box.</p>
+         */
         @NameInMap("HasBox")
         public Boolean hasBox;
 
         /**
+         * <p>The z-axis layer.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1457,15 +1662,17 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Integer layer;
 
         /**
+         * <p>The content of the watermark.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>文字水印</p>
+         * <p>Text watermark</p>
          */
         @NameInMap("Texture")
         public String texture;
 
         /**
+         * <p>The x-coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1475,6 +1682,7 @@ public class ModifyViewLayoutRequest extends TeaModel {
         public Double x;
 
         /**
+         * <p>The y-coordinate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

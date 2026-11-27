@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAutoLiveStreamRuleRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query the ID in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopCloudNoteRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class StopCloudNoteRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The channel name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,10 +24,17 @@ public class StopCloudNoteRequest extends TeaModel {
     @NameInMap("ChannelId")
     public String channelId;
 
+    /**
+     * <p>The idempotency parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>53200b81-b761-4c10-842a-a0726d97xxxx</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

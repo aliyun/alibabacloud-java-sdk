@@ -4,10 +4,15 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeEndPointEventListResponseBody extends TeaModel {
+    /**
+     * <p>The list of basic user information.</p>
+     */
     @NameInMap("Nodes")
     public java.util.List<DescribeEndPointEventListResponseBodyNodes> nodes;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
      */
@@ -37,13 +42,21 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
 
     public static class DescribeEndPointEventListResponseBodyNodesEventDataItemsEventList extends TeaModel {
         /**
+         * <p>The event name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>开始发布</p>
+         * <p>Start publishing</p>
          */
         @NameInMap("EventName")
         public String eventName;
 
         /**
+         * <p>The event type. Valid values:</p>
+         * <ul>
+         * <li><strong>USER</strong>: user event</li>
+         * <li><strong>SYSTEM</strong>: system event</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>USER</p>
          */
@@ -51,6 +64,8 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
         public String eventType;
 
         /**
+         * <p>The time when the event occurred. The time is a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1614936817</p>
          */
@@ -58,6 +73,8 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
         public Long ts;
 
         /**
+         * <p>The time when the event occurred. The time is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1614936817123</p>
          */
@@ -104,10 +121,15 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
     }
 
     public static class DescribeEndPointEventListResponseBodyNodesEventDataItems extends TeaModel {
+        /**
+         * <p>The list of events.</p>
+         */
         @NameInMap("EventList")
         public java.util.List<DescribeEndPointEventListResponseBodyNodesEventDataItemsEventList> eventList;
 
         /**
+         * <p>The time when the first event occurred. The time is a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1614936817</p>
          */
@@ -138,10 +160,15 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
     }
 
     public static class DescribeEndPointEventListResponseBodyNodes extends TeaModel {
+        /**
+         * <p>The list of event data.</p>
+         */
         @NameInMap("EventDataItems")
         public java.util.List<DescribeEndPointEventListResponseBodyNodesEventDataItems> eventDataItems;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>testuserid</p>
          */

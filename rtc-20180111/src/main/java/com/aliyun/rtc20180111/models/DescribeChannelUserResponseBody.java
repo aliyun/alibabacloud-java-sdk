@@ -4,19 +4,38 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeChannelUserResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the channel exists. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The channel exists.</li>
+     * <li><strong>false</strong>: The channel does not exist.</li>
+     * </ul>
+     */
     @NameInMap("ChannelExist")
     public Boolean channelExist;
 
+    /**
+     * <p>Indicates whether the user is currently in the channel. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The user is in the channel.</li>
+     * <li><strong>false</strong>: The user is not in the channel.</li>
+     * </ul>
+     */
     @NameInMap("InChannel")
     public Boolean inChannel;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CF8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of session information.</p>
+     */
     @NameInMap("Sessions")
     public java.util.List<DescribeChannelUserResponseBodySessions> sessions;
 
@@ -59,6 +78,8 @@ public class DescribeChannelUserResponseBody extends TeaModel {
 
     public static class DescribeChannelUserResponseBodySessions extends TeaModel {
         /**
+         * <p>The UNIX timestamp in seconds when the user joined the channel. The time is in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>1557909133</p>
          */
@@ -66,6 +87,8 @@ public class DescribeChannelUserResponseBody extends TeaModel {
         public Long joined;
 
         /**
+         * <p>The session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xa744sxx8rtobgj****</p>
          */
@@ -73,6 +96,8 @@ public class DescribeChannelUserResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1811****</p>
          */

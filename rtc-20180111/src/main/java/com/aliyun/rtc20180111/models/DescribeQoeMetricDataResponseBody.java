@@ -4,16 +4,24 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeQoeMetricDataResponseBody extends TeaModel {
+    /**
+     * <p>Audio data.</p>
+     */
     @NameInMap("AudioData")
     public java.util.List<DescribeQoeMetricDataResponseBodyAudioData> audioData;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Video data.</p>
+     */
     @NameInMap("VideoData")
     public java.util.List<DescribeQoeMetricDataResponseBodyVideoData> videoData;
 
@@ -48,6 +56,8 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
 
     public static class DescribeQoeMetricDataResponseBodyAudioDataNodes extends TeaModel {
         /**
+         * <p>X-axis coordinate in the audio trend indicator.</p>
+         * 
          * <strong>example:</strong>
          * <p>1548670256</p>
          */
@@ -55,6 +65,8 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
         public String x;
 
         /**
+         * <p>Y-axis coordinate in the audio trend indicator.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -85,10 +97,19 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
     }
 
     public static class DescribeQoeMetricDataResponseBodyAudioData extends TeaModel {
+        /**
+         * <p>List of coordinate points for the audio trend indicator.</p>
+         */
         @NameInMap("Nodes")
         public java.util.List<DescribeQoeMetricDataResponseBodyAudioDataNodes> nodes;
 
         /**
+         * <p>Communication experience. Valid values:  </p>
+         * <ul>
+         * <li><strong>AUDIO</strong>: Audio bitrate.  </li>
+         * <li><strong>AUDIO_STUCK</strong>: Audio downlink stuttering.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>AUDIO</p>
          */
@@ -96,6 +117,8 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>User ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>testuserid</p>
          */
@@ -135,6 +158,8 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
 
     public static class DescribeQoeMetricDataResponseBodyVideoDataNodes extends TeaModel {
         /**
+         * <p>The x-axis coordinate in the video metric trend graph.</p>
+         * 
          * <strong>example:</strong>
          * <p>1548670256</p>
          */
@@ -142,6 +167,8 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
         public String x;
 
         /**
+         * <p>The y-axis coordinate in the Video Trend Indicator.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -172,10 +199,23 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
     }
 
     public static class DescribeQoeMetricDataResponseBodyVideoData extends TeaModel {
+        /**
+         * <p>List of coordinate points for the video metric trend graph.</p>
+         */
         @NameInMap("Nodes")
         public java.util.List<DescribeQoeMetricDataResponseBodyVideoDataNodes> nodes;
 
         /**
+         * <p>The type of metric that impacts communication experience. Valid values:</p>
+         * <ul>
+         * <li><strong>VIDEO_CAMERA</strong>: Camera bitrate.</li>
+         * <li><strong>VIDEO_SCREEN_SHARE</strong>: Screen sharing stream bitrate.</li>
+         * <li><strong>VIDEO_STUCK_CAMERA</strong>: Camera stuttering.</li>
+         * <li><strong>VIDEO_STUCK_SCREEN_SHARE</strong>: Screen sharing stuttering.</li>
+         * <li><strong>VIDEO_VAGUE_CAMERA</strong>: Camera blur.</li>
+         * <li><strong>VIDEO_VAGUE_SCREEN_SHARE</strong>: Screen sharing blur.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>VIDEO_CAMERA</p>
          */
@@ -183,6 +223,8 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>User ID</p>
+         * 
          * <strong>example:</strong>
          * <p>testuserid</p>
          */

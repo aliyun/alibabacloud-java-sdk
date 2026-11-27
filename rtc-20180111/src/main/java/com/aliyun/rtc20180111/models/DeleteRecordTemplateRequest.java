@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteRecordTemplateRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class DeleteRecordTemplateRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The configuration template ID. For more information about how to obtain the template ID, see <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

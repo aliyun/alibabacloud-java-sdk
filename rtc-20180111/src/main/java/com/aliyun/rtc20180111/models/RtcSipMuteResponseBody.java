@@ -4,10 +4,15 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class RtcSipMuteResponseBody extends TeaModel {
+    /**
+     * <p>The error tracks.</p>
+     */
     @NameInMap("ErrTracks")
     public java.util.List<RtcSipMuteResponseBodyErrTracks> errTracks;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E7997404-5858-5C4D-94E4-33677412ACDC</p>
      */
@@ -37,7 +42,7 @@ public class RtcSipMuteResponseBody extends TeaModel {
 
     public static class RtcSipMuteResponseBodyErrTracks extends TeaModel {
         /**
-         * <p>ErrMsg。</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>participant does not existed.</p>
@@ -46,6 +51,8 @@ public class RtcSipMuteResponseBody extends TeaModel {
         public String errMsg;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -53,7 +60,7 @@ public class RtcSipMuteResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>OperationId。</p>
+         * <p>The operation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>12122121</p>

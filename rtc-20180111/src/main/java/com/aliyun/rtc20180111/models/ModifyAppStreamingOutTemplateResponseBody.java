@@ -14,6 +14,8 @@ public class ModifyAppStreamingOutTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Template ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac7N****</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeRtcChannelMetricResponseBody extends TeaModel {
+    /**
+     * <p>The detailed information.</p>
+     */
     @NameInMap("ChannelMetricInfo")
     public DescribeRtcChannelMetricResponseBodyChannelMetricInfo channelMetricInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
      */
@@ -37,6 +42,8 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
 
     public static class DescribeRtcChannelMetricResponseBodyChannelMetricInfoChannelMetric extends TeaModel {
         /**
+         * <p>The channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>example_channel</p>
          */
@@ -44,6 +51,8 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
         public String channelId;
 
         /**
+         * <p>The time when the user left the channel, in UTC. The time is in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2019-06-06T18:57:00Z</p>
          */
@@ -51,6 +60,8 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The number of users that entered the channel and successfully published streams.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -58,6 +69,8 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
         public Integer pubUserCount;
 
         /**
+         * <p>The time when the user joined the channel, in UTC. The time is in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2019-06-06T17:57:00Z</p>
          */
@@ -65,6 +78,8 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The number of users that entered the channel and successfully subscribed to streams.</p>
+         * 
          * <strong>example:</strong>
          * <p>25</p>
          */
@@ -72,6 +87,8 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
         public Integer subUserCount;
 
         /**
+         * <p>The number of users that entered the channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -135,6 +152,8 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
 
     public static class DescribeRtcChannelMetricResponseBodyChannelMetricInfoDurationPubDuration extends TeaModel {
         /**
+         * <p>The duration of audio. Unit: minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -142,6 +161,8 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
         public Integer audio;
 
         /**
+         * <p>The duration of screen sharing. Unit: minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -149,6 +170,8 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
         public Integer content;
 
         /**
+         * <p>The duration of full high-definition (FHD) videos. Unit: minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -156,6 +179,8 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
         public Integer video1080;
 
         /**
+         * <p>The duration of standard-definition (SD) videos. Unit: minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -163,6 +188,8 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
         public Integer video360;
 
         /**
+         * <p>The duration of high-definition (HD) videos. Unit: minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -218,6 +245,8 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
 
     public static class DescribeRtcChannelMetricResponseBodyChannelMetricInfoDurationSubDuration extends TeaModel {
         /**
+         * <p>The duration of audio. Unit: minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -225,6 +254,8 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
         public Integer audio;
 
         /**
+         * <p>The duration of screen sharing. Unit: minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -232,6 +263,8 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
         public Integer content;
 
         /**
+         * <p>The duration of full high-definition (FHD) videos. Unit: minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -239,6 +272,8 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
         public Integer video1080;
 
         /**
+         * <p>The duration of standard-definition (SD) videos. Unit: minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -246,6 +281,8 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
         public Integer video360;
 
         /**
+         * <p>The duration of high-definition (HD) videos. Unit: minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -300,9 +337,15 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
     }
 
     public static class DescribeRtcChannelMetricResponseBodyChannelMetricInfoDuration extends TeaModel {
+        /**
+         * <p>The duration information about publishing streams.</p>
+         */
         @NameInMap("PubDuration")
         public DescribeRtcChannelMetricResponseBodyChannelMetricInfoDurationPubDuration pubDuration;
 
+        /**
+         * <p>The duration information about subscribing to streams.</p>
+         */
         @NameInMap("SubDuration")
         public DescribeRtcChannelMetricResponseBodyChannelMetricInfoDurationSubDuration subDuration;
 
@@ -330,9 +373,15 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
     }
 
     public static class DescribeRtcChannelMetricResponseBodyChannelMetricInfo extends TeaModel {
+        /**
+         * <p>The user information of the channel.</p>
+         */
         @NameInMap("ChannelMetric")
         public DescribeRtcChannelMetricResponseBodyChannelMetricInfoChannelMetric channelMetric;
 
+        /**
+         * <p>The duration information.</p>
+         */
         @NameInMap("Duration")
         public DescribeRtcChannelMetricResponseBodyChannelMetricInfoDuration duration;
 

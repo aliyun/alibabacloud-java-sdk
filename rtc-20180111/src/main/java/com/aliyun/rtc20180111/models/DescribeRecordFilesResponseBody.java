@@ -4,10 +4,15 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecordFilesResponseBody extends TeaModel {
+    /**
+     * <p>The file list.</p>
+     */
     @NameInMap("RecordFiles")
     public java.util.List<DescribeRecordFilesResponseBodyRecordFiles> recordFiles;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>760bad53276431c499e30dc36f6b****</p>
      */
@@ -15,6 +20,8 @@ public class DescribeRecordFilesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class DescribeRecordFilesResponseBody extends TeaModel {
     public Long totalNum;
 
     /**
+     * <p>The total number of pages returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -67,6 +76,8 @@ public class DescribeRecordFilesResponseBody extends TeaModel {
 
     public static class DescribeRecordFilesResponseBodyRecordFiles extends TeaModel {
         /**
+         * <p>The application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>yourAppId</p>
          */
@@ -74,6 +85,8 @@ public class DescribeRecordFilesResponseBody extends TeaModel {
         public String appId;
 
         /**
+         * <p>The channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>yourChannelId</p>
          */
@@ -81,6 +94,8 @@ public class DescribeRecordFilesResponseBody extends TeaModel {
         public String channelId;
 
         /**
+         * <p>The creation time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-10-02T17:36:00Z</p>
          */
@@ -88,6 +103,8 @@ public class DescribeRecordFilesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The duration of the recording file.</p>
+         * 
          * <strong>example:</strong>
          * <p>1800</p>
          */
@@ -95,6 +112,8 @@ public class DescribeRecordFilesResponseBody extends TeaModel {
         public Float duration;
 
         /**
+         * <p>The start time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-11-01T17:36:00Z</p>
          */
@@ -102,6 +121,8 @@ public class DescribeRecordFilesResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The end time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-11-02T17:36:00Z</p>
          */
@@ -109,12 +130,17 @@ public class DescribeRecordFilesResponseBody extends TeaModel {
         public String stopTime;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>yourTaskId</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The OSS URL of the recording file.</p>
+         */
         @NameInMap("Url")
         public String url;
 

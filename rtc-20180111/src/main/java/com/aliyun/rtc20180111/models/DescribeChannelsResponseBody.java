@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeChannelsResponseBody extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,16 +14,23 @@ public class DescribeChannelsResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of items per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The active channels.</p>
+     */
     @NameInMap("Records")
     public java.util.List<String> records;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CF8</p>
      */
@@ -29,6 +38,8 @@ public class DescribeChannelsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total count.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

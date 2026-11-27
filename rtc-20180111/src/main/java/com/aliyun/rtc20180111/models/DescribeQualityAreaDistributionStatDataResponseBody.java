@@ -4,10 +4,15 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeQualityAreaDistributionStatDataResponseBody extends TeaModel {
+    /**
+     * <p>The list of quality distribution data.</p>
+     */
     @NameInMap("QualityStatDataList")
     public java.util.List<DescribeQualityAreaDistributionStatDataResponseBodyQualityStatDataList> qualityStatDataList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
      */
@@ -37,6 +42,8 @@ public class DescribeQualityAreaDistributionStatDataResponseBody extends TeaMode
 
     public static class DescribeQualityAreaDistributionStatDataResponseBodyQualityStatDataList extends TeaModel {
         /**
+         * <p>The audio delay, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>347</p>
          */
@@ -44,6 +51,8 @@ public class DescribeQualityAreaDistributionStatDataResponseBody extends TeaMode
         public Long audioDelay;
 
         /**
+         * <p>The high-quality transmission rate of audio, represented by a four-decimal number.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9933</p>
          */
@@ -51,6 +60,8 @@ public class DescribeQualityAreaDistributionStatDataResponseBody extends TeaMode
         public String audioHighQualityTransmissionRate;
 
         /**
+         * <p>The audio stuttering rate, represented by a four-decimal number.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0021</p>
          */
@@ -58,6 +69,8 @@ public class DescribeQualityAreaDistributionStatDataResponseBody extends TeaMode
         public String audioStuckRate;
 
         /**
+         * <p>The ratio of the call duration, represented by a four-decimal number. For example, 1.0000 indicates that the call duration ratio is 100%.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.6654</p>
          */
@@ -65,6 +78,8 @@ public class DescribeQualityAreaDistributionStatDataResponseBody extends TeaMode
         public String callDurationRatio;
 
         /**
+         * <p>The success rate of joining a channel within 5 seconds, represented by a four-decimal number.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9338</p>
          */
@@ -72,6 +87,8 @@ public class DescribeQualityAreaDistributionStatDataResponseBody extends TeaMode
         public String joinChannelSucFiveSecRate;
 
         /**
+         * <p>The success rate of joining a channel, represented by a four-decimal number.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9356</p>
          */
@@ -79,13 +96,17 @@ public class DescribeQualityAreaDistributionStatDataResponseBody extends TeaMode
         public String joinChannelSucRate;
 
         /**
+         * <p>The name of the region.</p>
+         * 
          * <strong>example:</strong>
-         * <p>中国_浙江省</p>
+         * <p>China_Zhejiang Province</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The video delay, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>291</p>
          */
@@ -93,6 +114,8 @@ public class DescribeQualityAreaDistributionStatDataResponseBody extends TeaMode
         public Long videoDelay;
 
         /**
+         * <p>The time taken to render the first video frame, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1363</p>
          */
@@ -100,6 +123,8 @@ public class DescribeQualityAreaDistributionStatDataResponseBody extends TeaMode
         public Long videoFirstPicDuration;
 
         /**
+         * <p>The high-quality transmission rate of video, represented by a four-decimal number.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9967</p>
          */
@@ -107,6 +132,8 @@ public class DescribeQualityAreaDistributionStatDataResponseBody extends TeaMode
         public String videoHighQualityTransmissionRate;
 
         /**
+         * <p>The video stuttering rate, represented by a four-decimal number.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0058</p>
          */

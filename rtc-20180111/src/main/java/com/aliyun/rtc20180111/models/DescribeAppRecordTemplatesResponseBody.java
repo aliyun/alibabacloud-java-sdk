@@ -13,10 +13,15 @@ public class DescribeAppRecordTemplatesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of templates.</p>
+     */
     @NameInMap("Templates")
     public java.util.List<DescribeAppRecordTemplatesResponseBodyTemplates> templates;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -24,6 +29,8 @@ public class DescribeAppRecordTemplatesResponseBody extends TeaModel {
     public Long totalNum;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -69,6 +76,8 @@ public class DescribeAppRecordTemplatesResponseBody extends TeaModel {
 
     public static class DescribeAppRecordTemplatesResponseBodyTemplates extends TeaModel {
         /**
+         * <p>The creation time. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-09-04T06:22:15Z</p>
          */
@@ -76,6 +85,8 @@ public class DescribeAppRecordTemplatesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The delay time before stopping the recording. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>180</p>
          */
@@ -83,6 +94,11 @@ public class DescribeAppRecordTemplatesResponseBody extends TeaModel {
         public Long delayStopTime;
 
         /**
+         * <p>The naming rule for recording files.</p>
+         * <blockquote>
+         * <p>To ensure the uniqueness of recording file names, the current naming rule is record/{AppId}/{ChannelId}<em>{TaskId}/{EscapedStartTime}</em>{EscapedEndTime}.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>record/{AppId}/{ChannelId_TaskId}/{EscapedStartTime}_{EscapedEndTime}</p>
          */
@@ -90,19 +106,32 @@ public class DescribeAppRecordTemplatesResponseBody extends TeaModel {
         public String filePrefix;
 
         /**
+         * <p>The splitting duration of the recording file. The value must be greater than or equal to 1800. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1800</p>
          */
         @NameInMap("FileSplitInterval")
         public Long fileSplitInterval;
 
+        /**
+         * <p>The formats of the recording file. Valid values: .m3u8, .mp4, and .flv.</p>
+         * <blockquote>
+         * <p>Only lowercase letters are supported for file formats.</p>
+         * </blockquote>
+         */
         @NameInMap("Formats")
         public java.util.List<String> formats;
 
+        /**
+         * <p>The list of layout IDs.</p>
+         */
         @NameInMap("LayoutIds")
         public java.util.List<String> layoutIds;
 
         /**
+         * <p>The encoding options.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -110,13 +139,17 @@ public class DescribeAppRecordTemplatesResponseBody extends TeaModel {
         public Integer mediaEncode;
 
         /**
+         * <p>The template name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>wv7N****</p>
          */

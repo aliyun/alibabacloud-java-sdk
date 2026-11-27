@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAppViewTemplatesRequest extends TeaModel {
     /**
+     * <p>Application ID. Create and view it in the console. You can specify only one ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,15 @@ public class DescribeAppViewTemplatesRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>Search condition.</p>
+     */
     @NameInMap("Condition")
     public DescribeAppViewTemplatesRequestCondition condition;
 
     /**
+     * <p>Page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -24,6 +30,8 @@ public class DescribeAppViewTemplatesRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>Number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -69,6 +77,8 @@ public class DescribeAppViewTemplatesRequest extends TeaModel {
 
     public static class DescribeAppViewTemplatesRequestCondition extends TeaModel {
         /**
+         * <p>Template name.</p>
+         * 
          * <strong>example:</strong>
          * <p>测试</p>
          */
@@ -76,6 +86,8 @@ public class DescribeAppViewTemplatesRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>Template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>Bj6D****</p>
          */

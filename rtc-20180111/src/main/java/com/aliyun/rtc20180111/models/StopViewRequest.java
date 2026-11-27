@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopViewRequest extends TeaModel {
     /**
+     * <p>The application ID. Create and query it in the console. Only one ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class StopViewRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>An existing channel ID. Only one ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class StopViewRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>An existing task ID. Only one ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

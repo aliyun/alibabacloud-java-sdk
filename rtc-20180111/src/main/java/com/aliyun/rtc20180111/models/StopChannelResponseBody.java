@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StopChannelResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CF8</p>
      */

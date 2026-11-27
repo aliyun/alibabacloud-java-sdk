@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeUsageOsSdkVersionDistributionStatDataResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>List of SDK version data in usage statistics.</p>
+     */
     @NameInMap("UsageOsSdkVersionStatList")
     public java.util.List<DescribeUsageOsSdkVersionDistributionStatDataResponseBodyUsageOsSdkVersionStatList> usageOsSdkVersionStatList;
 
@@ -37,6 +42,8 @@ public class DescribeUsageOsSdkVersionDistributionStatDataResponseBody extends T
 
     public static class DescribeUsageOsSdkVersionDistributionStatDataResponseBodyUsageOsSdkVersionStatList extends TeaModel {
         /**
+         * <p>Audio call duration, in minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -44,6 +51,8 @@ public class DescribeUsageOsSdkVersionDistributionStatDataResponseBody extends T
         public Long audioCallDuration;
 
         /**
+         * <p>Call duration ratio, represented as a four-decimal number, such as 0.0984.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0984</p>
          */
@@ -51,6 +60,8 @@ public class DescribeUsageOsSdkVersionDistributionStatDataResponseBody extends T
         public String callDurationRatio;
 
         /**
+         * <p>SDK version name, such as 1.0.0 or 1.1.1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
          */
@@ -58,6 +69,8 @@ public class DescribeUsageOsSdkVersionDistributionStatDataResponseBody extends T
         public String name;
 
         /**
+         * <p>Operating system, such as iOS or Android.</p>
+         * 
          * <strong>example:</strong>
          * <p>macOS</p>
          */
@@ -65,6 +78,8 @@ public class DescribeUsageOsSdkVersionDistributionStatDataResponseBody extends T
         public String os;
 
         /**
+         * <p>Total call duration, in minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>476</p>
          */
@@ -72,6 +87,8 @@ public class DescribeUsageOsSdkVersionDistributionStatDataResponseBody extends T
         public Long totalCallDuration;
 
         /**
+         * <p>Video call duration, in minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>473</p>
          */

@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeRtcUserCntDataRequest extends TeaModel {
     /**
+     * <p>The application ID. You can specify only one ID.</p>
+     * <p>By default, all application IDs are queried.</p>
+     * 
      * <strong>example:</strong>
      * <p>yourAppId</p>
      */
@@ -12,6 +15,9 @@ public class DescribeRtcUserCntDataRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The end time of the queried data. The time is displayed in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>The end time must be later than the start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2018-01-29T01:00:00Z</p>
      */
@@ -19,6 +25,9 @@ public class DescribeRtcUserCntDataRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The time granularity at which the data is queried. Unit: seconds.</p>
+     * <p>Valid values: <strong>3600</strong> (one hour) or <strong>86400</strong> (one day). Default value: <strong>3600</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>3600</p>
      */
@@ -29,6 +38,8 @@ public class DescribeRtcUserCntDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The service area. CN: China (default value).</p>
+     * 
      * <strong>example:</strong>
      * <p>CN</p>
      */
@@ -36,6 +47,8 @@ public class DescribeRtcUserCntDataRequest extends TeaModel {
     public String serviceArea;
 
     /**
+     * <p>The start time of the queried data. The time is displayed in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
+     * 
      * <strong>example:</strong>
      * <p>2018-01-29T00:00:00Z</p>
      */

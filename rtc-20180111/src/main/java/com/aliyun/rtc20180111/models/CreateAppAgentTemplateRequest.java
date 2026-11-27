@@ -4,13 +4,20 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class CreateAppAgentTemplateRequest extends TeaModel {
+    /**
+     * <p>The agent silence configuration.</p>
+     */
     @NameInMap("AgentSilenceConfig")
     public CreateAppAgentTemplateRequestAgentSilenceConfig agentSilenceConfig;
 
+    /**
+     * <p>The ambient environment configuration for the agent. If this parameter is not specified, the ambient environment configuration is not used.</p>
+     */
     @NameInMap("AmbientSoundConfig")
     public CreateAppAgentTemplateRequestAmbientSoundConfig ambientSoundConfig;
 
     /**
+     * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,54 +26,107 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The speech-to-text settings.</p>
+     */
     @NameInMap("AsrConfig")
     public CreateAppAgentTemplateRequestAsrConfig asrConfig;
 
+    /**
+     * <p>The agent backchannel configuration.</p>
+     */
     @NameInMap("BackChannelConfig")
     public CreateAppAgentTemplateRequestBackChannelConfig backChannelConfig;
 
     /**
+     * <p>The conversation mode. Valid values:</p>
+     * <ul>
+     * <li>1: Natural conversation mode (default).</li>
+     * <li>2: Walkie-talkie mode.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("ChatMode")
     public Integer chatMode;
 
+    /**
+     * <p>Specifies whether to enable video understanding. If enabled, the LLM must support multimodal data.</p>
+     */
     @NameInMap("EnableVideoUnderstanding")
     public Boolean enableVideoUnderstanding;
 
+    /**
+     * <p>The greeting message. The maximum length is 500 characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Good morning, my friend!</p>
+     */
     @NameInMap("Greeting")
     public String greeting;
 
+    /**
+     * <p>The agent interruption configuration.</p>
+     */
     @NameInMap("InterruptConfig")
     public CreateAppAgentTemplateRequestInterruptConfig interruptConfig;
 
     /**
+     * <p>The interruption mode. Valid values:</p>
+     * <ul>
+     * <li>1: Interruption allowed (default).</li>
+     * <li>2: Interruption disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("InterruptMode")
     public Integer interruptMode;
 
+    /**
+     * <p>The large language model settings.</p>
+     */
     @NameInMap("LlmConfig")
     public CreateAppAgentTemplateRequestLlmConfig llmConfig;
 
     /**
+     * <p>The template name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>智能体模版</p>
+     * <p>Agent template</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The preferred video stream for the agent to process when visual understanding is enabled. The agent can process only one video stream at a time. When both the camera stream and the screen sharing stream are pushed simultaneously, this parameter specifies the preferred stream. Valid values:</p>
+     * <ul>
+     * <li>1: The agent preferentially processes the camera stream.</li>
+     * <li>2: The agent preferentially processes the screen sharing stream.
+     * Default value: 1.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PreferVideo")
     public Integer preferVideo;
 
+    /**
+     * <p>The text-to-speech settings.</p>
+     */
     @NameInMap("TtsConfig")
     public CreateAppAgentTemplateRequestTtsConfig ttsConfig;
 
     /**
+     * <p>The agent type. Valid values:</p>
+     * <ul>
+     * <li>1: Voice call (default).</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -200,16 +260,31 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
 
     public static class CreateAppAgentTemplateRequestAgentSilenceConfig extends TeaModel {
         /**
+         * <p>The timeout period for silence alerts, in seconds. This alert can be triggered multiple times. If the agent remains silent after the timeout period elapses, the alert is triggered again upon the next timeout. Valid values: 5 to 600. Default value: 0. A value of 0 indicates that no alert is triggered.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
         @NameInMap("AlertTimeout")
         public Integer alertTimeout;
 
+        /**
+         * <p>The content of the silence prompt message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello, please try again later?</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>The handling strategy for silence timeout. Valid values:</p>
+         * <ul>
+         * <li>1: Broadcasts the prompt message specified by Content to the user via voice.</li>
+         * <li>2: Sends the prompt message specified by Content and the conversation history to the LLM, and broadcasts the reply generated by the model.
+         * Default value: 1.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -217,6 +292,8 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
         public Integer strategy;
 
         /**
+         * <p>The timeout period for triggering the webhook upon agent silence, in seconds. This webhook can be triggered multiple times. If the agent remains silent after the webhook timeout period elapses, the webhook is triggered again upon the next timeout. Valid values: 10 to 600. Default value: 0. A value of 0 indicates that the webhook is not triggered.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -264,6 +341,12 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
 
     public static class CreateAppAgentTemplateRequestAmbientSoundConfig extends TeaModel {
         /**
+         * <p>The default ambient sounds provided by the agent. Valid values:</p>
+         * <ul>
+         * <li>white_noise </li>
+         * <li>office</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>white_noise</p>
          */
@@ -271,6 +354,8 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
         public String soundId;
 
         /**
+         * <p>The volume level.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -302,6 +387,8 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
 
     public static class CreateAppAgentTemplateRequestAsrConfigVadConfig extends TeaModel {
         /**
+         * <p>The minimum duration of continuous voice signals in milliseconds to avoid false interruptions. Default value: 300. Valid values: 0 to 3000.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -325,6 +412,12 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
 
     public static class CreateAppAgentTemplateRequestAsrConfigWordWeights extends TeaModel {
         /**
+         * <p>The language code. This parameter is optional. The large language model automatically identifies the language. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>zh</p>
          */
@@ -332,6 +425,7 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
         public String lang;
 
         /**
+         * <p>The hot word weight. Valid values: integers from 1 to 5. Common value: 4. If the effect is not obvious, you can increase the weight. However, a large weight may cause negative effects and lead to inaccurate recognition of other words.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -341,10 +435,11 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
         public Integer weight;
 
         /**
+         * <p>The hot word text. Each word can be up to 10 Chinese characters or English words in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>苹果</p>
+         * <p>Apple</p>
          */
         @NameInMap("Word")
         public String word;
@@ -382,6 +477,8 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
 
     public static class CreateAppAgentTemplateRequestAsrConfig extends TeaModel {
         /**
+         * <p>The sentence silence detection threshold. Default value: 500 ms. Valid values: 200 to 6000.</p>
+         * 
          * <strong>example:</strong>
          * <p>300</p>
          */
@@ -389,6 +486,7 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
         public Integer maxSentenceSilence;
 
         /**
+         * <p>The name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -397,9 +495,15 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The voice activity detection (VAD) configuration.</p>
+         */
         @NameInMap("VadConfig")
         public CreateAppAgentTemplateRequestAsrConfigVadConfig vadConfig;
 
+        /**
+         * <p>The hot words. Each vocabulary can contain up to 500 hot words, and each hot word can be up to 10 Chinese characters in length. Hot words must be UTF-8 encoded and cannot contain punctuation marks or special characters. Otherwise, the hot words do not take effect.</p>
+         */
         @NameInMap("WordWeights")
         public java.util.List<CreateAppAgentTemplateRequestAsrConfigWordWeights> wordWeights;
 
@@ -443,6 +547,9 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
     }
 
     public static class CreateAppAgentTemplateRequestBackChannelConfig extends TeaModel {
+        /**
+         * <p>Specifies whether to enable backchanneling.</p>
+         */
         @NameInMap("UserTurnEnd")
         public Boolean userTurnEnd;
 
@@ -462,6 +569,9 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
     }
 
     public static class CreateAppAgentTemplateRequestInterruptConfig extends TeaModel {
+        /**
+         * <p>The semantic interruption configuration.</p>
+         */
         @NameInMap("SemanticsInterrupt")
         public Boolean semanticsInterrupt;
 
@@ -481,10 +591,14 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
     }
 
     public static class CreateAppAgentTemplateRequestLlmConfig extends TeaModel {
+        /**
+         * <p>The ID of the Model Studio agent.</p>
+         */
         @NameInMap("AgentAppId")
         public String agentAppId;
 
         /**
+         * <p>The API key required by the large language model service provider.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -494,6 +608,8 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
         public String apiKey;
 
         /**
+         * <p>The number of historical conversation turns provided to the large language model. Maximum value: 100. Default value: 50.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -501,6 +617,8 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
         public Integer historyDepth;
 
         /**
+         * <p>The maximum number of tokens for the output text. Default value: 8192.</p>
+         * 
          * <strong>example:</strong>
          * <p>1024</p>
          */
@@ -508,6 +626,7 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
         public Integer maxToken;
 
         /**
+         * <p>The name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -516,10 +635,18 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The prompt for the large language model. The maximum length is 5,000 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You are a senior psychiatrist</p>
+         */
         @NameInMap("Prompt")
         public String prompt;
 
         /**
+         * <p>The sampling temperature. Default value: 0.7. Valid values: [0, 2).</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9</p>
          */
@@ -527,6 +654,8 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
         public Float temperature;
 
         /**
+         * <p>The top-P sampling range. Default value: 0.8. Valid values: (0, 1].</p>
+         * 
          * <strong>example:</strong>
          * <p>0.8</p>
          */
@@ -534,6 +663,8 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
         public Float topP;
 
         /**
+         * <p>The endpoint URL for connecting to a third-party large language model.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://llm.example.aliyuns.com">https://llm.example.aliyuns.com</a></p>
          */
@@ -541,6 +672,7 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
         public String url;
 
         /**
+         * <p>The provider. Alibaba Cloud Model Studio and third-party configurations that comply with OpenAI API specifications are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -638,6 +770,7 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
 
     public static class CreateAppAgentTemplateRequestTtsConfig extends TeaModel {
         /**
+         * <p>The API key required by the large language model service provider.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -646,10 +779,21 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
         @NameInMap("ApiKey")
         public String apiKey;
 
+        /**
+         * <p>The filter settings. Valid values:</p>
+         * <ul>
+         * <li>1: Chinese parentheses （）</li>
+         * <li>2: English parentheses ()</li>
+         * <li>3: Chinese square brackets 【】</li>
+         * <li>4: English square brackets []</li>
+         * <li>5: English curly braces {}</li>
+         * </ul>
+         */
         @NameInMap("FilterBrackets")
         public java.util.List<Integer> filterBrackets;
 
         /**
+         * <p>The name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -659,6 +803,8 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The pitch. Default value: 1.0. Valid values: 0.5 to 2.0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.8</p>
          */
@@ -666,6 +812,8 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
         public Float pitch;
 
         /**
+         * <p>The speech rate. Default value: 1.0. Valid values: 0.5 to 2.0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.8</p>
          */
@@ -673,6 +821,8 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
         public Float rate;
 
         /**
+         * <p>The provider. Alibaba Cloud Model Studio is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>aliyun</p>
          */
@@ -680,6 +830,30 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
         public String vendor;
 
         /**
+         * <p>The voice. Default value: longxiaoxia. Valid values:</p>
+         * <ul>
+         * <li>longwan</li>
+         * <li>longcheng</li>
+         * <li>longhua</li>
+         * <li>longxiaochun</li>
+         * <li>longxiaoxia</li>
+         * <li>longxiaocheng</li>
+         * <li>longxiaobai</li>
+         * <li>longlaotie</li>
+         * <li>longshu</li>
+         * <li>longshuo</li>
+         * <li>longjing</li>
+         * <li>longmiao</li>
+         * <li>longyue</li>
+         * <li>longyuan</li>
+         * <li>longfei</li>
+         * <li>longjielidou</li>
+         * <li>longtong</li>
+         * <li>longxiang</li>
+         * <li>loongstella</li>
+         * <li>loongbella</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>longcheng</p>
          */
@@ -687,6 +861,8 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
         public String voice;
 
         /**
+         * <p>The volume. Default value: 50. Valid values: 0 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>70</p>
          */

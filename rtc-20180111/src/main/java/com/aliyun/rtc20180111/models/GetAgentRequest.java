@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAgentRequest extends TeaModel {
     /**
+     * <p>Application ID. You can create and view this ID in the console. Only one ID is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>aec****</p>
      */
@@ -12,6 +14,8 @@ public class GetAgentRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>Channel ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */
@@ -19,6 +23,8 @@ public class GetAgentRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>Task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>yourTaskId</p>
      */

@@ -14,6 +14,8 @@ public class CreateAppViewTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The template ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>bc5v****</p>
      */

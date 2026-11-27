@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateCloudNotePhrasesResponseBody extends TeaModel {
     /**
+     * <p>The ID of the hotword table.</p>
+     * 
      * <strong>example:</strong>
      * <p>21088b2617489486958531017d0b19</p>
      */

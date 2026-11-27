@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAppsRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query application IDs in the console. Only a single ID is supported. If this parameter is left empty, all application IDs are queried.</p>
+     * 
      * <strong>example:</strong>
      * <p>yourAppId</p>
      */
@@ -12,6 +14,8 @@ public class DescribeAppsRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The application version.</p>
+     * 
      * <strong>example:</strong>
      * <p>3.0</p>
      */
@@ -19,6 +23,14 @@ public class DescribeAppsRequest extends TeaModel {
     public String appVersion;
 
     /**
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li><p><strong>asc</strong>: Ascending.</p>
+     * </li>
+     * <li><p><strong>desc</strong>: Descending. Default value.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>asc</p>
      */
@@ -29,6 +41,8 @@ public class DescribeAppsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +50,8 @@ public class DescribeAppsRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -43,6 +59,16 @@ public class DescribeAppsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The application status. If this parameter is left empty, all statuses are queried. Valid values:</p>
+     * <ul>
+     * <li><p><strong>1</strong>: Available.</p>
+     * </li>
+     * <li><p><strong>2</strong>: Disabled.</p>
+     * </li>
+     * <li><p><strong>3</strong>: Disabled due to overdue payments.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

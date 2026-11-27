@@ -4,10 +4,15 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppLayoutsResponseBody extends TeaModel {
+    /**
+     * <p>The list of layouts.</p>
+     */
     @NameInMap("Layouts")
     public java.util.List<DescribeAppLayoutsResponseBodyLayouts> layouts;
 
     /**
+     * <p>The ID of this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
      */
@@ -15,6 +20,8 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
     public Long totalNum;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -67,6 +76,8 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
 
     public static class DescribeAppLayoutsResponseBodyLayoutsPanes extends TeaModel {
         /**
+         * <p>The pane height, as a normalized percentage. The value range for Height is 0.0 &lt; Height ≤ 1.0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.25</p>
          */
@@ -74,6 +85,8 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
         public Float height;
 
         /**
+         * <p>The pane ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -81,6 +94,8 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
         public Integer paneId;
 
         /**
+         * <p>The pane width, as a normalized percentage. The value range for Width is 0.0 &lt; Width ≤ 1.0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.25</p>
          */
@@ -88,6 +103,8 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
         public Float width;
 
         /**
+         * <p>The X coordinate, as a normalized percentage. The value range for X is 0.0 ≤ X ≤ 1.0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.25</p>
          */
@@ -95,6 +112,8 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
         public Float x;
 
         /**
+         * <p>The Y coordinate, as a normalized percentage. The value range for Y is 0.0 ≤ Y ≤ 1.0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.25</p>
          */
@@ -102,6 +121,8 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
         public Float y;
 
         /**
+         * <p>The Z-order. 0 is the bottom layer, 1 is above 0, and so on.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -165,6 +186,8 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
 
     public static class DescribeAppLayoutsResponseBodyLayouts extends TeaModel {
         /**
+         * <p>The layout ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>167466539798442****</p>
          */
@@ -172,12 +195,17 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
         public String layoutId;
 
         /**
+         * <p>The layout name.</p>
+         * 
          * <strong>example:</strong>
          * <p>测试</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The list of panes.</p>
+         */
         @NameInMap("Panes")
         public java.util.List<DescribeAppLayoutsResponseBodyLayoutsPanes> panes;
 

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAppAgentTemplatesRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeAppAgentTemplatesRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The template ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123121414122313121313</p>
      */
@@ -21,13 +24,17 @@ public class DescribeAppAgentTemplatesRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The template name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>智能体模版</p>
+     * <p>Agent template</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -35,6 +42,8 @@ public class DescribeAppAgentTemplatesRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

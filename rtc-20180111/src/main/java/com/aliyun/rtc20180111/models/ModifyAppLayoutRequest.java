@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAppLayoutRequest extends TeaModel {
     /**
+     * <p>Application ID. Create and query through the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ModifyAppLayoutRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>Idempotent parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>53200b81-b761-4c10-842a-a0726d97xxxx</p>
      */
@@ -21,6 +24,7 @@ public class ModifyAppLayoutRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Layout.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Layout")
@@ -57,6 +61,8 @@ public class ModifyAppLayoutRequest extends TeaModel {
 
     public static class ModifyAppLayoutRequestLayoutPanes extends TeaModel {
         /**
+         * <p>Pane height, normalized percentage. Height ranges from 0.0&lt;Height≤1.0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.25</p>
          */
@@ -64,6 +70,8 @@ public class ModifyAppLayoutRequest extends TeaModel {
         public Double height;
 
         /**
+         * <p>Pane ID, starting from 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -71,6 +79,8 @@ public class ModifyAppLayoutRequest extends TeaModel {
         public Long paneId;
 
         /**
+         * <p>Pane width, normalized percentage. Width ranges from 0.0&lt;Width≤1.0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.25</p>
          */
@@ -78,6 +88,8 @@ public class ModifyAppLayoutRequest extends TeaModel {
         public Double width;
 
         /**
+         * <p>X coordinate, normalized percentage. The X coordinate ranges from 0.0 to 1.0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.25</p>
          */
@@ -85,6 +97,8 @@ public class ModifyAppLayoutRequest extends TeaModel {
         public Double x;
 
         /**
+         * <p>Y coordinate, normalized percentage. The Y coordinate ranges from 0.0 to 1.0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.25</p>
          */
@@ -92,6 +106,8 @@ public class ModifyAppLayoutRequest extends TeaModel {
         public Double y;
 
         /**
+         * <p>Stacking order. 0 is the bottom layer, 1 is above 0, and so on.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -155,6 +171,7 @@ public class ModifyAppLayoutRequest extends TeaModel {
 
     public static class ModifyAppLayoutRequestLayout extends TeaModel {
         /**
+         * <p>Layout ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +181,7 @@ public class ModifyAppLayoutRequest extends TeaModel {
         public String layoutId;
 
         /**
+         * <p>Layout name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,6 +190,9 @@ public class ModifyAppLayoutRequest extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>List of panes.</p>
+         */
         @NameInMap("Panes")
         public java.util.List<ModifyAppLayoutRequestLayoutPanes> panes;
 

@@ -14,6 +14,8 @@ public class DescribeAppViewStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status of the switch. Valid values: enable (on) and disable (off).</p>
+     * 
      * <strong>example:</strong>
      * <p>disable</p>
      */

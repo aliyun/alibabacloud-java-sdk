@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeQualityOsSdkVersionDistributionStatDataRequest extends TeaModel {
     /**
-     * <p>APP ID</p>
+     * <p>The APP ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,7 @@ public class DescribeQualityOsSdkVersionDistributionStatDataRequest extends TeaM
     public String appId;
 
     /**
+     * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +25,7 @@ public class DescribeQualityOsSdkVersionDistributionStatDataRequest extends TeaM
     public Long endDate;
 
     /**
+     * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

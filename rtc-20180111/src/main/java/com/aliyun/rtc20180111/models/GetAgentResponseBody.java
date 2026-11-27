@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAgentResponseBody extends TeaModel {
     /**
+     * <p>Status message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,7 +14,7 @@ public class GetAgentResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6159ba01-6687-4fb2-a831-f0cd8d188648</p>
@@ -21,6 +23,8 @@ public class GetAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Start timestamp, in Unix time, measured in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1751513144838</p>
      */
@@ -28,6 +32,8 @@ public class GetAgentResponseBody extends TeaModel {
     public String startTime;
 
     /**
+     * <p>Agent status. Valid values: 0 (not started), 1 (starting), 2 (running), 3 (stopping), 4 (stopped), or 5 (failed).</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -35,6 +41,8 @@ public class GetAgentResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>End timestamp, in Unix time, measured in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1751513144838</p>
      */

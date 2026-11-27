@@ -15,6 +15,7 @@ public class DescribeQualityDistributionStatDataRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>End Time of the query, expressed as a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +25,7 @@ public class DescribeQualityDistributionStatDataRequest extends TeaModel {
     public Long endDate;
 
     /**
+     * <p>Start Time of the query, expressed as a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +35,12 @@ public class DescribeQualityDistributionStatDataRequest extends TeaModel {
     public Long startDate;
 
     /**
+     * <p>Statistical dimension. Valid values:  </p>
+     * <ul>
+     * <li><strong>CHANNEL_ONLINE</strong>: Statistics by channel online participant count.  </li>
+     * <li><strong>NETWORK</strong>: Statistics by network type.  </li>
+     * <li><strong>OS</strong>: Statistics by operating system type.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

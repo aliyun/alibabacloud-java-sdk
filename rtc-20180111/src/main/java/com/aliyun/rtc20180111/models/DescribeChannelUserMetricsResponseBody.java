@@ -4,13 +4,21 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeChannelUserMetricsResponseBody extends TeaModel {
+    /**
+     * <p>The metric data list.</p>
+     */
     @NameInMap("MetricDatas")
     public java.util.List<DescribeChannelUserMetricsResponseBodyMetricDatas> metricDatas;
 
+    /**
+     * <p>The overview data.</p>
+     */
     @NameInMap("OverallData")
     public DescribeChannelUserMetricsResponseBodyOverallData overallData;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
      */
@@ -47,10 +55,15 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
     }
 
     public static class DescribeChannelUserMetricsResponseBodyMetricDatasNodes extends TeaModel {
+        /**
+         * <p>The extended properties.</p>
+         */
         @NameInMap("Ext")
         public java.util.Map<String, ?> ext;
 
         /**
+         * <p>The x-axis coordinate in the metric trends chart.</p>
+         * 
          * <strong>example:</strong>
          * <p>1612418625</p>
          */
@@ -58,6 +71,8 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
         public String x;
 
         /**
+         * <p>The y-axis coordinate in the metric trends chart.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -96,10 +111,22 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
     }
 
     public static class DescribeChannelUserMetricsResponseBodyMetricDatas extends TeaModel {
+        /**
+         * <p>The list of coordinate points in the metric trends chart.</p>
+         */
         @NameInMap("Nodes")
         public java.util.List<DescribeChannelUserMetricsResponseBodyMetricDatasNodes> nodes;
 
         /**
+         * <p>The metric type. Valid values:</p>
+         * <ul>
+         * <li><strong>ALL_NUM</strong>: the number of users per unit of time.</li>
+         * <li><strong>PUB_NUM</strong>: the number of publishing users per unit of time.</li>
+         * <li><strong>SUB_NUM</strong>: the number of subscribing users per unit of time.</li>
+         * <li><strong>JOIN_FAIL_NUM</strong>: the number of users who failed to join the channel per unit of time.</li>
+         * <li><strong>BAD_EXP_NUM</strong>: the number of users with abnormal communication experience per unit of time.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ALL_NUM</p>
          */
@@ -131,6 +158,8 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
 
     public static class DescribeChannelUserMetricsResponseBodyOverallData extends TeaModel {
         /**
+         * <p>The total number of users with abnormal communication experience.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -138,6 +167,8 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
         public Long totalBadExpNum;
 
         /**
+         * <p>The total number of users who failed to join the channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -145,6 +176,8 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
         public Long totalJoinFailNum;
 
         /**
+         * <p>The total number of publishing users.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -152,6 +185,8 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
         public Long totalPubUserNum;
 
         /**
+         * <p>The total number of subscribing users.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -159,6 +194,8 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
         public Long totalSubUserNum;
 
         /**
+         * <p>The total number of users.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */

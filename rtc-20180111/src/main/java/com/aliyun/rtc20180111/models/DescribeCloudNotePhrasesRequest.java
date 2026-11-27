@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudNotePhrasesRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,15 @@ public class DescribeCloudNotePhrasesRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The query conditions.</p>
+     */
     @NameInMap("Condition")
     public DescribeCloudNotePhrasesRequestCondition condition;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -24,6 +30,8 @@ public class DescribeCloudNotePhrasesRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -69,6 +77,8 @@ public class DescribeCloudNotePhrasesRequest extends TeaModel {
 
     public static class DescribeCloudNotePhrasesRequestCondition extends TeaModel {
         /**
+         * <p>The hotword list ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ac7N****112121</p>
          */
@@ -76,8 +86,10 @@ public class DescribeCloudNotePhrasesRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>The hotword list name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test</p>
          */
         @NameInMap("Name")
         public String name;

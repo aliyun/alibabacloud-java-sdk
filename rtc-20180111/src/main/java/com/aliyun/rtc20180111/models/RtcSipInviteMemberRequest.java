@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RtcSipInviteMemberRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class RtcSipInviteMemberRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The meeting token. For code generation, refer to <a href="https://help.aliyun.com/document_detail/2689025.html">https://help.aliyun.com/document_detail/2689025.html</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>000qaaasas……b</p>
      */
@@ -21,6 +24,8 @@ public class RtcSipInviteMemberRequest extends TeaModel {
     public String appToken;
 
     /**
+     * <p>The custom line number in PSTN scenarios.</p>
+     * 
      * <strong>example:</strong>
      * <p>055112345678</p>
      */
@@ -28,24 +33,33 @@ public class RtcSipInviteMemberRequest extends TeaModel {
     public String callNumber;
 
     /**
+     * <p>The channel ID. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>testid</p>
+     * <p>$rtc_channelid</p>
      */
     @NameInMap("ChannelId")
     public String channelId;
 
     /**
+     * <p>The type of the device used to call the third-party SIP endpoint. Valid values:</p>
+     * <ul>
+     * <li>sip_device</li>
+     * <li>mcu</li>
+     * <li>phone</li>
+     * </ul>
+     * <p>Note: Currently, only the phone type is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>mcu</p>
+     * <p>phone</p>
      */
     @NameInMap("DeviceType")
     public String deviceType;
 
     /**
+     * <p>Specifies whether the third-party meeting system requires registration for inbound calls.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,31 +69,52 @@ public class RtcSipInviteMemberRequest extends TeaModel {
     public Boolean registered;
 
     /**
+     * <ol>
+     * <li>The IP address of the nearest RTC SIP server.</li>
+     * <li>You can resolve the domain name rtcsip.dingtalk.com locally to obtain the nearest access address.
+     * For example, run dig rtcsip.dingtalk.com to obtain the address.</li>
+     * </ol>
+     * 
      * <strong>example:</strong>
-     * <p>47.116.80.180</p>
+     * <p>39.101.232.13</p>
      */
     @NameInMap("ServerAddress")
     public String serverAddress;
 
     /**
+     * <p>The username displayed on the third-party system.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ceo</p>
+     * <p>testdevice</p>
      */
     @NameInMap("SipDisplayName")
     public String sipDisplayName;
 
     /**
+     * <ol>
+     * <li>When the device is mcu, it indicates the channel number of the third-party meeting system to be called.</li>
+     * <li>When the device is sip_device, it indicates the registration number of the registered device to be invited.</li>
+     * <li>When the device is phone, it indicates the called phone number.</li>
+     * </ol>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>123</p>
+     * <p>18512514528</p>
      */
     @NameInMap("SipRoomId")
     public String sipRoomId;
 
     /**
+     * <ol>
+     * <li>When the device is mcu, it indicates the address information of the third-party meeting system in the format of ip:port;transport=tcp/udp/tls.
+     * Example: &quot;30.240.160.66:5060;transport=tcp&quot;</li>
+     * <li>When the device is sip_device, it indicates the registration address of the registered device to be invited.
+     * Example: 39.101.232.13</li>
+     * <li>When the device is phone, it indicates the address information of the telephone gateway.
+     * Example: &quot;30.240.160.66:5060;transport=tcp&quot;</li>
+     * </ol>
+     * 
      * <strong>example:</strong>
      * <p>30.240.160.66:5060;transport=tcp</p>
      */
@@ -87,6 +122,8 @@ public class RtcSipInviteMemberRequest extends TeaModel {
     public String sipUri;
 
     /**
+     * <p>The brand and model of the third-party SIP endpoint being called, such as polycom, cisco, tencent, zoom, or pstn.</p>
+     * 
      * <strong>example:</strong>
      * <p>pstn</p>
      */
@@ -94,22 +131,32 @@ public class RtcSipInviteMemberRequest extends TeaModel {
     public String sipUserAgent;
 
     /**
+     * <ol>
+     * <li>When DeviceType is mcu, it represents the third-party meeting system.</li>
+     * <li>When DeviceType is sip_device, it represents the registered device.</li>
+     * <li>If the third-party meeting system requires registration for inbound calls, it is the account provided by the third-party system to create an account.</li>
+     * <li>If registration is not required, it is the SIP username or RTC user ID for calling the third-party system.</li>
+     * </ol>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>123</p>
+     * <p>$reg_userid</p>
      */
     @NameInMap("SipUserId")
     public String sipUserId;
 
     /**
+     * <p>The registration password that matches the SipUserId if the third-party system requires registration for inbound calls.</p>
+     * 
      * <strong>example:</strong>
-     * <p>123</p>
+     * <p>654321</p>
      */
     @NameInMap("SipUserPassword")
     public String sipUserPassword;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>taskId</p>
      */
@@ -117,10 +164,11 @@ public class RtcSipInviteMemberRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1234</p>
+     * <p>$rtc_userid</p>
      */
     @NameInMap("Uid")
     public String uid;

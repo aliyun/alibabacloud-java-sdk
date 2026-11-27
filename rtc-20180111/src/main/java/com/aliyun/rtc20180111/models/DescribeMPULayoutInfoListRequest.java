@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMPULayoutInfoListRequest extends TeaModel {
     /**
+     * <p>Application ID. You can specify only one ID. Create or view IDs in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeMPULayoutInfoListRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>Layout ID. To get a layout ID, see <a href="https://help.aliyun.com/document_detail/162192.html">CreateMPULayout</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -21,6 +24,8 @@ public class DescribeMPULayoutInfoListRequest extends TeaModel {
     public Long layoutId;
 
     /**
+     * <p>Layout name.</p>
+     * 
      * <strong>example:</strong>
      * <p>LayoutName</p>
      */
@@ -31,6 +36,8 @@ public class DescribeMPULayoutInfoListRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Page number. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -38,6 +45,8 @@ public class DescribeMPULayoutInfoListRequest extends TeaModel {
     public Long pageNum;
 
     /**
+     * <p>Number of entries per page. Default value: <strong>10</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

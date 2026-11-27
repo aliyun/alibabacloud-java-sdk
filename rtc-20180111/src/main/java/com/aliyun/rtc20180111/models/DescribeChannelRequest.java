@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeChannelRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query this ID in the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeChannelRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The channel ID to query. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

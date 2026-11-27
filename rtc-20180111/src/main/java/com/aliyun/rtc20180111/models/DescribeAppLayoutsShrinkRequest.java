@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAppLayoutsShrinkRequest extends TeaModel {
     /**
+     * <p>The application ID. Create and query it using the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,15 @@ public class DescribeAppLayoutsShrinkRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The query conditions.</p>
+     */
     @NameInMap("Condition")
     public String conditionShrink;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -24,6 +30,8 @@ public class DescribeAppLayoutsShrinkRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

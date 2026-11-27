@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCloudNotePhrasesShrinkRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query it in the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyCloudNotePhrasesShrinkRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The hotword parameter.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Phrase")

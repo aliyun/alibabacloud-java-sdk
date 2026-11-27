@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAppLayoutShrinkRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,17 @@ public class DeleteAppLayoutShrinkRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The client token that is used to ensure idempotence.</p>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The layout information.</p>
+     */
     @NameInMap("Layout")
     public String layoutShrink;
 

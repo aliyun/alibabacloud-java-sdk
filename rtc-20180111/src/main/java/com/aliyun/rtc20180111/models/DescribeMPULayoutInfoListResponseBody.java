@@ -8,6 +8,8 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
     public DescribeMPULayoutInfoListResponseBodyLayouts layouts;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>760bad53276431c499e30dc36f6b26be</p>
      */
@@ -15,6 +17,8 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +26,8 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
     public Long totalNum;
 
     /**
+     * <p>Total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

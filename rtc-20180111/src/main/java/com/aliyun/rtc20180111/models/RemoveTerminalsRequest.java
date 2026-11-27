@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RemoveTerminalsRequest extends TeaModel {
     /**
+     * <p>The application ID. Only one ID is supported.</p>
+     * <p>You can create and query application IDs in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +16,7 @@ public class RemoveTerminalsRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The ID of the channel that the user has joined. Only one ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +29,7 @@ public class RemoveTerminalsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>A list of user IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

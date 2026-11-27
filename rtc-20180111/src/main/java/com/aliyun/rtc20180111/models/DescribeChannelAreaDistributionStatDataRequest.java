@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeChannelAreaDistributionStatDataRequest extends TeaModel {
     /**
-     * <p>APP ID。</p>
+     * <p>The app ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,7 @@ public class DescribeChannelAreaDistributionStatDataRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The channel ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +25,7 @@ public class DescribeChannelAreaDistributionStatDataRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>The timestamp when the channel was created. You can query data of the last 30 days. The value is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,12 +35,23 @@ public class DescribeChannelAreaDistributionStatDataRequest extends TeaModel {
     public Long createdTs;
 
     /**
+     * <p>The timestamp when the channel was released. The value is a UNIX timestamp in seconds. If this parameter is left empty, the current time is used.</p>
+     * <blockquote>
+     * <p>If the specified channel release time is later than the actual release time, the data from the creation time to the actual release time is returned.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1614936817</p>
      */
     @NameInMap("DestroyedTs")
     public Long destroyedTs;
 
+    /**
+     * <p>The name of the parent region. For example, the parent region of Shenzhen is Guangdong Province. If this parameter is left empty, global statistics at the country level are returned, such as China and the United Kingdom.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>China_Zhejiang Province</p>
+     */
     @NameInMap("ParentArea")
     public String parentArea;
 

@@ -8,6 +8,8 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
     public DescribeRtcChannelListResponseBodyChannelList channelList;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +17,8 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
     public Long pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -22,6 +26,8 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
      */
@@ -29,6 +35,8 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total count.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */

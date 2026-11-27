@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAppStreamingOutTemplateShrinkRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +15,11 @@ public class CreateAppStreamingOutTemplateShrinkRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The template.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ac7N****</p>
      */
     @NameInMap("StreamingOutTemplate")
     public String streamingOutTemplateShrink;

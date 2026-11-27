@@ -4,16 +4,24 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeEndPointMetricDataResponseBody extends TeaModel {
+    /**
+     * <p>The metric data of the publisher.</p>
+     */
     @NameInMap("PubMetrics")
     public java.util.List<DescribeEndPointMetricDataResponseBodyPubMetrics> pubMetrics;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The metric data of the subscriber.</p>
+     */
     @NameInMap("SubMetrics")
     public java.util.List<DescribeEndPointMetricDataResponseBodySubMetrics> subMetrics;
 
@@ -47,10 +55,15 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
     }
 
     public static class DescribeEndPointMetricDataResponseBodyPubMetricsNodes extends TeaModel {
+        /**
+         * <p>The extended properties.</p>
+         */
         @NameInMap("Ext")
         public java.util.Map<String, ?> ext;
 
         /**
+         * <p>The x-axis coordinate in the publisher metric trends chart.</p>
+         * 
          * <strong>example:</strong>
          * <p>1548670257</p>
          */
@@ -58,6 +71,8 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
         public String x;
 
         /**
+         * <p>The y-axis coordinate in the publisher metric trends chart.</p>
+         * 
          * <strong>example:</strong>
          * <p>230100</p>
          */
@@ -96,10 +111,15 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
     }
 
     public static class DescribeEndPointMetricDataResponseBodyPubMetrics extends TeaModel {
+        /**
+         * <p>The list of coordinate points.</p>
+         */
         @NameInMap("Nodes")
         public java.util.List<DescribeEndPointMetricDataResponseBodyPubMetricsNodes> nodes;
 
         /**
+         * <p>The metric type corresponding to the Metrics request parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>VIDEO_STUCK_CAMERA</p>
          */
@@ -107,6 +127,8 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>testuserid</p>
          */
@@ -145,10 +167,15 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
     }
 
     public static class DescribeEndPointMetricDataResponseBodySubMetricsNodes extends TeaModel {
+        /**
+         * <p>The extended properties.</p>
+         */
         @NameInMap("Ext")
         public java.util.Map<String, ?> ext;
 
         /**
+         * <p>The x-axis coordinate in the subscriber metric trends chart.</p>
+         * 
          * <strong>example:</strong>
          * <p>1548670257</p>
          */
@@ -156,6 +183,8 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
         public String x;
 
         /**
+         * <p>The y-axis coordinate in the subscriber metric trends chart.</p>
+         * 
          * <strong>example:</strong>
          * <p>230100</p>
          */
@@ -194,10 +223,15 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
     }
 
     public static class DescribeEndPointMetricDataResponseBodySubMetrics extends TeaModel {
+        /**
+         * <p>The list of coordinate points for the subscriber metric trends chart.</p>
+         */
         @NameInMap("Nodes")
         public java.util.List<DescribeEndPointMetricDataResponseBodySubMetricsNodes> nodes;
 
         /**
+         * <p>The metric type corresponding to the Metrics request parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>VIDEO_STUCK_CAMERA</p>
          */
@@ -205,6 +239,8 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>testuserid</p>
          */

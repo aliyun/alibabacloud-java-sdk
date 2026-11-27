@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeUserInfoInChannelResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the channel exists. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The channel exists.</li>
+     * <li><strong>false</strong>: The channel does not exist.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,16 +18,27 @@ public class DescribeUserInfoInChannelResponseBody extends TeaModel {
     public Boolean isChannelExist;
 
     /**
+     * <p>Indicates whether the user is currently in the channel. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The user is in the channel.</li>
+     * <li><strong>false</strong>: The user is not in the channel.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("IsInChannel")
     public Boolean isInChannel;
 
+    /**
+     * <p>The information of the user in the channel.</p>
+     */
     @NameInMap("Property")
     public java.util.List<DescribeUserInfoInChannelResponseBodyProperty> property;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6159ba01-6687-4fb2-a831-f0cd8d188648</p>
      */
@@ -29,6 +46,8 @@ public class DescribeUserInfoInChannelResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The timestamp of the current moment (UTC time).</p>
+     * 
      * <strong>example:</strong>
      * <p>1557909133</p>
      */
@@ -82,6 +101,8 @@ public class DescribeUserInfoInChannelResponseBody extends TeaModel {
 
     public static class DescribeUserInfoInChannelResponseBodyProperty extends TeaModel {
         /**
+         * <p>The time when the user joined the meeting (UTC time).</p>
+         * 
          * <strong>example:</strong>
          * <p>1557909133</p>
          */
@@ -89,6 +110,16 @@ public class DescribeUserInfoInChannelResponseBody extends TeaModel {
         public Integer join;
 
         /**
+         * <p>The role type in the meeting. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: The user role in communication mode.</p>
+         * </li>
+         * <li><p><strong>1</strong>: The interactive role.</p>
+         * </li>
+         * <li><p><strong>2</strong>: The live (view only) role.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -96,6 +127,8 @@ public class DescribeUserInfoInChannelResponseBody extends TeaModel {
         public Integer role;
 
         /**
+         * <p>The session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xa744sxx8rtobgj****</p>
          */

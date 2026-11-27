@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyMPULayoutResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>760bad53276431c499e30dc36f6b26be</p>
      */

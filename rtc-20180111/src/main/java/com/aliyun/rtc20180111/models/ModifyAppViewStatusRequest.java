@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAppViewStatusRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

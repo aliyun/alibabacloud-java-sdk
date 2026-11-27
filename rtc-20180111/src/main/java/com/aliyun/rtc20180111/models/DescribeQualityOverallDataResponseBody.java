@@ -4,10 +4,15 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeQualityOverallDataResponseBody extends TeaModel {
+    /**
+     * <p>List of overview data.</p>
+     */
     @NameInMap("QualityOverallData")
     public java.util.List<DescribeQualityOverallDataResponseBodyQualityOverallData> qualityOverallData;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
      */
@@ -37,6 +42,8 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
 
     public static class DescribeQualityOverallDataResponseBodyQualityOverallDataNodes extends TeaModel {
         /**
+         * <p>The x-axis coordinate in the Trend Indicator.</p>
+         * 
          * <strong>example:</strong>
          * <p>1615831200</p>
          */
@@ -44,6 +51,8 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
         public String x;
 
         /**
+         * <p>The y-axis coordinate in the Trend Indicator.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0000</p>
          */
@@ -75,16 +84,23 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
 
     public static class DescribeQualityOverallDataResponseBodyQualityOverallData extends TeaModel {
         /**
+         * <p>The average value of the Metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9376</p>
          */
         @NameInMap("Average")
         public String average;
 
+        /**
+         * <p>List of coordinate points for the Trend Indicator.</p>
+         */
         @NameInMap("Nodes")
         public java.util.List<DescribeQualityOverallDataResponseBodyQualityOverallDataNodes> nodes;
 
         /**
+         * <p>The Metric Type queried.</p>
+         * 
          * <strong>example:</strong>
          * <p>JOIN_CHANNEL_SUC_RATE</p>
          */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateRecordTemplateRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,19 +15,29 @@ public class UpdateRecordTemplateRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The background color in RGB format. Default value: <strong>0</strong> (black). The formula is <code>R + G × 256 + B × 65536</code>. Valid values for R (red), G (green), and B (blue): <strong>0</strong> to <strong>255</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("BackgroundColor")
     public Integer backgroundColor;
 
+    /**
+     * <p>The background image information.</p>
+     */
     @NameInMap("Backgrounds")
     public java.util.List<UpdateRecordTemplateRequestBackgrounds> backgrounds;
 
+    /**
+     * <p>The clock information.</p>
+     */
     @NameInMap("ClockWidgets")
     public java.util.List<UpdateRecordTemplateRequestClockWidgets> clockWidgets;
 
     /**
+     * <p>The delay before stopping the recording. Unit: seconds. Default value: <strong>180</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>180</p>
      */
@@ -34,6 +45,8 @@ public class UpdateRecordTemplateRequest extends TeaModel {
     public Integer delayStopTime;
 
     /**
+     * <p>Specifies whether to add the timestamp of TS files to the recorded M3U8 file.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -41,6 +54,7 @@ public class UpdateRecordTemplateRequest extends TeaModel {
     public Boolean enableM3u8DateTime;
 
     /**
+     * <p>The interval at which recording files are split. The value must be greater than or equal to 1800. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +64,7 @@ public class UpdateRecordTemplateRequest extends TeaModel {
     public Integer fileSplitInterval;
 
     /**
+     * <p>The recording file formats.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +74,8 @@ public class UpdateRecordTemplateRequest extends TeaModel {
     public java.util.List<String> formats;
 
     /**
+     * <p>The HTTP callback URL for recording events.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://example.com/callback">http://example.com/callback</a></p>
      */
@@ -66,6 +83,7 @@ public class UpdateRecordTemplateRequest extends TeaModel {
     public String httpCallbackUrl;
 
     /**
+     * <p>The layout IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,6 +93,7 @@ public class UpdateRecordTemplateRequest extends TeaModel {
     public java.util.List<Long> layoutIds;
 
     /**
+     * <p>The encoding options.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,6 +103,8 @@ public class UpdateRecordTemplateRequest extends TeaModel {
     public Integer mediaEncode;
 
     /**
+     * <p>The MSMQ for recording event callbacks.</p>
+     * 
      * <strong>example:</strong>
      * <p>record-callback-queue</p>
      */
@@ -91,12 +112,17 @@ public class UpdateRecordTemplateRequest extends TeaModel {
     public String mnsQueue;
 
     /**
+     * <p>The name of the recording configuration template.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Recording template</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The OSS bucket where the recording files are stored.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -105,10 +131,17 @@ public class UpdateRecordTemplateRequest extends TeaModel {
     @NameInMap("OssBucket")
     public String ossBucket;
 
+    /**
+     * <p>The OSS endpoint of the region where the recording files are stored.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss-cn-shanghai.aliyuncs.com</p>
+     */
     @NameInMap("OssEndpoint")
     public String ossEndpoint;
 
     /**
+     * <p>The naming rule for recording files.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -121,6 +154,7 @@ public class UpdateRecordTemplateRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The billing configuration of the task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -130,6 +164,7 @@ public class UpdateRecordTemplateRequest extends TeaModel {
     public String taskProfile;
 
     /**
+     * <p>The configuration template ID. To obtain the template ID, call <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -138,6 +173,9 @@ public class UpdateRecordTemplateRequest extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>The watermark information.</p>
+     */
     @NameInMap("Watermarks")
     public java.util.List<UpdateRecordTemplateRequestWatermarks> watermarks;
 
@@ -308,6 +346,12 @@ public class UpdateRecordTemplateRequest extends TeaModel {
 
     public static class UpdateRecordTemplateRequestBackgrounds extends TeaModel {
         /**
+         * <p>Specifies whether to display the image. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong> (None): Not displayed.</li>
+         * <li><strong>1</strong> (Always): Always displayed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -315,6 +359,8 @@ public class UpdateRecordTemplateRequest extends TeaModel {
         public Integer display;
 
         /**
+         * <p>The height of the pane, as a normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.2456</p>
          */
@@ -322,6 +368,8 @@ public class UpdateRecordTemplateRequest extends TeaModel {
         public Float height;
 
         /**
+         * <p>The HTTP or HTTPS URL of the image.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com/image.jpg">https://www.example.com/image.jpg</a></p>
          */
@@ -329,6 +377,8 @@ public class UpdateRecordTemplateRequest extends TeaModel {
         public String url;
 
         /**
+         * <p>The width of the pane, as a normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.2456</p>
          */
@@ -336,6 +386,8 @@ public class UpdateRecordTemplateRequest extends TeaModel {
         public Float width;
 
         /**
+         * <p>The X-coordinate, as a normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.7576</p>
          */
@@ -343,6 +395,8 @@ public class UpdateRecordTemplateRequest extends TeaModel {
         public Float x;
 
         /**
+         * <p>The Y-coordinate, as a normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.7576</p>
          */
@@ -350,6 +404,8 @@ public class UpdateRecordTemplateRequest extends TeaModel {
         public Float y;
 
         /**
+         * <p>The Z-order. A value of 0 indicates the bottom layer. A value of 1 indicates the layer above 0, and so on.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -421,6 +477,9 @@ public class UpdateRecordTemplateRequest extends TeaModel {
 
     public static class UpdateRecordTemplateRequestClockWidgets extends TeaModel {
         /**
+         * <p>The text color of the clock in RGB format.</p>
+         * <p>The formula is <code>R + G × 256 + B × 65536</code>. Valid values for R (red), G (green), and B (blue): <strong>0</strong> to <strong>255</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -428,6 +487,8 @@ public class UpdateRecordTemplateRequest extends TeaModel {
         public Integer fontColor;
 
         /**
+         * <p>The font size of the clock. Valid values: <strong>(0, 72]</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -435,6 +496,16 @@ public class UpdateRecordTemplateRequest extends TeaModel {
         public Integer fontSize;
 
         /**
+         * <p>The font type of the clock. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong> (default): NOTO_SERIF_CJKSC_REGULAR</li>
+         * <li><strong>1</strong>: ALIBABA_PUHUITI_REGULAR</li>
+         * <li><strong>2</strong>: ALIBABA_PUHUITI_BOLD</li>
+         * <li><strong>3</strong>: ALIBABA_PUHUITI_Heavy</li>
+         * <li><strong>4</strong>: ALIBABA_PUHUITI_LIGHT</li>
+         * <li><strong>5</strong>: ALIBABA_PUHUITI_MEDIUM</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -442,6 +513,8 @@ public class UpdateRecordTemplateRequest extends TeaModel {
         public Integer fontType;
 
         /**
+         * <p>The X-coordinate of the clock, as a normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.7576</p>
          */
@@ -449,6 +522,8 @@ public class UpdateRecordTemplateRequest extends TeaModel {
         public Float x;
 
         /**
+         * <p>The Y-coordinate of the clock, as a normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.7576</p>
          */
@@ -456,6 +531,8 @@ public class UpdateRecordTemplateRequest extends TeaModel {
         public Float y;
 
         /**
+         * <p>The Z-order of the clock. A value of 0 indicates the bottom layer. A value of 1 indicates the layer above 0, and so on.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -519,6 +596,8 @@ public class UpdateRecordTemplateRequest extends TeaModel {
 
     public static class UpdateRecordTemplateRequestWatermarks extends TeaModel {
         /**
+         * <p>The transparency. A value of 0.0 indicates fully transparent, and a value of 1.0 indicates fully opaque.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -526,6 +605,12 @@ public class UpdateRecordTemplateRequest extends TeaModel {
         public Float alpha;
 
         /**
+         * <p>Specifies whether to display the watermark. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong> (None): Not displayed.</li>
+         * <li><strong>1</strong> (Always): Always displayed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -533,6 +618,8 @@ public class UpdateRecordTemplateRequest extends TeaModel {
         public Integer display;
 
         /**
+         * <p>The height of the pane, as a normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.2456</p>
          */
@@ -540,6 +627,8 @@ public class UpdateRecordTemplateRequest extends TeaModel {
         public Float height;
 
         /**
+         * <p>The HTTP or HTTPS URL of the watermark.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com/image.jpg">https://www.example.com/image.jpg</a></p>
          */
@@ -547,6 +636,8 @@ public class UpdateRecordTemplateRequest extends TeaModel {
         public String url;
 
         /**
+         * <p>The width of the pane, as a normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.2456</p>
          */
@@ -554,6 +645,8 @@ public class UpdateRecordTemplateRequest extends TeaModel {
         public Float width;
 
         /**
+         * <p>The X-coordinate, as a normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.7576</p>
          */
@@ -561,6 +654,8 @@ public class UpdateRecordTemplateRequest extends TeaModel {
         public Float x;
 
         /**
+         * <p>The Y-coordinate, as a normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.7576</p>
          */
@@ -568,6 +663,8 @@ public class UpdateRecordTemplateRequest extends TeaModel {
         public Float y;
 
         /**
+         * <p>The Z-order. A value of 0 indicates the bottom layer. A value of 1 indicates the layer above 0, and so on.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

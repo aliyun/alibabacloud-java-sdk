@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StopCloudNoteResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CF8</p>
      */
@@ -12,6 +14,8 @@ public class StopCloudNoteResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the current task.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */

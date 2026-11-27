@@ -14,6 +14,8 @@ public class DescribeAppAgentFunctionStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Switch status. Valid values: enable (on) and disable (off).</p>
+     * 
      * <strong>example:</strong>
      * <p>disable</p>
      */

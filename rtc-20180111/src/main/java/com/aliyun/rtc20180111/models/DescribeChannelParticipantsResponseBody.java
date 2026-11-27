@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeChannelParticipantsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6159ba01-6687-4fb2-a831-f0cd8d188648</p>
      */
@@ -12,6 +14,8 @@ public class DescribeChannelParticipantsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The time when the result is returned. The value is a UNIX timestamp in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1557909133</p>
      */
@@ -19,6 +23,8 @@ public class DescribeChannelParticipantsResponseBody extends TeaModel {
     public Integer timestamp;
 
     /**
+     * <p>The total number of results returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -26,6 +32,8 @@ public class DescribeChannelParticipantsResponseBody extends TeaModel {
     public Integer totalNum;
 
     /**
+     * <p>The total number of pages returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

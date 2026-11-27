@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAppViewTemplateShrinkRequest extends TeaModel {
     /**
+     * <p>Application ID. Create and view it in the console. Only one ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyAppViewTemplateShrinkRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The template.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Template")

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyViewLayoutResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
      */
@@ -12,6 +14,8 @@ public class ModifyViewLayoutResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */

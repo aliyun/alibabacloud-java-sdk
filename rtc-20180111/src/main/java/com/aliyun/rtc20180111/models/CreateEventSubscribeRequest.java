@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEventSubscribeRequest extends TeaModel {
     /**
+     * <p>The ID of the subscribed application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateEventSubscribeRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The callback URL. For information about the callback content, see the following callback content example.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,11 @@ public class CreateEventSubscribeRequest extends TeaModel {
     public String callbackUrl;
 
     /**
+     * <p>The ID of the subscribed channel.</p>
+     * <blockquote>
+     * <p>This parameter is required if the Users.N parameter is not empty.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>123333</p>
      */
@@ -30,6 +37,7 @@ public class CreateEventSubscribeRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>The idempotence identifier used by the client to create the subscription.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +47,7 @@ public class CreateEventSubscribeRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The subscribed events.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +57,13 @@ public class CreateEventSubscribeRequest extends TeaModel {
     public java.util.List<String> events;
 
     /**
+     * <p>Specifies whether to enable callback authentication. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: enables callback authentication.</li>
+     * <li><strong>fasle</strong> (default): disables callback authentication.</li>
+     * </ul>
+     * <p>For more information, see the following callback authentication description.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -58,6 +74,13 @@ public class CreateEventSubscribeRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The user role. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: subscribes to host messages in the channel.</li>
+     * <li><strong>2</strong>: subscribes to audience messages in the channel.</li>
+     * <li><strong>Empty or other values</strong>: subscribes to messages from all roles in the channel without role filtering.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -65,6 +88,8 @@ public class CreateEventSubscribeRequest extends TeaModel {
     public Long role;
 
     /**
+     * <p>The subscribed users.</p>
+     * 
      * <strong>example:</strong>
      * <p>user1</p>
      */

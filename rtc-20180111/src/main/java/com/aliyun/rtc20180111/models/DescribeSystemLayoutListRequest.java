@@ -8,6 +8,8 @@ public class DescribeSystemLayoutListRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +17,8 @@ public class DescribeSystemLayoutListRequest extends TeaModel {
     public Long pageNum;
 
     /**
+     * <p>Number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

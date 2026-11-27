@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RtcCancelSipInviteRequest extends TeaModel {
     /**
+     * <p>The application ID. Create and find this ID in the console. Specify only one ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,28 +15,40 @@ public class RtcCancelSipInviteRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The ID of an existing channel. Specify only one ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>testid</p>
+     * <p>$rtc_channelid</p>
      */
     @NameInMap("ChannelId")
     public String channelId;
 
     /**
+     * <p>The type of the third-party SIP device:</p>
+     * <ul>
+     * <li><p>sip_device</p>
+     * </li>
+     * <li><p>mcu</p>
+     * </li>
+     * <li><p>phone</p>
+     * </li>
+     * </ul>
+     * <p>Note: Only the phone type is supported at this stage.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>mcu</p>
+     * <p>phone</p>
      */
     @NameInMap("DeviceType")
     public String deviceType;
 
     /**
+     * <p>The user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>123</p>
+     * <p>$rtc_userid</p>
      */
     @NameInMap("UserId")
     public String userId;

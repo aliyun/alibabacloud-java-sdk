@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class RemoveUsersResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CF8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>User List.</p>
+     */
     @NameInMap("Users")
     public java.util.List<RemoveUsersResponseBodyUsers> users;
 
@@ -37,6 +42,8 @@ public class RemoveUsersResponseBody extends TeaModel {
 
     public static class RemoveUsersResponseBodyUsers extends TeaModel {
         /**
+         * <p>Status code. A value of 0 indicates success. An error code is returned upon failure.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -44,6 +51,12 @@ public class RemoveUsersResponseBody extends TeaModel {
         public Integer code;
 
         /**
+         * <p>Result of the delete operation. Valid values:  </p>
+         * <ul>
+         * <li><strong>Success</strong>: Succeeded.  </li>
+         * <li><strong>Failed</strong>: failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -51,6 +64,8 @@ public class RemoveUsersResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>User ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1811****</p>
          */

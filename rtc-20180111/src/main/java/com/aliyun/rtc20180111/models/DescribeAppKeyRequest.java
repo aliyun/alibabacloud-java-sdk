@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAppKeyRequest extends TeaModel {
     /**
+     * <p>Application ID. You can create and query this ID in the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

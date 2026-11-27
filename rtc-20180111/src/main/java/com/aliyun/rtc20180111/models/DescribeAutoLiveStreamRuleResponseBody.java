@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>069BCB66-CD80-11E8-A82B-A70F78BBDC00</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The rule details.</p>
+     */
     @NameInMap("Rules")
     public java.util.List<DescribeAutoLiveStreamRuleResponseBodyRules> rules;
 
@@ -37,19 +42,29 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
 
     public static class DescribeAutoLiveStreamRuleResponseBodyRules extends TeaModel {
         /**
+         * <p>The callback URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://example.com/callBack">http://example.com/callBack</a></p>
          */
         @NameInMap("CallBack")
         public String callBack;
 
+        /**
+         * <p>The prefix list of channel IDs for fuzzy match.</p>
+         */
         @NameInMap("ChannelIdPrefixes")
         public java.util.List<String> channelIdPrefixes;
 
+        /**
+         * <p>The list of channel IDs for exact match.</p>
+         */
         @NameInMap("ChannelIds")
         public java.util.List<String> channelIds;
 
         /**
+         * <p>The time when the rule was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-08-19T02:53:07Z</p>
          */
@@ -57,6 +72,8 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The encoding options.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -64,6 +81,8 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
         public Integer mediaEncode;
 
         /**
+         * <p>The playback domain name for automatic bypass.</p>
+         * 
          * <strong>example:</strong>
          * <p>rtmp://${domain}/${app}/${stream}</p>
          */
@@ -71,6 +90,8 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
         public String playDomain;
 
         /**
+         * <p>The rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -78,6 +99,8 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
         public Long ruleId;
 
         /**
+         * <p>The rule name.</p>
+         * 
          * <strong>example:</strong>
          * <p>testRule</p>
          */
@@ -85,6 +108,12 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
         public String ruleName;
 
         /**
+         * <p>The rule status. Valid values:</p>
+         * <ul>
+         * <li>enable: Enabled.</li>
+         * <li>disable: Disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>disable</p>
          */

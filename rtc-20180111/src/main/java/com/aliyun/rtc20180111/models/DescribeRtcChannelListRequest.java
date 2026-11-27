@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeRtcChannelListRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>aoe****</p>
      */
@@ -12,6 +14,8 @@ public class DescribeRtcChannelListRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The channel ID. Only a single ID is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>testChannel</p>
      */
@@ -22,6 +26,7 @@ public class DescribeRtcChannelListRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number. Valid values: greater than <strong>0</strong>. Default value: 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +36,7 @@ public class DescribeRtcChannelListRequest extends TeaModel {
     public Long pageNo;
 
     /**
+     * <p>The number of entries per page. Valid values: greater than <strong>0</strong>. Default value: 10.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +46,14 @@ public class DescribeRtcChannelListRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The service area. By default, all areas are queried. Valid values:</p>
+     * <ul>
+     * <li><p><strong>cn</strong>: China.</p>
+     * </li>
+     * <li><p><strong>us</strong>: United States.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn</p>
      */
@@ -47,6 +61,8 @@ public class DescribeRtcChannelListRequest extends TeaModel {
     public String serviceArea;
 
     /**
+     * <p>The sort order. By default, the records are sorted in descending order of StartTime.</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -54,6 +70,7 @@ public class DescribeRtcChannelListRequest extends TeaModel {
     public String sortType;
 
     /**
+     * <p>The query time in UTC. The format is yyyy-MM-ddTHH:mm:ssZ. The time granularity is one day.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,6 +80,8 @@ public class DescribeRtcChannelListRequest extends TeaModel {
     public String timePoint;
 
     /**
+     * <p>The user ID. Only a single ID is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>testUser</p>
      */

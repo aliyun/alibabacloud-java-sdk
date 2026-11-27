@@ -4,10 +4,15 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaModel {
+    /**
+     * <p>The regional statistics list.</p>
+     */
     @NameInMap("AreaStatList")
     public java.util.List<DescribeChannelAreaDistributionStatDataResponseBodyAreaStatList> areaStatList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
      */
@@ -37,13 +42,17 @@ public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaMode
 
     public static class DescribeChannelAreaDistributionStatDataResponseBodyAreaStatList extends TeaModel {
         /**
+         * <p>The region name, such as China_Zhejiang Province_Hangzhou.</p>
+         * 
          * <strong>example:</strong>
-         * <p>浙江省</p>
+         * <p>China_Zhejiang Province_Hangzhou</p>
          */
         @NameInMap("AreaName")
         public String areaName;
 
         /**
+         * <p>The number of communicating users.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -51,6 +60,8 @@ public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaMode
         public Integer callUserCount;
 
         /**
+         * <p>The high-quality transmission rate, represented as a decimal. For example, 0.9999 indicates a high-quality transmission rate of 99.99%.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9999</p>
          */
@@ -58,6 +69,8 @@ public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaMode
         public String highQualityTransmissionRate;
 
         /**
+         * <p>The number of publishers.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -65,6 +78,8 @@ public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaMode
         public Integer pubUserCount;
 
         /**
+         * <p>The number of subscribers.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

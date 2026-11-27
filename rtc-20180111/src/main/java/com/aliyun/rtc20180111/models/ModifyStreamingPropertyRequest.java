@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyStreamingPropertyRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyStreamingPropertyRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The ID of an existing channel. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ModifyStreamingPropertyRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>The ID of the stream mixing task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,8 @@ public class ModifyStreamingPropertyRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The stream mixing content.</p>
+     * 
      * <strong>example:</strong>
      * <p>main</p>
      */
@@ -39,7 +44,7 @@ public class ModifyStreamingPropertyRequest extends TeaModel {
     public String viewContent;
 
     /**
-     * <p>ViewSubscribers。</p>
+     * <p>The view subscribers.</p>
      */
     @NameInMap("ViewSubscribers")
     public java.util.List<String> viewSubscribers;

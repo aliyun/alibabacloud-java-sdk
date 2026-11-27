@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateMPULayoutResponseBody extends TeaModel {
     /**
+     * <p>The layout ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -12,6 +14,8 @@ public class CreateMPULayoutResponseBody extends TeaModel {
     public Long layoutId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>760bad53276431c499e30dc36f6b26be</p>
      */

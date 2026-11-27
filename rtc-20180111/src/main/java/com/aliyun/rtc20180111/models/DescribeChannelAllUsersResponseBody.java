@@ -4,16 +4,28 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeChannelAllUsersResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the channel exists. Valid values:  </p>
+     * <ul>
+     * <li><strong>true</strong>: The channel exists.  </li>
+     * <li><strong>false</strong>: The channel does not exist.</li>
+     * </ul>
+     */
     @NameInMap("ChannelExist")
     public Boolean channelExist;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CF8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>List of online users in the channel.</p>
+     */
     @NameInMap("Users")
     public java.util.List<DescribeChannelAllUsersResponseBodyUsers> users;
 
@@ -48,6 +60,8 @@ public class DescribeChannelAllUsersResponseBody extends TeaModel {
 
     public static class DescribeChannelAllUsersResponseBodyUsers extends TeaModel {
         /**
+         * <p>User ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1811****</p>
          */

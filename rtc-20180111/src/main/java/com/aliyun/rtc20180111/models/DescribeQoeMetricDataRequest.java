@@ -15,6 +15,7 @@ public class DescribeQoeMetricDataRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>Channel ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +25,7 @@ public class DescribeQoeMetricDataRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>Channel Creation Time. Supports querying data from the last 30 days. Represented as a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +35,11 @@ public class DescribeQoeMetricDataRequest extends TeaModel {
     public Long createdTs;
 
     /**
+     * <p>Channel release time, represented as a UNIX timestamp in seconds. An empty parameter indicates retrieving data up to the current time.  </p>
+     * <blockquote>
+     * <p>If the provided channel release time exceeds the actual release time, data from the Creation Time to the actual release time will be returned.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1614936817</p>
      */
@@ -40,6 +47,7 @@ public class DescribeQoeMetricDataRequest extends TeaModel {
     public Long destroyedTs;
 
     /**
+     * <p>User ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

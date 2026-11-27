@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "rtc";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "central";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("rtc", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -27,6 +30,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>This operation adds a recording configuration template. For example, when you add a recording configuration template, you can configure parameters such as recording specifications and encoding options.</p>
+     * <h1>QPS limits</h1>
+     * <p>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds a recording configuration template.</p>
+     * 
      * @param request AddRecordTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddRecordTemplateResponse
@@ -128,6 +140,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>This operation adds a recording configuration template. For example, when you add a recording configuration template, you can configure parameters such as recording specifications and encoding options.</p>
+     * <h1>QPS limits</h1>
+     * <p>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds a recording configuration template.</p>
+     * 
      * @param request AddRecordTemplateRequest
      * @return AddRecordTemplateResponse
      */
@@ -137,8 +158,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 10 calls per second for this API operation. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建应用智能体模版</p>
+     * <p>Creates an application agent template.</p>
      * 
      * @param tmpReq CreateAppAgentTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -255,8 +280,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 10 calls per second for this API operation. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建应用智能体模版</p>
+     * <p>Creates an application agent template.</p>
      * 
      * @param request CreateAppAgentTemplateRequest
      * @return CreateAppAgentTemplateResponse
@@ -267,8 +296,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>新增app自定义布局</p>
+     * <p>Creates a custom layout for an application.</p>
      * 
      * @param tmpReq CreateAppLayoutRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -313,8 +346,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>新增app自定义布局</p>
+     * <p>Creates a custom layout for an application.</p>
      * 
      * @param request CreateAppLayoutRequest
      * @return CreateAppLayoutResponse
@@ -325,8 +362,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>增加应用录制模版</p>
+     * <p>Creates an application recording template.</p>
      * 
      * @param tmpReq CreateAppRecordTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -371,8 +412,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>增加应用录制模版</p>
+     * <p>Creates an application recording template.</p>
      * 
      * @param request CreateAppRecordTemplateRequest
      * @return CreateAppRecordTemplateResponse
@@ -383,8 +428,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation creates a stream forwarding template for an RTC 3.0 application.</p>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建应用推流模版</p>
+     * <p>Creates a stream forwarding template for an RTC 3.0 application.</p>
      * 
      * @param tmpReq CreateAppStreamingOutTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -425,8 +476,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation creates a stream forwarding template for an RTC 3.0 application.</p>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建应用推流模版</p>
+     * <p>Creates a stream forwarding template for an RTC 3.0 application.</p>
      * 
      * @param request CreateAppStreamingOutTemplateRequest
      * @return CreateAppStreamingOutTemplateResponse
@@ -437,8 +494,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建应用合流模版</p>
+     * <p>Creates an application stream mixing template.</p>
      * 
      * @param tmpReq CreateAppViewTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -479,8 +540,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建应用合流模版</p>
+     * <p>Creates an application stream mixing template.</p>
      * 
      * @param request CreateAppViewTemplateRequest
      * @return CreateAppViewTemplateResponse
@@ -491,6 +556,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>This operation is used to create a relay rule.</p>
+     * <h1>QPS limit</h1>
+     * <p>The per-user QPS limit of this operation is 1,000 calls per minute. If the limit is exceeded, API calls will be throttled, which may affect your business. Call the operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Calls CreateAutoLiveStreamRule to create an automatic single-stream relay rule.</p>
+     * 
      * @param request CreateAutoLiveStreamRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAutoLiveStreamRuleResponse
@@ -548,6 +622,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>This operation is used to create a relay rule.</p>
+     * <h1>QPS limit</h1>
+     * <p>The per-user QPS limit of this operation is 1,000 calls per minute. If the limit is exceeded, API calls will be throttled, which may affect your business. Call the operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Calls CreateAutoLiveStreamRule to create an automatic single-stream relay rule.</p>
+     * 
      * @param request CreateAutoLiveStreamRuleRequest
      * @return CreateAutoLiveStreamRuleResponse
      */
@@ -558,7 +641,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>增加纪要热词表</p>
+     * <p>Creates a hotword table for meeting minutes.</p>
      * 
      * @param tmpReq CreateCloudNotePhrasesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -600,7 +683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>增加纪要热词表</p>
+     * <p>Creates a hotword table for meeting minutes.</p>
      * 
      * @param request CreateCloudNotePhrasesRequest
      * @return CreateCloudNotePhrasesResponse
@@ -611,6 +694,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>This operation is used to create a callback for subscribing to room messages. For example, when you create a callback, you can configure parameters such as the callback URL and event type.</p>
+     * <h1>QPS limit</h1>
+     * <p>The per-user QPS limit of this operation is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make sure that you call this operation at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Calls CreateEventSubscribe to create a callback for subscribing to room messages.</p>
+     * 
      * @param request CreateEventSubscribeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateEventSubscribeResponse
@@ -672,6 +764,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>This operation is used to create a callback for subscribing to room messages. For example, when you create a callback, you can configure parameters such as the callback URL and event type.</p>
+     * <h1>QPS limit</h1>
+     * <p>The per-user QPS limit of this operation is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make sure that you call this operation at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Calls CreateEventSubscribe to create a callback for subscribing to room messages.</p>
+     * 
      * @param request CreateEventSubscribeRequest
      * @return CreateEventSubscribeResponse
      */
@@ -681,6 +782,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>This operation creates a bypass live streaming layout. For example, you can configure parameters such as the number of audio mixes and the main pane.</p>
+     * <h1>QPS limit</h1>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a bypass live streaming layout.</p>
+     * 
      * @param request CreateMPULayoutRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateMPULayoutResponse
@@ -726,6 +836,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>This operation creates a bypass live streaming layout. For example, you can configure parameters such as the number of audio mixes and the main pane.</p>
+     * <h1>QPS limit</h1>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a bypass live streaming layout.</p>
+     * 
      * @param request CreateMPULayoutRequest
      * @return CreateMPULayoutResponse
      */
@@ -735,8 +854,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit per user for this API operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除应用智能体模版</p>
+     * <p>Deletes an application agent template.</p>
      * 
      * @param request DeleteAppAgentTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -771,8 +894,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit per user for this API operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除应用智能体模版</p>
+     * <p>Deletes an application agent template.</p>
      * 
      * @param request DeleteAppAgentTemplateRequest
      * @return DeleteAppAgentTemplateResponse
@@ -783,8 +910,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit per user for this API operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除app自定义布局</p>
+     * <p>Deletes a custom layout for an application.</p>
      * 
      * @param tmpReq DeleteAppLayoutRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -829,8 +960,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit per user for this API operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除app自定义布局</p>
+     * <p>Deletes a custom layout for an application.</p>
      * 
      * @param request DeleteAppLayoutRequest
      * @return DeleteAppLayoutResponse
@@ -841,8 +976,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除应用录制模版</p>
+     * <p>Deletes an application recording template.</p>
      * 
      * @param tmpReq DeleteAppRecordTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -887,8 +1026,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除应用录制模版</p>
+     * <p>Deletes an application recording template.</p>
      * 
      * @param request DeleteAppRecordTemplateRequest
      * @return DeleteAppRecordTemplateResponse
@@ -899,8 +1042,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation deletes a stream ingest template for an RTC 3.0 application.</p>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除应用推流模版</p>
+     * <p>Deletes a stream ingest template for an RTC 3.0 application.</p>
      * 
      * @param tmpReq DeleteAppStreamingOutTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -941,8 +1090,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation deletes a stream ingest template for an RTC 3.0 application.</p>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除应用推流模版</p>
+     * <p>Deletes a stream ingest template for an RTC 3.0 application.</p>
      * 
      * @param request DeleteAppStreamingOutTemplateRequest
      * @return DeleteAppStreamingOutTemplateResponse
@@ -953,8 +1108,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit for this API is 10 calls per second for each user. If you exceed this limit, rate limiting is triggered. This may affect your business. Call this API at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除应用合流模版</p>
+     * <p>Deletes an application\&quot;s composite stream template.</p>
      * 
      * @param tmpReq DeleteAppViewTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -995,8 +1154,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit for this API is 10 calls per second for each user. If you exceed this limit, rate limiting is triggered. This may affect your business. Call this API at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除应用合流模版</p>
+     * <p>Deletes an application\&quot;s composite stream template.</p>
      * 
      * @param request DeleteAppViewTemplateRequest
      * @return DeleteAppViewTemplateResponse
@@ -1007,6 +1170,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</p>
+     * <h1>QPS limits</h1>
+     * <p>The QPS limit for a single user is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an automatic bypass single-stream relay rule.</p>
+     * 
      * @param request DeleteAutoLiveStreamRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAutoLiveStreamRuleResponse
@@ -1044,6 +1216,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</p>
+     * <h1>QPS limits</h1>
+     * <p>The QPS limit for a single user is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an automatic bypass single-stream relay rule.</p>
+     * 
      * @param request DeleteAutoLiveStreamRuleRequest
      * @return DeleteAutoLiveStreamRuleResponse
      */
@@ -1053,6 +1234,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>This operation deletes a channel.</p>
+     * <h1>QPS limit</h1>
+     * <p>This operation has no QPS limit per user. Call this operation as needed. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a channel.</p>
+     * 
      * @param request DeleteChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteChannelResponse
@@ -1090,6 +1280,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>This operation deletes a channel.</p>
+     * <h1>QPS limit</h1>
+     * <p>This operation has no QPS limit per user. Call this operation as needed. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a channel.</p>
+     * 
      * @param request DeleteChannelRequest
      * @return DeleteChannelResponse
      */
@@ -1100,7 +1299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除纪要热词表</p>
+     * <p>Deletes a hot word table.</p>
      * 
      * @param tmpReq DeleteCloudNotePhrasesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1142,7 +1341,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除纪要热词表</p>
+     * <p>Deletes a hot word table.</p>
      * 
      * @param request DeleteCloudNotePhrasesRequest
      * @return DeleteCloudNotePhrasesResponse
@@ -1153,6 +1352,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/274447.html">CreateEventSubscribe</a> to create a callback for subscribing to room messages.</p>
+     * <h1>QPS limits</h1>
+     * <p>The QPS limit of this operation is 1,000 calls per minute per user. If the limit is exceeded, API calls are throttled, which may affect your business. We recommend that you call this operation at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a callback for subscribing to room messages by calling DeleteEventSubscribe.</p>
+     * 
      * @param request DeleteEventSubscribeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteEventSubscribeResponse
@@ -1190,6 +1398,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/274447.html">CreateEventSubscribe</a> to create a callback for subscribing to room messages.</p>
+     * <h1>QPS limits</h1>
+     * <p>The QPS limit of this operation is 1,000 calls per minute per user. If the limit is exceeded, API calls are throttled, which may affect your business. We recommend that you call this operation at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a callback for subscribing to room messages by calling DeleteEventSubscribe.</p>
+     * 
      * @param request DeleteEventSubscribeRequest
      * @return DeleteEventSubscribeResponse
      */
@@ -1199,6 +1416,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/162192.html">CreateMPULayout</a> to create a bypass live streaming layout.</p>
+     * <h1>QPS limits</h1>
+     * <p>The per-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a bypass live streaming layout.</p>
+     * 
      * @param request DeleteMPULayoutRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteMPULayoutResponse
@@ -1236,6 +1462,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/162192.html">CreateMPULayout</a> to create a bypass live streaming layout.</p>
+     * <h1>QPS limits</h1>
+     * <p>The per-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a bypass live streaming layout.</p>
+     * 
      * @param request DeleteMPULayoutRequest
      * @return DeleteMPULayoutResponse
      */
@@ -1245,6 +1480,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a> to add a recording configuration template.</p>
+     * <h1>QPS limits</h1>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a recording configuration template.</p>
+     * 
      * @param request DeleteRecordTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteRecordTemplateResponse
@@ -1282,6 +1526,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a> to add a recording configuration template.</p>
+     * <h1>QPS limits</h1>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a recording configuration template.</p>
+     * 
      * @param request DeleteRecordTemplateRequest
      * @return DeleteRecordTemplateResponse
      */
@@ -1291,8 +1544,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>This API supports a maximum of 10 calls per second per user. If you exceed this limit, rate limiting is applied to your API calls, which may affect your business operations. Use this API judiciously.</p>
+     * 
      * <b>summary</b> : 
-     * <p>列出系统支持的事件回调</p>
+     * <p>Lists the event callbacks supported by the system.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAllCallbackResponse
@@ -1314,8 +1571,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>This API supports a maximum of 10 calls per second per user. If you exceed this limit, rate limiting is applied to your API calls, which may affect your business operations. Use this API judiciously.</p>
+     * 
      * <b>summary</b> : 
-     * <p>列出系统支持的事件回调</p>
+     * <p>Lists the event callbacks supported by the system.</p>
      * @return DescribeAllCallbackResponse
      */
     public DescribeAllCallbackResponse describeAllCallback() throws Exception {
@@ -1324,8 +1585,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>This API operation supports a maximum of 10 queries per second per user. If you exceed this limit, rate limiting is triggered, which may affect your application. Call this API only as needed.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询应用智能体开关</p>
+     * <p>Query the status of the application agent feature.</p>
      * 
      * @param request DescribeAppAgentFunctionStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1356,8 +1621,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>This API operation supports a maximum of 10 queries per second per user. If you exceed this limit, rate limiting is triggered, which may affect your application. Call this API only as needed.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询应用智能体开关</p>
+     * <p>Query the status of the application agent feature.</p>
      * 
      * @param request DescribeAppAgentFunctionStatusRequest
      * @return DescribeAppAgentFunctionStatusResponse
@@ -1368,8 +1637,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Rate limits</h3>
+     * <p>The rate limit for this API operation is 10 queries per second (QPS) per user. If you exceed the limit, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>应用智能体模版列表</p>
+     * <p>Lists agent templates.</p>
      * 
      * @param request DescribeAppAgentTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1416,8 +1689,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Rate limits</h3>
+     * <p>The rate limit for this API operation is 10 queries per second (QPS) per user. If you exceed the limit, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>应用智能体模版列表</p>
+     * <p>Lists agent templates.</p>
      * 
      * @param request DescribeAppAgentTemplatesRequest
      * @return DescribeAppAgentTemplatesResponse
@@ -1428,8 +1705,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API operation at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查看app回调开关</p>
+     * <p>Queries the callback switch of an application.</p>
      * 
      * @param request DescribeAppCallStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1460,8 +1741,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API operation at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查看app回调开关</p>
+     * <p>Queries the callback switch of an application.</p>
      * 
      * @param request DescribeAppCallStatusRequest
      * @return DescribeAppCallStatusResponse
@@ -1472,8 +1757,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Queries per second (QPS) limit</h3>
+     * <p>The queries per second (QPS) limit for this API is 10 requests per second per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your business. Please invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取app回调密钥</p>
+     * <p>Obtain the application callback key</p>
      * 
      * @param request DescribeAppCallbackSecretKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1504,8 +1793,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Queries per second (QPS) limit</h3>
+     * <p>The queries per second (QPS) limit for this API is 10 requests per second per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your business. Please invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取app回调密钥</p>
+     * <p>Obtain the application callback key</p>
      * 
      * @param request DescribeAppCallbackSecretKeyRequest
      * @return DescribeAppCallbackSecretKeyResponse
@@ -1516,8 +1809,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>Before invoking this API, you must have already created an application in the RTC console.  </p>
+     * <h3>queries per second (QPS) limit</h3>
+     * <p>The QPS limit for this API is 200 requests per minute per user. If the limit is exceeded, API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查看AppKey</p>
+     * <p>Invoke DescribeAppKey to query the AppKey of a specified application.</p>
      * 
      * @param request DescribeAppKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1552,8 +1851,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>Before invoking this API, you must have already created an application in the RTC console.  </p>
+     * <h3>queries per second (QPS) limit</h3>
+     * <p>The QPS limit for this API is 200 requests per minute per user. If the limit is exceeded, API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查看AppKey</p>
+     * <p>Invoke DescribeAppKey to query the AppKey of a specified application.</p>
      * 
      * @param request DescribeAppKeyRequest
      * @return DescribeAppKeyResponse
@@ -1564,8 +1869,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>This API supports up to 10 queries per second (QPS) per user. Exceeding this limit triggers rate limiting, which may affect your business operations. Use the API judiciously.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询app自定义布局</p>
+     * <p>Query custom application layouts.</p>
      * 
      * @param tmpReq DescribeAppLayoutsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1598,8 +1907,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>This API supports up to 10 queries per second (QPS) per user. Exceeding this limit triggers rate limiting, which may affect your business operations. Use the API judiciously.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询app自定义布局</p>
+     * <p>Query custom application layouts.</p>
      * 
      * @param request DescribeAppLayoutsRequest
      * @return DescribeAppLayoutsResponse
@@ -1610,8 +1923,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit for this API is 10 for each user. API calls that exceed this limit are subject to rate limiting, which may impact your business. We recommend that you call this API at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查看应用旁路开关</p>
+     * <p>View the application bypass switch.</p>
      * 
      * @param request DescribeAppLiveStreamStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1638,8 +1955,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit for this API is 10 for each user. API calls that exceed this limit are subject to rate limiting, which may impact your business. We recommend that you call this API at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查看应用旁路开关</p>
+     * <p>View the application bypass switch.</p>
      * 
      * @param request DescribeAppLiveStreamStatusRequest
      * @return DescribeAppLiveStreamStatusResponse
@@ -1650,8 +1971,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for this operation is 10 calls per second per user. Exceeding this limit triggers rate limiting, which may affect your business. Call this operation only as needed.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询应用录制开关</p>
+     * <p>Queries the recording status of an application.</p>
      * 
      * @param request DescribeAppRecordStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1678,8 +2003,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for this operation is 10 calls per second per user. Exceeding this limit triggers rate limiting, which may affect your business. Call this operation only as needed.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询应用录制开关</p>
+     * <p>Queries the recording status of an application.</p>
      * 
      * @param request DescribeAppRecordStatusRequest
      * @return DescribeAppRecordStatusResponse
@@ -1690,8 +2019,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user calling this API operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this API operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>应用录制模版列表</p>
+     * <p>Queries the list of application recording templates.</p>
      * 
      * @param tmpReq DescribeAppRecordTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1724,8 +2057,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user calling this API operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this API operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>应用录制模版列表</p>
+     * <p>Queries the list of application recording templates.</p>
      * 
      * @param request DescribeAppRecordTemplatesRequest
      * @return DescribeAppRecordTemplatesResponse
@@ -1736,8 +2073,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for this API is 10 requests per second per user. Exceeding this limit triggers rate limiting, which may affect your service. Call this API only when necessary.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询录制列表</p>
+     * <p>Lists recording files.</p>
      * 
      * @param tmpReq DescribeAppRecordingFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1770,8 +2111,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for this API is 10 requests per second per user. Exceeding this limit triggers rate limiting, which may affect your service. Call this API only when necessary.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询录制列表</p>
+     * <p>Lists recording files.</p>
      * 
      * @param request DescribeAppRecordingFilesRequest
      * @return DescribeAppRecordingFilesResponse
@@ -1782,8 +2127,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to view the list of stream ingest templates for an RTC 3.0 application.  </p>
+     * <h3>Queries per second (QPS) limit</h3>
+     * <p>The QPS limit for this API is 10 queries per second per user. If this limit is exceeded, API calls will be rate-limited, which may impact your business. Please invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>应用推流模版列表</p>
+     * <p>Query the list of stream ingest templates under an RTC 3.0 application.</p>
      * 
      * @param tmpReq DescribeAppStreamingOutTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1832,8 +2183,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to view the list of stream ingest templates for an RTC 3.0 application.  </p>
+     * <h3>Queries per second (QPS) limit</h3>
+     * <p>The QPS limit for this API is 10 queries per second per user. If this limit is exceeded, API calls will be rate-limited, which may impact your business. Please invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>应用推流模版列表</p>
+     * <p>Query the list of stream ingest templates under an RTC 3.0 application.</p>
      * 
      * @param request DescribeAppStreamingOutTemplatesRequest
      * @return DescribeAppStreamingOutTemplatesResponse
@@ -1844,8 +2201,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>This API has a QPS limit of 10 queries per second (QPS) per user. If you exceed this limit, rate limiting is triggered, which can affect your business operations. Call the API at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查看合流开关</p>
+     * <p>View the stream merging switch</p>
      * 
      * @param request DescribeAppViewStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1876,8 +2237,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>This API has a QPS limit of 10 queries per second (QPS) per user. If you exceed this limit, rate limiting is triggered, which can affect your business operations. Call the API at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查看合流开关</p>
+     * <p>View the stream merging switch</p>
      * 
      * @param request DescribeAppViewStatusRequest
      * @return DescribeAppViewStatusResponse
@@ -1888,8 +2253,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The per-user QPS limit for this operation is 10 calls per second. Exceeding this limit triggers rate limiting, which may affect your business. You should call this operation only as needed.</p>
+     * 
      * <b>summary</b> : 
-     * <p>应用合流模版列表</p>
+     * <p>Lists application compositing templates.</p>
      * 
      * @param tmpReq DescribeAppViewTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1938,8 +2307,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The per-user QPS limit for this operation is 10 calls per second. Exceeding this limit triggers rate limiting, which may affect your business. You should call this operation only as needed.</p>
+     * 
      * <b>summary</b> : 
-     * <p>应用合流模版列表</p>
+     * <p>Lists application compositing templates.</p>
      * 
      * @param request DescribeAppViewTemplatesRequest
      * @return DescribeAppViewTemplatesResponse
@@ -1950,8 +2323,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation queries the list of applications. For example, you can obtain data such as the application ID, application name, and application type from the query results.</p>
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit for a single user is 200 calls per minute. If this limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>App列表</p>
+     * <p>Queries the list of applications.</p>
      * 
      * @param request DescribeAppsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2006,8 +2385,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation queries the list of applications. For example, you can obtain data such as the application ID, application name, and application type from the query results.</p>
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit for a single user is 200 calls per minute. If this limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>App列表</p>
+     * <p>Queries the list of applications.</p>
      * 
      * @param request DescribeAppsRequest
      * @return DescribeAppsResponse
@@ -2018,6 +2403,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</p>
+     * <h1>QPS limit</h1>
+     * <p>The QPS limit for a single user is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the automatic bypass single-stream relay rules.</p>
+     * 
      * @param request DescribeAutoLiveStreamRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAutoLiveStreamRuleResponse
@@ -2051,6 +2445,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</p>
+     * <h1>QPS limit</h1>
+     * <p>The QPS limit for a single user is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the automatic bypass single-stream relay rules.</p>
+     * 
      * @param request DescribeAutoLiveStreamRuleRequest
      * @return DescribeAutoLiveStreamRuleResponse
      */
@@ -2060,8 +2463,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation queries the details of a single communication session. For example, you can query the communication status and user details.</p>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit per user for this operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>调用DescribeCall获取单次通信详情。</p>
+     * <p>Queries the details of a single communication session. For example, you can query the communication status and user details.</p>
      * 
      * @param request DescribeCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2112,8 +2521,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation queries the details of a single communication session. For example, you can query the communication status and user details.</p>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit per user for this operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>调用DescribeCall获取单次通信详情。</p>
+     * <p>Queries the details of a single communication session. For example, you can query the communication status and user details.</p>
      * 
      * @param request DescribeCallRequest
      * @return DescribeCallResponse
@@ -2124,8 +2539,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to query communication records created within a specified time range. For example, you can query information such as call duration, status, and user count.  </p>
+     * <h3>Rate Limiting</h3>
+     * <p>The queries per second (QPS) limit for this API is 10 calls per second per user. If this limit is exceeded, API calls will be rate-limited, which may impact your business. Please invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>调用DescribeCallList分页查询时间范围内创建的通信信息。</p>
+     * <p>Invoke DescribeCallList to perform a paged query of communication records created within a specified time range.</p>
      * 
      * @param request DescribeCallListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2192,8 +2613,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to query communication records created within a specified time range. For example, you can query information such as call duration, status, and user count.  </p>
+     * <h3>Rate Limiting</h3>
+     * <p>The queries per second (QPS) limit for this API is 10 calls per second per user. If this limit is exceeded, API calls will be rate-limited, which may impact your business. Please invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>调用DescribeCallList分页查询时间范围内创建的通信信息。</p>
+     * <p>Invoke DescribeCallList to perform a paged query of communication records created within a specified time range.</p>
      * 
      * @param request DescribeCallListRequest
      * @return DescribeCallListResponse
@@ -2204,8 +2631,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>This API supports up to 10 queries per second (QPS) per user. If you exceed this limit, the system applies rate limiting to your API calls, which may affect your business operations. Plan your API calls accordingly.</p>
+     * 
      * <b>summary</b> : 
-     * <p>app事件回调列表</p>
+     * <p>Lists the event callbacks configured for an application.</p>
      * 
      * @param request DescribeCallbacksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2236,8 +2667,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>This API supports up to 10 queries per second (QPS) per user. If you exceed this limit, the system applies rate limiting to your API calls, which may affect your business operations. Plan your API calls accordingly.</p>
+     * 
      * <b>summary</b> : 
-     * <p>app事件回调列表</p>
+     * <p>Lists the event callbacks configured for an application.</p>
      * 
      * @param request DescribeCallbacksRequest
      * @return DescribeCallbacksResponse
@@ -2248,6 +2683,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to query online channel information.  </p>
+     * <h3>queries per second (QPS) Limit</h3>
+     * <p>The QPS limit for this API is 10 queries per second per user. If the limit is exceeded, Rate Limiting will be applied to your API Call, which may Impact your business. Please invoke the API reasonably.</p>
+     * 
      * <b>summary</b> : 
      * <p>DescribeChannel</p>
      * 
@@ -2284,6 +2725,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to query online channel information.  </p>
+     * <h3>queries per second (QPS) Limit</h3>
+     * <p>The QPS limit for this API is 10 queries per second per user. If the limit is exceeded, Rate Limiting will be applied to your API Call, which may Impact your business. Please invoke the API reasonably.</p>
+     * 
      * <b>summary</b> : 
      * <p>DescribeChannel</p>
      * 
@@ -2296,8 +2743,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to query the list of users in an online channel.  </p>
+     * <h3>QPS Limit</h3>
+     * <p>The queries per second (QPS) limit for this API is 10 requests per second per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your business. Invoke this API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询频道的所有参会者</p>
+     * <p>This API is used to query the user list in a channel.</p>
      * 
      * @param request DescribeChannelAllUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2332,8 +2785,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to query the list of users in an online channel.  </p>
+     * <h3>QPS Limit</h3>
+     * <p>The queries per second (QPS) limit for this API is 10 requests per second per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your business. Invoke this API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询频道的所有参会者</p>
+     * <p>This API is used to query the user list in a channel.</p>
      * 
      * @param request DescribeChannelAllUsersRequest
      * @return DescribeChannelAllUsersResponse
@@ -2344,8 +2803,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation retrieves the regional distribution statistics of a channel.</p>
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Plan your API calls accordingly.</p>
+     * 
      * <b>summary</b> : 
-     * <p>调用DescribeChannelAreaDistributionStatData获取频道地区分布统计数据。</p>
+     * <p>Retrieves the regional distribution statistics of a channel.</p>
      * 
      * @param request DescribeChannelAreaDistributionStatDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2392,8 +2857,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation retrieves the regional distribution statistics of a channel.</p>
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Plan your API calls accordingly.</p>
+     * 
      * <b>summary</b> : 
-     * <p>调用DescribeChannelAreaDistributionStatData获取频道地区分布统计数据。</p>
+     * <p>Retrieves the regional distribution statistics of a channel.</p>
      * 
      * @param request DescribeChannelAreaDistributionStatDataRequest
      * @return DescribeChannelAreaDistributionStatDataResponse
@@ -2404,8 +2875,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation queries the channel distribution statistics. You can query the statistics by dimension, such as operating system type or SDK version.</p>
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>调用DescribeChannelDistributionStatData获取频道分布统计数据。</p>
+     * <p>Queries the channel distribution statistics.</p>
      * 
      * @param request DescribeChannelDistributionStatDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2452,8 +2929,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation queries the channel distribution statistics. You can query the statistics by dimension, such as operating system type or SDK version.</p>
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>调用DescribeChannelDistributionStatData获取频道分布统计数据。</p>
+     * <p>Queries the channel distribution statistics.</p>
      * 
      * @param request DescribeChannelDistributionStatDataRequest
      * @return DescribeChannelDistributionStatDataResponse
@@ -2464,8 +2947,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to query channel overview data. For example, you can query basic communication information, Trend Indicators, and other information.  </p>
+     * <h3>queries per second (QPS) Limit</h3>
+     * <p>The QPS limit for this API is 10 queries per second per User. If the limit is exceeded, Rate Limiting will be applied to API Calls, which may Impact your business. Invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>调用DescribeChannelOverallData查询频道概览数据。</p>
+     * <p>This API is used to query channel overview data.</p>
      * 
      * @param request DescribeChannelOverallDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2508,8 +2997,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to query channel overview data. For example, you can query basic communication information, Trend Indicators, and other information.  </p>
+     * <h3>queries per second (QPS) Limit</h3>
+     * <p>The QPS limit for this API is 10 queries per second per User. If the limit is exceeded, Rate Limiting will be applied to API Calls, which may Impact your business. Invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>调用DescribeChannelOverallData查询频道概览数据。</p>
+     * <p>This API is used to query channel overview data.</p>
      * 
      * @param request DescribeChannelOverallDataRequest
      * @return DescribeChannelOverallDataResponse
@@ -2520,6 +3015,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>This operation queries the list of online users in a channel, excluding detailed user information.</p>
+     * <h1>QPS limit</h1>
+     * <p>The QPS limit for a single user is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of online users in a channel without detailed information.</p>
+     * 
      * @param request DescribeChannelParticipantsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeChannelParticipantsResponse
@@ -2569,6 +3073,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>This operation queries the list of online users in a channel, excluding detailed user information.</p>
+     * <h1>QPS limit</h1>
+     * <p>The QPS limit for a single user is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of online users in a channel without detailed information.</p>
+     * 
      * @param request DescribeChannelParticipantsRequest
      * @return DescribeChannelParticipantsResponse
      */
@@ -2578,8 +3091,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation retrieves the list of publishing users in a channel in descending order of online duration. For example, you can query information such as the time when a user joined the call and the communication duration from the user list.</p>
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>调用DescribeChannelTopPubUserList获取频道内发布端的用户列表（按用户在线时长降序）。</p>
+     * <p>Retrieves the list of publishing users in a channel in descending order of online duration.</p>
      * 
      * @param request DescribeChannelTopPubUserListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2622,8 +3141,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation retrieves the list of publishing users in a channel in descending order of online duration. For example, you can query information such as the time when a user joined the call and the communication duration from the user list.</p>
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>调用DescribeChannelTopPubUserList获取频道内发布端的用户列表（按用户在线时长降序）。</p>
+     * <p>Retrieves the list of publishing users in a channel in descending order of online duration.</p>
      * 
      * @param request DescribeChannelTopPubUserListRequest
      * @return DescribeChannelTopPubUserListResponse
@@ -2634,8 +3159,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation queries the information of a user in an online channel.</p>
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>DescribeChannelUser</p>
+     * <p>Queries the information of a user in a channel.</p>
      * 
      * @param request DescribeChannelUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2674,8 +3205,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation queries the information of a user in an online channel.</p>
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>DescribeChannelUser</p>
+     * <p>Queries the information of a user in a channel.</p>
      * 
      * @param request DescribeChannelUserRequest
      * @return DescribeChannelUserResponse
@@ -2686,8 +3223,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation queries the user data in the channel overview. For example, you can query metric data details and overview data.</p>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>调用DescribeChannelUserMetrics查询频道总览中的用户数据。</p>
+     * <p>Queries the user data in the channel overview.</p>
      * 
      * @param request DescribeChannelUserMetricsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2730,8 +3273,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation queries the user data in the channel overview. For example, you can query metric data details and overview data.</p>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>调用DescribeChannelUserMetrics查询频道总览中的用户数据。</p>
+     * <p>Queries the user data in the channel overview.</p>
      * 
      * @param request DescribeChannelUserMetricsRequest
      * @return DescribeChannelUserMetricsResponse
@@ -2742,6 +3291,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>This operation queries the details of online users in a channel. For example, you can query the total number of users in communication mode and live streaming mode.</p>
+     * <h1>QPS limit</h1>
+     * <p>The queries per second (QPS) limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of real-time online users in a channel.</p>
+     * 
      * @param request DescribeChannelUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeChannelUsersResponse
@@ -2779,6 +3337,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>This operation queries the details of online users in a channel. For example, you can query the total number of users in communication mode and live streaming mode.</p>
+     * <h1>QPS limit</h1>
+     * <p>The queries per second (QPS) limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of real-time online users in a channel.</p>
+     * 
      * @param request DescribeChannelUsersRequest
      * @return DescribeChannelUsersResponse
      */
@@ -2788,8 +3355,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation queries all active channels under a single AppId.</p>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询在线频道列表</p>
+     * <p>Queries all active channels under a single AppId.</p>
      * 
      * @param request DescribeChannelsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2816,8 +3389,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation queries all active channels under a single AppId.</p>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询在线频道列表</p>
+     * <p>Queries all active channels under a single AppId.</p>
      * 
      * @param request DescribeChannelsRequest
      * @return DescribeChannelsResponse
@@ -2829,7 +3408,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>纪要热词列表</p>
+     * <p>Queries the hotword lists for meeting minutes.</p>
      * 
      * @param tmpReq DescribeCloudNotePhrasesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2879,7 +3458,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>纪要热词列表</p>
+     * <p>Queries the hotword lists for meeting minutes.</p>
      * 
      * @param request DescribeCloudNotePhrasesRequest
      * @return DescribeCloudNotePhrasesResponse
@@ -2890,8 +3469,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to query the list of meeting summary job files that have generated summary results.  </p>
+     * <h3>Queries Per Second (QPS) Limit</h3>
+     * <p>The QPS limit for this API is 10 queries per second (QPS) per user. If this limit is exceeded, API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>纪要列表</p>
+     * <p>Meeting Summary List</p>
      * 
      * @param tmpReq DescribeCloudNotesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2924,8 +3509,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to query the list of meeting summary job files that have generated summary results.  </p>
+     * <h3>Queries Per Second (QPS) Limit</h3>
+     * <p>The QPS limit for this API is 10 queries per second (QPS) per user. If this limit is exceeded, API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>纪要列表</p>
+     * <p>Meeting Summary List</p>
      * 
      * @param request DescribeCloudNotesRequest
      * @return DescribeCloudNotesResponse
@@ -2936,8 +3527,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit per user for this API operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询录制任务状态</p>
+     * <p>Queries the status of a recording task.</p>
      * 
      * @param request DescribeCloudRecordStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2976,8 +3571,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit per user for this API operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询录制任务状态</p>
+     * <p>Queries the status of a recording task.</p>
      * 
      * @param request DescribeCloudRecordStatusRequest
      * @return DescribeCloudRecordStatusResponse
@@ -2988,8 +3587,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation retrieves a list of end-to-end user events. For example, you can obtain information such as the event name and event type from the event list.</p>
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>调用DescribeEndPointEventList获取端对端用户事件列表。</p>
+     * <p>Retrieves a list of end-to-end user events.</p>
      * 
      * @param request DescribeEndPointEventListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3036,8 +3641,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation retrieves a list of end-to-end user events. For example, you can obtain information such as the event name and event type from the event list.</p>
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>调用DescribeEndPointEventList获取端对端用户事件列表。</p>
+     * <p>Retrieves a list of end-to-end user events.</p>
      * 
      * @param request DescribeEndPointEventListRequest
      * @return DescribeEndPointEventListResponse
@@ -3048,8 +3659,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation retrieves end-to-end metric data. For example, you can retrieve metric information for subscribers and publishers.</p>
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the number of calls per second exceeds the limit, throttling is triggered, which may affect your business. Make API calls at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>调用DescribeEndPointMetricData获取端对端指标数据。</p>
+     * <p>Retrieves end-to-end metric data.</p>
      * 
      * @param request DescribeEndPointMetricDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3108,8 +3725,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation retrieves end-to-end metric data. For example, you can retrieve metric information for subscribers and publishers.</p>
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the number of calls per second exceeds the limit, throttling is triggered, which may affect your business. Make API calls at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>调用DescribeEndPointMetricData获取端对端指标数据。</p>
+     * <p>Retrieves end-to-end metric data.</p>
      * 
      * @param request DescribeEndPointMetricDataRequest
      * @return DescribeEndPointMetricDataResponse
@@ -3120,8 +3743,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to retrieve the distribution of factors impacting abnormal diagnosis. When using this API, you can query data from the last 48 hours, with each query covering a time range of no more than 24 hours.</p>
+     * <h3>QPS Limit</h3>
+     * <p>The queries per second (QPS) limit for this API is 10 per user. If this limit is exceeded, API calls will be subject to rate limiting, which may impact your service. Please call the API responsibly.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取异常诊断影响因素分布</p>
+     * <p>Invoke the DescribeFaultDiagnosisFactorDistributionStat API to obtain the distribution of factors impacting abnormal diagnosis.</p>
      * 
      * @param request DescribeFaultDiagnosisFactorDistributionStatRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3160,8 +3789,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to retrieve the distribution of factors impacting abnormal diagnosis. When using this API, you can query data from the last 48 hours, with each query covering a time range of no more than 24 hours.</p>
+     * <h3>QPS Limit</h3>
+     * <p>The queries per second (QPS) limit for this API is 10 per user. If this limit is exceeded, API calls will be subject to rate limiting, which may impact your service. Please call the API responsibly.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取异常诊断影响因素分布</p>
+     * <p>Invoke the DescribeFaultDiagnosisFactorDistributionStat API to obtain the distribution of factors impacting abnormal diagnosis.</p>
      * 
      * @param request DescribeFaultDiagnosisFactorDistributionStatRequest
      * @return DescribeFaultDiagnosisFactorDistributionStatResponse
@@ -3172,8 +3807,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation retrieves the overview data of exception diagnostics. When you call this operation, you can query data from the last 48 hours, and the query time range cannot exceed 24 hours.</p>
+     * <h3>QPS limits</h3>
+     * <p>The queries per second (QPS) limit on this operation is 10 per user. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取异常诊断总览数据</p>
+     * <p>Retrieves the overview data of exception diagnostics.</p>
      * 
      * @param request DescribeFaultDiagnosisOverallDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3216,8 +3857,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation retrieves the overview data of exception diagnostics. When you call this operation, you can query data from the last 48 hours, and the query time range cannot exceed 24 hours.</p>
+     * <h3>QPS limits</h3>
+     * <p>The queries per second (QPS) limit on this operation is 10 per user. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取异常诊断总览数据</p>
+     * <p>Retrieves the overview data of exception diagnostics.</p>
      * 
      * @param request DescribeFaultDiagnosisOverallDataRequest
      * @return DescribeFaultDiagnosisOverallDataResponse
@@ -3228,8 +3875,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>[responses_200_schema_properties_UserDetail_properties_CreatedTs_description]Call creation time, represented as a UNIX timestamp in seconds.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取异常诊断用户详情</p>
+     * <p>[responses_200_schema_properties_UserDetail_properties_Duration_type]integer</p>
      * 
      * @param request DescribeFaultDiagnosisUserDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3280,8 +3930,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>[responses_200_schema_properties_UserDetail_properties_CreatedTs_description]Call creation time, represented as a UNIX timestamp in seconds.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取异常诊断用户详情</p>
+     * <p>[responses_200_schema_properties_UserDetail_properties_Duration_type]integer</p>
      * 
      * @param request DescribeFaultDiagnosisUserDetailRequest
      * @return DescribeFaultDiagnosisUserDetailResponse
@@ -3292,8 +3945,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation is used to retrieve the detailed user list for fault diagnosis. When you call this operation, you can query data from the last 48 hours, and the query time range cannot exceed 24 hours.</p>
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取异常诊断用户明细列表</p>
+     * <p>Queries the detailed user list for fault diagnosis.</p>
      * 
      * @param request DescribeFaultDiagnosisUserListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3352,8 +4011,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation is used to retrieve the detailed user list for fault diagnosis. When you call this operation, you can query data from the last 48 hours, and the query time range cannot exceed 24 hours.</p>
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取异常诊断用户明细列表</p>
+     * <p>Queries the detailed user list for fault diagnosis.</p>
      * 
      * @param request DescribeFaultDiagnosisUserListRequest
      * @return DescribeFaultDiagnosisUserListResponse
@@ -3364,6 +4029,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before calling this operation, call <a href="https://help.aliyun.com/document_detail/162192.html">CreateMPULayout</a> to create a bypass live streaming layout.</p>
+     * <h1>QPS limit</h1>
+     * <p>The per-user QPS limit for this operation is 10 calls per second. Exceeding this limit triggers rate limiting, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Call DescribeMPULayoutInfoList to retrieve layout parameters for a bypass live streaming task.</p>
+     * 
      * @param request DescribeMPULayoutInfoListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeMPULayoutInfoListResponse
@@ -3413,6 +4087,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before calling this operation, call <a href="https://help.aliyun.com/document_detail/162192.html">CreateMPULayout</a> to create a bypass live streaming layout.</p>
+     * <h1>QPS limit</h1>
+     * <p>The per-user QPS limit for this operation is 10 calls per second. Exceeding this limit triggers rate limiting, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Call DescribeMPULayoutInfoList to retrieve layout parameters for a bypass live streaming task.</p>
+     * 
      * @param request DescribeMPULayoutInfoListRequest
      * @return DescribeMPULayoutInfoListResponse
      */
@@ -3422,8 +4105,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to obtain the list of publishing users in a communication session based on the subscriber. For example, you can retrieve detailed information about both the subscriber and the publishing users.  </p>
+     * <h3>queries per second (QPS) Limit</h3>
+     * <p>The QPS limit for this API is 10 requests per second per user. If this limit is exceeded, API calls will be subject to rate limiting, which may affect your business. Please invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>调用DescribePubUserListBySubUser根据订阅端获取通信中发布端用户列表。</p>
+     * <p>This API is used to obtain the list of publishing users in a communication session based on the subscriber.</p>
      * 
      * @param request DescribePubUserListBySubUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3470,8 +4159,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to obtain the list of publishing users in a communication session based on the subscriber. For example, you can retrieve detailed information about both the subscriber and the publishing users.  </p>
+     * <h3>queries per second (QPS) Limit</h3>
+     * <p>The QPS limit for this API is 10 requests per second per user. If this limit is exceeded, API calls will be subject to rate limiting, which may affect your business. Please invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>调用DescribePubUserListBySubUser根据订阅端获取通信中发布端用户列表。</p>
+     * <p>This API is used to obtain the list of publishing users in a communication session based on the subscriber.</p>
      * 
      * @param request DescribePubUserListBySubUserRequest
      * @return DescribePubUserListBySubUserResponse
@@ -3482,8 +4177,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to obtain the downlink experience quality metrics of a user in a single communication session. For example, you can retrieve information such as the metric types that impact communication experience and audio/video trend indicators.  </p>
+     * <h3>QPS Limit</h3>
+     * <p>The queries per second (QPS) limit for this API is 10 per user. If this limit is exceeded, API calls will be subject to rate limiting, which may affect your business. Please invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>调用DescribeQoeMetricData获取单次通信中用户的下行体验质量指标。</p>
+     * <p>This API is used to obtain the downlink experience quality metrics of a user in a single communication session.</p>
      * 
      * @param request DescribeQoeMetricDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3530,8 +4231,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to obtain the downlink experience quality metrics of a user in a single communication session. For example, you can retrieve information such as the metric types that impact communication experience and audio/video trend indicators.  </p>
+     * <h3>QPS Limit</h3>
+     * <p>The queries per second (QPS) limit for this API is 10 per user. If this limit is exceeded, API calls will be subject to rate limiting, which may affect your business. Please invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>调用DescribeQoeMetricData获取单次通信中用户的下行体验质量指标。</p>
+     * <p>This API is used to obtain the downlink experience quality metrics of a user in a single communication session.</p>
      * 
      * @param request DescribeQoeMetricDataRequest
      * @return DescribeQoeMetricDataResponse
@@ -3542,8 +4249,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation queries the regional distribution data of quality statistics. When you call this operation, the following limits apply:</p>
+     * <ul>
+     * <li>You can query data within any time range in the last 365 days, excluding the current day.</li>
+     * <li>If the query time range is less than 24 hours, the data is aggregated by hour. If the query time range is 24 hours or more, the data is aggregated by day.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取质量统计区域分布统计数据</p>
+     * <p>Queries the regional distribution data of quality statistics.</p>
      * 
      * @param request DescribeQualityAreaDistributionStatDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3586,8 +4303,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation queries the regional distribution data of quality statistics. When you call this operation, the following limits apply:</p>
+     * <ul>
+     * <li>You can query data within any time range in the last 365 days, excluding the current day.</li>
+     * <li>If the query time range is less than 24 hours, the data is aggregated by hour. If the query time range is 24 hours or more, the data is aggregated by day.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取质量统计区域分布统计数据</p>
+     * <p>Queries the regional distribution data of quality statistics.</p>
      * 
      * @param request DescribeQualityAreaDistributionStatDataRequest
      * @return DescribeQualityAreaDistributionStatDataResponse
@@ -3598,8 +4325,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to obtain the distribution data of quality statistics. The following limits apply when using this API:</p>
+     * <ul>
+     * <li>You can query data for any period within the last 365 days (excluding the current day).</li>
+     * <li>If the query range is less than 24 hours, the data is aggregated by hour. If the query range is greater than or equal to 24 hours, the data is aggregated by day.</li>
+     * </ul>
+     * <h3>Queries per second (QPS) limit</h3>
+     * <p>The QPS limit for this API is 10 queries per second (QPS) per user. If you exceed this limit, your API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API reasonably.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取质量统计分布数据</p>
+     * <p>This API is used to obtain the distribution data of quality statistics.</p>
      * 
      * @param request DescribeQualityDistributionStatDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3642,8 +4379,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to obtain the distribution data of quality statistics. The following limits apply when using this API:</p>
+     * <ul>
+     * <li>You can query data for any period within the last 365 days (excluding the current day).</li>
+     * <li>If the query range is less than 24 hours, the data is aggregated by hour. If the query range is greater than or equal to 24 hours, the data is aggregated by day.</li>
+     * </ul>
+     * <h3>Queries per second (QPS) limit</h3>
+     * <p>The QPS limit for this API is 10 queries per second (QPS) per user. If you exceed this limit, your API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API reasonably.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取质量统计分布数据</p>
+     * <p>This API is used to obtain the distribution data of quality statistics.</p>
      * 
      * @param request DescribeQualityDistributionStatDataRequest
      * @return DescribeQualityDistributionStatDataResponse
@@ -3654,8 +4401,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation retrieves the distribution data of operating systems and SDK versions in quality statistics. The following limits apply when you call this operation:</p>
+     * <ul>
+     * <li>You can query data within the last 365 days, excluding the current day.</li>
+     * <li>If the query time range is less than 24 hours, the data is aggregated by hour. If the query time range is 24 hours or more, the data is aggregated by day.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取质量统计各操作系统下SDK版本分布数据</p>
+     * <p>Retrieves the distribution data of operating systems and SDK versions in quality statistics.</p>
      * 
      * @param request DescribeQualityOsSdkVersionDistributionStatDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3694,8 +4451,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation retrieves the distribution data of operating systems and SDK versions in quality statistics. The following limits apply when you call this operation:</p>
+     * <ul>
+     * <li>You can query data within the last 365 days, excluding the current day.</li>
+     * <li>If the query time range is less than 24 hours, the data is aggregated by hour. If the query time range is 24 hours or more, the data is aggregated by day.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取质量统计各操作系统下SDK版本分布数据</p>
+     * <p>Retrieves the distribution data of operating systems and SDK versions in quality statistics.</p>
      * 
      * @param request DescribeQualityOsSdkVersionDistributionStatDataRequest
      * @return DescribeQualityOsSdkVersionDistributionStatDataResponse
@@ -3706,8 +4473,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to obtain overview data of quality statistics. The following restrictions apply when using this API:  </p>
+     * <ul>
+     * <li>You can query data for any time range within the last 365 days (excluding the current day).  </li>
+     * <li>If the query range is less than 24 hours, the data is aggregated by hour. If the query range is greater than or equal to 24 hours, the data is aggregated by day.</li>
+     * </ul>
+     * <h3>queries per second (QPS) Limit</h3>
+     * <p>The QPS limit for this API is 10 queries per second per user. If you exceed this limit, your API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取质量统计概览数据</p>
+     * <p>This API is used to obtain overview data of quality statistics.</p>
      * 
      * @param request DescribeQualityOverallDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3750,8 +4527,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to obtain overview data of quality statistics. The following restrictions apply when using this API:  </p>
+     * <ul>
+     * <li>You can query data for any time range within the last 365 days (excluding the current day).  </li>
+     * <li>If the query range is less than 24 hours, the data is aggregated by hour. If the query range is greater than or equal to 24 hours, the data is aggregated by day.</li>
+     * </ul>
+     * <h3>queries per second (QPS) Limit</h3>
+     * <p>The QPS limit for this API is 10 queries per second per user. If you exceed this limit, your API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取质量统计概览数据</p>
+     * <p>This API is used to obtain overview data of quality statistics.</p>
      * 
      * @param request DescribeQualityOverallDataRequest
      * @return DescribeQualityOverallDataResponse
@@ -3762,6 +4549,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>This operation is used to query the list of files generated by recording. For example, you can query parameters such as the creation time and recording duration of files generated by recording.</p>
+     * <h1>QPS limit</h1>
+     * <p>The per-user QPS limit of this operation is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call this operation reasonably. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Calls DescribeRecordFiles to query the list of files generated by recording.</p>
+     * 
      * @param request DescribeRecordFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRecordFilesResponse
@@ -3819,6 +4615,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>This operation is used to query the list of files generated by recording. For example, you can query parameters such as the creation time and recording duration of files generated by recording.</p>
+     * <h1>QPS limit</h1>
+     * <p>The per-user QPS limit of this operation is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call this operation reasonably. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Calls DescribeRecordFiles to query the list of files generated by recording.</p>
+     * 
      * @param request DescribeRecordFilesRequest
      * @return DescribeRecordFilesResponse
      */
@@ -3828,6 +4633,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a> to add a recording template.</p>
+     * <h1>QPS limit</h1>
+     * <p>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of recording template configurations.</p>
+     * 
      * @param request DescribeRecordTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRecordTemplatesResponse
@@ -3873,6 +4687,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a> to add a recording template.</p>
+     * <h1>QPS limit</h1>
+     * <p>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of recording template configurations.</p>
+     * 
      * @param request DescribeRecordTemplatesRequest
      * @return DescribeRecordTemplatesResponse
      */
@@ -3882,6 +4705,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the list of channel communication records.</p>
+     * 
      * @param request DescribeRtcChannelListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRtcChannelListResponse
@@ -3943,6 +4769,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the list of channel communication records.</p>
+     * 
      * @param request DescribeRtcChannelListRequest
      * @return DescribeRtcChannelListResponse
      */
@@ -3952,6 +4781,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the details of communication records in a channel. You can query data within the last 180 days.</p>
+     * 
      * @param request DescribeRtcChannelMetricRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRtcChannelMetricResponse
@@ -3993,6 +4825,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the details of communication records in a channel. You can query data within the last 180 days.</p>
+     * 
      * @param request DescribeRtcChannelMetricRequest
      * @return DescribeRtcChannelMetricResponse
      */
@@ -4002,6 +4837,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The maximum query time range is 30 days.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the total communication duration for an application within a specified time range. Data is aggregated by audio and video specifications.</p>
+     * 
      * @param request DescribeRtcDurationDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRtcDurationDataResponse
@@ -4051,6 +4894,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The maximum query time range is 30 days.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the total communication duration for an application within a specified time range. Data is aggregated by audio and video specifications.</p>
+     * 
      * @param request DescribeRtcDurationDataRequest
      * @return DescribeRtcDurationDataResponse
      */
@@ -4060,6 +4911,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The maximum time range that can be queried is 30 days.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the peak number of concurrent channels of an application in a specified time range.</p>
+     * 
      * @param request DescribeRtcPeakChannelCntDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRtcPeakChannelCntDataResponse
@@ -4109,6 +4968,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The maximum time range that can be queried is 30 days.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the peak number of concurrent channels of an application in a specified time range.</p>
+     * 
      * @param request DescribeRtcPeakChannelCntDataRequest
      * @return DescribeRtcPeakChannelCntDataResponse
      */
@@ -4118,6 +4985,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The maximum time span between the start time and the end time of a data query is 30 days.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the number of active users of an application within a specified time range, that is, the number of user terminals that engaged in communication.</p>
+     * 
      * @param request DescribeRtcUserCntDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRtcUserCntDataResponse
@@ -4167,6 +5042,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The maximum time span between the start time and the end time of a data query is 30 days.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the number of active users of an application within a specified time range, that is, the number of user terminals that engaged in communication.</p>
+     * 
      * @param request DescribeRtcUserCntDataRequest
      * @return DescribeRtcUserCntDataResponse
      */
@@ -4176,8 +5059,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit per user for this API operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询旁路推流状态</p>
+     * <p>Queries the bypass streaming status.</p>
      * 
      * @param request DescribeStreamingOutStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4216,8 +5103,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit per user for this API operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询旁路推流状态</p>
+     * <p>Queries the bypass streaming status.</p>
      * 
      * @param request DescribeStreamingOutStatusRequest
      * @return DescribeStreamingOutStatusResponse
@@ -4228,8 +5119,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The per-user QPS limit for this API is 10 calls per second. Exceeding this limit triggers rate limiting, which may affect your business. Call the API responsibly.</p>
+     * 
      * <b>summary</b> : 
-     * <p>系统内置布局</p>
+     * <p>Built-in system layouts</p>
      * 
      * @param request DescribeSystemLayoutListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4268,8 +5163,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The per-user QPS limit for this API is 10 calls per second. Exceeding this limit triggers rate limiting, which may affect your business. Call the API responsibly.</p>
+     * 
      * <b>summary</b> : 
-     * <p>系统内置布局</p>
+     * <p>Built-in system layouts</p>
      * 
      * @param request DescribeSystemLayoutListRequest
      * @return DescribeSystemLayoutListResponse
@@ -4280,8 +5179,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to retrieve the regional distribution data of usage statistics. The following restrictions apply when using this API:</p>
+     * <ul>
+     * <li>You can query data for any period within the last 365 days (excluding the current day).</li>
+     * <li>If the query range is less than 24 hours, the data is aggregated by hour. If the query range is greater than or equal to 24 hours, the data is aggregated by day.</li>
+     * </ul>
+     * <h3>QPS Limit</h3>
+     * <p>The queries per second (QPS) limit for this API is 10 requests per second per user. If you exceed this limit, your API calls will be subject to rate limiting, which may impact your business. Please invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取用量统计地域分布数据</p>
+     * <p>This API is used to retrieve the regional distribution data of usage statistics.</p>
      * 
      * @param request DescribeUsageAreaDistributionStatDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4324,8 +5233,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to retrieve the regional distribution data of usage statistics. The following restrictions apply when using this API:</p>
+     * <ul>
+     * <li>You can query data for any period within the last 365 days (excluding the current day).</li>
+     * <li>If the query range is less than 24 hours, the data is aggregated by hour. If the query range is greater than or equal to 24 hours, the data is aggregated by day.</li>
+     * </ul>
+     * <h3>QPS Limit</h3>
+     * <p>The queries per second (QPS) limit for this API is 10 requests per second per user. If you exceed this limit, your API calls will be subject to rate limiting, which may impact your business. Please invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取用量统计地域分布数据</p>
+     * <p>This API is used to retrieve the regional distribution data of usage statistics.</p>
      * 
      * @param request DescribeUsageAreaDistributionStatDataRequest
      * @return DescribeUsageAreaDistributionStatDataResponse
@@ -4336,8 +5255,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation queries the distribution data of usage statistics. When you call this operation, the following limits apply:</p>
+     * <ul>
+     * <li>You can query data within any time range in the last 365 days, excluding the current day.</li>
+     * <li>If the query time range is less than 24 hours, the data is aggregated by hour. If the query time range is 24 hours or more, the data is aggregated by day.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取用量统计分布数据</p>
+     * <p>Queries the distribution data of usage statistics.</p>
      * 
      * @param request DescribeUsageDistributionStatDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4380,8 +5309,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation queries the distribution data of usage statistics. When you call this operation, the following limits apply:</p>
+     * <ul>
+     * <li>You can query data within any time range in the last 365 days, excluding the current day.</li>
+     * <li>If the query time range is less than 24 hours, the data is aggregated by hour. If the query time range is 24 hours or more, the data is aggregated by day.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取用量统计分布数据</p>
+     * <p>Queries the distribution data of usage statistics.</p>
      * 
      * @param request DescribeUsageDistributionStatDataRequest
      * @return DescribeUsageDistributionStatDataResponse
@@ -4392,8 +5331,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to obtain the distribution data of operating systems and SDK versions in usage statistics. When using this API, the following restrictions apply:  </p>
+     * <ul>
+     * <li>You can query data for any period within the last 365 days (excluding the current day).  </li>
+     * <li>If the query range is less than 24 hours, the data is aggregated by hour. If the query range is greater than or equal to 24 hours, the data is aggregated by day.</li>
+     * </ul>
+     * <h3>Rate Limiting</h3>
+     * <p>The queries per second (QPS) limit for this API is 10 requests per second per user. If you exceed this limit, your API calls will be rate-limited, which may impact your business. Please invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取用量统计各操作系统下SDK版本分布数据</p>
+     * <p>This API is used to obtain the distribution data of operating systems and SDK versions in usage statistics.</p>
      * 
      * @param request DescribeUsageOsSdkVersionDistributionStatDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4432,8 +5381,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to obtain the distribution data of operating systems and SDK versions in usage statistics. When using this API, the following restrictions apply:  </p>
+     * <ul>
+     * <li>You can query data for any period within the last 365 days (excluding the current day).  </li>
+     * <li>If the query range is less than 24 hours, the data is aggregated by hour. If the query range is greater than or equal to 24 hours, the data is aggregated by day.</li>
+     * </ul>
+     * <h3>Rate Limiting</h3>
+     * <p>The queries per second (QPS) limit for this API is 10 requests per second per user. If you exceed this limit, your API calls will be rate-limited, which may impact your business. Please invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取用量统计各操作系统下SDK版本分布数据</p>
+     * <p>This API is used to obtain the distribution data of operating systems and SDK versions in usage statistics.</p>
      * 
      * @param request DescribeUsageOsSdkVersionDistributionStatDataRequest
      * @return DescribeUsageOsSdkVersionDistributionStatDataResponse
@@ -4444,8 +5403,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation retrieves the overview data of usage statistics. The following limits apply when you call this operation:</p>
+     * <ul>
+     * <li>You can query data for any time range within the last 365 days, excluding the current day.</li>
+     * <li>If the query time range is less than 24 hours, the data is aggregated by hour. If the query time range is 24 hours or more, the data is aggregated by day.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取用量统计概览数据</p>
+     * <p>Queries the overview data of usage statistics.</p>
      * 
      * @param request DescribeUsageOverallDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4488,8 +5457,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation retrieves the overview data of usage statistics. The following limits apply when you call this operation:</p>
+     * <ul>
+     * <li>You can query data for any time range within the last 365 days, excluding the current day.</li>
+     * <li>If the query time range is less than 24 hours, the data is aggregated by hour. If the query time range is 24 hours or more, the data is aggregated by day.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取用量统计概览数据</p>
+     * <p>Queries the overview data of usage statistics.</p>
      * 
      * @param request DescribeUsageOverallDataRequest
      * @return DescribeUsageOverallDataResponse
@@ -4500,6 +5479,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>This operation is used to query the real-time information of a user in a channel. For example, you can query information such as the user role type and the time of joining the meeting.</p>
+     * <h1>QPS limit</h1>
+     * <p>The per-user QPS limit of this operation is 100 times per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Call this operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Calls DescribeUserInfoInChannel to query the real-time information of a user in a channel.</p>
+     * 
      * @param request DescribeUserInfoInChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUserInfoInChannelResponse
@@ -4541,6 +5529,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>This operation is used to query the real-time information of a user in a channel. For example, you can query information such as the user role type and the time of joining the meeting.</p>
+     * <h1>QPS limit</h1>
+     * <p>The per-user QPS limit of this operation is 100 times per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Call this operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Calls DescribeUserInfoInChannel to query the real-time information of a user in a channel.</p>
+     * 
      * @param request DescribeUserInfoInChannelRequest
      * @return DescribeUserInfoInChannelResponse
      */
@@ -4550,6 +5547,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</p>
+     * <h1>QPS limit</h1>
+     * <p>The QPS limit per user is 1,000 requests per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables the automatic bypass single-stream relay rule.</p>
+     * 
      * @param request DisableAutoLiveStreamRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DisableAutoLiveStreamRuleResponse
@@ -4587,6 +5593,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</p>
+     * <h1>QPS limit</h1>
+     * <p>The QPS limit per user is 1,000 requests per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables the automatic bypass single-stream relay rule.</p>
+     * 
      * @param request DisableAutoLiveStreamRuleRequest
      * @return DisableAutoLiveStreamRuleResponse
      */
@@ -4596,6 +5611,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</p>
+     * <h1>QPS limit</h1>
+     * <p>The QPS limit per user for this operation is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables the automatic bypass single-stream relay rule.</p>
+     * 
      * @param request EnableAutoLiveStreamRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableAutoLiveStreamRuleResponse
@@ -4633,6 +5657,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</p>
+     * <h1>QPS limit</h1>
+     * <p>The QPS limit per user for this operation is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables the automatic bypass single-stream relay rule.</p>
+     * 
      * @param request EnableAutoLiveStreamRuleRequest
      * @return EnableAutoLiveStreamRuleResponse
      */
@@ -4643,7 +5676,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>GetAgent。</p>
+     * <p>GetAgent.</p>
      * 
      * @param request GetAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4683,7 +5716,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>GetAgent。</p>
+     * <p>GetAgent.</p>
      * 
      * @param request GetAgentRequest
      * @return GetAgentResponse
@@ -4694,6 +5727,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/93183.html">StartMpuTask</a> to start a bypass transcoding task.</p>
+     * <h1>QPS limit</h1>
+     * <p>The QPS limit for a single user is 4,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the status of a bypass transcoding task.</p>
+     * 
      * @param request GetMPUTaskStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetMPUTaskStatusResponse
@@ -4731,6 +5773,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/93183.html">StartMpuTask</a> to start a bypass transcoding task.</p>
+     * <h1>QPS limit</h1>
+     * <p>The QPS limit for a single user is 4,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the status of a bypass transcoding task.</p>
+     * 
      * @param request GetMPUTaskStatusRequest
      * @return GetMPUTaskStatusResponse
      */
@@ -4740,8 +5791,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h4>Usage notes</h4>
+     * <p>This operation modifies the name of a specified application.</p>
+     * <h4>QPS limit</h4>
+     * <p>The queries per second (QPS) limit per user for this operation is 200 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改App信息</p>
+     * <p>Modifies the name of a specified application.</p>
      * 
      * @param request ModifyAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4780,8 +5837,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h4>Usage notes</h4>
+     * <p>This operation modifies the name of a specified application.</p>
+     * <h4>QPS limit</h4>
+     * <p>The queries per second (QPS) limit per user for this operation is 200 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改App信息</p>
+     * <p>Modifies the name of a specified application.</p>
      * 
      * @param request ModifyAppRequest
      * @return ModifyAppResponse
@@ -4792,8 +5855,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>The queries per second (QPS) limit per user for this API operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改应用智能体开关</p>
+     * <p>Modifies the agent feature switch for an application.</p>
      * 
      * @param request ModifyAppAgentFunctionStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4824,8 +5891,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>The queries per second (QPS) limit per user for this API operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改应用智能体开关</p>
+     * <p>Modifies the agent feature switch for an application.</p>
      * 
      * @param request ModifyAppAgentFunctionStatusRequest
      * @return ModifyAppAgentFunctionStatusResponse
@@ -4836,8 +5907,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新应用智能体模版</p>
+     * <p>Updates an application agent template.</p>
      * 
      * @param tmpReq ModifyAppAgentTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4958,8 +6033,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新应用智能体模版</p>
+     * <p>Updates an application agent template.</p>
      * 
      * @param request ModifyAppAgentTemplateRequest
      * @return ModifyAppAgentTemplateResponse
@@ -4970,8 +6049,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit per user for this API operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新app回调事件开关</p>
+     * <p>Updates the callback event switch for an application.</p>
      * 
      * @param request ModifyAppCallbackStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5002,8 +6085,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit per user for this API operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新app回调事件开关</p>
+     * <p>Updates the callback event switch for an application.</p>
      * 
      * @param request ModifyAppCallbackStatusRequest
      * @return ModifyAppCallbackStatusResponse
@@ -5014,8 +6101,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>This API supports a maximum of 10 calls per second per user. Exceeding this limit triggers rate limiting, which may impact your business operations. Use the API judiciously.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改app自定义布局</p>
+     * <p>Modify a custom application layout.</p>
      * 
      * @param tmpReq ModifyAppLayoutRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5060,8 +6151,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>This API supports a maximum of 10 calls per second per user. Exceeding this limit triggers rate limiting, which may impact your business operations. Use the API judiciously.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改app自定义布局</p>
+     * <p>Modify a custom application layout.</p>
      * 
      * @param request ModifyAppLayoutRequest
      * @return ModifyAppLayoutResponse
@@ -5072,8 +6167,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Queries per second (QPS) limit</h3>
+     * <p>The queries per second (QPS) limit for this API is 10 per user per second. If the limit is exceeded, API calls will be subject to Rate Limiting, which may impact your business. Please invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改应用旁路开关</p>
+     * <p>Modify the bypass toggle of an application</p>
      * 
      * @param request ModifyAppLiveStreamStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5108,8 +6207,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Queries per second (QPS) limit</h3>
+     * <p>The queries per second (QPS) limit for this API is 10 per user per second. If the limit is exceeded, API calls will be subject to Rate Limiting, which may impact your business. Please invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改应用旁路开关</p>
+     * <p>Modify the bypass toggle of an application</p>
      * 
      * @param request ModifyAppLiveStreamStatusRequest
      * @return ModifyAppLiveStreamStatusResponse
@@ -5120,8 +6223,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit per user for this API operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改应用录制开关</p>
+     * <p>Modifies the recording switch of an application.</p>
      * 
      * @param request ModifyAppRecordStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5156,8 +6263,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit per user for this API operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改应用录制开关</p>
+     * <p>Modifies the recording switch of an application.</p>
      * 
      * @param request ModifyAppRecordStatusRequest
      * @return ModifyAppRecordStatusResponse
@@ -5168,8 +6279,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>This API supports up to 10 calls per second per user. If you exceed this limit, rate limiting is triggered, which might affect your service. Call the API at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改应用录制模版</p>
+     * <p>Modify an application recording template.</p>
      * 
      * @param tmpReq ModifyAppRecordTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5214,8 +6329,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>This API supports up to 10 calls per second per user. If you exceed this limit, rate limiting is triggered, which might affect your service. Call the API at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改应用录制模版</p>
+     * <p>Modify an application recording template.</p>
      * 
      * @param request ModifyAppRecordTemplateRequest
      * @return ModifyAppRecordTemplateResponse
@@ -5226,8 +6345,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API modifies the stream ingest template for an RTC 3.0 application.  </p>
+     * <h3>QPS Limit</h3>
+     * <p>The queries per second (QPS) limit for this API is 10 per user. If you exceed this limit, your API calls will be subject to rate limiting, which may impact your business. Please invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新应用推流模版</p>
+     * <p>Modify the stream ingest template for an RTC 3.0 application.</p>
      * 
      * @param tmpReq ModifyAppStreamingOutTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5268,8 +6393,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API modifies the stream ingest template for an RTC 3.0 application.  </p>
+     * <h3>QPS Limit</h3>
+     * <p>The queries per second (QPS) limit for this API is 10 per user. If you exceed this limit, your API calls will be subject to rate limiting, which may impact your business. Please invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新应用推流模版</p>
+     * <p>Modify the stream ingest template for an RTC 3.0 application.</p>
      * 
      * @param request ModifyAppStreamingOutTemplateRequest
      * @return ModifyAppStreamingOutTemplateResponse
@@ -5280,8 +6411,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改合流开关</p>
+     * <p>Modifies the merging switch.</p>
      * 
      * @param request ModifyAppViewStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5312,8 +6447,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改合流开关</p>
+     * <p>Modifies the merging switch.</p>
      * 
      * @param request ModifyAppViewStatusRequest
      * @return ModifyAppViewStatusResponse
@@ -5324,8 +6463,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>This API supports up to 10 calls per second per user. Exceeding this limit triggers rate limiting, which may affect your business. Use this API with caution.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新应用合流模版</p>
+     * <p>Update an application view template.</p>
      * 
      * @param tmpReq ModifyAppViewTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5366,8 +6509,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>This API supports up to 10 calls per second per user. Exceeding this limit triggers rate limiting, which may affect your business. Use this API with caution.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新应用合流模版</p>
+     * <p>Update an application view template.</p>
      * 
      * @param request ModifyAppViewTemplateRequest
      * @return ModifyAppViewTemplateResponse
@@ -5378,8 +6525,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新app回调</p>
+     * <p>Updates the callback configuration of an application.</p>
      * 
      * @param tmpReq ModifyCallbackMetaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5424,8 +6575,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新app回调</p>
+     * <p>Updates the callback configuration of an application.</p>
      * 
      * @param request ModifyCallbackMetaRequest
      * @return ModifyCallbackMetaResponse
@@ -5437,7 +6592,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新纪要热词表</p>
+     * <p>Updates the hotwords table for meeting minutes.</p>
      * 
      * @param tmpReq ModifyCloudNotePhrasesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5479,7 +6634,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新纪要热词表</p>
+     * <p>Updates the hotwords table for meeting minutes.</p>
      * 
      * @param request ModifyCloudNotePhrasesRequest
      * @return ModifyCloudNotePhrasesResponse
@@ -5490,6 +6645,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/162192.html">CreateMPULayout</a> to create a bypass live streaming layout.</p>
+     * <h1>QPS limit</h1>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a bypass live streaming layout.</p>
+     * 
      * @param request ModifyMPULayoutRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyMPULayoutResponse
@@ -5539,6 +6703,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/162192.html">CreateMPULayout</a> to create a bypass live streaming layout.</p>
+     * <h1>QPS limit</h1>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a bypass live streaming layout.</p>
+     * 
      * @param request ModifyMPULayoutRequest
      * @return ModifyMPULayoutResponse
      */
@@ -5548,8 +6721,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>设置流属性</p>
+     * <p>Sets the stream properties.</p>
      * 
      * @param tmpReq ModifyStreamingPropertyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5602,8 +6779,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>设置流属性</p>
+     * <p>Sets the stream properties.</p>
      * 
      * @param request ModifyStreamingPropertyRequest
      * @return ModifyStreamingPropertyResponse
@@ -5614,8 +6795,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit per user is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>设置合流布局</p>
+     * <p>Configures the mixed stream layout.</p>
      * 
      * @param tmpReq ModifyViewLayoutRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5688,8 +6873,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit per user is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>设置合流布局</p>
+     * <p>Configures the mixed stream layout.</p>
      * 
      * @param request ModifyViewLayoutRequest
      * @return ModifyViewLayoutResponse
@@ -5778,6 +6967,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>This API removes specified end users from a channel.</p>
+     * <h1>QPS limit</h1>
+     * <p>The queries per second (QPS) limit for this API is 1,000 calls per minute per user. If you exceed the limit, API calls are subject to rate limiting, which may affect your business. Call this API at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Call the RemoveTerminals operation to remove specified end users from a channel.</p>
+     * 
      * @param request RemoveTerminalsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveTerminalsResponse
@@ -5819,6 +7017,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>This API removes specified end users from a channel.</p>
+     * <h1>QPS limit</h1>
+     * <p>The queries per second (QPS) limit for this API is 1,000 calls per minute per user. If you exceed the limit, API calls are subject to rate limiting, which may affect your business. Call this API at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Call the RemoveTerminals operation to remove specified end users from a channel.</p>
+     * 
      * @param request RemoveTerminalsRequest
      * @return RemoveTerminalsResponse
      */
@@ -5828,6 +7035,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to kick users out of an online channel.  </p>
+     * <h3>queries per second (QPS) Limit</h3>
+     * <p>The QPS limit for this API is 10 requests per second per user. If the limit is exceeded, API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
      * <p>RemoveUsers</p>
      * 
@@ -5868,6 +7081,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to kick users out of an online channel.  </p>
+     * <h3>queries per second (QPS) Limit</h3>
+     * <p>The QPS limit for this API is 10 requests per second per user. If the limit is exceeded, API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
      * <p>RemoveUsers</p>
      * 
@@ -5880,8 +7099,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit for this API is 10 per user. If you exceed this limit, API calls are subject to rate limiting, which may affect your business. Call this API at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>取消Sip邀请</p>
+     * <p>Cancels a SIP invite.</p>
      * 
      * @param request RtcCancelSipInviteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5924,8 +7147,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit for this API is 10 per user. If you exceed this limit, API calls are subject to rate limiting, which may affect your business. Call this API at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>取消Sip邀请</p>
+     * <p>Cancels a SIP invite.</p>
      * 
      * @param request RtcCancelSipInviteRequest
      * @return RtcCancelSipInviteResponse
@@ -5937,7 +7164,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>邀请SIP加入频道</p>
+     * <p>Sends DTMF key signals to a target OneRTC SIP call in a specified channel.</p>
+     * 
+     * @param request RtcSendSipDtmfRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RtcSendSipDtmfResponse
+     */
+    public RtcSendSipDtmfResponse rtcSendSipDtmfWithOptions(RtcSendSipDtmfRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
+            query.put("ChannelId", request.channelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.channelUserId)) {
+            query.put("ChannelUserId", request.channelUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceType)) {
+            query.put("DeviceType", request.deviceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.digits)) {
+            query.put("Digits", request.digits);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RtcSendSipDtmf"),
+            new TeaPair("version", "2018-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RtcSendSipDtmfResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Sends DTMF key signals to a target OneRTC SIP call in a specified channel.</p>
+     * 
+     * @param request RtcSendSipDtmfRequest
+     * @return RtcSendSipDtmfResponse
+     */
+    public RtcSendSipDtmfResponse rtcSendSipDtmf(RtcSendSipDtmfRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.rtcSendSipDtmfWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h3>Rate limit</h3>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Invites a SIP endpoint to join a channel.</p>
      * 
      * @param request RtcSipInviteMemberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6024,8 +7315,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Rate limit</h3>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>邀请SIP加入频道</p>
+     * <p>Invites a SIP endpoint to join a channel.</p>
      * 
      * @param request RtcSipInviteMemberRequest
      * @return RtcSipInviteMemberResponse
@@ -6036,8 +7331,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Mute操作</p>
+     * <p>Mutes or unmutes the microphone for a SIP endpoint.</p>
      * 
      * @param request RtcSipMuteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6076,8 +7375,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Mute操作</p>
+     * <p>Mutes or unmutes the microphone for a SIP endpoint.</p>
      * 
      * @param request RtcSipMuteRequest
      * @return RtcSipMuteResponse
@@ -6089,7 +7392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动AI Agent</p>
+     * <p>Starts an AI agent.</p>
      * 
      * @param tmpReq StartAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6151,7 +7454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动AI Agent</p>
+     * <p>Starts an AI agent.</p>
      * 
      * @param request StartAgentRequest
      * @return StartAgentResponse
@@ -6162,8 +7465,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>The queries per second (QPS) limit for this API is 10 calls per second per user. If you exceed the limit, API calls are subject to rate limiting, which may affect your business. Call the API at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>开启某个事件回调</p>
+     * <p>Starts an event callback.</p>
      * 
      * @param tmpReq StartCategoryCallbackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6204,8 +7511,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>The queries per second (QPS) limit for this API is 10 calls per second per user. If you exceed the limit, API calls are subject to rate limiting, which may affect your business. Call the API at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>开启某个事件回调</p>
+     * <p>Starts an event callback.</p>
      * 
      * @param request StartCategoryCallbackRequest
      * @return StartCategoryCallbackResponse
@@ -6216,8 +7527,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation starts a meeting minutes task for an online channel. If you need meeting minutes and subtitles, enable all features.</p>
+     * <h3>QPS limits</h3>
+     * <p>The queries per second (QPS) limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable frequency.</p>
+     * <blockquote>
+     * <p>Concurrency limits</p>
+     * <ul>
+     * <li>Only one meeting minutes task can run in the same channel at a time.</li>
+     * <li>You can start and stop meeting minutes tasks multiple times in the same channel, but the TaskId must be different each time.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>开启智能纪要</p>
+     * <p>Starts an intelligent meeting minutes task.</p>
      * 
      * @param tmpReq StartCloudNoteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6334,8 +7658,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation starts a meeting minutes task for an online channel. If you need meeting minutes and subtitles, enable all features.</p>
+     * <h3>QPS limits</h3>
+     * <p>The queries per second (QPS) limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable frequency.</p>
+     * <blockquote>
+     * <p>Concurrency limits</p>
+     * <ul>
+     * <li>Only one meeting minutes task can run in the same channel at a time.</li>
+     * <li>You can start and stop meeting minutes tasks multiple times in the same channel, but the TaskId must be different each time.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>开启智能纪要</p>
+     * <p>Starts an intelligent meeting minutes task.</p>
      * 
      * @param request StartCloudNoteRequest
      * @return StartCloudNoteResponse
@@ -6346,8 +7683,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation starts a cloud recording task for an online channel.</p>
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>StartCloudRecord</p>
+     * <p>Starts a cloud recording task.</p>
      * 
      * @param tmpReq StartCloudRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6472,8 +7815,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation starts a cloud recording task for an online channel.</p>
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>StartCloudRecord</p>
+     * <p>Starts a cloud recording task.</p>
      * 
      * @param request StartCloudRecordRequest
      * @return StartCloudRecordResponse
@@ -6484,6 +7833,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>This operation is used to start a bypass relaying task. When you use the bypass relaying service, ApsaraVideo Live has the following limits:
+     * &lt;props=&quot;china&quot;&gt;- For the concurrency limit on tasks, see <a href="https://help.aliyun.com/document_detail/71050.html#section-eaz-anq-a47">Concurrency limits</a>. If you have special requirements, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a> two weeks in advance.
+     * &lt;props=&quot;intl&quot;&gt;- For the concurrency limit on tasks, see <a href="https://www.alibabacloud.com/help/rtc-61399/latest/60e652#section-eaz-anq-a47">Concurrency limits</a>. If you have special requirements, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a> two weeks in advance.</p>
+     * <ul>
+     * <li>If the transcoding feature is disabled, each account can concurrently push up to 20 original-quality live streams per live streaming accelerated domain name by default. If you have special requirements, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.</li>
+     * <li>If the transcoding feature is enabled, each account can concurrently push up to 10 transcoded live streams per live streaming accelerated domain name by default. If you have special requirements, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.</li>
+     * </ul>
+     * <h1>QPS limit</h1>
+     * <p>The QPS limit for a single user calling this operation is 500 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Starts a bypass relaying task.</p>
+     * 
      * @param request StartMPUTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartMPUTaskResponse
@@ -6636,6 +8000,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>This operation is used to start a bypass relaying task. When you use the bypass relaying service, ApsaraVideo Live has the following limits:
+     * &lt;props=&quot;china&quot;&gt;- For the concurrency limit on tasks, see <a href="https://help.aliyun.com/document_detail/71050.html#section-eaz-anq-a47">Concurrency limits</a>. If you have special requirements, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a> two weeks in advance.
+     * &lt;props=&quot;intl&quot;&gt;- For the concurrency limit on tasks, see <a href="https://www.alibabacloud.com/help/rtc-61399/latest/60e652#section-eaz-anq-a47">Concurrency limits</a>. If you have special requirements, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a> two weeks in advance.</p>
+     * <ul>
+     * <li>If the transcoding feature is disabled, each account can concurrently push up to 20 original-quality live streams per live streaming accelerated domain name by default. If you have special requirements, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.</li>
+     * <li>If the transcoding feature is enabled, each account can concurrently push up to 10 transcoded live streams per live streaming accelerated domain name by default. If you have special requirements, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.</li>
+     * </ul>
+     * <h1>QPS limit</h1>
+     * <p>The QPS limit for a single user calling this operation is 500 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Starts a bypass relaying task.</p>
+     * 
      * @param request StartMPUTaskRequest
      * @return StartMPUTaskResponse
      */
@@ -6645,6 +8024,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <ul>
+     * <li>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a> to add a recording configuration template.
+     * &lt;props=&quot;china&quot;&gt;- By default, you can start a maximum of 100 recording tasks at the same time. If the limit is exceeded, new recording tasks become unavailable. If you have special requirements, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.
+     * &lt;props=&quot;intl&quot;&gt;- By default, you can start a maximum of 100 recording tasks at the same time. If the limit is exceeded, new recording tasks become unavailable. If you have special requirements, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</li>
+     * </ul>
+     * <h1>QPS limit</h1>
+     * <p>The QPS limit for a single user is 500 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls properly. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Starts a video recording task.</p>
+     * 
      * @param request StartRecordTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartRecordTaskResponse
@@ -6750,6 +8142,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <ul>
+     * <li>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a> to add a recording configuration template.
+     * &lt;props=&quot;china&quot;&gt;- By default, you can start a maximum of 100 recording tasks at the same time. If the limit is exceeded, new recording tasks become unavailable. If you have special requirements, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.
+     * &lt;props=&quot;intl&quot;&gt;- By default, you can start a maximum of 100 recording tasks at the same time. If the limit is exceeded, new recording tasks become unavailable. If you have special requirements, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</li>
+     * </ul>
+     * <h1>QPS limit</h1>
+     * <p>The QPS limit for a single user is 500 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls properly. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Starts a video recording task.</p>
+     * 
      * @param request StartRecordTaskRequest
      * @return StartRecordTaskResponse
      */
@@ -6759,8 +8164,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation starts a bypass streaming task for an online channel.</p>
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>StartStreamingOut</p>
+     * <p>Starts a bypass streaming task.</p>
      * 
      * @param tmpReq StartStreamingOutRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6877,8 +8288,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation starts a bypass streaming task for an online channel.</p>
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>StartStreamingOut</p>
+     * <p>Starts a bypass streaming task.</p>
      * 
      * @param request StartStreamingOutRequest
      * @return StartStreamingOutResponse
@@ -6889,8 +8306,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>开始合流</p>
+     * <p>Starts stream mixing.</p>
      * 
      * @param tmpReq StartViewRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6967,8 +8388,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>开始合流</p>
+     * <p>Starts stream mixing.</p>
      * 
      * @param request StartViewRequest
      * @return StartViewResponse
@@ -6980,7 +8405,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止AI Agent</p>
+     * <p>Stops an AI agent.</p>
      * 
      * @param request StopAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7020,7 +8445,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止AI Agent</p>
+     * <p>Stops an AI agent.</p>
      * 
      * @param request StopAgentRequest
      * @return StopAgentResponse
@@ -7031,8 +8456,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>关闭某个事件回调</p>
+     * <p>Disables an event callback.</p>
      * 
      * @param tmpReq StopCategoryCallbackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7073,8 +8502,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>关闭某个事件回调</p>
+     * <p>Disables an event callback.</p>
      * 
      * @param request StopCategoryCallbackRequest
      * @return StopCategoryCallbackResponse
@@ -7085,8 +8518,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used by the server to actively shut down an online channel.  </p>
+     * <h3>queries per second (QPS) Limit</h3>
+     * <p>The QPS limit for this API is 10 queries per second per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your service. Invoke this API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除频道</p>
+     * <p>This API is used by the server to actively shut down a channel.</p>
      * 
      * @param request StopChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7121,8 +8560,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used by the server to actively shut down an online channel.  </p>
+     * <h3>queries per second (QPS) Limit</h3>
+     * <p>The QPS limit for this API is 10 queries per second per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your service. Invoke this API appropriately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除频道</p>
+     * <p>This API is used by the server to actively shut down a channel.</p>
      * 
      * @param request StopChannelRequest
      * @return StopChannelResponse
@@ -7133,8 +8578,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation stops a meeting minutes task for an online channel.</p>
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit per user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>停止智能纪要</p>
+     * <p>Stops an intelligent meeting minutes task.</p>
      * 
      * @param request StopCloudNoteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7177,8 +8628,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation stops a meeting minutes task for an online channel.</p>
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit per user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable rate.</p>
+     * 
      * <b>summary</b> : 
-     * <p>停止智能纪要</p>
+     * <p>Stops an intelligent meeting minutes task.</p>
      * 
      * @param request StopCloudNoteRequest
      * @return StopCloudNoteResponse
@@ -7189,6 +8646,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to stop an online channel cloud recording job.  </p>
+     * <h3>queries per second (QPS) Limit</h3>
+     * <p>The QPS limit for this API is 10 queries per second (QPS) per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your business. Please invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
      * <p>StopCloudRecord</p>
      * 
@@ -7229,6 +8692,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to stop an online channel cloud recording job.  </p>
+     * <h3>queries per second (QPS) Limit</h3>
+     * <p>The QPS limit for this API is 10 queries per second (QPS) per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your business. Please invoke the API appropriately.</p>
+     * 
      * <b>summary</b> : 
      * <p>StopCloudRecord</p>
      * 
@@ -7241,6 +8710,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <ul>
+     * <li>Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/93183.html">StartMpuTask</a> to start a stream relay task.</li>
+     * <li>If you need to stop a stream relay task and the stream relay task is abnormal (the StopMPUTask operation is not called to stop the task), the stream relay task is automatically stopped 2 minutes after the last user leaves the channel. After the task is stopped, if you need to resume stream relay, you need to call the <a href="https://help.aliyun.com/document_detail/93183.html">StartMpuTask</a> operation again.</li>
+     * </ul>
+     * <h1>QPS limit</h1>
+     * <p>The QPS limit per user for this operation is 500 times per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Calls the StopMPUTask operation to stop a stream relay task.</p>
+     * 
      * @param request StopMPUTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StopMPUTaskResponse
@@ -7278,6 +8759,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <ul>
+     * <li>Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/93183.html">StartMpuTask</a> to start a stream relay task.</li>
+     * <li>If you need to stop a stream relay task and the stream relay task is abnormal (the StopMPUTask operation is not called to stop the task), the stream relay task is automatically stopped 2 minutes after the last user leaves the channel. After the task is stopped, if you need to resume stream relay, you need to call the <a href="https://help.aliyun.com/document_detail/93183.html">StartMpuTask</a> operation again.</li>
+     * </ul>
+     * <h1>QPS limit</h1>
+     * <p>The QPS limit per user for this operation is 500 times per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Calls the StopMPUTask operation to stop a stream relay task.</p>
+     * 
      * @param request StopMPUTaskRequest
      * @return StopMPUTaskResponse
      */
@@ -7287,6 +8780,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/193528.html">StartRecordTask</a> operation to start a video recording task.</p>
+     * <h1>QPS limit</h1>
+     * <p>You can call this operation up to 4,000 times per minute per user. If the number of calls per minute exceeds the limit, throttling is triggered, which may affect your business. Call this operation as required. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Calls the StopRecordTask operation to stop a video recording task.</p>
+     * 
      * @param request StopRecordTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StopRecordTaskResponse
@@ -7324,6 +8826,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/193528.html">StartRecordTask</a> operation to start a video recording task.</p>
+     * <h1>QPS limit</h1>
+     * <p>You can call this operation up to 4,000 times per minute per user. If the number of calls per minute exceeds the limit, throttling is triggered, which may affect your business. Call this operation as required. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Calls the StopRecordTask operation to stop a video recording task.</p>
+     * 
      * @param request StopRecordTaskRequest
      * @return StopRecordTaskResponse
      */
@@ -7333,6 +8844,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to stop a bypass stream ingest job for an online channel.  </p>
+     * <h3>queries per second (QPS) Limit</h3>
+     * <p>The QPS limit for this API is 10 queries per second (QPS) per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your business. Invoke this API appropriately.</p>
+     * 
      * <b>summary</b> : 
      * <p>StopStreamingOut</p>
      * 
@@ -7373,6 +8890,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>How-To</h3>
+     * <p>This API is used to stop a bypass stream ingest job for an online channel.  </p>
+     * <h3>queries per second (QPS) Limit</h3>
+     * <p>The QPS limit for this API is 10 queries per second (QPS) per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your business. Invoke this API appropriately.</p>
+     * 
      * <b>summary</b> : 
      * <p>StopStreamingOut</p>
      * 
@@ -7385,8 +8908,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for this API is 10 requests per second per user. Exceeding this limit triggers rate limiting, which can affect your application. Therefore, call the API judiciously.</p>
+     * 
      * <b>summary</b> : 
-     * <p>停止合流</p>
+     * <p>Stop stream mixing.</p>
      * 
      * @param request StopViewRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7425,8 +8952,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for this API is 10 requests per second per user. Exceeding this limit triggers rate limiting, which can affect your application. Therefore, call the API judiciously.</p>
+     * 
      * <b>summary</b> : 
-     * <p>停止合流</p>
+     * <p>Stop stream mixing.</p>
      * 
      * @param request StopViewRequest
      * @return StopViewResponse
@@ -7438,7 +8969,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新AI Agent</p>
+     * <p>Update an AI Agent</p>
      * 
      * @param tmpReq UpdateAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7488,7 +9019,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新AI Agent</p>
+     * <p>Update an AI Agent</p>
      * 
      * @param request UpdateAgentRequest
      * @return UpdateAgentResponse
@@ -7499,6 +9030,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</p>
+     * <h1>QPS limits</h1>
+     * <p>The QPS limit for a single user is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies an automatic bypass single-stream relay rule.</p>
+     * 
      * @param request UpdateAutoLiveStreamRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateAutoLiveStreamRuleResponse
@@ -7560,6 +9100,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</p>
+     * <h1>QPS limits</h1>
+     * <p>The QPS limit for a single user is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies an automatic bypass single-stream relay rule.</p>
+     * 
      * @param request UpdateAutoLiveStreamRuleRequest
      * @return UpdateAutoLiveStreamRuleResponse
      */
@@ -7569,8 +9118,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage</h3>
+     * <p>Updates a cloud recording task for an online channel.</p>
+     * <h3>QPS limit</h3>
+     * <p>This API supports up to 10 requests per second per user. Exceeding this limit triggers rate limiting, which may affect your service. Call the API responsibly.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新云端录制任务</p>
+     * <p>Updates a cloud recording task.</p>
      * 
      * @param tmpReq UpdateCloudRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7643,8 +9198,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage</h3>
+     * <p>Updates a cloud recording task for an online channel.</p>
+     * <h3>QPS limit</h3>
+     * <p>This API supports up to 10 requests per second per user. Exceeding this limit triggers rate limiting, which may affect your service. Call the API responsibly.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新云端录制任务</p>
+     * <p>Updates a cloud recording task.</p>
      * 
      * @param request UpdateCloudRecordRequest
      * @return UpdateCloudRecordResponse
@@ -7655,6 +9216,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <ul>
+     * <li>Before calling this API, you must have called <a href="https://help.aliyun.com/document_detail/93183.html">StartMpuTask</a> to start a bypass relay task.</li>
+     * <li>This API must be called while the task is running normally. Calls are invalid when the task has not started, has ended, or is in an abnormal state. You can call <a href="https://help.aliyun.com/document_detail/93181.html">GetMPUTaskStatus</a> to obtain the task running status.</li>
+     * </ul>
+     * <h1>QPS limit</h1>
+     * <p>The per-user QPS limit of this API is 4,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Please call reasonably. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS Limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Call UpdateMPUTask to update a bypass relay task.</p>
+     * 
      * @param request UpdateMPUTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateMPUTaskResponse
@@ -7764,6 +9337,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <ul>
+     * <li>Before calling this API, you must have called <a href="https://help.aliyun.com/document_detail/93183.html">StartMpuTask</a> to start a bypass relay task.</li>
+     * <li>This API must be called while the task is running normally. Calls are invalid when the task has not started, has ended, or is in an abnormal state. You can call <a href="https://help.aliyun.com/document_detail/93181.html">GetMPUTaskStatus</a> to obtain the task running status.</li>
+     * </ul>
+     * <h1>QPS limit</h1>
+     * <p>The per-user QPS limit of this API is 4,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Please call reasonably. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS Limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Call UpdateMPUTask to update a bypass relay task.</p>
+     * 
      * @param request UpdateMPUTaskRequest
      * @return UpdateMPUTaskResponse
      */
@@ -7773,6 +9358,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193528.html">StartRecordTask</a> to start a video recording task.</p>
+     * <h1>QPS limits</h1>
+     * <p>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a video recording task.</p>
+     * 
      * @param request UpdateRecordTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateRecordTaskResponse
@@ -7866,6 +9460,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193528.html">StartRecordTask</a> to start a video recording task.</p>
+     * <h1>QPS limits</h1>
+     * <p>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a video recording task.</p>
+     * 
      * @param request UpdateRecordTaskRequest
      * @return UpdateRecordTaskResponse
      */
@@ -7875,6 +9478,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a> to add a recording configuration template.</p>
+     * <h1>QPS limits</h1>
+     * <p>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a recording configuration template.</p>
+     * 
      * @param request UpdateRecordTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateRecordTemplateResponse
@@ -7980,6 +9592,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Usage notes</h1>
+     * <p>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a> to add a recording configuration template.</p>
+     * <h1>QPS limits</h1>
+     * <p>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a recording configuration template.</p>
+     * 
      * @param request UpdateRecordTemplateRequest
      * @return UpdateRecordTemplateResponse
      */
@@ -7989,8 +9610,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation updates a bypass live streaming task for an online channel.</p>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 10 requests per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新旁路推流任务</p>
+     * <p>Updates a bypass live streaming task.</p>
      * 
      * @param tmpReq UpdateStreamingOutRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8079,8 +9706,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This operation updates a bypass live streaming task for an online channel.</p>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 10 requests per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新旁路推流任务</p>
+     * <p>Updates a bypass live streaming task.</p>
      * 
      * @param request UpdateStreamingOutRequest
      * @return UpdateStreamingOutResponse

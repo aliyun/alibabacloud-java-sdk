@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddRecordTemplateResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>760bad53276431c499e30dc36f6b26be</p>
      */
@@ -12,6 +14,8 @@ public class AddRecordTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the recording configuration template.</p>
+     * 
      * <strong>example:</strong>
      * <p>76dasgb****</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateMPUTaskRequest extends TeaModel {
     /**
+     * <p>Application ID. Only a single ID can be passed.</p>
+     * <p>You can create and query it in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,29 +16,51 @@ public class UpdateMPUTaskRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>Background color RGB. The default is <strong>0</strong> (black).</p>
+     * <p>The calculation formula is <code>R + G × 256 + B × 65536</code>. Values of R (red), G (green), and B (blue): <strong>0</strong> to <strong>255</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("BackgroundColor")
     public Integer backgroundColor;
 
+    /**
+     * <p>The list of canvas background image pane positions.</p>
+     */
     @NameInMap("Backgrounds")
     public java.util.List<UpdateMPUTaskRequestBackgrounds> backgrounds;
 
+    /**
+     * <p>Clock widget.</p>
+     */
     @NameInMap("ClockWidgets")
     public java.util.List<UpdateMPUTaskRequestClockWidgets> clockWidgets;
 
     /**
+     * <p>Video cropping mode. Values:</p>
+     * <ul>
+     * <li><p><strong>1</strong>: crop while maintaining ratio.</p>
+     * </li>
+     * <li><p><strong>2</strong> (default): keep margins while maintaining ratio.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CropMode")
     public Integer cropMode;
 
+    /**
+     * <p>Layout ID data.</p>
+     */
     @NameInMap("LayoutIds")
     public java.util.List<Long> layoutIds;
 
     /**
+     * <p>Encoding option. See the MediaEncode enumeration values below.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -44,6 +68,20 @@ public class UpdateMPUTaskRequest extends TeaModel {
     public Integer mediaEncode;
 
     /**
+     * <p>Stream mixing mode. Values:</p>
+     * <ul>
+     * <li><strong>0</strong>: single-stream relay. No stream mixing or transcoding. Only the original single stream is relayed. No need to configure stream mixing and transcoding parameters.</li>
+     * <li><strong>1</strong>: stream mixing and transcoding (default). Supports stream mixing and transcoding output.</li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>Valid parameters in single-stream relay mode: <strong>StreamType</strong>, <strong>SourceType</strong>.</li>
+     * </ul>
+     * </blockquote>
+     * <ul>
+     * <li>Valid parameters in stream mixing and transcoding mode: <strong>MediaEncode</strong>, <strong>LayoutIds</strong>, <strong>BackgroundColor</strong>, <strong>SubSpecUsers</strong>, <strong>CropMode</strong>, <strong>UserPanes</strong>, <strong>Backgrounds</strong>, <strong>Watermarks</strong>.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -54,6 +92,12 @@ public class UpdateMPUTaskRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>User video input stream in single-stream relay mode. Values:</p>
+     * <ul>
+     * <li><strong>camera</strong>: camera.</li>
+     * <li><strong>shareScreen</strong>: screen sharing.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>camera</p>
      */
@@ -61,25 +105,45 @@ public class UpdateMPUTaskRequest extends TeaModel {
     public String sourceType;
 
     /**
+     * <p>Audio stream relayed in single-stream relay mode. Values:</p>
+     * <ul>
+     * <li><strong>0</strong> (default): relay the original stream.</li>
+     * <li><strong>1</strong>: relay only the audio stream.</li>
+     * <li><strong>2</strong>: relay only the video stream.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("StreamType")
     public Integer streamType;
 
+    /**
+     * <p>Specifies the users in the room whose audio streams are subscribed to.</p>
+     */
     @NameInMap("SubSpecAudioUsers")
     public java.util.List<String> subSpecAudioUsers;
 
+    /**
+     * <p>Specifies the users in the room whose camera video streams are subscribed to.</p>
+     */
     @NameInMap("SubSpecCameraUsers")
     public java.util.List<String> subSpecCameraUsers;
 
+    /**
+     * <p>Specifies the users in the room whose shared video streams are subscribed to.</p>
+     */
     @NameInMap("SubSpecShareScreenUsers")
     public java.util.List<String> subSpecShareScreenUsers;
 
+    /**
+     * <p>The list of users subscribed to by this task.</p>
+     */
     @NameInMap("SubSpecUsers")
     public java.util.List<String> subSpecUsers;
 
     /**
+     * <p>Task ID. Only a single ID can be passed. It is consistent with the input parameter TaskId in <a href="https://help.aliyun.com/document_detail/93183.html">StartMpuTask</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,18 +152,33 @@ public class UpdateMPUTaskRequest extends TeaModel {
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>Specifies the users in the room whose audio streams are not subscribed to.</p>
+     */
     @NameInMap("UnsubSpecAudioUsers")
     public java.util.List<String> unsubSpecAudioUsers;
 
+    /**
+     * <p>Specifies the users in the room whose camera video streams are not subscribed to.</p>
+     */
     @NameInMap("UnsubSpecCameraUsers")
     public java.util.List<String> unsubSpecCameraUsers;
 
+    /**
+     * <p>Specifies the users in the room whose shared video streams are not subscribed to.</p>
+     */
     @NameInMap("UnsubSpecShareScreenUsers")
     public java.util.List<String> unsubSpecShareScreenUsers;
 
+    /**
+     * <p>Layout parameters.</p>
+     */
     @NameInMap("UserPanes")
     public java.util.List<UpdateMPUTaskRequestUserPanes> userPanes;
 
+    /**
+     * <p>The list of watermark image pane positions.</p>
+     */
     @NameInMap("Watermarks")
     public java.util.List<UpdateMPUTaskRequestWatermarks> watermarks;
 
@@ -278,6 +357,12 @@ public class UpdateMPUTaskRequest extends TeaModel {
 
     public static class UpdateMPUTaskRequestBackgrounds extends TeaModel {
         /**
+         * <p>Image display. Values:</p>
+         * <ul>
+         * <li><strong>0 (None)</strong>: not displayed.</li>
+         * <li><strong>1 (Always)</strong>: always displayed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -285,6 +370,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Integer display;
 
         /**
+         * <p>Pane height, normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.2456</p>
          */
@@ -292,6 +379,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Float height;
 
         /**
+         * <p>HTTP or HTTPS address of the image.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com/image.jpg">https://www.example.com/image.jpg</a></p>
          */
@@ -299,6 +388,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public String url;
 
         /**
+         * <p>Pane width, normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.2456</p>
          */
@@ -306,6 +397,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Float width;
 
         /**
+         * <p>X coordinate, normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.7576</p>
          */
@@ -313,6 +406,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Float x;
 
         /**
+         * <p>Y coordinate, normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.7576</p>
          */
@@ -320,6 +415,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Float y;
 
         /**
+         * <p>Stacking order. 0 is the bottom layer, layer 1 is above layer 0, and so on.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -391,6 +488,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
 
     public static class UpdateMPUTaskRequestClockWidgets extends TeaModel {
         /**
+         * <p>Transparency of the text box and text. 0.0 indicates transparent, and 1.0 indicates completely opaque.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -398,6 +497,9 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Float alpha;
 
         /**
+         * <p>Text border color.
+         * The calculation formula is <code>R + G × 256 + B × 65536</code>. Values of R (red), G (green), and B (blue): <strong>0</strong> to <strong>255</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -405,6 +507,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Long borderColor;
 
         /**
+         * <p>Text border width (unit: pixels). The default value is 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -412,6 +516,12 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Integer borderWidth;
 
         /**
+         * <p>Whether to display a text box. Values:</p>
+         * <ul>
+         * <li>false (default): not displayed.</li>
+         * <li>true: displayed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -419,6 +529,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Boolean box;
 
         /**
+         * <p>Text box width (unit: pixels). The default value is 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -426,6 +538,9 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Integer boxBorderWidth;
 
         /**
+         * <p>Text box color.
+         * The calculation formula is <code>R + G × 256 + B × 65536</code>. Values of R (red), G (green), and B (blue): <strong>0</strong> to <strong>255</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -433,6 +548,9 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Long boxColor;
 
         /**
+         * <p>Text color (RGB).</p>
+         * <p>The calculation formula is <code>R + G × 256 + B × 65536</code>. Values of R (red), G (green), and B (blue): <strong>0</strong> to <strong>255</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -440,6 +558,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Integer fontColor;
 
         /**
+         * <p>Font size. Value range: <strong>0</strong> to <strong>72</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -447,6 +567,16 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Integer fontSize;
 
         /**
+         * <p>Font type. Values:</p>
+         * <ul>
+         * <li><strong>0</strong> (default): NOTO_SERIF_CJKSC_REGULAR</li>
+         * <li><strong>1</strong>: ALIBABA_PUHUITI_REGULAR</li>
+         * <li><strong>2</strong>: ALIBABA_PUHUITI_BOLD</li>
+         * <li><strong>3</strong>: ALIBABA_PUHUITI_Heavy</li>
+         * <li><strong>4</strong>: ALIBABA_PUHUITI_LIGHT</li>
+         * <li><strong>5</strong>: ALIBABA_PUHUITI_MEDIUM</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -454,6 +584,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Integer fontType;
 
         /**
+         * <p>X coordinate, normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.7576</p>
          */
@@ -461,6 +593,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Float x;
 
         /**
+         * <p>Y coordinate, normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.7576</p>
          */
@@ -468,6 +602,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Float y;
 
         /**
+         * <p>Stacking order. 0 is the bottom layer, layer 1 is above layer 0, and so on.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -579,6 +715,13 @@ public class UpdateMPUTaskRequest extends TeaModel {
 
     public static class UpdateMPUTaskRequestUserPanesImages extends TeaModel {
         /**
+         * <p>Image display. Values:</p>
+         * <ul>
+         * <li><strong>0 (None)</strong>: not displayed.</li>
+         * <li><strong>1 (Always)</strong>: always displayed.</li>
+         * <li><strong>2 (Backup)</strong>: displayed when the current user has no video stream.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -586,6 +729,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Integer display;
 
         /**
+         * <p>Pane height, normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.2456</p>
          */
@@ -593,6 +738,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Float height;
 
         /**
+         * <p>HTTP or HTTPS address of the image.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com/image.jpg">https://www.example.com/image.jpg</a></p>
          */
@@ -600,6 +747,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public String url;
 
         /**
+         * <p>Pane width, normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.2456</p>
          */
@@ -607,6 +756,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Float width;
 
         /**
+         * <p>X coordinate, normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.7576</p>
          */
@@ -614,6 +765,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Float x;
 
         /**
+         * <p>Y coordinate, normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.7576</p>
          */
@@ -621,6 +774,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Float y;
 
         /**
+         * <p>Stacking order. 0 is the bottom layer, layer 1 is above layer 0, and so on.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -692,6 +847,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
 
     public static class UpdateMPUTaskRequestUserPanesTexts extends TeaModel {
         /**
+         * <p>Transparency of the text box and text. 0.0 indicates transparent, and 1.0 indicates completely opaque.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -699,6 +856,9 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Float alpha;
 
         /**
+         * <p>Text border color.
+         * The calculation formula is <code>R + G × 256 + B × 65536</code>. Values of R (red), G (green), and B (blue): <strong>0</strong> to <strong>255</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -706,6 +866,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Long borderColor;
 
         /**
+         * <p>Text border width (unit: pixels). The default value is 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -713,6 +875,12 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Integer borderWidth;
 
         /**
+         * <p>Whether to display a text box. Values:</p>
+         * <ul>
+         * <li>false (default): not displayed.</li>
+         * <li>true: displayed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -720,6 +888,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Boolean box;
 
         /**
+         * <p>Text box width (unit: pixels). The default value is 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -727,6 +897,9 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Integer boxBorderWidth;
 
         /**
+         * <p>Text box color.
+         * The calculation formula is <code>R + G × 256 + B × 65536</code>. Values of R (red), G (green), and B (blue): <strong>0</strong> to <strong>255</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -734,6 +907,9 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Long boxColor;
 
         /**
+         * <p>Text color (RGB).</p>
+         * <p>The calculation formula is <code>R + G × 256 + B × 65536</code>. Values of R (red), G (green), and B (blue): <strong>0</strong> to <strong>255</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -741,6 +917,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Integer fontColor;
 
         /**
+         * <p>Font size. Value range: <strong>0</strong> to <strong>72</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -748,6 +926,16 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Integer fontSize;
 
         /**
+         * <p>Font type. Values:</p>
+         * <ul>
+         * <li><strong>0</strong> (default): NOTO_SERIF_CJKSC_REGULAR</li>
+         * <li><strong>1</strong>: ALIBABA_PUHUITI_REGULAR</li>
+         * <li><strong>2</strong>: ALIBABA_PUHUITI_BOLD</li>
+         * <li><strong>3</strong>: ALIBABA_PUHUITI_Heavy</li>
+         * <li><strong>4</strong>: ALIBABA_PUHUITI_LIGHT</li>
+         * <li><strong>5</strong>: ALIBABA_PUHUITI_MEDIUM</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -755,6 +943,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Integer fontType;
 
         /**
+         * <p>Text content.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -762,6 +952,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public String text;
 
         /**
+         * <p>X coordinate, normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.7576</p>
          */
@@ -769,6 +961,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Float x;
 
         /**
+         * <p>Y coordinate, normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.7576</p>
          */
@@ -776,6 +970,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Float y;
 
         /**
+         * <p>Stacking order. 0 is the bottom layer, layer 1 is above layer 0, and so on.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -894,10 +1090,15 @@ public class UpdateMPUTaskRequest extends TeaModel {
     }
 
     public static class UpdateMPUTaskRequestUserPanes extends TeaModel {
+        /**
+         * <p>The list of image pane positions for the current layout.</p>
+         */
         @NameInMap("Images")
         public java.util.List<UpdateMPUTaskRequestUserPanesImages> images;
 
         /**
+         * <p>Pane ID. Value range: <strong>0</strong> to <strong>15</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -905,6 +1106,14 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Integer paneId;
 
         /**
+         * <p>Portrait segmentation type. Values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: no portrait segmentation (default).</p>
+         * </li>
+         * <li><p><strong>1</strong>: portrait segmentation. Only effective after the enhancement parameter (portrait segmentation feature) is enabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -912,16 +1121,29 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Integer segmentType;
 
         /**
+         * <p>User video input corresponding to the layout. Values:</p>
+         * <ul>
+         * <li><p><strong>camera</strong>: camera stream.</p>
+         * </li>
+         * <li><p><strong>shareScreen</strong>: shared screen stream.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>camera</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
+        /**
+         * <p>The list of text pane positions for the current layout.</p>
+         */
         @NameInMap("Texts")
         public java.util.List<UpdateMPUTaskRequestUserPanesTexts> texts;
 
         /**
+         * <p>The user ID corresponding to the layout pane. Values: <strong>1</strong> to <strong>16</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestUserID</p>
          */
@@ -985,6 +1207,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
 
     public static class UpdateMPUTaskRequestWatermarks extends TeaModel {
         /**
+         * <p>Transparency. 0.0 indicates transparent, and 1.0 indicates completely opaque.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -992,6 +1216,12 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Float alpha;
 
         /**
+         * <p>Image display. Values:</p>
+         * <ul>
+         * <li><strong>0 (None)</strong>: not displayed.</li>
+         * <li><strong>1 (Always)</strong>: always displayed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -999,6 +1229,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Integer display;
 
         /**
+         * <p>Pane height, normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.2456</p>
          */
@@ -1006,6 +1238,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Float height;
 
         /**
+         * <p>HTTP or HTTPS address of the image.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com/image.jpg">https://www.example.com/image.jpg</a></p>
          */
@@ -1013,6 +1247,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public String url;
 
         /**
+         * <p>Pane width, normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.2456</p>
          */
@@ -1020,6 +1256,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Float width;
 
         /**
+         * <p>X coordinate, normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.7576</p>
          */
@@ -1027,6 +1265,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Float x;
 
         /**
+         * <p>Y coordinate, normalized percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.7576</p>
          */
@@ -1034,6 +1274,8 @@ public class UpdateMPUTaskRequest extends TeaModel {
         public Float y;
 
         /**
+         * <p>Stacking order. 0 is the bottom layer, layer 1 is above layer 0, and so on.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

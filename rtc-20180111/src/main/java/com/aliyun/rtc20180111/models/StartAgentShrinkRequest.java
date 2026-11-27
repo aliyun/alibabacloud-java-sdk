@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartAgentShrinkRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class StartAgentShrinkRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The ID of the channel to join. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,12 +25,17 @@ public class StartAgentShrinkRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>The configuration for the agent to join a Real-Time Communication (RTC) channel.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("RtcConfig")
     public String rtcConfigShrink;
 
     /**
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +45,7 @@ public class StartAgentShrinkRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +54,9 @@ public class StartAgentShrinkRequest extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>The configuration for AI voice chat.</p>
+     */
     @NameInMap("VoiceChatConfig")
     public String voiceChatConfigShrink;
 

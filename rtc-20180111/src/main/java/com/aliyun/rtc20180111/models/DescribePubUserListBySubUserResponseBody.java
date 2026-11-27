@@ -5,22 +5,36 @@ import com.aliyun.tea.*;
 
 public class DescribePubUserListBySubUserResponseBody extends TeaModel {
     /**
+     * <p>Communication status. Valid values:  </p>
+     * <ul>
+     * <li><strong>IN</strong>: In progress.  </li>
+     * <li><strong>OUT</strong>: Ended.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>IN</p>
      */
     @NameInMap("CallStatus")
     public String callStatus;
 
+    /**
+     * <p>Details of publishing users.</p>
+     */
     @NameInMap("PubUserDetailList")
     public java.util.List<DescribePubUserListBySubUserResponseBodyPubUserDetailList> pubUserDetailList;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Subscriber user details.</p>
+     */
     @NameInMap("SubUserDetail")
     public DescribePubUserListBySubUserResponseBodySubUserDetail subUserDetail;
 
@@ -63,6 +77,8 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
 
     public static class DescribePubUserListBySubUserResponseBodyPubUserDetailListOnlinePeriods extends TeaModel {
         /**
+         * <p>The time when the user joined the channel, represented as a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1614936817</p>
          */
@@ -70,6 +86,8 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         public Long joinTs;
 
         /**
+         * <p>The time when the user left the channel, represented as a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1614936817</p>
          */
@@ -100,10 +118,15 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
     }
 
     public static class DescribePubUserListBySubUserResponseBodyPubUserDetailList extends TeaModel {
+        /**
+         * <p>Call IDs of the user&quot;s communication streams.</p>
+         */
         @NameInMap("CallIdList")
         public java.util.List<String> callIdList;
 
         /**
+         * <p>Client type. Valid values: WEB: Web client. NATIVE: Native client.</p>
+         * 
          * <strong>example:</strong>
          * <p>NATIVE</p>
          */
@@ -111,6 +134,8 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         public String clientType;
 
         /**
+         * <p>The time when the user first joined the channel, represented as a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1614936817</p>
          */
@@ -118,6 +143,8 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         public Long createdTs;
 
         /**
+         * <p>The time when the user last left the channel, represented as a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1614936817</p>
          */
@@ -125,6 +152,8 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         public Long destroyedTs;
 
         /**
+         * <p>Communication duration, measured from the first entry to the final exit, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -132,6 +161,8 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         public Long duration;
 
         /**
+         * <p>Geographical location information, such as Zhejiang Province-Hangzhou City.</p>
+         * 
          * <strong>example:</strong>
          * <p>浙江省-杭州市</p>
          */
@@ -139,49 +170,74 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         public String location;
 
         /**
+         * <p>Network type, such as WiFi, 4G, etc.</p>
+         * 
          * <strong>example:</strong>
          * <p>4G</p>
          */
         @NameInMap("Network")
         public String network;
 
+        /**
+         * <p>Network types, such as WiFi, 4G, etc.</p>
+         */
         @NameInMap("NetworkList")
         public java.util.List<String> networkList;
 
         /**
+         * <p>Online duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("OnlineDuration")
         public Long onlineDuration;
 
+        /**
+         * <p>Online period information.</p>
+         */
         @NameInMap("OnlinePeriods")
         public java.util.List<DescribePubUserListBySubUserResponseBodyPubUserDetailListOnlinePeriods> onlinePeriods;
 
         /**
+         * <p>Platform Type: If the client type is WEB, this field indicates the type of the browser. If the client type is NATIVE, this field indicates the operating system.</p>
+         * 
          * <strong>example:</strong>
          * <p>iOS</p>
          */
         @NameInMap("Os")
         public String os;
 
+        /**
+         * <p>Platform Type: If the client type is WEB, this field indicates the type of the browser. If the client type is NATIVE, this field indicates the operating system.</p>
+         */
         @NameInMap("OsList")
         public java.util.List<String> osList;
 
+        /**
+         * <p>User roles. Valid values: SENDER: sender. RECEIVER: receiver.</p>
+         */
         @NameInMap("Roles")
         public java.util.List<String> roles;
 
         /**
+         * <p>SDK Version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
          */
         @NameInMap("SdkVersion")
         public String sdkVersion;
 
+        /**
+         * <p>List of software development kit (SDK) versions, such as 1.0.0, 1.1.1, etc.</p>
+         */
         @NameInMap("SdkVersionList")
         public java.util.List<String> sdkVersionList;
 
         /**
+         * <p>User ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>testuserid</p>
          */
@@ -189,8 +245,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>User ID alias.</p>
+         * 
          * <strong>example:</strong>
-         * <p>旁路转推</p>
+         * <p>yi****</p>
          */
         @NameInMap("UserIdAlias")
         public String userIdAlias;
@@ -340,6 +398,8 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
 
     public static class DescribePubUserListBySubUserResponseBodySubUserDetailOnlinePeriods extends TeaModel {
         /**
+         * <p>The time when the user joined the channel, represented as a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1614936817</p>
          */
@@ -347,6 +407,8 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         public Long joinTs;
 
         /**
+         * <p>The time when the user left the channel, represented as a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1614936817</p>
          */
@@ -378,6 +440,8 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
 
     public static class DescribePubUserListBySubUserResponseBodySubUserDetail extends TeaModel {
         /**
+         * <p>Client type. Valid values: WEB: Web client. NATIVE: Native client.</p>
+         * 
          * <strong>example:</strong>
          * <p>NATIVE</p>
          */
@@ -385,6 +449,8 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         public String clientType;
 
         /**
+         * <p>The time when the user first joined the channel, represented as a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1614936817</p>
          */
@@ -392,6 +458,8 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         public Long createdTs;
 
         /**
+         * <p>The time when the user last left the channel, represented as a UNIX timestamp, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1614936817</p>
          */
@@ -399,6 +467,8 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         public Long destroyedTs;
 
         /**
+         * <p>Communication duration, from the first entry to the final exit, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -406,6 +476,8 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         public Long duration;
 
         /**
+         * <p>Geographic location information, such as Zhejiang Province-Hangzhou City.</p>
+         * 
          * <strong>example:</strong>
          * <p>浙江省-杭州市</p>
          */
@@ -413,49 +485,74 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         public String location;
 
         /**
+         * <p>Network type, such as WiFi, 4G, etc.</p>
+         * 
          * <strong>example:</strong>
          * <p>4G</p>
          */
         @NameInMap("Network")
         public String network;
 
+        /**
+         * <p>Network type, such as WiFi, 4G, etc.</p>
+         */
         @NameInMap("NetworkList")
         public java.util.List<String> networkList;
 
         /**
+         * <p>Online duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("OnlineDuration")
         public Long onlineDuration;
 
+        /**
+         * <p>Online period information.</p>
+         */
         @NameInMap("OnlinePeriods")
         public java.util.List<DescribePubUserListBySubUserResponseBodySubUserDetailOnlinePeriods> onlinePeriods;
 
         /**
+         * <p>Platform Type: If the client type is WEB, this field indicates the type of the browser. If the client type is NATIVE, this field indicates the operating system type.</p>
+         * 
          * <strong>example:</strong>
          * <p>iOS</p>
          */
         @NameInMap("Os")
         public String os;
 
+        /**
+         * <p>Platform Type: If the client type is WEB, this field indicates the type of the browser. If the client type is NATIVE, this field indicates the operating system type.</p>
+         */
         @NameInMap("OsList")
         public java.util.List<String> osList;
 
+        /**
+         * <p>User role.</p>
+         */
         @NameInMap("Roles")
         public java.util.List<String> roles;
 
         /**
+         * <p>SDK Version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
          */
         @NameInMap("SdkVersion")
         public String sdkVersion;
 
+        /**
+         * <p>List of SDK versions, such as 1.0.0, 1.1.1, etc.</p>
+         */
         @NameInMap("SdkVersionList")
         public java.util.List<String> sdkVersionList;
 
         /**
+         * <p>User ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>testuserid</p>
          */
@@ -463,8 +560,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>User ID alias.</p>
+         * 
          * <strong>example:</strong>
-         * <p>旁路转推</p>
+         * <p>yi****</p>
          */
         @NameInMap("UserIdAlias")
         public String userIdAlias;

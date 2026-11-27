@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeUsageDistributionStatDataResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of usage statistics.</p>
+     */
     @NameInMap("UsageStatList")
     public java.util.List<DescribeUsageDistributionStatDataResponseBodyUsageStatList> usageStatList;
 
@@ -37,6 +42,8 @@ public class DescribeUsageDistributionStatDataResponseBody extends TeaModel {
 
     public static class DescribeUsageDistributionStatDataResponseBodyUsageStatList extends TeaModel {
         /**
+         * <p>The duration of audio calls, in minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>51</p>
          */
@@ -44,6 +51,8 @@ public class DescribeUsageDistributionStatDataResponseBody extends TeaModel {
         public Long audioCallDuration;
 
         /**
+         * <p>The ratio of the call duration, represented by four decimal places, such as 0.9782.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9782</p>
          */
@@ -51,6 +60,13 @@ public class DescribeUsageDistributionStatDataResponseBody extends TeaModel {
         public String callDurationRatio;
 
         /**
+         * <p>The statistical dimension. Valid values:</p>
+         * <ul>
+         * <li>When StatDim is set to CHANNEL_ONLINE, valid values are <strong>ONE_TO_FIVE</strong> (1 to 5 users), <strong>SIX_TO_TEN</strong> (6 to 10 users), <strong>ELEVEN_TO_TWENTY</strong> (11 to 20 users), <strong>TWENTY_ONE_TO_FIFTY</strong> (21 to 50 users), and <strong>ABOVE_FIFTY</strong> (more than 50 users).  </li>
+         * <li>When StatDim is set to NETWORK, valid values are <strong>WiFi</strong>, <strong>4G</strong>, and others.  </li>
+         * <li>When StatDim is set to OS, valid values are <strong>iOS</strong>, <strong>Android</strong>, and others.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ONE_TO_FIVE</p>
          */
@@ -58,6 +74,8 @@ public class DescribeUsageDistributionStatDataResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The total duration of calls, in minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>10636</p>
          */
@@ -65,6 +83,8 @@ public class DescribeUsageDistributionStatDataResponseBody extends TeaModel {
         public Long totalCallDuration;
 
         /**
+         * <p>The duration of video calls, in minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>10585</p>
          */

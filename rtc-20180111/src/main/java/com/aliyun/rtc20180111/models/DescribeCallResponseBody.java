@@ -4,16 +4,24 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeCallResponseBody extends TeaModel {
+    /**
+     * <p>The basic communication information.</p>
+     */
     @NameInMap("CallInfo")
     public DescribeCallResponseBodyCallInfo callInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of user details.</p>
+     */
     @NameInMap("UserDetailList")
     public java.util.List<DescribeCallResponseBodyUserDetailList> userDetailList;
 
@@ -48,15 +56,21 @@ public class DescribeCallResponseBody extends TeaModel {
 
     public static class DescribeCallResponseBodyCallInfo extends TeaModel {
         /**
-         * <p>App ID。</p>
+         * <p>The app ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxxxx</p>
+         * <p>testappid</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
+         * <p>The communication status. Valid values:</p>
+         * <ul>
+         * <li><strong>IN</strong>: In progress.</li>
+         * <li><strong>OUT</strong>: Ended.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>IN</p>
          */
@@ -64,6 +78,8 @@ public class DescribeCallResponseBody extends TeaModel {
         public String callStatus;
 
         /**
+         * <p>The channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
@@ -71,6 +87,8 @@ public class DescribeCallResponseBody extends TeaModel {
         public String channelId;
 
         /**
+         * <p>The time when the channel was created. The value is a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1615860711</p>
          */
@@ -78,6 +96,8 @@ public class DescribeCallResponseBody extends TeaModel {
         public Long createdTs;
 
         /**
+         * <p>The time when the channel was released. The value is a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1615860811</p>
          */
@@ -85,6 +105,8 @@ public class DescribeCallResponseBody extends TeaModel {
         public Long destroyedTs;
 
         /**
+         * <p>The duration of the channel. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -148,6 +170,8 @@ public class DescribeCallResponseBody extends TeaModel {
 
     public static class DescribeCallResponseBodyUserDetailListDurMetricStatData extends TeaModel {
         /**
+         * <p>The duration of published audio. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -155,6 +179,8 @@ public class DescribeCallResponseBody extends TeaModel {
         public Long pubAudio;
 
         /**
+         * <p>The duration of published 1080P video. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -162,6 +188,8 @@ public class DescribeCallResponseBody extends TeaModel {
         public Long pubVideo1080;
 
         /**
+         * <p>The duration of published 360P video. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -169,6 +197,8 @@ public class DescribeCallResponseBody extends TeaModel {
         public Long pubVideo360;
 
         /**
+         * <p>The duration of published 720P video. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -176,6 +206,8 @@ public class DescribeCallResponseBody extends TeaModel {
         public Long pubVideo720;
 
         /**
+         * <p>The duration of published screen sharing. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -183,6 +215,8 @@ public class DescribeCallResponseBody extends TeaModel {
         public Long pubVideoScreenShare;
 
         /**
+         * <p>The duration of subscribed audio. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -190,6 +224,8 @@ public class DescribeCallResponseBody extends TeaModel {
         public Long subAudio;
 
         /**
+         * <p>The duration of subscribed 1080P video. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -197,6 +233,8 @@ public class DescribeCallResponseBody extends TeaModel {
         public Long subVideo1080;
 
         /**
+         * <p>The duration of subscribed 360P video. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -204,6 +242,8 @@ public class DescribeCallResponseBody extends TeaModel {
         public Long subVideo360;
 
         /**
+         * <p>The duration of subscribed 720P video. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -211,6 +251,8 @@ public class DescribeCallResponseBody extends TeaModel {
         public Long subVideo720;
 
         /**
+         * <p>The duration of subscribed screen sharing. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -306,6 +348,8 @@ public class DescribeCallResponseBody extends TeaModel {
 
     public static class DescribeCallResponseBodyUserDetailListOnlinePeriods extends TeaModel {
         /**
+         * <p>The time when the user joined the channel. The value is a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1614936817</p>
          */
@@ -313,6 +357,8 @@ public class DescribeCallResponseBody extends TeaModel {
         public Long joinTs;
 
         /**
+         * <p>The time when the user left the channel. The value is a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1614936817</p>
          */
@@ -344,6 +390,12 @@ public class DescribeCallResponseBody extends TeaModel {
 
     public static class DescribeCallResponseBodyUserDetailList extends TeaModel {
         /**
+         * <p>The call experience. Valid values:</p>
+         * <ul>
+         * <li><strong>GOOD</strong>: Good.</li>
+         * <li><strong>BAD</strong>: Poor.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>GOOD</p>
          */
@@ -351,6 +403,8 @@ public class DescribeCallResponseBody extends TeaModel {
         public String callExp;
 
         /**
+         * <p>The time when the user first joined the channel. The value is a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1614936817</p>
          */
@@ -358,16 +412,23 @@ public class DescribeCallResponseBody extends TeaModel {
         public Long createdTs;
 
         /**
+         * <p>The time when the user last left the channel. The value is a UNIX timestamp in seconds. If the communication has not ended, the value is empty.</p>
+         * 
          * <strong>example:</strong>
          * <p>1614936817</p>
          */
         @NameInMap("DestroyedTs")
         public Long destroyedTs;
 
+        /**
+         * <p>The duration statistics.</p>
+         */
         @NameInMap("DurMetricStatData")
         public DescribeCallResponseBodyUserDetailListDurMetricStatData durMetricStatData;
 
         /**
+         * <p>The communication duration from the first join to the last leave. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -375,56 +436,83 @@ public class DescribeCallResponseBody extends TeaModel {
         public Long duration;
 
         /**
+         * <p>The geographic location, such as Beijing-Beijing.</p>
+         * 
          * <strong>example:</strong>
-         * <p>浙江省-杭州市</p>
+         * <p>Zhejiang-Hangzhou</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
+         * <p>The network type, such as Wi-Fi or 4G.</p>
+         * 
          * <strong>example:</strong>
          * <p>4G</p>
          */
         @NameInMap("Network")
         public String network;
 
+        /**
+         * <p>The network type, such as Wi-Fi or 4G.</p>
+         */
         @NameInMap("NetworkList")
         public java.util.List<String> networkList;
 
         /**
+         * <p>The online duration. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("OnlineDuration")
         public Long onlineDuration;
 
+        /**
+         * <p>The online periods.</p>
+         */
         @NameInMap("OnlinePeriods")
         public java.util.List<DescribeCallResponseBodyUserDetailListOnlinePeriods> onlinePeriods;
 
         /**
+         * <p>The platform type. If the user client is WEB, this indicates the type of the browser. If the client is NATIVE, this indicates the operating system type.</p>
+         * 
          * <strong>example:</strong>
          * <p>iOS</p>
          */
         @NameInMap("Os")
         public String os;
 
+        /**
+         * <p>The platform type. If the user client is WEB, this indicates the type of the browser. If the client is NATIVE, this indicates the operating system type.</p>
+         */
         @NameInMap("OsList")
         public java.util.List<String> osList;
 
+        /**
+         * <p>The user roles.</p>
+         */
         @NameInMap("Roles")
         public java.util.List<String> roles;
 
         /**
+         * <p>The SDK version, such as 1.0.0 or 1.1.1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
          */
         @NameInMap("SdkVersion")
         public String sdkVersion;
 
+        /**
+         * <p>The list of SDK versions, such as 1.0.0 or 1.1.1.</p>
+         */
         @NameInMap("SdkVersionList")
         public java.util.List<String> sdkVersionList;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>testuserid</p>
          */

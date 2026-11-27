@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeUsageAreaDistributionStatDataResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The regional distribution data of usage statistics.</p>
+     */
     @NameInMap("UsageAreaStatList")
     public java.util.List<DescribeUsageAreaDistributionStatDataResponseBodyUsageAreaStatList> usageAreaStatList;
 
@@ -37,6 +42,8 @@ public class DescribeUsageAreaDistributionStatDataResponseBody extends TeaModel 
 
     public static class DescribeUsageAreaDistributionStatDataResponseBodyUsageAreaStatList extends TeaModel {
         /**
+         * <p>Audio call duration, in minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>45</p>
          */
@@ -44,13 +51,17 @@ public class DescribeUsageAreaDistributionStatDataResponseBody extends TeaModel 
         public Integer audioCallDuration;
 
         /**
+         * <p>Region name, such as China.</p>
+         * 
          * <strong>example:</strong>
-         * <p>中国</p>
+         * <p>中国_浙江省</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>Total call duration, in minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>4821</p>
          */
@@ -58,6 +69,8 @@ public class DescribeUsageAreaDistributionStatDataResponseBody extends TeaModel 
         public Integer totalCallDuration;
 
         /**
+         * <p>Video call duration, in minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>4776</p>
          */

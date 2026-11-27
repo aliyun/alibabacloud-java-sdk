@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAgentRequest extends TeaModel {
     /**
+     * <p>The application ID. Specify only one ID. You can create and query applications in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateAgentRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The existing channel ID. Specify only one ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class UpdateAgentRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>The task ID. Specify only one ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +34,9 @@ public class UpdateAgentRequest extends TeaModel {
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>Configuration for AI voice conversation.</p>
+     */
     @NameInMap("VoiceChatConfig")
     public UpdateAgentRequestVoiceChatConfig voiceChatConfig;
 
@@ -73,6 +79,8 @@ public class UpdateAgentRequest extends TeaModel {
 
     public static class UpdateAgentRequestVoiceChatConfig extends TeaModel {
         /**
+         * <p>1 – Natural conversation mode. 2 – Walkie-talkie mode.If this field is not included, no update occurs.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -80,6 +88,8 @@ public class UpdateAgentRequest extends TeaModel {
         public Integer chatMode;
 
         /**
+         * <p>1 – Enable voice interruption. 2 – Disable voice interruption.If this field is not included, no update occurs.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

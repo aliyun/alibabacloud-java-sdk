@@ -8,13 +8,17 @@ public class DescribeAppsResponseBody extends TeaModel {
     public DescribeAppsResponseBodyAppList appList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>6159ba01-6687-4fb2-a831-f0cd8d188648</p>
+     * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>The total number of results returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +26,8 @@ public class DescribeAppsResponseBody extends TeaModel {
     public Integer totalNum;
 
     /**
+     * <p>The total number of pages returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

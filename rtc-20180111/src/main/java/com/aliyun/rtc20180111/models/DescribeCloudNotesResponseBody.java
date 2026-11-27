@@ -4,10 +4,15 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudNotesResponseBody extends TeaModel {
+    /**
+     * <p>List of meeting summary results.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeCloudNotesResponseBodyItems> items;
 
     /**
+     * <p>Page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>Quantity per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -31,6 +38,8 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total quantity.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -84,6 +93,8 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
 
     public static class DescribeCloudNotesResponseBodyItems extends TeaModel {
         /**
+         * <p>Path where the chapter overview result file is stored.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloudNote/ksvxxppi/88_12/autoChapters_1724914365173.json</p>
          */
@@ -91,6 +102,8 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
         public String autoChaptersFilePath;
 
         /**
+         * <p>The user-defined bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>sample-bucket</p>
          */
@@ -98,6 +111,8 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
         public String bucket;
 
         /**
+         * <p>Channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>testchannelId</p>
          */
@@ -105,6 +120,8 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
         public String channelId;
 
         /**
+         * <p>The path where the custom prompt result file is stored.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloudNote/ksvxxppi/88_12/customPrompt_1724914365173.json</p>
          */
@@ -112,6 +129,8 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
         public String customPromptFilePath;
 
         /**
+         * <p>The path where the key points extraction result file is stored.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloudNote/ksvxxppi/88_12/meetingAssistance_1724914365173.json</p>
          */
@@ -119,6 +138,8 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
         public String meetingAssistanceFilePath;
 
         /**
+         * <p>Reference job region.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -126,6 +147,8 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
         public Integer region;
 
         /**
+         * <p>The path where the service quality inspection result file is stored.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloudNote/ksvxxppi/88_12/serviceInspection_1724914365173.json</p>
          */
@@ -133,6 +156,8 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
         public String serviceInspectionFilePath;
 
         /**
+         * <p>Start Time of the meeting summary job.</p>
+         * 
          * <strong>example:</strong>
          * <p>1731939816837</p>
          */
@@ -140,6 +165,8 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
         public Long startTs;
 
         /**
+         * <p>Path where the summary result file is stored.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloudNote/ksvxxppi/88_12/summarization_1724914365173.json</p>
          */
@@ -147,6 +174,8 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
         public String summarizationFilePath;
 
         /**
+         * <p>Job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>test001</p>
          */
@@ -154,6 +183,8 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The path where the spoken-to-written text result file is stored.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloudNote/ksvxxppi/88_12/textPolish_1724914365173.json</p>
          */
@@ -161,6 +192,8 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
         public String textPolishFilePath;
 
         /**
+         * <p>Path where the transcription result file is stored.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloudNote/ksvxxppi/88_12/transcription_1724914365173.json</p>
          */
@@ -168,6 +201,8 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
         public String transcriptionFilePath;
 
         /**
+         * <p>The vendor referenced when enabling the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

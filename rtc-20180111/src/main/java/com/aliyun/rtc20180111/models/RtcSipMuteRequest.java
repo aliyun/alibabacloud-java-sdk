@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RtcSipMuteRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RtcSipMuteRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The ID of an existing channel. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class RtcSipMuteRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>The operations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Operations")
@@ -59,6 +62,11 @@ public class RtcSipMuteRequest extends TeaModel {
 
     public static class RtcSipMuteRequestOperationsValue extends TeaModel {
         /**
+         * <p>The actual value.</p>
+         * <ul>
+         * <li>active: Unmutes the microphone.</li>
+         * <li>inactive: Mutes the microphone.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -84,12 +92,17 @@ public class RtcSipMuteRequest extends TeaModel {
 
     public static class RtcSipMuteRequestOperations extends TeaModel {
         /**
+         * <p>The list of user IDs.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Ids")
         public java.util.List<String> ids;
 
         /**
+         * <p>The operation type.</p>
+         * <ul>
+         * <li>replace</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -99,6 +112,7 @@ public class RtcSipMuteRequest extends TeaModel {
         public String op;
 
         /**
+         * <p>The operation ID. If some operations fail, you can use this ID for troubleshooting.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -108,6 +122,10 @@ public class RtcSipMuteRequest extends TeaModel {
         public String operationId;
 
         /**
+         * <p>The operation scope.</p>
+         * <ul>
+         * <li>/media/audio/status: Modifies the audio stream status of the user.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +135,7 @@ public class RtcSipMuteRequest extends TeaModel {
         public String path;
 
         /**
+         * <p>The operation value.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Value")

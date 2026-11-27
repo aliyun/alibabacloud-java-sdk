@@ -4,10 +4,15 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeCallListResponseBody extends TeaModel {
+    /**
+     * <p>List of communications.</p>
+     */
     @NameInMap("CallList")
     public java.util.List<DescribeCallListResponseBodyCallList> callList;
 
     /**
+     * <p>Page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -15,6 +20,8 @@ public class DescribeCallListResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>Quantity per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class DescribeCallListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
      */
@@ -29,6 +38,8 @@ public class DescribeCallListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total Quantity.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -91,6 +102,8 @@ public class DescribeCallListResponseBody extends TeaModel {
         public String appId;
 
         /**
+         * <p>Number of users with poor communication experience.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -98,6 +111,12 @@ public class DescribeCallListResponseBody extends TeaModel {
         public Integer badExpUserCnt;
 
         /**
+         * <p>Communication status. Valid values:  </p>
+         * <ul>
+         * <li><strong>IN</strong>: In progress.  </li>
+         * <li><strong>OUT</strong>: Ended.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>OUT</p>
          */
@@ -105,6 +124,8 @@ public class DescribeCallListResponseBody extends TeaModel {
         public String callStatus;
 
         /**
+         * <p>Channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>904</p>
          */
@@ -112,6 +133,8 @@ public class DescribeCallListResponseBody extends TeaModel {
         public String channelId;
 
         /**
+         * <p>The UNIX timestamp indicating when the communication was created, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1614936817</p>
          */
@@ -119,6 +142,8 @@ public class DescribeCallListResponseBody extends TeaModel {
         public Long createdTs;
 
         /**
+         * <p>The UNIX timestamp indicating when the communication was released, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1614936817</p>
          */
@@ -126,6 +151,8 @@ public class DescribeCallListResponseBody extends TeaModel {
         public Long destroyedTs;
 
         /**
+         * <p>Duration of the communication, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -133,6 +160,8 @@ public class DescribeCallListResponseBody extends TeaModel {
         public Long duration;
 
         /**
+         * <p>User Count.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */

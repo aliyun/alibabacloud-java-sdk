@@ -13,10 +13,15 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>List of templates.</p>
+     */
     @NameInMap("Templates")
     public java.util.List<DescribeAppStreamingOutTemplatesResponseBodyTemplates> templates;
 
     /**
+     * <p>Number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -24,6 +29,8 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
     public Long totalNum;
 
     /**
+     * <p>Number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -69,16 +76,23 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
 
     public static class DescribeAppStreamingOutTemplatesResponseBodyTemplates extends TeaModel {
         /**
+         * <p>Creation Time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-09-04T06:22:15Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>List of layout IDs.</p>
+         */
         @NameInMap("LayoutIds")
         public java.util.List<String> layoutIds;
 
         /**
+         * <p>Encoding options.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -86,13 +100,17 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
         public Integer mediaEncode;
 
         /**
+         * <p>Template Name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>模版名称</p>
+         * <p>模板名称</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>Template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>Bj6D****</p>
          */

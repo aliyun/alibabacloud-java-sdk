@@ -15,6 +15,12 @@ public class DescribeCallListRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>Call status. Valid values:</p>
+     * <ul>
+     * <li><strong>IN</strong>: In progress.</li>
+     * <li><strong>OUT</strong>: Ended.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OUT</p>
      */
@@ -22,6 +28,8 @@ public class DescribeCallListRequest extends TeaModel {
     public String callStatus;
 
     /**
+     * <p>Channel ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>311</p>
      */
@@ -29,6 +37,7 @@ public class DescribeCallListRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>The end time of the query, expressed as a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +47,12 @@ public class DescribeCallListRequest extends TeaModel {
     public Long endTs;
 
     /**
+     * <p>Sorting field. Valid values:</p>
+     * <ul>
+     * <li><strong>BAD_EXP_USER_COUNT_DESC</strong>: Sort by the number of users with poor experience in descending order.</li>
+     * <li><strong>BAD_EXP_USER_COUNT_ASC</strong>: Sort by the number of users with poor experience in ascending order.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>BAD_EXP_USER_COUNT_DESC</p>
      */
@@ -45,6 +60,7 @@ public class DescribeCallListRequest extends TeaModel {
     public String orderBy;
 
     /**
+     * <p>Page number. Minimum value: 1. Maximum value: 200.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,6 +70,7 @@ public class DescribeCallListRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>Quantity per page, minimum value is 1, maximum value is 200.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,6 +80,12 @@ public class DescribeCallListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Query mode. Valid values:</p>
+     * <ul>
+     * <li><strong>ALL</strong>: All calls.</li>
+     * <li><strong>FOLLOW</strong>: Followed calls.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ALL</p>
      */
@@ -70,6 +93,7 @@ public class DescribeCallListRequest extends TeaModel {
     public String queryMode;
 
     /**
+     * <p>Start Time of the query, represented as a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,6 +103,8 @@ public class DescribeCallListRequest extends TeaModel {
     public Long startTs;
 
     /**
+     * <p>User ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c906531af5f9****</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StopViewResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E8236D21-B690-5251-A361-5971FBF552BA</p>
      */
@@ -12,6 +14,8 @@ public class StopViewResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2bd80921b81e4d4289f696606885606b</p>
      */

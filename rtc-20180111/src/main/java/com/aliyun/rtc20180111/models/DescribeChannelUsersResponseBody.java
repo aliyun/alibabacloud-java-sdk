@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeChannelUsersResponseBody extends TeaModel {
     /**
+     * <p>The channel mode. Valid values:</p>
+     * <ul>
+     * <li><p><strong>1</strong>: Communication (communication mode).</p>
+     * </li>
+     * <li><p><strong>2</strong>: Interactive_live (live streaming mode).</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,16 +20,23 @@ public class DescribeChannelUsersResponseBody extends TeaModel {
     public Integer channelProfile;
 
     /**
+     * <p>The total number of users in the channel in communication mode. If the channel is not in communication mode, this parameter is 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("CommTotalNum")
     public Integer commTotalNum;
 
+    /**
+     * <p>The list of interactive user IDs in the channel in live streaming mode. This parameter is empty if the channel is not in live streaming mode.</p>
+     */
     @NameInMap("InteractiveUserList")
     public java.util.List<String> interactiveUserList;
 
     /**
+     * <p>The total number of interactive users in the channel in live streaming mode. If the channel is not in live streaming mode, this parameter is 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -29,16 +44,29 @@ public class DescribeChannelUsersResponseBody extends TeaModel {
     public Integer interactiveUserNum;
 
     /**
+     * <p>Indicates whether the channel exists. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The channel exists.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The channel does not exist.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("IsChannelExist")
     public Boolean isChannelExist;
 
+    /**
+     * <p>The list of viewer IDs in the channel in live streaming mode. A maximum of 1,000 viewers are returned. This parameter is empty if the channel is not in live streaming mode.</p>
+     */
     @NameInMap("LiveUserList")
     public java.util.List<String> liveUserList;
 
     /**
+     * <p>The total number of viewers in the channel in live streaming mode. If the channel is not in live streaming mode, this parameter is 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -46,6 +74,8 @@ public class DescribeChannelUsersResponseBody extends TeaModel {
     public Integer liveUserNum;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6159ba01-6687-4fb2-a831-f0cd8d188648</p>
      */
@@ -53,12 +83,17 @@ public class DescribeChannelUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The timestamp of the current time in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>1557909133</p>
      */
     @NameInMap("Timestamp")
     public Integer timestamp;
 
+    /**
+     * <p>The list of user IDs in the channel in communication mode. This parameter is empty if the channel is not in communication mode.</p>
+     */
     @NameInMap("UserList")
     public java.util.List<String> userList;
 

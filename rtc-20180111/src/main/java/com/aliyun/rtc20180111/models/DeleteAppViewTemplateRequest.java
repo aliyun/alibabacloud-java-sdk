@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAppViewTemplateRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query the ID in the console. Only a single ID can be specified.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteAppViewTemplateRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The template information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Template")
@@ -42,6 +44,7 @@ public class DeleteAppViewTemplateRequest extends TeaModel {
 
     public static class DeleteAppViewTemplateRequestTemplate extends TeaModel {
         /**
+         * <p>The template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

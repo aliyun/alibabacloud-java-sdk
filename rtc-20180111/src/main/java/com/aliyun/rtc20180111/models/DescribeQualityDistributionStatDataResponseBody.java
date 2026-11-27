@@ -4,10 +4,15 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
+    /**
+     * <p>The list of quality statistics data.</p>
+     */
     @NameInMap("QualityStatDataList")
     public java.util.List<DescribeQualityDistributionStatDataResponseBodyQualityStatDataList> qualityStatDataList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
      */
@@ -37,6 +42,8 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
 
     public static class DescribeQualityDistributionStatDataResponseBodyQualityStatDataList extends TeaModel {
         /**
+         * <p>Audio delay, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>554</p>
          */
@@ -44,6 +51,8 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
         public Long audioDelay;
 
         /**
+         * <p>Audio high-quality transmission rate, represented as a four-digit decimal.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9953</p>
          */
@@ -51,6 +60,8 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
         public String audioHighQualityTransmissionRate;
 
         /**
+         * <p>The Audio Lag Rate, represented as a four-digit decimal.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0014</p>
          */
@@ -58,6 +69,8 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
         public String audioStuckRate;
 
         /**
+         * <p>The call duration ratio, represented as a four-digit decimal. For example, 1.0000 indicates that the call duration accounts for 100% of the total usage.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0000</p>
          */
@@ -65,6 +78,8 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
         public String callDurationRatio;
 
         /**
+         * <p>Five-second channel join success rate, represented as a four-digit decimal.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9560</p>
          */
@@ -72,6 +87,8 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
         public String joinChannelSucFiveSecRate;
 
         /**
+         * <p>The channel join success rate, represented as a four-digit decimal.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9575</p>
          */
@@ -79,6 +96,13 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
         public String joinChannelSucRate;
 
         /**
+         * <p>Statistical dimension. Valid values:  </p>
+         * <ul>
+         * <li>When StatDim is CHANNELONLINE: <strong>ONE_TO_FIVE</strong> (1–5 participants), <strong>SIX_TO_TEN</strong> (6–10 participants), <strong>ELEVEN_TO_TWENTY</strong> (11–20 participants), <strong>TWENTYONE_TO_FIFTY</strong> (21–50 participants), <strong>ABOVE_FIFTY</strong> (more than 50 participants).  </li>
+         * <li>When StatDim is NETWORK: <strong>WiFi</strong>, <strong>4G</strong>, etc.  </li>
+         * <li>When StatDim is OS: <strong>iOS</strong>, <strong>Android</strong>, etc.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ONE_TO_FIVE</p>
          */
@@ -86,6 +110,8 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Video delay, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>517</p>
          */
@@ -93,6 +119,8 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
         public Long videoDelay;
 
         /**
+         * <p>Time to first video frame, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1299</p>
          */
@@ -100,6 +128,8 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
         public Long videoFirstPicDuration;
 
         /**
+         * <p>Video high-quality transmission rate, represented as a four-digit decimal.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9981</p>
          */
@@ -107,6 +137,8 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
         public String videoHighQualityTransmissionRate;
 
         /**
+         * <p>The Video Lag Rate, represented as a four-digit decimal.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0264</p>
          */

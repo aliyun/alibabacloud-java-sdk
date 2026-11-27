@@ -4,13 +4,21 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
+    /**
+     * <p>The exception metric data.</p>
+     */
     @NameInMap("MetricData")
     public DescribeFaultDiagnosisOverallDataResponseBodyMetricData metricData;
 
+    /**
+     * <p>The list of overview data for exception diagnostics.</p>
+     */
     @NameInMap("OverallData")
     public DescribeFaultDiagnosisOverallDataResponseBodyOverallData overallData;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
      */
@@ -47,10 +55,15 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisOverallDataResponseBodyMetricDataNodes extends TeaModel {
+        /**
+         * <p>The extended properties, where ratio indicates the proportion of abnormal users per unit time and totalCount indicates the total number of users per unit time.</p>
+         */
         @NameInMap("Ext")
         public java.util.Map<String, ?> ext;
 
         /**
+         * <p>The x-axis coordinate in the metric trends chart. The unit of time is 1 minute.</p>
+         * 
          * <strong>example:</strong>
          * <p>1615824000</p>
          */
@@ -58,6 +71,8 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
         public String x;
 
         /**
+         * <p>The y-axis coordinate in the metric trends chart.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -96,6 +111,9 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisOverallDataResponseBodyMetricData extends TeaModel {
+        /**
+         * <p>The list of coordinate points for the metric trends chart.</p>
+         */
         @NameInMap("Nodes")
         public java.util.List<DescribeFaultDiagnosisOverallDataResponseBodyMetricDataNodes> nodes;
 
@@ -116,6 +134,8 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
 
     public static class DescribeFaultDiagnosisOverallDataResponseBodyOverallData extends TeaModel {
         /**
+         * <p>The number of abnormal user visits or abnormal users.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -123,13 +143,17 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
         public Integer faultUserCount;
 
         /**
+         * <p>The total proportion of abnormal users.</p>
+         * 
          * <strong>example:</strong>
-         * <p>0.1</p>
+         * <p>0.5</p>
          */
         @NameInMap("FaultUserRatio")
         public Float faultUserRatio;
 
         /**
+         * <p>The total number of user visits or total users.</p>
+         * 
          * <strong>example:</strong>
          * <p>40</p>
          */

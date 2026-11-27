@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAppViewTemplateRequest extends TeaModel {
     /**
+     * <p>The application ID. You can create and query it in the console. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateAppViewTemplateRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The template.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Template")
@@ -42,12 +44,14 @@ public class CreateAppViewTemplateRequest extends TeaModel {
 
     public static class CreateAppViewTemplateRequestTemplate extends TeaModel {
         /**
+         * <p>The list of layout IDs. A maximum of 16 layout IDs are supported.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("LayoutIds")
         public java.util.List<String> layoutIds;
 
         /**
+         * <p>The encoding options.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -57,10 +61,11 @@ public class CreateAppViewTemplateRequest extends TeaModel {
         public Integer mediaEncode;
 
         /**
+         * <p>The template name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>模版</p>
+         * <p>Template</p>
          */
         @NameInMap("Name")
         public String name;

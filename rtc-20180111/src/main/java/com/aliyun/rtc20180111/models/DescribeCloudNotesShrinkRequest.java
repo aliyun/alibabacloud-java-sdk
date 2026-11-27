@@ -15,6 +15,8 @@ public class DescribeCloudNotesShrinkRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>Channel ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>311</p>
      */
@@ -22,6 +24,8 @@ public class DescribeCloudNotesShrinkRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>Query range, closed interval of job start time, in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1712376532000</p>
      */
@@ -29,6 +33,8 @@ public class DescribeCloudNotesShrinkRequest extends TeaModel {
     public Long endTs;
 
     /**
+     * <p>Page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +42,8 @@ public class DescribeCloudNotesShrinkRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>Number of items per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -43,12 +51,17 @@ public class DescribeCloudNotesShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Query range, open interval of job start time, in milliseconds. If not specified, defaults to querying recordings from the last 3 days, with a maximum range of one year in the past.</p>
+     * 
      * <strong>example:</strong>
      * <p>1712376032000</p>
      */
     @NameInMap("StartTs")
     public Long startTs;
 
+    /**
+     * <p>List of job TaskIds.</p>
+     */
     @NameInMap("TaskIds")
     public String taskIdsShrink;
 
