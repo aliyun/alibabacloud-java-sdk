@@ -42,7 +42,7 @@ public class DescribeElasticRulesResponseBody extends TeaModel {
 
     public static class DescribeElasticRulesResponseBodyDataRules extends TeaModel {
         /**
-         * <p>The target compute resource rule of the cluster.</p>
+         * <p>The target compute resource rule for the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>selectdb.2xlarge</p>

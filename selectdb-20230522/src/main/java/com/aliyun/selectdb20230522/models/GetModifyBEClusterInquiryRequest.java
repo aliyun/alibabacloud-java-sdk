@@ -99,7 +99,7 @@ public class GetModifyBEClusterInquiryRequest extends TeaModel {
     public String pricingCycle;
 
     /**
-     * <p>The coupon ID.</p>
+     * <p>The coupon code.</p>
      * 
      * <strong>example:</strong>
      * <p>123412345</p>

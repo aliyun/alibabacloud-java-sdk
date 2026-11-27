@@ -83,7 +83,7 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The group tag.</p>
+         * <p>The tag of the group.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>

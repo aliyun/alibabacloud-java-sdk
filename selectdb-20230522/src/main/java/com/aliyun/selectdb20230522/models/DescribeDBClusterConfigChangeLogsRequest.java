@@ -34,7 +34,7 @@ public class DescribeDBClusterConfigChangeLogsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The end time to query change records. Format: yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The end time of the query for change records. Format: yyyy-MM-dd HH:mm:ss.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class DescribeDBClusterConfigChangeLogsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start time to query change records. Format: yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The start time of the query for change records. Format: yyyy-MM-dd HH:mm:ss.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

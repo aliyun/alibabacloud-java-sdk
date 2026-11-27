@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "selectdb";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("ap-southeast-3", "selectdb.aliyuncs.com"),
@@ -1269,7 +1272,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the cluster configuration.</p>
+     * <p>Queries the configurations of a cluster.</p>
      * 
      * @param request DescribeDBClusterConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1313,7 +1316,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the cluster configuration.</p>
+     * <p>Queries the configurations of a cluster.</p>
      * 
      * @param request DescribeDBClusterConfigRequest
      * @return DescribeDBClusterConfigResponse
@@ -1441,7 +1444,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Subscription instances cannot be deleted.</p>
+     * <p>You cannot delete subscription instances.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of an instance.</p>
@@ -1484,7 +1487,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Subscription instances cannot be deleted.</p>
+     * <p>You cannot delete subscription instances.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of an instance.</p>
@@ -1499,7 +1502,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the network information of a specified ApsaraDB for SelectDB instance.</p>
+     * <p>Queries the network information of a specified ApsaraDB for SelectDB database instance.</p>
      * 
      * @param request DescribeDBInstanceNetInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1539,7 +1542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the network information of a specified ApsaraDB for SelectDB instance.</p>
+     * <p>Queries the network information of a specified ApsaraDB for SelectDB database instance.</p>
      * 
      * @param request DescribeDBInstanceNetInfoRequest
      * @return DescribeDBInstanceNetInfoResponse
@@ -1633,7 +1636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the time-based elastic rules.</p>
+     * <p>Queries time-based elastic rules.</p>
      * 
      * @param request DescribeElasticRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1661,7 +1664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the time-based elastic rules.</p>
+     * <p>Queries time-based elastic rules.</p>
      * 
      * @param request DescribeElasticRulesRequest
      * @return DescribeElasticRulesResponse
@@ -2239,7 +2242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the pricing information for creating a cluster in a specified ApsaraDB for SelectDB instance.</p>
+     * <p>Queries the pricing information for creating a cluster in a specified ApsaraDB for SelectDB instance.</p>
      * 
      * @param request GetModifyBEClusterInquiryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2267,7 +2270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the pricing information for creating a cluster in a specified ApsaraDB for SelectDB instance.</p>
+     * <p>Queries the pricing information for creating a cluster in a specified ApsaraDB for SelectDB instance.</p>
      * 
      * @param request GetModifyBEClusterInquiryRequest
      * @return GetModifyBEClusterInquiryResponse
@@ -2631,6 +2634,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Scales the FE cluster of a specified ApsaraDB for SelectDB instance.</p>
+     * 
+     * @param request ModifyFEClusterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyFEClusterResponse
+     */
+    public ModifyFEClusterResponse modifyFEClusterWithOptions(ModifyFEClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.FEClassCode)) {
+            query.put("FEClassCode", request.FEClassCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.FEClusterId)) {
+            query.put("FEClusterId", request.FEClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.FENodeCount)) {
+            query.put("FENodeCount", request.FENodeCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.product)) {
+            query.put("Product", request.product);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyFECluster"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyFEClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Scales the FE cluster of a specified ApsaraDB for SelectDB instance.</p>
+     * 
+     * @param request ModifyFEClusterRequest
+     * @return ModifyFEClusterResponse
+     */
+    public ModifyFEClusterResponse modifyFECluster(ModifyFEClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyFEClusterWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Modifies the IP addresses in the whitelist of a specified ApsaraDB for SelectDB instance.</p>
      * 
      * @param request ModifySecurityIPListRequest
@@ -2775,7 +2842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases the public endpoint of an ApsaraDB for SelectDB instance.</p>
+     * <p>Releases the public endpoint of a specified ApsaraDB for SelectDB instance.</p>
      * 
      * @param request ReleaseInstancePublicConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2819,7 +2886,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases the public endpoint of an ApsaraDB for SelectDB instance.</p>
+     * <p>Releases the public endpoint of a specified ApsaraDB for SelectDB instance.</p>
      * 
      * @param request ReleaseInstancePublicConnectionRequest
      * @return ReleaseInstancePublicConnectionResponse

@@ -24,6 +24,9 @@ public class ModifyDBClusterRequest extends TeaModel {
 
     /**
      * <p>The cluster node type. This parameter takes effect only in Serverless mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>base</p>
      */
     @NameInMap("ClusterNodeType")
     public String clusterNodeType;
@@ -31,18 +34,16 @@ public class ModifyDBClusterRequest extends TeaModel {
     /**
      * <p>The cluster specifications. Valid values:</p>
      * <ul>
-     * <li><strong>selectdb.xlarge</strong>: 4 cores and 32 GB.</li>
-     * <li><strong>selectdb.2xlarge</strong>: 8 cores and 64 GB.</li>
-     * <li><strong>selectdb.4xlarge</strong>: 16 cores and 128 GB.</li>
-     * <li><strong>selectdb.8xlarge</strong>: 32 cores and 256 GB.</li>
-     * <li><strong>selectdb.16xlarge</strong>: 16 cores and 512 GB.</li>
-     * <li><strong>selectdb.24xlarge</strong>: 24 cores and 768 GB.</li>
-     * <li><strong>selectdb.32xlarge</strong>: 32 cores and 1024 GB.</li>
+     * <li><strong>selectdb.g.xlarge</strong>: 4 vCPUs and 16 GB of memory.</li>
+     * <li><strong>selectdb.g.2xlarge</strong>: 8 vCPUs and 32 GB of memory.</li>
+     * <li><strong>selectdb.g.4xlarge</strong>: 16 vCPUs and 64 GB of memory.</li>
+     * <li><strong>selectdb.g.8xlarge</strong>: 32 vCPUs and 128 GB of memory.</li>
+     * <li><strong>selectdb.g.16xlarge</strong>: 64 vCPUs and 256 GB of memory.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>selectdb.2xlarge</p>
+     * <p>selectdb.g.2xlarge</p>
      */
     @NameInMap("DBClusterClass")
     public String DBClusterClass;
@@ -90,7 +91,7 @@ public class ModifyDBClusterRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The maximum value of the auto-scaling range for the instance RCU (RDS Capacity Unit).</p>
+     * <p>The maximum value of the auto-scaling range for instance RCUs (RDS Capacity Units).</p>
      * 
      * <strong>example:</strong>
      * <p>32</p>
@@ -99,7 +100,7 @@ public class ModifyDBClusterRequest extends TeaModel {
     public Double scaleMax;
 
     /**
-     * <p>The minimum value of the auto-scaling range for the instance RCU (RDS Capacity Unit).</p>
+     * <p>The minimum value of the auto-scaling range for instance RCUs (RDS Capacity Units).</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>

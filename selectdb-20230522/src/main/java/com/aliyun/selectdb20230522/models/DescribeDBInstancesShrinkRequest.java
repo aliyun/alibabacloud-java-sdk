@@ -8,7 +8,7 @@ public class DescribeDBInstancesShrinkRequest extends TeaModel {
      * <p>The description of the instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>New instance test</p>
+     * <p>Create instance test</p>
      */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
@@ -25,12 +25,12 @@ public class DescribeDBInstancesShrinkRequest extends TeaModel {
     /**
      * <p>The status of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>CREATING</strong>: Creating.</li>
-     * <li><strong>ACTIVATION</strong>: Running.</li>
-     * <li><strong>RESOURCE_CHANGING</strong>: Changing specifications.</li>
-     * <li><strong>ORDER_PREPARING</strong>: Confirming order.</li>
-     * <li><strong>READONLY_RESOURCE_CHANGING</strong>: Changing resources (the instance is locked for write operations).</li>
-     * <li><strong>DELETING</strong>: Deleting.</li>
+     * <li><strong>CREATING</strong>: The instance is being created.</li>
+     * <li><strong>ACTIVATION</strong>: The instance is running.</li>
+     * <li><strong>RESOURCE_CHANGING</strong>: The instance specifications are being changed.</li>
+     * <li><strong>ORDER_PREPARING</strong>: The order is being confirmed.</li>
+     * <li><strong>READONLY_RESOURCE_CHANGING</strong>: The instance resources are being changed and the instance is locked for writes.</li>
+     * <li><strong>DELETING</strong>: The instance is being deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class DescribeDBInstancesShrinkRequest extends TeaModel {
     /**
      * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><strong>30</strong>: Default value.</li>
+     * <li><strong>30</strong> (default)</li>
      * <li><strong>50</strong></li>
      * <li><strong>100</strong></li>
      * </ul>

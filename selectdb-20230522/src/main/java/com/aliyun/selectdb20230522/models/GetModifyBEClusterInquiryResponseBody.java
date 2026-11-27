@@ -66,7 +66,7 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
          * <p>The coupon description.</p>
          * 
          * <strong>example:</strong>
-         * <p>General coupon with a deduction of 100</p>
+         * <p>General coupon deducts 100</p>
          */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
@@ -81,7 +81,7 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
         public String promotionName;
 
         /**
-         * <p>The coupon ID.</p>
+         * <p>The coupon code.</p>
          * 
          * <strong>example:</strong>
          * <p>732211480132</p>
@@ -147,7 +147,7 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The coupon ID.</p>
+         * <p>The coupon codes.</p>
          */
         @NameInMap("OptionalPromotions")
         public java.util.List<GetModifyBEClusterInquiryResponseBodyDataOptionalPromotions> optionalPromotions;

@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterConfigRequest extends TeaModel {
     /**
-     * <p>The configuration file to modify. - For compute clusters: be.conf. - For FE clusters: fe.conf.</p>
+     * <p>The configuration file to modify.</p>
+     * <ul>
+     * <li>For compute clusters: be.conf.</li>
+     * <li>For FE clusters: fe.conf.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

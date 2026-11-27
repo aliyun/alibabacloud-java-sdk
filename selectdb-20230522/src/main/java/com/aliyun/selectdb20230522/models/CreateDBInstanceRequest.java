@@ -7,8 +7,8 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to add the VPC CIDR block to the whitelist. Valid values:</p>
      * <ul>
-     * <li>1: yes</li>
-     * <li>0: no</li>
+     * <li>1: yes.</li>
+     * <li>0: no.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,9 +30,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>Postpaid</strong>: pay-as-you-go</p>
+     * <li><p><strong>Postpaid</strong>: pay-as-you-go.</p>
      * </li>
-     * <li><p><strong>Prepaid</strong>: subscription</p>
+     * <li><p><strong>Prepaid</strong>: subscription.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -102,7 +102,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <p>The description of the instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>New instance test</p>
+     * <p>Test new instance</p>
      */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
@@ -142,7 +142,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The node specifications of a single node in the frontend (FE) cluster. This parameter takes effect only when you create a pay-as-you-go or subscription instance. Default value: selectdb_fe.xlarge16.</p>
+     * <p>The single node specifications of the FE cluster. This parameter takes effect only when you create a pay-as-you-go or subscription instance. Default value: selectdb_fe.xlarge16.</p>
      * 
      * <strong>example:</strong>
      * <p>selectdb_fe.xlarge16</p>
@@ -151,7 +151,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String FEClassCode;
 
     /**
-     * <p>The number of nodes in the FE cluster. This parameter takes effect only when you create a pay-as-you-go or subscription instance. Default value: 3. Valid values: 1 to 11. The value must be an odd number.</p>
+     * <p>The number of FE cluster nodes. This parameter takes effect only when you create a pay-as-you-go or subscription instance. Default value: 3. Valid values: 1 to 11, and the value must be an odd number.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -174,10 +174,10 @@ public class CreateDBInstanceRequest extends TeaModel {
     public java.util.List<CreateDBInstanceRequestMultiZone> multiZone;
 
     /**
-     * <p>Specifies the billing cycle of the subscription cluster. Valid values:</p>
+     * <p>The subscription period unit of the subscription cluster. Valid values:</p>
      * <ul>
-     * <li><strong>Year</strong>: yearly.</li>
-     * <li><strong>Month</strong>: monthly.<blockquote>
+     * <li><strong>Year</strong>: yearly subscription.</li>
+     * <li><strong>Month</strong>: monthly subscription.<blockquote>
      * <p>This parameter takes effect and is required only when <strong>ChargeType</strong> is set to <strong>Prepaid</strong>.</p>
      * </blockquote>
      * </li>
@@ -239,13 +239,13 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String securityIPList;
 
     /**
-     * <p>The tag list information of the instance.</p>
+     * <p>The instance label list information.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateDBInstanceRequestTag> tag;
 
     /**
-     * <p>Specifies whether to enable TDE on the instance.</p>
+     * <p>Specifies whether to enable TDE for the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -254,7 +254,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String tdeEnabled;
 
     /**
-     * <p>The mode for enabling Transparent Data Encryption (TDE) on the instance.</p>
+     * <p>The specific mode for enabling TDE on the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>MANAGED</p>
@@ -263,10 +263,10 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String tdeMode;
 
     /**
-     * <p>The subscription duration of the instance. The unit is specified by the Period parameter. Year indicates years, and Month indicates months. Valid values:</p>
+     * <p>The subscription duration of the subscription instance. The unit is specified by the Period parameter. Year indicates years, and Month indicates months. Valid values:</p>
      * <ul>
-     * <li>If Period is set to Year, valid values are 1, 2, 3, 4, and 5.</li>
-     * <li>If Period is set to Month, valid values are 1 to 12.<blockquote>
+     * <li>If Period is set to Year, valid values of UsedTime are 1, 2, 3, 4, and 5.</li>
+     * <li>If Period is set to Month, valid values of UsedTime are 1 to 12.<blockquote>
      * <p>This parameter takes effect and is required only when <strong>ChargeType</strong> is set to <strong>Prepaid</strong>.</p>
      * </blockquote>
      * </li>

@@ -13,7 +13,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     /**
      * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><strong>30</strong>: Default value.</li>
+     * <li><strong>30</strong> (default)</li>
      * <li><strong>50</strong></li>
      * <li><strong>100</strong></li>
      * </ul>
@@ -272,7 +272,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
     public static class DescribeDBInstancesResponseBodyItems extends TeaModel {
         /**
-         * <p>The edition of the instance. Default value: basic.</p>
+         * <p>The instance edition. Default value: basic.</p>
          * 
          * <strong>example:</strong>
          * <p>basic</p>
@@ -283,9 +283,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li><p><strong>Postpaid</strong>: pay-as-you-go</p>
+         * <li><p><strong>Postpaid</strong>: pay-as-you-go.</p>
          * </li>
-         * <li><p><strong>Prepaid</strong>: subscription</p>
+         * <li><p><strong>Prepaid</strong>: subscription.</p>
          * </li>
          * </ul>
          * 
@@ -316,8 +316,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>The deployment mode of the instance. Valid values:</p>
          * <ul>
-         * <li>multi_az: zone-redundant</li>
-         * <li>single_az: locally redundant</li>
+         * <li>multi_az: zone-redundant.</li>
+         * <li>single_az: locally redundant.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -330,7 +330,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          * <p>The description of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>New instance test</p>
+         * <p>Create instance test</p>
          */
         @NameInMap("Description")
         public String description;
@@ -363,7 +363,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String engineVersion;
 
         /**
-         * <p>The expiration time of the cluster. The time is displayed in ISO 8601 format and includes the time zone.</p>
+         * <p>The expiration time of the cluster. The time follows the ISO 8601 standard and includes time zone information.</p>
          * <blockquote>
          * <p>This parameter is returned only for clusters whose billing method is <strong>Prepaid</strong> (subscription). For clusters whose billing method is <strong>Postpaid</strong> (pay-as-you-go), an empty value is returned.</p>
          * </blockquote>
@@ -375,7 +375,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String expireTime;
 
         /**
-         * <p>The FE cluster list.</p>
+         * <p>The list of FE clusters.</p>
          */
         @NameInMap("FEClusterList")
         public java.util.List<DescribeDBInstancesResponseBodyItemsFEClusterList> FEClusterList;
@@ -399,7 +399,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The usage type of the instance.</p>
+         * <p>The instance usage type.</p>
          * 
          * <strong>example:</strong>
          * <p>Instance</p>
@@ -410,9 +410,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the instance is deleted. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: deleted</p>
+         * <li><p><strong>true</strong>: The instance is deleted.</p>
          * </li>
-         * <li><p><strong>fasle</strong>: not deleted</p>
+         * <li><p><strong>fasle</strong>: The instance is not deleted.</p>
          * </li>
          * </ul>
          * 
@@ -450,7 +450,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String maintainEndTimeStr;
 
         /**
-         * <p>Reserved parameter. Not returned. Therefore, the time format does not apply.</p>
+         * <p>A reserved parameter. It is not returned at the moment, so the time format does not apply.</p>
          * 
          * <strong>example:</strong>
          * <p>Reserved parameter. Not returned</p>
@@ -468,7 +468,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String maintainStartTimeStr;
 
         /**
-         * <p>Reserved parameter. Not returned. Therefore, the time format does not apply.</p>
+         * <p>A reserved parameter. It is not returned at the moment, so the time format does not apply.</p>
          * 
          * <strong>example:</strong>
          * <p>Reserved parameter. Not returned</p>
@@ -537,7 +537,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public Long resourceMemory;
 
         /**
-         * <p>The maximum value of the automatic scaling range for the RDS Capacity Unit (RCU) of the instance.</p>
+         * <p>The maximum number of RDS capacity units (RCUs) for automatic scaling of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -546,7 +546,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public Long scaleMax;
 
         /**
-         * <p>The minimum value of the automatic scaling range for the RDS Capacity Unit (RCU) of the instance.</p>
+         * <p>The minimum number of RDS capacity units (RCUs) for automatic scaling of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -555,10 +555,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public Long scaleMin;
 
         /**
-         * <p>The redundant field.</p>
+         * <p>A redundant field.</p>
          * 
          * <strong>example:</strong>
-         * <p>Empty</p>
+         * <p>1</p>
          */
         @NameInMap("ScaleReplica")
         public Long scaleReplica;
@@ -575,12 +575,12 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>The status of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>CREATING</strong>: Creating.</li>
-         * <li><strong>ACTIVATION</strong>: Running.</li>
-         * <li><strong>RESOURCE_CHANGING</strong>: Changing specifications.</li>
-         * <li><strong>ORDER_PREPARING</strong>: Confirming order.</li>
-         * <li><strong>READONLY_RESOURCE_CHANGING</strong>: Changing resources (the instance is locked for write operations).</li>
-         * <li><strong>DELETING</strong>: Deleting.</li>
+         * <li><strong>CREATING</strong>: The instance is being created.</li>
+         * <li><strong>ACTIVATION</strong>: The instance is running.</li>
+         * <li><strong>RESOURCE_CHANGING</strong>: The instance specifications are being changed.</li>
+         * <li><strong>ORDER_PREPARING</strong>: The order is being confirmed.</li>
+         * <li><strong>READONLY_RESOURCE_CHANGING</strong>: The instance resources are being changed and the instance is locked for writes.</li>
+         * <li><strong>DELETING</strong>: The instance is being deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -590,7 +590,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The storage space size.</p>
+         * <p>The storage capacity.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -674,7 +674,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String zoneId;
 
         /**
-         * <p>The connection endpoint.</p>
+         * <p>The endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>Not returned</p>
