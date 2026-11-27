@@ -25,7 +25,7 @@ public class ResourceUsage extends TeaModel {
     public String granularity;
 
     /**
-     * <p>The grouping key used for this query. An empty array is returned when no grouping is applied.</p>
+     * <p>The grouping keys used for this query. This is an empty array if no grouping is applied.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,11 +35,11 @@ public class ResourceUsage extends TeaModel {
     public java.util.List<String> groupBy;
 
     /**
-     * <p>The usage for each group. If no grouping is applied, the usage for the entire query range is returned. An empty array is returned if there are no usage records within the query range.</p>
+     * <p>The usage for each group. If no grouping is applied, the usage is aggregated across the entire query range. An empty array is returned if no matching groups are found.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;dimensions&quot;:{&quot;teamID&quot;:&quot;70d1c834-0333-58d8-97ac-5336eb9179eb&quot;},&quot;items&quot;:[{&quot;usageName&quot;:&quot;cpuActive&quot;,&quot;unit&quot;:&quot;CoreSecond&quot;,&quot;total&quot;:5400,&quot;buckets&quot;:[{&quot;startTime&quot;:&quot;2026-11-05T00:00:00Z&quot;,&quot;endTime&quot;:&quot;2026-11-05T01:00:00Z&quot;,&quot;quantity&quot;:3600},{&quot;startTime&quot;:&quot;2026-11-05T01:00:00Z&quot;,&quot;endTime&quot;:&quot;2026-11-05T02:00:00Z&quot;,&quot;quantity&quot;:1800}]}]}]</p>
+     * <p>[{&quot;dimensions&quot;:{&quot;teamID&quot;:&quot;70d1c834-0333-58d8-97ac-5336eb9179eb&quot;},&quot;items&quot;:[{&quot;usageName&quot;:&quot;activeVCPU&quot;,&quot;unit&quot;:&quot;CoreSecond&quot;,&quot;total&quot;:5400,&quot;buckets&quot;:[{&quot;startTime&quot;:&quot;2026-11-05T00:00:00Z&quot;,&quot;endTime&quot;:&quot;2026-11-05T01:00:00Z&quot;,&quot;quantity&quot;:3600},{&quot;startTime&quot;:&quot;2026-11-05T01:00:00Z&quot;,&quot;endTime&quot;:&quot;2026-11-05T02:00:00Z&quot;,&quot;quantity&quot;:1800}]}]}]</p>
      */
     @NameInMap("groups")
     public java.util.List<ResourceUsageGroups> groups;
@@ -101,7 +101,7 @@ public class ResourceUsage extends TeaModel {
 
     public static class ResourceUsageGroupsItemsBuckets extends TeaModel {
         /**
-         * <p>The end time of this usage statistics period, exclusive.</p>
+         * <p>The end time of the usage statistics for this bucket, exclusive.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class ResourceUsage extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The cumulative usage within this time period. The unit is specified by unit.</p>
+         * <p>The accumulated usage during this time bucket. The unit is specified in the unit field.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -121,7 +121,7 @@ public class ResourceUsage extends TeaModel {
         public Double quantity;
 
         /**
-         * <p>The start time of this usage statistics period, inclusive.</p>
+         * <p>The start time of the usage statistics for this bucket, inclusive.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +163,7 @@ public class ResourceUsage extends TeaModel {
 
     public static class ResourceUsageGroupsItems extends TeaModel {
         /**
-         * <p>The hourly or daily usage arranged in chronological order. Only time periods with records are returned. This field is omitted when granularity is set to All.</p>
+         * <p>The hourly or daily time buckets with usage data, returned in chronological order. An empty array is returned if no buckets are available. This field is omitted if the granularity is All.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;startTime&quot;:&quot;2026-11-05T00:00:00Z&quot;,&quot;endTime&quot;:&quot;2026-11-05T01:00:00Z&quot;,&quot;quantity&quot;:3600},{&quot;startTime&quot;:&quot;2026-11-05T01:00:00Z&quot;,&quot;endTime&quot;:&quot;2026-11-05T02:00:00Z&quot;,&quot;quantity&quot;:1800}]</p>
@@ -172,7 +172,7 @@ public class ResourceUsage extends TeaModel {
         public java.util.List<ResourceUsageGroupsItemsBuckets> buckets;
 
         /**
-         * <p>The cumulative usage of this usage item over the entire query interval. This field is omitted if there are no usage records for the item within the interval.</p>
+         * <p>The accumulated usage for the entire query interval. This field is omitted if no accumulated value is available. A value of 0 indicates that the accumulated usage is zero.</p>
          * 
          * <strong>example:</strong>
          * <p>5400</p>
@@ -181,7 +181,7 @@ public class ResourceUsage extends TeaModel {
         public Double total;
 
         /**
-         * <p>The unit of usage. The unit is CoreSecond for CPU, and GiBSecond for memory and cloud disks.</p>
+         * <p>The unit of usage. The unit is CoreSecond for CPU, and GiBSecond for memory and disks.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,7 +195,7 @@ public class ResourceUsage extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cpuActive</p>
+         * <p>activeVCPU</p>
          */
         @NameInMap("usageName")
         public String usageName;
@@ -241,7 +241,7 @@ public class ResourceUsage extends TeaModel {
 
     public static class ResourceUsageGroups extends TeaModel {
         /**
-         * <p>The team, template, or sandbox version corresponding to the usage of this group.</p>
+         * <p>The team, template, snapshot, or sandbox version corresponding to the usage in this group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -251,11 +251,11 @@ public class ResourceUsage extends TeaModel {
         public java.util.Map<String, String> dimensions;
 
         /**
-         * <p>The query result for each requested usage item in this group.</p>
+         * <p>The query results for each requested usage item in this group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;usageName&quot;:&quot;cpuActive&quot;,&quot;unit&quot;:&quot;CoreSecond&quot;,&quot;total&quot;:5400,&quot;buckets&quot;:[{&quot;startTime&quot;:&quot;2026-11-05T00:00:00Z&quot;,&quot;endTime&quot;:&quot;2026-11-05T01:00:00Z&quot;,&quot;quantity&quot;:3600},{&quot;startTime&quot;:&quot;2026-11-05T01:00:00Z&quot;,&quot;endTime&quot;:&quot;2026-11-05T02:00:00Z&quot;,&quot;quantity&quot;:1800}]}]</p>
+         * <p>[{&quot;usageName&quot;:&quot;activeVCPU&quot;,&quot;unit&quot;:&quot;CoreSecond&quot;,&quot;total&quot;:5400,&quot;buckets&quot;:[{&quot;startTime&quot;:&quot;2026-11-05T00:00:00Z&quot;,&quot;endTime&quot;:&quot;2026-11-05T01:00:00Z&quot;,&quot;quantity&quot;:3600},{&quot;startTime&quot;:&quot;2026-11-05T01:00:00Z&quot;,&quot;endTime&quot;:&quot;2026-11-05T02:00:00Z&quot;,&quot;quantity&quot;:1800}]}]</p>
          */
         @NameInMap("items")
         public java.util.List<ResourceUsageGroupsItems> items;

@@ -900,7 +900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves monitoring metrics at a specific point in time or queries metric trends over a period of time. You can filter queries by account, team, template, or sandbox.</p>
+     * <p>Queries monitoring metrics at a specific point in time or retrieves trends over a period of time. You can query metrics by account, team, template, or sandbox. Each metric returns up to 200 time series, and a single request queries up to 100,000 nominal data points.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries monitoring metrics.</p>
@@ -983,7 +983,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves monitoring metrics at a specific point in time or queries metric trends over a period of time. You can filter queries by account, team, template, or sandbox.</p>
+     * <p>Queries monitoring metrics at a specific point in time or retrieves trends over a period of time. You can query metrics by account, team, template, or sandbox. Each metric returns up to 200 time series, and a single request queries up to 100,000 nominal data points.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries monitoring metrics.</p>
@@ -999,7 +999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the CPU, memory, and disk usage over a specified period. You can view the cumulative usage and usage trends by account, team, or template.</p>
+     * <p>Queries the CPU, memory, and disk usage within a specified time range, including the disk usage of template caches and snapshots. You can view the cumulative usage for the interval, hourly usage, or daily usage. You can also group the results by team, template, snapshot, or sandbox plan.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries resource usage.</p>
@@ -1038,6 +1038,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("sandboxPlan", request.sandboxPlan);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.snapshotID)) {
+            query.put("snapshotID", request.snapshotID);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             query.put("startTime", request.startTime);
         }
@@ -1074,7 +1078,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the CPU, memory, and disk usage over a specified period. You can view the cumulative usage and usage trends by account, team, or template.</p>
+     * <p>Queries the CPU, memory, and disk usage within a specified time range, including the disk usage of template caches and snapshots. You can view the cumulative usage for the interval, hourly usage, or daily usage. You can also group the results by team, template, snapshot, or sandbox plan.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries resource usage.</p>
