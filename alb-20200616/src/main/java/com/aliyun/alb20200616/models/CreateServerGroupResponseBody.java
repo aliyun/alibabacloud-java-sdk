@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateServerGroupResponseBody extends TeaModel {
     /**
-     * <p>The asynchronous task ID.</p>
+     * <p>The ID of the asynchronous task.</p>
      * 
      * <strong>example:</strong>
      * <p>72dcd26b-f12d-4c27-b3af-18f6aed5****</p>
@@ -14,7 +14,7 @@ public class CreateServerGroupResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>365F4154-92F6-4AE4-92F8-7FF******</p>
@@ -23,7 +23,7 @@ public class CreateServerGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The server group ID.</p>
+     * <p>The ID of the server group.</p>
      * 
      * <strong>example:</strong>
      * <p>sgp-8ilqs4axp6******</p>

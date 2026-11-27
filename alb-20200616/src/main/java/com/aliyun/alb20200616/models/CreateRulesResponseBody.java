@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRulesResponseBody extends TeaModel {
     /**
-     * <p>The asynchronous task ID.</p>
+     * <p>The ID of the asynchronous task.</p>
      * 
      * <strong>example:</strong>
      * <p>72dcd26b-f12d-4c27-b3af-18f6aed5****</p>
@@ -71,7 +71,7 @@ public class CreateRulesResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The forwarding rule ID.</p>
+         * <p>The ID of the forwarding rule.</p>
          * 
          * <strong>example:</strong>
          * <p>rule-a3x3pg1yohq3lq****</p>

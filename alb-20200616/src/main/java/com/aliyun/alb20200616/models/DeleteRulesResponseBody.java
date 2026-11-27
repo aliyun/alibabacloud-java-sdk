@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteRulesResponseBody extends TeaModel {
     /**
-     * <p>The asynchronous task ID.</p>
+     * <p>The ID of the asynchronous task.</p>
      * 
      * <strong>example:</strong>
      * <p>72dcd26b-f12d-4c27-b3af-18f6aed5****</p>
@@ -14,7 +14,7 @@ public class DeleteRulesResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>7BED4F62-3E6E-5E4F-8C53-2D8CCE77F2ED</p>

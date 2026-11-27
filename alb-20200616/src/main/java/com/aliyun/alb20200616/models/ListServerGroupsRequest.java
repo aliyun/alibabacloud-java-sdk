@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListServerGroupsRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries to return per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The maximum number of entries to return for a single request. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,10 +14,10 @@ public class ListServerGroupsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The token used to retrieve the next page of results. Valid values:</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first request or if no next query exists.</li>
-     * <li>If a next query exists, set the value to the <strong>NextToken</strong> value returned in the previous API call.</li>
+     * <li>For the first request or when no subsequent request is required, leave this parameter empty.</li>
+     * <li>For a subsequent request, set this parameter to the <strong>NextToken</strong> value returned from the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class ListServerGroupsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-atstuj3rtop****</p>
@@ -36,27 +36,27 @@ public class ListServerGroupsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The IDs of the server groups.</p>
+     * <p>The list of server group IDs.</p>
      */
     @NameInMap("ServerGroupIds")
     public java.util.List<String> serverGroupIds;
 
     /**
-     * <p>The names of the server groups. You can specify up to 10 names.</p>
+     * <p>The list of server group names. You can specify up to 10 server group names.</p>
      */
     @NameInMap("ServerGroupNames")
     public java.util.List<String> serverGroupNames;
 
     /**
-     * <p>The type of the server group. Valid values:</p>
+     * <p>The server group type. Valid values:</p>
      * <ul>
-     * <li><p><strong>Instance</strong>: server type, which includes ECS, ENI, and ECI instances.</p>
+     * <li><p><strong>Instance</strong>: the server type, which includes ECS, ENI, and ECI instances.</p>
      * </li>
-     * <li><p><strong>Ip</strong>: IP address type.</p>
+     * <li><p><strong>Ip</strong>: the IP address type.</p>
      * </li>
-     * <li><p><strong>Fc</strong>: Function Compute type.</p>
+     * <li><p><strong>Fc</strong>: the Function Compute type.</p>
      * </li>
-     * <li><p>If you leave this parameter empty, all types of server groups are queried.</p>
+     * <li><p>If you leave this parameter empty, all types are queried.</p>
      * </li>
      * </ul>
      * 
@@ -67,7 +67,7 @@ public class ListServerGroupsRequest extends TeaModel {
     public String serverGroupType;
 
     /**
-     * <p>The tags that are bound to the server group. You can specify up to 10 tags in a single request.</p>
+     * <p>The list of tags that are added to the server group. You can specify up to 10 tags in a single request.</p>
      * 
      * <strong>example:</strong>
      * <p>Instance</p>
@@ -76,7 +76,7 @@ public class ListServerGroupsRequest extends TeaModel {
     public java.util.List<ListServerGroupsRequestTag> tag;
 
     /**
-     * <p>The ID of the VPC-connected instance.</p>
+     * <p>The VPC-connected instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp15zckdt37pq72zv****</p>
@@ -156,7 +156,7 @@ public class ListServerGroupsRequest extends TeaModel {
     public static class ListServerGroupsRequestTag extends TeaModel {
         /**
          * <p>The tag key. You can specify up to 10 tag keys.</p>
-         * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Test</p>
@@ -166,7 +166,7 @@ public class ListServerGroupsRequest extends TeaModel {
 
         /**
          * <p>The tag value. You can specify up to 10 tag values.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Test</p>

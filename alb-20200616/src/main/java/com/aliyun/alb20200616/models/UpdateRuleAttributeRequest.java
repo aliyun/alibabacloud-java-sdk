@@ -470,7 +470,7 @@ public class UpdateRuleAttributeRequest extends TeaModel {
          * <li><strong>SLBPort</strong>: the Application Load Balancer (ALB) instance listener port.</li>
          * </ul>
          * </li>
-         * <li>If <strong>ValueType</strong> is set to <strong>UserDefined</strong>: you can specify a custom header value. The value must be 1 to 128 characters in length and can contain wildcards asterisks (*), question marks (?), and printable characters whose ASCII values are <code>ch &gt;= 32 &amp;&amp; ch &lt; 127</code>. The value cannot contain <code>&quot;</code>. The value cannot start or end with a space. The value cannot end with <code>\\</code>.</li>
+         * <li>If <strong>ValueType</strong> is set to <strong>UserDefined</strong>: you can specify a custom header value. The value must be 1 to 128 characters in length and can contain wildcards asterisks (*), question marks (?), and printable characters whose ASCII values are <code>ch &gt;= 32 &amp;&amp; ch &lt; 127</code>. The value cannot contain <code>&quot;</code>. The value cannot start or end with a space. The value cannot end with <code>\</code>.</li>
          * <li>If <strong>ValueType</strong> is set to <strong>ReferenceHeader</strong>: you can reference a field in the request header. The value must be 1 to 128 characters in length and can contain lowercase letters a to z, digits, hyphens (-), and underscores (_).</li>
          * </ul>
          * 
@@ -572,7 +572,7 @@ public class UpdateRuleAttributeRequest extends TeaModel {
          * <li><strong>${path}</strong> (default): you can reference <strong>${host}</strong>, <strong>${protocol}</strong>, and <strong>${port}</strong>. Each variable can appear at most once. These variables can be used together or concatenated with characters within the allowed value range listed below.</li>
          * <li>Other values. Character set and format restrictions are as follows:<ul>
          * <li>The path must be 1 to 256 characters in length.</li>
-         * <li>The path must start with a forward slash (/) and can contain letters, digits, and the following special characters: <code>$-_.+/&amp;~@:</code>. The path cannot contain <code>&quot;%#;!()[]^,&quot;\\&quot;</code>. Asterisks (*) and question marks (?) can be used as wildcards.</li>
+         * <li>The path must start with a forward slash (/) and can contain letters, digits, and the following special characters: <code>$-_.+/&amp;~@:</code>. The path cannot contain <code>&quot;%#;!()[]^,&quot;\&quot;</code>. Asterisks (*) and question marks (?) can be used as wildcards.</li>
          * </ul>
          * </li>
          * </ul>
@@ -620,7 +620,7 @@ public class UpdateRuleAttributeRequest extends TeaModel {
          * <li><strong>${query}</strong> (default): you can reference <strong>${host}</strong>, <strong>${protocol}</strong>, and <strong>${port}</strong>. Each variable can appear at most once. These variables can be used together or concatenated with characters within the allowed value range listed below.</li>
          * <li>Other values. Character set and format restrictions are as follows:<ul>
          * <li>The query string must be 1 to 128 characters in length.</li>
-         * <li>The query string can contain printable characters but cannot contain spaces or <code>#[]{}\\|&lt;&gt;&quot;</code>. Letters must be lowercase.</li>
+         * <li>The query string can contain printable characters but cannot contain spaces or <code>#[]{}\|&lt;&gt;&quot;</code>. Letters must be lowercase.</li>
          * </ul>
          * </li>
          * </ul>
@@ -747,7 +747,7 @@ public class UpdateRuleAttributeRequest extends TeaModel {
          * <li><strong>${path}</strong> (default): you can reference <strong>${host}</strong>, <strong>${protocol}</strong>, and <strong>${port}</strong>. Each variable can appear at most once. These variables can be used together or concatenated with characters within the allowed value range listed below.</li>
          * <li>Other values. Character set and format restrictions are as follows:<ul>
          * <li>The path must be 1 to 256 characters in length.</li>
-         * <li>The path must start with a forward slash (/) and can contain letters, digits, and the following special characters: <code>$-_.+/&amp;~@:</code>. The path cannot contain <code>&quot;%#;!()[]^,&quot;\\&quot;</code>. Asterisks (*) and question marks (?) can be used as wildcards.</li>
+         * <li>The path must start with a forward slash (/) and can contain letters, digits, and the following special characters: <code>$-_.+/&amp;~@:</code>. The path cannot contain <code>&quot;%#;!()[]^,&quot;\&quot;</code>. Asterisks (*) and question marks (?) can be used as wildcards.</li>
          * </ul>
          * </li>
          * </ul>
@@ -764,7 +764,7 @@ public class UpdateRuleAttributeRequest extends TeaModel {
          * <li><strong>${query}</strong> (default): you can reference <strong>${host}</strong>, <strong>${protocol}</strong>, and <strong>${port}</strong>. Each variable can appear at most once. These variables can be used together or concatenated with characters within the allowed value range listed below.</li>
          * <li>Other values. Character set and format restrictions are as follows:<ul>
          * <li>The query string must be 1 to 128 characters in length.</li>
-         * <li>The query string can contain printable characters but cannot contain spaces or <code>#[]{}\\|&lt;&gt;&quot;</code>. Letters must be lowercase.</li>
+         * <li>The query string can contain printable characters but cannot contain spaces or <code>#[]{}\|&lt;&gt;&quot;</code>. Letters must be lowercase.</li>
          * </ul>
          * </li>
          * </ul>
@@ -1133,7 +1133,7 @@ public class UpdateRuleAttributeRequest extends TeaModel {
 
     public static class UpdateRuleAttributeRequestRuleConditionsCookieConfigValues extends TeaModel {
         /**
-         * <p>The cookie key. The key must be 1 to 100 characters in length and can contain lowercase letters, printable characters, asterisks (*), and question marks (?). The key cannot contain spaces or <code>#[]{}\\|&lt;&gt;&amp;&quot;;</code>.</p>
+         * <p>The cookie key. The key must be 1 to 100 characters in length and can contain lowercase letters, printable characters, asterisks (*), and question marks (?). The key cannot contain spaces or <code>#[]{}\|&lt;&gt;&amp;&quot;;</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -1142,7 +1142,7 @@ public class UpdateRuleAttributeRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The cookie value. The value must be 1 to 128 characters in length and can contain lowercase letters, printable characters, asterisks (*), and question marks (?). The value cannot contain spaces or <code>#[]{}\\|&lt;&gt;&amp;</code>.</p>
+         * <p>The cookie value. The value must be 1 to 128 characters in length and can contain lowercase letters, printable characters, asterisks (*), and question marks (?). The value cannot contain spaces or <code>#[]{}\|&lt;&gt;&amp;</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -1302,7 +1302,7 @@ public class UpdateRuleAttributeRequest extends TeaModel {
 
     public static class UpdateRuleAttributeRequestRuleConditionsQueryStringConfigValues extends TeaModel {
         /**
-         * <p>The query string key. The key must be 1 to 100 characters in length and can contain lowercase letters, printable characters, asterisks (*), and question marks (?). The key cannot contain spaces or <code>#[]{}\\|&lt;&gt;&amp;&quot;</code>.</p>
+         * <p>The query string key. The key must be 1 to 100 characters in length and can contain lowercase letters, printable characters, asterisks (*), and question marks (?). The key cannot contain spaces or <code>#[]{}\|&lt;&gt;&amp;&quot;</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -1311,7 +1311,7 @@ public class UpdateRuleAttributeRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The query string value. The value must be 1 to 128 characters in length and can contain lowercase letters, printable characters, asterisks (*), and question marks (?). The value cannot contain spaces or <code>#[]{}\\|&lt;&gt;&amp;&quot;</code>.</p>
+         * <p>The query string value. The value must be 1 to 128 characters in length and can contain lowercase letters, printable characters, asterisks (*), and question marks (?). The value cannot contain spaces or <code>#[]{}\|&lt;&gt;&amp;&quot;</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

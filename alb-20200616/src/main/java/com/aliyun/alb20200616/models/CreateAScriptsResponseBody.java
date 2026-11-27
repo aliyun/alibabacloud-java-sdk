@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateAScriptsResponseBody extends TeaModel {
     /**
-     * <p>A list of programmable script IDs.</p>
+     * <p>The list of programmable script IDs.</p>
      */
     @NameInMap("AScriptIds")
     public java.util.List<CreateAScriptsResponseBodyAScriptIds> AScriptIds;
 
     /**
-     * <p>The ID of the asynchronous task.</p>
+     * <p>The asynchronous task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5c607642-535e-4e06-9d77-df53049b****</p>
@@ -20,7 +20,7 @@ public class CreateAScriptsResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BF0FE763-9603-558F-A55B-0F4******</p>
@@ -59,7 +59,7 @@ public class CreateAScriptsResponseBody extends TeaModel {
 
     public static class CreateAScriptsResponseBodyAScriptIds extends TeaModel {
         /**
-         * <p>The ID of the programmable script.</p>
+         * <p>The programmable script ID.</p>
          * 
          * <strong>example:</strong>
          * <p>as-xvq5igaa7uv6vr****</p>

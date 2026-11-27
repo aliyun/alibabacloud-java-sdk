@@ -9,7 +9,7 @@ public class RemoveEntriesFromAclRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>acl-hp34s2h0xx1ht4nwo****</p>
+     * <p>nacl-hp34s2h0xx1ht4nwo****</p>
      */
     @NameInMap("AclId")
     public String aclId;
@@ -22,7 +22,7 @@ public class RemoveEntriesFromAclRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>593B0448-D13E-4C56-AC0D-FDF******</p>
+     * <p>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;

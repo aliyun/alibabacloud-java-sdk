@@ -77,7 +77,7 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The URL that is used for health checks.</p>
-     * <p>The URL must be 1 to 80 characters in length, and can contain letters, digits, the following special characters: - / . % ? # &amp;, and the following extended characters: <code>_ ; ~ ! ( ) * [ ] @ $ ^ : \\&quot; , +</code>. The URL must start with a forward slash (/).</p>
+     * <p>The URL must be 1 to 80 characters in length, and can contain letters, digits, the following special characters: - / . % ? # &amp;, and the following extended characters: <code>_ ; ~ ! ( ) * [ ] @ $ ^ : \&quot; , +</code>. The URL must start with a forward slash (/).</p>
      * <blockquote>
      * <p> This parameter takes effect only if you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>.</p>
      * </blockquote>
@@ -146,7 +146,7 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>DB1AFC33-DAE8-528E-AA4D-4A6A******</p>
+     * <p>DB1AFC33-DAE8-528E-AA4D-4A6AABE71945</p>
      */
     @NameInMap("RequestId")
     public String requestId;

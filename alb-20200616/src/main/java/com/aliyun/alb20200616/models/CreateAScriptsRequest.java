@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateAScriptsRequest extends TeaModel {
     /**
-     * <p>The AScripts to create.</p>
+     * <p>The list of programmable script information.</p>
      */
     @NameInMap("AScripts")
     public java.util.List<CreateAScriptsRequestAScripts> AScripts;
 
     /**
-     * <p>A client token used to ensure request idempotency.</p>
-     * <p>You can generate this value on your client. The value must be unique across requests and contain only ASCII characters.</p>
+     * <p>The client token used to ensure the idempotence of the request.</p>
+     * <p>Generate a unique value from your client for each request. ClientToken supports only ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>5A2CFF0E-5718-45B5-9D4D-70B******</p>
@@ -23,10 +23,8 @@ public class CreateAScriptsRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs a dry run without creating the AScript. The system checks the request for required parameters, format validity, and service limits. If the request fails the check, an error message is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): sends a normal request. After the request passes the check, the system returns an HTTP 2xx status code and performs the operation.</p>
-     * </li>
+     * <li><strong>true</strong>: Sends a dry run request. No programmable script is created. The system checks whether the required parameters are specified, the request format is valid, and business limits are met. If the check fails, the corresponding error is returned. If the check passes, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>false</strong> (default): Sends a regular request. If the check passes, an HTTP 2xx status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,8 +82,8 @@ public class CreateAScriptsRequest extends TeaModel {
 
     public static class CreateAScriptsRequestAScriptsExtAttributes extends TeaModel {
         /**
-         * <p>The attribute key.</p>
-         * <p>The only valid value is <strong>EsDebug</strong>. If a request contains the _es_dbg parameter and its value matches the secret key specified in AttributeValue, the system adds a debug header to the response, which contains rule execution logs.</p>
+         * <p>The attribute key of the AScript script.</p>
+         * <p>Valid values: <strong>EsDebug</strong> only. When a request carries the _es_dbg parameter and its value matches the key configured here, the corresponding debug response headers are enabled to output rule execution records.</p>
          * 
          * <strong>example:</strong>
          * <p>EsDebug</p>
@@ -94,7 +92,7 @@ public class CreateAScriptsRequest extends TeaModel {
         public String attributeKey;
 
         /**
-         * <p>The attribute value, which is used as the secret key for the EsDebug attribute. The value must be 1 to 128 characters long and can contain uppercase letters, lowercase letters, and digits.</p>
+         * <p>The attribute value. The value can contain uppercase and lowercase letters and digits, and must be 1 to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>test123</p>
@@ -127,8 +125,8 @@ public class CreateAScriptsRequest extends TeaModel {
 
     public static class CreateAScriptsRequestAScripts extends TeaModel {
         /**
-         * <p>The name of the AScript.</p>
-         * <p>The name must be 2 to 128 characters long, and must start with a letter, a digit, or a Chinese character. It can contain digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
+         * <p>The name of the programmable script.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. It must start with a letter, Chinese character, or digit.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +136,7 @@ public class CreateAScriptsRequest extends TeaModel {
         public String AScriptName;
 
         /**
-         * <p>Specifies whether the AScript is enabled. Valid values:</p>
+         * <p>Specifies whether to enable the programmable script. Valid values:</p>
          * <ul>
          * <li><p><strong>true</strong>: Enabled.</p>
          * </li>
@@ -153,11 +151,11 @@ public class CreateAScriptsRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>Specifies whether to enable extended attributes for the AScript. Valid values:</p>
+         * <p>Specifies whether to enable the extended attributes of the programmable script. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: Enabled.</p>
+         * <li><p>true: Enabled.</p>
          * </li>
-         * <li><p><strong>false</strong> (default): Disabled.</p>
+         * <li><p>false (default): Disabled.</p>
          * </li>
          * </ul>
          * 
@@ -174,13 +172,13 @@ public class CreateAScriptsRequest extends TeaModel {
         public java.util.List<CreateAScriptsRequestAScriptsExtAttributes> extAttributes;
 
         /**
-         * <p>Specifies when the AScript is executed. Valid values:</p>
+         * <p>The execution position of the programmable script. Valid values:</p>
          * <ul>
-         * <li><p><strong>RequestHead</strong> (default): Executes before request rules.</p>
+         * <li><p>RequestHead (default): before request-direction rules are executed.</p>
          * </li>
-         * <li><p><strong>RequestFoot</strong>: Executes after request rules.</p>
+         * <li><p>RequestFoot: after request-direction rules are executed.</p>
          * </li>
-         * <li><p><strong>ResponseHead</strong>: Executes before response rules.</p>
+         * <li><p>ResponseHead: before response-direction rules are executed.</p>
          * </li>
          * </ul>
          * 
@@ -191,11 +189,11 @@ public class CreateAScriptsRequest extends TeaModel {
         public String position;
 
         /**
-         * <p>The content of the AScript.</p>
+         * <p>The content of the programmable script.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>if and(match_re($uri, \&quot;^/1.txt$\&quot;), $arg_type) {   rewrite(concat(\&quot;/1.\&quot;, $arg_type), \&quot;break\&quot;) }</p>
+         * <p>if and(match_re($uri, &quot;^/1.txt$&quot;), $arg_type) {   rewrite(concat(&quot;/1.&quot;, $arg_type), &quot;break&quot;) }</p>
          */
         @NameInMap("ScriptContent")
         public String scriptContent;

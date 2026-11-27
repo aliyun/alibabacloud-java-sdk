@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class StartListenerRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can generate the parameter value on your client to ensure that the value is unique across different requests. The client token supports only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,12 @@ public class StartListenerRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run on the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <strong>DryRunOperation</strong> error code is returned.</li>
-     * <li><strong>false</strong>: (default): performs a dry run and performs the actual request. If the request passes the dry run, a <code>2xx HTTP</code> status code is returned and the operation is performed.</li>
+     * <li><p><strong>true</strong>: performs only a dry run and does not start the listener. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the dry run, the system returns an error. If the request passes the dry run, the system returns the <strong>DryRunOperation</strong> error code.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): performs a dry run and sends the actual request. If the request passes the dry run, the system returns an <code>HTTP_2xx</code> status code and starts the listener.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +33,7 @@ public class StartListenerRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the Application Load Balancer (ALB) listener.</p>
+     * <p>The ID of the listener on the Application Load Balancing instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

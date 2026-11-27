@@ -43,7 +43,7 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
 
     /**
      * <p>The port used for health checks. Valid values: <strong>0</strong> to <strong>65535</strong>.
-     * The default value is <strong>0</strong>, which means the health check uses the backend server\&quot;s port.</p>
+     * The default value is <strong>0</strong>, which means the health check uses the backend server&quot;s port.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -114,7 +114,7 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
 
     /**
      * <p>The URL used for health checks.</p>
-     * <p>The URL must be 1 to 80 characters long. It can contain letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), ampersands (&amp;), and the following extended characters: <code>_;~!()*[]@$^:\\&quot;,+</code>.</p>
+     * <p>The URL must be 1 to 80 characters long. It can contain letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), ampersands (&amp;), and the following extended characters: <code>_;~!()*[]@$^:\&quot;,+</code>.</p>
      * <p>The URL must start with a forward slash (/).</p>
      * <blockquote>
      * <p>This parameter takes effect only when the <strong>HealthCheckProtocol</strong> parameter is set to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>.</p>
@@ -176,7 +176,7 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
     public Integer healthCheckTimeout;
 
     /**
-     * <p>The number of consecutive successful health checks required to change a backend server\&quot;s status from <strong>unhealthy</strong> to <strong>healthy</strong>.</p>
+     * <p>The number of consecutive successful health checks required to change a backend server&quot;s status from <strong>unhealthy</strong> to <strong>healthy</strong>.</p>
      * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
      * <p>Default value: <strong>3</strong>.</p>
      * 
@@ -187,7 +187,7 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
     public Integer healthyThreshold;
 
     /**
-     * <p>The number of consecutive failed health checks required to change a backend server\&quot;s status from <strong>healthy</strong> to <strong>unhealthy</strong>.</p>
+     * <p>The number of consecutive failed health checks required to change a backend server&quot;s status from <strong>healthy</strong> to <strong>unhealthy</strong>.</p>
      * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
      * <p>Default value: <strong>3</strong>.</p>
      * 

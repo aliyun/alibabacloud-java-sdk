@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyCapacityReservationRequest extends TeaModel {
     /**
-     * <p>A client token to ensure the idempotence of the request. Generate a token from your client and make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * <blockquote>
-     * <p>If this parameter is not specified, the system uses the RequestId as the ClientToken. The RequestId of each API request is different.</p>
+     * <p>If you do not specify this parameter, the system uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,10 +19,8 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Sends a check request but does not reserve any resources. The system checks the request for required parameters, format, and service limits. If the check fails, an error is returned. If the check passes, the <code>DryRunOperation</code> error code is returned.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): Sends a normal request. After the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</p>
-     * </li>
+     * <li><strong>true</strong>: Sends a dry run request without reserving resources. The system checks required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): Sends a normal request. After the check succeeds, an HTTP 2xx status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +30,7 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the Application Load Balancer (ALB) instance.</p>
+     * <p>The instance ID of the Application Load Balancing instance. Before you configure a capacity reservation, the instance must have at least one listener in the Running state.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,18 +40,16 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     public String loadBalancerId;
 
     /**
-     * <p>The minimum LCU value to reserve.</p>
+     * <p>The minimum reserved load balancing capacity.</p>
      */
     @NameInMap("MinimumLoadBalancerCapacity")
     public ModifyCapacityReservationRequestMinimumLoadBalancerCapacity minimumLoadBalancerCapacity;
 
     /**
-     * <p>Specifies whether to cancel the LCU reservation. Valid values:</p>
+     * <p>Specifies whether to cancel the capacity reservation. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Cancels the LCU reservation.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): Does not cancel the LCU reservation. You do not need to specify this parameter when creating or updating an LCU reservation.</p>
-     * </li>
+     * <li><strong>true</strong>: Cancels the capacity reservation.</li>
+     * <li><strong>false</strong> (default): Does not cancel the capacity reservation. You do not need to specify this parameter when you create or modify a capacity reservation.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,7 +105,7 @@ public class ModifyCapacityReservationRequest extends TeaModel {
 
     public static class ModifyCapacityReservationRequestMinimumLoadBalancerCapacity extends TeaModel {
         /**
-         * <p>The number of LCUs to reserve per hour.</p>
+         * <p>The number of LCUs reserved per hour.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAclResponseBody extends TeaModel {
     /**
-     * <p>The ID of the ACL.</p>
+     * <p>The ACL instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>acl-hp34s2h0xx1ht4nwo****</p>

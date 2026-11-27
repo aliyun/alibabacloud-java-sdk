@@ -115,7 +115,7 @@ public class UpdateServerGroupServersAttributeRequest extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>i-bp1f9kdprbgy9uiu****</p>
+         * <p>ecs-123</p>
          */
         @NameInMap("ServerId")
         public String serverId;
@@ -141,7 +141,7 @@ public class UpdateServerGroupServersAttributeRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Ecs</p>
+         * <p>ecs</p>
          */
         @NameInMap("ServerType")
         public String serverType;

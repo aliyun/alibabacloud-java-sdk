@@ -7,13 +7,13 @@ public class ListRulesRequest extends TeaModel {
     /**
      * <p>The direction of the forwarding rule. Valid values:</p>
      * <ul>
-     * <li><p><strong>Request</strong> (default): The forwarding rule is applied to requests. Application Load Balancer (ALB) matches conditions in the requests sent from clients and performs the specified actions.</p>
+     * <li><p><strong>Request</strong> (default): request type. Performs condition matching and corresponding processing on packets sent from the client to ALB.</p>
      * </li>
-     * <li><p><strong>Response</strong>: The forwarding rule is applied to responses. ALB matches conditions in the responses sent from backend servers and performs the specified actions.</p>
+     * <li><p><strong>Response</strong>: response type. Performs condition matching and corresponding processing on packets returned from backend server groups to ALB.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>Basic ALB instances do not support the Response type.</p>
+     * <p>ALB Basic Edition instances do not support the Response type.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,21 +23,21 @@ public class ListRulesRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The listener IDs. You can specify up to 20 listener IDs.</p>
+     * <p>The list of listener IDs. You can query up to 20 listeners at a time.</p>
      */
     @NameInMap("ListenerIds")
     public java.util.List<String> listenerIds;
 
     /**
-     * <p>The SLB instance IDs. You can specify up to 20 instance IDs.</p>
+     * <p>The list of load balancing instance IDs. You can query up to 20 instances at a time.</p>
      */
     @NameInMap("LoadBalancerIds")
     public java.util.List<String> loadBalancerIds;
 
     /**
-     * <p>The maximum number of entries to return.</p>
-     * <p>Valid values: 1 to <strong>100</strong>.</p>
-     * <p>Default value: <strong>20</strong>.</p>
+     * <p>The maximum number of data records to read in this request.</p>
+     * <p>Valid values: <strong>1 to 100</strong>.</p>
+     * <p>Default value: <strong>20</strong>, which indicates that no value is specified.</p>
      * <blockquote>
      * <p>This parameter is optional.</p>
      * </blockquote>
@@ -49,11 +49,11 @@ public class ListRulesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to retrieve the next page of results. Valid values:</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <ul>
-     * <li><p>You do not need to set this parameter for the first query.</p>
+     * <li><p>You do not need to specify this parameter for the first request or if no next query exists.</p>
      * </li>
-     * <li><p>For a subsequent query, set this parameter to the value of <strong>NextToken</strong> from the previous response.</p>
+     * <li><p>If a next query exists, set the value to the <strong>NextToken</strong> value returned in the previous API call.</p>
      * </li>
      * </ul>
      * 
@@ -64,7 +64,7 @@ public class ListRulesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The IDs of the forwarding rules. You can specify up to 20 forwarding rule IDs.</p>
+     * <p>The list of forwarding rules. You can query up to 20 forwarding rules at a time.</p>
      */
     @NameInMap("RuleIds")
     public java.util.List<String> ruleIds;
@@ -138,7 +138,7 @@ public class ListRulesRequest extends TeaModel {
 
     public static class ListRulesRequestTag extends TeaModel {
         /**
-         * <p>The tag key. The tag key can be up to 128 characters in length. It cannot start with \<code>aliyun\\</code> or \<code>acs:\\</code>, and cannot contain \<code>http\\://\\</code> or \<code>https\\://\\</code>.</p>
+         * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -147,7 +147,7 @@ public class ListRulesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. The tag value can be up to 128 characters in length. It cannot start with \<code>aliyun\\</code> or \<code>acs:\\</code>, and cannot contain \<code>http\\://\\</code> or \<code>https\\://\\</code>.</p>
+         * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>product</p>

@@ -171,7 +171,7 @@ public class UpdateAScriptsRequest extends TeaModel {
          * <p>The content of the programmable script.</p>
          * 
          * <strong>example:</strong>
-         * <p>if and(match_re($uri, \&quot;^/1.txt$\&quot;), $arg_type) { rewrite(concat(\&quot;/1.\&quot;, $arg_type), \&quot;break\&quot;) }</p>
+         * <p>if and(match_re($uri, &quot;^/1.txt$&quot;), $arg_type) { rewrite(concat(&quot;/1.&quot;, $arg_type), &quot;break&quot;) }</p>
          */
         @NameInMap("ScriptContent")
         public String scriptContent;

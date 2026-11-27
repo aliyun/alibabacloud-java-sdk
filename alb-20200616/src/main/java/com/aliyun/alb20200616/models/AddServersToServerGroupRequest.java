@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class AddServersToServerGroupRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class AddServersToServerGroupRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to only precheck the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run without adding backend servers to the server group. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: sends a check request and does not add the backend servers to the server group. The system checks whether the required parameters are specified, the request format, and the service limits. If the request fails the check, the corresponding error is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): sends a normal request. After the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class AddServersToServerGroupRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The server group ID.</p>
+     * <p>The ID of the server group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -86,7 +86,7 @@ public class AddServersToServerGroupRequest extends TeaModel {
 
     public static class AddServersToServerGroupRequestServers extends TeaModel {
         /**
-         * <p>The description of the backend server. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
+         * <p>The description of the backend server. The description must be 2 to 256 characters in length, and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -107,11 +107,11 @@ public class AddServersToServerGroupRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>Specifies whether to enable the remote IP feature. You can add up to 200 servers in a single call. Valid values:</p>
+         * <p>Specifies whether to enable the remote IP address feature. You can add up to 200 servers in a single call. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: enabled.</p>
+         * <li><p><strong>true</strong>: enables the feature.</p>
          * </li>
-         * <li><p><strong>false</strong>: disabled.</p>
+         * <li><p><strong>false</strong>: disables the feature.</p>
          * </li>
          * </ul>
          * <blockquote>
@@ -125,13 +125,13 @@ public class AddServersToServerGroupRequest extends TeaModel {
         public Boolean remoteIpEnabled;
 
         /**
-         * <p>The backend server ID. You can add up to 200 servers in a single call.</p>
+         * <p>The ID of the backend server. You can add up to 200 servers in a single call.</p>
          * <ul>
-         * <li><p>If the server group is of the <strong>Instance</strong> type, this parameter specifies the resource ID of an <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> instance.</p>
+         * <li><p>If the server group is of the <strong>Instance</strong> type, this parameter specifies the ID of an <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> resource.</p>
          * </li>
          * <li><p>If the server group is of the <strong>Ip</strong> type, this parameter specifies an IP address.</p>
          * </li>
-         * <li><p>If the server group is of the <strong>Fc</strong> type, this parameter specifies the Alibaba Cloud Resource Name (ARN) of a Function Compute function.</p>
+         * <li><p>If the server group is of the <strong>Fc</strong> type, this parameter specifies the ARN of the Function Compute resource.</p>
          * </li>
          * </ul>
          * 
@@ -142,8 +142,8 @@ public class AddServersToServerGroupRequest extends TeaModel {
         public String serverId;
 
         /**
-         * <p>The IP address. You can add up to 200 servers in a single call.</p>
-         * <p>When <strong>ServerType</strong> is set to <strong>Eni</strong>, you can specify the primary private IP address or a secondary private IP address of the ENI.</p>
+         * <p>The specified IP address. You can add up to 200 servers in a single call.</p>
+         * <p>If <strong>ServerType</strong> is set to <strong>Eni</strong>, you can specify the primary or secondary private IP address of the ENI.</p>
          * <blockquote>
          * <p>This parameter is not required when <strong>ServerType</strong> is set to <strong>Fc</strong>.</p>
          * </blockquote>
@@ -155,11 +155,11 @@ public class AddServersToServerGroupRequest extends TeaModel {
         public String serverIp;
 
         /**
-         * <p>The server type of the backend server. You can add up to 200 servers in a single invoke. Valid values:</p>
+         * <p>The backend server type. You can add up to 200 servers each time you invoke the operation. Valid values:</p>
          * <ul>
          * <li><strong>Ecs</strong>: ECS instance.</li>
-         * <li><strong>Eni</strong>: ENI network interface controller (NIC) instance.</li>
-         * <li><strong>Eci</strong>: ECI elastic container instance.</li>
+         * <li><strong>Eni</strong>: elastic network interfaces (ENIs) or network interface controller (NIC).</li>
+         * <li><strong>Eci</strong>: Elastic Container Instance (ECI).</li>
          * <li><strong>Ip</strong>: IP address.</li>
          * <li><strong>Fc</strong>: Function Compute.</li>
          * </ul>

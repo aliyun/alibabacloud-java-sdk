@@ -27,7 +27,7 @@ public class UpdateAclAttributeRequest extends TeaModel {
     /**
      * <p>A client-generated token that ensures request idempotence. The token must be unique for each request. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the request\&quot;s <code>RequestId</code> as the <code>ClientToken</code>.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the request&quot;s <code>RequestId</code> as the <code>ClientToken</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

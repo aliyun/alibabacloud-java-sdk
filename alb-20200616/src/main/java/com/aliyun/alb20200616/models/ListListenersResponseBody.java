@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListListenersResponseBody extends TeaModel {
     /**
-     * <p>The list of Application Load Balancing (ALB) listeners.</p>
+     * <p>The list of application load balancing listeners.</p>
      */
     @NameInMap("Listeners")
     public java.util.List<ListListenersResponseBodyListeners> listeners;
 
     /**
-     * <p>The maximum number of records returned for this request.</p>
+     * <p>The maximum number of records returned for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -20,7 +20,7 @@ public class ListListenersResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The position from which the current call starts reading. An empty value indicates that all data has been read.</p>
+     * <p>The token that indicates the position where the current call starts to read data. An empty value indicates that all data has been read.</p>
      * 
      * <strong>example:</strong>
      * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
@@ -38,7 +38,7 @@ public class ListListenersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries that match the request conditions.</p>
+     * <p>The total number of records that meet the request conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -93,7 +93,7 @@ public class ListListenersResponseBody extends TeaModel {
 
     public static class ListListenersResponseBodyListenersDefaultActionsForwardGroupConfigServerGroupTuples extends TeaModel {
         /**
-         * <p>The ID of the destination server group to which requests are forwarded.</p>
+         * <p>The ID of the destination server group.</p>
          * 
          * <strong>example:</strong>
          * <p>sgp-i5qt20******</p>
@@ -118,7 +118,7 @@ public class ListListenersResponseBody extends TeaModel {
 
     public static class ListListenersResponseBodyListenersDefaultActionsForwardGroupConfig extends TeaModel {
         /**
-         * <p>The destination server groups to which requests are forwarded.</p>
+         * <p>The destination server groups for forwarding.</p>
          */
         @NameInMap("ServerGroupTuples")
         public java.util.List<ListListenersResponseBodyListenersDefaultActionsForwardGroupConfigServerGroupTuples> serverGroupTuples;
@@ -140,13 +140,13 @@ public class ListListenersResponseBody extends TeaModel {
 
     public static class ListListenersResponseBodyListenersDefaultActions extends TeaModel {
         /**
-         * <p>The configuration of the forwarding rule action. This parameter is valid when the action type is <strong>ForwardGroup</strong>.</p>
+         * <p>The configuration for the forwarding rule action. This parameter takes effect only when the action type is <strong>ForwardGroup</strong>.</p>
          */
         @NameInMap("ForwardGroupConfig")
         public ListListenersResponseBodyListenersDefaultActionsForwardGroupConfig forwardGroupConfig;
 
         /**
-         * <p>The action type. Value: <strong>ForwardGroup</strong>, which indicates that requests are forwarded to multiple server groups.</p>
+         * <p>The action type. Valid value: <strong>ForwardGroup</strong>, which indicates forwarding requests to multiple server groups.</p>
          * 
          * <strong>example:</strong>
          * <p>ForwardGroup</p>
@@ -179,10 +179,10 @@ public class ListListenersResponseBody extends TeaModel {
 
     public static class ListListenersResponseBodyListenersLogConfigAccessLogTracingConfig extends TeaModel {
         /**
-         * <p>Indicates whether Xtrace is enabled. Valid values:</p>
+         * <p>Specifies whether to enable the Xtrace feature. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled.</li>
-         * <li><strong>false</strong>: Disabled.</li>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no.</li>
          * </ul>
          * <blockquote>
          * <p>You can set this parameter to <strong>true</strong> only when the instance access log switch <strong>AccessLogEnabled</strong> is turned on.</p>
@@ -195,7 +195,7 @@ public class ListListenersResponseBody extends TeaModel {
         public Boolean tracingEnabled;
 
         /**
-         * <p>The sampling rate of Xtrace. Valid values: <strong>1 to 10000</strong>.</p>
+         * <p>The Xtrace sampling rate. Valid values: <strong>1</strong> to <strong>10000</strong>.</p>
          * <blockquote>
          * <p>This value takes effect only when <strong>TracingEnabled</strong> is set to <strong>true</strong>.</p>
          * </blockquote>
@@ -207,7 +207,7 @@ public class ListListenersResponseBody extends TeaModel {
         public Integer tracingSample;
 
         /**
-         * <p>The Xtrace type. The valid value is <strong>Zipkin</strong>.</p>
+         * <p>The Xtrace type. Valid value: <strong>Zipkin</strong>.</p>
          * <blockquote>
          * <p>This value takes effect only when <strong>TracingEnabled</strong> is set to <strong>true</strong>.</p>
          * </blockquote>
@@ -251,10 +251,10 @@ public class ListListenersResponseBody extends TeaModel {
 
     public static class ListListenersResponseBodyListenersLogConfig extends TeaModel {
         /**
-         * <p>Indicates whether access logs carry custom headers. Valid values:</p>
+         * <p>Specifies whether to include custom headers in access logs. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled.</li>
-         * <li><strong>false</strong>: Disabled.</li>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -294,9 +294,9 @@ public class ListListenersResponseBody extends TeaModel {
 
     public static class ListListenersResponseBodyListenersQuicConfig extends TeaModel {
         /**
-         * <p>The ID of the QUIC listener to be associated. This parameter is required when <strong>QuicUpgradeEnabled</strong> is set to <strong>true</strong>. This parameter is valid for HTTPS listeners.</p>
+         * <p>The ID of the QUIC listener to be associated. This parameter is required when <strong>QuicUpgradeEnabled</strong> is set to <strong>true</strong>. This parameter takes effect only for HTTPS listeners.</p>
          * <blockquote>
-         * <p>The original listener and the associated QUIC listener must belong to the same ALB instance, and the QUIC listener must not have been previously associated.</p>
+         * <p>The original listener and the associated QUIC listener must belong to the same ALB instance, and the QUIC listener must not have been associated before.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -306,13 +306,13 @@ public class ListListenersResponseBody extends TeaModel {
         public String quicListenerId;
 
         /**
-         * <p>Indicates whether QUIC upgrade is enabled. Valid values:</p>
+         * <p>Specifies whether to enable QUIC upgrade. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled.</li>
-         * <li><strong>false</strong>: Disabled.</li>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is valid only for HTTPS listeners.</p>
+         * <p>This parameter takes effect only for HTTPS listeners.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -346,7 +346,7 @@ public class ListListenersResponseBody extends TeaModel {
 
     public static class ListListenersResponseBodyListenersTags extends TeaModel {
         /**
-         * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+         * <p>The tag key. The key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -355,7 +355,7 @@ public class ListListenersResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+         * <p>The tag value. The value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>product</p>
@@ -388,10 +388,10 @@ public class ListListenersResponseBody extends TeaModel {
 
     public static class ListListenersResponseBodyListenersXForwardedForConfig extends TeaModel {
         /**
-         * <p>The custom header field name. This value takes effect only when <strong>XForwardedForClientCertClientVerifyEnabled</strong> is set to <strong>true</strong>. Otherwise, this value does not take effect.</p>
-         * <p>Value constraints: 1 to 40 characters in length. Lowercase letters a-z, digits, hyphens (-), and underscores (_) are supported.</p>
+         * <p>The custom header field name. This value takes effect only when <strong>XForwardedForClientCertClientVerifyEnabled</strong> is set to <strong>true</strong>.</p>
+         * <p>The value must be 1 to 40 characters in length and can contain lowercase letters, digits, hyphens (-), and underscores (_).</p>
          * <blockquote>
-         * <p>Only HTTPS listeners support this parameter.</p>
+         * <p>This parameter is supported only by HTTPS listeners.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -401,13 +401,13 @@ public class ListListenersResponseBody extends TeaModel {
         public String XForwardedForClientCertClientVerifyAlias;
 
         /**
-         * <p>Indicates whether the <code>X-Forwarded-Clientcert-clientverify</code> header field is used to retrieve the verification result of the client certificate that accesses the load balancing instance. Valid values:</p>
+         * <p>Specifies whether to use the <code>X-Forwarded-Clientcert-clientverify</code> header field to obtain the verification result of the client certificate that accesses the load balancing instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled.</li>
-         * <li><strong>false</strong>: Disabled.</li>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no.</li>
          * </ul>
          * <blockquote>
-         * <p>Only HTTPS listeners support this parameter.</p>
+         * <p>This parameter is supported only by HTTPS listeners.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -418,9 +418,9 @@ public class ListListenersResponseBody extends TeaModel {
 
         /**
          * <p>The custom header name. This value takes effect only when <strong>XForwardedForClientCertFingerprintEnabled</strong> is set to <strong>true</strong>.</p>
-         * <p>Value constraints: 1 to 40 characters in length. Lowercase letters a-z, digits, hyphens (-), and underscores (_) are supported.</p>
+         * <p>The value must be 1 to 40 characters in length and can contain lowercase letters, digits, hyphens (-), and underscores (_).</p>
          * <blockquote>
-         * <p>Only HTTPS listeners support this parameter.</p>
+         * <p>This parameter is supported only by HTTPS listeners.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -430,13 +430,13 @@ public class ListListenersResponseBody extends TeaModel {
         public String XForwardedForClientCertFingerprintAlias;
 
         /**
-         * <p>Indicates whether the <code>X-Forwarded-Clientcert-fingerprint</code> header field is used to retrieve the fingerprint of the client certificate that accesses the load balancing instance. Valid values:</p>
+         * <p>Specifies whether to use the <code>X-Forwarded-Clientcert-fingerprint</code> header field to obtain the fingerprint of the client certificate that accesses the load balancing instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled.</li>
-         * <li><strong>false</strong>: Disabled.</li>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no.</li>
          * </ul>
          * <blockquote>
-         * <p>Only HTTPS listeners support this parameter.</p>
+         * <p>This parameter is supported only by HTTPS listeners.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -447,9 +447,9 @@ public class ListListenersResponseBody extends TeaModel {
 
         /**
          * <p>The custom header name. This value takes effect only when <strong>XForwardedForClientCertIssuerDNEnabled</strong> is set to <strong>true</strong>.</p>
-         * <p>Value constraints: 1 to 40 characters in length. Lowercase letters a-z, digits, hyphens (-), and underscores (_) are supported.</p>
+         * <p>The value must be 1 to 40 characters in length and can contain lowercase letters, digits, hyphens (-), and underscores (_).</p>
          * <blockquote>
-         * <p>Only HTTPS listeners support this parameter.</p>
+         * <p>This parameter is supported only by HTTPS listeners.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -459,13 +459,13 @@ public class ListListenersResponseBody extends TeaModel {
         public String XForwardedForClientCertIssuerDNAlias;
 
         /**
-         * <p>Indicates whether the <code>X-Forwarded-Clientcert-issuerdn</code> header field is used to retrieve the issuer information of the client certificate that accesses the load balancing instance. Valid values:</p>
+         * <p>Specifies whether to use the <code>X-Forwarded-Clientcert-issuerdn</code> header field to obtain the issuer information of the client certificate that accesses the load balancing instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled.</li>
-         * <li><strong>false</strong>: Disabled.</li>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no.</li>
          * </ul>
          * <blockquote>
-         * <p>Only HTTPS listeners support this parameter.</p>
+         * <p>This parameter is supported only by HTTPS listeners.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -476,9 +476,9 @@ public class ListListenersResponseBody extends TeaModel {
 
         /**
          * <p>The custom header name. This value takes effect only when <strong>XForwardedForClientCertSubjectDNEnabled</strong> is set to <strong>true</strong>.</p>
-         * <p>Value constraints: 1 to 40 characters in length. Lowercase letters a-z, digits, hyphens (-), and underscores (_) are supported.</p>
+         * <p>The value must be 1 to 40 characters in length and can contain lowercase letters, digits, hyphens (-), and underscores (_).</p>
          * <blockquote>
-         * <p>Only HTTPS listeners support this parameter.</p>
+         * <p>This parameter is supported only by HTTPS listeners.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -488,13 +488,13 @@ public class ListListenersResponseBody extends TeaModel {
         public String XForwardedForClientCertSubjectDNAlias;
 
         /**
-         * <p>Indicates whether the <code>X-Forwarded-Clientcert-subjectdn</code> header field is used to retrieve the owner information of the client certificate that accesses the load balancing instance. Valid values:</p>
+         * <p>Specifies whether to use the <code>X-Forwarded-Clientcert-subjectdn</code> header field to obtain the subject information of the client certificate that accesses the load balancing instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled.</li>
-         * <li><strong>false</strong>: Disabled.</li>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no.</li>
          * </ul>
          * <blockquote>
-         * <p>Only HTTPS listeners support this parameter.</p>
+         * <p>This parameter is supported only by HTTPS listeners.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -504,15 +504,15 @@ public class ListListenersResponseBody extends TeaModel {
         public Boolean XForwardedForClientCertSubjectDNEnabled;
 
         /**
-         * <p>Indicates whether ALB is allowed to look up the originating client IP address from the X-Forwarded-For header. Valid values:</p>
+         * <p>Specifies whether to allow ALB to retrieve the actual client IP address from the X-Forwarded-For header field. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: Enabled.</p>
+         * <li><p><strong>true</strong>: yes.</p>
          * </li>
-         * <li><p><strong>false</strong>: Not enabled.</p>
+         * <li><p><strong>false</strong>: no.</p>
          * </li>
          * </ul>
          * <blockquote>
-         * <p>HTTP and HTTPS listeners support this parameter.</p>
+         * <p>This parameter is supported by HTTP and HTTPS listeners.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -522,8 +522,8 @@ public class ListListenersResponseBody extends TeaModel {
         public Boolean XForwardedForClientSourceIpsEnabled;
 
         /**
-         * <p>The trusted proxy IP addresses.</p>
-         * <p>Application Load Balancing (ALB) traverses the <code>X-Forwarded-For</code> header from right to left and selects the first IP address that is not in the trusted IP list as the originating client IP address. This IP address is used for source IP-based rate limiting.</p>
+         * <p>Specifies the trusted proxy IP addresses.</p>
+         * <p>Application load balancing ALB traverses the <code>X-Forwarded-For</code> header field from back to front and selects the first IP address that is not in the trusted IP address list as the actual client IP address. This IP address is used for source IP address-based rate limiting.</p>
          * 
          * <strong>example:</strong>
          * <p>10.1.1.0/24</p>
@@ -532,10 +532,10 @@ public class ListListenersResponseBody extends TeaModel {
         public String XForwardedForClientSourceIpsTrusted;
 
         /**
-         * <p>Indicates whether the <code>X-Forwarded-Client-Port</code> header field is used to retrieve the port of the client that accesses the load balancing instance. Valid values:</p>
+         * <p>Specifies whether to use the <code>X-Forwarded-Client-Port</code> header to obtain the port of the client that accesses the load balancing instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled.</li>
-         * <li><strong>false</strong>: Disabled.</li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * <blockquote>
          * <p>HTTP and HTTPS listeners support this parameter.</p>
@@ -548,15 +548,15 @@ public class ListListenersResponseBody extends TeaModel {
         public Boolean XForwardedForClientSrcPortEnabled;
 
         /**
-         * <p>Indicates whether the <code>X-Forwarded-For</code> header field is used to retrieve the originating IP address of the client. Valid values:</p>
+         * <p>Specifies whether to use the <code>X-Forwarded-For</code> header to obtain the real IP address of the client. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong> (default): Enabled.</li>
-         * <li><strong>false</strong>: Disabled.</li>
+         * <li><strong>true</strong> (default): Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * <blockquote>
          * <ol>
-         * <li>If set to <strong>true</strong>, <strong>XForwardedForProcessingMode</strong> defaults to <strong>append</strong> and can be changed to <strong>remove</strong>.</li>
-         * <li>If set to <strong>false</strong>, the <code>X-Forwarded-For</code> header field is preserved without additional processing before the request is sent to the backend server.</li>
+         * <li>If you set this parameter to <strong>true</strong>, the default value of <strong>XForwardedForProcessingMode</strong> is <strong>append</strong>, and you can change it to <strong>remove</strong>.</li>
+         * <li>If you set this parameter to <strong>false</strong>, the <code>X-Forwarded-For</code> header is retained without additional processing before the request is sent to the backend server.</li>
          * <li>HTTP and HTTPS listeners support this parameter.</li>
          * </ol>
          * </blockquote>
@@ -568,10 +568,10 @@ public class ListListenersResponseBody extends TeaModel {
         public Boolean XForwardedForEnabled;
 
         /**
-         * <p>Indicates whether the <code>X-Forwarded-Host</code> header is used to retrieve the domain name of the client that accesses the load balancing instance. Valid values:</p>
+         * <p>Specifies whether to use the <code>X-Forwarded-Host</code> header to obtain the domain name of the client that accesses the load balancing instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled.</li>
-         * <li><strong>false</strong> (default): Not enabled.</li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong> (default): No.</li>
          * </ul>
          * <blockquote>
          * <p>HTTP, HTTPS, and QUIC listeners support this parameter.</p>
@@ -584,15 +584,15 @@ public class ListListenersResponseBody extends TeaModel {
         public Boolean XForwardedForHostEnabled;
 
         /**
-         * <p>The mode for processing the <code>X-Forwarded-For</code> header field. This value takes effect only when <strong>XForwardedForEnabled</strong> is set to <strong>true</strong>. Valid values:</p>
+         * <p>The processing mode for the <code>X-Forwarded-For</code> header. This parameter takes effect only when <strong>XForwardedForEnabled</strong> is set to <strong>true</strong>. Valid values:</p>
          * <ul>
          * <li><strong>append</strong> (default): Append.</li>
          * <li><strong>remove</strong>: Remove.</li>
          * </ul>
          * <blockquote>
          * <ol>
-         * <li>If set to <strong>append</strong>, the last-hop IP address is appended to the <code>X-Forwarded-For</code> header field before the request is sent to the backend server.</li>
-         * <li>If set to <strong>remove</strong>, the <code>X-Forwarded-For</code> header is removed before the request is sent to the backend server, regardless of whether the request carries the <code>X-Forwarded-For</code> header field.</li>
+         * <li>If you set this parameter to <strong>append</strong>, the IP address of the last hop is added to the <code>X-Forwarded-For</code> header before the request is sent to the backend server.</li>
+         * <li>If you set this parameter to <strong>remove</strong>, the <code>X-Forwarded-For</code> header is deleted before the request is sent to the backend server, regardless of whether the request contains the <code>X-Forwarded-For</code> header.</li>
          * <li>HTTP and HTTPS listeners support this parameter.</li>
          * </ol>
          * </blockquote>
@@ -604,10 +604,10 @@ public class ListListenersResponseBody extends TeaModel {
         public String XForwardedForProcessingMode;
 
         /**
-         * <p>Indicates whether the <code>X-Forwarded-Proto</code> header is used to retrieve the listener protocol of the load balancing instance. Valid values:</p>
+         * <p>Specifies whether to use the <code>X-Forwarded-Proto</code> header to obtain the listener protocol of the load balancing instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled.</li>
-         * <li><strong>false</strong>: Not enabled.</li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * <blockquote>
          * <p>HTTP, HTTPS, and QUIC listeners support this parameter.</p>
@@ -620,10 +620,10 @@ public class ListListenersResponseBody extends TeaModel {
         public Boolean XForwardedForProtoEnabled;
 
         /**
-         * <p>Indicates whether the <code>SLB-ID</code> header is used to retrieve the load balancing instance ID. Valid values:</p>
+         * <p>Specifies whether to use the <code>SLB-ID</code> header to obtain the load balancing instance ID. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled.</li>
-         * <li><strong>false</strong>: Not enabled.</li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * <blockquote>
          * <p>HTTP, HTTPS, and QUIC listeners support this parameter.</p>
@@ -636,10 +636,10 @@ public class ListListenersResponseBody extends TeaModel {
         public Boolean XForwardedForSLBIdEnabled;
 
         /**
-         * <p>Indicates whether the <code>X-Forwarded-Port</code> header is used to retrieve the listener port of the load balancing instance. Valid values:</p>
+         * <p>Specifies whether to use the <code>X-Forwarded-Port</code> header to obtain the listener port of the load balancing instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled.</li>
-         * <li><strong>false</strong>: Not enabled.</li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * <blockquote>
          * <p>HTTP, HTTPS, and QUIC listeners support this parameter.</p>
@@ -802,10 +802,10 @@ public class ListListenersResponseBody extends TeaModel {
         public java.util.List<ListListenersResponseBodyListenersDefaultActions> defaultActions;
 
         /**
-         * <p>Indicates whether Gzip compression is enabled to compress specific file types. Valid values:</p>
+         * <p>Specifies whether to enable Gzip compression to compress specific file types. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled.</li>
-         * <li><strong>false</strong>: Disabled.</li>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -815,13 +815,13 @@ public class ListListenersResponseBody extends TeaModel {
         public Boolean gzipEnabled;
 
         /**
-         * <p>Indicates whether HTTP/2 is enabled. Valid values:</p>
+         * <p>Specifies whether to enable the HTTP/2 feature. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled.</li>
-         * <li><strong>false</strong>: Disabled.</li>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no.</li>
          * </ul>
          * <blockquote>
-         * <p>Only HTTPS listeners support this parameter.</p>
+         * <p>This parameter is supported only by HTTPS listeners.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -831,8 +831,8 @@ public class ListListenersResponseBody extends TeaModel {
         public Boolean http2Enabled;
 
         /**
-         * <p>The connection idle timeout period. Unit: seconds. Valid values: <strong>1 to 60</strong>.</p>
-         * <p>If no access request is accepted within the timeout period, load balancing temporarily breaks the current connection and re-establishes a new connection when the next request is accepted.</p>
+         * <p>Specifies the idle connection timeout period. Unit: seconds. Valid values: <strong>1</strong> to <strong>60</strong>.</p>
+         * <p>If no access request is accepted within the timeout period, load balancing temporarily breaks the current connection and establishes a new connection when the next request is accepted.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -859,7 +859,7 @@ public class ListListenersResponseBody extends TeaModel {
         public String listenerId;
 
         /**
-         * <p>The frontend port used by the Application Load Balancing (ALB) instance. Valid values: <strong>1 to 65535</strong>.</p>
+         * <p>The frontend port used by the application load balancing instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -870,9 +870,9 @@ public class ListListenersResponseBody extends TeaModel {
         /**
          * <p>The listener protocol. Valid values:</p>
          * <ul>
-         * <li><strong>HTTP</strong>: Protocol Type is HTTP.</li>
-         * <li><strong>HTTPS</strong>: Protocol Type is HTTPS.</li>
-         * <li><strong>QUIC</strong>: Protocol Type is QUIC.</li>
+         * <li><strong>HTTP</strong>: The Protocol Type is HTTP.</li>
+         * <li><strong>HTTPS</strong>: The Protocol Type is HTTPS.</li>
+         * <li><strong>QUIC</strong>: The Protocol Type is QUIC.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -882,15 +882,15 @@ public class ListListenersResponseBody extends TeaModel {
         public String listenerProtocol;
 
         /**
-         * <p>The status of the listener. Valid values:</p>
+         * <p>The current status of the listener. Valid values:</p>
          * <ul>
-         * <li><p><strong>Provisioning</strong>: Being created.</p>
+         * <li><p><strong>Provisioning</strong>: The listener is being created.</p>
          * </li>
-         * <li><p><strong>Running</strong>: Running.</p>
+         * <li><p><strong>Running</strong>: The listener is running.</p>
          * </li>
-         * <li><p><strong>Configuring</strong>: Being configured.</p>
+         * <li><p><strong>Configuring</strong>: The listener is being configured.</p>
          * </li>
-         * <li><p><strong>Stopped</strong>: Stopped.</p>
+         * <li><p><strong>Stopped</strong>: The listener is stopped.</p>
          * </li>
          * </ul>
          * 
@@ -901,7 +901,7 @@ public class ListListenersResponseBody extends TeaModel {
         public String listenerStatus;
 
         /**
-         * <p>The Application Load Balancing (ALB) instance ID.</p>
+         * <p>The instance ID of the application load balancing.</p>
          * 
          * <strong>example:</strong>
          * <p>alb-bd6oylbckp6k9x****</p>
@@ -922,8 +922,8 @@ public class ListListenersResponseBody extends TeaModel {
         public ListListenersResponseBodyListenersQuicConfig quicConfig;
 
         /**
-         * <p>The request timeout period. Unit: seconds. Valid values: <strong>1 to 180</strong>.</p>
-         * <p>If no response is received from the backend server within the timeout period, load balancing stops waiting and returns an <code>HTTP 504</code> error code to the client.</p>
+         * <p>Specifies the request timeout period. Unit: seconds. Valid values: <strong>1</strong> to <strong>180</strong>.</p>
+         * <p>If a backend server does not send a response within the timeout period, load balancing stops waiting and returns an <code>HTTP 504</code> error code to the client.</p>
          * 
          * <strong>example:</strong>
          * <p>34</p>
@@ -934,7 +934,7 @@ public class ListListenersResponseBody extends TeaModel {
         /**
          * <p>The security policy.</p>
          * <blockquote>
-         * <p>Only HTTPS listeners support this parameter.</p>
+         * <p>This parameter is supported only by HTTPS listeners.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -950,7 +950,7 @@ public class ListListenersResponseBody extends TeaModel {
         public java.util.List<ListListenersResponseBodyListenersTags> tags;
 
         /**
-         * <p>The <code>XForward</code> header field configuration.</p>
+         * <p>The XForward header field configuration.</p>
          */
         @NameInMap("XForwardedForConfig")
         public ListListenersResponseBodyListenersXForwardedForConfig XForwardedForConfig;

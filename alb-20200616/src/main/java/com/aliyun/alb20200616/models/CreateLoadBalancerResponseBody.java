@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLoadBalancerResponseBody extends TeaModel {
     /**
-     * <p>The Application Load Balancer instance ID.</p>
+     * <p>The instance ID of the Application Load Balancing (ALB) instance.</p>
      * 
      * <strong>example:</strong>
      * <p>alb-o9ulmq5hqn68jk****</p>

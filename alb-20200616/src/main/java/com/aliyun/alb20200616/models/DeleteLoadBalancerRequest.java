@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteLoadBalancerRequest extends TeaModel {
     /**
-     * <p>The client token used to ensure the idempotence of the request.</p>
-     * <p>You can generate a token by using your client. The token must be unique across requests and contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can generate a parameter value from your client to ensure that the value is unique among different requests. The ClientToken parameter supports only ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
@@ -15,11 +15,11 @@ public class DeleteLoadBalancerRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to only perform a dry run on the request. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Performs a dry run to check the request\&quot;s validity without deleting the Application Load Balancer instance. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * <li><p><strong>true</strong>: performs a dry run on the request and does not delete the application load balancing instance. The system checks whether required parameters are specified, the request format, and service limits. If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): sends a normal request. After the request passes the check, an <code>HTTP 2xx</code> status code is returned and the instance is deleted.</p>
+     * <li><p><strong>false</strong> (default): sends a Normal request. If the request passes the dry run, the <code>HTTP 2xx</code> status code is returned and the operation is performed.</p>
      * </li>
      * </ul>
      * 
@@ -30,7 +30,7 @@ public class DeleteLoadBalancerRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the Application Load Balancer instance.</p>
+     * <p>The application load balancing instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +39,9 @@ public class DeleteLoadBalancerRequest extends TeaModel {
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
+    /**
+     * <p>The type of resources that are of automatic creation and attach by application load balancing and need to be retained. When you release an Internet-facing application load balancing instance, you can configure the Settings to eip to retain the EIP that is of automatic creation and attach by application load balancing. Anycast EIPs are not supported for retention, and EIPs that users manually attach are automatically retained.</p>
+     */
     @NameInMap("RetainResourceType")
     public java.util.List<String> retainResourceType;
 

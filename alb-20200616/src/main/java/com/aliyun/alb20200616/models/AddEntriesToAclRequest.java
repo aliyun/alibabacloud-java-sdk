@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class AddEntriesToAclRequest extends TeaModel {
     /**
-     * <p>The ACL entries that you want to add. You can add at most 20 entries in each call.</p>
+     * <p>The list of access control entries to be added. You can add up to 20 access control entries in a single call.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AclEntries")
     public java.util.List<AddEntriesToAclRequestAclEntries> aclEntries;
 
     /**
-     * <p>The ID of the ACL.</p>
+     * <p>The ACL instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,9 +23,9 @@ public class AddEntriesToAclRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can generate the parameter value from your client and make sure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,10 +35,10 @@ public class AddEntriesToAclRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to only precheck the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: The system prechecks the request without adding IP entries to the access control policy group. The system checks whether the required parameters are specified, the request format, and the service limits. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): The system sends a normal request. If the request passes the precheck, the system returns an HTTP 2xx status code and performs the operation.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,8 +86,8 @@ public class AddEntriesToAclRequest extends TeaModel {
 
     public static class AddEntriesToAclRequestAclEntries extends TeaModel {
         /**
-         * <p>The description of the ACL entry. The description must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (_), and hyphens (-).</p>
-         * <p>You can add at most 20 entries in each call.</p>
+         * <p>The description of the access control entry. The description must be 2 to 256 characters in length, and can contain letters, digits, Chinese characters, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (_), and hyphens (-).</p>
+         * <p>You can add up to 20 access control entries in a single call.</p>
          * 
          * <strong>example:</strong>
          * <p>test-entry</p>
@@ -96,7 +96,7 @@ public class AddEntriesToAclRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The CIDR block in the ACL entry.</p>
+         * <p>The CIDR block of the access control entry.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

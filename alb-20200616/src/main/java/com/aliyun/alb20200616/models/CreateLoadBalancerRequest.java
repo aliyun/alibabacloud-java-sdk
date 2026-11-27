@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateLoadBalancerRequest extends TeaModel {
     /**
-     * <p>The address allocation mode. Valid values:</p>
+     * <p>The IP address allocation mode. Valid values:</p>
      * <ul>
-     * <li><p><strong>Fixed</strong> (default): A static IP address is assigned to each availability zone.</p>
+     * <li><p><strong>Fixed</strong> (default): fixed IP mode. A fixed IP address is allocated to each zone.</p>
      * </li>
-     * <li><p><strong>Dynamic</strong>: An IP address is dynamically assigned to each availability zone.</p>
+     * <li><p><strong>Dynamic</strong>: dynamic IP mode. IP addresses are dynamically allocated to each zone.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>Starting from &lt;props=&quot;china&quot;&gt;00:00:00 on February 25, 2025 (Beijing time)&lt;props=&quot;intl&quot;&gt;00:00:00 on February 25, 2025 (UTC+8), all instances created by calling this API will be <a href="https://help.aliyun.com/document_detail/2864070.html">upgraded ALB instances</a> regardless of the mode you specify. IP modes are no longer distinguished, and the allocated IP addresses scale automatically. Existing ALB instances created before the upgrade are not affected.</p>
+     * <p>Starting from &lt;props=&quot;china&quot;&gt;00:00:00 on February 25, 2025 (UTC+8)&lt;props=&quot;intl&quot;&gt;00:00:00 on February 25, 2025 (UTC+8), when you create an instance by calling this operation, an <a href="https://help.aliyun.com/document_detail/2864070.html">upgraded ALB instance</a> is created regardless of the mode you specify. The IP address allocation mode is no longer distinguished, and the allocated IP addresses are automatically scalable. Existing ALB instances created before the upgrade are not affected.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,12 +23,10 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public String addressAllocatedMode;
 
     /**
-     * <p>The protocol version. Valid values:</p>
+     * <p>The IP version. Valid values:</p>
      * <ul>
-     * <li><p><strong>IPv4</strong>: IPv4.</p>
-     * </li>
-     * <li><p><strong>DualStack</strong>: The instance supports both IPv4 and IPv6.</p>
-     * </li>
+     * <li><strong>IPv4</strong>: IPv4.</li>
+     * <li><strong>DualStack</strong>: dual-stack.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,11 +36,11 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public String addressIpVersion;
 
     /**
-     * <p>The address type of the Application Load Balancer. Valid values:</p>
+     * <p>The network type of the Application Load Balancing (ALB) instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>Internet</strong>: The load balancer is assigned a public IP address. Its domain name is resolved to the public IP address, allowing access from the public network.</p>
+     * <li><p><strong>Internet</strong>: The Application Load Balancing (ALB) instance uses a public IP address. The DNS domain name is parsed to the public IP address. Therefore, the instance can be accessed in the Internet environment.</p>
      * </li>
-     * <li><p><strong>Intranet</strong>: The load balancer is assigned a private IP address. Its domain name is resolved to the private IP address, allowing access only from the private network of the VPC where the load balancer is deployed.</p>
+     * <li><p><strong>Intranet</strong>: The Application Load Balancing (ALB) instance uses only a private IP address. The DNS domain name is parsed to the private IP address. Therefore, the instance can be accessed only in the internal network environment of the VPC where the Application Load Balancing (ALB) instance is deployed.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -54,10 +52,10 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public String addressType;
 
     /**
-     * <p>A client token to ensure the idempotency of the request.</p>
-     * <p>You can generate a unique value from your client for each request. The <code>ClientToken</code> parameter supports only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can generate a parameter value from your client to ensure that the value is unique among different requests. The ClientToken parameter supports only ASCII characters.</p>
      * <blockquote>
-     * <p>If you omit this parameter, the system uses the <strong>RequestId</strong> of the request as the <strong>ClientToken</strong>.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -69,10 +67,8 @@ public class CreateLoadBalancerRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable deletion protection. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enables deletion protection.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): Disables deletion protection.</p>
-     * </li>
+     * <li><strong>true</strong>: enables deletion protection.</li>
+     * <li><strong>false</strong> (default): disables deletion protection.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,11 +78,11 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public Boolean deletionProtectionEnabled;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run on the request. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs a dry run without creating the Application Load Balancer instance. The system checks for required parameters, the request format, and service limits. If the request fails the check, an error is returned. If the request passes the check, the system returns the <code>DryRunOperation</code> error code.</p>
+     * <li><p><strong>true</strong>: performs a dry run without creating the Application Load Balancing (ALB) instance. The system checks whether required parameters are specified, the request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): sends a normal request. If the request passes the check, the system returns an HTTP 2xx status code and performs the operation.</p>
+     * <li><p><strong>false</strong> (default): performs a dry run and sends a normal request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed.</p>
      * </li>
      * </ul>
      * 
@@ -97,20 +93,20 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The billing configuration of the Application Load Balancer instance.</p>
+     * <p>The billing configuration of the Application Load Balancing (ALB) instance.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerBillingConfig")
     public CreateLoadBalancerRequestLoadBalancerBillingConfig loadBalancerBillingConfig;
 
     /**
-     * <p>The edition of the Application Load Balancer. Different editions have different features and billing policies. Valid values:</p>
+     * <p>The edition of the Application Load Balancing (ALB) instance. Different editions have different feature limits and billing policy. Valid values:</p>
      * <ul>
-     * <li><p><strong>Basic</strong>: Basic edition.</p>
+     * <li><p><strong>Basic</strong>: Basic Edition.</p>
      * </li>
-     * <li><p><strong>Standard</strong>: Standard edition.</p>
+     * <li><p><strong>Standard</strong>: Standard Edition.</p>
      * </li>
-     * <li><p><strong>StandardWithWaf</strong>: WAF-enabled edition.</p>
+     * <li><p><strong>StandardWithWaf</strong>: WAF-enhanced Edition.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -122,8 +118,8 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public String loadBalancerEdition;
 
     /**
-     * <p>The name of the Application Load Balancer instance.</p>
-     * <p>The name must be 2 to 128 characters long. It must start with a letter, a Chinese character, or a digit, and can contain digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
+     * <p>The name of the Application Load Balancing (ALB) instance.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. It must start with a letter or digit.</p>
      * 
      * <strong>example:</strong>
      * <p>alb1</p>
@@ -132,7 +128,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public String loadBalancerName;
 
     /**
-     * <p>The modification protection settings.</p>
+     * <p>The modification protection configuration.</p>
      */
     @NameInMap("ModificationProtectionConfig")
     public CreateLoadBalancerRequestModificationProtectionConfig modificationProtectionConfig;
@@ -147,19 +143,19 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The IDs of the security groups to associate with the instance.</p>
+     * <p>The IDs of the security groups.</p>
      */
     @NameInMap("SecurityGroupIds")
     public java.util.List<CreateLoadBalancerRequestSecurityGroupIds> securityGroupIds;
 
     /**
-     * <p>The tags to add to the instance.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateLoadBalancerRequestTag> tag;
 
     /**
-     * <p>The ID of the VPC for the Application Load Balancer instance.</p>
+     * <p>The ID of the virtual private cloud (VPC) where the Application Load Balancing (ALB) instance is deployed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -169,7 +165,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The mappings between availability zones and subnets. You can specify up to 10 availability zones. If the region has two or more availability zones, you must specify at least two.</p>
+     * <p>The list of zone and vSwitch mappings. You can specify up to 10 zones. If the current region supports two or more zones, you must specify at least two zones.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ZoneMappings")
@@ -302,7 +298,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     public static class CreateLoadBalancerRequestLoadBalancerBillingConfig extends TeaModel {
         /**
-         * <p>The ID of the shared bandwidth package that is associated with the public-facing instance.</p>
+         * <p>The ID of the Internet Shared Bandwidth instance that is associated with the Internet-facing ALB instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cbwp-bp1vevu8h3ieh****</p>
@@ -312,7 +308,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
         /**
          * <p>The billing method of the instance.</p>
-         * <p>Set the value to <strong>PostPay</strong> for pay-as-you-go.</p>
+         * <p>Set the value to <strong>PostPay</strong>, which specifies the pay-as-you-go billing method.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -347,9 +343,9 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public static class CreateLoadBalancerRequestModificationProtectionConfig extends TeaModel {
         /**
          * <p>The reason for enabling modification protection.</p>
-         * <p>The reason must be 2 to 128 characters long. It must start with a letter or a Chinese character, and can contain digits, periods (.), underscores (_), and hyphens (-).</p>
+         * <p>The value must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter or a Chinese character.</p>
          * <blockquote>
-         * <p>This parameter is effective only when <strong>Status</strong> is set to <strong>ConsoleProtection</strong>.</p>
+         * <p>This parameter is valid only when <strong>Status</strong> is set to <strong>ConsoleProtection</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -359,15 +355,15 @@ public class CreateLoadBalancerRequest extends TeaModel {
         public String reason;
 
         /**
-         * <p>The modification protection status of the Application Load Balancer instance. Valid values:</p>
+         * <p>The modification protection status of the Application Load Balancing (ALB) instance. Valid values:</p>
          * <ul>
-         * <li><p><strong>NonProtection</strong>: Modification protection is disabled. If you specify a value for <strong>Reason</strong>, the value is cleared.</p>
+         * <li><p><strong>NonProtection</strong>: disables modification protection. If <strong>Reason</strong> is specified, it is forcibly cleared.</p>
          * </li>
-         * <li><p><strong>ConsoleProtection</strong>: Console-based modification protection is enabled. If you specify a value for <strong>Reason</strong>, the value takes effect.</p>
+         * <li><p><strong>ConsoleProtection</strong>: enables modification protection in the console. If <strong>Reason</strong> is specified, it takes effect.</p>
          * </li>
          * </ul>
          * <blockquote>
-         * <p>If you set the value to <strong>ConsoleProtection</strong>, you cannot modify the instance in the Application Load Balancer console. However, you can still modify it by calling API operations.</p>
+         * <p>When this parameter is set to <strong>ConsoleProtection</strong>, users cannot modify the instance configurations in the load balancing console, but can invoke API operations to modify the instance configurations.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -426,7 +422,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     public static class CreateLoadBalancerRequestTag extends TeaModel {
         /**
-         * <p>The tag key. The key can be up to 128 characters long, cannot start with aliyun or acs:, and cannot contain http\:// or https\://.</p>
+         * <p>The tag key. It can be up to 128 characters in length, and cannot start with aliyun or acs:, or contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -435,7 +431,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. The value can be up to 128 characters long, cannot start with aliyun or acs:, and cannot contain http\:// or https\://.</p>
+         * <p>The tag key. It can be up to 128 characters in length, and cannot start with aliyun or acs:, or contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>product</p>
@@ -468,7 +464,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     public static class CreateLoadBalancerRequestZoneMappings extends TeaModel {
         /**
-         * <p>The ID of the Elastic IP address (EIP) to associate with the public-facing instance.</p>
+         * <p>The instance ID of the elastic IP address (EIP) that is attached to the Internet-facing instance.</p>
          * 
          * <strong>example:</strong>
          * <p>eip-bp1aedxso6u80u0qf****</p>
@@ -477,15 +473,15 @@ public class CreateLoadBalancerRequest extends TeaModel {
         public String allocationId;
 
         /**
-         * <p>The type of the Elastic IP address. Valid values:</p>
+         * <p>The type of the EIP. Valid values:</p>
          * <ul>
-         * <li><p><strong>Common</strong> (default): an Elastic IP address.</p>
+         * <li><p>Common (default): EIP.</p>
          * </li>
-         * <li><p><strong>Anycast</strong>: an Anycast EIP.</p>
+         * <li><p>Anycast: Anycast EIP.</p>
          * </li>
          * </ul>
          * <blockquote>
-         * <p>For regions that support binding Anycast EIPs to an Application Load Balancer instance, see <a href="https://help.aliyun.com/document_detail/460727.html">Limitations</a>.</p>
+         * <p>For more information about the regions where ALB supports Anycast EIPs, see <a href="https://help.aliyun.com/document_detail/460727.html">Limits</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -495,7 +491,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
         public String eipType;
 
         /**
-         * <p>The private IPv4 address.</p>
+         * <p>The IPv4 private IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.10.1</p>
@@ -504,7 +500,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
         public String intranetAddress;
 
         /**
-         * <p>The ID of the subnet in the specified availability zone. Each availability zone can be mapped to only one subnet.</p>
+         * <p>The ID of the vSwitch in the zone. You can use only one vSwitch and one subnet in each zone. You can add up to 10 zones. If the current region supports two or more zones, you must add at least two zones.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -514,8 +510,8 @@ public class CreateLoadBalancerRequest extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the availability zone.
-         * You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query for available zones.</p>
+         * <p>The zone ID. You can add up to 10 zones. If the current region supports two or more zones, you must add at least two zones.
+         * You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the information about the zones.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

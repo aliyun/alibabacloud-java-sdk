@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateSecurityPolicyRequest extends TeaModel {
     /**
-     * <p>The supported cipher suites.</p>
+     * <p>The list of supported cipher suites.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Ciphers")
     public java.util.List<String> ciphers;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>Ensures the idempotence of the request. You can generate the value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and can be up to 64 characters in length.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the RequestId as the ClientToken. The RequestId of each API request may be different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -24,12 +24,10 @@ public class CreateSecurityPolicyRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs a dry run. The system checks the required parameters, the request format, and business limits. If the request fails the check, an error message is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): sends a normal request. After the request passes the check, a 2xx HTTP status code is returned and the operation is performed.</p>
-     * </li>
+     * <li><strong>true</strong>: performs only a dry run and does not create resources. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the dry run, an error is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): sends a normal request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,8 +46,8 @@ public class CreateSecurityPolicyRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The name of the security policy.</p>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, Chinese characters, periods (.), underscores (_), hyphens (-), and spaces. The name must start with a letter, a Chinese character, or a digit.</p>
+     * <p>Policy Name of the security policy.</p>
+     * <p>Policy Name must be 2 to 128 characters in length. It must start with a letter, Chinese character, or digit, and can contain digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,7 +57,7 @@ public class CreateSecurityPolicyRequest extends TeaModel {
     public String securityPolicyName;
 
     /**
-     * <p>The TLS protocol versions that are supported.</p>
+     * <p>The list of supported TLS protocol versions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TLSVersions")
@@ -134,7 +132,7 @@ public class CreateSecurityPolicyRequest extends TeaModel {
 
     public static class CreateSecurityPolicyRequestTag extends TeaModel {
         /**
-         * <p>The tag key. The key can be up to 128 characters long, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key. The key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -143,7 +141,7 @@ public class CreateSecurityPolicyRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. The value can be up to 128 characters long, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value. The value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>product</p>

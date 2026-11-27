@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class CreateRuleRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> value as the <strong>ClientToken</strong> value. The <strong>RequestId</strong> value is different for each API request.</p>
+     * <p>If you do not set this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,9 +20,9 @@ public class CreateRuleRequest extends TeaModel {
     /**
      * <p>The direction of the forwarding rule. Valid values:</p>
      * <ul>
-     * <li><p><strong>Request</strong> (default): The rule matches requests sent from clients to ALB and performs the corresponding actions.</p>
+     * <li><p><strong>Request</strong> (default): matches and processes packets sent from clients to ALB.</p>
      * </li>
-     * <li><p><strong>Response</strong>: The rule matches responses returned from backend server groups to ALB and performs the corresponding actions.</p>
+     * <li><p><strong>Response</strong>: matches and processes packets returned from backend server groups to ALB.</p>
      * </li>
      * </ul>
      * <blockquote>
@@ -36,11 +36,11 @@ public class CreateRuleRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * <li><p><strong>true</strong>: performs only a dry run and does not create the forwarding rule. The system checks whether the required parameters are set, and validates the request format and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, an <code>HTTP 2xx</code> status code is returned and the operation is performed.</p>
+     * <li><p><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, an <code>HTTP 2xx</code> status code is returned and the operation is performed.</p>
      * </li>
      * </ul>
      * 
@@ -51,7 +51,7 @@ public class CreateRuleRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the Application Load Balancing (ALB) instance listener.</p>
+     * <p>The ID of the listener on the Application Load Balancing (ALB) instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,9 +61,9 @@ public class CreateRuleRequest extends TeaModel {
     public String listenerId;
 
     /**
-     * <p>The priority of the forwarding rule. Valid values: <strong>1 to 10000</strong>. A smaller value indicates a higher priority.</p>
+     * <p>The priority of the rule. Valid values: <strong>1</strong> to <strong>10000</strong>. A smaller value indicates a higher priority.</p>
      * <blockquote>
-     * <p>The priority of each rule within a listener must be unique.</p>
+     * <p>The priority of each rule within the same listener must be unique.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -88,10 +88,10 @@ public class CreateRuleRequest extends TeaModel {
     public java.util.List<CreateRuleRequestRuleConditions> ruleConditions;
 
     /**
-     * <p>The name of the forwarding rule. </p>
+     * <p>The forwarding rule name. </p>
      * <ul>
-     * <li>The name must be 2 to 128 characters in length.</li>
-     * <li>The name must start with a letter, Chinese character, or digit. It can contain digits, periods (.), underscores (_), hyphens (-), and spaces.</li>
+     * <li>Must be 2 to 128 characters in length.</li>
+     * <li>Must start with a letter, Chinese character, or digit. Can contain digits, periods (.), underscores (_), hyphens (-), and spaces.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -186,10 +186,10 @@ public class CreateRuleRequest extends TeaModel {
 
     public static class CreateRuleRequestRuleActionsCorsConfig extends TeaModel {
         /**
-         * <p>Specifies whether credentials are allowed. Valid values:</p>
+         * <p>Specifies whether to allow credentials. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: allowed.</li>
-         * <li><strong>off</strong>: not allowed.</li>
+         * <li><strong>on</strong>: yes.</li>
+         * <li><strong>off</strong>: no.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,29 +199,29 @@ public class CreateRuleRequest extends TeaModel {
         public String allowCredentials;
 
         /**
-         * <p>The list of headers allowed for CORS requests.</p>
+         * <p>The list of allowed cross-origin headers.</p>
          */
         @NameInMap("AllowHeaders")
         public java.util.List<String> allowHeaders;
 
         /**
-         * <p>The HTTP methods allowed for CORS requests.</p>
+         * <p>The allowed HTTP methods for cross-origin requests.</p>
          */
         @NameInMap("AllowMethods")
         public java.util.List<String> allowMethods;
 
         /**
-         * <p>The list of allowed origins. You can configure a single element <code>*</code>, or configure one or more values.</p>
+         * <p>The list of allowed origins. You can specify a single asterisk (<code>*</code>) or one or more values.</p>
          * <ul>
-         * <li>Each value must start with <code>http://</code> or <code>https://</code>, followed by a valid domain name or a first-level wildcard domain name (for example, <code>http://*.test.abc.example.com</code>).</li>
-         * <li>Each value can optionally include a port. The port range is <strong>1</strong> to <strong>65535</strong>.</li>
+         * <li>Each value must start with <code>http://</code> or <code>https://</code>, followed by a valid domain name or a first-level wildcard domain name (example: <code>http://*.test.abc.example.com</code>).</li>
+         * <li>You can omit the port or specify a port in the range of <strong>1</strong> to <strong>65535</strong>.</li>
          * </ul>
          */
         @NameInMap("AllowOrigin")
         public java.util.List<String> allowOrigin;
 
         /**
-         * <p>The list of headers that can be exposed.</p>
+         * <p>The list of exposed headers.</p>
          */
         @NameInMap("ExposeHeaders")
         public java.util.List<String> exposeHeaders;
@@ -293,7 +293,7 @@ public class CreateRuleRequest extends TeaModel {
 
     public static class CreateRuleRequestRuleActionsFixedResponseConfig extends TeaModel {
         /**
-         * <p>The fixed content to return. The content can be up to 1 KB in size and can contain only ASCII characters.</p>
+         * <p>The fixed content to return. The maximum size is 1 KB. Only ASCII characters are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>dssacav</p>
@@ -302,8 +302,7 @@ public class CreateRuleRequest extends TeaModel {
         public String content;
 
         /**
-         * <p>The format of the fixed content.</p>
-         * <p>Valid values: <strong>text/plain</strong>, <strong>text/css</strong>, <strong>text/html</strong>, <strong>application/javascript</strong>, and <strong>application/json</strong>.</p>
+         * <p>The format of the fixed content to return. Valid values: <strong>text/plain</strong>, <strong>text/css</strong>, <strong>text/html</strong>, <strong>application/javascript</strong>, and <strong>application/json</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>text/plain</p>
@@ -312,7 +311,7 @@ public class CreateRuleRequest extends TeaModel {
         public String contentType;
 
         /**
-         * <p>The HTTP response code to return. Only <strong>2xx</strong>, <strong>4xx</strong>, and <strong>5xx</strong> numeric strings are supported, where <strong>x</strong> is any digit.</p>
+         * <p>The HTTP status code to return. Only numeric strings in the format of <strong>2xx</strong>, <strong>4xx</strong>, or <strong>5xx</strong> are supported, where <strong>x</strong> represents any digit.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -355,8 +354,8 @@ public class CreateRuleRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable session persistence. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enabled.</li>
-         * <li><strong>false</strong> (default): disabled.</li>
+         * <li><strong>true</strong>: enables session persistence.</li>
+         * <li><strong>false</strong> (default): disables session persistence.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -408,12 +407,10 @@ public class CreateRuleRequest extends TeaModel {
         public String serverGroupId;
 
         /**
-         * <p>The weight. A larger value indicates a higher weight, which means more requests are forwarded to the server group. Valid values: <strong>0</strong> to <strong>100</strong>.</p>
+         * <p>The weight. A greater value indicates a higher weight, which means that more requests are forwarded to the server group. Valid values: <strong>0</strong> to <strong>100</strong>.</p>
          * <ul>
-         * <li><p>If only one destination server group is specified and no weight is specified, the default value is <strong>100</strong>.</p>
-         * </li>
-         * <li><p>If more than one destination server group is specified, you must specify the weight value.</p>
-         * </li>
+         * <li>If only one destination server group is specified and the weight is not specified, the default value is <strong>100</strong>.</li>
+         * <li>If more than one destination server group is specified, you must specify the weight for each server group.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -447,13 +444,13 @@ public class CreateRuleRequest extends TeaModel {
 
     public static class CreateRuleRequestRuleActionsForwardGroupConfig extends TeaModel {
         /**
-         * <p>The session persistence configuration between server groups.</p>
+         * <p>The session persistence configuration across server groups.</p>
          */
         @NameInMap("ServerGroupStickySession")
         public CreateRuleRequestRuleActionsForwardGroupConfigServerGroupStickySession serverGroupStickySession;
 
         /**
-         * <p>The list of destination server groups to which requests are forwarded. A maximum of 5 destination server groups can be added to a forwarding rule.</p>
+         * <p>The list of destination server groups to which requests are forwarded. You can add up to five destination server groups in a forwarding rule.</p>
          */
         @NameInMap("ServerGroupTuples")
         public java.util.List<CreateRuleRequestRuleActionsForwardGroupConfigServerGroupTuples> serverGroupTuples;
@@ -483,9 +480,9 @@ public class CreateRuleRequest extends TeaModel {
 
     public static class CreateRuleRequestRuleActionsInsertHeaderConfig extends TeaModel {
         /**
-         * <p>The name of the header field to insert. The name must be 1 to 40 characters in length and can contain lowercase and uppercase letters a to z, digits, underscores (_), and hyphens (-). The header field name specified in <strong>InsertHeaderConfig</strong> must be unique.</p>
+         * <p>The name of the header to insert. The name must be 1 to 40 characters in length and can contain letters, digits, underscores (_), and hyphens (-). Header names in <strong>InsertHeaderConfig</strong> must be unique.</p>
          * <blockquote>
-         * <p>You cannot set the header name to the following fields (case-insensitive): <code>slb-id</code>, <code>slb-ip</code>, <code>x-forwarded-for</code>, <code>x-forwarded-proto</code>, <code>x-forwarded-eip</code>, <code>x-forwarded-port</code>, <code>x-forwarded-client-srcport</code>, <code>connection</code>, <code>upgrade</code>, <code>content-length</code>, <code>transfer-encoding</code>, <code>keep-alive</code>, <code>te</code>, <code>host</code>, <code>cookie</code>, <code>remoteip</code>, <code>authority</code>, <code>x-forwarded-host</code>.</p>
+         * <p>You cannot set the header name to any of the following fields (case-insensitive): <code>slb-id</code>, <code>slb-ip</code>, <code>x-forwarded-for</code>, <code>x-forwarded-proto</code>, <code>x-forwarded-eip</code>, <code>x-forwarded-port</code>, <code>x-forwarded-client-srcport</code>, <code>connection</code>, <code>upgrade</code>, <code>content-length</code>, <code>transfer-encoding</code>, <code>keep-alive</code>, <code>te</code>, <code>host</code>, <code>cookie</code>, <code>remoteip</code>, <code>authority</code>, and <code>x-forwarded-host</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -495,18 +492,18 @@ public class CreateRuleRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the header field to insert.</p>
+         * <p>The value of the header to insert.</p>
          * <ul>
          * <li>If <strong>ValueType</strong> is set to <strong>SystemDefined</strong>, valid values are:<ul>
          * <li><strong>ClientSrcPort</strong>: the client port.</li>
          * <li><strong>ClientSrcIp</strong>: the client IP address.</li>
          * <li><strong>Protocol</strong>: the protocol used by the client request (HTTP or HTTPS).</li>
-         * <li><strong>SLBId</strong>: the Application Load Balancing instance ID.</li>
-         * <li><strong>SLBPort</strong>: the Application Load Balancing instance listener port.</li>
+         * <li><strong>SLBId</strong>: the instance ID of the application load balancing instance.</li>
+         * <li><strong>SLBPort</strong>: the listener port of the application load balancing instance.</li>
          * </ul>
          * </li>
-         * <li>If <strong>ValueType</strong> is set to <strong>UserDefined</strong>: you can specify a custom header value. The value must be 1 to 128 characters in length and can contain wildcards asterisks (\*), question marks (?), and printable characters in the ASCII range <code>ch &gt;= 32 &amp;&amp; ch &lt; 127</code>. The value cannot contain <code>&quot;</code>. The value cannot start or end with a space. The value cannot end with <code>\\</code>.</li>
-         * <li>If <strong>ValueType</strong> is set to <strong>ReferenceHeader</strong>: you can reference a field in the request header. The value must be 1 to 128 characters in length and can contain lowercase letters a to z, digits, hyphens (-), and underscores (_).</li>
+         * <li>If <strong>ValueType</strong> is set to <strong>UserDefined</strong>, you can customize the header value. The value must be 1 to 128 characters in length and can contain asterisks (*), question marks (?), and printable ASCII characters whose ASCII values are <code>ch &gt;= 32 &amp;&amp; ch &lt; 127</code>. Double quotation marks (&quot;) are not supported. The value cannot start or end with a space, and cannot end with a backslash ().</li>
+         * <li>If <strong>ValueType</strong> is set to <strong>ReferenceHeader</strong>, you can reference a field in the request header. The value must be 1 to 128 characters in length and can contain lowercase letters, digits, hyphens (-), and underscores (_).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -516,14 +513,11 @@ public class CreateRuleRequest extends TeaModel {
         public String value;
 
         /**
-         * <p>The content type of the header field value. Valid values:</p>
+         * <p>The content type of the header field. Valid values:</p>
          * <ul>
-         * <li><p><strong>UserDefined</strong>: a custom value.</p>
-         * </li>
-         * <li><p><strong>ReferenceHeader</strong>: references a field in the request header.</p>
-         * </li>
-         * <li><p><strong>SystemDefined</strong>: a system-defined value.</p>
-         * </li>
+         * <li><strong>UserDefined</strong>: a custom header value.</li>
+         * <li><strong>ReferenceHeader</strong>: a referenced value from a field in the request header.</li>
+         * <li><strong>SystemDefined</strong>: a system-defined header value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -567,13 +561,13 @@ public class CreateRuleRequest extends TeaModel {
         /**
          * <p>The host to which requests are redirected. Valid values:</p>
          * <ul>
-         * <li><strong>${host}</strong> (default): This value cannot be concatenated with other characters.</li>
-         * <li>Other values. Character set and format restrictions are as follows:<ul>
-         * <li>The hostname must be 3 to 256 characters in length and can contain lowercase letters a to z, digits, hyphens (-), periods (.), and wildcards asterisks (\*), equals signs (=), tildes (~), underscores (_), plus signs (+), backslashes (\), carets (^), exclamation marks (!), dollar signs ($), ampersands (&amp;), vertical bars (|), parentheses (()), brackets ([\]), and question marks (?).</li>
-         * <li>The hostname must contain at least one period (.) and cannot start or end with a period (.).</li>
-         * <li>The rightmost domain label can contain only letters and wildcards, and cannot contain digits or hyphens (-). The leftmost <code>domainlable</code> can be an asterisk (\*).</li>
-         * <li>Hyphens (-) cannot appear at the beginning or end of other domain labels.</li>
-         * <li>Wildcards asterisks (\*) and question marks (?) can appear at any position in a domain label.</li>
+         * <li><strong>${host}</strong> (default): If this value is used, it cannot be concatenated with other characters.</li>
+         * <li>Other values: The character set and format requirements are as follows:<ul>
+         * <li>The hostname must be 3 to 256 characters in length and can contain lowercase letters, digits, hyphens (-), periods (.), asterisks (*), equal signs (=), tildes (~), underscores (_), plus signs (+), backslashes (), carets (^), exclamation marks (!), dollar signs ($), ampersands (&amp;), vertical bars (|), parentheses (()), square brackets ([]), and question marks (?).</li>
+         * <li>The hostname must contain at least one period (.), and the period (.) cannot be at the beginning or end.</li>
+         * <li>The rightmost domain label can contain only letters and wildcards, and cannot contain digits or hyphens (-). The leftmost <code>domainlabel</code> can be an asterisk (*).</li>
+         * <li>A hyphen (-) cannot be at the beginning or end of other domain labels.</li>
+         * <li>Asterisks (*) and question marks (?) can appear anywhere in a domain label.</li>
          * </ul>
          * </li>
          * </ul>
@@ -585,7 +579,7 @@ public class CreateRuleRequest extends TeaModel {
         public String host;
 
         /**
-         * <p>The redirect type. Valid values: <strong>301</strong>, <strong>302</strong>, <strong>303</strong>, <strong>307</strong>, and <strong>308</strong>.</p>
+         * <p>The HTTP status code for the redirect. Valid values: <strong>301</strong>, <strong>302</strong>, <strong>303</strong>, <strong>307</strong>, and <strong>308</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>301</p>
@@ -596,10 +590,10 @@ public class CreateRuleRequest extends TeaModel {
         /**
          * <p>The path to which requests are redirected. Valid values:</p>
          * <ul>
-         * <li><strong>${path}</strong> (default): You can reference <strong>${host}</strong>, <strong>${protocol}</strong>, and <strong>${port}</strong>. Each variable can appear at most once. These variables can be used together or concatenated with characters within the allowed character set described below.</li>
-         * <li>Other values. Character set and format restrictions are as follows:<ul>
-         * <li>The value must be 1 to 256 characters in length, is case-sensitive, and supports wildcards asterisks (\*) and question marks (?) as wildcards.</li>
-         * <li>The value must start with a forward slash (/), and can contain uppercase and lowercase letters, digits, and special characters <code>$-_.+/&amp;~@:\\&quot;*?</code>. The value cannot contain <code>&quot;%#;!()[]^,&quot;\\&quot;</code>. Wildcards asterisks (\*) and question marks (?) are supported.</li>
+         * <li><strong>${path}</strong> (default): You can reference <strong>${host}</strong>, <strong>${protocol}</strong>, and <strong>${port}</strong>. Each variable can appear at most once. These variables can be used together or concatenated with strings within the allowed character set listed below.</li>
+         * <li>Other values: The character set and format requirements are as follows:<ul>
+         * <li>The path must be 1 to 256 characters in length and is case-sensitive. Asterisks (*) and question marks (?) are supported as wildcards.</li>
+         * <li>The path must start with a forward slash (/) and can contain letters, digits, and the following special characters: <code>$-_.+/&amp;~@:\&quot;*?</code>. The following characters are not supported: <code>&quot;</code>, <code>%</code>, <code>#</code>, <code>;</code>, <code>!</code>, <code>(</code>, <code>)</code>, <code>[</code>, <code>]</code>, <code>^</code>, <code>,</code>, and <code>\</code>. Asterisks (*) and question marks (?) are also supported.</li>
          * </ul>
          * </li>
          * </ul>
@@ -611,10 +605,10 @@ public class CreateRuleRequest extends TeaModel {
         public String path;
 
         /**
-         * <p>The port to which requests are redirected.</p>
+         * <p>The port to which requests are redirected. Valid values:</p>
          * <ul>
          * <li><strong>${port}</strong> (default): This value cannot be used together with other characters.</li>
-         * <li>Other values: <strong>1 to 63335</strong>.</li>
+         * <li>Other values: <strong>1</strong> to <strong>63335</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -626,12 +620,12 @@ public class CreateRuleRequest extends TeaModel {
         /**
          * <p>The protocol to which requests are redirected. Valid values:</p>
          * <ul>
-         * <li><strong>${protocol}</strong> (default): This value can only be used alone and cannot be modified or concatenated with other characters.</li>
+         * <li><strong>${protocol}</strong> (default): This value can only be used independently and cannot be modified or concatenated with other characters.</li>
          * <li><strong>HTTP</strong></li>
          * <li><strong>HTTPS</strong><blockquote>
          * <ul>
-         * <li>HTTPS listeners support redirection to HTTPS only.</li>
-         * <li>HTTP listeners support redirection to both HTTP and HTTPS.</li>
+         * <li>HTTPS listeners support redirection only to the HTTPS protocol.</li>
+         * <li>HTTP listeners support redirection to both HTTP and HTTPS protocols.</li>
          * </ul>
          * </blockquote>
          * </li>
@@ -644,12 +638,12 @@ public class CreateRuleRequest extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The query string to which requests are redirected.</p>
+         * <p>The query string to which requests are redirected. Valid values:</p>
          * <ul>
-         * <li><strong>${query}</strong> (default): You can reference <strong>${host}</strong>, <strong>${protocol}</strong>, and <strong>${port}</strong>. Each variable can appear at most once. These variables can be used together or concatenated with characters within the allowed character set described below.</li>
-         * <li>Other values. Character set and format restrictions are as follows:<ul>
-         * <li>The value must be 1 to 128 characters in length.</li>
-         * <li>The value can contain printable characters but cannot contain spaces or <code>#[]{}\\|&lt;&gt;&quot;</code>. Letters must be lowercase.</li>
+         * <li><strong>${query}</strong> (default): You can reference <strong>${host}</strong>, <strong>${protocol}</strong>, and <strong>${port}</strong>. Each variable can appear at most once. These variables can be used together or concatenated with strings within the allowed character set listed below.</li>
+         * <li>Other values: The character set and format requirements are as follows:<ul>
+         * <li>The query string must be 1 to 128 characters in length.</li>
+         * <li>Visible characters are supported. Spaces and <code>#[]{}\|&lt;&gt;&quot;</code> are not supported. Letters must be lowercase.</li>
          * </ul>
          * </li>
          * </ul>
@@ -717,10 +711,10 @@ public class CreateRuleRequest extends TeaModel {
 
     public static class CreateRuleRequestRuleActionsRemoveHeaderConfig extends TeaModel {
         /**
-         * <p>The name of the header field to remove. The name must be 1 to 40 characters in length and can contain uppercase and lowercase letters a to z, digits, underscores (_), and hyphens (-). The header field name cannot be duplicated in RemoveHeader.</p>
+         * <p>The name of the header to remove. The name must be 1 to 40 characters in length and can contain letters, digits, underscores (_), and hyphens (-). Header names in RemoveHeader must be unique.</p>
          * <ul>
-         * <li>Request direction (Direction is set to Request): You cannot set the header name to the following fields (case-insensitive): <code>slb-id</code>, <code>slb-ip</code>, <code>x-forwarded-for</code>, <code>x-forwarded-proto</code>, <code>x-forwarded-eip</code>, <code>x-forwarded-port</code>, <code>x-forwarded-client-srcport</code>, <code>connection</code>, <code>upgrade</code>, <code>content-length</code>, <code>transfer-encoding</code>, <code>keep-alive</code>, <code>te</code>, <code>host</code>, <code>cookie</code>, <code>remoteip</code>, <code>authority</code>, <code>x-forwarded-host</code>.</li>
-         * <li>Response direction (Direction is set to Response): You cannot set the header name to the following fields (case-insensitive): <code>connection</code>, <code>upgrade</code>, <code>content-length</code>, <code>transfer-encoding</code>.</li>
+         * <li>Request direction (when Direction is set to Request): You cannot set the header name to any of the following fields (case-insensitive): <code>slb-id</code>, <code>slb-ip</code>, <code>x-forwarded-for</code>, <code>x-forwarded-proto</code>, <code>x-forwarded-eip</code>, <code>x-forwarded-port</code>, <code>x-forwarded-client-srcport</code>, <code>connection</code>, <code>upgrade</code>, <code>content-length</code>, <code>transfer-encoding</code>, <code>keep-alive</code>, <code>te</code>, <code>host</code>, <code>cookie</code>, <code>remoteip</code>, <code>authority</code>, and <code>x-forwarded-host</code>.</li>
+         * <li>Response direction (when Direction is set to Response): You cannot set the header name to any of the following fields (case-insensitive): <code>connection</code>, <code>upgrade</code>, <code>content-length</code>, and <code>transfer-encoding</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -746,20 +740,14 @@ public class CreateRuleRequest extends TeaModel {
 
     public static class CreateRuleRequestRuleActionsRewriteConfig extends TeaModel {
         /**
-         * <p>The destination hostname for internal redirection. Valid values:</p>
+         * <p>The destination host for the internal rewrite. Valid values:</p>
          * <ul>
-         * <li><p><strong>${host}</strong> (default): This value cannot be concatenated with other characters.</p>
-         * </li>
-         * <li><p>Other values. Character set and format restrictions are as follows:</p>
-         * <ul>
-         * <li><p>The hostname must be 3 to 256 characters in length and can contain lowercase letters a to z, digits, hyphens (-), periods (.), and wildcards asterisks (\*), equals signs (=), tildes (~), underscores (_), plus signs (+), backslashes (\), carets (^), exclamation marks (!), dollar signs ($), ampersands (&amp;), vertical bars (|), parentheses (()), brackets ([\]), and question marks (?).</p>
-         * </li>
-         * <li><p>The hostname must contain at least one period (.) and cannot start or end with a period (.).</p>
-         * </li>
-         * <li><p>The rightmost domain label can contain only letters and wildcards, and cannot contain digits or hyphens (-). The leftmost <code>domainlable</code> can be an asterisk (\*).</p>
-         * </li>
-         * <li><p>Hyphens (-) cannot appear at the beginning or end of other domain labels. Wildcards asterisks (\*) and question marks (?) can appear at any position in a domain label.</p>
-         * </li>
+         * <li><strong>${host}</strong> (default): This value cannot be concatenated with other characters.</li>
+         * <li>Other values: The character format requirements are as follows:<ul>
+         * <li>The hostname must be 3 to 256 characters in length and can contain lowercase letters, digits, hyphens (-), periods (.), asterisks (*), equal signs (=), tildes (~), underscores (_), plus signs (+), backslashes (), carets (^), exclamation marks (!), dollar signs ($), ampersands (&amp;), vertical bars (|), parentheses (()), square brackets ([]), and question marks (?).</li>
+         * <li>The hostname must contain at least one period (.), and the period (.) cannot be at the beginning or end.</li>
+         * <li>The rightmost domain label can contain only letters and wildcards, and cannot contain digits or hyphens (-). The leftmost <code>domainlabel</code> can be an asterisk (*).</li>
+         * <li>A hyphen (-) cannot be at the beginning or end of other domain labels. Asterisks (*) and question marks (?) can appear anywhere in a domain label.</li>
          * </ul>
          * </li>
          * </ul>
@@ -773,10 +761,10 @@ public class CreateRuleRequest extends TeaModel {
         /**
          * <p>The path to which requests are redirected. Valid values:</p>
          * <ul>
-         * <li><strong>${path}</strong> (default): You can reference <strong>${host}</strong>, <strong>${protocol}</strong>, and <strong>${port}</strong>. Each variable can appear at most once. These variables can be used together or concatenated with characters within the allowed character set described below.</li>
-         * <li>Other values. Character set and format restrictions are as follows:<ul>
-         * <li>The value must be 1 to 256 characters in length, is case-sensitive, and supports wildcards asterisks (\*) and question marks (?) as wildcards.</li>
-         * <li>The value must start with a forward slash (/), and can contain uppercase and lowercase letters, digits, and special characters <code>$-_.+/&amp;~@:\\&quot;*?</code>. The value cannot contain <code>&quot;%#;!()[]^,&quot;\\&quot;</code>. Wildcards asterisks (\*) and question marks (?) are supported.</li>
+         * <li><strong>${path}</strong> (default): You can reference <strong>${host}</strong>, <strong>${protocol}</strong>, and <strong>${port}</strong>. Each variable can appear at most once. These variables can be used together or concatenated with strings within the allowed character set listed below.</li>
+         * <li>Other values: The character set and format requirements are as follows:<ul>
+         * <li>The path must be 1 to 256 characters in length and is case-sensitive. Asterisks (*) and question marks (?) are supported as wildcards.</li>
+         * <li>The path must start with a forward slash (/) and can contain letters, digits, and the following special characters: <code>$-_.+/&amp;~@:\&quot;*?</code>. The following characters are not supported: <code>&quot;</code>, <code>%</code>, <code>#</code>, <code>;</code>, <code>!</code>, <code>(</code>, <code>)</code>, <code>[</code>, <code>]</code>, <code>^</code>, <code>,</code>, and <code>\</code>. Asterisks (*) and question marks (?) are also supported.</li>
          * </ul>
          * </li>
          * </ul>
@@ -788,12 +776,12 @@ public class CreateRuleRequest extends TeaModel {
         public String path;
 
         /**
-         * <p>The query string for internal redirection.</p>
+         * <p>The query string for the internal rewrite. Valid values:</p>
          * <ul>
-         * <li><strong>${query}</strong> (default): You can reference <strong>${host}</strong>, <strong>${protocol}</strong>, and <strong>${port}</strong>. Each variable can appear at most once. These variables can be used together or concatenated with characters within the allowed character set described below.</li>
-         * <li>Other values. Character set and format restrictions are as follows:<ul>
-         * <li>The value must be 1 to 128 characters in length.</li>
-         * <li>The value can contain printable characters but cannot contain spaces or <code>#[]{}\\|&lt;&gt;&quot;</code>. Letters must be lowercase.</li>
+         * <li><strong>${query}</strong> (default): You can reference <strong>${host}</strong>, <strong>${protocol}</strong>, and <strong>${port}</strong>. Each variable can appear at most once. These variables can be used together or concatenated with strings within the allowed character set listed below.</li>
+         * <li>Other values: The character set and format requirements are as follows:<ul>
+         * <li>The query string must be 1 to 128 characters in length.</li>
+         * <li>Visible characters are supported. Spaces and <code>#[]{}\|&lt;&gt;&quot;</code> are not supported. Letters must be lowercase.</li>
          * </ul>
          * </li>
          * </ul>
@@ -837,9 +825,9 @@ public class CreateRuleRequest extends TeaModel {
 
     public static class CreateRuleRequestRuleActionsTrafficLimitConfig extends TeaModel {
         /**
-         * <p>The number of requests per second per IP address. Valid values: <strong>1 to 1000000</strong>.</p>
+         * <p>The number of queries per second from a single IP address. Valid values: <strong>1</strong> to <strong>1000000</strong>.</p>
          * <blockquote>
-         * <p>If you configure both the <strong>QPS</strong> and <strong>PerIpQps</strong> parameters, the value of <strong>PerIpQps</strong> must be smaller than the value of <strong>QPS</strong>.</p>
+         * <p>If the <strong>QPS</strong> parameter is also configured, the value of <strong>PerIpQps</strong> must be less than the value of <strong>QPS</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -849,7 +837,7 @@ public class CreateRuleRequest extends TeaModel {
         public Integer perIpQps;
 
         /**
-         * <p>The number of requests per second. Valid values: <strong>1 to 1000000</strong>.</p>
+         * <p>The number of queries per second (QPS). Valid values: <strong>1</strong> to <strong>1000000</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -882,7 +870,7 @@ public class CreateRuleRequest extends TeaModel {
 
     public static class CreateRuleRequestRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples extends TeaModel {
         /**
-         * <p>The server group ID.</p>
+         * <p>The ID of the server group.</p>
          * 
          * <strong>example:</strong>
          * <p>sgp-00mkgijak0w4qgz9****</p>
@@ -935,7 +923,7 @@ public class CreateRuleRequest extends TeaModel {
         public CreateRuleRequestRuleActionsTrafficMirrorConfigMirrorGroupConfig mirrorGroupConfig;
 
         /**
-         * <p>The type of the mirror target. Valid values:</p>
+         * <p>The target type for traffic mirroring. Valid values:</p>
          * <ul>
          * <li><strong>ForwardGroupMirror</strong>: mirrors traffic to a server group.</li>
          * </ul>
@@ -977,25 +965,25 @@ public class CreateRuleRequest extends TeaModel {
         public CreateRuleRequestRuleActionsCorsConfig corsConfig;
 
         /**
-         * <p>The configuration of the fixed response.</p>
+         * <p>The fixed response content configuration.</p>
          */
         @NameInMap("FixedResponseConfig")
         public CreateRuleRequestRuleActionsFixedResponseConfig fixedResponseConfig;
 
         /**
-         * <p>The list of destination server groups to which requests are forwarded. A maximum of 5 destination server groups can be added to a forwarding rule.</p>
+         * <p>The list of destination server groups to which requests are forwarded. You can add up to five destination server groups in a forwarding rule.</p>
          */
         @NameInMap("ForwardGroupConfig")
         public CreateRuleRequestRuleActionsForwardGroupConfig forwardGroupConfig;
 
         /**
-         * <p>The configuration for inserting a header field.</p>
+         * <p>The configuration for inserting an HTTP header.</p>
          */
         @NameInMap("InsertHeaderConfig")
         public CreateRuleRequestRuleActionsInsertHeaderConfig insertHeaderConfig;
 
         /**
-         * <p>The order in which the forwarding rule action is executed. Valid values: <strong>1 to 50000</strong>. Actions are executed in ascending order of values. This parameter cannot be left empty and the value cannot be duplicated.</p>
+         * <p>The execution order of the forwarding rule action. Valid values: <strong>1</strong> to <strong>50000</strong>. Actions are executed in ascending order of their values. The value cannot be empty and must be unique.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1007,14 +995,14 @@ public class CreateRuleRequest extends TeaModel {
         /**
          * <p>The redirect configuration.</p>
          * <blockquote>
-         * <p>For the parameters in <strong>RedirectConfig</strong>, parameters other than <strong>httpCode</strong> cannot all use default values.</p>
+         * <p>For the parameters in <strong>RedirectConfig</strong>, you cannot use default values for all parameters except <strong>HttpCode</strong>.</p>
          * </blockquote>
          */
         @NameInMap("RedirectConfig")
         public CreateRuleRequestRuleActionsRedirectConfig redirectConfig;
 
         /**
-         * <p>The configuration for removing an HTTP header field.</p>
+         * <p>The configuration for removing an HTTP header.</p>
          */
         @NameInMap("RemoveHeaderConfig")
         public CreateRuleRequestRuleActionsRemoveHeaderConfig removeHeaderConfig;
@@ -1022,7 +1010,7 @@ public class CreateRuleRequest extends TeaModel {
         /**
          * <p>The rewrite configuration.</p>
          * <blockquote>
-         * <p>When you configure multiple actions for a forwarding rule, the <strong>RewriteConfig</strong> action must be used together with the <strong>ForwardGroup</strong> action type.</p>
+         * <p>If multiple actions are configured in the same forwarding rule, the <strong>RewriteConfig</strong> action must be used together with the <strong>ForwardGroup</strong> action type.</p>
          * </blockquote>
          */
         @NameInMap("RewriteConfig")
@@ -1043,27 +1031,27 @@ public class CreateRuleRequest extends TeaModel {
         /**
          * <p>The action type. Valid values:</p>
          * <ul>
-         * <li><p><strong>ForwardGroup</strong>: forwards requests to multiple virtual services.</p>
+         * <li><p><strong>ForwardGroup</strong>: forward requests to multiple virtual services.</p>
          * </li>
-         * <li><p><strong>Redirect</strong>: redirects requests.</p>
+         * <li><p><strong>Redirect</strong>: redirect requests.</p>
          * </li>
-         * <li><p><strong>FixedResponse</strong>: returns a fixed response.</p>
+         * <li><p><strong>FixedResponse</strong>: return a fixed response.</p>
          * </li>
-         * <li><p><strong>Rewrite</strong>: rewrites requests.</p>
+         * <li><p><strong>Rewrite</strong>: rewrite requests.</p>
          * </li>
-         * <li><p><strong>InsertHeader</strong>: inserts a header field.</p>
+         * <li><p><strong>InsertHeader</strong>: insert an HTTP header.</p>
          * </li>
-         * <li><p><strong>RemoveHeader</strong>: deletes a header field.</p>
+         * <li><p><strong>RemoveHeader</strong>: delete an HTTP header.</p>
          * </li>
-         * <li><p><strong>TrafficLimit</strong>: throttles traffic.</p>
+         * <li><p><strong>TrafficLimit</strong>: limit traffic.</p>
          * </li>
-         * <li><p><strong>TrafficMirror</strong>: mirrors traffic.</p>
+         * <li><p><strong>TrafficMirror</strong>: mirror traffic.</p>
          * </li>
-         * <li><p><strong>Cors</strong>: enables cross-origin resource sharing (CORS).</p>
+         * <li><p><strong>Cors</strong>: configure cross-origin resource sharing (CORS).</p>
          * </li>
          * </ul>
          * <blockquote>
-         * <p>A forwarding rule must contain one <strong>ForwardGroup</strong> (forward to), <strong>Redirect</strong> (redirect), or <strong>FixedResponse</strong> (return a fixed response) action. When this action coexists with other action types, it must be executed last.</p>
+         * <p>A forwarding rule must contain at least one <strong>ForwardGroup</strong>, <strong>Redirect</strong>, or <strong>FixedResponse</strong> action. If it is used together with other action types, it must be executed last.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -1172,9 +1160,9 @@ public class CreateRuleRequest extends TeaModel {
         /**
          * <p>The cookie key.</p>
          * <ul>
-         * <li>The value must be 1 to 100 characters in length.</li>
-         * <li>The value can contain printable characters, wildcards asterisks (\*), and question marks (?). Letters must be lowercase.</li>
-         * <li>The value cannot contain spaces or <code>;#[]{}\\|&lt;&gt;&amp;&quot;</code>.</li>
+         * <li>Must be 1 to 100 characters in length.</li>
+         * <li>Supports visible characters, the asterisk (*) wildcard, and the half-width question mark (?). Letters must be lowercase.</li>
+         * <li>Does not support spaces or the following characters: <code>;#[]{}\|&lt;&gt;&amp;&quot;</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1186,9 +1174,9 @@ public class CreateRuleRequest extends TeaModel {
         /**
          * <p>The cookie value.</p>
          * <ul>
-         * <li>The value must be 1 to 100 characters in length.</li>
-         * <li>The value can contain printable characters, wildcards asterisks (\*), and question marks (?). Letters must be lowercase.</li>
-         * <li>The value cannot contain spaces or <code>;#[]{}\\|&lt;&gt;&amp;&quot;</code>.</li>
+         * <li>Must be 1 to 100 characters in length.</li>
+         * <li>Supports visible characters, the asterisk (*) wildcard, and the half-width question mark (?). Letters must be lowercase.</li>
+         * <li>Does not support spaces or the following characters: <code>;#[]{}\|&lt;&gt;&amp;&quot;</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1246,9 +1234,9 @@ public class CreateRuleRequest extends TeaModel {
         /**
          * <p>The header field key.</p>
          * <ul>
-         * <li>The value must be 1 to 40 characters in length.</li>
-         * <li>The value can contain letters a to z, digits, hyphens (-), and underscores (_).</li>
-         * <li>Cookie and Host are not supported.</li>
+         * <li>Supports 1 to 40 characters.</li>
+         * <li>Supports lowercase letters a to z, digits, hyphens (-), and underscores (_).</li>
+         * <li>Does not support Cookie and Host.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1356,8 +1344,8 @@ public class CreateRuleRequest extends TeaModel {
         /**
          * <p>The query string key.</p>
          * <ul>
-         * <li>The value must be 1 to 100 characters in length.</li>
-         * <li>The value can contain printable characters, wildcards asterisks (\*), and question marks (?). Letters must be lowercase. The value cannot contain spaces or <code>#[]{}\\|&lt;&gt;&amp;&quot;</code>.</li>
+         * <li>Must be 1 to 100 characters in length.</li>
+         * <li>Supports visible characters, wildcard asterisks (*), and half-width question marks (?). Letters must be lowercase. Does not support spaces or the following characters: <code>#[]{}\|&lt;&gt;&amp;&quot;</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1369,8 +1357,8 @@ public class CreateRuleRequest extends TeaModel {
         /**
          * <p>The query string value.</p>
          * <ul>
-         * <li>The value must be 1 to 128 characters in length.</li>
-         * <li>The value can contain lowercase letters, printable characters, wildcards asterisks (\*), and question marks (?). The value cannot contain spaces or <code>#[]{}\\|&lt;&gt;&amp;&quot;</code>.</li>
+         * <li>Must be 1 to 128 characters in length.</li>
+         * <li>Supports lowercase letters, visible characters, wildcard asterisks (*), and half-width question marks (?). Does not support spaces or the following characters: <code>#[]{}\|&lt;&gt;&amp;&quot;</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1428,9 +1416,9 @@ public class CreateRuleRequest extends TeaModel {
         /**
          * <p>The header field key.</p>
          * <ul>
-         * <li>The key must be 1 to 40 characters in length.</li>
-         * <li>The key can contain lowercase letters, digits, hyphens (-), and underscores (_).</li>
-         * <li>Cookie and Host are not supported.</li>
+         * <li>Must be 1 to 40 characters in length.</li>
+         * <li>Supports lowercase letters a to z, digits, hyphens (-), and underscores (_).</li>
+         * <li>Does not support Cookie and Host.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1492,7 +1480,7 @@ public class CreateRuleRequest extends TeaModel {
 
     public static class CreateRuleRequestRuleConditionsSourceIpConfig extends TeaModel {
         /**
-         * <p>The list of source IP addresses for service traffic matching.</p>
+         * <p>The list of source IP-based service traffic matching conditions.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;
@@ -1526,7 +1514,7 @@ public class CreateRuleRequest extends TeaModel {
         public CreateRuleRequestRuleConditionsHeaderConfig headerConfig;
 
         /**
-         * <p>The hostname configuration.</p>
+         * <p>The host configuration.</p>
          */
         @NameInMap("HostConfig")
         public CreateRuleRequestRuleConditionsHostConfig hostConfig;
@@ -1550,44 +1538,43 @@ public class CreateRuleRequest extends TeaModel {
         public CreateRuleRequestRuleConditionsQueryStringConfig queryStringConfig;
 
         /**
-         * <p>The response header configuration.</p>
+         * <p>The header condition configuration.</p>
          */
         @NameInMap("ResponseHeaderConfig")
         public CreateRuleRequestRuleConditionsResponseHeaderConfig responseHeaderConfig;
 
         /**
-         * <p>The response status code configuration.
-         * [_single.params.RuleConditions.items.ResponseStatusCodeConfig.Values.</p>
+         * <p>The response status code configuration.</p>
          */
         @NameInMap("ResponseStatusCodeConfig")
         public CreateRuleRequestRuleConditionsResponseStatusCodeConfig responseStatusCodeConfig;
 
         /**
-         * <p>The configuration for source IP-based service traffic matching. This parameter is required and takes effect only when <strong>Type</strong> is set to <strong>SourceIP</strong>.</p>
+         * <p>The source IP-based service traffic matching configuration. Required and valid only when <strong>Type</strong> is set to <strong>SourceIP</strong>.</p>
          */
         @NameInMap("SourceIpConfig")
         public CreateRuleRequestRuleConditionsSourceIpConfig sourceIpConfig;
 
         /**
-         * <p>The type of the forwarding rule. Valid values:</p>
+         * <p>The forwarding rule type. Valid values:</p>
          * <ul>
-         * <li><p><strong>Host</strong>: host.</p>
+         * <li><p><strong>Host</strong>: Host.</p>
          * </li>
-         * <li><p><strong>Path</strong>: path.</p>
+         * <li><p><strong>Path</strong>: Path.</p>
          * </li>
-         * <li><p><strong>Header</strong>: HTTP header field.</p>
+         * <li><p><strong>Header</strong>: HTTP header fields.</p>
          * </li>
-         * <li><p><strong>QueryString</strong>: query string.</p>
+         * <li><p><strong>QueryString</strong>: Query string.</p>
          * </li>
-         * <li><p><strong>Method</strong>: request method.</p>
+         * <li><p><strong>Method</strong>: Request method.</p>
          * </li>
-         * <li><p><strong>Cookie</strong>: cookie.</p>
+         * <li><p><strong>Cookie</strong>: Cookie.</p>
          * </li>
-         * <li><p><strong>SourceIp</strong>: source IP address.</p>
+         * <li><p><strong>SourceIp</strong>: Source IP address.</p>
          * </li>
-         * <li><p><strong>ResponseHeader</strong>: response HTTP header field.</p>
+         * <li><p><strong>ResponseHeader</strong>: Response HTTP header fields.</p>
          * </li>
-         * <li><p><strong>ResponseStatusCode</strong>: response status code.</p>
+         * <li><p><strong>ResponseStatusCode</strong>: Response status code.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -1687,7 +1674,7 @@ public class CreateRuleRequest extends TeaModel {
 
     public static class CreateRuleRequestTag extends TeaModel {
         /**
-         * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+         * <p>The tag key. Can be up to 128 characters in length. Cannot start with <code>aliyun</code> or <code>acs:</code>. Cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -1696,7 +1683,7 @@ public class CreateRuleRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+         * <p>The tag value. Can be up to 128 characters in length. Cannot start with <code>aliyun</code> or <code>acs:</code>. Cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>product</p>

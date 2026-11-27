@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListListenersRequest extends TeaModel {
     /**
-     * <p>The instance IDs. A maximum of 20 instance IDs are supported.</p>
+     * <p>The listener instance IDs. You can specify up to 20 listener instance IDs.</p>
      */
     @NameInMap("ListenerIds")
     public java.util.List<String> listenerIds;
 
     /**
-     * <p>The listener protocol that you want to use as a filter. Valid values:</p>
+     * <p>The listener protocol used for filtering. Valid values:</p>
      * <ul>
      * <li><strong>HTTP</strong>: The protocol type is HTTP.</li>
      * <li><strong>HTTPS</strong>: The protocol type is HTTPS.</li>
@@ -25,13 +25,13 @@ public class ListListenersRequest extends TeaModel {
     public String listenerProtocol;
 
     /**
-     * <p>The Application Load Balancer (ALB) load balancing instance ID. A maximum of 20 instance IDs are supported.</p>
+     * <p>The Application Load Balancing instance IDs. You can specify up to 20 instance IDs.</p>
      */
     @NameInMap("LoadBalancerIds")
     public java.util.List<String> loadBalancerIds;
 
     /**
-     * <p>The maximum number of data records to read in this request. This parameter is optional. Valid values: <strong>1</strong> to <strong>100</strong>. If this parameter is not specified, the default value is <strong>20</strong>.</p>
+     * <p>The maximum number of entries to return in a single call. This parameter is optional. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -40,10 +40,10 @@ public class ListListenersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The token that indicates whether a subsequent query is available. Valid values:</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first request or if no next query exists.</li>
-     * <li>If a next query exists, set the value to the <strong>NextToken</strong> value returned in the previous API call.</li>
+     * <li>Leave this parameter empty for the first query or when no subsequent query is required.</li>
+     * <li>For a subsequent query, set this parameter to the <strong>NextToken</strong> value returned by the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -113,7 +113,7 @@ public class ListListenersRequest extends TeaModel {
 
     public static class ListListenersRequestTag extends TeaModel {
         /**
-         * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+         * <p>The tag key. The key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -122,7 +122,7 @@ public class ListListenersRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+         * <p>The tag value. The value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>product</p>

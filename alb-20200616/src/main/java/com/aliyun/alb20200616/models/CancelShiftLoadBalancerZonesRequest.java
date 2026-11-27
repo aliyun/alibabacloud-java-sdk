@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class CancelShiftLoadBalancerZonesRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can generate the value from your client. Make sure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId of each API request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,11 +18,11 @@ public class CancelShiftLoadBalancerZonesRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * <li><p><strong>true</strong>: performs a dry run without adding the zone back. The system checks whether required parameters are specified, the request format is valid, and the service limits are met. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a <code>2xx HTTP</code> status code is returned and the operation is performed.</p>
+     * <li><p><strong>false</strong> (default): performs a dry run and sends the actual request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed.</p>
      * </li>
      * </ul>
      * 
@@ -33,7 +33,7 @@ public class CancelShiftLoadBalancerZonesRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the ALB instance.</p>
+     * <p>The application load balancing instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,9 +43,9 @@ public class CancelShiftLoadBalancerZonesRequest extends TeaModel {
     public String loadBalancerId;
 
     /**
-     * <p>The mappings between zones and vSwitches.</p>
+     * <p>The zone and vSwitch mappings.</p>
      * <blockquote>
-     * <p>You can add only one zone in each call.</p>
+     * <p>You can add back only one zone in each call.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -91,7 +91,7 @@ public class CancelShiftLoadBalancerZonesRequest extends TeaModel {
 
     public static class CancelShiftLoadBalancerZonesRequestZoneMappings extends TeaModel {
         /**
-         * <p>The ID of the vSwitch in the zone. By default, each zone uses one vSwitch and one subnet.</p>
+         * <p>The ID of the vSwitch that corresponds to the zone. By default, each zone uses one vSwitch and one subnet.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class CancelShiftLoadBalancerZonesRequest extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/189196.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * <p>The zone ID. You can obtain the zone ID by calling the <a href="https://help.aliyun.com/document_detail/189196.html">DescribeZones</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

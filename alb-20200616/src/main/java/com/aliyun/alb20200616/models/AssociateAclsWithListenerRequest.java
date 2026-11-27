@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class AssociateAclsWithListenerRequest extends TeaModel {
     /**
-     * <p>The IDs of the ACLs. You can specify up to three IDs in each call.</p>
+     * <p>The ACL instance IDs. You can specify up to three ACL instance IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AclIds")
     public java.util.List<String> aclIds;
 
     /**
-     * <p>The type of the ACL. Valid values:</p>
+     * <p>The access control type. Valid values:</p>
      * <ul>
-     * <li><strong>White</strong>: a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. The whitelist applies to scenarios in which you want to allow only specific IP addresses to access an application. Your service may be adversely affected if the whitelist is not properly configured. If a whitelist is configured for a listener, only requests from IP addresses that are added to the whitelist are forwarded by the listener. If you enable a whitelist but do not add an IP address to the whitelist, the listener forwards all requests.</li>
-     * <li><strong>Black</strong>: a blacklist. All requests from the IP addresses or CIDR blocks in the ACL are blocked. The blacklist applies to scenarios in which you want to block access from specific IP addresses to an application. If a blacklist is configured for a listener but no IP address is added to the blacklist, the listener forwards all requests.</li>
+     * <li><strong>White</strong>: specifies a whitelist. Only requests from the IP addresses or CIDR blocks in the Settings of the selected access control policy group are forwarded. Whitelists apply to scenarios in which you want to allow only specific IP addresses to access an application. Configuring a whitelist poses risks to your business. After a whitelist is configured, only the IP addresses in the whitelist can access the load balancing listener. If you enable a whitelist but do not add IP addresses to the access control policy group, the load balancing listener forwards all requests.</li>
+     * <li><strong>Black</strong>: specifies a blacklist. Requests from the IP addresses or CIDR blocks in the Settings of the selected access control policy group are not forwarded. Blacklists apply to scenarios in which you want to block access from specific IP addresses. If you enable a blacklist but do not add IP addresses to the access control policy group, the load balancing listener forwards all requests.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -27,9 +27,9 @@ public class AssociateAclsWithListenerRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, and you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not set this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,10 +39,10 @@ public class AssociateAclsWithListenerRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: performs a dry run and does not associate the ACLs with the listener. The system checks whether the required parameters are set, and validates the request format and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the actual request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class AssociateAclsWithListenerRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the listener.</p>
+     * <p>The listener instance ID. Before you invoke this operation, confirm that the Application Load Balancer (ALB) instance to which the listener belongs is not associated with a security group. After an ALB instance is associated with a security group, you cannot attach an access control policy to the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

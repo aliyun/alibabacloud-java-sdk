@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableDeletionProtectionRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
@@ -14,11 +14,11 @@ public class EnableDeletionProtectionRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * <li><p><strong>true</strong>: performs a dry run without creating resources. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
      * </li>
-     * <li><p><strong>false</strong>: (default): performs a dry run and performs the actual request. If the request passes the dry run, a <code>2xx HTTP</code> status code is returned and the operation is performed.</p>
+     * <li><p><strong>false</strong> (default): performs a normal request. If the request passes the dry run, an <code>HTTP_2xx</code> status code is returned and the operation is performed.</p>
      * </li>
      * </ul>
      * 
@@ -29,7 +29,7 @@ public class EnableDeletionProtectionRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The Application Load Balancer (ALB) instance ID.</p>
+     * <p>The ID of the resource, which is the ALB instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
