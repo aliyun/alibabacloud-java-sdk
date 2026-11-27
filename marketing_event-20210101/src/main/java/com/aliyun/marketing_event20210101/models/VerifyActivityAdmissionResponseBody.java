@@ -80,6 +80,20 @@ public class VerifyActivityAdmissionResponseBody extends TeaModel {
         @NameInMap("AllowedDates")
         public java.util.List<String> allowedDates;
 
+        /**
+         * <strong>example:</strong>
+         * <p>定邀-现场嘉宾</p>
+         */
+        @NameInMap("ChannelName")
+        public String channelName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;VIP&quot;, &quot;思辨场&quot;]</p>
+         */
+        @NameInMap("CustomerLabels")
+        public java.util.List<String> customerLabels;
+
         @NameInMap("Decision")
         public String decision;
 
@@ -147,6 +161,22 @@ public class VerifyActivityAdmissionResponseBody extends TeaModel {
         }
         public java.util.List<String> getAllowedDates() {
             return this.allowedDates;
+        }
+
+        public VerifyActivityAdmissionResponseBodyData setChannelName(String channelName) {
+            this.channelName = channelName;
+            return this;
+        }
+        public String getChannelName() {
+            return this.channelName;
+        }
+
+        public VerifyActivityAdmissionResponseBodyData setCustomerLabels(java.util.List<String> customerLabels) {
+            this.customerLabels = customerLabels;
+            return this;
+        }
+        public java.util.List<String> getCustomerLabels() {
+            return this.customerLabels;
         }
 
         public VerifyActivityAdmissionResponseBodyData setDecision(String decision) {

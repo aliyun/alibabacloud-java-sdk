@@ -1,3 +1,8 @@
+2026-11-27 Version: 1.5.1
+- Update API VerifyActivityAdmission: add response parameters Body.Data.ChannelName.
+- Update API VerifyActivityAdmission: add response parameters Body.Data.CustomerLabels.
+
+
 2026-11-23 Version: 1.5.0
 - Support API MosQueryRegistrationInfo.
 - Support API VerifyActivityAdmission.
