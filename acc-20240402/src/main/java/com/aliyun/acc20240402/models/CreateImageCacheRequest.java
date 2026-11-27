@@ -4,17 +4,32 @@ package com.aliyun.acc20240402.models;
 import com.aliyun.tea.*;
 
 public class CreateImageCacheRequest extends TeaModel {
+    /**
+     * <p>The ACR Enterprise instance information.</p>
+     */
     @NameInMap("AcrRegistryInfos")
     public java.util.List<CreateImageCacheRequestAcrRegistryInfos> acrRegistryInfos;
 
     /**
+     * <p>The idempotency token.</p>
+     * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>7f3a2c18-6c47-4eb7-a6bb-8432a394a620</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
+     * <p>Specifies whether to enable base image cache matching. Default value: <code>false</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("EnableBaseImageCacheMatch")
+    public Boolean enableBaseImageCacheMatch;
+
+    /**
+     * <p>The name of the image cache.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,25 +38,37 @@ public class CreateImageCacheRequest extends TeaModel {
     @NameInMap("ImageCacheName")
     public String imageCacheName;
 
+    /**
+     * <p>The credentials of the image registry.</p>
+     */
     @NameInMap("ImageRegistryCredentials")
     public java.util.List<CreateImageCacheRequestImageRegistryCredentials> imageRegistryCredentials;
 
     /**
+     * <p>The container images used to create the image cache. Currently, only one image is supported.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Images")
     public java.util.List<String> images;
 
     /**
+     * <p>The network configurations for pulling images when creating the image cache.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkConfig")
     public CreateImageCacheRequestNetworkConfig networkConfig;
 
+    /**
+     * <p>The platform type of the image cache. Valid values: linux/amd64 and windows/amd64. Default value: linux/amd64.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>windows/amd64</p>
+     */
     @NameInMap("Platform")
     public String platform;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,14 +78,28 @@ public class CreateImageCacheRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aekzh43v*****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags of the image cache. You can specify up to 20 tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateImageCacheRequestTags> tags;
+
+    /**
+     * <p>The type of the image cache. Valid values: <code>General</code> and <code>Base</code>. Default value: <code>General</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>General</p>
+     */
+    @NameInMap("Type")
+    public String type;
 
     public static CreateImageCacheRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateImageCacheRequest self = new CreateImageCacheRequest();
@@ -79,6 +120,14 @@ public class CreateImageCacheRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateImageCacheRequest setEnableBaseImageCacheMatch(Boolean enableBaseImageCacheMatch) {
+        this.enableBaseImageCacheMatch = enableBaseImageCacheMatch;
+        return this;
+    }
+    public Boolean getEnableBaseImageCacheMatch() {
+        return this.enableBaseImageCacheMatch;
     }
 
     public CreateImageCacheRequest setImageCacheName(String imageCacheName) {
@@ -145,8 +194,18 @@ public class CreateImageCacheRequest extends TeaModel {
         return this.tags;
     }
 
+    public CreateImageCacheRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
+    }
+
     public static class CreateImageCacheRequestAcrRegistryInfos extends TeaModel {
         /**
+         * <p>The ID of the ACR Enterprise instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>cri-nwj395hgf6f*****</p>
          */
@@ -154,6 +213,8 @@ public class CreateImageCacheRequest extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The region to which the ACR Enterprise instance belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -185,6 +246,8 @@ public class CreateImageCacheRequest extends TeaModel {
 
     public static class CreateImageCacheRequestImageRegistryCredentials extends TeaModel {
         /**
+         * <p>The password of the image registry.</p>
+         * 
          * <strong>example:</strong>
          * <p>mypassword</p>
          */
@@ -192,6 +255,8 @@ public class CreateImageCacheRequest extends TeaModel {
         public String password;
 
         /**
+         * <p>The address of the image registry without the http:// or https:// prefix.</p>
+         * 
          * <strong>example:</strong>
          * <p>registry-vpc.cn-hangzhou.aliyuncs.com</p>
          */
@@ -199,6 +264,9 @@ public class CreateImageCacheRequest extends TeaModel {
         public String server;
 
         /**
+         * <p>Specifies whether to skip certificate verification when you create an image cache by using images from a self-managed image registry that uses a self-signed certificate to prevent image pull failures caused by certificate verification failures.
+         * Default value: <code>false</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -206,6 +274,9 @@ public class CreateImageCacheRequest extends TeaModel {
         public Boolean skipCertVerification;
 
         /**
+         * <p>Specifies whether the service uses the HTTP protocol to pull images to prevent image pull failures caused by protocol mismatches.
+         * Default value: <code>false</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -213,6 +284,8 @@ public class CreateImageCacheRequest extends TeaModel {
         public Boolean usePlainHttp;
 
         /**
+         * <p>The username of the image registry.</p>
+         * 
          * <strong>example:</strong>
          * <p>myusername</p>
          */
@@ -268,6 +341,8 @@ public class CreateImageCacheRequest extends TeaModel {
 
     public static class CreateImageCacheRequestNetworkConfigEipInstance extends TeaModel {
         /**
+         * <p>Specifies whether automatic creation of an EIP is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -275,6 +350,8 @@ public class CreateImageCacheRequest extends TeaModel {
         public Boolean autoCreate;
 
         /**
+         * <p>The bandwidth of the EIP for automatic creation. Unit: Mbit/s.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -282,6 +359,8 @@ public class CreateImageCacheRequest extends TeaModel {
         public Integer bandwidth;
 
         /**
+         * <p>The elastic IP address. This parameter takes precedence. If you specify this parameter, other parameters are ignored.</p>
+         * 
          * <strong>example:</strong>
          * <p>eip-0jl0bx3fnpnjc9i4*****</p>
          */
@@ -320,10 +399,14 @@ public class CreateImageCacheRequest extends TeaModel {
     }
 
     public static class CreateImageCacheRequestNetworkConfig extends TeaModel {
+        /**
+         * <p>The configurations of the elastic IP address (EIP) instance.</p>
+         */
         @NameInMap("EipInstance")
         public CreateImageCacheRequestNetworkConfigEipInstance eipInstance;
 
         /**
+         * <p>The ID of the security group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -333,6 +416,7 @@ public class CreateImageCacheRequest extends TeaModel {
         public String securityGroupId;
 
         /**
+         * <p>The IDs of the vSwitches. You can specify up to 10 vSwitch IDs. One of the vSwitches is selected to pull the image.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("VSwitchIds")
@@ -371,6 +455,8 @@ public class CreateImageCacheRequest extends TeaModel {
 
     public static class CreateImageCacheRequestTags extends TeaModel {
         /**
+         * <p>The tag key of the image cache.</p>
+         * 
          * <strong>example:</strong>
          * <p>imc</p>
          */
@@ -378,6 +464,8 @@ public class CreateImageCacheRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value of the image cache.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

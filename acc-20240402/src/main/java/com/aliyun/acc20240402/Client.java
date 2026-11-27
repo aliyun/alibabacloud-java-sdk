@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "acc";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("ap-northeast-2-pop", "acc.aliyuncs.com"),
@@ -66,7 +69,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建镜像缓存</p>
+     * <p>Creates an image cache to accelerate the pulling of container images when creating ACS pods.</p>
      * 
      * @param tmpReq CreateImageCacheRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -87,6 +90,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableBaseImageCacheMatch)) {
+            query.put("EnableBaseImageCacheMatch", request.enableBaseImageCacheMatch);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.imageCacheName)) {
@@ -121,6 +128,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Tags", request.tags);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -140,7 +151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建镜像缓存</p>
+     * <p>Creates an image cache to accelerate the pulling of container images when creating ACS pods.</p>
      * 
      * @param request CreateImageCacheRequest
      * @return CreateImageCacheResponse
@@ -152,7 +163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除镜像缓存</p>
+     * <p>Deletes an image cache.</p>
      * 
      * @param request DeleteImageCacheRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -192,7 +203,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除镜像缓存</p>
+     * <p>Deletes an image cache.</p>
      * 
      * @param request DeleteImageCacheRequest
      * @return DeleteImageCacheResponse
@@ -204,7 +215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询镜像缓存</p>
+     * <p>Queries the details of an image cache.</p>
      * 
      * @param request GetImageCacheRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -240,7 +251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询镜像缓存</p>
+     * <p>Queries the details of an image cache.</p>
      * 
      * @param request GetImageCacheRequest
      * @return GetImageCacheResponse
@@ -252,7 +263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询镜像缓存</p>
+     * <p>Queries the details of image caches.</p>
      * 
      * @param request ListImageCachesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -312,7 +323,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询镜像缓存</p>
+     * <p>Queries the details of image caches.</p>
      * 
      * @param request ListImageCachesRequest
      * @return ListImageCachesResponse

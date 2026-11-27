@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetImageCacheResponseBody extends TeaModel {
     /**
+     * <p>The time when the image cache was created, in ISO 8601 format and UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-**-**T07:55:25Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The events of the image cache.</p>
+     */
     @NameInMap("Events")
     public java.util.List<GetImageCacheResponseBodyEvents> events;
 
     /**
+     * <p>The image cache ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>imc-bp1dj*****</p>
      */
@@ -22,29 +29,47 @@ public class GetImageCacheResponseBody extends TeaModel {
     public String imageCacheId;
 
     /**
+     * <p>The name of the image cache.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-imc</p>
      */
     @NameInMap("ImageCacheName")
     public String imageCacheName;
 
+    /**
+     * <p>The names of the container images in the image cache.</p>
+     */
     @NameInMap("Images")
     public java.util.List<String> images;
 
+    /**
+     * <p>The network configurations for pulling images when the image cache is created.</p>
+     */
     @NameInMap("NetworkConfig")
     public GetImageCacheResponseBodyNetworkConfig networkConfig;
 
     /**
+     * <p>The billing method.</p>
+     * 
      * <strong>example:</strong>
      * <p>PayAsYouGo</p>
      */
     @NameInMap("PaymentType")
     public String paymentType;
 
+    /**
+     * <p>The platform type of the image cache. Valid values: linux/amd64 and windows/amd64.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>windows/amd64</p>
+     */
     @NameInMap("Platform")
     public String platform;
 
     /**
+     * <p>The time when the image cache becomes active, in ISO 8601 format and UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-**-**T07:58:25Z</p>
      */
@@ -52,6 +77,8 @@ public class GetImageCacheResponseBody extends TeaModel {
     public String readyTime;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -59,6 +86,8 @@ public class GetImageCacheResponseBody extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0E234675-3465-4CC3-9D0F-9A864BC*****</p>
      */
@@ -66,6 +95,8 @@ public class GetImageCacheResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aekzh43v*****</p>
      */
@@ -73,6 +104,8 @@ public class GetImageCacheResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The size of the image cache. Unit: GiB. Minimum value: 1 GiB.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
@@ -80,14 +113,28 @@ public class GetImageCacheResponseBody extends TeaModel {
     public Integer size;
 
     /**
+     * <p>The status of the image cache.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ready</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The tags of the image cache. Up to 20 tags are supported.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<GetImageCacheResponseBodyTags> tags;
+
+    /**
+     * <p>The image cache type. Valid values: <code>General</code>, <code>Base</code>, and <code>Derived</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>General</p>
+     */
+    @NameInMap("Type")
+    public String type;
 
     public static GetImageCacheResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetImageCacheResponseBody self = new GetImageCacheResponseBody();
@@ -214,8 +261,18 @@ public class GetImageCacheResponseBody extends TeaModel {
         return this.tags;
     }
 
+    public GetImageCacheResponseBody setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
+    }
+
     public static class GetImageCacheResponseBodyEvents extends TeaModel {
         /**
+         * <p>The number of times the event was triggered.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -223,6 +280,8 @@ public class GetImageCacheResponseBody extends TeaModel {
         public Integer count;
 
         /**
+         * <p>The time when the event first occurred.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-**-**T02:24:48Z</p>
          */
@@ -230,6 +289,8 @@ public class GetImageCacheResponseBody extends TeaModel {
         public String firstTimestamp;
 
         /**
+         * <p>The time when the event last occurred.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-**-**T02:24:48Z</p>
          */
@@ -237,6 +298,8 @@ public class GetImageCacheResponseBody extends TeaModel {
         public String lastTimestamp;
 
         /**
+         * <p>The event message.</p>
+         * 
          * <strong>example:</strong>
          * <p>Image cache [my-imc] has been created successfully</p>
          */
@@ -244,6 +307,8 @@ public class GetImageCacheResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The event name.</p>
+         * 
          * <strong>example:</strong>
          * <p>imagetest.1661f31f851*****</p>
          */
@@ -251,6 +316,8 @@ public class GetImageCacheResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The cause of the event.</p>
+         * 
          * <strong>example:</strong>
          * <p>ImageCacheCreated</p>
          */
@@ -258,6 +325,8 @@ public class GetImageCacheResponseBody extends TeaModel {
         public String reason;
 
         /**
+         * <p>The event type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -329,6 +398,8 @@ public class GetImageCacheResponseBody extends TeaModel {
 
     public static class GetImageCacheResponseBodyNetworkConfigEipInstance extends TeaModel {
         /**
+         * <p>Specifies whether to automatically create an EIP.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -336,6 +407,8 @@ public class GetImageCacheResponseBody extends TeaModel {
         public Boolean autoCreate;
 
         /**
+         * <p>The bandwidth of the automatically created EIP. Unit: Mbit/s.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -343,6 +416,8 @@ public class GetImageCacheResponseBody extends TeaModel {
         public Integer bandwidth;
 
         /**
+         * <p>The elastic IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>eip-0jl0bx3fnpnjc9i4*****</p>
          */
@@ -381,16 +456,24 @@ public class GetImageCacheResponseBody extends TeaModel {
     }
 
     public static class GetImageCacheResponseBodyNetworkConfig extends TeaModel {
+        /**
+         * <p>The configurations of the elastic IP address (EIP) instance.</p>
+         */
         @NameInMap("EipInstance")
         public GetImageCacheResponseBodyNetworkConfigEipInstance eipInstance;
 
         /**
+         * <p>The security group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-0jlgektkddwa42n*****</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>The vSwitch IDs.</p>
+         */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
@@ -427,6 +510,8 @@ public class GetImageCacheResponseBody extends TeaModel {
 
     public static class GetImageCacheResponseBodyTags extends TeaModel {
         /**
+         * <p>The tag key of the image cache.</p>
+         * 
          * <strong>example:</strong>
          * <p>imc</p>
          */
@@ -434,6 +519,8 @@ public class GetImageCacheResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value of the image cache.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

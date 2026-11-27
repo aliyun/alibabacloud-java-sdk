@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteImageCacheRequest extends TeaModel {
     /**
+     * <p>Specifies whether to force delete the image cache. Default value: <code>false</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +14,7 @@ public class DeleteImageCacheRequest extends TeaModel {
     public Boolean force;
 
     /**
+     * <p>The image cache ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class DeleteImageCacheRequest extends TeaModel {
     public String imageCacheId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

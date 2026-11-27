@@ -4,10 +4,18 @@ package com.aliyun.acc20240402.models;
 import com.aliyun.tea.*;
 
 public class ListImageCachesRequest extends TeaModel {
+    /**
+     * <p>The container image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>egs-registry.cn-hangzhou.cr.aliyuncs.com/egs/vllm:0.9.0.1-pytorch2.7-cu128-20250612</p>
+     */
     @NameInMap("Image")
     public String image;
 
     /**
+     * <p>The name of the image cache.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-imc</p>
      */
@@ -15,6 +23,8 @@ public class ListImageCachesRequest extends TeaModel {
     public String imageCacheName;
 
     /**
+     * <p>The maximum number of results to return for a single request.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -22,6 +32,8 @@ public class ListImageCachesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token. Set the value to the NextToken value returned from the previous API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF*****</p>
      */
@@ -29,6 +41,7 @@ public class ListImageCachesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +51,8 @@ public class ListImageCachesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aekzh43v*****</p>
      */
@@ -45,12 +60,17 @@ public class ListImageCachesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The cache status of the image cache.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ready</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The tags of the image cache. You can specify up to 20 tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListImageCachesRequestTags> tags;
 
@@ -125,6 +145,8 @@ public class ListImageCachesRequest extends TeaModel {
 
     public static class ListImageCachesRequestTags extends TeaModel {
         /**
+         * <p>The tag key of the image cache.</p>
+         * 
          * <strong>example:</strong>
          * <p>imc</p>
          */
@@ -132,6 +154,8 @@ public class ListImageCachesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value of the image cache.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

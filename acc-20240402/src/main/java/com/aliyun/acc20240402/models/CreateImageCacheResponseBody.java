@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateImageCacheResponseBody extends TeaModel {
     /**
+     * <p>The ID of the image cache.</p>
+     * 
      * <strong>example:</strong>
      * <p>imc-bp1dj*****</p>
      */
@@ -12,6 +14,8 @@ public class CreateImageCacheResponseBody extends TeaModel {
     public String imageCacheId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>0E234675-3465-4CC3-9D0F-9A864BC*****</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.acc20240402.models;
 import com.aliyun.tea.*;
 
 public class ListImageCachesResponseBody extends TeaModel {
+    /**
+     * <p>The image cache information.</p>
+     */
     @NameInMap("ImageCaches")
     public java.util.List<ListImageCachesResponseBodyImageCaches> imageCaches;
 
     /**
+     * <p>The maximum number of results to return for a single request.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -15,6 +20,8 @@ public class ListImageCachesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token returned for this call.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF*****</p>
      */
@@ -22,6 +29,8 @@ public class ListImageCachesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0E234675-3465-4CC3-9D0F-9A864BC*****</p>
      */
@@ -29,6 +38,8 @@ public class ListImageCachesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of results returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -82,6 +93,8 @@ public class ListImageCachesResponseBody extends TeaModel {
 
     public static class ListImageCachesResponseBodyImageCaches extends TeaModel {
         /**
+         * <p>The time when the image cache was created. The time follows the ISO 8601 standard and is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-**-**T07:55:25Z</p>
          */
@@ -89,6 +102,8 @@ public class ListImageCachesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The ID of the image cache.</p>
+         * 
          * <strong>example:</strong>
          * <p>imc-bp1dj*****</p>
          */
@@ -96,16 +111,23 @@ public class ListImageCachesResponseBody extends TeaModel {
         public String imageCacheId;
 
         /**
+         * <p>The name of the image cache.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-imc</p>
          */
         @NameInMap("ImageCacheName")
         public String imageCacheName;
 
+        /**
+         * <p>The container images in the image cache.</p>
+         */
         @NameInMap("Images")
         public java.util.List<String> images;
 
         /**
+         * <p>Available time when the image cache became available. Available time follows the ISO 8601 standard and is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-**-**T07:58:25Z</p>
          */
@@ -113,6 +135,8 @@ public class ListImageCachesResponseBody extends TeaModel {
         public String readyTime;
 
         /**
+         * <p>The ID of the resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-aekzh43v*****</p>
          */
@@ -120,6 +144,8 @@ public class ListImageCachesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The size of the image cache. Unit: GiB. Minimum value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -127,6 +153,8 @@ public class ListImageCachesResponseBody extends TeaModel {
         public Integer size;
 
         /**
+         * <p>The cache status of the image cache.</p>
+         * 
          * <strong>example:</strong>
          * <p>Ready</p>
          */
