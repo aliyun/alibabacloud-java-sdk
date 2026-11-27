@@ -161,7 +161,7 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
          * <p>The SQL statement.</p>
          * 
          * <strong>example:</strong>
-         * <p>select * from device where name = \&quot;105506012112790031\&quot;</p>
+         * <p>select * from device where name = &quot;105506012112790031&quot;</p>
          */
         @NameInMap("SQL")
         public String SQL;

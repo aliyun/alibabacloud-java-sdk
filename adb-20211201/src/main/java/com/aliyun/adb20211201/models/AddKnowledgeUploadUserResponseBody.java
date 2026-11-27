@@ -42,7 +42,7 @@ public class AddKnowledgeUploadUserResponseBody extends TeaModel {
 
     public static class AddKnowledgeUploadUserResponseBodyDataSkipped extends TeaModel {
         /**
-         * <p>The reason for skipping.</p>
+         * <p>The reason why the user is skipped.</p>
          * 
          * <strong>example:</strong>
          * <p>conflicts error</p>
@@ -84,7 +84,7 @@ public class AddKnowledgeUploadUserResponseBody extends TeaModel {
 
     public static class AddKnowledgeUploadUserResponseBodyData extends TeaModel {
         /**
-         * <p>The path of the knowledge base file.</p>
+         * <p>The address of the knowledge base file.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://bucketName/path/to/file.pfg</p>
@@ -93,7 +93,7 @@ public class AddKnowledgeUploadUserResponseBody extends TeaModel {
         public String fileLocation;
 
         /**
-         * <p>The message.</p>
+         * <p>The prompt message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -110,8 +110,8 @@ public class AddKnowledgeUploadUserResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request is successful.</li>
-         * <li><strong>false</strong>: The request fails.</li>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

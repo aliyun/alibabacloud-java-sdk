@@ -57,7 +57,7 @@ public class DescribeViewJobsRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;Field\&quot;:\&quot;StartTime\&quot;,\&quot;Type\&quot;:\&quot;Desc\&quot;}</p>
+     * <p>{&quot;Field&quot;:&quot;StartTime&quot;,&quot;Type&quot;:&quot;Desc&quot;}</p>
      */
     @NameInMap("OrderBy")
     public String orderBy;

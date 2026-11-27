@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveKnowledgeTagsRequest extends TeaModel {
     /**
-     * <p>The database cluster ID.</p>
+     * <p>The ID of the database cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class RemoveKnowledgeTagsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The file ID.</p>
+     * <p>The ID of the file.</p>
      * 
      * <strong>example:</strong>
      * <p>2131234</p>
@@ -24,7 +24,7 @@ public class RemoveKnowledgeTagsRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The knowledge base document location.</p>
+     * <p>The location of the knowledge base document.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://bucket/doc.pdf</p>
@@ -33,7 +33,7 @@ public class RemoveKnowledgeTagsRequest extends TeaModel {
     public String fileLocation;
 
     /**
-     * <p>The JSON string of the tag array to be deleted.</p>
+     * <p>The JSON string of the array of tags to delete.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;tag_key&quot;:&quot;biz.scene&quot;,&quot;tag_value&quot;:&quot;test&quot;}]</p>

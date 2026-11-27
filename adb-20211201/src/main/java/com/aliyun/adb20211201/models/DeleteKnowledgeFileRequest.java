@@ -15,7 +15,7 @@ public class DeleteKnowledgeFileRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The ID of the file.</p>
+     * <p>The file ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2131213</p>
@@ -24,7 +24,7 @@ public class DeleteKnowledgeFileRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The path of the knowledge base document.</p>
+     * <p>The location of the knowledge base document.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://bucket/doc.pdf</p>

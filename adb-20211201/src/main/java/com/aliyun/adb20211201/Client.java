@@ -757,14 +757,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Cancels a specified SQL Pattern comparison report. Reports in the following statuses can be canceled:</p>
+     * <p>Cancels a specified SQL pattern comparison report. You can cancel reports in the following states:</p>
      * <ul>
-     * <li><code>PENDING</code>: Waiting to be generated.</li>
-     * <li><code>RUNNING</code>: Being generated.<blockquote>
+     * <li><code>PENDING</code>: Pending generation.</li>
+     * <li><code>RUNNING</code>: Generation in progress.<blockquote>
      * <ul>
      * <li>Only reports with <code>CancelAvailable</code> set to <code>true</code> can be canceled.</li>
-     * <li>Reports that are completed, failed, or expired cannot be canceled.</li>
-     * <li>When you cancel an already canceled report again, <code>Canceled</code> still returns <code>true</code>, and <code>CancelTime</code> retains the time of the first cancellation.</li>
+     * <li>Completed, failed, or expired reports cannot be canceled.</li>
+     * <li>If you repeatedly cancel an already canceled report, <code>Canceled</code> still returns <code>true</code>, and <code>CancelTime</code> remains the time of the first cancellation.</li>
      * <li>Reports are isolated by instance and Alibaba Cloud account.</li>
      * </ul>
      * </blockquote>
@@ -772,7 +772,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Cancels an SQL Pattern comparison report.</p>
+     * <p>Cancels an SQL pattern comparison report.</p>
      * 
      * @param request CancelSqlPatternCompareReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -812,14 +812,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Cancels a specified SQL Pattern comparison report. Reports in the following statuses can be canceled:</p>
+     * <p>Cancels a specified SQL pattern comparison report. You can cancel reports in the following states:</p>
      * <ul>
-     * <li><code>PENDING</code>: Waiting to be generated.</li>
-     * <li><code>RUNNING</code>: Being generated.<blockquote>
+     * <li><code>PENDING</code>: Pending generation.</li>
+     * <li><code>RUNNING</code>: Generation in progress.<blockquote>
      * <ul>
      * <li>Only reports with <code>CancelAvailable</code> set to <code>true</code> can be canceled.</li>
-     * <li>Reports that are completed, failed, or expired cannot be canceled.</li>
-     * <li>When you cancel an already canceled report again, <code>Canceled</code> still returns <code>true</code>, and <code>CancelTime</code> retains the time of the first cancellation.</li>
+     * <li>Completed, failed, or expired reports cannot be canceled.</li>
+     * <li>If you repeatedly cancel an already canceled report, <code>Canceled</code> still returns <code>true</code>, and <code>CancelTime</code> remains the time of the first cancellation.</li>
      * <li>Reports are isolated by instance and Alibaba Cloud account.</li>
      * </ul>
      * </blockquote>
@@ -827,7 +827,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Cancels an SQL Pattern comparison report.</p>
+     * <p>Cancels an SQL pattern comparison report.</p>
      * 
      * @param request CancelSqlPatternCompareReportRequest
      * @return CancelSqlPatternCompareReportResponse
@@ -1006,7 +1006,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Disables log synchronization to Simple Log Service (SLS).</p>
+     * <p>Disables log synchronization to Simple Log Service.</p>
      * 
      * @param request CloseLogSyncToSLSRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1053,7 +1053,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Disables log synchronization to Simple Log Service (SLS).</p>
+     * <p>Disables log synchronization to Simple Log Service.</p>
      * 
      * @param request CloseLogSyncToSLSRequest
      * @return CloseLogSyncToSLSResponse
@@ -2927,12 +2927,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建语义视图。调用前请确认已满足以下条件：</p>
+     * <p>Creates a semantic view. Before calling this operation, ensure that the following conditions are met:</p>
      * <ol>
-     * <li>已创建 ADB 集群，可通过 DescribeDBClusters 获取集群 ID（DBClusterId）。</li>
-     * <li>集群中已存在 Super 类型的数据库账号，可通过 CreateAccount 创建。</li>
-     * <li>当前 RAM 用户已绑定到该数据库账号：BindAccount 仅支持绑定数据库普通账号；若目标账号为 Super 类型，建议通过 CreateAccount 的 RamUserList 参数完成绑定。</li>
-     * <li>SchemaName 指定的数据库已存在。</li>
+     * <li>An ADB cluster is created. You can call DescribeDBClusters to obtain the cluster ID (DBClusterId).</li>
+     * <li>A Super database account exists in the cluster. You can call CreateAccount to create one.</li>
+     * <li>The current RAM user is bound to the database account. BindAccount only supports binding regular database accounts. If the target account is a Super account, bind the RAM user by using the RamUserList parameter of CreateAccount.</li>
+     * <li>The database specified by SchemaName already exists.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -2980,12 +2980,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建语义视图。调用前请确认已满足以下条件：</p>
+     * <p>Creates a semantic view. Before calling this operation, ensure that the following conditions are met:</p>
      * <ol>
-     * <li>已创建 ADB 集群，可通过 DescribeDBClusters 获取集群 ID（DBClusterId）。</li>
-     * <li>集群中已存在 Super 类型的数据库账号，可通过 CreateAccount 创建。</li>
-     * <li>当前 RAM 用户已绑定到该数据库账号：BindAccount 仅支持绑定数据库普通账号；若目标账号为 Super 类型，建议通过 CreateAccount 的 RamUserList 参数完成绑定。</li>
-     * <li>SchemaName 指定的数据库已存在。</li>
+     * <li>An ADB cluster is created. You can call DescribeDBClusters to obtain the cluster ID (DBClusterId).</li>
+     * <li>A Super database account exists in the cluster. You can call CreateAccount to create one.</li>
+     * <li>The current RAM user is bound to the database account. BindAccount only supports binding regular database accounts. If the target account is a Super account, bind the RAM user by using the RamUserList parameter of CreateAccount.</li>
+     * <li>The database specified by SchemaName already exists.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -3961,7 +3961,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the specified semantic view.</p>
+     * <p>Deletes a specified semantic view.</p>
      * 
      * @param request DeleteSemanticViewRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4001,7 +4001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the specified semantic view.</p>
+     * <p>Deletes a specified semantic view.</p>
      * 
      * @param request DeleteSemanticViewRequest
      * @return DeleteSemanticViewResponse
@@ -6659,10 +6659,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>To find the endpoints for this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Returns the details of a specific cluster.</p>
+     * <p>Queries the details of a specified cluster.</p>
      * 
      * @param request DescribeDBClusterAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6694,10 +6694,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>To find the endpoints for this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Returns the details of a specific cluster.</p>
+     * <p>Queries the details of a specified cluster.</p>
      * 
      * @param request DescribeDBClusterAttributeRequest
      * @return DescribeDBClusterAttributeResponse
@@ -17353,7 +17353,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the tags of a knowledge base document.</p>
+     * <p>Deletes tags from a knowledge base document.</p>
      * 
      * @param request RemoveKnowledgeTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17397,7 +17397,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the tags of a knowledge base document.</p>
+     * <p>Deletes tags from a knowledge base document.</p>
      * 
      * @param request RemoveKnowledgeTagsRequest
      * @return RemoveKnowledgeTagsResponse
@@ -17409,7 +17409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes authorized users of a knowledge base document.</p>
+     * <p>Deletes authorized users from a knowledge base document.</p>
      * 
      * @param request RemoveKnowledgeUploadUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17453,7 +17453,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes authorized users of a knowledge base document.</p>
+     * <p>Deletes authorized users from a knowledge base document.</p>
      * 
      * @param request RemoveKnowledgeUploadUserRequest
      * @return RemoveKnowledgeUploadUserResponse
@@ -18495,7 +18495,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a reparse task for a knowledge base file.</p>
+     * <p>Submits a task to reparse a knowledge base file.</p>
      * 
      * @param request TriggerKnowledgeFileParseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18535,7 +18535,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a reparse task for a knowledge base file.</p>
+     * <p>Submits a task to reparse a knowledge base file.</p>
      * 
      * @param request TriggerKnowledgeFileParseRequest
      * @return TriggerKnowledgeFileParseResponse

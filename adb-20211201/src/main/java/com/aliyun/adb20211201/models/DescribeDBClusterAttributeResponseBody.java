@@ -334,6 +334,27 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("RoutingControllerNodeCountFree")
+        public Integer routingControllerNodeCountFree;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("RoutingControllerNodeCountPaid")
+        public Integer routingControllerNodeCountPaid;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("RoutingControllerNodeSize")
+        public String routingControllerNodeSize;
+
         @NameInMap("SecondaryVSwitchId")
         public String secondaryVSwitchId;
 
@@ -651,6 +672,30 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setRoutingControllerNodeCountFree(Integer routingControllerNodeCountFree) {
+            this.routingControllerNodeCountFree = routingControllerNodeCountFree;
+            return this;
+        }
+        public Integer getRoutingControllerNodeCountFree() {
+            return this.routingControllerNodeCountFree;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setRoutingControllerNodeCountPaid(Integer routingControllerNodeCountPaid) {
+            this.routingControllerNodeCountPaid = routingControllerNodeCountPaid;
+            return this;
+        }
+        public Integer getRoutingControllerNodeCountPaid() {
+            return this.routingControllerNodeCountPaid;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setRoutingControllerNodeSize(String routingControllerNodeSize) {
+            this.routingControllerNodeSize = routingControllerNodeSize;
+            return this;
+        }
+        public String getRoutingControllerNodeSize() {
+            return this.routingControllerNodeSize;
         }
 
         public DescribeDBClusterAttributeResponseBodyItemsDBCluster setSecondaryVSwitchId(String secondaryVSwitchId) {

@@ -45,7 +45,7 @@ public class DescribeMvRecommendSubTasksRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;Type\&quot;: \&quot;ASC\&quot;, \&quot;Field\&quot;: \&quot;StartTime\&quot;}</p>
+     * <p>{&quot;Type&quot;: &quot;ASC&quot;, &quot;Field&quot;: &quot;StartTime&quot;}</p>
      */
     @NameInMap("OrderBy")
     public String orderBy;

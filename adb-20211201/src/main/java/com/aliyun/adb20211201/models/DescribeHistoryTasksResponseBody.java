@@ -324,7 +324,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
          * <p>The allowed operation information. When you use this parameter, the system matches the operation action based on the currentStepName and status in this information. If no action is matched, the current task status does not support the operation.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;steps\&quot;:[{\&quot;action_info\&quot;:{\&quot;Waiting\&quot;:[\&quot;modifySwitchTime\&quot;]},\&quot;step_name\&quot;:\&quot;exec_task\&quot;}]}</p>
+         * <p>{&quot;steps&quot;:[{&quot;action_info&quot;:{&quot;Waiting&quot;:[&quot;modifySwitchTime&quot;]},&quot;step_name&quot;:&quot;exec_task&quot;}]}</p>
          */
         @NameInMap("ActionInfo")
         public String actionInfo;
@@ -490,7 +490,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
          * <p>The task details.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;callerUid\&quot;:\&quot;test\&quot;}</p>
+         * <p>{&quot;callerUid&quot;:&quot;test&quot;}</p>
          */
         @NameInMap("TaskDetail")
         public String taskDetail;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSemanticViewRequest extends TeaModel {
     /**
-     * <p>The ID of the ADB cluster.</p>
+     * <p>The ADB cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteSemanticViewRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The name of the schema.</p>
+     * <p>The schema name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DeleteSemanticViewRequest extends TeaModel {
     public String schemaName;
 
     /**
-     * <p>The name of the semantic view.</p>
+     * <p>The semantic view name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

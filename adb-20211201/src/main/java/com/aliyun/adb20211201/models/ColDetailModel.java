@@ -17,7 +17,7 @@ public class ColDetailModel extends TeaModel {
      * <p>The time when the column was created. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
-     * <p>2023-01-05\&quot;T\&quot;13:17:55\&quot;Z\&quot;</p>
+     * <p>2023-01-05&quot;T&quot;13:17:55&quot;Z&quot;</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
@@ -98,7 +98,7 @@ public class ColDetailModel extends TeaModel {
      * <p>The time when the column was updated. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
-     * <p>2023-01-05\&quot;T\&quot;13:17:55\&quot;Z\&quot;</p>
+     * <p>2023-01-05&quot;T&quot;13:17:55&quot;Z&quot;</p>
      */
     @NameInMap("UpdateTime")
     public String updateTime;

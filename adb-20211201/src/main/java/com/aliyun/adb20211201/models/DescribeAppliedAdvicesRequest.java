@@ -82,7 +82,7 @@ public class DescribeAppliedAdvicesRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>[{\&quot;Field\&quot;:\&quot;AdviceType\&quot;,\&quot;Type\&quot;:\&quot;Desc\&quot;}]</p>
+     * <p>[{&quot;Field&quot;:&quot;AdviceType&quot;,&quot;Type&quot;:&quot;Desc&quot;}]</p>
      */
     @NameInMap("Order")
     public String order;

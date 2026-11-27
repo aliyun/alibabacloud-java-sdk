@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSemanticViewRequest extends TeaModel {
     /**
-     * <p>ADB cluster ID.</p>
+     * <p>The ID of the ADB cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,17 +15,17 @@ public class CreateSemanticViewRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>YAML definition of the semantic view.</p>
+     * <p>The YAML definition of the semantic view.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>YAML 内容</p>
+     * <p>YAML content</p>
      */
     @NameInMap("Definition")
     public String definition;
 
     /**
-     * <p>Schema name.</p>
+     * <p>The name of the schema.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class CreateSemanticViewRequest extends TeaModel {
     public String schemaName;
 
     /**
-     * <p>Semantic view name.</p>
+     * <p>The name of the semantic view.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

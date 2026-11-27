@@ -23,7 +23,7 @@ public class QueryFormationTaskByIDResponseBody extends TeaModel {
      *     &quot;scheduleState&quot;: &quot;NORMAL&quot;,
      *     &quot;frequency&quot;: {&quot;type&quot;: &quot;custom&quot;, &quot;cron&quot;: &quot;0 0/1 * * * ?&quot;},
      *     &quot;failedCount&quot;: 0,
-     *     &quot;lastTaskInstContent&quot;: &quot;{\&quot;task_inst_id\&quot;:67890,\&quot;state\&quot;:\&quot;SUCCESS\&quot;}&quot;
+     *     &quot;lastTaskInstContent&quot;: &quot;{&quot;task_inst_id&quot;:67890,&quot;state&quot;:&quot;SUCCESS&quot;}&quot;
      *   }</p>
      */
     @NameInMap("Data")

@@ -77,7 +77,7 @@ public class TableDetailModel extends TeaModel {
      * <p>The table property parameters.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;escape.delim&quot;:&quot;\\&quot;,&quot;field.delim&quot;:&quot; &quot;}</p>
+     * <p>{&quot;escape.delim&quot;:&quot;\&quot;,&quot;field.delim&quot;:&quot; &quot;}</p>
      */
     @NameInMap("Parameters")
     public java.util.Map<String, String> parameters;

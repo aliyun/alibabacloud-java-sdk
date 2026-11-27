@@ -62,7 +62,7 @@ public class SubmitResultExportJobRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>SELECT * FROM <code>fotor_com_datastore_resource</code>.<code>fotor_ai_create_task</code> where <code>date</code> = \&quot;2023-05-13\&quot; LIMIT 10;</p>
+     * <p>SELECT * FROM <code>fotor_com_datastore_resource</code>.<code>fotor_ai_create_task</code> where <code>date</code> = &quot;2023-05-13&quot; LIMIT 10;</p>
      */
     @NameInMap("SQL")
     public String SQL;

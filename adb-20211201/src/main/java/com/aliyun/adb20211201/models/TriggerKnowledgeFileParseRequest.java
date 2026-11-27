@@ -15,7 +15,7 @@ public class TriggerKnowledgeFileParseRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The ID of the knowledge base file. You must specify either this parameter or FileLocation, but not both.</p>
+     * <p>The ID of the knowledge base file. You must specify either this parameter or FileLocation.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -24,7 +24,7 @@ public class TriggerKnowledgeFileParseRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The URL of a single knowledge base file. You must specify either this parameter or FileId, but not both. You cannot specify a directory. The URL must uniquely point to an existing file.</p>
+     * <p>The path to a single file in the knowledge base. You must specify either this parameter or FileId. You cannot specify a directory. The path must uniquely identify an existing file.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://bucket/doc.pdf</p>

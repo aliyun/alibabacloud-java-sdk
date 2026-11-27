@@ -174,7 +174,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
          * <p>kafka topic</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;value\&quot;: \&quot;hongxian_test\&quot;}]</p>
+         * <p>[{&quot;value&quot;: &quot;hongxian_test&quot;}]</p>
          */
         @NameInMap("KafkaTopic")
         public String kafkaTopic;

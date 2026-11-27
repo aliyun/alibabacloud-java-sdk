@@ -154,7 +154,7 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
          * <p>The partition column information.</p>
          * 
          * <strong>example:</strong>
-         * <p>DATE_FORMAT(login_time, \&quot;%Y%m%d\&quot;)</p>
+         * <p>DATE_FORMAT(login_time, &quot;%Y%m%d&quot;)</p>
          */
         @NameInMap("PartitionColumn")
         public String partitionColumn;

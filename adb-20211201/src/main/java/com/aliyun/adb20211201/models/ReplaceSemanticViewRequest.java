@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReplaceSemanticViewRequest extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL cluster.</p>
+     * <p>The ID of the ADB cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class ReplaceSemanticViewRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>YAML 内容</p>
+     * <p>YAML content</p>
      */
     @NameInMap("Definition")
     public String definition;

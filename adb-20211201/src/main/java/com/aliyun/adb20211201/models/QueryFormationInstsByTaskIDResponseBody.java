@@ -277,7 +277,7 @@ public class QueryFormationInstsByTaskIDResponseBody extends TeaModel {
          * <p>The task type.</p>
          * 
          * <strong>example:</strong>
-         * <p>Update\&quot;\&quot;</p>
+         * <p>Update&quot;&quot;</p>
          */
         @NameInMap("TaskType")
         public String taskType;

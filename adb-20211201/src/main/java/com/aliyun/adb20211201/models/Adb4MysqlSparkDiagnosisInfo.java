@@ -17,7 +17,7 @@ public class Adb4MysqlSparkDiagnosisInfo extends TeaModel {
      * <p>The diagnostic cause.</p>
      * 
      * <strong>example:</strong>
-     * <p>查询执行耗时较长。</p>
+     * <p>The query execution duration is long.</p>
      */
     @NameInMap("DiagnosisCodeLabel")
     public String diagnosisCodeLabel;
@@ -26,7 +26,7 @@ public class Adb4MysqlSparkDiagnosisInfo extends TeaModel {
      * <p>The diagnostic suggestion.</p>
      * 
      * <strong>example:</strong>
-     * <p>检查查询执行计划并优化 SQL。</p>
+     * <p>Check the query execution plan and optimize the SQL.</p>
      */
     @NameInMap("DiagnosisMsg")
     public String diagnosisMsg;

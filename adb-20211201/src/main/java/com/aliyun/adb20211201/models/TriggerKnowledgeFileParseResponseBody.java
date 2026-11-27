@@ -42,7 +42,7 @@ public class TriggerKnowledgeFileParseResponseBody extends TeaModel {
 
     public static class TriggerKnowledgeFileParseResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the file submitted for reparsing, which is a decimal string. This parameter is returned only when the request is successful.</p>
+         * <p>The ID of the file submitted for reparsing. The value is a decimal string. This parameter is returned only when the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -54,13 +54,13 @@ public class TriggerKnowledgeFileParseResponseBody extends TeaModel {
          * <p>The description of the operation result. If the operation fails, this parameter indicates the cause or the security error code.</p>
          * 
          * <strong>example:</strong>
-         * <p>Reparse task submitted</p>
+         * <p>Submitted for reparsing</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The status before submission. Valid values: PENDING, COMPLETED, FAILED, SKIPPED, and DUPLICATED. This parameter is returned only when the request is successful.</p>
+         * <p>The status before the submission. Valid values: PENDING, COMPLETED, FAILED, SKIPPED, and DUPLICATED. This parameter is returned only when the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>COMPLETED</p>
@@ -69,7 +69,7 @@ public class TriggerKnowledgeFileParseResponseBody extends TeaModel {
         public String previousStatus;
 
         /**
-         * <p>The status after submission. The value is fixed to PENDING. This parameter is returned only when the request is successful.</p>
+         * <p>The status after the submission. The value is fixed to PENDING. This parameter is returned only when the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>PENDING</p>

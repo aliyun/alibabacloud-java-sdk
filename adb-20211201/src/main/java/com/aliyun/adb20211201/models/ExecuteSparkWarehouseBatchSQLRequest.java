@@ -47,7 +47,7 @@ public class ExecuteSparkWarehouseBatchSQLRequest extends TeaModel {
      * 
      * <strong>example:</strong>
      * <p>CREATE TABLE user(id INT, name STRING);
-     * INSERT INTO t VALUE(1, \&quot;Bob\&quot;);
+     * INSERT INTO t VALUE(1, &quot;Bob&quot;);
      * SELECT * FROM t;</p>
      */
     @NameInMap("Query")

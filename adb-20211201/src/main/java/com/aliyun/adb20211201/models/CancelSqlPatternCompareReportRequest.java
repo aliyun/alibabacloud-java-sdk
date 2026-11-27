@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelSqlPatternCompareReportRequest extends TeaModel {
     /**
-     * <p>The AnalyticDB for MySQL instance ID.</p>
+     * <p>The ID of the AnalyticDB for MySQL cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CancelSqlPatternCompareReportRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The SQL Pattern comparison report ID.</p>
+     * <p>The ID of the SQL pattern comparison report.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

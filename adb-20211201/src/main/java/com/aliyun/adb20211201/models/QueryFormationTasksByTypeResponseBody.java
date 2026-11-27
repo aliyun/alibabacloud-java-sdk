@@ -189,7 +189,7 @@ public class QueryFormationTasksByTypeResponseBody extends TeaModel {
          * <p>The scheduling frequency.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;cron\&quot;:\&quot;\&quot;,\&quot;type\&quot;:\&quot;run_on_demand\&quot;}</p>
+         * <p>{&quot;cron&quot;:&quot;&quot;,&quot;type&quot;:&quot;run_on_demand&quot;}</p>
          */
         @NameInMap("SyncTime")
         public String syncTime;

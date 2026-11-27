@@ -45,7 +45,7 @@ public class GenerateSqlBySemanticSqlResponseBody extends TeaModel {
          * <p>The error message returned when the task fails to be created.</p>
          * 
          * <strong>example:</strong>
-         * <p>Failed to rewrite semantic SQL: Ambiguous path from \&quot;lineitem\&quot; to \&quot;nation\&quot;. Multiple paths found</p>
+         * <p>Failed to rewrite semantic SQL: Ambiguous path from &quot;lineitem&quot; to &quot;nation&quot;. Multiple paths found</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;

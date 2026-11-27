@@ -186,7 +186,7 @@ public class ItemsMetricValuesValue extends TeaModel {
         public String maxDisplayValue;
 
         /**
-         * <p>The percentage of this Pattern\&quot;s Time 2 total sum relative to the total sum of all results before dimension filtering in the current report. A value of 10 indicates 10%.</p>
+         * <p>The percentage of this Pattern&quot;s Time 2 total sum relative to the total sum of all results before dimension filtering in the current report. A value of 10 indicates 10%.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -195,7 +195,7 @@ public class ItemsMetricValuesValue extends TeaModel {
         public Double sumRatioPercent;
 
         /**
-         * <p>The percentage of this Pattern\&quot;s Time 2 average value relative to the sum of average values across all Patterns before dimension filtering in the current report. A value of 10 indicates 10%.</p>
+         * <p>The percentage of this Pattern&quot;s Time 2 average value relative to the sum of average values across all Patterns before dimension filtering in the current report. A value of 10 indicates 10%.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -303,7 +303,7 @@ public class ItemsMetricValuesValue extends TeaModel {
         public String time1DisplayValue;
 
         /**
-         * <p>The percentage of this Pattern\&quot;s Time 1 average value across active query minute buckets relative to the sum of the corresponding statistics for all results before dimension filtering in the current report. A value of 10 indicates 10%.</p>
+         * <p>The percentage of this Pattern&quot;s Time 1 average value across active query minute buckets relative to the sum of the corresponding statistics for all results before dimension filtering in the current report. A value of 10 indicates 10%.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -330,7 +330,7 @@ public class ItemsMetricValuesValue extends TeaModel {
         public String time2DisplayValue;
 
         /**
-         * <p>The percentage of this Pattern\&quot;s Time 2 average value across active query minute buckets relative to the sum of the corresponding statistics for all results before dimension filtering in the current report. A value of 10 indicates 10%.</p>
+         * <p>The percentage of this Pattern&quot;s Time 2 average value across active query minute buckets relative to the sum of the corresponding statistics for all results before dimension filtering in the current report. A value of 10 indicates 10%.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -430,7 +430,7 @@ public class ItemsMetricValuesValue extends TeaModel {
         public String time1DisplayValue;
 
         /**
-         * <p>The percentage of this Pattern\&quot;s Time 1 sum of metric values across active query minute buckets relative to the sum of the corresponding statistics for all results before dimension filtering in the current report. A value of 10 indicates 10%.</p>
+         * <p>The percentage of this Pattern&quot;s Time 1 sum of metric values across active query minute buckets relative to the sum of the corresponding statistics for all results before dimension filtering in the current report. A value of 10 indicates 10%.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -457,7 +457,7 @@ public class ItemsMetricValuesValue extends TeaModel {
         public String time2DisplayValue;
 
         /**
-         * <p>The percentage of this Pattern\&quot;s Time 2 sum of metric values across active query minute buckets relative to the sum of the corresponding statistics for all results before dimension filtering in the current report. A value of 10 indicates 10%.</p>
+         * <p>The percentage of this Pattern&quot;s Time 2 sum of metric values across active query minute buckets relative to the sum of the corresponding statistics for all results before dimension filtering in the current report. A value of 10 indicates 10%.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

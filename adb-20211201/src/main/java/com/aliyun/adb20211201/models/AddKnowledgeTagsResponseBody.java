@@ -42,7 +42,7 @@ public class AddKnowledgeTagsResponseBody extends TeaModel {
 
     public static class AddKnowledgeTagsResponseBodyDataSkipped extends TeaModel {
         /**
-         * <p>The reason why the tag was skipped.</p>
+         * <p>The reason why the tag is skipped.</p>
          * 
          * <strong>example:</strong>
          * <p>conflict</p>
@@ -119,7 +119,7 @@ public class AddKnowledgeTagsResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The number of tags that were successfully modified.</p>
+         * <p>The number of tags that are successfully modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -134,10 +134,10 @@ public class AddKnowledgeTagsResponseBody extends TeaModel {
         public java.util.List<AddKnowledgeTagsResponseBodyDataSkipped> skipped;
 
         /**
-         * <p>Specifies whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request was successful.</li>
-         * <li><strong>false</strong>: The request failed.</li>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class AddKnowledgeTagsResponseBody extends TeaModel {
         public Boolean success;
 
         /**
-         * <p>The number of tags that were successfully added.</p>
+         * <p>The number of tags that are successfully added.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

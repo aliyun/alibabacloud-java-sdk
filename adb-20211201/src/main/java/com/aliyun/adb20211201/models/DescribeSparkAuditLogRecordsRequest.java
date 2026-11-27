@@ -62,7 +62,7 @@ public class DescribeSparkAuditLogRecordsRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>[{\&quot;Field\&quot;:\&quot;ExecuteTime\&quot;,\&quot;Type\&quot;:\&quot;Desc\&quot;}]</p>
+     * <p>[{&quot;Field&quot;:&quot;ExecuteTime&quot;,&quot;Type&quot;:&quot;Desc&quot;}]</p>
      */
     @NameInMap("Order")
     public String order;

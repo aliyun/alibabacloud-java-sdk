@@ -15,7 +15,7 @@ public class AddKnowledgeUploadUserRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The ID of the file.</p>
+     * <p>The file ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3214123</p>
@@ -24,7 +24,7 @@ public class AddKnowledgeUploadUserRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The path of the knowledge base document.</p>
+     * <p>The address of the knowledge base document.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://bucketName/path/to/file.pdf</p>
