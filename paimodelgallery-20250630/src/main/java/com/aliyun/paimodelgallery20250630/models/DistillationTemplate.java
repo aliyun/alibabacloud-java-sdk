@@ -49,6 +49,13 @@ public class DistillationTemplate extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3063233</p>
+     */
+    @NameInMap("Doc")
+    public String doc;
+
     @NameInMap("InputDatasetMustBeDirectory")
     public Boolean inputDatasetMustBeDirectory;
 
@@ -172,6 +179,14 @@ public class DistillationTemplate extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public DistillationTemplate setDoc(String doc) {
+        this.doc = doc;
+        return this;
+    }
+    public String getDoc() {
+        return this.doc;
     }
 
     public DistillationTemplate setInputDatasetMustBeDirectory(Boolean inputDatasetMustBeDirectory) {

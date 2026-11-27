@@ -23,6 +23,13 @@ public class DistillationTemplateSummary extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>3063233</p>
+     */
+    @NameInMap("Doc")
+    public String doc;
+
+    /**
+     * <strong>example:</strong>
      * <p>advanced_cot_distill</p>
      */
     @NameInMap("JobType")
@@ -89,6 +96,14 @@ public class DistillationTemplateSummary extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public DistillationTemplateSummary setDoc(String doc) {
+        this.doc = doc;
+        return this;
+    }
+    public String getDoc() {
+        return this.doc;
     }
 
     public DistillationTemplateSummary setJobType(String jobType) {
