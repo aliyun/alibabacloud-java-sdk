@@ -11,7 +11,7 @@ public class GetFilesetResponseBody extends TeaModel {
     public GetFilesetResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>BC7C825C-5F65-4B56-BEF6-98C56C7C****</p>
@@ -42,7 +42,7 @@ public class GetFilesetResponseBody extends TeaModel {
 
     public static class GetFilesetResponseBodyDataQuota extends TeaModel {
         /**
-         * <p>The file count limit of the quota. Value range:</p>
+         * <p>The file count limit of the quota. Valid values:</p>
          * <ul>
          * <li><p>Minimum value: 10,000.</p>
          * </li>
@@ -58,16 +58,16 @@ public class GetFilesetResponseBody extends TeaModel {
 
         /**
          * <p>The total capacity limit of the quota. Unit: bytes.</p>
-         * <p>Value range:</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li><p>Minimum value: 10,737,418,240 (10 GiB).</p>
          * </li>
-         * <li><p>Increment: 1,073,741,824 (1 GiB).</p>
+         * <li><p>Step size: 1,073,741,824 (1 GiB).</p>
          * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>10,737,418,240</p>
+         * <p>10737418240</p>
          */
         @NameInMap("SizeLimit")
         public Long sizeLimit;
@@ -107,13 +107,13 @@ public class GetFilesetResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The release protection property of the instance. Specifies whether the instance can be released from the console or by calling the <a href="https://help.aliyun.com/document_detail/2402263.html">DeleteFileset</a> operation.</p>
+         * <p>The release protection property of the instance, which specifies whether the instance can be released from the console or by calling the <a href="https://help.aliyun.com/document_detail/2402263.html">DeleteFileset</a> operation.</p>
          * <ul>
          * <li>true: Release protection is enabled.</li>
          * <li>false (default): Release protection is disabled.</li>
          * </ul>
          * <blockquote>
-         * <p>This property applies only to manual release operations and does not apply to system-initiated release operations.</p>
+         * <p>This property only restricts manual release operations and does not take effect on system release operations.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -132,9 +132,9 @@ public class GetFilesetResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The file count usage.</p>
+         * <p>The number of used files.</p>
          * <blockquote>
-         * <p>Only CPFS for Lingjun 2.7.0 and later support this parameter.</p>
+         * <p>This parameter is supported only by CPFS for Lingjun 2.7.0 and later.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -144,11 +144,11 @@ public class GetFilesetResponseBody extends TeaModel {
         public Long fileCountUsage;
 
         /**
-         * <p>The file system ID.</p>
+         * <p>The ID of the file system.</p>
          * <ul>
-         * <li><p>CPFS: The ID must start with <code>cpfs-</code>, such as cpfs-125487\<em>\</em>\<em>\</em>.</p>
+         * <li><p>CPFS: The ID must start with <code>cpfs-</code>, such as cpfs-125487****.</p>
          * </li>
-         * <li><p>CPFS for Lingjun: The ID must start with <code>bmcpfs-</code>, such as bmcpfs-0015\<em>\</em>\<em>\</em>.</p>
+         * <li><p>CPFS for Lingjun: The ID must start with <code>bmcpfs-</code>, such as bmcpfs-0015****.</p>
          * </li>
          * </ul>
          * 
@@ -168,9 +168,9 @@ public class GetFilesetResponseBody extends TeaModel {
         public String fileSystemPath;
 
         /**
-         * <p>The Fileset ID.</p>
+         * <p>The ID of the Fileset.</p>
          * <blockquote>
-         * <p>This parameter is required if the file system type is CPFS.</p>
+         * <p>This parameter is required when the file system type is CPFS.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -182,16 +182,16 @@ public class GetFilesetResponseBody extends TeaModel {
         /**
          * <p>The quota information.</p>
          * <blockquote>
-         * <p>Only CPFS for Lingjun 2.7.0 and later support this parameter.</p>
+         * <p>This parameter is supported only by CPFS for Lingjun 2.7.0 and later.</p>
          * </blockquote>
          */
         @NameInMap("Quota")
         public GetFilesetResponseBodyDataQuota quota;
 
         /**
-         * <p>The capacity usage. Unit: bytes.</p>
+         * <p>The used storage capacity. Unit: bytes.</p>
          * <blockquote>
-         * <p>Only CPFS for Lingjun 2.7.0 and later support this parameter.</p>
+         * <p>This parameter is supported only by CPFS for Lingjun 2.7.0 and later.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -204,7 +204,7 @@ public class GetFilesetResponseBody extends TeaModel {
          * <p>The status of the Fileset. Valid values:</p>
          * <ul>
          * <li>CREATING: The Fileset is being created.</li>
-         * <li>CREATED: The Fileset is created and running as expected. </li>
+         * <li>CREATED: The Fileset is created and running normally. </li>
          * <li>RELEASING: The Fileset is being released.</li>
          * <li>RELEASED: The Fileset is deleted.</li>
          * </ul>

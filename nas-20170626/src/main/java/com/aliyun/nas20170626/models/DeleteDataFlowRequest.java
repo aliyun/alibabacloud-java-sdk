@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteDataFlowRequest extends TeaModel {
     /**
-     * <p>Ensures the idempotence of the request. Generate a unique parameter value from your client to ensure that the value is unique across different requests.</p>
-     * <p>ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can generate the value from your client and ensure that the value is unique across different requests.</p>
+     * <p>The ClientToken parameter supports only ASCII characters and can be up to 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DeleteDataFlowRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The dataflow ID.</p>
+     * <p>The data flow ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,12 +28,12 @@ public class DeleteDataFlowRequest extends TeaModel {
     public String dataFlowId;
 
     /**
-     * <p>Specifies whether to perform a dry run for this request.</p>
-     * <p>A dry run checks parameter validity and resource availability without actually creating an instance or incurring fees.</p>
+     * <p>Specifies whether to perform a dry run on this creation request.</p>
+     * <p>A dry run checks parameter validity and inventory availability without actually creating the instance or incurring charges.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true: Sends a check request without creating an instance. The check items include required parameters, request format, business limits, and NAS inventory. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned, but FileSystemId is empty.</li>
-     * <li>false (default): Sends a normal request and creates the instance after the check passes.</li>
+     * <li>true: Sends a dry run request. The instance is not created. Check items include whether required parameters are specified, request format, service limits, and NAS inventory. If the check fails, the corresponding error is returned. If the check succeeds, HTTP status code 200 is returned, but FileSystemId is empty.</li>
+     * <li>false (default): Sends a normal request. The instance is created directly after the check succeeds.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,9 +45,9 @@ public class DeleteDataFlowRequest extends TeaModel {
     /**
      * <p>The file system ID.</p>
      * <ul>
-     * <li><p>CPFS: The ID must start with <code>cpfs-</code>, such as cpfs-125487\<em>\</em>\<em>\</em>.</p>
+     * <li><p>CPFS: The ID must start with <code>cpfs-</code>, such as cpfs-125487****.</p>
      * </li>
-     * <li><p>CPFS for Lingjun: The ID must start with <code>bmcpfs-</code>, such as bmcpfs-0015\<em>\</em>\<em>\</em>.</p>
+     * <li><p>CPFS for Lingjun: The ID must start with <code>bmcpfs-</code>, such as bmcpfs-0015****.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

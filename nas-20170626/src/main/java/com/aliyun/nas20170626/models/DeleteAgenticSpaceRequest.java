@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAgenticSpaceRequest extends TeaModel {
     /**
-     * <p>AgenticSpace Id。</p>
+     * <p>The AgenticSpace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class DeleteAgenticSpaceRequest extends TeaModel {
     public String agenticSpaceId;
 
     /**
-     * <p>Ensures the idempotency of the request. Generate a parameter value from your client to ensure that the value is unique across different requests.</p>
-     * <p>ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotency</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests.</p>
+     * <p>The client token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,12 +28,12 @@ public class DeleteAgenticSpaceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run for this request.</p>
-     * <p>A dry run checks parameter validity and resource availability without actually creating or deleting instances, and no fees are incurred.</p>
+     * <p>Specifies whether to perform a dry run on the deletion request.</p>
+     * <p>A dry run checks parameter validity and verifies inventory. It does not actually delete the instance or incur any fees.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true: Sends a dry run request without deleting the instance. The check items include whether required parameters are specified, request format, business limits, and File Storage NAS inventory. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned, but FileSystemId is empty.</li>
-     * <li>false (default): Sends a normal request and directly deletes the instance after the check is passed.</li>
+     * <li>true: sends a dry run request. The system does not delete the instance. The system checks whether required parameters are specified, the request format is valid, service limits are met, and NAS inventory is sufficient. If the request fails the dry run, an error is returned. If the request passes the dry run, the HTTP status code 200 is returned and the FileSystemId is empty.</li>
+     * <li>false (default): sends a normal request. If the request passes the dry run, the instance is directly deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class DeleteAgenticSpaceRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The file system ID.</p>
+     * <p>The ID of the file system.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

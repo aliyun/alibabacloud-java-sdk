@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAgenticSpaceRequest extends TeaModel {
     /**
-     * <p>AgenticSpace Id。</p>
+     * <p>The AgenticSpace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class ModifyAgenticSpaceRequest extends TeaModel {
     public String agenticSpaceId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</p>
-     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests.</p>
+     * <p>The client token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -37,12 +37,12 @@ public class ModifyAgenticSpaceRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to perform a dry run for this request.</p>
-     * <p>A dry run checks parameter validity and resource availability without actually creating or modifying the instance, and does not incur fees.</p>
+     * <p>Specifies whether to perform a dry run on this request.</p>
+     * <p>A dry run checks parameter validity and verifies inventory, but does not actually create an instance or incur any fees.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true: Sends a dry run request without modifying the instance. The check items include required parameters, request format, business limits, and File Storage NAS inventory. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned, but FileSystemId is empty.</li>
-     * <li>false (default): Sends a normal request. After the check passes, the instance is directly modified.</li>
+     * <li>true: A dry run is performed and no instance is created. The system checks whether required parameters are specified, the request format, business limits, and NAS inventory. If the request fails the check, an error is returned. If the request passes the check, the HTTP status code 200 is returned, but the FileSystemId is empty.</li>
+     * <li>false (default): A normal request is sent. If the request passes the check, the instance is directly modified.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class ModifyAgenticSpaceRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The file system ID.</p>
+     * <p>The ID of the file system.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

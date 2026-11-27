@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNfsAclRequest extends TeaModel {
     /**
-     * <p>The file system ID.</p>
+     * <p>The ID of the file system.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ApplyAutoSnapshotPolicyRequest extends TeaModel {
     /**
-     * <p>The ID of the automatic snapshot policy.</p>
+     * <p>The ID of the destination automatic snapshot policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,8 @@ public class ApplyAutoSnapshotPolicyRequest extends TeaModel {
     public String autoSnapshotPolicyId;
 
     /**
-     * <p>The IDs of the Advanced Extreme NAS file systems.</p>
-     * <p>You can specify up to 100 file system IDs in a single request. To apply the automatic snapshot policy to multiple file systems, separate the file system IDs with commas (,).</p>
+     * <p>The IDs of the destination Advanced Extreme NAS file systems.</p>
+     * <p>You can specify up to 100 file system IDs in a single call. To apply the automatic snapshot policy to multiple file systems, separate the file system IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

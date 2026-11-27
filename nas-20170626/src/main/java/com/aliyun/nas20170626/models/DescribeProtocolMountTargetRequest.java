@@ -5,10 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeProtocolMountTargetRequest extends TeaModel {
     /**
-     * <p>Ensures the idempotency of the request. Generate a value from your client to ensure that the value is unique among different requests.</p>
-     * <p>The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotency</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, and make sure that the token is unique across different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the RequestId of the API request as the ClientToken value. The RequestId may vary for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +17,7 @@ public class DescribeProtocolMountTargetRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The file system ID.</p>
+     * <p>The ID of the file system.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,17 +27,17 @@ public class DescribeProtocolMountTargetRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The filter keys for querying protocol service export directories.</p>
+     * <p>The filter keys used to query the export directories of the protocol service.</p>
      */
     @NameInMap("Filters")
     public java.util.List<DescribeProtocolMountTargetRequestFilters> filters;
 
     /**
-     * <p>The maximum number of results to return in each query.</p>
+     * <p>The maximum number of entries to return for a single request.</p>
      * <ul>
-     * <li><p>Valid values: 10 to 100</p>
+     * <li><p>Valid values: 10 to 100.</p>
      * </li>
-     * <li><p>Default value: 20</p>
+     * <li><p>Default value: 20.</p>
      * </li>
      * </ul>
      * 
@@ -49,7 +48,7 @@ public class DescribeProtocolMountTargetRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The token that is used for the next query. If not all results are returned in a query, a value is returned for the NextToken parameter. You can use this token in the next request to retrieve the remaining results.</p>
+     * <p>The token that is used to retrieve the next page of results when the returned results are truncated.</p>
      * 
      * <strong>example:</strong>
      * <p>aBcdg==</p>
@@ -121,7 +120,7 @@ public class DescribeProtocolMountTargetRequest extends TeaModel {
 
     public static class DescribeProtocolMountTargetRequestFilters extends TeaModel {
         /**
-         * <p>The name of the filter key.</p>
+         * <p>The name of the filter key. Valid values:</p>
          * <ul>
          * <li><p>ProtocolServiceIds: filters by protocol service ID.</p>
          * </li>
@@ -129,9 +128,9 @@ public class DescribeProtocolMountTargetRequest extends TeaModel {
          * </li>
          * <li><p>VpcIds: filters by VPC ID.</p>
          * </li>
-         * <li><p>FsetIds: filters by fileset ID.</p>
+         * <li><p>FsetIds: filters by Fileset ID.</p>
          * </li>
-         * <li><p>Paths: filters by the file system path that corresponds to the mount target.</p>
+         * <li><p>Paths: filters by the file system path corresponding to the mount target.</p>
          * </li>
          * <li><p>AccessGroupNames: filters by permission group name.</p>
          * </li>
@@ -146,17 +145,17 @@ public class DescribeProtocolMountTargetRequest extends TeaModel {
         /**
          * <p>The value of the filter key. Wildcards are not supported.</p>
          * <ul>
-         * <li><p>If Key is set to ProtocolServiceIds, set Value to a protocol service ID. You can specify up to 10 protocol service IDs. Example: <code>ptc-12345678</code> or <code>ptc-12345678,ptc-12345679</code>.</p>
+         * <li><p>If Key is set to ProtocolServiceIds, set Value to the protocol service IDs. You can specify up to 10 protocol service IDs. Example: <code>ptc-12345678</code> or <code>ptc-12345678,ptc-12345679</code>.</p>
          * </li>
-         * <li><p>If Key is set to ExportIds, set Value to an export directory ID. You can specify up to 10 export directory IDs. Example: <code>exp-12345678</code> or <code>exp-12345678,exp-12345679</code>.</p>
+         * <li><p>If Key is set to ExportIds, set Value to the export directory IDs. You can specify up to 10 export directory IDs. Example: <code>exp-12345678</code> or <code>exp-12345678,exp-12345679</code>.</p>
          * </li>
-         * <li><p>If Key is set to VpcIds, set Value to the VPC ID of the protocol service. You can specify up to 10 VPC IDs. Example: <code>vpc-12345678</code> or <code>vpc-12345678,vpc-12345679</code>.</p>
+         * <li><p>If Key is set to VpcIds, set Value to the VPC IDs of the protocol service. You can specify up to 10 VPC IDs. Example: <code>vpc-12345678</code> or <code>vpc-12345678,vpc-12345679</code>.</p>
          * </li>
-         * <li><p>If Key is set to FsetIds, set Value to a fileset ID. You can specify up to 10 fileset IDs. Example: <code>fset-12345678</code> or <code>fset-12345678,fset-12345679</code>.</p>
+         * <li><p>If Key is set to FsetIds, set Value to the Fileset IDs. You can specify up to 10 Fileset IDs. Example: <code>fset-12345678</code> or <code>fset-12345678,fset-12345679</code>.</p>
          * </li>
-         * <li><p>If Key is set to Paths, set Value to the file system directory that corresponds to the mount target. You can specify up to 10 paths. Example: <code>/cpfs/mnt_1/</code> or <code>/cpfs/mnt_1/,/cpfs/mnt_2/</code>.</p>
+         * <li><p>If Key is set to Paths, set Value to the file system directories corresponding to the mount targets. You can specify up to 10 paths. Example: <code>/cpfs/mnt_1/</code> or <code>/cpfs/mnt_1/,/cpfs/mnt_2/</code>.</p>
          * </li>
-         * <li><p>If Key is set to AccessGroupNames, set Value to the permission group name of the protocol service. You can specify up to 10 permission group names. Example: <code>ag-12345678</code> or <code>ag-12345678,ag-12345679</code>.</p>
+         * <li><p>If Key is set to AccessGroupNames, set Value to the permission group names of the protocol service. You can specify up to 10 permission group names. Example: <code>ag-12345678</code> or <code>ag-12345678,ag-12345679</code>.</p>
          * </li>
          * </ul>
          * 

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CancelDataFlowAutoRefreshRequest extends TeaModel {
     /**
-     * <p>Ensures the idempotence of the request. Generate a unique parameter value from your client to ensure that the value is unique among different requests.</p>
-     * <p>The value of ClientToken can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can generate the value on your client and ensure that the value is unique across different requests.</p>
+     * <p>The client token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class CancelDataFlowAutoRefreshRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The data flow ID.</p>
+     * <p>The ID of the data flow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,12 +28,12 @@ public class CancelDataFlowAutoRefreshRequest extends TeaModel {
     public String dataFlowId;
 
     /**
-     * <p>Specifies whether to perform a dry run for this request.</p>
-     * <p>A dry run checks parameter validity and resource availability without actually creating the instance or incurring fees.</p>
+     * <p>Specifies whether to perform a dry run on this request.</p>
+     * <p>A dry run checks parameter validity and resource availability. It does not actually perform the operation or incur fees.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true: Sends a dry run request without creating the data flow. The dry run checks whether required parameters are specified, whether the request format is valid, and whether business dependencies are met. If the check fails, the corresponding error is returned. If the check succeeds, HTTP status code 200 is returned, but DataFlowId is empty.</li>
-     * <li>false (default): Sends a normal request. After the check succeeds, the instance is directly created.</li>
+     * <li>true: performs a dry run without performing the operation. The system checks whether required parameters are specified, whether the request format is valid, and whether business limits are met. If the request fails the dry run, an error is returned. If the request passes the dry run, HTTP status code 200 is returned, but DataFlowId is empty.</li>
+     * <li>false (default): sends a regular request. If the request passes the check, the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class CancelDataFlowAutoRefreshRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The file system ID.</p>
+     * <p>The ID of the file system.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,15 +53,15 @@ public class CancelDataFlowAutoRefreshRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The directory for which you want to cancel the automatic update configuration.</p>
+     * <p>The directory for which you want to cancel the auto-update configuration.</p>
      * <p>Limits:</p>
      * <ul>
-     * <li>The length must be 2 to 1,024 characters.</li>
+     * <li>The value must be 2 to 1,024 characters in length.</li>
      * <li>The value must be encoded in UTF-8.</li>
      * <li>The value must start and end with a forward slash (/).</li>
      * </ul>
      * <blockquote>
-     * <p>The directory must be an existing directory in CPFS and must be in a fileset for which data flow is enabled.</p>
+     * <p>The directory must already exist in the CPFS file system and must be located in a Fileset for which the data flow feature is enabled.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

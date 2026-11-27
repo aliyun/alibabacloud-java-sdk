@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetProtocolMountTargetRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</p>
-     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can generate the value on your client to ensure that the value is unique across different requests.</p>
+     * <p>The ClientToken parameter supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,11 +18,11 @@ public class GetProtocolMountTargetRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The export directory ID of the protocol service. <strong>Required</strong>.</p>
+     * <p>The ID of the protocol service export directory. <strong>Required</strong>.</p>
      * <p><strong>How to obtain</strong>:</p>
      * <ul>
      * <li>Call the <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createprotocolmounttarget-cpfs">CreateProtocolMountTarget</a> operation to create an export directory and obtain the ExportId from the response.</li>
-     * <li>Or call the <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolmounttarget-cpfs">DescribeProtocolMountTarget</a> operation to query the list of export directories and obtain the ExportId from the response.</li>
+     * <li>Alternatively, call the <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolmounttarget-cpfs">DescribeProtocolMountTarget</a> operation to query the export directory list and obtain the ExportId from the response.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -33,13 +33,13 @@ public class GetProtocolMountTargetRequest extends TeaModel {
     public String exportId;
 
     /**
-     * <p>The file system ID.</p>
+     * <p>The ID of the file system.</p>
      * <ul>
-     * <li><p>CPFS: The ID must start with <code>cpfs-</code>, such as cpfs-125487\<em>\</em>\<em>\</em>.</p>
+     * <li><p>CPFS: The ID must start with <code>cpfs-</code>, such as cpfs-125487****.</p>
      * </li>
-     * <li><p>CPFS for Lingjun: The ID must start with <code>bmcpfs-</code>, such as bmcpfs-0015\<em>\</em>\<em>\</em>.</p>
+     * <li><p>CPFS for Lingjun: The ID must start with <code>bmcpfs-</code>, such as bmcpfs-0015****.</p>
      * </li>
-     * <li><p>CPFS SE: The ID must start with <code>cpfsse-</code>, such as cpfsse-022c71b134\<em>\</em>\<em>\</em>.</p>
+     * <li><p>CPFS SE: The ID must start with <code>cpfsse-</code>, such as cpfsse-022c71b134****.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -51,7 +51,7 @@ public class GetProtocolMountTargetRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The number of results returned per query.</p>
+     * <p>The maximum number of entries to return for a single request.</p>
      * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class GetProtocolMountTargetRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the return results are truncated, use NextToken to initiate another request to retrieve the content after the current truncation position.</p>
+     * <p>The next token. If the response is truncated, you can use NextToken to send another request to retrieve the remaining results.</p>
      * 
      * <strong>example:</strong>
      * <p>M18xMA==</p>
@@ -70,8 +70,8 @@ public class GetProtocolMountTargetRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The protocol service ID. <strong>Required</strong>.</p>
-     * <p><strong>How to obtain</strong>: Call the <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolservice-cpfs">DescribeProtocolService</a> operation to query the list of protocol services and obtain the ProtocolServiceId from the response.</p>
+     * <p>The ID of the protocol service. <strong>Required</strong>.</p>
+     * <p><strong>How to obtain</strong>: Call the <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolservice-cpfs">DescribeProtocolService</a> operation to query the protocol service list and obtain the ProtocolServiceId from the response.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

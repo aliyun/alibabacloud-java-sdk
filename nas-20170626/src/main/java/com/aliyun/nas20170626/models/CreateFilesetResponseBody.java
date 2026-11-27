@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFilesetResponseBody extends TeaModel {
     /**
-     * <p>Fileset ID。</p>
+     * <p>The Fileset ID.</p>
      * 
      * <strong>example:</strong>
      * <p>fset-1902718ea0ae****</p>

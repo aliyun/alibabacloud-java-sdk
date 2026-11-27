@@ -1,3 +1,11 @@
+2026-11-27 Version: 3.7.6
+- Update API CreateDir: add request parameters DryRun.
+- Update API DeleteFileSystem: add request parameters DryRun.
+- Update API DeleteMountTarget: add request parameters DryRun.
+- Update API SetDirQuota: add request parameters DryRun.
+- Update API TagResources: add request parameters DryRun.
+
+
 2026-10-21 Version: 3.7.5
 - Update API CreateFileSystem: add request parameters HpnZone.
 

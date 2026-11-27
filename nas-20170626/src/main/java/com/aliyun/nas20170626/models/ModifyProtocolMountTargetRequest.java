@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyProtocolMountTargetRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Generate a unique value from your client to ensure that the value is unique among different requests.</p>
-     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can generate the token on your client and ensure that the token is unique across different requests.</p>
+     * <p>The client token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,34 +18,34 @@ public class ModifyProtocolMountTargetRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the export directory of the protocol service.</p>
+     * <p>The description of the export directory for the protocol service.</p>
      * <p>Limits:</p>
      * <ul>
      * <li>The description must be 2 to 128 characters in length.</li>
-     * <li>The description must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</li>
-     * <li>The description can contain digits, colons (:), underscores (_), and hyphens (-).</li>
+     * <li>It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>It can contain digits, colons (:), underscores (_), and hyphens (-).</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Description of this export directory</p>
+     * <p>Description of the export directory</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>Specifies whether to perform a dry run for this modification request.</p>
-     * <p>A dry run checks parameter validity and dependency conditions without actually modifying the export directory or incurring charges.</p>
+     * <p>Specifies whether to perform a dry run on the modification request.</p>
+     * <p>A dry run checks whether the parameters are valid and whether the dependencies are met. It does not actually modify the export directory or incur any fees.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Sends a dry run request without modifying the export directory. The check items include required parameters, request format, and business dependency conditions.</p>
+     * <li><p><strong>true</strong>: A dry run is performed and the export directory is not modified. The system checks whether required parameters are specified, the request format is valid, and the business limits and dependencies are met.</p>
      * <ul>
-     * <li><strong>DryRun=true also performs resource status checks</strong> (including the requirement that the export directory is in the AVAILABLE state).</li>
-     * <li>If the export directory status does not meet the requirements (such as CREATING), the corresponding error is returned.</li>
-     * <li><strong>DryRun does not bypass status checks</strong>. It only validates request parameter validity and basic dependencies.</li>
-     * <li>If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned.</li>
+     * <li><strong>A dry run with DryRun set to true also checks the resource status</strong> (including the requirement that the export directory must be in the AVAILABLE state).</li>
+     * <li>If the status of the export directory does not meet the requirements (for example, the status is CREATING), the corresponding error is returned.</li>
+     * <li><strong>A dry run does not bypass the status check</strong>. It is only used to verify the validity of request parameters and basic dependencies.</li>
+     * <li>If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, the HTTP status code 200 is returned.</li>
      * </ul>
      * </li>
-     * <li><p><strong>false (default)</strong>: Sends a normal request. After the check passes, the export directory parameters are directly modified.</p>
+     * <li><p><strong>false</strong> (default): A normal request is sent. If the request passes the check, the parameters of the export directory are directly modified.</p>
      * </li>
      * </ul>
      * 
@@ -56,7 +56,7 @@ public class ModifyProtocolMountTargetRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The export directory ID of the protocol service. Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolmounttarget-cpfs">DescribeProtocolMountTarget</a> to obtain the export directory information.</p>
+     * <p>The ID of the export directory for the protocol service. You can call the <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolmounttarget-cpfs">DescribeProtocolMountTarget</a> operation to query the export directory information and obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class ModifyProtocolMountTargetRequest extends TeaModel {
     public String exportId;
 
     /**
-     * <p>The file system ID. Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describefilesystems-cpfs">DescribeFileSystems</a> (with FileSystemType set to cpfs) to obtain the file system information.</p>
+     * <p>The ID of the file system. You can call the <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describefilesystems-cpfs">DescribeFileSystems</a> operation to query the file system information and obtain the ID. Set the FileSystemType parameter to cpfs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,7 +76,7 @@ public class ModifyProtocolMountTargetRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The protocol service ID. Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolservice-cpfs">DescribeProtocolService</a> to obtain the protocol service information.</p>
+     * <p>The ID of the protocol service. You can call the <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolservice-cpfs">DescribeProtocolService</a> operation to query the protocol service information and obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

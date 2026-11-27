@@ -17,7 +17,7 @@ public class SetDirQuotaResponseBody extends TeaModel {
      * <p>The request status.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
+     * <li>true: The request succeeded.</li>
      * <li>false: The request failed.</li>
      * </ul>
      * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAgenticSpaceResponseBody extends TeaModel {
     /**
-     * <p>The Agentic space ID. This is a globally unique identifier assigned by the system after the Agentic space (an independent workspace allocated to a single agent end user in AgenticFS) is created.</p>
+     * <p>The ID of the Agentic space. The globally unique identifier assigned by the system after the Agentic space (an independent workspace allocated to a single agent end user in AgenticFS) is created.</p>
      * 
      * <strong>example:</strong>
      * <p>agentic-229oypxjgpau2****</p>
@@ -14,7 +14,7 @@ public class CreateAgenticSpaceResponseBody extends TeaModel {
     public String agenticSpaceId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>98696EF0-1607-4E9D-B01D-F20930B6****</p>

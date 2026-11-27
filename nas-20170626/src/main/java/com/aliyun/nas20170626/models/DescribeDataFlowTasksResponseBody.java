@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataFlowTasksResponseBody extends TeaModel {
     /**
-     * <p>If the returned results are truncated, you can use NextToken to initiate a new request to retrieve the content after the truncation point.</p>
+     * <p>The next token. If the returned results of a request are truncated, you can use NextToken to initiate another request and obtain the remaining results.</p>
      * 
      * <strong>example:</strong>
      * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>

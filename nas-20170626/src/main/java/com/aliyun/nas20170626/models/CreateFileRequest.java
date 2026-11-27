@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFileRequest extends TeaModel {
     /**
-     * <p>The file system ID.</p>
+     * <p>The ID of the file system.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,8 @@ public class CreateFileRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The portable account ID.
-     * Limit: The value is a 16-character string that contains digits and lowercase letters.</p>
+     * <p>The ID of the portable account.
+     * Limits: The ID must be a 16-character string that contains only digits and lowercase English letters.</p>
      * 
      * <strong>example:</strong>
      * <p>378cc7630f26****</p>
@@ -27,11 +27,11 @@ public class CreateFileRequest extends TeaModel {
     /**
      * <p>Specifies whether to share directory permissions. Valid values:</p>
      * <ul>
-     * <li>false (default): Directory permissions are not shared.</li>
-     * <li>true: Directory permissions are shared.<blockquote>
+     * <li>false (default): Does not share directory permissions.</li>
+     * <li>true: Shares directory permissions.<blockquote>
      * <ul>
      * <li>This parameter takes effect only when Type is set to Directory and Owner is not empty.</li>
-     * <li>The directory has inheritable Owner permissions. The Owner has read and write permissions on subdirectories and files created under this directory, even if they are created by other users.</li>
+     * <li>The directory has inheritable Owner permissions. Subdirectories and files created in this directory inherit read and write permissions for this Owner, even if they are created by other users.</li>
      * </ul>
      * </blockquote>
      * </li>
@@ -61,8 +61,8 @@ public class CreateFileRequest extends TeaModel {
     /**
      * <p>The object type. Valid values:</p>
      * <ul>
-     * <li>File: file.</li>
-     * <li>Directory: directory.</li>
+     * <li>File: file</li>
+     * <li>Directory: directory</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

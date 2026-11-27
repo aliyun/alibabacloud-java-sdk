@@ -46,8 +46,8 @@ public class UpgradeFileSystemRequest extends TeaModel {
     /**
      * <p>The file system ID.</p>
      * <ul>
-     * <li>Extreme NAS: The ID must start with <code>extreme-</code>, for example, extreme-0015\<em>\</em>\<em>\</em>.</li>
-     * <li>CPFS: The ID must start with <code>cpfs-</code>, for example, cpfs-125487\<em>\</em>\<em>\</em>.</li>
+     * <li>Extreme NAS: The ID must start with <code>extreme-</code>, for example, extreme-0015****.</li>
+     * <li>CPFS: The ID must start with <code>cpfs-</code>, for example, cpfs-125487****.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

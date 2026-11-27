@@ -9,9 +9,8 @@ public class CreateCpfsAccessPointRequest extends TeaModel {
      * <p>Limits:</p>
      * <ul>
      * <li>The description must be 2 to 128 characters in length.</li>
-     * <li>The description must start with a letter.</li>
-     * <li>The description cannot start with http:// or https://.</li>
-     * <li>The description can contain digits, colons (:), underscores (_), or hyphens (-).</li>
+     * <li>It must start with a letter or a Chinese character, and cannot start with http:// or https://.</li>
+     * <li>It can contain digits, colons (:), underscores (_), and hyphens (-).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -23,9 +22,9 @@ public class CreateCpfsAccessPointRequest extends TeaModel {
     /**
      * <p>The file system ID.</p>
      * <ul>
-     * <li><p>Cloud Parallel File Storage (CPFS): The ID must start with <code>cpfs-</code>. Example: cpfs-125487\<em>\</em>\<em>\</em>.</p>
+     * <li><p>CPFS: The ID must start with <code>cpfs-</code>, such as cpfs-125487****.</p>
      * </li>
-     * <li><p>CPFS for Lingjun: The ID must start with <code>bmcpfs-</code>. Example: bmcpfs-0015\<em>\</em>\<em>\</em>.</p>
+     * <li><p>CPFS for Lingjun: The ID must start with <code>bmcpfs-</code>, such as bmcpfs-0015****.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -47,13 +46,13 @@ public class CreateCpfsAccessPointRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The root directory of the access point. Default value: &quot;/&quot;.</p>
+     * <p>The root directory of the access point. Default value: /.</p>
      */
     @NameInMap("RootDirectory")
     public CreateCpfsAccessPointRequestRootDirectory rootDirectory;
 
     /**
-     * <p>The list of tags for the CPFS access point.</p>
+     * <p>The tags of the CPFS access point.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateCpfsAccessPointRequestTag> tag;
@@ -105,7 +104,7 @@ public class CreateCpfsAccessPointRequest extends TeaModel {
 
     public static class CreateCpfsAccessPointRequestRootDirectory extends TeaModel {
         /**
-         * <p>The root directory of the access point. The value must start and end with a forward slash (/).</p>
+         * <p>The root directory of the access point. It must start and end with a forward slash (/).</p>
          * 
          * <strong>example:</strong>
          * <p>/test/</p>

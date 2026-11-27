@@ -5,7 +5,13 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The resource IDs. Valid values of array length: 1 to 50.</p>
+     * <p>Specifies whether to perform a dry run on the request.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
+     * <p>The resource ID. Valid values: 1 to 50.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,11 +21,10 @@ public class TagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type.</p>
-     * <p>Valid values:</p>
+     * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li>filesystem: file system.</li>
-     * <li>accesspoint: access point.</li>
+     * <li>filesystem: File system.</li>
+     * <li>accesspoint: Access point.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -30,7 +35,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags. Array length: 1 to 20. If the array contains multiple tag objects, the tag key (Key) must be unique.</p>
+     * <p>The tag array. Length: 1 to 20. If the array contains multiple tag objects, tag keys must be unique.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -39,6 +44,14 @@ public class TagResourcesRequest extends TeaModel {
     public static TagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         TagResourcesRequest self = new TagResourcesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public TagResourcesRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public TagResourcesRequest setResourceId(java.util.List<String> resourceId) {
@@ -71,7 +84,7 @@ public class TagResourcesRequest extends TeaModel {
          * <p>Limits:</p>
          * <ul>
          * <li>Cannot be empty or an empty string. </li>
-         * <li>Can be up to 128 characters in length.</li>
+         * <li>Maximum length: 128 characters.</li>
          * <li>Cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
          * <li>Cannot contain <code>http://</code> or <code>https://</code>.</li>
          * </ul>
@@ -87,7 +100,7 @@ public class TagResourcesRequest extends TeaModel {
          * <p>The tag value.</p>
          * <p>Limits:</p>
          * <ul>
-         * <li>Can be up to 128 characters in length.</li>
+         * <li>Maximum length: 128 characters.</li>
          * <li>Cannot contain <code>http://</code> or <code>https://</code>.</li>
          * </ul>
          * <p>This parameter is required.</p>

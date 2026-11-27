@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to unbind all tags from the file system.</p>
-     * <p>This parameter takes effect only when TagKey.N is empty.</p>
+     * <p>Specifies whether to unbind all tags from the target file system.</p>
+     * <p>This parameter takes effect when TagKey.N is empty.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true: Unbinds all tags from the file system. If the file system has no tags, no operation is performed and a success response is returned.</li>
-     * <li>false (default): Does not perform the operation and directly returns a success response.</li>
+     * <li>true: Unbinds all tags from the target file system. If a file system has no tags, no processing is performed and success is returned directly.</li>
+     * <li>false (default): Does not perform the operation and returns success directly.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>The list of resource IDs.</p>
-     * <p>The ID of the resource. Valid values of N: 1 to 50.</p>
+     * <p>The ID of the target resource. Valid values of N: 1 to 50.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The list of tag keys of the resource. You can specify up to 20 tag keys.</p>
+     * <p>The list of tag keys of the resource. You can enter up to 20 tag keys.</p>
      * 
      * <strong>example:</strong>
      * <p>nastest</p>

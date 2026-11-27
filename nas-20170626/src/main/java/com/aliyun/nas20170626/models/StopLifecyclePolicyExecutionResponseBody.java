@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class StopLifecyclePolicyExecutionResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
-     * <p>A request ID is returned regardless of whether the call is successful.</p>
+     * <p>The ID of the request.</p>
+     * <p>A request ID is returned regardless of whether the API call succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>98696EF0-1607-4E9D-B01D-F20930B6****</p>
@@ -15,10 +15,10 @@ public class StopLifecyclePolicyExecutionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The request status.</p>
+     * <p>The status of the request.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
+     * <li>true: The request succeeded.</li>
      * <li>false: The request failed.</li>
      * </ul>
      * 

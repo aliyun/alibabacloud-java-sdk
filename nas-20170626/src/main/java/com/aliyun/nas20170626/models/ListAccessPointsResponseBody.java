@@ -11,7 +11,7 @@ public class ListAccessPointsResponseBody extends TeaModel {
     public java.util.List<ListAccessPointsResponseBodyAccessPoints> accessPoints;
 
     /**
-     * <p>The query token. Set this parameter to the value of NextToken that was returned in the previous API call.</p>
+     * <p>The query token. The value is the NextToken parameter value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>52frCAAAAABoZS90cm****==</p>
@@ -77,7 +77,7 @@ public class ListAccessPointsResponseBody extends TeaModel {
 
     public static class ListAccessPointsResponseBodyAccessPointsPosixUser extends TeaModel {
         /**
-         * <p>The POSIX user group ID.</p>
+         * <p>The ID of the POSIX user group.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -86,13 +86,16 @@ public class ListAccessPointsResponseBody extends TeaModel {
         public Integer posixGroupId;
 
         /**
-         * <p>The secondary user group ID.</p>
+         * <p>The IDs of the secondary user groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[100,123]</p>
          */
         @NameInMap("PosixSecondaryGroupIds")
         public java.util.List<Integer> posixSecondaryGroupIds;
 
         /**
-         * <p>The POSIX user ID.</p>
+         * <p>The ID of the POSIX user.</p>
          * 
          * <strong>example:</strong>
          * <p>156</p>
@@ -133,7 +136,7 @@ public class ListAccessPointsResponseBody extends TeaModel {
 
     public static class ListAccessPointsResponseBodyAccessPointsRootPathPermission extends TeaModel {
         /**
-         * <p>The file group ID of the owner.</p>
+         * <p>The ID of the owner user group.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -142,7 +145,7 @@ public class ListAccessPointsResponseBody extends TeaModel {
         public Long ownerGroupId;
 
         /**
-         * <p>The user ID of the owner.</p>
+         * <p>The ID of the owner user.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -151,7 +154,7 @@ public class ListAccessPointsResponseBody extends TeaModel {
         public Long ownerUserId;
 
         /**
-         * <p>The POSIX permission.</p>
+         * <p>The POSIX permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>0755</p>
@@ -234,7 +237,7 @@ public class ListAccessPointsResponseBody extends TeaModel {
 
     public static class ListAccessPointsResponseBodyAccessPoints extends TeaModel {
         /**
-         * <p>The access point ARN.</p>
+         * <p>The ARN of the access point.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:nas:cn-hangzhou:178321033379****:accesspoint/ap-ie15yd****</p>
@@ -243,7 +246,7 @@ public class ListAccessPointsResponseBody extends TeaModel {
         public String ARN;
 
         /**
-         * <p>The permission group name.</p>
+         * <p>The name of the permission group.</p>
          * 
          * <strong>example:</strong>
          * <p>DEFAULT_VPC_GROUP_NAME</p>
@@ -252,7 +255,7 @@ public class ListAccessPointsResponseBody extends TeaModel {
         public String accessGroup;
 
         /**
-         * <p>The access point ID.</p>
+         * <p>The ID of the access point.</p>
          * 
          * <strong>example:</strong>
          * <p>ap-ie15y*****</p>
@@ -261,7 +264,7 @@ public class ListAccessPointsResponseBody extends TeaModel {
         public String accessPointId;
 
         /**
-         * <p>The access point name.</p>
+         * <p>The name of the access point.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -270,7 +273,7 @@ public class ListAccessPointsResponseBody extends TeaModel {
         public String accessPointName;
 
         /**
-         * <p>AgenticSpace Id。</p>
+         * <p>The AgenticSpace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>agentic-229oypxjgpau2****</p>
@@ -279,7 +282,7 @@ public class ListAccessPointsResponseBody extends TeaModel {
         public String agenticSpaceId;
 
         /**
-         * <p>The time when the access point was created. The time follows the ISO 8601 standard and is displayed in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The time when the access point was created. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-03-28T06:32:14Z</p>
@@ -288,7 +291,7 @@ public class ListAccessPointsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time when the agentic space was created. The time follows the ISO 8601 standard. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The time when the Agentic space was created. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-10T10:08:08Z</p>
@@ -306,7 +309,7 @@ public class ListAccessPointsResponseBody extends TeaModel {
         public String domainName;
 
         /**
-         * <p>Indicates whether the RAM policy is enabled.</p>
+         * <p>Specifies whether the RAM policy is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -315,7 +318,7 @@ public class ListAccessPointsResponseBody extends TeaModel {
         public Boolean enabledRam;
 
         /**
-         * <p>The file system ID.</p>
+         * <p>The ID of the file system.</p>
          * 
          * <strong>example:</strong>
          * <p>091yj49baxscll2****</p>
@@ -324,7 +327,7 @@ public class ListAccessPointsResponseBody extends TeaModel {
         public String fileSystemId;
 
         /**
-         * <p>The time when the access point was last modified. The time follows the ISO 8601 standard and is displayed in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The time when the access point was modified. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-24T02:10:23Z</p>
@@ -333,7 +336,7 @@ public class ListAccessPointsResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>The time when the agentic space was last modified. The time follows the ISO 8601 standard. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The time when the Agentic space was updated. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-10T10:08:08Z</p>
@@ -357,18 +360,17 @@ public class ListAccessPointsResponseBody extends TeaModel {
         public String rootPath;
 
         /**
-         * <p>The root directory permission.</p>
+         * <p>The permissions of the root directory.</p>
          */
         @NameInMap("RootPathPermission")
         public ListAccessPointsResponseBodyAccessPointsRootPathPermission rootPathPermission;
 
         /**
-         * <p>The current root directory status.</p>
-         * <p>Valid values:</p>
+         * <p>The current status of the root directory. Valid values:</p>
          * <ul>
-         * <li>0: The root path status is unknown.</li>
+         * <li>0: The status of the root path is unknown.</li>
          * <li>1: The root path does not exist. It may have been deleted by the user.</li>
-         * <li>2: The root path status is normal.</li>
+         * <li>2: The status of the root path is normal.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -378,32 +380,31 @@ public class ListAccessPointsResponseBody extends TeaModel {
         public String rootPathStatus;
 
         /**
-         * <p>The current access point status.</p>
-         * <p>Valid values:</p>
+         * <p>The current status of the access point. Valid values:</p>
          * <ul>
-         * <li>Active: The access point is available.</li>
-         * <li>Inactive: The access point is unavailable.</li>
-         * <li>Pending: The access point is being created.</li>
-         * <li>Deleting: The access point is being deleted.</li>
+         * <li>active: The access point is available.</li>
+         * <li>inactive: The access point is unavailable.</li>
+         * <li>pending: The access point is being created.</li>
+         * <li>deleting: The access point is being deleted.</li>
          * </ul>
          * <blockquote>
-         * <p>You can mount a file system only when the status is Active.</p>
+         * <p>You can mount the file system only when the status is active.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>Active</p>
+         * <p>active</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The access point tag list.</p>
+         * <p>The list of tags for the access point.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListAccessPointsResponseBodyAccessPointsTags> tags;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The ID of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-2zevmwkwyztjuoffg****</p>
@@ -412,7 +413,7 @@ public class ListAccessPointsResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2zesj9afh3y518k9o****</p>

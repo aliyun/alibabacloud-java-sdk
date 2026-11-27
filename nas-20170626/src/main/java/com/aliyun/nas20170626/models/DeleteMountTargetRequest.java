@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class DeleteMountTargetRequest extends TeaModel {
     /**
-     * <p>The file system ID.</p>
+     * <p>Specifies whether to perform a dry run on the request.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
+     * <p>The ID of the file system.</p>
      * <ul>
-     * <li><p>General-purpose NAS: 31a8e4\<em>\</em>\<em>\</em>.</p>
+     * <li><p>General-purpose NAS: 31a8e4****.</p>
      * </li>
-     * <li><p>Extreme NAS: must start with <code>extreme-</code>, for example, extreme-0015\<em>\</em>\<em>\</em>.</p>
+     * <li><p>Extreme NAS: must start with <code>extreme-</code>, such as extreme-0015****.</p>
      * </li>
-     * <li><p>Cloud Parallel File Storage (CPFS): must start with <code>cpfs-</code>, for example, cpfs-125487\<em>\</em>\<em>\</em>.</p>
+     * <li><p>CPFS: must start with <code>cpfs-</code>, such as cpfs-125487****.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -35,6 +41,14 @@ public class DeleteMountTargetRequest extends TeaModel {
     public static DeleteMountTargetRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMountTargetRequest self = new DeleteMountTargetRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteMountTargetRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public DeleteMountTargetRequest setFileSystemId(String fileSystemId) {

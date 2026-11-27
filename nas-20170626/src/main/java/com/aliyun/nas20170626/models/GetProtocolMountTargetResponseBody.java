@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetProtocolMountTargetResponseBody extends TeaModel {
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the return results are truncated, use NextToken to initiate another request to retrieve the content after the current truncation position.</p>
+     * <p>The next token. If the response is truncated, you can use NextToken to send another request to retrieve the remaining results.</p>
      * 
      * <strong>example:</strong>
      * <p>M18xMA==</p>
@@ -14,13 +14,13 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The export directory information of the protocol service.</p>
+     * <p>The information about the protocol service export directory.</p>
      */
     @NameInMap("ProtocolMountTarget")
     public GetProtocolMountTargetResponseBodyProtocolMountTarget protocolMountTarget;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6299428C-3861-435D-AE54-9B330A00****</p>
@@ -59,7 +59,7 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
 
     public static class GetProtocolMountTargetResponseBodyProtocolMountTarget extends TeaModel {
         /**
-         * <p>The permission group name.</p>
+         * <p>The name of the permission group.</p>
          * <p>Default permission group: DEFAULT_VPC_GROUP_NAME.</p>
          * 
          * <strong>example:</strong>
@@ -69,8 +69,8 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
         public String accessGroupName;
 
         /**
-         * <p>The creation time.
-         * Format: yyyy-MM-dd HH:mm:ss</p>
+         * <p>The time when the export directory was created.
+         * Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-22 17:49:25</p>
@@ -79,16 +79,16 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The description of the protocol service export.</p>
+         * <p>The description of the protocol service export directory.</p>
          * 
          * <strong>example:</strong>
-         * <p>Description of this protocol service export</p>
+         * <p>The description of this protocol service export directory</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The export directory ID.</p>
+         * <p>The ID of the export directory.</p>
          * 
          * <strong>example:</strong>
          * <p>exp-19abf5beab8d****</p>
@@ -97,7 +97,7 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
         public String exportId;
 
         /**
-         * <p>Fileset ID。</p>
+         * <p>The fileset ID.</p>
          * 
          * <strong>example:</strong>
          * <p>fset-299b4ca04de8****</p>
@@ -109,8 +109,8 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
          * <p>The path of the queried CPFS directory.</p>
          * <p>Format:</p>
          * <ul>
-         * <li>The path is 1 to 1,024 characters in length.</li>
-         * <li>The path is encoded in UTF-8.</li>
+         * <li>The path must be 1 to 1,024 characters in length.</li>
+         * <li>The path must be encoded in UTF-8.</li>
          * <li>The path must start and end with a forward slash (/). The root directory is <code>/</code>.</li>
          * </ul>
          * 
@@ -133,9 +133,9 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
          * <p>The protocol type of the file system.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>NFS: NFS protocol.</li>
-         * <li>SMB: SMB protocol.</li>
-         * <li>cpfs: the protocol type supported by the CPFS file system.</li>
+         * <li>NFS: NFS file protocol.</li>
+         * <li>SMB: SMB file protocol.</li>
+         * <li>cpfs: The protocol type supported by CPFS file systems.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,11 +147,11 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
         /**
          * <p>The status of the protocol service export directory. Valid values:</p>
          * <ul>
-         * <li>CREATING: Being created.</li>
-         * <li>AVAILABLE: Available.</li>
-         * <li>MODIFYING: Being modified.</li>
-         * <li>DELETING: Being deleted.</li>
-         * <li>STOPPING: Being stopped.</li>
+         * <li>CREATING: The export directory is being created.</li>
+         * <li>AVAILABLE: The export directory is available.</li>
+         * <li>MODIFYING: The export directory is being modified.</li>
+         * <li>DELETING: The export directory is being deleted.</li>
+         * <li>STOPPING: The export directory is being stopped.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -161,7 +161,7 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The vSwitch ID of the protocol service export.</p>
+         * <p>The ID of the vSwitch to which the protocol service export directory belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-8vb2qjnxs6hiobzve****</p>
@@ -170,13 +170,13 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The list of vSwitch IDs of the protocol service export.</p>
+         * <p>The IDs of the vSwitches to which the protocol service export directory belongs.</p>
          */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The VPC ID of the protocol service export.</p>
+         * <p>The ID of the VPC to which the protocol service export directory belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1h5mxoqfuo3xurf****</p>

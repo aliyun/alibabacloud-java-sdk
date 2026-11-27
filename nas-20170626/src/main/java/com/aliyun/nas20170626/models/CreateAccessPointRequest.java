@@ -47,7 +47,7 @@ public class CreateAccessPointRequest extends TeaModel {
      * <li>false: Disabled. This is the default value.</li>
      * </ul>
      * <blockquote>
-     * <p>After you enable the access point RAM policy, all Resource Access Management (RAM) users are denied by default from using the access point to mount and access data. You must grant authorization to the accounts to enable the corresponding access permissions, and mount the file system through the access point. If this feature is disabled, the access point allows anonymous mounting. For more information about how to configure access point permissions, see <a href="https://help.aliyun.com/document_detail/2545998.html">Configure access point policy</a>.</p>
+     * <p>After you enable the RAM policy for the access point, all Resource Access Management (RAM) users are denied by default from using the access point to mount and access data. You must perform authorization for the accounts to grant the corresponding access permissions, and mount the file system through the access point. If this feature is disabled, the access point allows anonymous mounting. For more information about how to configure access point permissions, see <a href="https://help.aliyun.com/document_detail/2545998.html">Configure access point policy</a>.</p>
      * </blockquote>
      * <blockquote>
      * <p>For Agentic file systems, this parameter must be set to true.</p>
@@ -313,10 +313,10 @@ public class CreateAccessPointRequest extends TeaModel {
          * <p>The tag key.
          * Limits:</p>
          * <ul>
-         * <li>The tag key cannot be empty or an empty string.</li>
-         * <li>The tag key can be up to 128 characters in length.</li>
-         * <li>The tag key cannot start with aliyun or acs:.</li>
-         * <li>The tag key cannot contain http:// or https://.</li>
+         * <li>The value cannot be empty or an empty string.</li>
+         * <li>The value can be up to 128 characters in length.</li>
+         * <li>The value cannot start with aliyun or acs:.</li>
+         * <li>The value cannot contain http:// or https://.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -329,9 +329,9 @@ public class CreateAccessPointRequest extends TeaModel {
          * <p>The tag value.
          * Limits:</p>
          * <ul>
-         * <li>The tag value cannot be empty or an empty string.</li>
-         * <li>The tag value can be up to 128 characters in length.</li>
-         * <li>The tag value cannot contain http:// or https://.</li>
+         * <li>The value cannot be empty or an empty string.</li>
+         * <li>The value can be up to 128 characters in length.</li>
+         * <li>The value cannot contain http:// or https://.</li>
          * </ul>
          * 
          * <strong>example:</strong>

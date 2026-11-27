@@ -121,7 +121,7 @@ public class DescribeFilesystemsVscAttachInfoRequest extends TeaModel {
 
     public static class DescribeFilesystemsVscAttachInfoRequestRoleChain extends TeaModel {
         /**
-         * <p>The UID of the Alibaba Cloud account (the primary account UID). This parameter specifies the Alibaba Cloud account for which the service assumes the role.</p>
+         * <p>The UID of the Alibaba Cloud account (the UID of the primary account), which specifies the Alibaba Cloud account for which the service assumes the role.</p>
          * 
          * <strong>example:</strong>
          * <p>101522855006****</p>
@@ -139,7 +139,7 @@ public class DescribeFilesystemsVscAttachInfoRequest extends TeaModel {
         public String roleArn;
 
         /**
-         * <p>The role type. Valid values: service and user.</p>
+         * <p>The type of the role. Valid values: service and user.</p>
          * 
          * <strong>example:</strong>
          * <p>service</p>

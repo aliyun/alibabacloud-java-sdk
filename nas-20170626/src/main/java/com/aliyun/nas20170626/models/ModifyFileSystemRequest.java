@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyFileSystemRequest extends TeaModel {
     /**
-     * <p>The auto-scaling configuration.</p>
+     * <p>The automatic expansion configuration.</p>
      */
     @NameInMap("AutoUpgradeConfig")
     public ModifyFileSystemRequestAutoUpgradeConfig autoUpgradeConfig;
@@ -15,8 +15,8 @@ public class ModifyFileSystemRequest extends TeaModel {
      * <p>Limits:</p>
      * <ul>
      * <li>The description must be 2 to 128 characters in length.</li>
-     * <li>The description must start with a letter or Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</li>
-     * <li>The description can contain digits, colons (:), underscores (_), or hyphens (-).</li>
+     * <li>It must start with a letter or a Chinese character, and cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>It can contain digits, colons (:), underscores (_), and hyphens (-).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,13 +26,13 @@ public class ModifyFileSystemRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The file system ID.</p>
+     * <p>The ID of the file system.</p>
      * <ul>
      * <li><p>General-purpose NAS: <code>31a8e4****</code>.</p>
      * </li>
-     * <li><p>Extreme NAS: The ID must start with <code>extreme-</code>, for example, <code>extreme-0015****</code>.</p>
+     * <li><p>Extreme NAS: must start with <code>extreme-</code>, such as <code>extreme-0015****</code>.</p>
      * </li>
-     * <li><p>Cloud Parallel File Storage (CPFS): The ID must start with <code>cpfs-</code>, for example, <code>cpfs-125487****</code>.</p>
+     * <li><p>CPFS: must start with <code>cpfs-</code>, such as <code>cpfs-125487****</code>.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -88,7 +88,7 @@ public class ModifyFileSystemRequest extends TeaModel {
 
     public static class ModifyFileSystemRequestAutoUpgradeConfig extends TeaModel {
         /**
-         * <p>The capacity usage threshold.</p>
+         * <p>The capacity usage threshold. Valid values: 1 to 99.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -97,13 +97,16 @@ public class ModifyFileSystemRequest extends TeaModel {
         public Integer capacityUsedRatio;
 
         /**
-         * <p>Specifies whether to enable auto-scaling.</p>
+         * <p>Specifies whether to enable automatic expansion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
-         * <p>The scaling increment.</p>
+         * <p>The expansion step. The step must be a multiple of 100 GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -112,7 +115,7 @@ public class ModifyFileSystemRequest extends TeaModel {
         public Integer step;
 
         /**
-         * <p>The duration.</p>
+         * <p>The duration. The minimum duration is 5 minutes, and the maximum duration is 24 hours. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -161,7 +164,7 @@ public class ModifyFileSystemRequest extends TeaModel {
 
     public static class ModifyFileSystemRequestOptions extends TeaModel {
         /**
-         * <p>Specifies whether to enable the SMB Access-Based Enumeration (ABE) feature.</p>
+         * <p>Specifies whether to enable the SMB ABE access control feature.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -175,7 +178,7 @@ public class ModifyFileSystemRequest extends TeaModel {
          * <ul>
          * <li>true: Enabled.</li>
          * <li>false: Disabled.<blockquote>
-         * <p>Only file systems of the SMB Protocol Type are supported.</p>
+         * <p>This parameter is supported only for file systems of the SMB Protocol Type.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -187,7 +190,7 @@ public class ModifyFileSystemRequest extends TeaModel {
         public Boolean enableOplock;
 
         /**
-         * <p>Specifies whether the Lingjun VSC mount target supports only access point-based access.</p>
+         * <p>Specifies whether to enable AP-only access for VSC mount targets.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

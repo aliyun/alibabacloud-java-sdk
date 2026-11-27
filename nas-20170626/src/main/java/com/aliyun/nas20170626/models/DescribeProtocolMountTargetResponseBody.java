@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeProtocolMountTargetResponseBody extends TeaModel {
     /**
-     * <p>The marker used to retrieve the remaining export directories in subsequent queries.</p>
+     * <p>The token used to query the remaining export directories.</p>
      * 
      * <strong>example:</strong>
      * <p>aBcdeg==</p>
@@ -14,13 +14,13 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The collection of protocol service export directories.</p>
+     * <p>The collection of export directories of the protocol service.</p>
      */
     @NameInMap("ProtocolMountTargets")
     public java.util.List<DescribeProtocolMountTargetResponseBodyProtocolMountTargets> protocolMountTargets;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0****</p>
@@ -59,7 +59,7 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
 
     public static class DescribeProtocolMountTargetResponseBodyProtocolMountTargets extends TeaModel {
         /**
-         * <p>The permission group associated with the protocol service export directory.</p>
+         * <p>The permission group bound to the export directory of the protocol service.</p>
          * 
          * <strong>example:</strong>
          * <p>DEFAULT_VPC_GROUP_NAME</p>
@@ -68,7 +68,7 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
         public String accessGroupName;
 
         /**
-         * <p>The time when the protocol service export directory was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * <p>The time when the export directory of the protocol service was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-12-12T07:28:38Z</p>
@@ -77,16 +77,16 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The description of the protocol service export directory.</p>
+         * <p>The description of the export directory of the protocol service.</p>
          * 
          * <strong>example:</strong>
-         * <p>Description of this protocol service export directory</p>
+         * <p>The description of this protocol service export directory</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the protocol service export directory.</p>
+         * <p>The ID of the export directory of the protocol service.</p>
          * 
          * <strong>example:</strong>
          * <p>exp-19abf5beab8d****</p>
@@ -95,7 +95,7 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
         public String exportId;
 
         /**
-         * <p>The fileset ID of the protocol service export directory.</p>
+         * <p>The ID of the Fileset to which the protocol service is exported.</p>
          * 
          * <strong>example:</strong>
          * <p>fset-1902718ea0ae****</p>
@@ -104,7 +104,7 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
         public String fsetId;
 
         /**
-         * <p>The export directory of the protocol service.</p>
+         * <p>The directory to which the protocol service is exported.</p>
          * 
          * <strong>example:</strong>
          * <p>/path/</p>
@@ -113,7 +113,7 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>The domain name of the protocol service export directory.</p>
+         * <p>The domain name of the export directory of the protocol service.</p>
          * 
          * <strong>example:</strong>
          * <p>cpfs-123****.cn-hangzhou.cpfs.aliyuncs.com</p>
@@ -122,7 +122,7 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
         public String protocolMountTargetDomain;
 
         /**
-         * <p>The protocol service ID.</p>
+         * <p>The ID of the protocol service.</p>
          * 
          * <strong>example:</strong>
          * <p>ptc-123****</p>
@@ -140,7 +140,7 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
         public String protocolType;
 
         /**
-         * <p>The mount target status.</p>
+         * <p>The status of the mount target.</p>
          * 
          * <strong>example:</strong>
          * <p>CREATING</p>
@@ -149,7 +149,7 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The vSwitch ID of the protocol service export directory.</p>
+         * <p>The ID of the vSwitch to which the protocol service is exported.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-2vc3c2lybvdllxyq4****</p>
@@ -164,7 +164,7 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The VPC ID of the protocol service export directory.</p>
+         * <p>The ID of the VPC to which the protocol service is exported.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2vct297b8157bth9z****</p>

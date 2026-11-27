@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAccessPointRequest extends TeaModel {
     /**
-     * <p>The access point ID.</p>
+     * <p>The ID of the access point.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteAccessPointRequest extends TeaModel {
     public String accessPointId;
 
     /**
-     * <p>The file system ID.</p>
+     * <p>The ID of the file system.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

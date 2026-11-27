@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeMountTargetsRequest extends TeaModel {
     /**
-     * <p>The dual-stack (IPv4 and IPv6) mount target domain.</p>
+     * <p>The IPv4 and IPv6 dual-stack mount target.</p>
      * <blockquote>
-     * <p>IPv6 is currently supported only in the Chinese mainland regions for Extreme NAS file systems.</p>
+     * <p>Currently, only Extreme NAS file systems in regions in the Chinese mainland support IPv6.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,11 +19,11 @@ public class DescribeMountTargetsRequest extends TeaModel {
     /**
      * <p>The file system ID.</p>
      * <ul>
-     * <li><p>General-purpose NAS: 31a8e4\<em>\</em>\<em>\</em>.</p>
+     * <li><p>General-purpose NAS: 31a8e4****.</p>
      * </li>
-     * <li><p>Extreme NAS: must start with <code>extreme-</code>, for example, extreme-0015\<em>\</em>\<em>\</em>.</p>
+     * <li><p>Extreme NAS: must start with <code>extreme-</code>, such as extreme-0015****.</p>
      * </li>
-     * <li><p>Cloud Parallel File Storage (CPFS): must start with <code>cpfs-</code>, for example, cpfs-125487\<em>\</em>\<em>\</em>.</p>
+     * <li><p>CPFS: must start with <code>cpfs-</code>, such as cpfs-125487****.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -45,7 +45,7 @@ public class DescribeMountTargetsRequest extends TeaModel {
 
     /**
      * <p>The page number of the list.</p>
-     * <p>Start value (default value): 1.</p>
+     * <p>Starting value (default value): 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

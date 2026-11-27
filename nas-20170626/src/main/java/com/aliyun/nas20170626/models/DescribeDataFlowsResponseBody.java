@@ -8,7 +8,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
     public DescribeDataFlowsResponseBodyDataFlowInfo dataFlowInfo;
 
     /**
-     * <p>When the returned results of a request are truncated, you can use NextToken to initiate another request and obtain the remaining results.</p>
+     * <p>The pagination token. If the returned results are truncated, you can use NextToken to initiate another request to retrieve the remaining results.</p>
      * 
      * <strong>example:</strong>
      * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>
@@ -17,7 +17,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>2D69A58F-345C-4FDE-88E4-BF518948****</p>

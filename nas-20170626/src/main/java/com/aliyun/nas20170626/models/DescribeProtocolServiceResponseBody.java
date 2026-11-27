@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeProtocolServiceResponseBody extends TeaModel {
     /**
-     * <p>The marker used to retrieve the remaining protocol services.</p>
+     * <p>The pagination token that is used to query the remaining protocol services.</p>
      * 
      * <strong>example:</strong>
      * <p>aBcdeg==</p>
@@ -14,13 +14,13 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The list of protocol service information.</p>
+     * <p>The list of protocol services.</p>
      */
     @NameInMap("ProtocolServices")
     public java.util.List<DescribeProtocolServiceResponseBodyProtocolServices> protocolServices;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -59,7 +59,7 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
 
     public static class DescribeProtocolServiceResponseBodyProtocolServices extends TeaModel {
         /**
-         * <p>The time when the protocol service was created, in UTC.</p>
+         * <p>The time when the protocol service was created. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-12-12T07:28:38Z</p>
@@ -73,17 +73,17 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
          * <ul>
          * <li>The description must be 2 to 128 characters in length.</li>
          * <li>The description must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</li>
-         * <li>The description can contain digits, colons (:), underscores (_), or hyphens (-).</li>
+         * <li>The description can contain digits, colons (:), underscores (_), and hyphens (-).</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Description of this protocol service</p>
+         * <p>The description of this protocol service</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The file system ID.</p>
+         * <p>The ID of the file system.</p>
          * 
          * <strong>example:</strong>
          * <p>cpfs-099394bd928c****</p>
@@ -119,7 +119,7 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
         public Integer instanceRAM;
 
         /**
-         * <p>The time when the protocol service was last modified, in UTC.</p>
+         * <p>The time when the protocol service was modified. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-12-12T07:28:38Z</p>
@@ -128,7 +128,7 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>The total number of CPFS directories and filesets exported in this protocol service.</p>
+         * <p>The total number of exported CPFS directories and filesets in the protocol service.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -137,7 +137,7 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
         public Integer mountTargetCount;
 
         /**
-         * <p>The protocol service ID.</p>
+         * <p>The ID of the protocol service.</p>
          * 
          * <strong>example:</strong>
          * <p>ptc-197ed6a00f2b****</p>
@@ -146,10 +146,10 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
         public String protocolServiceId;
 
         /**
-         * <p>The specification of the protocol service cluster.</p>
+         * <p>The specifications of the protocol cluster.</p>
          * <ul>
-         * <li>Valid values: General</li>
-         * <li>Default value: General</li>
+         * <li>Valid values: General.</li>
+         * <li>Default value: General.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
          * <p>The protocol type supported by the protocol service.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>NFS: The protocol service supports NFS protocol access.</li>
+         * <li>NFS: The protocol service supports access over the NFS protocol.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -185,11 +185,11 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
          * <p>Valid values:</p>
          * <ul>
          * <li>Creating: The protocol service is being created.</li>
-         * <li>Starting: The protocol service is being started.</li>
+         * <li>Starting: The protocol service is starting.</li>
          * <li>Running: The protocol service is available.</li>
          * <li>Updating: The protocol service is being updated.</li>
          * <li>Deleting: The protocol service is being deleted.</li>
-         * <li>Stopping: The protocol service is being stopped.</li>
+         * <li>Stopping: The protocol service is stopping.</li>
          * <li>Stopped: The protocol service is stopped.</li>
          * </ul>
          * 
@@ -200,7 +200,7 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The vSwitch ID associated with the protocol service.</p>
+         * <p>The ID of the vSwitch associated with the protocol service.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-123xxx</p>
@@ -209,7 +209,7 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The VPC ID associated with the protocol service.</p>
+         * <p>The ID of the VPC associated with the protocol service.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-123xxx</p>

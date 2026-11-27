@@ -25,7 +25,7 @@ public class DescribeCpfsAccessPointMountedClientsRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The page number of the list.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -34,8 +34,7 @@ public class DescribeCpfsAccessPointMountedClientsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100.
-     * Default value: 10.</p>
+     * <p>The number of entries to return on each page. Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

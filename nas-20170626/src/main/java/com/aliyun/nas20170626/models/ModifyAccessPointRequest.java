@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyAccessPointRequest extends TeaModel {
     /**
-     * <p>The permission group name.</p>
-     * <p>This parameter is required if the file system is a General-purpose NAS file system.</p>
-     * <p>Default permission group: DEFAULT_VPC_GROUP_NAME (the default VPC permission group).</p>
+     * <p>The name of the permission group.</p>
+     * <p>This parameter is required when the target file system is a General-purpose NAS file system.</p>
+     * <p>Default permission group: DEFAULT_VPC_GROUP_NAME (the default permission group for VPCs).</p>
      * <blockquote>
-     * <p>Agentic file systems do not support this parameter.</p>
+     * <p>Not supported by Agentic file systems.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,13 +41,13 @@ public class ModifyAccessPointRequest extends TeaModel {
      * <p>Specifies whether to enable the RAM policy. Valid values:</p>
      * <ul>
      * <li>true: Enabled.</li>
-     * <li>false (default): Not enabled.</li>
+     * <li>false: Disabled. This is the default value.</li>
      * </ul>
      * <blockquote>
-     * <p>After you enable the access point RAM policy, all Resource Access Management (RAM) users are denied access to mount and access data through the access point by default. You must perform authorization to grant the corresponding access permissions to the accounts and then mount and access data through the access point. After you disable the RAM policy, the access point allows anonymity mounting.</p>
+     * <p>After you enable the RAM policy for the access point, all Resource Access Management (RAM) users are denied from using the access point to mount and access data by default. You must grant authorization to the accounts to enable the corresponding access permissions, and mount the file system through the access point. If this feature is disabled, the access point allows anonymous mounting.</p>
      * </blockquote>
      * <blockquote>
-     * <p>Agentic file systems do not support this parameter.</p>
+     * <p>Not supported by Agentic file systems.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

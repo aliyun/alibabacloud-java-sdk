@@ -14,13 +14,13 @@ public class CreateMountTargetResponseBody extends TeaModel {
     public String mountTargetDomain;
 
     /**
-     * <p>The mount target information.</p>
+     * <p>The collection of mount target information.</p>
      */
     @NameInMap("MountTargetExtra")
     public CreateMountTargetResponseBodyMountTargetExtra mountTargetExtra;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>70EACC9C-D07A-4A34-ADA4-77506C42****</p>
@@ -59,7 +59,7 @@ public class CreateMountTargetResponseBody extends TeaModel {
 
     public static class CreateMountTargetResponseBodyMountTargetExtra extends TeaModel {
         /**
-         * <p>The IPv4 and IPv6 dual-stack mount target.</p>
+         * <p>The dual-stack mount target that supports both IPv4 and IPv6.</p>
          * 
          * <strong>example:</strong>
          * <p>174494b666-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</p>

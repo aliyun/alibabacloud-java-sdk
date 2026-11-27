@@ -11,7 +11,7 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
     public java.util.List<DescribeCpfsAccessPointsResponseBodyAccessPoints> accessPoints;
 
     /**
-     * <p>The page number of the list.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of results per page.
+     * <p>The number of entries returned per page.
      * Valid values: 1 to 100.<br>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -106,9 +106,9 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
          * <p>The current status of the root directory.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Unknown: the root path status is unknown.</li>
-         * <li>NotExist: the root path does not exist. It may have been deleted by the user.</li>
-         * <li>Ready: the root path status is normal.</li>
+         * <li>Unknown: The status of the root path is unknown.</li>
+         * <li>NotExist: The root path does not exist. It may have been deleted.</li>
+         * <li>Ready: The root path is normal.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,7 +184,7 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
 
     public static class DescribeCpfsAccessPointsResponseBodyAccessPoints extends TeaModel {
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the access point.</p>
+         * <p>The ARN of the access point.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:nas:cn-hangzhou:178321033379****:accesspoint/ap-ie15yd****</p>
@@ -202,7 +202,7 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
         public String accessPointId;
 
         /**
-         * <p>The time when the access point was created. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The time when the access point was created. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-03-28T06:32:14Z</p>
@@ -229,7 +229,7 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
         public String fileSystemId;
 
         /**
-         * <p>The time when the access point was last modified. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The time when the access point was modified. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-28T06:32:14Z</p>
@@ -256,10 +256,10 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
          * <p>The current status of the access point.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Active: available.</li>
-         * <li>Inactive: unavailable.</li>
-         * <li>Pending: being created.</li>
-         * <li>Deleting: being deleted.</li>
+         * <li>Active: The access point is available.</li>
+         * <li>Inactive: The access point is unavailable.</li>
+         * <li>Pending: The access point is being created.</li>
+         * <li>Deleting: The access point is being deleted.</li>
          * </ul>
          * <blockquote>
          * <p>You can mount the file system only when the status is Active.</p>
@@ -272,7 +272,7 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The list of tags for the CPFS access point.</p>
+         * <p>The tags of the CPFS access point.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeCpfsAccessPointsResponseBodyAccessPointsTags> tags;

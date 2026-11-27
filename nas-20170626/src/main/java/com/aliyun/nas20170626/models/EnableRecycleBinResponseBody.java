@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableRecycleBinResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>9E15E394-38A6-457A-A62A-D9797C9A****</p>

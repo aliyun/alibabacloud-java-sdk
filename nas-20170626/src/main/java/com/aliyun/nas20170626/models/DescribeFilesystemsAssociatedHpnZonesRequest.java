@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFilesystemsAssociatedHpnZonesRequest extends TeaModel {
     /**
-     * <p>The collection of file system IDs.</p>
+     * <p>The IDs of the file systems.</p>
      * <blockquote>
      * <p>The maximum number of elements in the collection must be less than or equal to 20.</p>
      * </blockquote>
@@ -14,7 +14,7 @@ public class DescribeFilesystemsAssociatedHpnZonesRequest extends TeaModel {
     public java.util.List<DescribeFilesystemsAssociatedHpnZonesRequestFilesystems> filesystems;
 
     /**
-     * <p>The region ID of the file system.</p>
+     * <p>The ID of the region to which the file system belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

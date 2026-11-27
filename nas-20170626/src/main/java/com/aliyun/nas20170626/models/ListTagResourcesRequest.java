@@ -26,8 +26,8 @@ public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li>filesystem: file system.</li>
-     * <li>accesspoint: access point.</li>
+     * <li>filesystem: file system</li>
+     * <li>accesspoint: access point</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -38,7 +38,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags. Array length: 1 to 20. If the array contains multiple tag objects, the tag key (Key) must be unique.</p>
+     * <p>The array of tags. Array length: 1 to 20. If the array contains multiple tag objects, tag keys must be unique.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -85,10 +85,10 @@ public class ListTagResourcesRequest extends TeaModel {
          * <p>The tag key.</p>
          * <p>Limits:</p>
          * <ul>
-         * <li>Cannot be empty or an empty string. </li>
-         * <li>Can be up to 128 characters in length.</li>
-         * <li>Cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
-         * <li>Cannot contain <code>http://</code> or <code>https://</code>.</li>
+         * <li>It cannot be empty or an empty string. </li>
+         * <li>It can be up to 128 characters in length.</li>
+         * <li>It cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+         * <li>It cannot contain <code>http://</code> or <code>https://</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -101,8 +101,8 @@ public class ListTagResourcesRequest extends TeaModel {
          * <p>The tag value.</p>
          * <p>Limits:</p>
          * <ul>
-         * <li>Can be up to 128 characters in length.</li>
-         * <li>Cannot contain <code>http://</code> or <code>https://</code>.</li>
+         * <li>It can be up to 128 characters in length.</li>
+         * <li>It cannot contain <code>http://</code> or <code>https://</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>

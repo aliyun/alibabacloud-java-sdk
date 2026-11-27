@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class CreateMountTargetRequest extends TeaModel {
     /**
      * <p>The name of the permission group.</p>
-     * <p>This parameter is required if the file system is a General-purpose NAS file system or an Extreme NAS file system.</p>
+     * <p>This parameter is required when the target file system is a General-purpose NAS file system or an Extreme NAS file system.</p>
      * <p>Default permission group: DEFAULT_VPC_GROUP_NAME (the default permission group for VPCs).</p>
      * 
      * <strong>example:</strong>
@@ -16,11 +16,11 @@ public class CreateMountTargetRequest extends TeaModel {
     public String accessGroupName;
 
     /**
-     * <p>Specifies whether to check for existing mount targets. Only CPFS file systems are supported.</p>
+     * <p>Specifies whether to perform a dry run to check for existing mount targets. Only CPFS file systems are supported.</p>
      * <p>A dry run checks the validity of parameters and inventory without actually creating a mount target or incurring fees.</p>
      * <ul>
-     * <li>true: sends a dry run request without creating a mount target. The check items include required parameters, request format, business limits, and CPFS inventory. If the check fails, the corresponding error is returned. If the check passes, <code>200 HttpCode</code> is returned, but <code>MountTargetDomain</code> is empty.</li>
-     * <li>false (default): sends a normal request and creates a mount target after the check passes.</li>
+     * <li>true: Perform a dry run. No mount target is created. The system checks whether required parameters are specified, the request format, service limits, and CPFS inventory. If the dry run fails, the corresponding error is returned. If the dry run succeeds, the HTTP status code <code>200</code> is returned, but <code>MountTargetDomain</code> is empty.</li>
+     * <li>false: Perform a standard request. If the check succeeds, a mount target is directly created. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,11 +33,11 @@ public class CreateMountTargetRequest extends TeaModel {
      * <p>Specifies whether to create an IPv6 mount target.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true: creates an IPv6 mount target.</li>
-     * <li>false (default): does not create an IPv6 mount target.</li>
+     * <li>true: Create an IPv6 mount target.</li>
+     * <li>false: Do not create an IPv6 mount target. This is the default value.</li>
      * </ul>
      * <blockquote>
-     * <p>Currently, only Extreme NAS file systems in regions in the Chinese mainland support IPv6. The file system must have IPv6 enabled.</p>
+     * <p>Currently, IPv6 is supported only for Extreme NAS file systems in regions in the Chinese mainland, and the IPv6 feature must be enabled for the file system.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,13 +47,13 @@ public class CreateMountTargetRequest extends TeaModel {
     public Boolean enableIpv6;
 
     /**
-     * <p>The file system ID.</p>
+     * <p>The ID of the file system.</p>
      * <ul>
-     * <li><p>General-purpose NAS: 31a8e4\<em>\</em>\<em>\</em>.</p>
+     * <li><p>General-purpose NAS file system: 31a8e4****.</p>
      * </li>
-     * <li><p>Extreme NAS: must start with <code>extreme-</code>, such as extreme-0015\<em>\</em>\<em>\</em>.</p>
+     * <li><p>Extreme NAS file system: The ID must start with <code>extreme-</code>, for example, extreme-0015****.</p>
      * </li>
-     * <li><p>Cloud Parallel File System (CPFS): must start with <code>cpfs-</code>, such as cpfs-125487\<em>\</em>\<em>\</em>.</p>
+     * <li><p>Cloud Parallel File Storage (CPFS): The ID must start with <code>cpfs-</code>, for example, cpfs-125487****.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -75,7 +75,7 @@ public class CreateMountTargetRequest extends TeaModel {
     public String networkType;
 
     /**
-     * <p>The security group ID.</p>
+     * <p>The ID of the security group.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-bp1fg655nh68xyz9****</p>
@@ -84,10 +84,10 @@ public class CreateMountTargetRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The vSwitch ID.</p>
-     * <p>This parameter is required and valid when the network type is VPC.
-     * For example:
-     * If NetworkType is set to VPC, VSwitchId is required.</p>
+     * <p>The ID of the vSwitch.</p>
+     * <p>This parameter is required and valid only when the network type is VPC.
+     * Example:
+     * When NetworkType is set to VPC, VSwitchId is required.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-2zevmwkwyztjuoffg****</p>
@@ -96,10 +96,10 @@ public class CreateMountTargetRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The VPC ID.</p>
-     * <p>This parameter is required and valid when the network type is VPC.
-     * For example:
-     * If NetworkType is set to VPC, VpcId is required.</p>
+     * <p>The ID of the VPC.</p>
+     * <p>This parameter is required and valid only when the network type is VPC.
+     * Example:
+     * When NetworkType is set to VPC, VpcId is required.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-2zesj9afh3y518k9o****</p>

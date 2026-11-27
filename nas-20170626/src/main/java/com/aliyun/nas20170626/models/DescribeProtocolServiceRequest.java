@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeProtocolServiceRequest extends TeaModel {
     /**
-     * <p>Ensures the idempotency of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotency</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,22 +17,22 @@ public class DescribeProtocolServiceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the protocol service or a part of the description used for matching.</p>
+     * <p>Filters protocol services by description or a part of the description.</p>
      * <p>Limits:</p>
      * <ul>
      * <li>The description must be 2 to 128 characters in length.</li>
      * <li>The description must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</li>
-     * <li>The description can contain digits, colons (:), underscores (_), or hyphens (-).</li>
+     * <li>The description can contain digits, colons (:), underscores (_), and hyphens (-).</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Description of this protocol service</p>
+     * <p>The description of this protocol service</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The file system ID.</p>
+     * <p>The ID of the file system.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class DescribeProtocolServiceRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The maximum number of results to return for each request.</p>
+     * <p>The maximum number of entries to return for a single request.</p>
      * <ul>
      * <li>Maximum value: 100.</li>
      * <li>Minimum value: 10.</li>
@@ -56,7 +56,7 @@ public class DescribeProtocolServiceRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The token used to initiate the next request if the response of the current request is truncated. You can use this token to retrieve the remaining results.</p>
+     * <p>The pagination token. If the response is truncated, you can use this token to initiate another request to retrieve the remaining results.</p>
      * 
      * <strong>example:</strong>
      * <p>aBcdg==</p>
@@ -65,11 +65,11 @@ public class DescribeProtocolServiceRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The protocol service IDs.</p>
+     * <p>The IDs of the protocol services.</p>
      * <ul>
      * <li><p>Format: CSV</p>
      * </li>
-     * <li><p>Limit: You can specify up to 10 protocol service IDs.</p>
+     * <li><p>Limit: Up to 10 protocol service IDs can be specified.</p>
      * </li>
      * </ul>
      * 
@@ -80,16 +80,16 @@ public class DescribeProtocolServiceRequest extends TeaModel {
     public String protocolServiceIds;
 
     /**
-     * <p>The status of the protocol service used for matching.</p>
+     * <p>Filters protocol services by status.</p>
      * <p>Format: CSV</p>
      * <p>Valid values:</p>
      * <ul>
      * <li>Creating: The protocol service is being created.</li>
-     * <li>Starting: The protocol service is being started.</li>
+     * <li>Starting: The protocol service is starting.</li>
      * <li>Running: The protocol service is available.</li>
      * <li>Updating: The protocol service is being updated.</li>
      * <li>Deleting: The protocol service is being deleted.</li>
-     * <li>Stopping: The protocol service is being stopped.</li>
+     * <li>Stopping: The protocol service is stopping.</li>
      * <li>Stopped: The protocol service is stopped.</li>
      * </ul>
      * 

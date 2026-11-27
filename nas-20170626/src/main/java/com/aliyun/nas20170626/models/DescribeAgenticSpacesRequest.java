@@ -31,7 +31,7 @@ public class DescribeAgenticSpacesRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The query token. Set the value to the NextToken value returned from the previous call.</p>
+     * <p>The query token. Set the value to the NextToken value returned from the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>MTc3OTkzNTA0Mjg0NTc1MDI4OCM0MDQ0MzA****=</p>

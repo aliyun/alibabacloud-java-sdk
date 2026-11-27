@@ -18,7 +18,7 @@ public class CreateAccessRuleRequest extends TeaModel {
      * <p>The type of the file system.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>standard (default): General-purpose NAS.</li>
+     * <li>standard: General-purpose NAS. This is the default value.</li>
      * <li>extreme: Extreme NAS.</li>
      * </ul>
      * 
@@ -33,8 +33,8 @@ public class CreateAccessRuleRequest extends TeaModel {
      * <p>CIDR blocks and IPv6 address ranges are supported.</p>
      * <blockquote>
      * <ul>
-     * <li>IPv6 is supported only by Extreme NAS file systems in regions in the Chinese mainland, and IPv6 must be enabled for the file system.</li>
-     * <li>Only VPC networks are supported.</li>
+     * <li>Only Extreme NAS file systems in regions in the Chinese mainland support IPv6, and the IPv6 feature must be enabled for the file system.</li>
+     * <li>Only VPCs are supported.</li>
      * <li>IPv4 and IPv6 are mutually exclusive.</li>
      * </ul>
      * </blockquote>
@@ -46,8 +46,8 @@ public class CreateAccessRuleRequest extends TeaModel {
     public String ipv6SourceCidrIp;
 
     /**
-     * <p>The priority of the permission rule.</p>
-     * <p>If an authorized address matches multiple rules, the rule with the highest priority takes effect.</p>
+     * <p>The priority of the permission group rule.</p>
+     * <p>If an authorized object matches multiple rules, the rule with the highest priority takes effect.</p>
      * <p>Valid values: 1 to 100. The value 1 indicates the highest priority.</p>
      * 
      * <strong>example:</strong>
@@ -57,11 +57,11 @@ public class CreateAccessRuleRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The read and write permissions of the authorized address on the file system.</p>
+     * <p>The read and write permissions of the authorized object on the file system.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>RDWR (default): Read and write.</li>
-     * <li>RDONLY: Read-only.</li>
+     * <li>RDWR: read and write. This is the default value.</li>
+     * <li>RDONLY: read-only.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,8 +71,8 @@ public class CreateAccessRuleRequest extends TeaModel {
     public String RWAccessType;
 
     /**
-     * <p>The IP address or CIDR block of the authorized address.</p>
-     * <p>The value must be a single IP address or a CIDR block.</p>
+     * <p>The IP address or CIDR block of the authorized object.</p>
+     * <p>The format must be a single IP address or a CIDR block.</p>
      * <blockquote>
      * <p>Permission groups of the classic network type support only IP addresses.</p>
      * </blockquote>
@@ -84,14 +84,14 @@ public class CreateAccessRuleRequest extends TeaModel {
     public String sourceCidrIp;
 
     /**
-     * <p>The authorization of the system user of the authorized address on the file system.</p>
+     * <p>The access permissions of system users of the authorization object on the file system.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>no_squash (default): Allows access to the file system as the root user.</li>
-     * <li>root_squash: Maps the root user to the nobody user when the file system is accessed as the root user.</li>
-     * <li>all_squash: Maps all users to the nobody user regardless of the user identity used to access the file system.</li>
+     * <li>no_squash: allows access to the file system by using the root user. This is the default value.</li>
+     * <li>root_squash: maps the root user to the nobody user when the file system is accessed as the root user.</li>
+     * <li>all_squash: maps all users to the nobody user regardless of the user identity used to access the file system.</li>
      * </ul>
-     * <p>The nobody user is the default user in Linux. The nobody user can access only public content on the server and has low privileges and high security.</p>
+     * <p>The nobody user is the default user in Linux systems. This user can only access public content on the server and features low permissions and high security.</p>
      * 
      * <strong>example:</strong>
      * <p>no_squash</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAgenticSpaceRequest extends TeaModel {
     /**
-     * <p>AgenticSpace Id。</p>
+     * <p>The AgenticSpace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetAgenticSpaceRequest extends TeaModel {
     public String agenticSpaceId;
 
     /**
-     * <p>The file system ID.</p>
+     * <p>The ID of the file system.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

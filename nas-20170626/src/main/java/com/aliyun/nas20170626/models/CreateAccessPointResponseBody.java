@@ -11,7 +11,7 @@ public class CreateAccessPointResponseBody extends TeaModel {
     public CreateAccessPointResponseBodyAccessPoint accessPoint;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>98696EF0-1607-4E9D-B01D-F20930B6****</p>

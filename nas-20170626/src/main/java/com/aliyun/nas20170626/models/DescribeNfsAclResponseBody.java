@@ -11,7 +11,7 @@ public class DescribeNfsAclResponseBody extends TeaModel {
     public DescribeNfsAclResponseBodyAcl acl;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>A1098673-1746-505E-A5F1-08527B7EDBDF</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelRecycleBinJobRequest extends TeaModel {
     /**
-     * <p>The ID of the task that you want to cancel.</p>
+     * <p>The ID of the task to be cancelled.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/2412172.html">ListRecycleBinJobs</a> operation to query the task ID.</p>
      * <p>This parameter is required.</p>
      * 
