@@ -14,7 +14,7 @@ public class CreateGwConsumerOrderRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The expiration time of the API key in ISO 8601 format. The value must be later than the current time.</p>
+     * <p>The expiration time of the API key. Specify the time in the ISO 8601 standard. The specified time must be later than the current time.</p>
      * 
      * <strong>example:</strong>
      * <p>2027-07-23T03:09:08Z</p>
@@ -33,7 +33,7 @@ public class CreateGwConsumerOrderRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The number of API keys to generate, which is the number of capacity plans to order. Valid values: 1 to 30.</p>
+     * <p>The number of API keys to generate, which indicates the number of capacity plans to order. Valid values: 1 to 30.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class CreateGwConsumerOrderRequest extends TeaModel {
     public Integer keyCount;
 
     /**
-     * <p>The number of credits per API key. The value is a positive integer string.</p>
+     * <p>The number of credits for each API key. The value must be a string representing a positive integer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class CreateGwConsumerOrderRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query region information.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view region details.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

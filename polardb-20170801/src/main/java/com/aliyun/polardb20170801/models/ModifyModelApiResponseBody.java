@@ -98,7 +98,7 @@ public class ModifyModelApiResponseBody extends TeaModel {
      * <p>The current routing rules, returned as a JSON string. A byte-for-byte exact match of the input is not guaranteed.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;RuleName&quot;:&quot;default&quot;,&quot;Providers&quot;:[{&quot;ModelServiceName&quot;:&quot;model-service-a&quot;,&quot;ModelList&quot;:&quot;[\\&quot;deepseek-v4-pro\\&quot;]&quot;,&quot;Weight&quot;:100}]}]</p>
+     * <p>[{&quot;RuleName&quot;:&quot;default&quot;,&quot;Providers&quot;:[{&quot;ModelServiceName&quot;:&quot;model-service-a&quot;,&quot;ModelList&quot;:&quot;[\&quot;deepseek-v4-pro\&quot;]&quot;,&quot;Weight&quot;:100}]}]</p>
      */
     @NameInMap("RouteRules")
     public String routeRules;

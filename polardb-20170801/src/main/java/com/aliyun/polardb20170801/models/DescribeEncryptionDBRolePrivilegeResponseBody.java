@@ -22,7 +22,7 @@ public class DescribeEncryptionDBRolePrivilegeResponseBody extends TeaModel {
     /**
      * <p>The response message.</p>
      * <blockquote>
-     * <p>If the request is successful, \<code>Successful\\</code> is returned. If the request fails, an error message, such as an error code, is returned.</p>
+     * <p>If the request is successful, `Successful` is returned. If the request fails, an error message, such as an error code, is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

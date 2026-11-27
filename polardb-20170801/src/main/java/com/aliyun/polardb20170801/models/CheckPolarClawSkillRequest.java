@@ -73,7 +73,7 @@ public class CheckPolarClawSkillRequest extends TeaModel {
      * <p>The tag details.</p>
      * 
      * <strong>example:</strong>
-     * <p>[\&quot;PolarDB\&quot;,\&quot;programming\&quot;]</p>
+     * <p>[&quot;PolarDB&quot;,&quot;programming&quot;]</p>
      */
     @NameInMap("Tags")
     public String tags;

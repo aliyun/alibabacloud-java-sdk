@@ -229,7 +229,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
          * <p>The task parameters.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;action\&quot;: \&quot;UpgradeDBVersion\&quot;, \&quot;check_method\&quot;: \&quot;check_cpu_usage\&quot;, \&quot;params\&quot;: {\&quot;RelativeDbtype\&quot;: \&quot;maxscale\&quot;, \&quot;DBInstanceName\&quot;: \&quot;pc-*************\&quot;, \&quot;User_ID\&quot;: \&quot;11111\&quot;, \&quot;UID\&quot;: \&quot;1406926474******\&quot;, \&quot;UpgradePolicy\&quot;: \&quot;hot\&quot;}}&quot;</p>
+         * <p>{&quot;action&quot;: &quot;UpgradeDBVersion&quot;, &quot;check_method&quot;: &quot;check_cpu_usage&quot;, &quot;params&quot;: {&quot;RelativeDbtype&quot;: &quot;maxscale&quot;, &quot;DBInstanceName&quot;: &quot;pc-*************&quot;, &quot;User_ID&quot;: &quot;11111&quot;, &quot;UID&quot;: &quot;1406926474******&quot;, &quot;UpgradePolicy&quot;: &quot;hot&quot;}}&quot;</p>
          */
         @NameInMap("TaskParams")
         public String taskParams;

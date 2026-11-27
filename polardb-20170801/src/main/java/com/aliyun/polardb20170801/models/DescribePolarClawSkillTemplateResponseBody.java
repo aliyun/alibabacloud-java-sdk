@@ -90,7 +90,7 @@ public class DescribePolarClawSkillTemplateResponseBody extends TeaModel {
          * <p>The map of associated skill details. The key is the skill identifier, and the value is a JSON string that can be parsed into an array of skill details. Each array element contains skillName and version.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;skill1&quot;:&quot;[{\&quot;skillName\&quot;:\&quot;example-skill\&quot;,\&quot;version\&quot;:\&quot;1.0.0\&quot;}]&quot;}</p>
+         * <p>{&quot;skill1&quot;:&quot;[{&quot;skillName&quot;:&quot;example-skill&quot;,&quot;version&quot;:&quot;1.0.0&quot;}]&quot;}</p>
          */
         @NameInMap("Skills")
         public java.util.Map<String, String> skills;

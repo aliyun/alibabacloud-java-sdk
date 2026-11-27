@@ -15,7 +15,7 @@ public class CreateGwConsumerOrderResponseBody extends TeaModel {
 
     /**
      * <p>The expiration time.</p>
-     * <p>The time is in ISO 8601 format in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+     * <p>The time follows the ISO 8601 standard and is in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2020-11-14T16:00:00Z</p>
@@ -33,7 +33,7 @@ public class CreateGwConsumerOrderResponseBody extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The order ID returned after the order is placed.</p>
+     * <p>The ID of the order returned after the purchase.</p>
      * 
      * <strong>example:</strong>
      * <p>2035638*******</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeKnowledgeBaseAttributeResponseBody extends TeaModel {
     /**
-     * <p>The number of AI applications associated with the knowledge base.</p>
+     * <p>The number of associated AI applications.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,8 +14,7 @@ public class DescribeKnowledgeBaseAttributeResponseBody extends TeaModel {
     public Integer bindingAppCount;
 
     /**
-     * <p>The time when the knowledge base was created.</p>
-     * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+     * <p>The creation time. The time is displayed in ISO 8601 format in UTC (YYYY-MM-DDTHH:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2020-08-14T05:58:42Z</p>
@@ -42,11 +41,7 @@ public class DescribeKnowledgeBaseAttributeResponseBody extends TeaModel {
     public String knowledgeBaseId;
 
     /**
-     * <p>The type of the knowledge base. Valid values:</p>
-     * <ul>
-     * <li>PUBLIC</li>
-     * <li>PERSONAL</li>
-     * </ul>
+     * <p>The type of the knowledge base. Valid values: PUBLIC and PERSONAL.</p>
      * 
      * <strong>example:</strong>
      * <p>PUBLIC</p>
@@ -107,7 +102,16 @@ public class DescribeKnowledgeBaseAttributeResponseBody extends TeaModel {
     public Integer shardCount;
 
     /**
-     * <p>The status of the knowledge base.</p>
+     * <p>Specifies whether source deletion synchronization is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("SourceDeleteSyncEnabled")
+    public Boolean sourceDeleteSyncEnabled;
+
+    /**
+     * <p>The status.</p>
      * 
      * <strong>example:</strong>
      * <p>Activation</p>
@@ -216,6 +220,14 @@ public class DescribeKnowledgeBaseAttributeResponseBody extends TeaModel {
     }
     public Integer getShardCount() {
         return this.shardCount;
+    }
+
+    public DescribeKnowledgeBaseAttributeResponseBody setSourceDeleteSyncEnabled(Boolean sourceDeleteSyncEnabled) {
+        this.sourceDeleteSyncEnabled = sourceDeleteSyncEnabled;
+        return this;
+    }
+    public Boolean getSourceDeleteSyncEnabled() {
+        return this.sourceDeleteSyncEnabled;
     }
 
     public DescribeKnowledgeBaseAttributeResponseBody setStatus(String status) {

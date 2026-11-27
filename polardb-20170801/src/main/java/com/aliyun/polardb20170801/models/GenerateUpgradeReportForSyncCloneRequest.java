@@ -95,7 +95,7 @@ public class GenerateUpgradeReportForSyncCloneRequest extends TeaModel {
      * <p>The reserved parameter. The value is a JSON string.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;targetTableMode\&quot;:2}</p>
+     * <p>{&quot;targetTableMode&quot;:2}</p>
      */
     @NameInMap("Reserve")
     public String reserve;

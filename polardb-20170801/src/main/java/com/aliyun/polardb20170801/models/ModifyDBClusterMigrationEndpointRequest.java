@@ -25,7 +25,7 @@ public class ModifyDBClusterMigrationEndpointRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{\&quot;dtsJobId\&quot;:\&quot;di4w4d9r12m38mb\&quot;,\&quot;endpoint\&quot;:\&quot;src\&quot;,\&quot;endpointInstanceId\&quot;:\&quot;pc-k2j96w169uhu868l8\&quot;}]</p>
+     * <p>[{&quot;dtsJobId&quot;:&quot;di4w4d9r12m38mb&quot;,&quot;endpoint&quot;:&quot;src&quot;,&quot;endpointInstanceId&quot;:&quot;pc-k2j96w169uhu868l8&quot;}]</p>
      */
     @NameInMap("MigrationConfig")
     public String migrationConfig;

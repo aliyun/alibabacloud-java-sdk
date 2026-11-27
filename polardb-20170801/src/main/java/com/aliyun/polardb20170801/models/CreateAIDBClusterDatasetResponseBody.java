@@ -41,7 +41,7 @@ public class CreateAIDBClusterDatasetResponseBody extends TeaModel {
     public String datasetName;
 
     /**
-     * <p>The path of the dataset.</p>
+     * <p>The path to which the dataset belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>polardb_ai/datasets/train/sft/dataset01</p>

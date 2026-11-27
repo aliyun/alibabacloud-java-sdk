@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     /**
-     * <p>The list of O\&amp;M tasks.</p>
+     * <p>The list of O&amp;M tasks.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeActiveOperationTasksResponseBodyItems> items;

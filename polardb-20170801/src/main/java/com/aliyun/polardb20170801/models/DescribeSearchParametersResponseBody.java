@@ -14,7 +14,7 @@ public class DescribeSearchParametersResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The Search engine version. This is not the MySQL version of the primary cluster.</p>
+     * <p>The Search engine version, which is not the MySQL version of the primary cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>3.0</p>
@@ -93,10 +93,10 @@ public class DescribeSearchParametersResponseBody extends TeaModel {
 
     public static class DescribeSearchParametersResponseBodyRunningParametersParameter extends TeaModel {
         /**
-         * <p>The value validation rule of the template. The rule can be a numeric range, an enumeration, or a regular expression, and must be interpreted in combination with the data type.</p>
+         * <p>The value validation rule of the template, which can be a numeric range, an enumeration, or a regular expression. This rule must be interpreted in combination with the DataType field.</p>
          * 
          * <strong>example:</strong>
-         * <p>[true\|false]</p>
+         * <p>[true|false]</p>
          */
         @NameInMap("CheckingCode")
         public String checkingCode;
@@ -111,7 +111,7 @@ public class DescribeSearchParametersResponseBody extends TeaModel {
         public String dataType;
 
         /**
-         * <p>The default value of the current active template. This value is independent of the value modified by the user.</p>
+         * <p>The default value of the current active template, which is independent of the value modified by the user.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -129,7 +129,7 @@ public class DescribeSearchParametersResponseBody extends TeaModel {
         public String factor;
 
         /**
-         * <p>Specifies whether a restart is required for the parameter to take effect. The value is true for static parameters and false for dynamic parameters.</p>
+         * <p>Specifies whether a restart is required for the modification to take effect. The value is true for static parameters and false for dynamic parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -138,7 +138,7 @@ public class DescribeSearchParametersResponseBody extends TeaModel {
         public Boolean forceRestart;
 
         /**
-         * <p>Specifies whether the parameter is modifiable.</p>
+         * <p>Specifies whether the user is allowed to modify the parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -165,7 +165,7 @@ public class DescribeSearchParametersResponseBody extends TeaModel {
         public String parameterName;
 
         /**
-         * <p>The modification status of the parameter. A value of Normal indicates that no modifications are pending. A value of Modifying indicates that the modification task is not completed.</p>
+         * <p>The modification status of the parameter. A value of Normal indicates that there are no pending modifications. A value of Modifying indicates that the modification task is not completed.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

@@ -14,7 +14,7 @@ public class DescribeKBSyncLinkAttributeResponseBody extends TeaModel {
     public String clientId;
 
     /**
-     * <p>The synchronization configuration whitelist returned based on the source type. For DingTalk, UserId is returned. For Lark, FeishuChatMemberStaleTtlSeconds is returned.</p>
+     * <p>The synchronization configuration whitelist returned by source type. For DINGTALK, UserId can be returned. For FEISHU, FeishuChatMemberStaleTtlSeconds can be returned.</p>
      */
     @NameInMap("Config")
     public DescribeKBSyncLinkAttributeResponseBodyConfig config;
@@ -74,7 +74,31 @@ public class DescribeKBSyncLinkAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The source directory. For OSS sources, the bucket and object prefix in the oss://<bucket>/<prefix> format are returned. For other sources, the directory identifier or path of the corresponding channel is returned.</p>
+     * <p>Returns the current configuration, which does not indicate that synchronization is complete. This field may not be returned if it is not set.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SELECTED</p>
+     */
+    @NameInMap("SelectionMode")
+    public String selectionMode;
+
+    /**
+     * <p>Returns the current configuration, which does not indicate that synchronization is complete. This field may not be returned if it is not set.</p>
+     */
+    @NameInMap("SelectionRules")
+    public String selectionRules;
+
+    /**
+     * <p>The switch for source deletion synchronization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("SourceDeleteSyncEnabled")
+    public Boolean sourceDeleteSyncEnabled;
+
+    /**
+     * <p>The source directory.</p>
      * 
      * <strong>example:</strong>
      * <p>/documents</p>
@@ -169,6 +193,30 @@ public class DescribeKBSyncLinkAttributeResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeKBSyncLinkAttributeResponseBody setSelectionMode(String selectionMode) {
+        this.selectionMode = selectionMode;
+        return this;
+    }
+    public String getSelectionMode() {
+        return this.selectionMode;
+    }
+
+    public DescribeKBSyncLinkAttributeResponseBody setSelectionRules(String selectionRules) {
+        this.selectionRules = selectionRules;
+        return this;
+    }
+    public String getSelectionRules() {
+        return this.selectionRules;
+    }
+
+    public DescribeKBSyncLinkAttributeResponseBody setSourceDeleteSyncEnabled(Boolean sourceDeleteSyncEnabled) {
+        this.sourceDeleteSyncEnabled = sourceDeleteSyncEnabled;
+        return this;
+    }
+    public Boolean getSourceDeleteSyncEnabled() {
+        return this.sourceDeleteSyncEnabled;
+    }
+
     public DescribeKBSyncLinkAttributeResponseBody setSourceDir(String sourceDir) {
         this.sourceDir = sourceDir;
         return this;
@@ -195,7 +243,16 @@ public class DescribeKBSyncLinkAttributeResponseBody extends TeaModel {
 
     public static class DescribeKBSyncLinkAttributeResponseBodyConfig extends TeaModel {
         /**
-         * <p>The validity period of the successful snapshot of Lark group members for fallback reuse, in seconds. This parameter is returned only for Lark synchronization links. A value of -1 indicates that the snapshot never expires. A value of 0 indicates that snapshot fallback reuse is disabled. A positive integer indicates the maximum age of the snapshot allowed for reuse. The valid value configured for the link is returned. If no value is configured, the default value -1 is returned.</p>
+         * <p>The validity period of the group member success snapshot used for fallback reuse, in seconds. This field can be returned for DINGTALK and FEISHU synchronization links. Explicit general configurations take precedence. If it is not configured, Lark uses the legacy dedicated field. A value of -1 indicates that the snapshot never expires. A value of 0 indicates that snapshot fallback reuse is disabled. A positive integer indicates the maximum age of the snapshot allowed for reuse. If it is not configured for DingTalk, -1 is returned. If the general field is not explicitly configured for Lark, this field may not be returned, and the legacy dedicated field returns a valid value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
+        @NameInMap("ChatMemberStaleTtlSeconds")
+        public Integer chatMemberStaleTtlSeconds;
+
+        /**
+         * <p>The validity period of the Lark group member success snapshot used for fallback reuse, in seconds. This field is returned only for FEISHU synchronization links. A value of -1 indicates that the snapshot never expires. A value of 0 indicates that snapshot fallback reuse is disabled. A positive integer indicates the maximum age of the snapshot allowed for reuse. The valid value configured for the link is returned. If it is not configured, the default value -1 is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -204,7 +261,7 @@ public class DescribeKBSyncLinkAttributeResponseBody extends TeaModel {
         public Integer feishuChatMemberStaleTtlSeconds;
 
         /**
-         * <p>The ID of the DingTalk user who performs the operation. This parameter is returned only for DingTalk synchronization links.</p>
+         * <p>The ID of the DingTalk user who performs the operation. This field is returned only for DINGTALK synchronization links.</p>
          * 
          * <strong>example:</strong>
          * <p>manager123</p>
@@ -215,6 +272,14 @@ public class DescribeKBSyncLinkAttributeResponseBody extends TeaModel {
         public static DescribeKBSyncLinkAttributeResponseBodyConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeKBSyncLinkAttributeResponseBodyConfig self = new DescribeKBSyncLinkAttributeResponseBodyConfig();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeKBSyncLinkAttributeResponseBodyConfig setChatMemberStaleTtlSeconds(Integer chatMemberStaleTtlSeconds) {
+            this.chatMemberStaleTtlSeconds = chatMemberStaleTtlSeconds;
+            return this;
+        }
+        public Integer getChatMemberStaleTtlSeconds() {
+            return this.chatMemberStaleTtlSeconds;
         }
 
         public DescribeKBSyncLinkAttributeResponseBodyConfig setFeishuChatMemberStaleTtlSeconds(Integer feishuChatMemberStaleTtlSeconds) {

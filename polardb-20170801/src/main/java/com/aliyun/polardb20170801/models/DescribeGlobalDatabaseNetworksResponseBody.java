@@ -221,7 +221,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
         /**
          * <p>The GDN description. Requirements:</p>
          * <ul>
-         * <li><p>Cannot start with http\:// or https\://.</p>
+         * <li><p>Cannot start with http:// or https://.</p>
          * </li>
          * <li><p>Must start with a letter or a Chinese character.</p>
          * </li>

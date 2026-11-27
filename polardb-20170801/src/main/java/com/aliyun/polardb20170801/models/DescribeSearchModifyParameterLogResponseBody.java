@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSearchModifyParameterLogResponseBody extends TeaModel {
     /**
-     * <p>The type of the search engine.</p>
+     * <p>The type of the Search engine.</p>
      * 
      * <strong>example:</strong>
      * <p>polardb_search</p>
@@ -14,7 +14,7 @@ public class DescribeSearchModifyParameterLogResponseBody extends TeaModel {
     public String engine;
 
     /**
-     * <p>The database engine version of the Search DPI engine, which is not the MySQL version of the primary cluster.</p>
+     * <p>The DPI engine version of Search. This is not the MySQL version of the primary cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>3.0</p>
@@ -23,13 +23,13 @@ public class DescribeSearchModifyParameterLogResponseBody extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The parameter modification history, returned in descending order of record ID.</p>
+     * <p>The parameter modification history. The records are returned in descending order of record ID.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeSearchModifyParameterLogResponseBodyItems> items;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>e3a24663-eee5-4009-b635-2e9e8d052e74</p>
@@ -76,7 +76,7 @@ public class DescribeSearchModifyParameterLogResponseBody extends TeaModel {
 
     public static class DescribeSearchModifyParameterLogResponseBodyItems extends TeaModel {
         /**
-         * <p>The time when the parameter was modified. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The time when the parameter was modified in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-14T07:04:29Z</p>
@@ -112,7 +112,7 @@ public class DescribeSearchModifyParameterLogResponseBody extends TeaModel {
         public String parameterName;
 
         /**
-         * <p>The modification status. A value of Syncing indicates that the modification is not in effect. A value of Applied indicates that the modification is in effect.</p>
+         * <p>The modification status. A value of Syncing indicates that the modification has not taken effect. A value of Applied indicates that the modification has taken effect.</p>
          * 
          * <strong>example:</strong>
          * <p>Applied</p>

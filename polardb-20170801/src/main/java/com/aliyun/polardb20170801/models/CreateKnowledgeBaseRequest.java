@@ -14,7 +14,7 @@ public class CreateKnowledgeBaseRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The type of the knowledge base: PERSONAL or PUBLIC.</p>
+     * <p>The type of the knowledge base. Valid values: PERSONAL and PUBLIC.</p>
      * 
      * <strong>example:</strong>
      * <p>PUBLIC</p>
@@ -55,11 +55,11 @@ public class CreateKnowledgeBaseRequest extends TeaModel {
     /**
      * <p>The search mode. Valid values:</p>
      * <ul>
-     * <li>balanced (default): balanced mode</li>
+     * <li>balanced: balanced mode (default)</li>
      * <li>precise: precise mode</li>
      * <li>semantic: semantic mode</li>
      * <li>knn: KNN mode</li>
-     * <li>rrf: reciprocal rank fusion</li>
+     * <li>rrf: RRF fusion</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,6 +67,15 @@ public class CreateKnowledgeBaseRequest extends TeaModel {
      */
     @NameInMap("SearchMode")
     public String searchMode;
+
+    /**
+     * <p>Specifies whether to synchronize deletions from the source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("SourceDeleteSyncEnabled")
+    public Boolean sourceDeleteSyncEnabled;
 
     public static CreateKnowledgeBaseRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateKnowledgeBaseRequest self = new CreateKnowledgeBaseRequest();
@@ -119,6 +128,14 @@ public class CreateKnowledgeBaseRequest extends TeaModel {
     }
     public String getSearchMode() {
         return this.searchMode;
+    }
+
+    public CreateKnowledgeBaseRequest setSourceDeleteSyncEnabled(Boolean sourceDeleteSyncEnabled) {
+        this.sourceDeleteSyncEnabled = sourceDeleteSyncEnabled;
+        return this;
+    }
+    public Boolean getSourceDeleteSyncEnabled() {
+        return this.sourceDeleteSyncEnabled;
     }
 
 }

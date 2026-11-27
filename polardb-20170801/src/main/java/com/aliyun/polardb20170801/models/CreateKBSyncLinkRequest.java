@@ -5,6 +5,24 @@ import com.aliyun.tea.*;
 
 public class CreateKBSyncLinkRequest extends TeaModel {
     /**
+     * <p>The endpoint of the DingTalk AI table MCP server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://mcp-gw.dingtalk.com/server/example">https://mcp-gw.dingtalk.com/server/example</a></p>
+     */
+    @NameInMap("AiTableMcpEndpoint")
+    public String aiTableMcpEndpoint;
+
+    /**
+     * <p>The TTL of a successful snapshot of chat members for fallback reuse, in seconds. This parameter applies to DINGTALK and FEISHU synchronization links. If this parameter is explicitly configured, it takes precedence. If it is not configured, Feishu uses the value of FeishuChatMemberStaleTtlSeconds. A value of -1 indicates that the snapshot never expires. A value of 0 indicates that snapshot fallback reuse is disabled. A positive integer indicates the maximum age of a successful snapshot in the same workspace, enterprise, and chat group allowed for reuse. If this parameter is omitted, Feishu uses the legacy dedicated field. If neither is configured, the default value is -1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-1</p>
+     */
+    @NameInMap("ChatMemberStaleTtlSeconds")
+    public Integer chatMemberStaleTtlSeconds;
+
+    /**
      * <p>The client identifier.</p>
      * <p>This parameter is required.</p>
      * 
@@ -34,7 +52,7 @@ public class CreateKBSyncLinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The validity period of the successful snapshot of Lark chat members for fallback reuse, in seconds. This parameter can be explicitly set only for Lark synchronization links. A value of -1 indicates that the snapshot never expires. A value of 0 indicates that snapshot fallback reuse is disabled. A positive integer indicates the maximum age of the snapshot allowed for reuse. Default value: -1. If this parameter is not specified, the default value -1 is used.</p>
+     * <p>The time-to-live (TTL) of a successful snapshot of Feishu chat members for fallback reuse, in seconds. This parameter can be explicitly set only for FEISHU synchronization links. A value of -1 indicates that the snapshot never expires. A value of 0 indicates that snapshot fallback reuse is disabled. A positive integer indicates the maximum age of a snapshot allowed for reuse. Default value: -1. If this parameter is omitted, the default value -1 takes effect.</p>
      * 
      * <strong>example:</strong>
      * <p>-1</p>
@@ -82,6 +100,26 @@ public class CreateKBSyncLinkRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The synchronization scope mode. This parameter applies only to DINGTALK sources and must be set together with SelectionRules. Valid values:</p>
+     * <ul>
+     * <li>ALL: Synchronizes files in the source directory that are not excluded by excludes. The includes array must be empty.</li>
+     * <li>SELECTED: Synchronizes only files that match includes and are not excluded by excludes. If includes is empty, no files are selected.
+     * New configurations take effect starting from the next synchronization.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SELECTED</p>
+     */
+    @NameInMap("SelectionMode")
+    public String selectionMode;
+
+    /**
+     * <p>The file path filtering rules in JSON format. This parameter contains only two required string arrays: includes and excludes. Paths are relative to SourceDir, and exclusion rules take precedence. GLOB is supported: * and ? do not cross directories, and ** matches zero or more directory levels when it occupies a path segment alone. The two arrays can contain a maximum of 256 entries in total. Each entry must be 1 to 512 characters in length. The maximum size of the JSON text is 65,536 UTF-8 bytes. After a file is removed from the synchronization scope, the corresponding document imported by this synchronization link is cleaned up, without affecting the source file or documents of other synchronization links.</p>
+     */
+    @NameInMap("SelectionRules")
+    public String selectionRules;
+
+    /**
      * <p>The endpoint of the DingTalk sheet MCP server.</p>
      * 
      * <strong>example:</strong>
@@ -89,6 +127,15 @@ public class CreateKBSyncLinkRequest extends TeaModel {
      */
     @NameInMap("SheetMcpEndpoint")
     public String sheetMcpEndpoint;
+
+    /**
+     * <p>Specifies whether to enable synchronization for source deletions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("SourceDeleteSyncEnabled")
+    public Boolean sourceDeleteSyncEnabled;
 
     /**
      * <p>The address of the source directory for synchronization.</p>
@@ -129,7 +176,7 @@ public class CreateKBSyncLinkRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The Lark user access token. This token is used only when the application identity cannot expand chat members because the bot is not in the chat.</p>
+     * <p>The Feishu user access token. This token is used only when the application identity cannot expand chat members because the bot is not in the chat group.</p>
      * 
      * <strong>example:</strong>
      * <p>example-user-access-token</p>
@@ -138,7 +185,7 @@ public class CreateKBSyncLinkRequest extends TeaModel {
     public String userAccessToken;
 
     /**
-     * <p>The ID of the DingTalk user that performs the operation.</p>
+     * <p>The ID of the DingTalk operator.</p>
      * 
      * <strong>example:</strong>
      * <p>123***56</p>
@@ -147,7 +194,7 @@ public class CreateKBSyncLinkRequest extends TeaModel {
     public String userId;
 
     /**
-     * <p>The Lark user refresh token. This token must be provided together with UserAccessToken and is used to automatically rotate the fallback identity for expanding chat members.</p>
+     * <p>The Feishu user refresh token. This token must be provided together with UserAccessToken to automatically rotate the fallback identity for expanding chat members.</p>
      * 
      * <strong>example:</strong>
      * <p>example-user-refresh-token</p>
@@ -158,6 +205,22 @@ public class CreateKBSyncLinkRequest extends TeaModel {
     public static CreateKBSyncLinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateKBSyncLinkRequest self = new CreateKBSyncLinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateKBSyncLinkRequest setAiTableMcpEndpoint(String aiTableMcpEndpoint) {
+        this.aiTableMcpEndpoint = aiTableMcpEndpoint;
+        return this;
+    }
+    public String getAiTableMcpEndpoint() {
+        return this.aiTableMcpEndpoint;
+    }
+
+    public CreateKBSyncLinkRequest setChatMemberStaleTtlSeconds(Integer chatMemberStaleTtlSeconds) {
+        this.chatMemberStaleTtlSeconds = chatMemberStaleTtlSeconds;
+        return this;
+    }
+    public Integer getChatMemberStaleTtlSeconds() {
+        return this.chatMemberStaleTtlSeconds;
     }
 
     public CreateKBSyncLinkRequest setClientId(String clientId) {
@@ -224,12 +287,36 @@ public class CreateKBSyncLinkRequest extends TeaModel {
         return this.regionId;
     }
 
+    public CreateKBSyncLinkRequest setSelectionMode(String selectionMode) {
+        this.selectionMode = selectionMode;
+        return this;
+    }
+    public String getSelectionMode() {
+        return this.selectionMode;
+    }
+
+    public CreateKBSyncLinkRequest setSelectionRules(String selectionRules) {
+        this.selectionRules = selectionRules;
+        return this;
+    }
+    public String getSelectionRules() {
+        return this.selectionRules;
+    }
+
     public CreateKBSyncLinkRequest setSheetMcpEndpoint(String sheetMcpEndpoint) {
         this.sheetMcpEndpoint = sheetMcpEndpoint;
         return this;
     }
     public String getSheetMcpEndpoint() {
         return this.sheetMcpEndpoint;
+    }
+
+    public CreateKBSyncLinkRequest setSourceDeleteSyncEnabled(Boolean sourceDeleteSyncEnabled) {
+        this.sourceDeleteSyncEnabled = sourceDeleteSyncEnabled;
+        return this;
+    }
+    public Boolean getSourceDeleteSyncEnabled() {
+        return this.sourceDeleteSyncEnabled;
     }
 
     public CreateKBSyncLinkRequest setSourceDir(String sourceDir) {

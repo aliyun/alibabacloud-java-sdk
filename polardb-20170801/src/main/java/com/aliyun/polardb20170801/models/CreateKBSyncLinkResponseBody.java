@@ -14,7 +14,7 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
     public String clientId;
 
     /**
-     * <p>The creation time. The time is displayed in ISO 8601 format in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+     * <p>The creation time. The time follows the ISO 8601 standard and uses the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2026-08-14T05:58:42Z</p>
@@ -68,6 +68,21 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The current configuration. This does not indicate that synchronization is complete. This parameter may not be returned if it is not set.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SELECTED</p>
+     */
+    @NameInMap("SelectionMode")
+    public String selectionMode;
+
+    /**
+     * <p>The current configuration. This does not indicate that synchronization is complete. This parameter may not be returned if it is not set.</p>
+     */
+    @NameInMap("SelectionRules")
+    public String selectionRules;
+
+    /**
      * <p>The address of the source directory for synchronization.</p>
      * 
      * <strong>example:</strong>
@@ -99,6 +114,15 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
      */
     @NameInMap("SyncStatus")
     public String syncStatus;
+
+    /**
+     * <p>The ID of the asynchronous configuration task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
+    @NameInMap("TaskId")
+    public Integer taskId;
 
     public static CreateKBSyncLinkResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateKBSyncLinkResponseBody self = new CreateKBSyncLinkResponseBody();
@@ -161,6 +185,22 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public CreateKBSyncLinkResponseBody setSelectionMode(String selectionMode) {
+        this.selectionMode = selectionMode;
+        return this;
+    }
+    public String getSelectionMode() {
+        return this.selectionMode;
+    }
+
+    public CreateKBSyncLinkResponseBody setSelectionRules(String selectionRules) {
+        this.selectionRules = selectionRules;
+        return this;
+    }
+    public String getSelectionRules() {
+        return this.selectionRules;
+    }
+
     public CreateKBSyncLinkResponseBody setSourceDir(String sourceDir) {
         this.sourceDir = sourceDir;
         return this;
@@ -183,6 +223,14 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
     }
     public String getSyncStatus() {
         return this.syncStatus;
+    }
+
+    public CreateKBSyncLinkResponseBody setTaskId(Integer taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public Integer getTaskId() {
+        return this.taskId;
     }
 
 }

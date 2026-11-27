@@ -5,17 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeAgenticDBPerformanceRequest extends TeaModel {
     /**
-     * <p>The alert aggregation method. Valid values vary by metric:</p>
-     * <ul>
-     * <li>Value: The value of the HTTP status code.</li>
-     * <li>Average: The average HTTP wait time.</li>
-     * <li>Value: The value of the Telnet status code.</li>
-     * <li>TelnetLatency: The average Telnet wait time.</li>
-     * <li>Average: The average ping packet loss rate.</li>
-     * </ul>
+     * <p>Specifies whether to aggregate data by instance scope. This parameter takes effect only when neither BranchId nor EndpointId is specified.</p>
      * 
      * <strong>example:</strong>
-     * <p>Average</p>
+     * <p>false</p>
      */
     @NameInMap("Aggregate")
     public Boolean aggregate;

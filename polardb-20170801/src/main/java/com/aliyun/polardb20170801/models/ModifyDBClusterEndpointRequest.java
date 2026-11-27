@@ -49,74 +49,74 @@ public class ModifyDBClusterEndpointRequest extends TeaModel {
     /**
      * <p>The advanced configuration of the cluster endpoint in JSON format. You can configure the consistency level, transaction splitting, whether the primary node accepts read requests, connection pooling, and other settings.</p>
      * <ul>
-     * <li><p>To configure the load balancing policy, use the format <code>{\\&quot;LoadBalancePolicy\\&quot;:\\&quot;Load balancing policy\\&quot;}</code>. Valid values:</p>
+     * <li><p>To configure the load balancing policy, use the format <code>{\&quot;LoadBalancePolicy\&quot;:\&quot;Load balancing policy\&quot;}</code>. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: connection-based load balancing. (Default)</li>
      * <li><strong>1</strong>: active-request-based load balancing.</li>
      * </ul>
      * </li>
-     * <li><p>To configure whether the primary node accepts read requests, use the format <code>{\\&quot;MasterAcceptReads\\&quot;:\\&quot;Whether the primary node accepts reads\\&quot;}</code>. Valid values:</p>
+     * <li><p>To configure whether the primary node accepts read requests, use the format <code>{\&quot;MasterAcceptReads\&quot;:\&quot;Whether the primary node accepts reads\&quot;}</code>. Valid values:</p>
      * <ul>
      * <li><strong>on</strong>: The primary node accepts read requests. (Default)</li>
      * <li><strong>off</strong>: The primary node does not accept read requests.</li>
      * </ul>
      * </li>
-     * <li><p>To configure transaction splitting, use two parameters together in the format <code>{\\&quot;DistributedTransaction\\&quot;:\\&quot;Transaction splitting\\&quot;,\\&quot;TrxSplitAggressive\\&quot;:\\&quot;Transaction splitting\\&quot;}</code>. Valid values:</p>
+     * <li><p>To configure transaction splitting, use two parameters together in the format <code>{\&quot;DistributedTransaction\&quot;:\&quot;Transaction splitting\&quot;,\&quot;TrxSplitAggressive\&quot;:\&quot;Transaction splitting\&quot;}</code>. Valid values:</p>
      * <ul>
      * <li><strong>Disabled</strong>: DistributedTransaction=off, TrxSplitAggressive=off</li>
      * <li><strong>Read request splitting before first write request</strong>: DistributedTransaction=on, TrxSplitAggressive=off</li>
      * <li><strong>Full transaction splitting</strong>: DistributedTransaction=on, TrxSplitAggressive=on</li>
      * </ul>
      * </li>
-     * <li><p>To configure the consistency level, use the format <code>{\\&quot;ConsistLevel\\&quot;:\\&quot;Consistency level\\&quot;}</code>. Valid values:</p>
+     * <li><p>To configure the consistency level, use the format <code>{\&quot;ConsistLevel\&quot;:\&quot;Consistency level\&quot;}</code>. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: eventual consistency (weak).</li>
      * <li><strong>1</strong>: session consistency (medium). (Default)</li>
      * <li><strong>2</strong>: global consistency (strong).</li>
      * </ul>
      * </li>
-     * <li><p>To configure the global consistency read timeout period, use the format <code>{\\&quot;ConsistTimeout\\&quot;:\\&quot;Global consistency read timeout\\&quot;}</code>. Valid values: 0 to 60000. Default value: 20. Unit: ms.</p>
+     * <li><p>To configure the global consistency read timeout period, use the format <code>{\&quot;ConsistTimeout\&quot;:\&quot;Global consistency read timeout\&quot;}</code>. Valid values: 0 to 60000. Default value: 20. Unit: ms.</p>
      * </li>
-     * <li><p>To configure the session consistency read timeout period, use the format <code>{\\&quot;ConsistSessionTimeout\\&quot;:\\&quot;Session consistency read timeout\\&quot;}</code>. Valid values: 0 to 60000. Default value: 0. Unit: ms.</p>
+     * <li><p>To configure the session consistency read timeout period, use the format <code>{\&quot;ConsistSessionTimeout\&quot;:\&quot;Session consistency read timeout\&quot;}</code>. Valid values: 0 to 60000. Default value: 0. Unit: ms.</p>
      * </li>
-     * <li><p>To configure the global (or session) consistency read timeout policy, use the format <code>{\\&quot;ConsistTimeoutAction\\&quot;:\\&quot;Global consistency read timeout policy\\&quot;}</code>. Valid values:</p>
+     * <li><p>To configure the global (or session) consistency read timeout policy, use the format <code>{\&quot;ConsistTimeoutAction\&quot;:\&quot;Global consistency read timeout policy\&quot;}</code>. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: Forward the read request to the primary node. (Default)</li>
      * <li><strong>1</strong>: The proxy returns an error message <code>wait replication complete timeout, please retry</code> to the application.</li>
      * </ul>
      * </li>
-     * <li><p>To configure the connection pool, use the format <code>{\\&quot;ConnectionPersist\\&quot;:\\&quot;Connection pool\\&quot;}</code>. Valid values:</p>
+     * <li><p>To configure the connection pool, use the format <code>{\&quot;ConnectionPersist\&quot;:\&quot;Connection pool\&quot;}</code>. Valid values:</p>
      * <ul>
      * <li><strong>off</strong>: Disable the connection pool. (Default)</li>
      * <li><strong>Session</strong>: Enable the session-level connection pool.</li>
      * <li><strong>Transaction</strong>: Enable the transaction-level connection pooling.</li>
      * </ul>
      * </li>
-     * <li><p>To configure on-demand connection establishment, use the format <code>{\\&quot;ConnectAllBackends\\&quot;:\\&quot;On-demand connection\\&quot;}</code>. Valid values:</p>
+     * <li><p>To configure on-demand connection establishment, use the format <code>{\&quot;ConnectAllBackends\&quot;:\&quot;On-demand connection\&quot;}</code>. Valid values:</p>
      * <ul>
      * <li><strong>on</strong>: Enabled.</li>
      * <li><strong>off</strong>: Disabled. (Default)</li>
      * </ul>
      * </li>
-     * <li><p>To configure parallel query, use the format <code>{\\&quot;MaxParallelDegree\\&quot;:\\&quot;Parallel query\\&quot;}</code>. Valid values:</p>
+     * <li><p>To configure parallel query, use the format <code>{\&quot;MaxParallelDegree\&quot;:\&quot;Parallel query\&quot;}</code>. Valid values:</p>
      * <ul>
      * <li><strong>on</strong>: Enable parallel query.</li>
      * <li><strong>off</strong>: Disable parallel query. (Default)</li>
      * </ul>
      * </li>
-     * <li><p>To configure automatic request distribution among row offload reads from primary nodes, use the format <code>{\\&quot;EnableHtapImci\\&quot;:\\&quot;Row store/column store automatic request distribution\\&quot;}</code>. Valid values:</p>
+     * <li><p>To configure automatic request distribution among row offload reads from primary nodes, use the format <code>{\&quot;EnableHtapImci\&quot;:\&quot;Row store/column store automatic request distribution\&quot;}</code>. Valid values:</p>
      * <ul>
      * <li><strong>on</strong>: Enable automatic request distribution among row offload reads from primary nodes.</li>
      * <li><strong>off</strong>: Disable automatic request distribution among row offload reads from primary nodes. (Default)</li>
      * </ul>
      * </li>
-     * <li><p>To configure whether to enable overload protection, use the format <code>{\\&quot;EnableOverloadThrottle\\&quot;:\\&quot;Whether to enable overload protection\\&quot;}</code>. Valid values:</p>
+     * <li><p>To configure whether to enable overload protection, use the format <code>{\&quot;EnableOverloadThrottle\&quot;:\&quot;Whether to enable overload protection\&quot;}</code>. Valid values:</p>
      * <ul>
      * <li><strong>on</strong>: Enable overload protection.</li>
      * <li><strong>off</strong>: Disable overload protection. (Default)</li>
      * </ul>
      * </li>
-     * <li><p>To configure node weights, use the format <code>{\\&quot;NodesWeight\\&quot;:{\\&quot;Node ID\\&quot;:\\&quot;Weight value\\&quot;}}</code>.</p>
+     * <li><p>To configure node weights, use the format <code>{\&quot;NodesWeight\&quot;:{\&quot;Node ID\&quot;:\&quot;Weight value\&quot;}}</code>.</p>
      * </li>
      * </ul>
      * <blockquote>
@@ -126,7 +126,7 @@ public class ModifyDBClusterEndpointRequest extends TeaModel {
      * <li>Automatic request distribution among row offload reads from primary nodes can be configured when the read/write mode of the PolarDB for MySQL cluster endpoint is <strong>read/write (automatic read/write splitting)</strong>, or when the read/write mode is <strong>read-only</strong> and the load balancing policy is <strong>active-request-based load balancing</strong>.</li>
      * <li>Only PolarDB for MySQL supports setting the consistency level to global consistency.</li>
      * <li>If <strong>ReadWriteMode</strong> is set to <strong>ReadOnly</strong>, the consistency level can only be set to <strong>0</strong>.</li>
-     * <li>You can configure the consistency level, transaction splitting, whether the primary node accepts read requests, and connection pooling at the same time. Example: <code>{\\&quot;ConsistLevel\\&quot;:\\&quot;1\\&quot;,\\&quot;DistributedTransaction\\&quot;:\\&quot;on\\&quot;,\\&quot;ConnectionPersist\\&quot;:\\&quot;Session\\&quot;,\\&quot;MasterAcceptReads\\&quot;:\\&quot;on\\&quot;}</code>.</li>
+     * <li>You can configure the consistency level, transaction splitting, whether the primary node accepts read requests, and connection pooling at the same time. Example: <code>{\&quot;ConsistLevel\&quot;:\&quot;1\&quot;,\&quot;DistributedTransaction\&quot;:\&quot;on\&quot;,\&quot;ConnectionPersist\&quot;:\&quot;Session\&quot;,\&quot;MasterAcceptReads\&quot;:\&quot;on\&quot;}</code>.</li>
      * <li>Transaction splitting is constrained by the consistency level. For example, transaction splitting cannot be enabled when the consistency level is <strong>0</strong>. Transaction splitting can be enabled when the consistency level is <strong>1</strong> or <strong>2</strong>.</li>
      * </ul>
      * </blockquote>

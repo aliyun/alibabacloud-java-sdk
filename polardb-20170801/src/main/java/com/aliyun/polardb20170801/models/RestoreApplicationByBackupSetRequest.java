@@ -24,7 +24,7 @@ public class RestoreApplicationByBackupSetRequest extends TeaModel {
     public String applicationType;
 
     /**
-     * <p>The ID of the backup set used to restore the application. This parameter is required. If it is not provided, the API returns InvalidBackupSetID.NotFound (404).</p>
+     * <p>The ID of the backup set used to restore the application. Usage notes: This parameter is required. If this parameter is not provided, the API returns the InvalidBackupSetID.NotFound (404) error.</p>
      * 
      * <strong>example:</strong>
      * <p>bs-123456</p>
@@ -33,7 +33,7 @@ public class RestoreApplicationByBackupSetRequest extends TeaModel {
     public String backupSetId;
 
     /**
-     * <p>The region ID of the application.</p>
+     * <p>The ID of the region where the application resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

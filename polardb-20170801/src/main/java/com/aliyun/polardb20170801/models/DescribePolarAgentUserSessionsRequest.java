@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePolarAgentUserSessionsRequest extends TeaModel {
     /**
-     * <p>The source of the product. The value is \<code>polardb-console\\</code>.</p>
+     * <p>The source of the product. The value is `polardb-console`.</p>
      * 
      * <strong>example:</strong>
      * <p>polardb-console</p>

@@ -22,6 +22,15 @@ public class UpdateKnowledgeBaseResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the asynchronous configuration task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
+    @NameInMap("TaskId")
+    public Integer taskId;
+
     public static UpdateKnowledgeBaseResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateKnowledgeBaseResponseBody self = new UpdateKnowledgeBaseResponseBody();
         return TeaModel.build(map, self);
@@ -41,6 +50,14 @@ public class UpdateKnowledgeBaseResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public UpdateKnowledgeBaseResponseBody setTaskId(Integer taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public Integer getTaskId() {
+        return this.taskId;
     }
 
 }

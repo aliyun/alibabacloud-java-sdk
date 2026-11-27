@@ -202,7 +202,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
          * <p>The description of the parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>The server\&quot;s default character set.</p>
+         * <p>The server&quot;s default character set.</p>
          */
         @NameInMap("ParameterDescription")
         public String parameterDescription;

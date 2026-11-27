@@ -120,7 +120,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
         public String regionNo;
 
         /**
-         * <p>The status of the vSwitch. Valid values: <em><strong>Pending</strong></em>\<em>: The vSwitch is being configured.\</em> <strong>Available</strong>: The vSwitch is available.</p>
+         * <p>The status of the vSwitch. Valid values: <em><strong>Pending</strong></em>*: The vSwitch is being configured.* <strong>Available</strong>: The vSwitch is available.</p>
          * 
          * <strong>example:</strong>
          * <p>Available</p>

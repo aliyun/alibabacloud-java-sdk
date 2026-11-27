@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateResourceControlResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C61892A4-0850-4516-9E26-44D96C1782DE</p>

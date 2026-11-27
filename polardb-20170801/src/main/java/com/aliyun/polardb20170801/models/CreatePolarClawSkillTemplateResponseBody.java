@@ -14,7 +14,7 @@ public class CreatePolarClawSkillTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The skill template ID.</p>
+     * <p>The ID of the skill template.</p>
      * 
      * <strong>example:</strong>
      * <p>pcpg-skill-**************</p>

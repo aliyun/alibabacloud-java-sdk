@@ -20,7 +20,7 @@ public class ModifyDBNodeDescriptionRequest extends TeaModel {
     /**
      * <p>The name of the node. The name must meet the following requirements:</p>
      * <ul>
-     * <li><p>It cannot start with http\:// or https\://.</p>
+     * <li><p>It cannot start with http:// or https://.</p>
      * </li>
      * <li><p>It must be 2 to 256 characters in length.</p>
      * </li>

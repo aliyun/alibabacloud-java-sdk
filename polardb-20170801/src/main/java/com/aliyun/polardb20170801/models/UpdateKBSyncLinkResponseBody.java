@@ -23,10 +23,34 @@ public class UpdateKBSyncLinkResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Returns the current configuration, which does not indicate that the synchronization is complete. This parameter may not be returned if it is not set.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SELECTED</p>
+     */
+    @NameInMap("SelectionMode")
+    public String selectionMode;
+
+    /**
+     * <p>Returns the current configuration, which does not indicate that the synchronization is complete. This parameter may not be returned if it is not set.</p>
+     */
+    @NameInMap("SelectionRules")
+    public String selectionRules;
+
+    /**
      * <p>The scheduled time of the synchronization task.</p>
      */
     @NameInMap("SyncSchedule")
     public String syncSchedule;
+
+    /**
+     * <p>The ID of the asynchronous configuration task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
+    @NameInMap("TaskId")
+    public Integer taskId;
 
     public static UpdateKBSyncLinkResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateKBSyncLinkResponseBody self = new UpdateKBSyncLinkResponseBody();
@@ -49,12 +73,36 @@ public class UpdateKBSyncLinkResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public UpdateKBSyncLinkResponseBody setSelectionMode(String selectionMode) {
+        this.selectionMode = selectionMode;
+        return this;
+    }
+    public String getSelectionMode() {
+        return this.selectionMode;
+    }
+
+    public UpdateKBSyncLinkResponseBody setSelectionRules(String selectionRules) {
+        this.selectionRules = selectionRules;
+        return this;
+    }
+    public String getSelectionRules() {
+        return this.selectionRules;
+    }
+
     public UpdateKBSyncLinkResponseBody setSyncSchedule(String syncSchedule) {
         this.syncSchedule = syncSchedule;
         return this;
     }
     public String getSyncSchedule() {
         return this.syncSchedule;
+    }
+
+    public UpdateKBSyncLinkResponseBody setTaskId(Integer taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public Integer getTaskId() {
+        return this.taskId;
     }
 
 }

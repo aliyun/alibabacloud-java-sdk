@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePolarClawSkillRequest extends TeaModel {
     /**
-     * <p>The ID of the region where the OSS bucket that stores the skill files resides.</p>
+     * <p>The region ID of the OSS bucket where the skill files are stored.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -14,7 +14,7 @@ public class CreatePolarClawSkillRequest extends TeaModel {
     public String bucketRegionId;
 
     /**
-     * <p>The type of the bucket used for skill files. UserOwned indicates a user-owned bucket. Hosted indicates a hosted bucket. You must have the required permissions to use a hosted bucket.</p>
+     * <p>The type of the bucket used for skill files. Valid values: UserOwned: a user-owned bucket. Hosted: a managed bucket. You must have the required permissions to use a managed bucket.</p>
      * 
      * <strong>example:</strong>
      * <p>UserOwned</p>
@@ -23,7 +23,7 @@ public class CreatePolarClawSkillRequest extends TeaModel {
     public String bucketType;
 
     /**
-     * <p>The name of the OSS bucket that resides in the same region as the current project.</p>
+     * <p>The name of the OSS bucket that is in the same region as the current project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class CreatePolarClawSkillRequest extends TeaModel {
     public String OSSBucket;
 
     /**
-     * <p>The prefix of the OSS object. The prefix can contain digits and letters and must be 1 to 30 characters in length.</p>
+     * <p>The prefix of your OSS object. The prefix can contain digits and letters and must be 1 to 30 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class CreatePolarClawSkillRequest extends TeaModel {
     public String OSSPrefix;
 
     /**
-     * <p>The ID of the region where the parameter template resides.</p>
+     * <p>The region ID of the region where the parameter template resides.</p>
      * <blockquote>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query region IDs.</p>
      * </blockquote>
@@ -55,7 +55,7 @@ public class CreatePolarClawSkillRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the skill.</p>
+     * <p>The skill name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class CreatePolarClawSkillRequest extends TeaModel {
     public String skillName;
 
     /**
-     * <p>The version of the skill.</p>
+     * <p>The skill version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class CreatePolarClawSkillRequest extends TeaModel {
      * <p>The brief description of the skill.</p>
      * 
      * <strong>example:</strong>
-     * <p>An example for managing PolarDB skills</p>
+     * <p>Example for managing PolarDB skills</p>
      */
     @NameInMap("Summary")
     public String summary;
@@ -87,7 +87,7 @@ public class CreatePolarClawSkillRequest extends TeaModel {
      * <p>The tag details.</p>
      * 
      * <strong>example:</strong>
-     * <p>[\&quot;PolarDB\&quot;]</p>
+     * <p>[&quot;PolarDB&quot;]</p>
      */
     @NameInMap("Tags")
     public String tags;

@@ -8,7 +8,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
      * <p>The access information of the model in the test deployment scenario.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;networkInterfaceId\&quot;:\&quot;eni-2zea***\&quot;,\&quot;port\&quot;:\&quot;8000\&quot;,\&quot;host\&quot;:\&quot;192.<strong>.</strong>.**\&quot;}</p>
+     * <p>{&quot;networkInterfaceId&quot;:&quot;eni-2zea***&quot;,&quot;port&quot;:&quot;8000&quot;,&quot;host&quot;:&quot;192.<strong>.</strong>.**&quot;}</p>
      */
     @NameInMap("AccessInfo")
     public String accessInfo;

@@ -261,7 +261,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
          * <p>The task details.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;steps\&quot;:[{\&quot;step_name\&quot;:\&quot;init_task\&quot;},{\&quot;step_name\&quot;:\&quot;exec_task\&quot;},{\&quot;step_name\&quot;:\&quot;finish_task\&quot;}]}</p>
+         * <p>{&quot;steps&quot;:[{&quot;step_name&quot;:&quot;init_task&quot;},{&quot;step_name&quot;:&quot;exec_task&quot;},{&quot;step_name&quot;:&quot;finish_task&quot;}]}</p>
          */
         @NameInMap("TaskDetail")
         public String taskDetail;

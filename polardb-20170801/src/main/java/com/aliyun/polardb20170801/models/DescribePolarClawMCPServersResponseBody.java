@@ -45,7 +45,7 @@ public class DescribePolarClawMCPServersResponseBody extends TeaModel {
      * 
      * <strong>example:</strong>
      * <p>{
-     *     &quot;dev-mcp-server&quot;: &quot;{\&quot;args\&quot;:[\&quot;-y\&quot;,\&quot;@polarclaw/mcp-dev\&quot;],\&quot;command\&quot;:\&quot;node\&quot;}&quot;
+     *     &quot;dev-mcp-server&quot;: &quot;{&quot;args&quot;:[&quot;-y&quot;,&quot;@polarclaw/mcp-dev&quot;],&quot;command&quot;:&quot;node&quot;}&quot;
      * }</p>
      */
     @NameInMap("Servers")

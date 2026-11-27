@@ -1,3 +1,31 @@
+2026-11-27 Version: 9.4.4
+- Update API CreateKBSyncLink: add request parameters AiTableMcpEndpoint.
+- Update API CreateKBSyncLink: add request parameters ChatMemberStaleTtlSeconds.
+- Update API CreateKBSyncLink: add request parameters SelectionMode.
+- Update API CreateKBSyncLink: add request parameters SelectionRules.
+- Update API CreateKBSyncLink: add request parameters SourceDeleteSyncEnabled.
+- Update API CreateKBSyncLink: add response parameters Body.SelectionMode.
+- Update API CreateKBSyncLink: add response parameters Body.SelectionRules.
+- Update API CreateKBSyncLink: add response parameters Body.TaskId.
+- Update API CreateKnowledgeBase: add request parameters SourceDeleteSyncEnabled.
+- Update API CreateKnowledgeBase: add response parameters Body.TaskId.
+- Update API DescribeKBSyncLinkAttribute: add response parameters Body.SelectionMode.
+- Update API DescribeKBSyncLinkAttribute: add response parameters Body.SelectionRules.
+- Update API DescribeKBSyncLinkAttribute: add response parameters Body.SourceDeleteSyncEnabled.
+- Update API DescribeKBSyncLinkAttribute: add response parameters Body.Config.ChatMemberStaleTtlSeconds.
+- Update API DescribeKnowledgeBaseAttribute: add response parameters Body.SourceDeleteSyncEnabled.
+- Update API UpdateKBSyncLink: add request parameters AiTableMcpEndpoint.
+- Update API UpdateKBSyncLink: add request parameters ChatMemberStaleTtlSeconds.
+- Update API UpdateKBSyncLink: add request parameters SelectionMode.
+- Update API UpdateKBSyncLink: add request parameters SelectionRules.
+- Update API UpdateKBSyncLink: add request parameters SourceDeleteSyncEnabled.
+- Update API UpdateKBSyncLink: add response parameters Body.SelectionMode.
+- Update API UpdateKBSyncLink: add response parameters Body.SelectionRules.
+- Update API UpdateKBSyncLink: add response parameters Body.TaskId.
+- Update API UpdateKnowledgeBase: add request parameters SourceDeleteSyncEnabled.
+- Update API UpdateKnowledgeBase: add response parameters Body.TaskId.
+
+
 2026-11-24 Version: 9.4.3
 - Update API AttachApplicationPolarFS: add request parameters ContainerMountPath.
 - Update API AttachApplicationPolarFS: add response parameters Body.ContainerMountPath.

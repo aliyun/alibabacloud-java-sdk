@@ -58,6 +58,15 @@ public class UpdateKnowledgeBaseRequest extends TeaModel {
     @NameInMap("SearchMode")
     public String searchMode;
 
+    /**
+     * <p>Specifies whether to enable source deletion synchronization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("SourceDeleteSyncEnabled")
+    public Boolean sourceDeleteSyncEnabled;
+
     public static UpdateKnowledgeBaseRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateKnowledgeBaseRequest self = new UpdateKnowledgeBaseRequest();
         return TeaModel.build(map, self);
@@ -101,6 +110,14 @@ public class UpdateKnowledgeBaseRequest extends TeaModel {
     }
     public String getSearchMode() {
         return this.searchMode;
+    }
+
+    public UpdateKnowledgeBaseRequest setSourceDeleteSyncEnabled(Boolean sourceDeleteSyncEnabled) {
+        this.sourceDeleteSyncEnabled = sourceDeleteSyncEnabled;
+        return this;
+    }
+    public Boolean getSourceDeleteSyncEnabled() {
+        return this.sourceDeleteSyncEnabled;
     }
 
 }

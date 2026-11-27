@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAIDBClusterDatasetRequest extends TeaModel {
     /**
-     * <p>The ID of the AI database cluster. The cluster must have DBType set to polardb_ai. This parameter is required. If it is not provided, the service returns InvalidDBClusterId.Malformed (404).</p>
+     * <p>The ID of the AI database cluster. The cluster must have DBType set to polardb_ai. This parameter is required. If this parameter is not provided, the service returns InvalidDBClusterId.Malformed (404).</p>
      * 
      * <strong>example:</strong>
      * <p>pc-2ze88***</p>
@@ -69,7 +69,7 @@ public class CreateAIDBClusterDatasetRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The training mode for the dataset. Dataset formats vary by mode. Valid values:</p>
+     * <p>The training mode for the dataset. Dataset formats vary based on the mode. Valid values:</p>
      * <ul>
      * <li><strong>sft</strong>: supervised fine-tuning, dedicated to training datasets</li>
      * <li><strong>grpo</strong>: reinforcement learning optimization, dedicated to training datasets</li>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteResourceControlRequest extends TeaModel {
     /**
-     * <p>The cluster ID of the PolarDB cluster.</p>
+     * <p>The ID of the PolarDB cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class DeleteResourceControlRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The region ID of the PolarDB cluster.</p>
+     * <p>The ID of the region where the PolarDB cluster is deployed.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view available regions.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DeleteResourceControlRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the resource control rule. The name must be 1 to 63 ASCII bytes in length, start with a letter, and can contain letters, digits, and underscores.</p>
+     * <p>The name of the resource control rule. The name must be 1 to 63 ASCII characters in length, start with a letter, and contain only letters, digits, and underscores.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
