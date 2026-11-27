@@ -11,7 +11,7 @@ public class ListScanTasksByTargetResponseBody extends TeaModel {
     public java.util.List<ListScanTasksByTargetResponseBodyData> data;
 
     /**
-     * <p>The normalized page number that actually takes effect. This value may differ from the input parameter.</p>
+     * <p>The actual effective page number after normalization. This value may not be equal to the input parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListScanTasksByTargetResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The normalized number of entries per page that actually takes effect. This value may differ from the input parameter.</p>
+     * <p>The actual effective number of entries per page after normalization. This value may not be equal to the input parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class ListScanTasksByTargetResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The unique identifier of the request, used for troubleshooting and log tracing.</p>
+     * <p>The unique identifier of the request. It is used for troubleshooting and log tracing.</p>
      * 
      * <strong>example:</strong>
      * <p>1EBD0C05-6C1F-4C95-9C63-B7AB7B5A9C8E</p>
@@ -38,7 +38,7 @@ public class ListScanTasksByTargetResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of scan tasks that match the filter conditions within the last 366-day window.</p>
+     * <p>The total number of scan tasks that meet the filter conditions within the last 366 days.</p>
      * 
      * <strong>example:</strong>
      * <p>42</p>
@@ -93,7 +93,7 @@ public class ListScanTasksByTargetResponseBody extends TeaModel {
 
     public static class ListScanTasksByTargetResponseBodyData extends TeaModel {
         /**
-         * <p>The task creation time, in milliseconds (Unix epoch milliseconds).</p>
+         * <p>The creation time of the task. The value is a millisecond timestamp (Unix epoch in milliseconds).</p>
          * 
          * <strong>example:</strong>
          * <p>1735689600000</p>
@@ -102,7 +102,7 @@ public class ListScanTasksByTargetResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The task end time, in milliseconds (Unix epoch milliseconds). This value is null if the task has not ended.</p>
+         * <p>The end time of the task. The value is a millisecond timestamp (Unix epoch in milliseconds). If the task has not ended, the value is null.</p>
          * 
          * <strong>example:</strong>
          * <p>1735689600000</p>
@@ -111,7 +111,7 @@ public class ListScanTasksByTargetResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The number of samples that the task has executed.</p>
+         * <p>The number of samples that have been executed for the task.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -120,13 +120,31 @@ public class ListScanTasksByTargetResponseBody extends TeaModel {
         public Long executeCaseCount;
 
         /**
-         * <p>The risk level of the task result. This value is null if the task is not completed or no risk assessment has been generated.</p>
+         * <p>The report language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
+         */
+        @NameInMap("ReportLanguage")
+        public String reportLanguage;
+
+        /**
+         * <p>The risk level of the task result. If the task is not completed or no risk assessment is generated, the value is null.</p>
          * 
          * <strong>example:</strong>
          * <p>high</p>
          */
         @NameInMap("RiskLevel")
         public String riskLevel;
+
+        /**
+         * <p>The sample language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
+         */
+        @NameInMap("SampleLanguage")
+        public String sampleLanguage;
 
         /**
          * <p>The detection intensity of the task.</p>
@@ -138,7 +156,7 @@ public class ListScanTasksByTargetResponseBody extends TeaModel {
         public Long sampleLevel;
 
         /**
-         * <p>The scan type of the task. Historical tasks without a recorded scan type are normalized to attack.</p>
+         * <p>The scan mode of the task. For historical tasks that do not have a recorded scan mode, the value is normalized to attack.</p>
          * 
          * <strong>example:</strong>
          * <p>attack</p>
@@ -147,7 +165,7 @@ public class ListScanTasksByTargetResponseBody extends TeaModel {
         public String scanType;
 
         /**
-         * <p>The unique identifier of the scan task. You can use this ID for result download and status tracking.</p>
+         * <p>The unique identifier of the scan task. It can be used to download results and track status.</p>
          * 
          * <strong>example:</strong>
          * <p>task-abc123def4567</p>
@@ -156,7 +174,7 @@ public class ListScanTasksByTargetResponseBody extends TeaModel {
         public String scannerTaskId;
 
         /**
-         * <p>The task message. This value contains the failure reason if the task failed, or is empty if the task succeeded or no message is available.</p>
+         * <p>The task message. If the task fails, this parameter indicates the cause of the failure. If the task succeeds or no message is available, this parameter is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>Execution timed out</p>
@@ -174,7 +192,16 @@ public class ListScanTasksByTargetResponseBody extends TeaModel {
         public String scannerTaskStatus;
 
         /**
-         * <p>The task start time, in milliseconds (Unix epoch milliseconds). This value is null if the task has not started.</p>
+         * <p>The actual execution mode used by the scan task, which is obtained from the scannerType field of the task. classic indicates the sample mode. agent indicates the autonomous multi-round attack mode of the agent. executor is a historical compatibility value, which is equivalent to classic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>classic</p>
+         */
+        @NameInMap("ScannerType")
+        public String scannerType;
+
+        /**
+         * <p>The start time of the task. The value is a millisecond timestamp (Unix epoch in milliseconds). If the task has not started, the value is null.</p>
          * 
          * <strong>example:</strong>
          * <p>1735689600000</p>
@@ -183,16 +210,16 @@ public class ListScanTasksByTargetResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The task name. If no name is specified during creation, the default value is &quot;Target Scan - target name&quot;.</p>
+         * <p>The name of the task. If no name is specified during creation, the default value is Target Scan - target name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Target Scan - My Bailian Target</p>
+         * <p>Target Scan - My Model Studio target</p>
          */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
-         * <p>The total number of samples that the task plans to execute.</p>
+         * <p>The total number of samples planned to be executed for the task.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -229,12 +256,28 @@ public class ListScanTasksByTargetResponseBody extends TeaModel {
             return this.executeCaseCount;
         }
 
+        public ListScanTasksByTargetResponseBodyData setReportLanguage(String reportLanguage) {
+            this.reportLanguage = reportLanguage;
+            return this;
+        }
+        public String getReportLanguage() {
+            return this.reportLanguage;
+        }
+
         public ListScanTasksByTargetResponseBodyData setRiskLevel(String riskLevel) {
             this.riskLevel = riskLevel;
             return this;
         }
         public String getRiskLevel() {
             return this.riskLevel;
+        }
+
+        public ListScanTasksByTargetResponseBodyData setSampleLanguage(String sampleLanguage) {
+            this.sampleLanguage = sampleLanguage;
+            return this;
+        }
+        public String getSampleLanguage() {
+            return this.sampleLanguage;
         }
 
         public ListScanTasksByTargetResponseBodyData setSampleLevel(Long sampleLevel) {
@@ -275,6 +318,14 @@ public class ListScanTasksByTargetResponseBody extends TeaModel {
         }
         public String getScannerTaskStatus() {
             return this.scannerTaskStatus;
+        }
+
+        public ListScanTasksByTargetResponseBodyData setScannerType(String scannerType) {
+            this.scannerType = scannerType;
+            return this;
+        }
+        public String getScannerType() {
+            return this.scannerType;
         }
 
         public ListScanTasksByTargetResponseBodyData setStartTime(Long startTime) {

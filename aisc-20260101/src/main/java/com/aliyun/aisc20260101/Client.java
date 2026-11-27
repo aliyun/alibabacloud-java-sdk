@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "AISC";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("cn-zhangjiakou", "aisc.cn-shanghai.aliyuncs.com"),
@@ -671,7 +674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of agent risk events.</p>
+     * <p>Queries the event list.</p>
      * 
      * @param request ListAIAgentEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -775,7 +778,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of agent risk events.</p>
+     * <p>Queries the event list.</p>
      * 
      * @param request ListAIAgentEventRequest
      * @return ListAIAgentEventResponse
@@ -879,20 +882,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query of the scan task list under a specified scan target. Only tasks belonging to targets owned by the current tenant are returned.
+     * <p>Queries the list of scan tasks under a specified scan target with paging. Only returns the tasks of targets that belong to the current tenant.
      * Query scope and sorting:</p>
      * <ul>
-     * <li>Only tasks created within the last 366 days are returned.</li>
-     * <li>Results are sorted by creation time in descending order.</li>
-     * <li>TaskStatus filters by task status. ScanType filters by scan mode. The scan mode is stored in the task execute parameters. Historical tasks without a recorded scan mode are treated as attack.
-     * Paged query rules:</li>
-     * <li>PageNumber starts from 1. Values less than 1 are normalized to 1.</li>
-     * <li>PageSize defaults to 10, with a maximum of 100 per page. Values greater than 100 are clamped to 100. Values less than 1 return HTTP status code 400.</li>
-     * <li>The PageNumber and PageSize values in the response are the normalization values that actually take effect.</li>
+     * <li>Only returns tasks created within the last 366 days.</li>
+     * <li>Sorts tasks in descending order of creation time.</li>
+     * <li>TaskStatus filters tasks by status. ScanType filters tasks by scan mode. The scan mode is stored in the task execution parameters. Tasks that do not have a recorded scan mode are processed as attack.
+     * Paging rules:</li>
+     * <li>PageNumber starts from 1. If the value is less than 1, it is normalized to 1.</li>
+     * <li>PageSize defaults to 10, with a maximum of 100 per page. If the value is greater than 100, it is clamped to 100. If the value is less than 1, a 400 error is returned.</li>
+     * <li>The PageNumber and PageSize in the response are the actual effective values after normalization.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paged query of scan tasks under a specified scan target for AI Red Teaming. Supports filtering by detection intensity, task status, and scan mode.</p>
+     * <p>Queries the scan tasks of a specified scan target for AI Red Teaming with paging, and supports filtering by detection intensity, task status, and scan mode.</p>
      * 
      * @param request ListScanTasksByTargetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -944,20 +947,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query of the scan task list under a specified scan target. Only tasks belonging to targets owned by the current tenant are returned.
+     * <p>Queries the list of scan tasks under a specified scan target with paging. Only returns the tasks of targets that belong to the current tenant.
      * Query scope and sorting:</p>
      * <ul>
-     * <li>Only tasks created within the last 366 days are returned.</li>
-     * <li>Results are sorted by creation time in descending order.</li>
-     * <li>TaskStatus filters by task status. ScanType filters by scan mode. The scan mode is stored in the task execute parameters. Historical tasks without a recorded scan mode are treated as attack.
-     * Paged query rules:</li>
-     * <li>PageNumber starts from 1. Values less than 1 are normalized to 1.</li>
-     * <li>PageSize defaults to 10, with a maximum of 100 per page. Values greater than 100 are clamped to 100. Values less than 1 return HTTP status code 400.</li>
-     * <li>The PageNumber and PageSize values in the response are the normalization values that actually take effect.</li>
+     * <li>Only returns tasks created within the last 366 days.</li>
+     * <li>Sorts tasks in descending order of creation time.</li>
+     * <li>TaskStatus filters tasks by status. ScanType filters tasks by scan mode. The scan mode is stored in the task execution parameters. Tasks that do not have a recorded scan mode are processed as attack.
+     * Paging rules:</li>
+     * <li>PageNumber starts from 1. If the value is less than 1, it is normalized to 1.</li>
+     * <li>PageSize defaults to 10, with a maximum of 100 per page. If the value is greater than 100, it is clamped to 100. If the value is less than 1, a 400 error is returned.</li>
+     * <li>The PageNumber and PageSize in the response are the actual effective values after normalization.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paged query of scan tasks under a specified scan target for AI Red Teaming. Supports filtering by detection intensity, task status, and scan mode.</p>
+     * <p>Queries the scan tasks of a specified scan target for AI Red Teaming with paging, and supports filtering by detection intensity, task status, and scan mode.</p>
      * 
      * @param request ListScanTasksByTargetRequest
      * @return ListScanTasksByTargetResponse
@@ -969,7 +972,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get subtask information.</p>
+     * <p>Retrieves subtask information.</p>
      * 
      * @param request ListSubTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -982,8 +985,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CurrentPage", request.currentPage);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.onlyRunning)) {
+            query.put("OnlyRunning", request.onlyRunning);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.rootTaskId)) {
@@ -1013,7 +1024,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get subtask information.</p>
+     * <p>Retrieves subtask information.</p>
      * 
      * @param request ListSubTasksRequest
      * @return ListSubTasksResponse

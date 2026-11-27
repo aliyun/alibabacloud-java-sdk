@@ -14,6 +14,12 @@ public class ListSubTasksRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>Specifies whether to query only running subtasks. If you set this parameter to true, the system queries all running subtasks of the current tenant across root tasks. In this case, you do not need to specify RootTaskId.</p>
+     */
+    @NameInMap("OnlyRunning")
+    public Boolean onlyRunning;
+
+    /**
      * <p>The page size.</p>
      * 
      * <strong>example:</strong>
@@ -23,7 +29,16 @@ public class ListSubTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The main task ID returned upon task submission.</p>
+     * <p>The ID of the resource directory account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456789</p>
+     */
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
+    /**
+     * <p>The ID of the root task returned upon task submission.</p>
      * 
      * <strong>example:</strong>
      * <p>110146ac282314fe4f7cd11afc7540eb</p>
@@ -53,12 +68,28 @@ public class ListSubTasksRequest extends TeaModel {
         return this.currentPage;
     }
 
+    public ListSubTasksRequest setOnlyRunning(Boolean onlyRunning) {
+        this.onlyRunning = onlyRunning;
+        return this;
+    }
+    public Boolean getOnlyRunning() {
+        return this.onlyRunning;
+    }
+
     public ListSubTasksRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListSubTasksRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public ListSubTasksRequest setRootTaskId(String rootTaskId) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListScanTasksByTargetRequest extends TeaModel {
     /**
-     * <p>The page number, starting from 1. Values less than 1 are normalized to 1.</p>
+     * <p>The page number. Pages start from 1. If the value is less than 1, it is normalized to 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListScanTasksByTargetRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Maximum value: 100. Values greater than 100 are clamped to 100. Values less than 1 return HTTP status code 400.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100. If the value is greater than 100, it is clamped to 100. If the value is less than 1, a 400 error is returned.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ListScanTasksByTargetRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>Filters by detection intensity. If this parameter is not specified, no filtering by intensity is applied.</p>
+     * <p>Filters tasks by detection intensity. If this parameter is not specified, tasks are not filtered by intensity.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -34,7 +34,7 @@ public class ListScanTasksByTargetRequest extends TeaModel {
     public String sampleLevel;
 
     /**
-     * <p>Filters by scan type. If this parameter is not specified, tasks of all scan types are returned.</p>
+     * <p>Filters tasks by scan mode. If this parameter is not specified, tasks of all modes are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>attack</p>
@@ -43,7 +43,7 @@ public class ListScanTasksByTargetRequest extends TeaModel {
     public String scanType;
 
     /**
-     * <p>The unique identifier of the scan target. Only tasks under this target are queried. If the target does not exist or does not belong to the current tenant, HTTP status code 400 is returned.</p>
+     * <p>The unique identifier of the scan target. Only tasks under this target are queried. If the target does not exist or does not belong to the current tenant, a 400 error is returned.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class ListScanTasksByTargetRequest extends TeaModel {
     public String targetId;
 
     /**
-     * <p>Filters by task status. If this parameter is not specified, tasks in all statuses are returned.</p>
+     * <p>Filters tasks by task status. If this parameter is not specified, tasks of all statuses are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>completed</p>

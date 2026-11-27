@@ -69,7 +69,7 @@ public class ListAIAgentEventRequest extends TeaModel {
     public String infraInstanceId;
 
     /**
-     * <p>The infrastructure name.</p>
+     * <p>The name of the infrastructure.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -78,7 +78,7 @@ public class ListAIAgentEventRequest extends TeaModel {
     public String infraName;
 
     /**
-     * <p>The infrastructure region.</p>
+     * <p>The region of the infrastructure.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -87,7 +87,7 @@ public class ListAIAgentEventRequest extends TeaModel {
     public String infraRegionId;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the notification message. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese.</li>
      * <li><strong>en</strong>: English.</li>
@@ -100,7 +100,7 @@ public class ListAIAgentEventRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The sort order. Valid values: asc indicates ascending order. desc indicates descending order.</p>
+     * <p>The sort order. Valid values: asc for ascending order; desc for descending order.</p>
      * 
      * <strong>example:</strong>
      * <p>asc</p>
@@ -109,7 +109,7 @@ public class ListAIAgentEventRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The field by which to sort results. Currently, only sorting by check time is supported.</p>
+     * <p>The field used for sorting. Currently, only sorting by check time is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>CheckTime</p>
@@ -126,15 +126,21 @@ public class ListAIAgentEventRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the member account in the resource directory (Alibaba Cloud account). You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1460245082233792</p>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
      * <p>The risk level of the check item to query. Valid values:</p>
      * <ul>
-     * <li><strong>high</strong>: High.</li>
-     * <li><strong>medium</strong>: Medium.</li>
-     * <li><strong>low</strong>: Low.</li>
+     * <li><strong>high</strong>: High risk.</li>
+     * <li><strong>medium</strong>: Medium risk.</li>
+     * <li><strong>low</strong>: Low risk.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -147,7 +153,7 @@ public class ListAIAgentEventRequest extends TeaModel {
      * <p>The risk name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>defense</p>
+     * <p>Defense</p>
      */
     @NameInMap("RiskName")
     public String riskName;
@@ -172,7 +178,7 @@ public class ListAIAgentEventRequest extends TeaModel {
      * <p>The event status. Valid values:</p>
      * <ol>
      * <li>unhandled: Pending.</li>
-     * <li>handling: Being processed.</li>
+     * <li>handling: Processing.</li>
      * <li>fixed: Fixed.</li>
      * <li>ignored: Ignored.</li>
      * <li>rescanned: Rescanned.</li>
@@ -193,12 +199,12 @@ public class ListAIAgentEventRequest extends TeaModel {
     /**
      * <p>The cloud asset vendor. Valid values:</p>
      * <ul>
-     * <li>** DIFY**: DIFY</li>
-     * <li>** BAILIAN**: BAILIAN</li>
-     * <li>** VOLCAI**: VOLCAI</li>
-     * <li>** AGENTRUN**: AGENTRUN</li>
-     * <li>** PAI**: PAI</li>
-     * <li>** OpenClaw**: OpenClaw</li>
+     * <li>** DIFY**: DIFY.</li>
+     * <li>** BAILIAN**: BAILIAN.</li>
+     * <li>** VOLCAI**: VOLCAI.</li>
+     * <li>** AGENTRUN**: AGENTRUN.</li>
+     * <li>** PAI**: PAI.</li>
+     * <li>** OpenClaw**: OpenClaw.</li>
      * </ul>
      * 
      * <strong>example:</strong>

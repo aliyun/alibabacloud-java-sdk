@@ -17,7 +17,7 @@ public class ListSubTasksResponseBody extends TeaModel {
     public ListSubTasksResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9FDE3D6F-26BD-5937-B0E5-8F47962B****</p>
@@ -54,9 +54,647 @@ public class ListSubTasksResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultAssetScan extends TeaModel {
+        /**
+         * <p>The result description of the check item, such as the cause of failure, the cause of skipping, or the ID of the delivered policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dispatched</p>
+         */
+        @NameInMap("Message")
+        public String message;
+
+        /**
+         * <p>The progress percentage of the check item. Valid values: 0 to 100. This field is not used in the current version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("Percent")
+        public Integer percent;
+
+        /**
+         * <p>The status of the check item. Valid values: init, running, success, failed, timeout, and skipped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        /**
+         * <p>The ID of the policy corresponding to the check item. This field is used only by health check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
+        @NameInMap("StrategyId")
+        public Long strategyId;
+
+        public static ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultAssetScan build(java.util.Map<String, ?> map) throws Exception {
+            ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultAssetScan self = new ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultAssetScan();
+            return TeaModel.build(map, self);
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultAssetScan setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultAssetScan setPercent(Integer percent) {
+            this.percent = percent;
+            return this;
+        }
+        public Integer getPercent() {
+            return this.percent;
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultAssetScan setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultAssetScan setStrategyId(Long strategyId) {
+            this.strategyId = strategyId;
+            return this;
+        }
+        public Long getStrategyId() {
+            return this.strategyId;
+        }
+
+    }
+
+    public static class ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultHealthCheck extends TeaModel {
+        /**
+         * <p>The result description of the check item, such as the cause of failure, the cause of skipping, or the ID of the delivered policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>strategyId=1001</p>
+         */
+        @NameInMap("Message")
+        public String message;
+
+        /**
+         * <p>The progress percentage of the check item. Valid values: 0 to 100. This field is not used in the current version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("Percent")
+        public Integer percent;
+
+        /**
+         * <p>The status of the check item. Valid values: init, running, success, failed, timeout, and skipped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        /**
+         * <p>The ID of the policy corresponding to the check item. This field is used only by health check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
+        @NameInMap("StrategyId")
+        public Long strategyId;
+
+        public static ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultHealthCheck build(java.util.Map<String, ?> map) throws Exception {
+            ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultHealthCheck self = new ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultHealthCheck();
+            return TeaModel.build(map, self);
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultHealthCheck setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultHealthCheck setPercent(Integer percent) {
+            this.percent = percent;
+            return this;
+        }
+        public Integer getPercent() {
+            return this.percent;
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultHealthCheck setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultHealthCheck setStrategyId(Long strategyId) {
+            this.strategyId = strategyId;
+            return this;
+        }
+        public Long getStrategyId() {
+            return this.strategyId;
+        }
+
+    }
+
+    public static class ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultMcpCheck extends TeaModel {
+        /**
+         * <p>The result description of the check item, such as the cause of failure, the cause of skipping, or the ID of the delivered policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mcp check task created, detector not implemented yet</p>
+         */
+        @NameInMap("Message")
+        public String message;
+
+        /**
+         * <p>The progress percentage of the check item. Valid values: 0 to 100. This field is not used in the current version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("Percent")
+        public Integer percent;
+
+        /**
+         * <p>The status of the check item. Valid values: init, running, success, failed, timeout, and skipped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        /**
+         * <p>The ID of the policy corresponding to the check item. This field is used only by health check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
+        @NameInMap("StrategyId")
+        public Long strategyId;
+
+        public static ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultMcpCheck build(java.util.Map<String, ?> map) throws Exception {
+            ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultMcpCheck self = new ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultMcpCheck();
+            return TeaModel.build(map, self);
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultMcpCheck setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultMcpCheck setPercent(Integer percent) {
+            this.percent = percent;
+            return this;
+        }
+        public Integer getPercent() {
+            return this.percent;
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultMcpCheck setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultMcpCheck setStrategyId(Long strategyId) {
+            this.strategyId = strategyId;
+            return this;
+        }
+        public Long getStrategyId() {
+            return this.strategyId;
+        }
+
+    }
+
+    public static class ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultMemoryCheck extends TeaModel {
+        /**
+         * <p>The result description of the check item, such as the cause of failure, the cause of skipping, or the ID of the delivered policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>memory check task created, detector not implemented yet</p>
+         */
+        @NameInMap("Message")
+        public String message;
+
+        /**
+         * <p>The progress percentage of the check item. Valid values: 0 to 100. This field is not used in the current version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("Percent")
+        public Integer percent;
+
+        /**
+         * <p>The status of the check item. Valid values: init, running, success, failed, timeout, and skipped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        /**
+         * <p>The ID of the policy corresponding to the check item. This field is used only by health check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
+        @NameInMap("StrategyId")
+        public Long strategyId;
+
+        public static ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultMemoryCheck build(java.util.Map<String, ?> map) throws Exception {
+            ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultMemoryCheck self = new ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultMemoryCheck();
+            return TeaModel.build(map, self);
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultMemoryCheck setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultMemoryCheck setPercent(Integer percent) {
+            this.percent = percent;
+            return this;
+        }
+        public Integer getPercent() {
+            return this.percent;
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultMemoryCheck setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultMemoryCheck setStrategyId(Long strategyId) {
+            this.strategyId = strategyId;
+            return this;
+        }
+        public Long getStrategyId() {
+            return this.strategyId;
+        }
+
+    }
+
+    public static class ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultSessionCheck extends TeaModel {
+        /**
+         * <p>The result description of the check item, such as the cause of failure, the cause of skipping, or the ID of the delivered policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>session check task created, detector not implemented yet</p>
+         */
+        @NameInMap("Message")
+        public String message;
+
+        /**
+         * <p>The progress percentage of the check item. Valid values: 0 to 100. This field is not used in the current version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("Percent")
+        public Integer percent;
+
+        /**
+         * <p>The status of the check item. Valid values: init, running, success, failed, timeout, and skipped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        /**
+         * <p>The ID of the policy corresponding to the check item. This field is used only by health check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
+        @NameInMap("StrategyId")
+        public Long strategyId;
+
+        public static ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultSessionCheck build(java.util.Map<String, ?> map) throws Exception {
+            ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultSessionCheck self = new ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultSessionCheck();
+            return TeaModel.build(map, self);
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultSessionCheck setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultSessionCheck setPercent(Integer percent) {
+            this.percent = percent;
+            return this;
+        }
+        public Integer getPercent() {
+            return this.percent;
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultSessionCheck setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultSessionCheck setStrategyId(Long strategyId) {
+            this.strategyId = strategyId;
+            return this;
+        }
+        public Long getStrategyId() {
+            return this.strategyId;
+        }
+
+    }
+
+    public static class ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultSkillCheck extends TeaModel {
+        /**
+         * <p>The result description of the check item, such as the cause of failure, the cause of skipping, or the ID of the delivered policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dispatched</p>
+         */
+        @NameInMap("Message")
+        public String message;
+
+        /**
+         * <p>The progress percentage of the check item. Valid values: 0 to 100. This field is not used in the current version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("Percent")
+        public Integer percent;
+
+        /**
+         * <p>The status of the check item. Valid values: init, running, success, failed, timeout, and skipped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        /**
+         * <p>The ID of the policy corresponding to the check item. This field is used only by health check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
+        @NameInMap("StrategyId")
+        public Long strategyId;
+
+        public static ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultSkillCheck build(java.util.Map<String, ?> map) throws Exception {
+            ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultSkillCheck self = new ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultSkillCheck();
+            return TeaModel.build(map, self);
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultSkillCheck setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultSkillCheck setPercent(Integer percent) {
+            this.percent = percent;
+            return this;
+        }
+        public Integer getPercent() {
+            return this.percent;
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultSkillCheck setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultSkillCheck setStrategyId(Long strategyId) {
+            this.strategyId = strategyId;
+            return this;
+        }
+        public Long getStrategyId() {
+            return this.strategyId;
+        }
+
+    }
+
+    public static class ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultVulScan extends TeaModel {
+        /**
+         * <p>The result description of the check item, such as the cause of failure, the cause of skipping, or the ID of the delivered policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>submitted</p>
+         */
+        @NameInMap("Message")
+        public String message;
+
+        /**
+         * <p>The progress percentage of the check item. Valid values: 0 to 100. This field is not used in the current version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("Percent")
+        public Integer percent;
+
+        /**
+         * <p>The status of the check item. Valid values: init, running, success, failed, timeout, and skipped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        /**
+         * <p>The ID of the policy corresponding to the check item. This field is used only by health check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
+        @NameInMap("StrategyId")
+        public Long strategyId;
+
+        public static ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultVulScan build(java.util.Map<String, ?> map) throws Exception {
+            ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultVulScan self = new ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultVulScan();
+            return TeaModel.build(map, self);
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultVulScan setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultVulScan setPercent(Integer percent) {
+            this.percent = percent;
+            return this;
+        }
+        public Integer getPercent() {
+            return this.percent;
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultVulScan setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultVulScan setStrategyId(Long strategyId) {
+            this.strategyId = strategyId;
+            return this;
+        }
+        public Long getStrategyId() {
+            return this.strategyId;
+        }
+
+    }
+
+    public static class ListSubTasksResponseBodyDataTaskResultMessageFullCheckResult extends TeaModel {
+        /**
+         * <p>The result of the asset scanning check item.</p>
+         */
+        @NameInMap("AssetScan")
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultAssetScan assetScan;
+
+        /**
+         * <p>The result of the health check item.</p>
+         */
+        @NameInMap("HealthCheck")
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultHealthCheck healthCheck;
+
+        /**
+         * <p>The result of the MCP check item. If the detector is not connected, the result defaults to success.</p>
+         */
+        @NameInMap("McpCheck")
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultMcpCheck mcpCheck;
+
+        /**
+         * <p>The result of the memory check item. If the detector is not connected, the result defaults to success.</p>
+         */
+        @NameInMap("MemoryCheck")
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultMemoryCheck memoryCheck;
+
+        /**
+         * <p>The result of the session check item. If the detector is not connected, the result defaults to success.</p>
+         */
+        @NameInMap("SessionCheck")
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultSessionCheck sessionCheck;
+
+        /**
+         * <p>The result of the Skill file check item.</p>
+         */
+        @NameInMap("SkillCheck")
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultSkillCheck skillCheck;
+
+        /**
+         * <p>The result of the vulnerability scanning check item.</p>
+         */
+        @NameInMap("VulScan")
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultVulScan vulScan;
+
+        public static ListSubTasksResponseBodyDataTaskResultMessageFullCheckResult build(java.util.Map<String, ?> map) throws Exception {
+            ListSubTasksResponseBodyDataTaskResultMessageFullCheckResult self = new ListSubTasksResponseBodyDataTaskResultMessageFullCheckResult();
+            return TeaModel.build(map, self);
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResult setAssetScan(ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultAssetScan assetScan) {
+            this.assetScan = assetScan;
+            return this;
+        }
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultAssetScan getAssetScan() {
+            return this.assetScan;
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResult setHealthCheck(ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultHealthCheck healthCheck) {
+            this.healthCheck = healthCheck;
+            return this;
+        }
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultHealthCheck getHealthCheck() {
+            return this.healthCheck;
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResult setMcpCheck(ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultMcpCheck mcpCheck) {
+            this.mcpCheck = mcpCheck;
+            return this;
+        }
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultMcpCheck getMcpCheck() {
+            return this.mcpCheck;
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResult setMemoryCheck(ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultMemoryCheck memoryCheck) {
+            this.memoryCheck = memoryCheck;
+            return this;
+        }
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultMemoryCheck getMemoryCheck() {
+            return this.memoryCheck;
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResult setSessionCheck(ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultSessionCheck sessionCheck) {
+            this.sessionCheck = sessionCheck;
+            return this;
+        }
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultSessionCheck getSessionCheck() {
+            return this.sessionCheck;
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResult setSkillCheck(ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultSkillCheck skillCheck) {
+            this.skillCheck = skillCheck;
+            return this;
+        }
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultSkillCheck getSkillCheck() {
+            return this.skillCheck;
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResult setVulScan(ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultVulScan vulScan) {
+            this.vulScan = vulScan;
+            return this;
+        }
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultVulScan getVulScan() {
+            return this.vulScan;
+        }
+
+    }
+
     public static class ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtConfigDetail extends TeaModel {
         /**
-         * <p>The detected content.</p>
+         * <p>The matched content.</p>
          * 
          * <strong>example:</strong>
          * <p>allowed-tools: Bash(agent-browser:*)</p>
@@ -74,7 +712,7 @@ public class ListSubTasksResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The check item name.</p>
+         * <p>The name of the check item.</p>
          * 
          * <strong>example:</strong>
          * <p>Dangerous Tools Without Confirmation</p>
@@ -83,7 +721,7 @@ public class ListSubTasksResponseBody extends TeaModel {
         public String itemName;
 
         /**
-         * <p>The line number of the detected content.</p>
+         * <p>The line number of the matched content.</p>
          * 
          * <strong>example:</strong>
          * <p>2555</p>
@@ -154,7 +792,7 @@ public class ListSubTasksResponseBody extends TeaModel {
 
     public static class ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtGuardrailDetailResult extends TeaModel {
         /**
-         * <p>The confidence score. Valid values: 0 to 100.</p>
+         * <p>The confidence level. Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>25</p>
@@ -257,7 +895,7 @@ public class ListSubTasksResponseBody extends TeaModel {
         public java.util.List<ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtGuardrailDetailResult> result;
 
         /**
-         * <p>The processing suggestion.</p>
+         * <p>The handling suggestion.</p>
          * 
          * <strong>example:</strong>
          * <p>block</p>
@@ -321,7 +959,7 @@ public class ListSubTasksResponseBody extends TeaModel {
         public java.util.List<ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtGuardrailDetail> detail;
 
         /**
-         * <p>The processing suggestion.</p>
+         * <p>The handling suggestion.</p>
          * 
          * <strong>example:</strong>
          * <p>block</p>
@@ -415,7 +1053,7 @@ public class ListSubTasksResponseBody extends TeaModel {
 
     public static class ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtVirus extends TeaModel {
         /**
-         * <p>The extended information field. This is a reserved parameter.</p>
+         * <p>The extended information field, which is a reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -424,7 +1062,7 @@ public class ListSubTasksResponseBody extends TeaModel {
         public String ext;
 
         /**
-         * <p>The risk score. Maximum value: 100.</p>
+         * <p>The risk score. The maximum score is 100.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -474,25 +1112,25 @@ public class ListSubTasksResponseBody extends TeaModel {
 
     public static class ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExt extends TeaModel {
         /**
-         * <p>The configuration detection risks.</p>
+         * <p>The configuration check risk.</p>
          */
         @NameInMap("Config")
         public ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtConfig config;
 
         /**
-         * <p>The safety guardrail detection risks.</p>
+         * <p>The security guardrail detection risk.</p>
          */
         @NameInMap("Guardrail")
         public ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtGuardrail guardrail;
 
         /**
-         * <p>The sensitive information risks.</p>
+         * <p>The sensitive information risk.</p>
          */
         @NameInMap("Sensitive")
         public ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtSensitive sensitive;
 
         /**
-         * <p>The virus detection risks.</p>
+         * <p>The virus detection risk.</p>
          */
         @NameInMap("Virus")
         public java.util.List<ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtVirus> virus;
@@ -538,7 +1176,7 @@ public class ListSubTasksResponseBody extends TeaModel {
 
     public static class ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfo extends TeaModel {
         /**
-         * <p>The file detection risk list.</p>
+         * <p>The list of file check risks.</p>
          */
         @NameInMap("Ext")
         public ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExt ext;
@@ -553,10 +1191,14 @@ public class ListSubTasksResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>The result type.</p>
+         * <p>The type of the check result. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: No risk.</li>
+         * <li><strong>1</strong>: Risk detected.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>file</p>
+         * <p>1</p>
          */
         @NameInMap("ResultType")
         public String resultType;
@@ -594,7 +1236,7 @@ public class ListSubTasksResponseBody extends TeaModel {
 
     public static class ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResult extends TeaModel {
         /**
-         * <p>The file detection risk information.</p>
+         * <p>The file check risk information.</p>
          */
         @NameInMap("RiskInfo")
         public java.util.List<ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfo> riskInfo;
@@ -616,7 +1258,13 @@ public class ListSubTasksResponseBody extends TeaModel {
 
     public static class ListSubTasksResponseBodyDataTaskResultMessage extends TeaModel {
         /**
-         * <p>The skill check task result.</p>
+         * <p>The check results of the comprehensive health check task, which provides the status and description for each check item.</p>
+         */
+        @NameInMap("FullCheckResult")
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResult fullCheckResult;
+
+        /**
+         * <p>The Skill check task result.</p>
          */
         @NameInMap("SkillCheckResult")
         public ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResult skillCheckResult;
@@ -624,6 +1272,14 @@ public class ListSubTasksResponseBody extends TeaModel {
         public static ListSubTasksResponseBodyDataTaskResultMessage build(java.util.Map<String, ?> map) throws Exception {
             ListSubTasksResponseBodyDataTaskResultMessage self = new ListSubTasksResponseBodyDataTaskResultMessage();
             return TeaModel.build(map, self);
+        }
+
+        public ListSubTasksResponseBodyDataTaskResultMessage setFullCheckResult(ListSubTasksResponseBodyDataTaskResultMessageFullCheckResult fullCheckResult) {
+            this.fullCheckResult = fullCheckResult;
+            return this;
+        }
+        public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResult getFullCheckResult() {
+            return this.fullCheckResult;
         }
 
         public ListSubTasksResponseBodyDataTaskResultMessage setSkillCheckResult(ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResult skillCheckResult) {
@@ -638,6 +1294,15 @@ public class ListSubTasksResponseBody extends TeaModel {
 
     public static class ListSubTasksResponseBodyData extends TeaModel {
         /**
+         * <p>The display name of the agent. It is parsed from the application information based on the target of the subtask. This field is empty if the application record is missing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent-01</p>
+         */
+        @NameInMap("AgentName")
+        public String agentName;
+
+        /**
          * <p>The hash value of the uploaded file.</p>
          * 
          * <strong>example:</strong>
@@ -645,6 +1310,24 @@ public class ListSubTasksResponseBody extends TeaModel {
          */
         @NameInMap("FileHash")
         public String fileHash;
+
+        /**
+         * <p>The millisecond-level timestamp when the subtask finishes execution. This field is empty if the subtask has not finished.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1764036120000</p>
+         */
+        @NameInMap("GmtTaskFinished")
+        public Long gmtTaskFinished;
+
+        /**
+         * <p>The millisecond-level timestamp when the subtask starts execution. This field is empty if the subtask has not started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1764036000000</p>
+         */
+        @NameInMap("GmtTaskStart")
+        public Long gmtTaskStart;
 
         /**
          * <p>The task ID.</p>
@@ -665,7 +1348,7 @@ public class ListSubTasksResponseBody extends TeaModel {
         public String target;
 
         /**
-         * <p>The task result information.</p>
+         * <p>The task result message.</p>
          */
         @NameInMap("TaskResultMessage")
         public ListSubTasksResponseBodyDataTaskResultMessage taskResultMessage;
@@ -684,12 +1367,36 @@ public class ListSubTasksResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListSubTasksResponseBodyData setAgentName(String agentName) {
+            this.agentName = agentName;
+            return this;
+        }
+        public String getAgentName() {
+            return this.agentName;
+        }
+
         public ListSubTasksResponseBodyData setFileHash(String fileHash) {
             this.fileHash = fileHash;
             return this;
         }
         public String getFileHash() {
             return this.fileHash;
+        }
+
+        public ListSubTasksResponseBodyData setGmtTaskFinished(Long gmtTaskFinished) {
+            this.gmtTaskFinished = gmtTaskFinished;
+            return this;
+        }
+        public Long getGmtTaskFinished() {
+            return this.gmtTaskFinished;
+        }
+
+        public ListSubTasksResponseBodyData setGmtTaskStart(Long gmtTaskStart) {
+            this.gmtTaskStart = gmtTaskStart;
+            return this;
+        }
+        public Long getGmtTaskStart() {
+            return this.gmtTaskStart;
         }
 
         public ListSubTasksResponseBodyData setId(Long id) {
@@ -728,7 +1435,7 @@ public class ListSubTasksResponseBody extends TeaModel {
 
     public static class ListSubTasksResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of data entries displayed on the current page.</p>
+         * <p>The number of entries returned on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
