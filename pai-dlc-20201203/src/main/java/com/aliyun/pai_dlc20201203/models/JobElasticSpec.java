@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class JobElasticSpec extends TeaModel {
     /**
      * <p>The AIMaster Docker image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>registry/aimaster:v1</p>
      */
     @NameInMap("AIMasterDockerImage")
     public String AIMasterDockerImage;

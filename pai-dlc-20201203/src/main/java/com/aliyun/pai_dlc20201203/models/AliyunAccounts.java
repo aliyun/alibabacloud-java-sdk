@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class AliyunAccounts extends TeaModel {
     /**
      * <p>The UID of the Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234567890123456</p>
      */
     @NameInMap("AliyunUid")
     public String aliyunUid;
 
     /**
      * <p>The employee ID of the internal user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("EmployeeId")
     public String employeeId;

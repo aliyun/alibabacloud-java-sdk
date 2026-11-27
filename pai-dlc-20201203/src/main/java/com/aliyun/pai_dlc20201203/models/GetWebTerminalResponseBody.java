@@ -19,34 +19,34 @@ public class GetWebTerminalResponseBody extends TeaModel {
      *   `wss://xxxxx`,
      * );
      * ws.onopen = function open() {
-     *   console.warn(\\&quot;connected\\&quot;);
-     *   term.write(\\&quot;\\&quot;);
+     *   console.warn(\&quot;connected\&quot;);
+     *   term.write(\&quot;\&quot;);
      * };
      * 
      * ws.onclose = function close() {
-     *   console.warn(\\&quot;disconnected\\&quot;);
-     *   term.write(\\&quot;Connection closed\\&quot;);
+     *   console.warn(\&quot;disconnected\&quot;);
+     *   term.write(\&quot;Connection closed\&quot;);
      * };
      * 
      * // Receive a response from the backend
      * ws.onmessage = function incoming(event) {
      *   const msg = JSON.parse(event.data);
      *   console.warn(msg);
-     *   if (msg.operation === \\&quot;stdout\\&quot;) {
+     *   if (msg.operation === \&quot;stdout\&quot;) {
      *     term.write(msg.data);
      *   } else {
-     *     console.warn(\\&quot;invalid msg operation: \\&quot; + msg);
+     *     console.warn(\&quot;invalid msg operation: \&quot; + msg);
      *   }
      * };
      * 
      * // Console input
      * term.onData(data =&gt; {
-     *   const msg = { operation: \\&quot;stdin\\&quot;, data: data };
+     *   const msg = { operation: \&quot;stdin\&quot;, data: data };
      *   ws.send(JSON.stringify(msg));
      * });
      * 
      * term.onResize(size =&gt; {
-     *   const msg = { operation: \\&quot;resize\\&quot;, cols: size.cols, rows: size.rows };
+     *   const msg = { operation: \&quot;resize\&quot;, cols: size.cols, rows: size.rows };
      *   ws.send(JSON.stringify(msg));
      * });
      * 

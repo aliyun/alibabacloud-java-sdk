@@ -15,7 +15,7 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource IDs. A maximum of 50 items can be specified.</p>
+     * <p>The resource IDs. Up to 50 items are supported.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
@@ -35,7 +35,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags to be created and attached. A maximum of 20 items can be specified.</p>
+     * <p>The tags to add. Up to 20 items are supported.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -79,7 +79,7 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+         * <p>The tag key of the resource. It can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>key</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetJobTemplateDefaultVersionRequest extends TeaModel {
     /**
-     * <p>The version number to set as the default.</p>
+     * <p>The target version number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

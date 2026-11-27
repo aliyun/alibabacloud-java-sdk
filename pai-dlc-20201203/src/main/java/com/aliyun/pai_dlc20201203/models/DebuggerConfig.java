@@ -8,7 +8,7 @@ public class DebuggerConfig extends TeaModel {
      * <p>The configuration item details in JSON format.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;description\&quot;:\&quot;This is a new pytorchjob template\&quot;}</p>
+     * <p>{&quot;description&quot;:&quot;This is a new pytorchjob template&quot;}</p>
      */
     @NameInMap("Content")
     public String content;

@@ -4,9 +4,17 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class Quota extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cluster-example-001</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>example-training-cluster</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 

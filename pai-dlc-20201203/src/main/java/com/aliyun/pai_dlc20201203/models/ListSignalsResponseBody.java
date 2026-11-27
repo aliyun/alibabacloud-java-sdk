@@ -41,7 +41,7 @@ public class ListSignalsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of signal records for the job. Each element has the same structure as the response of GetSignal.</p>
+     * <p>The list of signal records for the job. The structure of each element is the same as the response of GetSignal.</p>
      */
     @NameInMap("Signals")
     public java.util.List<ListSignalsResponseBodySignals> signals;
@@ -128,7 +128,7 @@ public class ListSignalsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The message of the returned result.</p>
+         * <p>The prompt message of the returned result.</p>
          * 
          * <strong>example:</strong>
          * <p>signal delivered to 1 pods</p>

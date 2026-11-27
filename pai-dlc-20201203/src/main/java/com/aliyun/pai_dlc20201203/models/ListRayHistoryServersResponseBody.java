@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListRayHistoryServersResponseBody extends TeaModel {
     /**
-     * <p>The list of RayHistoryServers.</p>
+     * <p>The list of RayHistoryServer resources.</p>
      */
     @NameInMap("RayHistoryServers")
     public java.util.List<ListRayHistoryServersResponseBodyRayHistoryServers> rayHistoryServers;
 
     /**
-     * <p>The request ID of this call, used for diagnostics and troubleshooting.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-xxxxxxx</p>
@@ -20,7 +20,7 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of nodes that match the filter conditions.</p>
+     * <p>The total number of jobs that meet the filter conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -61,8 +61,8 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
         /**
          * <p>The visibility of the job. Valid values:</p>
          * <ul>
-         * <li>PUBLIC: Visible to all users in the workspace.</li>
-         * <li>PRIVATE (default): Visible only to you and administrators in the workspace.</li>
+         * <li>PUBLIC: The job is visible to all users in the workspace.</li>
+         * <li>PRIVATE: The job is visible only to you and administrators in the workspace. This is the default value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
         public String accessibility;
 
         /**
-         * <p>The display name of the node.</p>
+         * <p>The display name of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>AEB-RECHARGE-TASK-14478-1778466397-main-4-</p>
@@ -81,7 +81,7 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The hardware specifications of the public resource group. To access a detailed list of specifications, see <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing overview</a>.&gt;Notice: Prices vary by specification.</p>
+         * <p>The hardware specifications of the public resource group. To access the detailed list of specifications, see <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing</a>.&gt;Notice: Prices vary by specification.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.g6.xlarge</p>
@@ -90,7 +90,7 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
         public String ecsSpec;
 
         /**
-         * <p>The time when the job was created, in UTC.</p>
+         * <p>The time when the job was created. The time is in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-30T02:43:52Z</p>
@@ -99,7 +99,7 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The time when the job finished, in UTC.</p>
+         * <p>The end time. The time is in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-27T09:17:11Z</p>
@@ -108,7 +108,7 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
         public String gmtFinishTime;
 
         /**
-         * <p>The time when the job was last modified, in UTC.</p>
+         * <p>The time when the job was last modified. The time is in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-19T04:05:46Z</p>
@@ -117,7 +117,7 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
         public String gmtModifyTime;
 
         /**
-         * <p>The maximum runtime in minutes.</p>
+         * <p>The maximum runtime duration.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -126,7 +126,7 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
         public Integer maxRuntimeMinutes;
 
         /**
-         * <p>The ID of the created Ray History Server.</p>
+         * <p>The ID of the created RayHistoryServer.</p>
          * 
          * <strong>example:</strong>
          * <p>rhsxxx</p>
@@ -135,7 +135,7 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
         public String rayHistoryServerId;
 
         /**
-         * <p>Ray Dashboard URL。</p>
+         * <p>The Ray Dashboard URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://rhsxxx-dashboard.dsw-gateway-cn-wulanchabu.data.aliyun.com/">https://rhsxxx-dashboard.dsw-gateway-cn-wulanchabu.data.aliyun.com/</a></p>
@@ -162,7 +162,7 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
         public String reasonMessage;
 
         /**
-         * <p>The resource group ID. To query the ID of a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</p>
+         * <p>The resource group ID. For more information about how to query the ID of a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>quotazoqd53w0q75</p>
@@ -180,13 +180,13 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
         public String resourceName;
 
         /**
-         * <p>The status of the Tensorboard. Valid values:</p>
+         * <p>The status of the TensorBoard. Valid values:</p>
          * <ul>
-         * <li>Creating: The Tensorboard is being created.</li>
-         * <li>Running: The Tensorboard is running.</li>
-         * <li>Stopped: The Tensorboard is stopped.</li>
-         * <li>Succeeded: The Tensorboard has succeeded.</li>
-         * <li>Failed: The Tensorboard has failed.</li>
+         * <li>Creating: The TensorBoard is being created.</li>
+         * <li>Running: The TensorBoard is running.</li>
+         * <li>Stopped: The TensorBoard is stopped.</li>
+         * <li>Succeeded: The TensorBoard succeeded.</li>
+         * <li>Failed: The TensorBoard failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -232,7 +232,7 @@ public class ListRayHistoryServersResponseBody extends TeaModel {
         public String username;
 
         /**
-         * <p>The workspace ID. &lt;props=&quot;china&quot;&gt;To obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * <p>The workspace ID. &lt;props=&quot;china&quot;&gt;For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>153466</p>

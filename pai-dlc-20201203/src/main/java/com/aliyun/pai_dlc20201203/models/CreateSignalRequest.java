@@ -14,7 +14,7 @@ public class CreateSignalRequest extends TeaModel {
     public String signal;
 
     /**
-     * <p>The signal delivery scope.</p>
+     * <p>The target scope for sending the signal.</p>
      */
     @NameInMap("Target")
     public SignalTarget target;

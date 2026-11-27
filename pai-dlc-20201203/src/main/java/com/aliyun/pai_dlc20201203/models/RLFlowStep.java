@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RLFlowStep extends TeaModel {
     /**
-     * <p>The P50 latency in seconds from when trajectories of the step enter the buffer to when batching occurs.</p>
+     * <p>The P50 duration in seconds from when trajectories of the step enter the buffer to when they are batched.</p>
      * 
      * <strong>example:</strong>
      * <p>0.8</p>
@@ -14,7 +14,7 @@ public class RLFlowStep extends TeaModel {
     public Double bufferWaitP50;
 
     /**
-     * <p>The gap duration in seconds, calculated as train started − rollout finished. This represents batching or transfer wait time.</p>
+     * <p>The gap duration in seconds, calculated as train started minus rollout finished, representing batching or transfer wait time.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -23,7 +23,7 @@ public class RLFlowStep extends TeaModel {
     public Double gapSec;
 
     /**
-     * <p>The training idle time in seconds, calculated as the current step training start − the previous step training end. If no marker is present, the value falls back to the current step forward computation start − the previous step optimizer end. A value greater than 0 indicates that the trainer is waiting for data.</p>
+     * <p>The idle time in seconds between the training phases of adjacent steps. This value only reflects the time interval and cannot be used alone to determine data waiting or other specific causes.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -41,7 +41,7 @@ public class RLFlowStep extends TeaModel {
     public Integer NSamples;
 
     /**
-     * <p>The number of trajectories executed in the step.</p>
+     * <p>The number of trajectories belonging to the current execution of the step.</p>
      * 
      * <strong>example:</strong>
      * <p>96</p>
@@ -50,7 +50,7 @@ public class RLFlowStep extends TeaModel {
     public Integer NTrajs;
 
     /**
-     * <p>The latest time when trajectories of the step enter the buffer, in milliseconds.</p>
+     * <p>The latest time a trajectory of the step enters the buffer in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1787474487713</p>
@@ -59,7 +59,7 @@ public class RLFlowStep extends TeaModel {
     public Long prodEndMs;
 
     /**
-     * <p>The earliest time when trajectories of the step enter the buffer, in milliseconds.</p>
+     * <p>The earliest time a trajectory of the step enters the buffer in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1787474487713</p>
@@ -68,7 +68,7 @@ public class RLFlowStep extends TeaModel {
     public Long prodStartMs;
 
     /**
-     * <p>The P50 latency in seconds from when trajectories of the step start execution to when they enter the buffer.</p>
+     * <p>The P50 duration in seconds from when trajectories of the step start execution to when they enter the buffer.</p>
      * 
      * <strong>example:</strong>
      * <p>0.8</p>
@@ -77,7 +77,7 @@ public class RLFlowStep extends TeaModel {
     public Double rolloutP50;
 
     /**
-     * <p>The rollout duration in seconds, calculated as rollout finished − rollout started. This value is null if no marker is present.</p>
+     * <p>The rollout duration in seconds, calculated as rollout finished minus rollout started. This value is empty when no markers are available.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -86,7 +86,7 @@ public class RLFlowStep extends TeaModel {
     public Double rolloutSec;
 
     /**
-     * <p>The global step ordinal number.</p>
+     * <p>The global step number.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -95,7 +95,7 @@ public class RLFlowStep extends TeaModel {
     public Long step;
 
     /**
-     * <p>The forward computation start time, in milliseconds.</p>
+     * <p>The start time of the forward computation in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1787474487713</p>
@@ -104,7 +104,7 @@ public class RLFlowStep extends TeaModel {
     public Long TFwdStartMs;
 
     /**
-     * <p>The optimizer end time, in milliseconds.</p>
+     * <p>The end time of the optimizer in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1787474487713</p>
@@ -113,7 +113,7 @@ public class RLFlowStep extends TeaModel {
     public Long TOptEndMs;
 
     /**
-     * <p>The node operation log &quot;Step N rollout finished&quot; time, in milliseconds.</p>
+     * <p>The time of the &quot;Step N rollout finished&quot; entry in the node logs in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1787474487713</p>
@@ -122,7 +122,7 @@ public class RLFlowStep extends TeaModel {
     public Long TRolloutEndMs;
 
     /**
-     * <p>The node operation log &quot;Step N rollout started&quot; time, in milliseconds (taken from agent_collect_time).</p>
+     * <p>The observed rollout start time for the current step as a millisecond timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1787474487713</p>
@@ -131,7 +131,7 @@ public class RLFlowStep extends TeaModel {
     public Long TRolloutStartMs;
 
     /**
-     * <p>The node operation log &quot;Step N train finished&quot; time, in milliseconds.</p>
+     * <p>The time of the &quot;Step N train finished&quot; entry in the node logs in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1787474487713</p>
@@ -140,7 +140,7 @@ public class RLFlowStep extends TeaModel {
     public Long TTrainEndMs;
 
     /**
-     * <p>The node operation log &quot;Step N train started&quot; time, in milliseconds.</p>
+     * <p>The time of the &quot;Step N train started&quot; entry in the node logs in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1787474487713</p>
@@ -149,7 +149,7 @@ public class RLFlowStep extends TeaModel {
     public Long TTrainStartMs;
 
     /**
-     * <p>The TRAIN_UPDATE (parameter update) time, in milliseconds.</p>
+     * <p>The time of the TRAIN_UPDATE (parameter update) event in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1787474487713</p>
@@ -158,7 +158,7 @@ public class RLFlowStep extends TeaModel {
     public Long TUpdateMs;
 
     /**
-     * <p>The training duration in seconds. This value is preferentially calculated as train finished − train started. If no marker is present, the value falls back to the duration from batching to training completion. This value is null if global_step is duplicated because of a job restart.</p>
+     * <p>The duration of the training phase for the step in seconds. This value is not provided when the training start and end times are unavailable.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

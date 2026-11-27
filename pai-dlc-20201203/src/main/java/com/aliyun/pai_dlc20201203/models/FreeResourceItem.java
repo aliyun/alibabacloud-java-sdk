@@ -15,12 +15,18 @@ public class FreeResourceItem extends TeaModel {
 
     /**
      * <p>The cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cluster-example-001</p>
      */
     @NameInMap("ClusterID")
     public String clusterID;
 
     /**
      * <p>The cluster name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-training-cluster</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;

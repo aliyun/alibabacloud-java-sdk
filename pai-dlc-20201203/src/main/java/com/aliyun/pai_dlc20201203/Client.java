@@ -306,13 +306,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Make sure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC before using this operation.</p>
-     * <blockquote>
-     * <p>Notice: The total length of the CreateJob operation parameters (including system-generated parameters) cannot exceed 65536 bytes.</p>
-     * </blockquote>
+     * <p>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC before you call this operation. &gt;Notice: The total length of the parameters in the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a RayHistoryServer.</p>
+     * <p>Creates a Ray History Server.</p>
      * 
      * @param request CreateRayHistoryServerRequest
      * @param headers map
@@ -370,13 +367,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Make sure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC before using this operation.</p>
-     * <blockquote>
-     * <p>Notice: The total length of the CreateJob operation parameters (including system-generated parameters) cannot exceed 65536 bytes.</p>
-     * </blockquote>
+     * <p>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC before you call this operation. &gt;Notice: The total length of the parameters in the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a RayHistoryServer.</p>
+     * <p>Creates a Ray History Server.</p>
      * 
      * @param request CreateRayHistoryServerRequest
      * @return CreateRayHistoryServerResponse
@@ -389,11 +383,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
      * <li>This API operation sends a specific signal to one or more pods of a specified job.</li>
-     * <li>After the signal is sent, the API immediately returns a <code>SignalId</code>. The actual signal delivery is processed by a background worker.</li>
-     * <li>You can query the signal status by calling the <code>GetSignal</code> or <code>ListSignals</code> operation.</li>
+     * <li>After the signal is sent, the API operation immediately returns a <code>SignalId</code>. The actual signal delivery is handled by background workers.</li>
+     * <li>You can query the status of the signal by calling the <code>GetSignal</code> or <code>ListSignals</code> API operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -435,11 +429,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
      * <li>This API operation sends a specific signal to one or more pods of a specified job.</li>
-     * <li>After the signal is sent, the API immediately returns a <code>SignalId</code>. The actual signal delivery is processed by a background worker.</li>
-     * <li>You can query the signal status by calling the <code>GetSignal</code> or <code>ListSignals</code> operation.</li>
+     * <li>After the signal is sent, the API operation immediately returns a <code>SignalId</code>. The actual signal delivery is handled by background workers.</li>
+     * <li>You can query the status of the signal by calling the <code>GetSignal</code> or <code>ListSignals</code> API operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -456,7 +450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a TensorBoard instance by using a node or specifying a datasource config.</p>
+     * <p>Creates a TensorBoard by using a node or a specified datasource config.</p>
      * 
      * @param request CreateTensorboardRequest
      * @param headers map
@@ -566,7 +560,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a TensorBoard instance by using a node or specifying a datasource config.</p>
+     * <p>Creates a TensorBoard by using a node or a specified datasource config.</p>
      * 
      * @param request CreateTensorboardRequest
      * @return CreateTensorboardResponse
@@ -616,7 +610,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an unused task template. If the template is already in use by a node, it cannot be deleted.</p>
+     * <p>Deletes unused task templates. A template cannot be deleted if it is already used by a task.</p>
      * 
      * @param request DeleteJobTemplateRequest
      * @param headers map
@@ -644,7 +638,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an unused task template. If the template is already in use by a node, it cannot be deleted.</p>
+     * <p>Deletes unused task templates. A template cannot be deleted if it is already used by a task.</p>
      * 
      * @param request DeleteJobTemplateRequest
      * @return DeleteJobTemplateResponse
@@ -657,7 +651,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this API, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">Pricing</a> of PAI-DLC.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
+     * <blockquote>
+     * <p>Notice: The total length of the parameters in the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
      * <p>Deletes a Ray History Server.</p>
@@ -688,7 +685,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this API, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">Pricing</a> of PAI-DLC.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
+     * <blockquote>
+     * <p>Notice: The total length of the parameters in the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
      * <p>Deletes a Ray History Server.</p>
@@ -704,7 +704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a stopped Tensorboard.</p>
+     * <p>Deletes a stopped TensorBoard.</p>
      * 
      * @param request DeleteTensorboardRequest
      * @param headers map
@@ -738,7 +738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a stopped Tensorboard.</p>
+     * <p>Deletes a stopped TensorBoard.</p>
      * 
      * @param request DeleteTensorboardRequest
      * @return DeleteTensorboardResponse
@@ -751,10 +751,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before using this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
+     * <p>Before you call this API operation, make sure that you fully understand the billing method and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the dashboard URL of a DLC job, if available.</p>
+     * <p>Retrieves the dashboard URL of a DLC job if it exists.</p>
      * 
      * @param request GetDashboardRequest
      * @param headers map
@@ -792,10 +792,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before using this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
+     * <p>Before you call this API operation, make sure that you fully understand the billing method and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the dashboard URL of a DLC job, if available.</p>
+     * <p>Retrieves the dashboard URL of a DLC job if it exists.</p>
      * 
      * @param request GetDashboardRequest
      * @return GetDashboardResponse
@@ -1077,13 +1077,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation queries monitoring metrics for a specific job (JobId) or dimension (Dimensions) under a specified namespace (Namespace).</li>
-     * <li>Custom query time ranges are supported. By default, data from the last hour is returned.</li>
-     * <li>You can select different time intervals (Period) to retrieve data points at a finer or coarser granularity.</li>
-     * <li>To retrieve large amounts of data with paging, use the <code>NextToken</code> parameter for paging operations.</li>
-     * <li><code>MetricName</code> is required and specifies the name of the monitoring metric to query.</li>
+     * <li>This operation queries the monitoring metrics for a specific job (JobId) or dimension (Dimensions) under a specified namespace.</li>
+     * <li>Supports a custom query time range. The default is the data from the last hour.</li>
+     * <li>You can select different time intervals (Period) to obtain data points with finer or coarser granularity.</li>
+     * <li>If you need to retrieve a large amount of data through paging, you can use the <code>NextToken</code> parameter for paging.</li>
+     * <li><code>MetricName</code> is required and specifies the name of the specific monitoring metrics to query.</li>
      * <li>For advanced features or specific types of monitoring metrics, refer to the relevant documentation for more information.</li>
      * </ul>
      * 
@@ -1158,13 +1158,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation queries monitoring metrics for a specific job (JobId) or dimension (Dimensions) under a specified namespace (Namespace).</li>
-     * <li>Custom query time ranges are supported. By default, data from the last hour is returned.</li>
-     * <li>You can select different time intervals (Period) to retrieve data points at a finer or coarser granularity.</li>
-     * <li>To retrieve large amounts of data with paging, use the <code>NextToken</code> parameter for paging operations.</li>
-     * <li><code>MetricName</code> is required and specifies the name of the monitoring metric to query.</li>
+     * <li>This operation queries the monitoring metrics for a specific job (JobId) or dimension (Dimensions) under a specified namespace.</li>
+     * <li>Supports a custom query time range. The default is the data from the last hour.</li>
+     * <li>You can select different time intervals (Period) to obtain data points with finer or coarser granularity.</li>
+     * <li>If you need to retrieve a large amount of data through paging, you can use the <code>NextToken</code> parameter for paging.</li>
+     * <li><code>MetricName</code> is required and specifies the name of the specific monitoring metrics to query.</li>
      * <li>For advanced features or specific types of monitoring metrics, refer to the relevant documentation for more information.</li>
      * </ul>
      * 
@@ -1308,7 +1308,312 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you use this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
+     * <p>Retrieves the RL trajectory flow analysis of a DLC job.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the RL trajectory flow analysis of a DLC job.</p>
+     * 
+     * @param request GetRLFlowAnalysisRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRLFlowAnalysisResponse
+     */
+    public GetRLFlowAnalysisResponse getRLFlowAnalysisWithOptions(String JobId, GetRLFlowAnalysisRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRLFlowAnalysis"),
+            new TeaPair("version", "2020-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/jobs/" + com.aliyun.openapiutil.Client.getEncodeParam(JobId) + "/rltrace/flowanalysis"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRLFlowAnalysisResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the RL trajectory flow analysis of a DLC job.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the RL trajectory flow analysis of a DLC job.</p>
+     * 
+     * @param request GetRLFlowAnalysisRequest
+     * @return GetRLFlowAnalysisResponse
+     */
+    public GetRLFlowAnalysisResponse getRLFlowAnalysis(String JobId, GetRLFlowAnalysisRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getRLFlowAnalysisWithOptions(JobId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the context of a specific exception log for a DLC job.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the context of a specific exception log for a DLC job.</p>
+     * 
+     * @param request GetRLLogContextRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRLLogContextResponse
+     */
+    public GetRLLogContextResponse getRLLogContextWithOptions(String JobId, GetRLLogContextRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.anchorMessage)) {
+            query.put("AnchorMessage", request.anchorMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.anchorTime)) {
+            query.put("AnchorTime", request.anchorTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.collectTime)) {
+            query.put("CollectTime", request.collectTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRLLogContext"),
+            new TeaPair("version", "2020-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/jobs/" + com.aliyun.openapiutil.Client.getEncodeParam(JobId) + "/rltrace/logcontext"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRLLogContextResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the context of a specific exception log for a DLC job.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the context of a specific exception log for a DLC job.</p>
+     * 
+     * @param request GetRLLogContextRequest
+     * @return GetRLLogContextResponse
+     */
+    public GetRLLogContextResponse getRLLogContext(String JobId, GetRLLogContextRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getRLLogContextWithOptions(JobId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries a single reinforcement learning (RL) trajectory and sample-level events for the same sample based on JobId, PromptUid, and SampleIndex, and returns an event stream sorted by event time and collection time.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a single reinforcement learning (RL) trajectory and sample-level events for the same sample based on JobId, PromptUid, and SampleIndex, and returns an event stream sorted by event time and collection time.</p>
+     * 
+     * @param request GetRLSampleRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRLSampleResponse
+     */
+    public GetRLSampleResponse getRLSampleWithOptions(String JobId, GetRLSampleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promptUid)) {
+            query.put("PromptUid", request.promptUid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sampleIndex)) {
+            query.put("SampleIndex", request.sampleIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRLSample"),
+            new TeaPair("version", "2020-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/jobs/" + com.aliyun.openapiutil.Client.getEncodeParam(JobId) + "/rltrace/sample"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRLSampleResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries a single reinforcement learning (RL) trajectory and sample-level events for the same sample based on JobId, PromptUid, and SampleIndex, and returns an event stream sorted by event time and collection time.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a single reinforcement learning (RL) trajectory and sample-level events for the same sample based on JobId, PromptUid, and SampleIndex, and returns an event stream sorted by event time and collection time.</p>
+     * 
+     * @param request GetRLSampleRequest
+     * @return GetRLSampleResponse
+     */
+    public GetRLSampleResponse getRLSample(String JobId, GetRLSampleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getRLSampleWithOptions(JobId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the RL training progress of a DLC job.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the RL training progress of a DLC job.</p>
+     * 
+     * @param request GetRLTrainingProgressRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRLTrainingProgressResponse
+     */
+    public GetRLTrainingProgressResponse getRLTrainingProgressWithOptions(String JobId, GetRLTrainingProgressRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRLTrainingProgress"),
+            new TeaPair("version", "2020-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/jobs/" + com.aliyun.openapiutil.Client.getEncodeParam(JobId) + "/rltrace/progress"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRLTrainingProgressResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the RL training progress of a DLC job.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the RL training progress of a DLC job.</p>
+     * 
+     * @param request GetRLTrainingProgressRequest
+     * @return GetRLTrainingProgressResponse
+     */
+    public GetRLTrainingProgressResponse getRLTrainingProgress(String JobId, GetRLTrainingProgressRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getRLTrainingProgressWithOptions(JobId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the multi-turn generation details of a single RL trajectory for a DLC job.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the multi-turn generation details of a single RL trajectory for a DLC job.</p>
+     * 
+     * @param request GetRLTrajectoryRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRLTrajectoryResponse
+     */
+    public GetRLTrajectoryResponse getRLTrajectoryWithOptions(String JobId, GetRLTrajectoryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promptUid)) {
+            query.put("PromptUid", request.promptUid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sampleIndex)) {
+            query.put("SampleIndex", request.sampleIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRLTrajectory"),
+            new TeaPair("version", "2020-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/jobs/" + com.aliyun.openapiutil.Client.getEncodeParam(JobId) + "/rltrace/trajectory"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRLTrajectoryResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the multi-turn generation details of a single RL trajectory for a DLC job.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the multi-turn generation details of a single RL trajectory for a DLC job.</p>
+     * 
+     * @param request GetRLTrajectoryRequest
+     * @return GetRLTrajectoryResponse
+     */
+    public GetRLTrajectoryResponse getRLTrajectory(String JobId, GetRLTrajectoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getRLTrajectoryWithOptions(JobId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC before you call this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the Ray Dashboard URL.</p>
@@ -1349,7 +1654,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you use this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
+     * <p>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC before you call this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the Ray Dashboard URL.</p>
@@ -1365,13 +1670,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you use this operation, make sure that you are familiar with the billing of PAI-DLC and have read the <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
-     * <blockquote>
-     * <p>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes.</p>
-     * </blockquote>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of parameters for the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a RayHistoryServer.</p>
+     * <p>Queries a Ray history server.</p>
      * 
      * @param request GetRayHistoryServerRequest
      * @param headers map
@@ -1399,13 +1701,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you use this operation, make sure that you are familiar with the billing of PAI-DLC and have read the <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
-     * <blockquote>
-     * <p>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes.</p>
-     * </blockquote>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of parameters for the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a RayHistoryServer.</p>
+     * <p>Queries a Ray history server.</p>
      * 
      * @param request GetRayHistoryServerRequest
      * @return GetRayHistoryServerResponse
@@ -1418,11 +1717,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>You can call this operation to retrieve the details of a signal that corresponds to a specified <code>JobId</code> and <code>SignalId</code>, including the signal status and delivery scope. Note that the response no longer contains the raw result structure for each pod. Instead, the <code>Status</code>, <code>Reason</code>, and <code>Message</code> fields describe the overall signal processing result.</p>
+     * <h2>Request description</h2>
+     * <p>This API allows you to retrieve the details of a signal corresponding to a specified <code>JobId</code> and <code>SignalId</code>, including the signal status and delivery scope. Note that the returned results no longer include the raw result structure for each Pod. Instead, the overall signal processing status is expressed through the <code>Status</code>, <code>Reason</code>, and <code>Message</code> fields.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a specific signal in a specified job.</p>
+     * <p>Queries the details of a specific signal under a specified job.</p>
      * 
      * @param request GetSignalRequest
      * @param headers map
@@ -1456,11 +1755,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>You can call this operation to retrieve the details of a signal that corresponds to a specified <code>JobId</code> and <code>SignalId</code>, including the signal status and delivery scope. Note that the response no longer contains the raw result structure for each pod. Instead, the <code>Status</code>, <code>Reason</code>, and <code>Message</code> fields describe the overall signal processing result.</p>
+     * <h2>Request description</h2>
+     * <p>This API allows you to retrieve the details of a signal corresponding to a specified <code>JobId</code> and <code>SignalId</code>, including the signal status and delivery scope. Note that the returned results no longer include the raw result structure for each Pod. Instead, the overall signal processing status is expressed through the <code>Status</code>, <code>Reason</code>, and <code>Message</code> fields.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a specific signal in a specified job.</p>
+     * <p>Queries the details of a specific signal under a specified job.</p>
      * 
      * @param request GetSignalRequest
      * @return GetSignalResponse
@@ -1473,7 +1772,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a Tensorboard.</p>
+     * <p>Retrieves the details of a TensorBoard.</p>
      * 
      * @param request GetTensorboardRequest
      * @param headers map
@@ -1515,7 +1814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a Tensorboard.</p>
+     * <p>Retrieves the details of a TensorBoard.</p>
      * 
      * @param request GetTensorboardRequest
      * @return GetTensorboardResponse
@@ -1807,7 +2106,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists task templates by workspace with support for pagination and sorting. You can filter results by creator, TemplateId, or TemplateName.</p>
+     * <p>Lists task templates in a workspace with support for pagination and sorting, and allows filtering by creator, template ID, or template name.</p>
      * 
      * @param request ListJobTemplatesRequest
      * @param headers map
@@ -1873,7 +2172,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists task templates by workspace with support for pagination and sorting. You can filter results by creator, TemplateId, or TemplateName.</p>
+     * <p>Lists task templates in a workspace with support for pagination and sorting, and allows filtering by creator, template ID, or template name.</p>
      * 
      * @param request ListJobTemplatesRequest
      * @return ListJobTemplatesResponse
@@ -1886,7 +2185,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of jobs, with support for pagination, sorting, and conditional filtering.</p>
+     * <p>Queries a list of jobs with support for pagination, sorting, and conditional filtering.</p>
      * 
      * @param tmpReq ListJobsRequest
      * @param headers map
@@ -2070,7 +2369,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of jobs, with support for pagination, sorting, and conditional filtering.</p>
+     * <p>Queries a list of jobs with support for pagination, sorting, and conditional filtering.</p>
      * 
      * @param request ListJobsRequest
      * @return ListJobsResponse
@@ -2083,10 +2382,141 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before using this operation, make sure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
-     * <blockquote>
-     * <p>Notice: The total length of parameters for the CreateJob operation (including system-generated parameters) cannot exceed 65536 bytes.</p>
-     * </blockquote>
+     * <p>Retrieves a paginated list of RL trajectory samples for a DLC job.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves a paginated list of RL trajectory samples for a DLC job.</p>
+     * 
+     * @param request ListRLSamplesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRLSamplesResponse
+     */
+    public ListRLSamplesResponse listRLSamplesWithOptions(String JobId, ListRLSamplesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRLSamples"),
+            new TeaPair("version", "2020-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/jobs/" + com.aliyun.openapiutil.Client.getEncodeParam(JobId) + "/rltrace/samples"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRLSamplesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves a paginated list of RL trajectory samples for a DLC job.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves a paginated list of RL trajectory samples for a DLC job.</p>
+     * 
+     * @param request ListRLSamplesRequest
+     * @return ListRLSamplesResponse
+     */
+    public ListRLSamplesResponse listRLSamples(String JobId, ListRLSamplesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listRLSamplesWithOptions(JobId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves a paginated list of RL trajectories for a specific UID in a DLC job.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves a paginated list of RL trajectories for a specific UID in a DLC job.</p>
+     * 
+     * @param request ListRLTrajectoriesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRLTrajectoriesResponse
+     */
+    public ListRLTrajectoriesResponse listRLTrajectoriesWithOptions(String JobId, ListRLTrajectoriesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promptUid)) {
+            query.put("PromptUid", request.promptUid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRLTrajectories"),
+            new TeaPair("version", "2020-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/jobs/" + com.aliyun.openapiutil.Client.getEncodeParam(JobId) + "/rltrace/trajectories"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRLTrajectoriesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves a paginated list of RL trajectories for a specific UID in a DLC job.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves a paginated list of RL trajectories for a specific UID in a DLC job.</p>
+     * 
+     * @param request ListRLTrajectoriesRequest
+     * @return ListRLTrajectoriesResponse
+     */
+    public ListRLTrajectoriesResponse listRLTrajectories(String JobId, ListRLTrajectoriesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listRLTrajectoriesWithOptions(JobId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of parameters for the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</p>
      * 
      * <b>summary</b> : 
      * <p>Lists RayHistoryServer resources.</p>
@@ -2187,10 +2617,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before using this operation, make sure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
-     * <blockquote>
-     * <p>Notice: The total length of parameters for the CreateJob operation (including system-generated parameters) cannot exceed 65536 bytes.</p>
-     * </blockquote>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of parameters for the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</p>
      * 
      * <b>summary</b> : 
      * <p>Lists RayHistoryServer resources.</p>
@@ -2206,8 +2633,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>You can call this operation to retrieve the details of all signal records for a specific job, including the signal ID, status, and creation time. You can use query parameters to further filter or sort the results.</p>
+     * <h2>Request description</h2>
+     * <p>You can use this API to retrieve the details of all signal records for a specific job, including the signal ID, status, and creation time. You can further filter or sort the results by using query parameters.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries all signal records of a specified job.</p>
@@ -2264,8 +2691,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>You can call this operation to retrieve the details of all signal records for a specific job, including the signal ID, status, and creation time. You can use query parameters to further filter or sort the results.</p>
+     * <h2>Request description</h2>
+     * <p>You can use this API to retrieve the details of all signal records for a specific job, including the signal ID, status, and creation time. You can further filter or sort the results by using query parameters.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries all signal records of a specified job.</p>
@@ -2404,7 +2831,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the default version of a job template.</p>
+     * <p>Sets the default version of a template.</p>
      * 
      * @param request SetJobTemplateDefaultVersionRequest
      * @param headers map
@@ -2438,7 +2865,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the default version of a job template.</p>
+     * <p>Sets the default version of a template.</p>
      * 
      * @param request SetJobTemplateDefaultVersionRequest
      * @return SetJobTemplateDefaultVersionResponse
@@ -2451,9 +2878,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before using this operation, make sure that you fully understand the billing method and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
+     * <p>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC before you call this operation.</p>
      * <blockquote>
-     * <p>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * <p>Notice: The total length of the request parameters for the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -2485,9 +2912,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before using this operation, make sure that you fully understand the billing method and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
+     * <p>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC before you call this operation.</p>
      * <blockquote>
-     * <p>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * <p>Notice: The total length of the request parameters for the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -2588,10 +3015,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> for PAI-DLC.&gt;Notice: The total length of the parameters for the CreateJob interface, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
+     * <blockquote>
+     * <p>Notice: The total length of the parameters in the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Stops a Ray History Server.</p>
+     * <p>Stops the Ray History Server.</p>
      * 
      * @param request StopRayHistoryServerRequest
      * @param headers map
@@ -2619,10 +3049,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> for PAI-DLC.&gt;Notice: The total length of the parameters for the CreateJob interface, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
+     * <blockquote>
+     * <p>Notice: The total length of the parameters in the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Stops a Ray History Server.</p>
+     * <p>Stops the Ray History Server.</p>
      * 
      * @param request StopRayHistoryServerRequest
      * @return StopRayHistoryServerResponse
@@ -2682,7 +3115,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before attaching tags, Alibaba Cloud checks the number of existing tags on the resource. If the limit is exceeded, an error message is returned.</p>
+     * <p>Before attaching tags, Alibaba Cloud checks the number of existing tags on the resources. If the limit is exceeded, an error message is returned.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates and attaches tags to specified resources.</p>
@@ -2731,7 +3164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before attaching tags, Alibaba Cloud checks the number of existing tags on the resource. If the limit is exceeded, an error message is returned.</p>
+     * <p>Before attaching tags, Alibaba Cloud checks the number of existing tags on the resources. If the limit is exceeded, an error message is returned.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates and attaches tags to specified resources.</p>
@@ -2747,7 +3180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unbinds tags from a specified list of resources.</p>
+     * <p>Removes tags from the specified resources.</p>
      * 
      * @param tmpReq UntagResourcesRequest
      * @param headers map
@@ -2803,7 +3236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unbinds tags from a specified list of resources.</p>
+     * <p>Removes tags from the specified resources.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -2879,7 +3312,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a job template.</p>
+     * <p>Updates a task template.</p>
      * 
      * @param request UpdateJobTemplateRequest
      * @param headers map
@@ -2937,7 +3370,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a job template.</p>
+     * <p>Updates a task template.</p>
      * 
      * @param request UpdateJobTemplateRequest
      * @return UpdateJobTemplateResponse

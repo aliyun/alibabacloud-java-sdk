@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListJobTemplatesRequest extends TeaModel {
     /**
-     * <p>Filters the list by a fuzzy match of the template description.</p>
+     * <p>Filters the list by fuzzy match on the template description.</p>
      * 
      * <strong>example:</strong>
      * <p>PyTorch training template</p>
@@ -32,7 +32,7 @@ public class ListJobTemplatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of items per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +41,7 @@ public class ListJobTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The field by which to sort the results.</p>
+     * <p>The sort field.</p>
      * 
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>
@@ -50,7 +50,7 @@ public class ListJobTemplatesRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>Filters the list by an exact match of the template ID.</p>
+     * <p>Filters the list by exact template ID.</p>
      * 
      * <strong>example:</strong>
      * <p>tpl1****6jcq2q</p>
@@ -59,7 +59,7 @@ public class ListJobTemplatesRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>Filters the list by a fuzzy match of the template name.</p>
+     * <p>Filters the list by fuzzy match on the template name.</p>
      * 
      * <strong>example:</strong>
      * <p>job-template-example-1778047****</p>

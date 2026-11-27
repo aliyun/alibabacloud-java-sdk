@@ -43,7 +43,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
     public String gmtModifyTime;
 
     /**
-     * <p>The most recent time when a task was successfully created by using this template. This parameter is not returned if the template has not been used.</p>
+     * <p>The last time a task was successfully created by using this template. This field is not returned if the template has not been used.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
     public String lastUsedTime;
 
     /**
-     * <p>The custom key-value pair metadata defined by the user.</p>
+     * <p>The user-defined key-value pair metadata.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -71,7 +71,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
     public String modifiedBy;
 
     /**
-     * <p>The ID of the request. This ID is used for diagnostics and troubleshooting.</p>
+     * <p>The ID of the request, which is used for troubleshooting and diagnostics.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
@@ -107,7 +107,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The total number of versions. If a single version is queried, the value 1 is returned. If all versions are queried, the actual total number is returned.</p>
+     * <p>The total number of versions. If you query a single version, 1 is returned. If you query all versions, the actual total number is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -125,7 +125,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
     public String userId;
 
     /**
-     * <p>The list of template version details. If a single version is queried, one element is returned. If all versions are queried, all elements are returned.</p>
+     * <p>The list of template version details. If you query a single version, one element is returned. If you query all versions, all elements are returned.</p>
      */
     @NameInMap("Versions")
     public java.util.List<GetJobTemplateResponseBodyVersions> versions;
@@ -269,7 +269,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
          * <p>The field constraint rules. The key is a JSONPath expression, and the value is the constraint type.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;JobSpecs[0].Image\&quot;:\&quot;locked\&quot;,\&quot;UserCommand\&quot;:\&quot;locked\&quot;,\&quot;JobType\&quot;:\&quot;locked\&quot;}</p>
+         * <p>{&quot;JobSpecs[0].Image&quot;:&quot;locked&quot;,&quot;UserCommand&quot;:&quot;locked&quot;,&quot;JobType&quot;:&quot;locked&quot;}</p>
          */
         @NameInMap("Constraints")
         public java.util.Map<String, ?> constraints;
@@ -278,7 +278,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
          * <p>The template configuration content of this version in JSON format.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;WorkspaceId\&quot;:\&quot;15****05\&quot;,\&quot;JobType\&quot;:\&quot;PyTorchJob\&quot;,\&quot;UserCommand\&quot;:\&quot;echo hello\&quot;,\&quot;JobSpecs\&quot;:[{\&quot;Type\&quot;:\&quot;Worker\&quot;,\&quot;PodCount\&quot;:1,\&quot;Image\&quot;:\&quot;dsw-registry-vpc.cn-hangzhou.cr.aliyuncs.com/pai/pytorch:2.8.0-gpu-py313-cu129-ubuntu22.04-3995b779-1764361782\&quot;,\&quot;EcsSpec\&quot;:\&quot;ecs.gn7i-c8g1.2xlarge\&quot;}],\&quot;ResourceType\&quot;:\&quot;ECS\&quot;,\&quot;_ResourcePaymentType\&quot;:\&quot;PostPaid\&quot;,\&quot;CredentialConfig\&quot;:{\&quot;EnableCredentialInject\&quot;:false},\&quot;Accessibility\&quot;:\&quot;PRIVATE\&quot;,\&quot;Settings\&quot;:{\&quot;JobReservedMinutes\&quot;:0,\&quot;Tags\&quot;:{}}}</p>
+         * <p>{&quot;WorkspaceId&quot;:&quot;15****05&quot;,&quot;JobType&quot;:&quot;PyTorchJob&quot;,&quot;UserCommand&quot;:&quot;echo hello&quot;,&quot;JobSpecs&quot;:[{&quot;Type&quot;:&quot;Worker&quot;,&quot;PodCount&quot;:1,&quot;Image&quot;:&quot;dsw-registry-vpc.cn-hangzhou.cr.aliyuncs.com/pai/pytorch:2.8.0-gpu-py313-cu129-ubuntu22.04-3995b779-1764361782&quot;,&quot;EcsSpec&quot;:&quot;ecs.gn7i-c8g1.2xlarge&quot;}],&quot;ResourceType&quot;:&quot;ECS&quot;,&quot;_ResourcePaymentType&quot;:&quot;PostPaid&quot;,&quot;CredentialConfig&quot;:{&quot;EnableCredentialInject&quot;:false},&quot;Accessibility&quot;:&quot;PRIVATE&quot;,&quot;Settings&quot;:{&quot;JobReservedMinutes&quot;:0,&quot;Tags&quot;:{}}}</p>
          */
         @NameInMap("Content")
         public Object content;

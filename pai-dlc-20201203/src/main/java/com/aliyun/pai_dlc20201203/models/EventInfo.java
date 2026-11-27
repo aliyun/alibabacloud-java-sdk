@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class EventInfo extends TeaModel {
     /**
      * <p>The text content of the event.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Training pod started.</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
      * <p>The ID of the event, which is used to obtain the related context.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>event-example-001</p>
      */
     @NameInMap("Id")
     public String id;
@@ -36,6 +42,9 @@ public class EventInfo extends TeaModel {
 
     /**
      * <p>The timestamp of the event in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-11-01T00:00:00Z</p>
      */
     @NameInMap("Time")
     public String time;

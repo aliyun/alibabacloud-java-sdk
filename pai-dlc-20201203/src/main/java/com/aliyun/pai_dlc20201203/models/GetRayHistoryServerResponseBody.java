@@ -23,10 +23,7 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The hardware specifications of the public resource group. For the detailed list of specifications, see <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing</a>.</p>
-     * <blockquote>
-     * <p>Notice: Prices vary depending on the specifications.</p>
-     * </blockquote>
+     * <p>The hardware specifications of the public resource group. For a detailed list of specifications, access <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing</a>.&gt;Notice: Prices vary by specification.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.g6.large</p>
@@ -35,7 +32,7 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String ecsSpec;
 
     /**
-     * <p>The creation time (UTC).</p>
+     * <p>The creation time in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-12T14:35:01Z</p>
@@ -44,7 +41,7 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The end time (UTC).</p>
+     * <p>The completion time in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-12T15:36:08Z</p>
@@ -53,7 +50,7 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String gmtFinishTime;
 
     /**
-     * <p>The modification time (UTC).</p>
+     * <p>The modification time in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-12T14:36:00Z</p>
@@ -62,7 +59,7 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String gmtModifyTime;
 
     /**
-     * <p>The maximum runtime duration.</p>
+     * <p>The maximum runtime in minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -71,7 +68,7 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public Integer maxRuntimeMinutes;
 
     /**
-     * <p>The ID of the RayHistoryServer.</p>
+     * <p>The ID of the Ray history server.</p>
      * 
      * <strong>example:</strong>
      * <p>rhsxxx</p>
@@ -80,7 +77,7 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String rayHistoryServerId;
 
     /**
-     * <p>Ray Dashboard URL。</p>
+     * <p>The Ray Dashboard URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://rhsxxx-dashboard.dsw-gateway-cn-wulanchabu.data.aliyun.com/">https://rhsxxx-dashboard.dsw-gateway-cn-wulanchabu.data.aliyun.com/</a></p>
@@ -107,7 +104,7 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String reasonMessage;
 
     /**
-     * <p>The ID of the resource group in which the job runs.</p>
+     * <p>The ID of the resource group where the job runs.</p>
      * 
      * <strong>example:</strong>
      * <p>quotaxxx</p>
@@ -116,7 +113,7 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The name of the resource in which the job runs.</p>
+     * <p>The name of the resource where the job runs.</p>
      * 
      * <strong>example:</strong>
      * <p>my-resource-name</p>
@@ -134,7 +131,7 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The storage path of Ray logs.</p>
+     * <p>The storage path for Ray logs.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://bucket-test-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/tmp</p>
@@ -143,7 +140,7 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String storagePath;
 
     /**
-     * <p>The tenant ID.</p>
+     * <p>The ID of the tenant.</p>
      * 
      * <strong>example:</strong>
      * <p>10**************14</p>
@@ -152,7 +149,7 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The user ID used to filter results.</p>
+     * <p>The ID of the user to which the job belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>123456789</p>
@@ -161,7 +158,7 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String userId;
 
     /**
-     * <p>The username used to filter results.</p>
+     * <p>The username of the user to which the job belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>myusername</p>

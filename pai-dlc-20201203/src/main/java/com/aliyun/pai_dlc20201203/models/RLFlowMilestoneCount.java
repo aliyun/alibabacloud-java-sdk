@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RLFlowMilestoneCount extends TeaModel {
     /**
-     * <p>The number of in-transit trajectories that remain at this milestone.</p>
+     * <p>The number of in-transit trajectories at this milestone.</p>
      * 
      * <strong>example:</strong>
      * <p>96</p>
@@ -14,10 +14,10 @@ public class RLFlowMilestoneCount extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The milestone. Valid values are the same as those of Stuck[].Milestone.</p>
+     * <p>The milestone. The valid values are the same as those of Stuck[].Milestone.</p>
      * 
      * <strong>example:</strong>
-     * <p>生成中</p>
+     * <p>Generating</p>
      */
     @NameInMap("Milestone")
     public String milestone;

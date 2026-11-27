@@ -24,6 +24,9 @@ public class SanityCheckResultItem extends TeaModel {
 
     /**
      * <p>The check result details.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GPU health check passed.</p>
      */
     @NameInMap("Message")
     public String message;

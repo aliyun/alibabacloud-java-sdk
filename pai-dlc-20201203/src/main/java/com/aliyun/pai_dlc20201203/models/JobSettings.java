@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class JobSettings extends TeaModel {
     /**
      * <p>The additional advanced parameter settings.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;vm.max_map_count&quot;:&quot;262144&quot;}</p>
      */
     @NameInMap("AdvancedSettings")
     public java.util.Map<String, ?> advancedSettings;
 
     /**
-     * <p>Specifies whether to mount all RDMA NICs.</p>
+     * <p>Specifies whether to mount all RDMA network interface controllers (NICs).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AllocateAllRDMADevices")
     public Boolean allocateAllRDMADevices;
 
     /**
      * <p>Specifies whether to allow the job to be scheduled to nodes that are marked as unschedulable or included in the workspace blacklist. If enabled, node status checks are skipped and corresponding bypass configurations are applied.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AllowUnschedulableNodes")
     public Boolean allowUnschedulableNodes;
@@ -41,13 +50,33 @@ public class JobSettings extends TeaModel {
     public String caller;
 
     /**
+     * <p>The cross-account VPC configuration. Currently, only one VPC is allowed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[
+     *   {
+     *     &quot;VpcId&quot;: &quot;vpc-xxx&quot;,
+     *     &quot;SwitchId&quot;: &quot;vsw-xxx&quot;,
+     *     &quot;SecurityGroupId&quot;: &quot;sg-xxx&quot;,
+     *     &quot;RoleChain&quot;: &quot;[{&quot;roleType&quot;:&quot;service&quot;,&quot;roleArn&quot;:&quot;acs:ram::BailianResourceAccountUID:role/bailiantodlcrole&quot;,&quot;assumeRoleFor&quot;:&quot;BailianResourceAccountUID&quot;},{&quot;roleType&quot;:&quot;user&quot;,&quot;roleArn&quot;:&quot;acs:ram::BailianServiceAccountUID:role/roletoassumecustomerrole&quot;},{&quot;roleType&quot;:&quot;service&quot;,&quot;roleArn&quot;:&quot;acs:ram::EndUserUID:role/user-role&quot;,&quot;assumeRoleFor&quot;:&quot;EndUserUID&quot;}]&quot;,
+     *     &quot;ExtendedCIDRs&quot;: [
+     *       &quot;192.168.0.0/24&quot;,
+     *       &quot;192.168.1.0/24&quot;
+     *     ]
+     *   }
+     * ]</p>
+     */
+    @NameInMap("CrossAccountVpcs")
+    public java.util.List<UserVpc> crossAccountVpcs;
+
+    /**
      * <p>The DataJuicer job configuration.</p>
      */
     @NameInMap("DataJuicerConfig")
     public DataJuicerConfig dataJuicerConfig;
 
     /**
-     * <p>Specifies whether to skip the inventory check. Valid values:</p>
+     * <p>Specifies whether to skip the ECS inventory check. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
@@ -88,6 +117,9 @@ public class JobSettings extends TeaModel {
 
     /**
      * <p>Specifies whether to enable the DSW development mode for the job. If enabled, a sidecar container is injected into the pod.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnableDSWDev")
     public Boolean enableDSWDev;
@@ -106,7 +138,7 @@ public class JobSettings extends TeaModel {
     public Boolean enableErrorMonitoringInAIMaster;
 
     /**
-     * <p>Specifies whether to allow job nodes to communicate with each other over SSH. The image must have SSHD built-in. This parameter takes effect only for PyTorch jobs that use self-managed computing resources. Valid values:</p>
+     * <p>Specifies whether to allow job nodes to communicate with each other over SSH. The image must have SSHD built in. This parameter takes effect only for PyTorch jobs that use self-managed computing resources. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
@@ -119,7 +151,7 @@ public class JobSettings extends TeaModel {
     public Boolean enableIntraJobSSH;
 
     /**
-     * <p>Specifies whether to allow OSS append operations. Valid values:</p>
+     * <p>Specifies whether to allow OSS append writes. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
@@ -158,7 +190,7 @@ public class JobSettings extends TeaModel {
     public Boolean enableSanityCheck;
 
     /**
-     * <p>Specifies whether to allow the job to use tidal resources. Valid values:</p>
+     * <p>Specifies whether to allow the job to use tide resources. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
@@ -204,7 +236,7 @@ public class JobSettings extends TeaModel {
     public ModelConfig modelConfig;
 
     /**
-     * <p>The oversold resource usage mode for the job, which can be not accepted, accepted, or only accepted.</p>
+     * <p>The oversold resource usage mode for the job, such as not accepted, accepted, or only accepted.</p>
      * 
      * <strong>example:</strong>
      * <p>AcceptQuotaOverSold</p>
@@ -231,7 +263,7 @@ public class JobSettings extends TeaModel {
     public String sanityCheckArgs;
 
     /**
-     * <p>The shell used to execute job commands, such as /bin/sh or /bin/bash.</p>
+     * <p>The shell used to execute job commands. Valid values: /bin/sh and /bin/bash.</p>
      * 
      * <strong>example:</strong>
      * <p>/bin/bash</p>
@@ -241,6 +273,9 @@ public class JobSettings extends TeaModel {
 
     /**
      * <p>The custom tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;app&quot;:&quot;training&quot;}</p>
      */
     @NameInMap("Tags")
     public java.util.Map<String, String> tags;
@@ -297,6 +332,14 @@ public class JobSettings extends TeaModel {
     }
     public String getCaller() {
         return this.caller;
+    }
+
+    public JobSettings setCrossAccountVpcs(java.util.List<UserVpc> crossAccountVpcs) {
+        this.crossAccountVpcs = crossAccountVpcs;
+        return this;
+    }
+    public java.util.List<UserVpc> getCrossAccountVpcs() {
+        return this.crossAccountVpcs;
     }
 
     public JobSettings setDataJuicerConfig(DataJuicerConfig dataJuicerConfig) {

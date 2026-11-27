@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RLFlowStuckItem extends TeaModel {
     /**
-     * <p>The number of idle seconds since NowMs. This value is the descending sort key of the Stuck list.</p>
+     * <p>The number of idle seconds since NowMs (the descending sort key for the stuck list).</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,7 +14,7 @@ public class RLFlowStuckItem extends TeaModel {
     public Long idleSec;
 
     /**
-     * <p>The UNIX timestamp of the last event, in milliseconds.</p>
+     * <p>The millisecond timestamp of the last event.</p>
      * 
      * <strong>example:</strong>
      * <p>1787293215480</p>
@@ -23,25 +23,16 @@ public class RLFlowStuckItem extends TeaModel {
     public Long lastTsMs;
 
     /**
-     * <p>The current milestone where the entry is staying. Valid values:</p>
-     * <ul>
-     * <li>已生成未下发: Generated but not delivered.</li>
-     * <li>已下发未启动: Delivered but not started.</li>
-     * <li>已启动待生成: Started and pending generation.</li>
-     * <li>生成中: Generating.</li>
-     * <li>Rollout完成待打分: Rollout completed and pending scoring.</li>
-     * <li>已打分待采样: Scored and pending sampling.</li>
-     * <li>已采样待训练: Sampled and pending training.</li>
-     * </ul>
+     * <p>The current milestone: generated but not dispatched, dispatched but not started, started but pending generation, generating, rollout completed pending scoring, scored pending sampling, or sampled pending training.</p>
      * 
      * <strong>example:</strong>
-     * <p>生成中</p>
+     * <p>Generating</p>
      */
     @NameInMap("Milestone")
     public String milestone;
 
     /**
-     * <p>The number of completed generation rounds.</p>
+     * <p>The number of completed generation turns.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -50,7 +41,7 @@ public class RLFlowStuckItem extends TeaModel {
     public Integer NTurns;
 
     /**
-     * <p>The UID of the sample.</p>
+     * <p>The sample UID.</p>
      * 
      * <strong>example:</strong>
      * <p>321fa56f-e1e5-4eb3-8047-db7a230c9a75</p>
@@ -59,7 +50,7 @@ public class RLFlowStuckItem extends TeaModel {
     public String promptUid;
 
     /**
-     * <p>The ordinal number of the trajectory.</p>
+     * <p>The trajectory index.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

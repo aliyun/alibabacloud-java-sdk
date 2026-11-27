@@ -32,7 +32,7 @@ public class ListSignalsRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The field used for sorting.</p>
+     * <p>The sort field.</p>
      * 
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>

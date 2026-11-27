@@ -43,7 +43,7 @@ public class CreateJobTemplateResponseBody extends TeaModel {
     public String gmtModifyTime;
 
     /**
-     * <p>The most recent time when a node was successfully created by using this template. This parameter is not returned if you create a template that has not been used.</p>
+     * <p>The time when the template was last used.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class CreateJobTemplateResponseBody extends TeaModel {
     public String lastUsedTime;
 
     /**
-     * <p>The custom key-value pair metadata defined by the user.</p>
+     * <p>The user-defined key-value pair metadata.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -107,7 +107,7 @@ public class CreateJobTemplateResponseBody extends TeaModel {
     public String userId;
 
     /**
-     * <p>The version number of the currently returned version.</p>
+     * <p>The version number returned in the current response.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

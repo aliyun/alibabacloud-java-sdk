@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AssumeUserInfo extends TeaModel {
     /**
      * <p>The AccessKey ID used for role assumption.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LTAI5tExample****KeyId1234</p>
      */
     @NameInMap("AccessKeyId")
     public String accessKeyId;
@@ -21,6 +24,9 @@ public class AssumeUserInfo extends TeaModel {
 
     /**
      * <p>The security token used for role assumption.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CAISexample****SecurityToken</p>
      */
     @NameInMap("SecurityToken")
     public String securityToken;

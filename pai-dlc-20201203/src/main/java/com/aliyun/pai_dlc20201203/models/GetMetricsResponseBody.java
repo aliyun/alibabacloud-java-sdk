@@ -17,7 +17,7 @@ public class GetMetricsResponseBody extends TeaModel {
      * <p>The monitoring metrics data.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{\&quot;Content\&quot;: \&quot;\&quot;, \&quot;OperationName\&quot;: \&quot;purchase\&quot;, \&quot;Success\&quot;: 1, \&quot;Id\&quot;: \&quot;217\&quot;, \&quot;LogDatetime\&quot;: 1687679582923}]</p>
+     * <p>[{&quot;Content&quot;: &quot;&quot;, &quot;OperationName&quot;: &quot;purchase&quot;, &quot;Success&quot;: 1, &quot;Id&quot;: &quot;217&quot;, &quot;LogDatetime&quot;: 1687679582923}]</p>
      */
     @NameInMap("DataPoints")
     public String dataPoints;
@@ -41,7 +41,7 @@ public class GetMetricsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The statistical period of the monitoring data. Valid values: 15, 60, 900, and 3600. Unit: seconds. If you do not set the statistical period, monitoring data is queried based on the reporting period that was specified when the monitoring metric was registered. The statistical period varies for each monitoring metric (MetricName) of each cloud service. For more information, see cloud service monitoring items.</p>
+     * <p>The statistical period of the monitoring data. Valid values: 15, 60, 900, and 3600. Unit: seconds. If the statistical period is not specified, the monitoring data is queried based on the reporting period applied for when the monitoring metric was registered. The statistical period varies with the monitoring metric (MetricName) of each cloud service. For more information, see Cloud service monitoring metrics.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -59,11 +59,7 @@ public class GetMetricsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values:</p>
-     * <ul>
-     * <li>true: The operation was successful.</li>
-     * <li>false: The operation failed.</li>
-     * </ul>
+     * <p>Indicates whether the operation was successful. Valid values: true: The operation was successful. false: The operation failed.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RLSampleEvent extends TeaModel {
     /**
-     * <p>The details. For Megatron rows, the value is rank=..,global_step=..,ppo_epoch=..</p>
+     * <p>The supplementary information for the event. The specific content depends on the event type.</p>
      * 
      * <strong>example:</strong>
      * <p>uid_generated</p>
@@ -14,7 +14,7 @@ public class RLSampleEvent extends TeaModel {
     public String detail;
 
     /**
-     * <p>The event source component. For Megatron rows, the value is &quot;{phase} {status}&quot;.</p>
+     * <p>The source component or execution stage of the event.</p>
      * 
      * <strong>example:</strong>
      * <p>DataLoader</p>
@@ -23,7 +23,7 @@ public class RLSampleEvent extends TeaModel {
     public String from;
 
     /**
-     * <p>The training step to which the event belongs (raw string). For Megatron rows, this is empty because the step is included in Detail.</p>
+     * <p>The decimal string of the training step. An empty string is used when the corresponding information is not collected.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -32,7 +32,7 @@ public class RLSampleEvent extends TeaModel {
     public String globalStep;
 
     /**
-     * <p>The stage. For Megatron rows, this is normalized to TRAIN.</p>
+     * <p>The training or sampling stage to which the event belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>DATA_PREPROCESS</p>
@@ -50,10 +50,10 @@ public class RLSampleEvent extends TeaModel {
     public Long timestampMs;
 
     /**
-     * <p>The event target component. For Megatron rows, the value is the function name.</p>
+     * <p>The destination component or execution action of the event.</p>
      * 
      * <strong>example:</strong>
-     * <p>PPOTrainerV1</p>
+     * <p>Trainer</p>
      */
     @NameInMap("To")
     public String to;
