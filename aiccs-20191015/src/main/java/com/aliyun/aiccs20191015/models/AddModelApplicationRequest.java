@@ -19,13 +19,13 @@ public class AddModelApplicationRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>TestApplication</p>
+     * <p>Test application</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
 
     /**
-     * <p>Specifies whether to enable call-connected event push. Disabled by default.</p>
+     * <p>Specifies whether to enable push notifications for call connected events. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -34,16 +34,16 @@ public class AddModelApplicationRequest extends TeaModel {
     public Boolean callConnectedTriggerModel;
 
     /**
-     * <p>The scenario name.</p>
+     * <p>The name of the scenario.</p>
      * 
      * <strong>example:</strong>
-     * <p>TestScenario</p>
+     * <p>Test scenario</p>
      */
     @NameInMap("DyvmsSceneName")
     public String dyvmsSceneName;
 
     /**
-     * <p>The model code.</p>
+     * <p>The code of the model.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class AddModelApplicationRequest extends TeaModel {
     public String modelCode;
 
     /**
-     * <p>The model version.</p>
+     * <p>The version of the model.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -62,7 +62,7 @@ public class AddModelApplicationRequest extends TeaModel {
     public String modelVersion;
 
     /**
-     * <p>Specifies whether the first mute event triggers the model.</p>
+     * <p>Specifies whether to trigger the model upon the first mute event.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -80,7 +80,7 @@ public class AddModelApplicationRequest extends TeaModel {
     public Long muteDuration;
 
     /**
-     * <p>The number of consecutive mute events before the system proactively hangs up the call.</p>
+     * <p>The number of consecutive mute events required to actively hang up the call.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -101,7 +101,7 @@ public class AddModelApplicationRequest extends TeaModel {
     public String prompt;
 
     /**
-     * <p>The qualification ID.</p>
+     * <p>The ID of the qualification.</p>
      * 
      * <strong>example:</strong>
      * <p>85</p>
@@ -110,16 +110,16 @@ public class AddModelApplicationRequest extends TeaModel {
     public Long qualificationId;
 
     /**
-     * <p>The qualification name.</p>
+     * <p>The name of the qualification.</p>
      * 
      * <strong>example:</strong>
-     * <p>TestQualification</p>
+     * <p>Test qualification</p>
      */
     @NameInMap("QualificationName")
     public String qualificationName;
 
     /**
-     * <p>The URL of the recorded audio file for the opening statement. This parameter is required when the opening statement type is set to 1.</p>
+     * <p>The URL of the audio recording file for the opening remark. This parameter is required when the opening remark type is set to 1.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://xxxxxxxx.wav">https://xxxxxxxx.wav</a></p>
@@ -143,7 +143,7 @@ public class AddModelApplicationRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The speech script content.</p>
+     * <p>The content of the speech script.</p>
      * 
      * <strong>example:</strong>
      * <p>Test speech script</p>
@@ -152,7 +152,7 @@ public class AddModelApplicationRequest extends TeaModel {
     public String speechContent;
 
     /**
-     * <p>The speech script ID.</p>
+     * <p>The ID of the speech script.</p>
      * 
      * <strong>example:</strong>
      * <p>88</p>
@@ -161,17 +161,17 @@ public class AddModelApplicationRequest extends TeaModel {
     public Long speechId;
 
     /**
-     * <p>The opening statement.</p>
+     * <p>The opening remark.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Hello, this is an opening statement</p>
+     * <p>Hello, this is an opening remark</p>
      */
     @NameInMap("StartWord")
     public String startWord;
 
     /**
-     * <p>The type of the opening statement.</p>
+     * <p>The type of the opening remark.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -180,17 +180,17 @@ public class AddModelApplicationRequest extends TeaModel {
     public Long startWordType;
 
     /**
-     * <p>The text-to-speech (TTS) configuration, including voice, volume, and speed.</p>
+     * <p>The text-to-speech (TTS) configuration, including the voice, volume, and speed.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TtsConfig")
     public AddModelApplicationRequestTtsConfig ttsConfig;
 
     /**
-     * <p>The usage description.</p>
+     * <p>The usage.</p>
      * 
      * <strong>example:</strong>
-     * <p>TestUsage</p>
+     * <p>Test usage</p>
      */
     @NameInMap("UsageDesc")
     public String usageDesc;
@@ -386,7 +386,7 @@ public class AddModelApplicationRequest extends TeaModel {
 
     public static class AddModelApplicationRequestTtsConfig extends TeaModel {
         /**
-         * <p>Specifies whether to enable background sound.</p>
+         * <p>Specifies whether to enable background music.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -395,7 +395,7 @@ public class AddModelApplicationRequest extends TeaModel {
         public Boolean backgroundEnabled;
 
         /**
-         * <p>The background sound ID.</p>
+         * <p>The ID of the background music.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -404,7 +404,7 @@ public class AddModelApplicationRequest extends TeaModel {
         public Long backgroundSound;
 
         /**
-         * <p>The background sound volume.</p>
+         * <p>The volume of the background music.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -413,7 +413,7 @@ public class AddModelApplicationRequest extends TeaModel {
         public Long backgroundVolume;
 
         /**
-         * <p>The account ID.</p>
+         * <p>The ID of the account.</p>
          * 
          * <strong>example:</strong>
          * <p>45</p>
@@ -431,7 +431,7 @@ public class AddModelApplicationRequest extends TeaModel {
         public Boolean mixingEnabled;
 
         /**
-         * <p>The mixing template ID.</p>
+         * <p>The ID of the audio mixing template.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -440,7 +440,7 @@ public class AddModelApplicationRequest extends TeaModel {
         public Long mixingTemplate;
 
         /**
-         * <p>The resource ID.</p>
+         * <p>The ID of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -449,7 +449,7 @@ public class AddModelApplicationRequest extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The speed for TTS variable playback. Valid values: -200 to 200. Default value: 0.</p>
+         * <p>The speed of the TTS playback. Valid values: -200 to 200. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>13</p>
@@ -458,16 +458,16 @@ public class AddModelApplicationRequest extends TeaModel {
         public Long ttsSpeed;
 
         /**
-         * <p>The voice style.</p>
+         * <p>The style of the voice.</p>
          * 
          * <strong>example:</strong>
-         * <p>龙小夏</p>
+         * <p>Long Xiaoxia</p>
          */
         @NameInMap("TtsStyle")
         public String ttsStyle;
 
         /**
-         * <p>The volume for TTS variable playback. Valid values: 0 to 100. Default value: 0.</p>
+         * <p>The volume of the TTS playback. Valid values: 0 to 100. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>55</p>
@@ -476,7 +476,7 @@ public class AddModelApplicationRequest extends TeaModel {
         public Long ttsVolume;
 
         /**
-         * <p>The voice code.</p>
+         * <p>The code of the voice.</p>
          * 
          * <strong>example:</strong>
          * <p>ddddfd</p>
@@ -485,12 +485,11 @@ public class AddModelApplicationRequest extends TeaModel {
         public String voiceCode;
 
         /**
-         * <p>The voice type. Valid values:</p>
-         * <ul>
-         * <li>SYSTEM: system voice.</li>
-         * <li>COSYCLONE: cloned voice.</li>
-         * <li>BL-CUSTOM: custom premium cloned voice.</li>
-         * </ul>
+         * <p>The type of the voice. Valid values:</p>
+         * <pre><code>SYSTEM: system voice
+         * COSYCLONE: cloned voice
+         * BL-CUSTOM: custom premium cloned voice
+         * </code></pre>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM</p>

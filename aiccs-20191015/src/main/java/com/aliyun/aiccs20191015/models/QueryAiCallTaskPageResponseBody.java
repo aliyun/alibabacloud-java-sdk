@@ -29,10 +29,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
     public QueryAiCallTaskPageResponseBodyData data;
 
     /**
-     * <p>The error message. This parameter is not returned if the call is successful.</p>
+     * <p>The error message. This parameter is not returned when the call is successful.</p>
      * 
      * <strong>example:</strong>
-     * <p>Invalid parameter.</p>
+     * <p>Invalid parameter</p>
      */
     @NameInMap("Message")
     public String message;
@@ -47,10 +47,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the API call is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: successful.</li>
-     * <li><strong>false</strong>: failed.</li>
+     * <li><strong>true</strong>: Successful.</li>
+     * <li><strong>false</strong>: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -126,33 +126,41 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
          * <p>The agent name.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestAgent.</p>
+         * <p>Test agent</p>
          */
         @NameInMap("AgentName")
         public String agentName;
 
         /**
+         * <p>The application code.</p>
+         * 
          * <strong>example:</strong>
-         * <p>Sample value.</p>
+         * <p>Sample value</p>
          */
         @NameInMap("ApplicationCode")
         public String applicationCode;
 
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>Sample value.</p>
+         * <p>Sample value</p>
          */
         @NameInMap("ApplicationName")
         public String applicationName;
 
         /**
+         * <p>The call expiration date.</p>
+         * 
          * <strong>example:</strong>
-         * <p>Sample value.</p>
+         * <p>Sample value</p>
          */
         @NameInMap("CallExpireDate")
         public String callExpireDate;
 
         /**
+         * <p>The call expiration duration in minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>39</p>
          */
@@ -160,6 +168,8 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public Long callExpireMinutes;
 
         /**
+         * <p>The call expiration type.</p>
+         * 
          * <strong>example:</strong>
          * <p>72</p>
          */
@@ -185,7 +195,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public String completeRate;
 
         /**
-         * <p>The task concurrency.</p>
+         * <p>The concurrency of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -194,7 +204,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public Long concurrentCount;
 
         /**
-         * <p>The creation time. This value is a UNIX timestamp in milliseconds.</p>
+         * <p>The creation time. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1748932499000</p>
@@ -203,7 +213,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The number of calls made on the current day.</p>
+         * <p>The number of voice calls on the current day.</p>
          * 
          * <strong>example:</strong>
          * <p>22</p>
@@ -212,7 +222,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public Long dayCallCount;
 
         /**
-         * <p>The daily connection rate. Daily connection rate = number of connections on the current day ÷ number of calls on the current day (DayCallCount).</p>
+         * <p>The connection rate on the current day. The daily connection rate is calculated by dividing the number of connected calls on the current day by the number of voice calls on the current day (DayCallCount).</p>
          * 
          * <strong>example:</strong>
          * <p>74.14%</p>
@@ -230,7 +240,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public Long dayImportCount;
 
         /**
-         * <p>The total number of failed task executions.</p>
+         * <p>The total number of failures for the task.</p>
          * 
          * <strong>example:</strong>
          * <p>61</p>
@@ -239,7 +249,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public Long failedCount;
 
         /**
-         * <p>The historical connection rate. Historical connection rate = historical number of connections ÷ total number of calls (TotalCallCount).</p>
+         * <p>The historical connection rate. The historical connection rate is calculated by dividing the historical number of connected calls by the total number of voice calls (TotalCallCount).</p>
          * 
          * <strong>example:</strong>
          * <p>95.89%</p>
@@ -248,7 +258,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public String historyConnectRate;
 
         /**
-         * <p>The actual start time of the task. This value is a UNIX timestamp in milliseconds.</p>
+         * <p>The actual start time of the task. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1748932499000</p>
@@ -257,16 +267,16 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public Long realStartTime;
 
         /**
-         * <p>The reason for startup failure.</p>
+         * <p>The reason for the start failure.</p>
          * 
          * <strong>example:</strong>
-         * <p>Agent is offline.</p>
+         * <p>The agent is offline</p>
          */
         @NameInMap("StartFailedReason")
         public String startFailedReason;
 
         /**
-         * <p>The scheduled start time of the task. This value is a UNIX timestamp in milliseconds.</p>
+         * <p>The scheduled start time of the task. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1748932499000</p>
@@ -284,7 +294,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public Long status;
 
         /**
-         * <p>The total number of successful task executions.</p>
+         * <p>The total number of successes for the task.</p>
          * 
          * <strong>example:</strong>
          * <p>36</p>
@@ -305,13 +315,13 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
          * <p>The task name.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestTask.</p>
+         * <p>Test task</p>
          */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
-         * <p>The total number of calls made by the task.</p>
+         * <p>The total number of voice calls for the task.</p>
          * 
          * <strong>example:</strong>
          * <p>58</p>
@@ -320,7 +330,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public Long totalCallCount;
 
         /**
-         * <p>The total number of task items.</p>
+         * <p>The total count of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>71</p>

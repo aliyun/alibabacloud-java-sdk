@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveAgentFromSkillGroupResponseBody extends TeaModel {
     /**
-     * <p>The status code. A value of &quot;Success&quot; indicates that the request succeeded.</p>
+     * <p>The status code. A value of Success indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,13 +14,13 @@ public class RemoveAgentFromSkillGroupResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public RemoveAgentFromSkillGroupResponseBodyData data;
 
     /**
-     * <p>Description of the status code.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -38,10 +38,10 @@ public class RemoveAgentFromSkillGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API invocation succeeded. Valid values:</p>
+     * <p>Indicates whether the API operation is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Succeeded.</li>
-     * <li><strong>false</strong>: Failed.</li>
+     * <li><strong>true</strong>: The operation is successful.</li>
+     * <li><strong>false</strong>: The operation fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class RemoveAgentFromSkillGroupResponseBody extends TeaModel {
 
     public static class RemoveAgentFromSkillGroupResponseBodyData extends TeaModel {
         /**
-         * <p>The number of agents successfully removed.</p>
+         * <p>The number of agents that are successfully removed.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

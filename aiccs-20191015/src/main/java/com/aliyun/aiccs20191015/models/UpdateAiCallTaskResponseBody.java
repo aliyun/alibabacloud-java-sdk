@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAiCallTaskResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason for access denial.</p>
+     * <p>The detailed reasons for access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -25,7 +25,7 @@ public class UpdateAiCallTaskResponseBody extends TeaModel {
     /**
      * <p>The update result. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The update is successful.</p>
+     * <li><p><strong>true</strong>: The update succeeded.</p>
      * </li>
      * <li><p><strong>false</strong>: The update failed.</p>
      * </li>
@@ -58,8 +58,8 @@ public class UpdateAiCallTaskResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the API call is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Successful.</li>
-     * <li><strong>false</strong>: Failed.</li>
+     * <li><strong>true</strong>: The call succeeded.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

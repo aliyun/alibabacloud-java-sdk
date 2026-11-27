@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateThirdSsoAgentResponseBody extends TeaModel {
     /**
-     * <p>Status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class CreateThirdSsoAgentResponseBody extends TeaModel {
     public Long data;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,7 +32,7 @@ public class CreateThirdSsoAgentResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
-     * <p>Description of the status code.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -50,7 +50,7 @@ public class CreateThirdSsoAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API call succeeded.</p>
+     * <p>Indicates whether the API call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

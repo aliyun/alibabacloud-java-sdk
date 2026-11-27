@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteAiOutboundTaskRequest extends TeaModel {
     /**
-     * <p>The Artificial Intelligence Cloud Call Service (AICCS) instance ID.</p>
-     * <p>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
+     * <p>The AICCS instance ID.
+     * You can obtain the instance ID in the <b>Instances</b> section of the left-side navigation pane in the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,8 +16,8 @@ public class DeleteAiOutboundTaskRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The job ID.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/312260.html">CreateAiOutboundTask</a> API and check the <strong>Data</strong> field in the response, or call the <a href="https://help.aliyun.com/document_detail/2718026.html">GetAiOutboundTaskList</a> API and check the <strong>TaskId</strong> field in the response.</p>
+     * <p>The task ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/312260.html">CreateAiOutboundTask</a> operation and view the <strong>Data</strong> parameter in the response, or call the <a href="https://help.aliyun.com/document_detail/2718026.html">GetAiOutboundTaskList</a> operation and view the <strong>TaskId</strong> parameter in the response.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

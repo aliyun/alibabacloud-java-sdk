@@ -9,7 +9,7 @@ public class ImportTaskNumberDatasShrinkRequest extends TeaModel {
      * <ul>
      * <li>EXCEL</li>
      * <li>JSON<blockquote>
-     * <p>Notice: API calls currently support only the JSON data type.</p>
+     * <p>Notice: API calls currently support only the JSON data type.</notice></p>
      * </blockquote>
      * </li>
      * </ul>
@@ -22,6 +22,8 @@ public class ImportTaskNumberDatasShrinkRequest extends TeaModel {
     public String dataType;
 
     /**
+     * <p>The encryption method. Valid values: 0: no encryption. 1: MD5. 2: SHA256. 3: SM3.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,9 +31,9 @@ public class ImportTaskNumberDatasShrinkRequest extends TeaModel {
     public Long encryptionType;
 
     /**
-     * <p>The OSS file path. This parameter is optional.</p>
+     * <p>The Object Storage Service (OSS) file path. This parameter is optional.</p>
      * <blockquote>
-     * <p>API calls do not currently support the Excel data type. Therefore, uploading an OSS file path is currently unavailable.</p>
+     * <p>API calls do not currently support the Excel data type. Therefore, you cannot specify an OSS file path.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,7 +46,7 @@ public class ImportTaskNumberDatasShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>If DataType is set to JSON, upload data through this field. A maximum of 1000 records can be uploaded at a time.</p>
+     * <p>If DataType is set to JSON, you must use this field to upload data. You can upload a maximum of 1,000 entries at a time.</p>
      */
     @NameInMap("PhoneNumberList")
     public String phoneNumberListShrink;

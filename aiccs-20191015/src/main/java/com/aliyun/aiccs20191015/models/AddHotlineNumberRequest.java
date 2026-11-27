@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class AddHotlineNumberRequest extends TeaModel {
     /**
-     * <p>Description of the number.</p>
+     * <p>The description of the hotline number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>热线号码</p>
+     * <p>Hotline number</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>Indicates whether the number is used for inbound calls.</p>
+     * <p>Specifies whether the hotline number is used for inbound calls.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class AddHotlineNumberRequest extends TeaModel {
     public Boolean enableInbound;
 
     /**
-     * <p>Whether inbound satisfaction evaluation is enabled.</p>
+     * <p>Specifies whether to enable the satisfaction survey for inbound calls.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class AddHotlineNumberRequest extends TeaModel {
     public Boolean enableInboundEvaluation;
 
     /**
-     * <p>Whether it is used for outbound calls.</p>
+     * <p>Specifies whether the hotline number is used for outbound calls.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class AddHotlineNumberRequest extends TeaModel {
     public Boolean enableOutbound;
 
     /**
-     * <p>Indicates whether outbound call satisfaction evaluation is enabled.</p>
+     * <p>Specifies whether to enable the satisfaction survey for outbound calls.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,12 +55,12 @@ public class AddHotlineNumberRequest extends TeaModel {
     public Boolean enableOutboundEvaluation;
 
     /**
-     * <p>Satisfaction Level. Valid values:  </p>
+     * <p>The satisfaction level. Valid values:</p>
      * <ul>
-     * <li><strong>2</strong>: Two-level (Satisfied, Not satisfied)  </li>
-     * <li><strong>3</strong>: Three-level (Satisfied, Neutral, Not satisfied)  </li>
-     * <li><strong>4</strong>: Four-level (Very satisfied, Satisfied, Neutral, Not satisfied)  </li>
-     * <li><strong>5</strong>: Five-level (Very satisfied, Satisfied, Neutral, Not satisfied, Very poor)</li>
+     * <li><strong>2</strong>: Level 2 (Satisfied, Dissatisfied).</li>
+     * <li><strong>3</strong>: Level 3 (Satisfied, Neutral, Dissatisfied).</li>
+     * <li><strong>4</strong>: Level 4 (Very satisfied, Satisfied, Neutral, Dissatisfied).</li>
+     * <li><strong>5</strong>: Level 5 (Very satisfied, Satisfied, Neutral, Dissatisfied, Very dissatisfied).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,7 +70,7 @@ public class AddHotlineNumberRequest extends TeaModel {
     public Integer evaluationLevel;
 
     /**
-     * <p>Hotline number.</p>
+     * <p>The hotline number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -80,7 +80,7 @@ public class AddHotlineNumberRequest extends TeaModel {
     public String hotlineNumber;
 
     /**
-     * <p>The IVR flow ID for inbound calls. You can obtain it on the SaaS Workbench &gt; Channel Integration &gt; IVR Flow Management page.</p>
+     * <p>The ID of the inbound IVR flow. You can obtain the ID from the Hotline &gt; Channel Access &gt; IVR Flow Management page in the SaaS workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -89,7 +89,7 @@ public class AddHotlineNumberRequest extends TeaModel {
     public Long inboundFlowId;
 
     /**
-     * <p>The Artificial Intelligence Cloud Call Service (AICCS) instance ID. You can obtain it in the Intelligent Contact Center console.</p>
+     * <p>The Artificial Intelligence Cloud Call Service instance ID. You can obtain the ID from the Artificial Intelligence Cloud Call Service console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -99,7 +99,7 @@ public class AddHotlineNumberRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Whether outbound calls apply to all departments under the instance.</p>
+     * <p>Specifies whether outbound calls apply to all departments under the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -109,7 +109,7 @@ public class AddHotlineNumberRequest extends TeaModel {
     public Boolean outboundAllDepart;
 
     /**
-     * <p>Outbound call effective scope.</p>
+     * <p>The effective scope of outbound calls.</p>
      */
     @NameInMap("OutboundRangeList")
     public java.util.List<AddHotlineNumberRequestOutboundRangeList> outboundRangeList;
@@ -209,7 +209,7 @@ public class AddHotlineNumberRequest extends TeaModel {
 
     public static class AddHotlineNumberRequestOutboundRangeList extends TeaModel {
         /**
-         * <p>Effective department ID.</p>
+         * <p>The ID of the effective department.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -218,9 +218,9 @@ public class AddHotlineNumberRequest extends TeaModel {
         public Long departmentId;
 
         /**
-         * <p>List of effective skill groups.  </p>
+         * <p>The list of effective skill groups.</p>
          * <blockquote>
-         * <p>If the skill group list is empty, the setting applies to the entire department. Otherwise, it applies only to the specified skill groups under the department.</p>
+         * <p>If the skill group list is empty, the configuration applies to the entire department. Otherwise, it applies only to the specified skill groups under the department.</p>
          * </blockquote>
          */
         @NameInMap("GroupIdList")

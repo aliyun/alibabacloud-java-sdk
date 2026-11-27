@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRobotCallDialogRequest extends TeaModel {
     /**
-     * <p>The unique ID of the call. You can call the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> operation and obtain the value from the <strong>Data</strong> field in the response.</p>
+     * <p>The unique ID of the call. You can call the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> operation and view the <strong>Data</strong> response parameter to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListRobotCallDialogRequest extends TeaModel {
     public String callId;
 
     /**
-     * <p>The creation time. Format: YYYY-MM-DD hh:mm:ss. The time must be specified precisely. You can call the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> operation and obtain the value from the <strong>date</strong> parameter in the <strong>Response Header</strong>.</p>
+     * <p>The creation time. Format: YYYY-MM-DD hh:mm:ss. The time must be accurate to the second. You can call the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> operation and view the <strong>date</strong> parameter in the <strong>Response Header</strong> to obtain the time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -337,6 +337,9 @@ public class QueryTouchListResponseBody extends TeaModel {
 
         /**
          * <p>The large field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;test&quot;:&quot;test&quot;,&quot;test2&quot;:1}</p>
          */
         @NameInMap("ExtAttrsString")
         public java.util.Map<String, ?> extAttrsString;

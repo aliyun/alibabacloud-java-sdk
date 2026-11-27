@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class DeleteOutboundTaskRequest extends TeaModel {
     /**
+     * <p>Instance ID of the Artificial Intelligence Cloud Call Service (AICCS) instance. You can obtain instance ID from the AICCS console.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc_xp_pre***</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
+     * <p>The ID of the outbound task.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>120001</p>
      */
     @NameInMap("OutboundTaskId")
     public Long outboundTaskId;

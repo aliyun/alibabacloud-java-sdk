@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddModelApplicationResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason for access denial.</p>
+     * <p>The detailed reasons for access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,7 +14,7 @@ public class AddModelApplicationResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The status code. A value of OK indicates that the request was successful.</p>
+     * <p>The status code. A value of OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -41,7 +41,7 @@ public class AddModelApplicationResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>8C93B345-F702-5449-BA7E-7D110D4BF798</p>
@@ -50,7 +50,7 @@ public class AddModelApplicationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the API operation is successfully called.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

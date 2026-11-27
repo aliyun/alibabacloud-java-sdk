@@ -14,7 +14,7 @@ public class ListRobotParamsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Robot ID, which is also the script ID. You can view it on the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> interface or obtain it by using the <a href="https://help.aliyun.com/document_detail/2717998.html">ListAiccsRobot</a> API.</p>
+     * <p>The chatbot ID, which is the dialog flow ID. You can view the ID on the <a href="https://aiccs.console.aliyun.com/patter/list">Dialog Flow Management</a> page or obtain it by calling the <a href="https://help.aliyun.com/document_detail/2717998.html">ListAiccsRobot</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

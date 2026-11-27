@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetConfigNumListRequest extends TeaModel {
     /**
-     * <p>The agent account name. It is unique within the instance (logon name).</p>
+     * <p>The name of the agent account. The name is unique within the instance and serves as the logon name.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:123@123.com">123@123.com</a></p>
@@ -23,7 +23,7 @@ public class GetConfigNumListRequest extends TeaModel {
     public Long departmentId;
 
     /**
-     * <p>The Artificial Intelligence Cloud Call Service (AICCS) instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</p>
+     * <p>The ID of the AICCS instance. You can obtain the instance ID in the Artificial Intelligence Cloud Call Service console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

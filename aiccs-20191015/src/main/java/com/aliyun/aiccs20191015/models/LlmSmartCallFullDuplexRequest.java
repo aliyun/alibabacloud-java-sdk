@@ -15,7 +15,7 @@ public class LlmSmartCallFullDuplexRequest extends TeaModel {
     public String applicationCode;
 
     /**
-     * <p><strong>CalledNumber</strong><br>The phone number that receives the intelligent outbound call.</p>
+     * <p><strong>CalledNumber</strong><br>The called number that receives the intelligent outbound call.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class LlmSmartCallFullDuplexRequest extends TeaModel {
     public String calledNumber;
 
     /**
-     * <p><strong>CallerNumber</strong><br>The calling number.</p>
+     * <p><strong>CallerNumber</strong><br>The caller number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class LlmSmartCallFullDuplexRequest extends TeaModel {
     public String callerNumber;
 
     /**
-     * <p><strong>OutId</strong><br>The external ID. The value must be 1 to 15 bytes in length.</p>
+     * <p><strong>OutId</strong><br>The external ID. The length is 1 to 15 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>out123</p>
@@ -44,7 +44,7 @@ public class LlmSmartCallFullDuplexRequest extends TeaModel {
     public String outId;
 
     /**
-     * <p><strong>SessionTimeout</strong><br>The maximum call duration. The call is automatically ended when the specified duration is exceeded. Unit: seconds. Maximum value: 3600.</p>
+     * <p><strong>SessionTimeout</strong><br>The maximum call duration. The call is automatically hung up after a timeout. Unit: seconds. The maximum call duration is 3,600 seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>120</p>
@@ -53,16 +53,16 @@ public class LlmSmartCallFullDuplexRequest extends TeaModel {
     public Integer sessionTimeout;
 
     /**
-     * <p><strong>StartWordParam</strong><br>The opening greeting variable. Format: JSON. Specify the variable name and parameter, for example, <code>{&quot;custom&quot;:&quot;XXX&quot;}</code>.</p>
+     * <p><strong>StartWordParam</strong><br>The opening remark variables. Format: JSON. The format is opening remark variable name + parameter, such as <code>{&quot;custom&quot;:&quot;XXX&quot;}</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;tailnumber\&quot;:\&quot;7898\&quot;,\&quot;platformOrder\&quot;:\&quot;\&quot;,\&quot;signatory\&quot;:\&quot;客户\&quot;}</p>
+     * <p>{&quot;tailnumber&quot;:&quot;7898&quot;,&quot;platformOrder&quot;:&quot;&quot;,&quot;signatory&quot;:&quot;Customer&quot;}</p>
      */
     @NameInMap("StartWordParam")
     public java.util.Map<String, ?> startWordParam;
 
     /**
-     * <p>The voice speed. Valid values: 0 to 100. If this parameter is not specified, the value configured in the application is used.</p>
+     * <p>The voice speed. Valid values: 0 to 100. If you do not specify this parameter, the value configured in the application is used.</p>
      * 
      * <strong>example:</strong>
      * <p>70</p>
@@ -71,7 +71,7 @@ public class LlmSmartCallFullDuplexRequest extends TeaModel {
     public Integer ttsSpeed;
 
     /**
-     * <p>The voice code from the personalized voice interface. If this parameter is not specified, the value configured in the application is used.</p>
+     * <p>The voice code for the personalized voice. If you do not specify this parameter, the value configured in the application is used.</p>
      * 
      * <strong>example:</strong>
      * <p>V745A7CED</p>
@@ -80,7 +80,7 @@ public class LlmSmartCallFullDuplexRequest extends TeaModel {
     public String ttsVoiceCode;
 
     /**
-     * <p>The volume. Valid values: -200 to 200. If this parameter is not specified, the value configured in the application is used.</p>
+     * <p>The volume. Valid values: -200 to 200. If you do not specify this parameter, the value configured in the application is used.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

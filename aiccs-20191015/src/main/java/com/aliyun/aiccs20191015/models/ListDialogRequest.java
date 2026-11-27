@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDialogRequest extends TeaModel {
     /**
-     * <p>The called number. You can view the called number in the <a href="https://aiccs.console.aliyun.com/job/list"><strong>Task Management</strong></a> &gt; <strong>Details</strong> interface or retrieve it by invoking the <a href="https://help.aliyun.com/document_detail/2718009.html">ListTaskDetail</a> API. The <strong>Called</strong> parameter in the API response is the called number.</p>
+     * <p>The called number. You can view the called number on the <a href="https://aiccs.console.aliyun.com/job/list"><strong>Task Management</strong></a> &gt; <strong>Details</strong> page or obtain it by calling the <a href="https://help.aliyun.com/document_detail/2718009.html">ListTaskDetail</a> operation. The <strong>Called</strong> parameter returned by the operation is the called number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListDialogRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The unique job ID of the robot outbound call task. You can view it in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface or obtain it by invoking the <a href="https://help.aliyun.com/document_detail/223556.html">CreateTask</a> API.</p>
+     * <p>The unique task ID of the robot call task. You can view the ID on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page or obtain it by calling the <a href="https://help.aliyun.com/document_detail/223556.html">CreateTask</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

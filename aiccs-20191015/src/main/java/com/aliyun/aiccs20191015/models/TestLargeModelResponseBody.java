@@ -117,7 +117,7 @@ public class TestLargeModelResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;code\&quot;:\&quot;InvalidApiKey\&quot;,\&quot;message\&quot;:\&quot;Invalid API-key provided.\&quot;,\&quot;request_id\&quot;:\&quot;dd14065e-3dd5-90a1-b8ee-d6c80891defe\&quot;}</p>
+         * <p>{&quot;code&quot;:&quot;InvalidApiKey&quot;,&quot;message&quot;:&quot;Invalid API-key provided.&quot;,&quot;request_id&quot;:&quot;dd14065e-3dd5-90a1-b8ee-d6c80891defe&quot;}</p>
          */
         @NameInMap("ErrorMsg")
         public String errorMsg;

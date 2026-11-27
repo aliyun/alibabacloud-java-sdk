@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCustomerInfoResponseBody extends TeaModel {
     /**
-     * <p>Status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class GetCustomerInfoResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Membership information.</p>
+     * <p>The member information.</p>
      */
     @NameInMap("Data")
     public GetCustomerInfoResponseBodyData data;
 
     /**
-     * <p>Description of the status code.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -29,7 +29,7 @@ public class GetCustomerInfoResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DF6A3FB7-A5AA-43BE-A65B</p>
@@ -38,7 +38,7 @@ public class GetCustomerInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API call succeeded.</p>
+     * <p>Indicates whether the API call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,22 +93,25 @@ public class GetCustomerInfoResponseBody extends TeaModel {
 
     public static class GetCustomerInfoResponseBodyData extends TeaModel {
         /**
-         * <p>Custom fields.</p>
+         * <p>The custom fields.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;test&quot;:&quot;test&quot;,&quot;test2&quot;:1}</p>
          */
         @NameInMap("CustomizeFields")
         public java.util.Map<String, ?> customizeFields;
 
         /**
-         * <p>Nickname.</p>
+         * <p>The nickname.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试会员</p>
+         * <p>Test member</p>
          */
         @NameInMap("Nick")
         public String nick;
 
         /**
-         * <p>External ID.</p>
+         * <p>The external ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6666666</p>
@@ -117,7 +120,7 @@ public class GetCustomerInfoResponseBody extends TeaModel {
         public String outerId;
 
         /**
-         * <p>Profile picture.</p>
+         * <p>The profile picture.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLSW7XPFlJDwVunXP8pr84TvltwtLlNqTlOVSFeM3bCgn57mAB4JuZZmvMW0qicqW0PyzyUdZpxiaFQ">https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLSW7XPFlJDwVunXP8pr84TvltwtLlNqTlOVSFeM3bCgn57mAB4JuZZmvMW0qicqW0PyzyUdZpxiaFQ</a></p>
@@ -126,16 +129,16 @@ public class GetCustomerInfoResponseBody extends TeaModel {
         public String photo;
 
         /**
-         * <p>Real name.</p>
+         * <p>The real name.</p>
          * 
          * <strong>example:</strong>
-         * <p>刘测试</p>
+         * <p>Liu Test</p>
          */
         @NameInMap("RealName")
         public String realName;
 
         /**
-         * <p>Membership ID.</p>
+         * <p>The member ID.</p>
          * 
          * <strong>example:</strong>
          * <p>823456789023</p>

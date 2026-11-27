@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class HangupThirdCallRequest extends TeaModel {
     /**
-     * <p>Agent account name (agent logon name)</p>
+     * <p>The name of the agent account, which is the logon name of the agent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class HangupThirdCallRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The acid from the WebSocket after an incoming call</p>
+     * <p>The acid value in the WebSocket after an inbound call.</p>
      * 
      * <strong>example:</strong>
      * <p>7719786</p>
@@ -24,7 +24,7 @@ public class HangupThirdCallRequest extends TeaModel {
     public String callId;
 
     /**
-     * <p>Unique ID of the customer request, used for idempotency validation; can be generated using UUID</p>
+     * <p>The unique ID of the client request, which is used to ensure idempotence. You can use a UUID to generate the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
@@ -33,7 +33,7 @@ public class HangupThirdCallRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The connId from the WebSocket after an incoming call</p>
+     * <p>The connId value in the WebSocket after an inbound call.</p>
      * 
      * <strong>example:</strong>
      * <p>7719788</p>
@@ -42,7 +42,7 @@ public class HangupThirdCallRequest extends TeaModel {
     public String connectionId;
 
     /**
-     * <p>Artificial Intelligence Cloud Call Service (AICCS) instance ID, visible in the Artificial Intelligence Cloud Call Service console</p>
+     * <p>The ID of the AICCS instance. You can view the instance ID in the Artificial Intelligence Cloud Call Service console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class HangupThirdCallRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The jobId from the WebSocket after an incoming call</p>
+     * <p>The jobId value in the WebSocket after an inbound call.</p>
      * 
      * <strong>example:</strong>
      * <p>7719787</p>

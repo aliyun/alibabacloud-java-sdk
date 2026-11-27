@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAgentIndexRealTimeRequest extends TeaModel {
     /**
-     * <p>Current page number. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Valid values: integers greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,20 +14,19 @@ public class GetAgentIndexRealTimeRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>List of department IDs.</p>
+     * <p>The list of department IDs.</p>
      */
     @NameInMap("DepIds")
     public java.util.List<Long> depIds;
 
     /**
-     * <p>List of skill group IDs.</p>
+     * <p>The list of skill group IDs.</p>
      */
     @NameInMap("GroupIds")
     public java.util.List<Long> groupIds;
 
     /**
-     * <p>AICCS instance ID.  </p>
-     * <p>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
+     * <p>The ID of the Artificial Intelligence Cloud Call Service (AICCS) instance. You can obtain the instance ID in the <b>Instances</b> section of the left-side navigation pane in the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +36,7 @@ public class GetAgentIndexRealTimeRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Page size. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page. Valid values: integers greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

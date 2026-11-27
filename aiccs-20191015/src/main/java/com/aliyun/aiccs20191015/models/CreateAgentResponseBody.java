@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAgentResponseBody extends TeaModel {
     /**
-     * <p>Status code. A value of &quot;Success&quot; indicates that the request succeeded.</p>
+     * <p>The status code. A value of Success indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class CreateAgentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Agent ID.</p>
+     * <p>The agent ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2578****</p>
@@ -23,7 +23,7 @@ public class CreateAgentResponseBody extends TeaModel {
     public Long data;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,7 +32,7 @@ public class CreateAgentResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
-     * <p>Description of the status code.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -41,7 +41,7 @@ public class CreateAgentResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
@@ -50,10 +50,10 @@ public class CreateAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API call succeeded. Valid values:  </p>
+     * <p>Specifies whether the operation was called successfully. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Succeeded.  </li>
-     * <li><strong>false</strong>: Failed.</li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

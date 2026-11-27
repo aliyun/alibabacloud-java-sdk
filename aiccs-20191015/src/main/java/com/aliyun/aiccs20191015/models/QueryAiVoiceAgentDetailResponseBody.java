@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access was denied.</p>
+     * <p>The detailed reason for the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -23,7 +23,7 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The agent details.</p>
+     * <p>The agent details data.</p>
      */
     @NameInMap("Data")
     public QueryAiVoiceAgentDetailResponseBodyData data;
@@ -49,8 +49,8 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the API call is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Successful.</li>
-     * <li><strong>false</strong>: Failed.</li>
+     * <li><strong>true</strong>: Success.</li>
+     * <li><strong>false</strong>: Failure.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
 
     public static class QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentCallConfigEventConfig extends TeaModel {
         /**
-         * <p>Specifies whether to hang up when an intelligent answering service is detected.</p>
+         * <p>Specifies whether to hang up when an AI call assistant is detected.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -123,7 +123,7 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
         public Boolean callAssistantHangup;
 
         /**
-         * <p>Specifies whether intelligent answering service detection is enabled.</p>
+         * <p>Specifies whether to enable the recognition of AI call assistants.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -132,7 +132,7 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
         public Boolean callAssistantRecognize;
 
         /**
-         * <p>Specifies whether the first silence triggers the model.</p>
+         * <p>Specifies whether the first silence invokes the model.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -144,8 +144,8 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
          * <p>The silence duration.</p>
          * <blockquote>
          * <ul>
-         * <li>Maximum value: 15s.</li>
-         * <li>Minimum value: 3s.</li>
+         * <li>Maximum value: 15.</li>
+         * <li>Minimum value: 3.</li>
          * </ul>
          * </blockquote>
          * 
@@ -156,7 +156,7 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
         public Long muteDuration;
 
         /**
-         * <p>The number of consecutive silence events before the system proactively hangs up.</p>
+         * <p>The number of consecutive silence events after which the call is actively disconnected.</p>
          * <blockquote>
          * <ul>
          * <li>Maximum value: 5.</li>
@@ -171,7 +171,7 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
         public Long muteHangupNum;
 
         /**
-         * <p>The maximum call duration. The call is automatically hung up after the timeout. Unit: seconds.</p>
+         * <p>The maximum call duration. The call is automatically disconnected after a timeout. Unit: seconds.</p>
          * <blockquote>
          * <ul>
          * <li>Maximum value: 3600.</li>
@@ -242,7 +242,7 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
 
     public static class QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentCallConfigTtsConfig extends TeaModel {
         /**
-         * <p>Indicates whether background sound is enabled.</p>
+         * <p>Specifies whether to enable background sound.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -260,7 +260,7 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
         public Long backgroundSound;
 
         /**
-         * <p>The background sound volume. Valid values: 0: low. 1: medium. 2: high.</p>
+         * <p>The background sound volume. Valid values: 0 (low), 1 (medium), and 2 (high).</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -269,7 +269,7 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
         public Long backgroundVolume;
 
         /**
-         * <p>Indicates whether audio mixing is enabled.</p>
+         * <p>Specifies whether to enable audio mixing.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -287,11 +287,11 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
         public Long mixingTemplate;
 
         /**
-         * <p>The voice speed during TTS playback.</p>
+         * <p>The TTS playback speed.</p>
          * <blockquote>
          * <ul>
          * <li>Valid values: -200 to 200. Default value: 0.</li>
-         * <li>If no value is specified, the voice speed configured in the large model application is used by default.</li>
+         * <li>If you do not specify a value, the voice speed configured in the large model application is used by default.</li>
          * </ul>
          * </blockquote>
          * 
@@ -315,7 +315,7 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
          * <blockquote>
          * <ul>
          * <li>Valid values: 0 to 100. Default value: 0.</li>
-         * <li>If no value is specified, the volume configured in the large model application is used by default.</li>
+         * <li>If you do not specify a value, the volume configured in the large model application is used by default.</li>
          * </ul>
          * </blockquote>
          * 
@@ -335,7 +335,7 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
         public String voiceCode;
 
         /**
-         * <p>The voice type. Valid values: SYSTEM: system voice. COSYCLONE: cloned voice. BL-CUSTOM: custom premium cloned voice.</p>
+         * <p>The voice type. Valid values: SYSTEM (system voice), COSYCLONE (cloned voice), and BL-CUSTOM (custom premium cloned voice).</p>
          * 
          * <strong>example:</strong>
          * <p>Sample value</p>
@@ -485,16 +485,16 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
 
     public static class QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentModelConfigChildTaskList extends TeaModel {
         /**
-         * <p>The subtask description.</p>
+         * <p>The child task description.</p>
          * 
          * <strong>example:</strong>
-         * <p>新用户邀约: \&quot;喂，家长您好！我是***<strong>的王老师，我们现在有</strong>课程100个试听名额，想帮宝贝安排一下体验，您看什么时候比较方便呢？\</p>
+         * <p>New user invitation: &quot;Hello, parent! I am Teacher Wang from *****. We currently have 100 trial spots for the ** course and would like to schedule a trial class for your child. When would be a convenient time for you?&quot;\</p>
          */
         @NameInMap("ChildTaskDescription")
         public String childTaskDescription;
 
         /**
-         * <p>The subtask name.</p>
+         * <p>The child task name.</p>
          * 
          * <strong>example:</strong>
          * <p>Opening and invitation</p>
@@ -503,7 +503,7 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
         public String childTaskName;
 
         /**
-         * <p>The unique ID of the subtask.</p>
+         * <p>The unique ID of the child task.</p>
          * 
          * <strong>example:</strong>
          * <p>280cd4bf-*******df472c</p>
@@ -544,7 +544,7 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
 
     public static class QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentModelConfigCustomExceptionList extends TeaModel {
         /**
-         * <p>Specifies whether to output as an exception tag.</p>
+         * <p>Specifies whether it is output as an exception tag.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -627,7 +627,7 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
          * <p>The description of the valid value.</p>
          * 
          * <strong>example:</strong>
-         * <p>Strong intent</p>
+         * <p>Strong intention</p>
          */
         @NameInMap("Description")
         public String description;
@@ -692,10 +692,10 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The description of the main intent.</p>
+         * <p>The main intent description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Call effectiveness rating: A, B, C, D (A is the best)</p>
+         * <p>Call performance rating: A, B, C, D (A is the best)</p>
          */
         @NameInMap("MainPurposeDescription")
         public String mainPurposeDescription;
@@ -710,7 +710,7 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
          * <p>The main intent name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Call effectiveness rating</p>
+         * <p>Call performance rating</p>
          */
         @NameInMap("MainPurposeName")
         public String mainPurposeName;
@@ -925,7 +925,7 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
          * <p>The description of the enumeration value.</p>
          * 
          * <strong>example:</strong>
-         * <p>The customer completely rejects retention</p>
+         * <p>The customer completely refuses retention</p>
          */
         @NameInMap("Description")
         public String description;
@@ -993,13 +993,13 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
          * <p>The variable description.</p>
          * 
          * <strong>example:</strong>
-         * <p>The car series the user is interested in</p>
+         * <p>The vehicle series that the user is interested in</p>
          */
         @NameInMap("PhoneTagDescription")
         public String phoneTagDescription;
 
         /**
-         * <p>The list of enumeration values for the variable. This field is present only when the variable value type is ENUM.</p>
+         * <p>The list of enumeration values for the variable. This field is available only when the variable value type is ENUM.</p>
          */
         @NameInMap("PhoneTagEnum")
         public java.util.List<QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentModelConfigPhoneTagConfigPhoneTagEnum> phoneTagEnum;
@@ -1017,13 +1017,13 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
          * <p>The Chinese name of the variable.</p>
          * 
          * <strong>example:</strong>
-         * <p>意向车系</p>
+         * <p>Intended vehicle series</p>
          */
         @NameInMap("PhoneTagName")
         public String phoneTagName;
 
         /**
-         * <p>Indicates whether the variable is required.</p>
+         * <p>Specifies whether the variable is required.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1140,13 +1140,13 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
         public Long businessType;
 
         /**
-         * <p>The list of subtask configurations.</p>
+         * <p>The list of child task configurations.</p>
          */
         @NameInMap("ChildTaskList")
         public java.util.List<QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentModelConfigChildTaskList> childTaskList;
 
         /**
-         * <p>Indicates whether custom exception handling is enabled.</p>
+         * <p>Specifies whether to enable custom exception handling.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1158,28 +1158,28 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
          * <p>The custom exception file ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>OSS文件ID</p>
+         * <p>OSS file ID</p>
          */
         @NameInMap("CustomExceptionFileId")
         public String customExceptionFileId;
 
         /**
-         * <p>The name of the custom exception file.</p>
+         * <p>The custom exception file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>异常测试文件.xlsx</p>
+         * <p>Exception test file.xlsx</p>
          */
         @NameInMap("CustomExceptionFileName")
         public String customExceptionFileName;
 
         /**
-         * <p><strong>[Deprecated]</strong> This field is deprecated and will be removed in the future.</p>
+         * <p><strong>[Deprecated]</strong> This field is deprecated and will be removed in a future release.</p>
          */
         @NameInMap("CustomExceptionList")
         public java.util.List<QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentModelConfigCustomExceptionList> customExceptionList;
 
         /**
-         * <p><strong>[Deprecated]</strong> This field is deprecated and will be removed in the future.</p>
+         * <p><strong>[Deprecated]</strong> This field is deprecated and will be removed in a future release.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -1190,7 +1190,7 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
         public String customExceptionUrlPath;
 
         /**
-         * <p>The language style.</p>
+         * <p>The voice style.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1202,7 +1202,7 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
          * <p>The description of the advanced task flow.</p>
          * 
          * <strong>example:</strong>
-         * <p>This outbound call communicates with parents through three core steps, ........ 3. User needs &gt; Proactive introduction</p>
+         * <p>This outbound call communicates with parents through three core steps... 3. User needs &gt; Proactive introduction</p>
          */
         @NameInMap("FlowDesc")
         public String flowDesc;
@@ -1220,13 +1220,13 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
         public java.util.List<String> knowledgeDocNameList;
 
         /**
-         * <p>The list of original file names of knowledge base documents.</p>
+         * <p>The list of original file names of the knowledge base documents.</p>
          */
         @NameInMap("KnowledgeDocOriginalNameList")
         public java.util.List<String> knowledgeDocOriginalNameList;
 
         /**
-         * <p>Indicates whether a knowledge base is associated.</p>
+         * <p>Specifies whether to associate a knowledge base.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1250,7 +1250,7 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
         public QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentModelConfigMainPurpose mainPurpose;
 
         /**
-         * <p>The output tag configurations.</p>
+         * <p>The output tag configuration.</p>
          */
         @NameInMap("OutputTagConfig")
         public java.util.List<QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentModelConfigOutputTagConfig> outputTagConfig;
@@ -1262,7 +1262,7 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
         public java.util.List<QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentModelConfigPhoneTagConfig> phoneTagConfig;
 
         /**
-         * <p>The opening statement.</p>
+         * <p>The opening speech.</p>
          * 
          * <strong>example:</strong>
          * <p>Hello, this is ******</p>
@@ -1271,7 +1271,7 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
         public String prologue;
 
         /**
-         * <p>The URL of the opening greeting recording audio file. This field has a value only when StartWordType is set to 1.</p>
+         * <p>The URL of the opening remark audio file. This field has a value only when StartWordType is set to 1.</p>
          * 
          * <strong>example:</strong>
          * <p>Sample value</p>
@@ -1280,7 +1280,7 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
         public String recordingFile;
 
         /**
-         * <p>The opening statement type. Valid values: 0: text. 1: recording.</p>
+         * <p>The opening speech type. Valid values: 0: Text. 1: Recording.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1292,7 +1292,7 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
          * <p>The system role.</p>
          * 
          * <strong>example:</strong>
-         * <p>Course sales</p>
+         * <p>Course sales representative</p>
          */
         @NameInMap("SysRole")
         public String sysRole;
@@ -1582,7 +1582,7 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
         public Long status;
 
         /**
-         * <p>The language style name.</p>
+         * <p>The voice style name.</p>
          * 
          * <strong>example:</strong>
          * <p>Friendly</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAgentStatisticsResponseBody extends TeaModel {
     /**
-     * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+     * <p>The status code. A value of 200 indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class GetAgentStatisticsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Data list.</p>
+     * <p>The data list.</p>
      */
     @NameInMap("Data")
     public GetAgentStatisticsResponseBodyData data;
 
     /**
-     * <p>Description of the status code.</p>
+     * <p>The status code description.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -29,7 +29,7 @@ public class GetAgentStatisticsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
@@ -38,9 +38,9 @@ public class GetAgentStatisticsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API was invoked successfully. Valid values:  </p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Succeeded.  </li>
+     * <li><strong>true</strong>: Successful.</li>
      * <li><strong>false</strong>: Failed.</li>
      * </ul>
      * 
@@ -97,7 +97,7 @@ public class GetAgentStatisticsResponseBody extends TeaModel {
 
     public static class GetAgentStatisticsResponseBodyData extends TeaModel {
         /**
-         * <p>Current page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -106,7 +106,7 @@ public class GetAgentStatisticsResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
-         * <p>Page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>
@@ -115,7 +115,7 @@ public class GetAgentStatisticsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>Information is a JSON string of type List<Map>.</p>
+         * <p>The data rows, which is a JSON string of the List<Map> type.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;n_resttype_1&quot;:15,&quot;t_outcall_speak&quot;:829747,&quot;average_incoming_time&quot;:&quot;8451.29&quot;,&quot;n_resttype_3&quot;:0,&quot;minute_id&quot;:&quot;-1&quot;,&quot;n_conference_speak&quot;:0,&quot;n_resttype_2&quot;:0,&quot;n_resttype_5&quot;:0,&quot;n_resttype_4&quot;:0,&quot;n_resttype_7&quot;:0,&quot;n_resttype_6&quot;:0,&quot;n_resttype_9&quot;:0,&quot;n_resttype_8&quot;:0,&quot;n_outcall_dial&quot;:25,&quot;total_break_time&quot;:&quot;58555&quot;,&quot;n_internal_speak&quot;:0,&quot;n_send_step_transfer&quot;:7,&quot;n_consulted_internal_speak&quot;:0}</p>
@@ -124,7 +124,7 @@ public class GetAgentStatisticsResponseBody extends TeaModel {
         public String rows;
 
         /**
-         * <p>Total number of records.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>

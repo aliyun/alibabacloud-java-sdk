@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryHotlineInQueueResponseBody extends TeaModel {
     /**
-     * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+     * <p>The status code. A value of 200 indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class QueryHotlineInQueueResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Hotline agent data.</p>
+     * <p>The hotline agent data.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;n_online_now&quot;:10,&quot;n_idle_now&quot;:3,&quot;n_resttype_now&quot;:3,&quot;n_acw_now&quot;:1}</p>
@@ -23,16 +23,16 @@ public class QueryHotlineInQueueResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>Status code description.</p>
+     * <p>The status code description.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxx</p>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
@@ -41,7 +41,7 @@ public class QueryHotlineInQueueResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the API call succeeded.</p>
+     * <p>Indicates whether the API call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

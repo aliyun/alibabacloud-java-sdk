@@ -14,7 +14,7 @@ public class ListAvailableTtsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The voice code for a custom voice. You can find it on the <a href="https://aiccs.console.aliyun.com/engine/voiceprint">Custom Voice</a> page.</p>
+     * <p>The personalized voice code. You can view the voice code on the <a href="https://aiccs.console.aliyun.com/engine/voiceprint">Personalized Voices</a> page.</p>
      * 
      * <strong>example:</strong>
      * <p>V9A******</p>
@@ -23,10 +23,12 @@ public class ListAvailableTtsRequest extends TeaModel {
     public String ttsVoiceCode;
 
     /**
-     * <p>The type of the TTS voice. Valid values:</p>
-     * <p><code>SYSTEM</code>: system voice.</p>
-     * <p><code>COSYCLONE</code>: cloned voice.</p>
-     * <p><code>BL-CUSTOM</code>: premium custom voice.</p>
+     * <p>The enumeration value of the TTS voice type. Valid values:</p>
+     * <ul>
+     * <li><code>SYSTEM</code>: system voice.</li>
+     * <li><code>COSYCLONE</code>: cloned voice.</li>
+     * <li><code>BL-CUSTOM</code>: custom premium cloned voice.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM</p>

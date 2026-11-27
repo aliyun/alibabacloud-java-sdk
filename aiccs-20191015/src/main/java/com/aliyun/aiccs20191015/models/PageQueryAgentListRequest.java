@@ -17,7 +17,7 @@ public class PageQueryAgentListRequest extends TeaModel {
      * <p>The agent name.</p>
      * 
      * <strong>example:</strong>
-     * <p>TestAgent</p>
+     * <p>Test agent</p>
      */
     @NameInMap("AgentName")
     public String agentName;
@@ -26,7 +26,7 @@ public class PageQueryAgentListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number, starting from 1. Default value: 1.</p>
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +35,7 @@ public class PageQueryAgentListRequest extends TeaModel {
     public Long pageNo;
 
     /**
-     * <p>The page size. Default value: 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

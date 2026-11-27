@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>aiccs20191015</artifactId>
-  <version>5.4.3</version>
+  <version>5.4.4</version>
   <packaging>jar</packaging>
   <name>aiccs20191015</name>
   <description>Alibaba Cloud aiccs (20191015) SDK for Java
@@ -41,12 +41,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.26</version>
+      <version>0.2.29</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.3.12</version>
+      <version>0.3.21</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -62,6 +62,11 @@
       <groupId>com.aliyun</groupId>
       <artifactId>tea</artifactId>
       <version>1.4.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>alibabacloud-gateway-pop</artifactId>
+      <version>0.1.7</version>
     </dependency>
   </dependencies>
   <build>

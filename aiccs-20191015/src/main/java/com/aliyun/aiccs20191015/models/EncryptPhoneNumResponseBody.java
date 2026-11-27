@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EncryptPhoneNumResponseBody extends TeaModel {
     /**
-     * <p>The status code. A return value of 200 indicates that the Request Succeeded.</p>
+     * <p>The status code. A value of 200 indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,16 +14,16 @@ public class EncryptPhoneNumResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The ciphertext after encryption.</p>
+     * <p>The ciphertext.</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>Description of the status code.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxx</p>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
@@ -38,7 +38,7 @@ public class EncryptPhoneNumResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API Call Succeeded.</p>
+     * <p>Indicates whether the API call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

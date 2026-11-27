@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LlmSmartCallResponseBody extends TeaModel {
     /**
-     * <p>Unique receipt ID for this call.</p>
+     * <p>The unique receipt ID of the call.</p>
      * 
      * <strong>example:</strong>
      * <p>125165515<em><strong>^11195613</strong></em>*</p>
@@ -14,7 +14,7 @@ public class LlmSmartCallResponseBody extends TeaModel {
     public String callId;
 
     /**
-     * <p>Request status code. A return value of &quot;OK&quot; indicates that the request succeeded.</p>
+     * <p>The status code of the request. A value of OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -23,7 +23,7 @@ public class LlmSmartCallResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Description of the status code.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -32,7 +32,7 @@ public class LlmSmartCallResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D6A51251-F7C4-596A-9F45-3C3219A5450D</p>

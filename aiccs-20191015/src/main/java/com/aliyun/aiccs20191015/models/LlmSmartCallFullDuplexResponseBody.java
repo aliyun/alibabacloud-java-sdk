@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class LlmSmartCallFullDuplexResponseBody extends TeaModel {
     /**
-     * <p>The call record ID that identifies a call record.</p>
+     * <p>The call record ID, which is used to identify a call record.</p>
      * <blockquote>
-     * <p>When you call the LlmSmartCall operation to initiate an LLM-based outbound call, this call record ID (CallId) is returned.</p>
+     * <p>When you call the LlmSmartCall operation for large model outbound calls, this call record ID, namely CallId, is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

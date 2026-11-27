@@ -148,7 +148,7 @@ public class CreateTaskRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试任务</p>
+     * <p>Test task</p>
      */
     @NameInMap("TaskName")
     public String taskName;

@@ -4,18 +4,45 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetQualityRuleTagListResponseBody extends TeaModel {
+    /**
+     * <p>The status code. A value of 200 indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The list of rule tags.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetQualityRuleTagListResponseBodyData> data;
 
+    /**
+     * <p>The description of the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE338D98-9BD3-4413-B165</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the API call was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +92,21 @@ public class GetQualityRuleTagListResponseBody extends TeaModel {
     }
 
     public static class GetQualityRuleTagListResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the rule tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70</p>
+         */
         @NameInMap("RuleTagId")
         public Long ruleTagId;
 
+        /**
+         * <p>The name of the rule tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Modify tag</p>
+         */
         @NameInMap("RuleTagName")
         public String ruleTagName;
 

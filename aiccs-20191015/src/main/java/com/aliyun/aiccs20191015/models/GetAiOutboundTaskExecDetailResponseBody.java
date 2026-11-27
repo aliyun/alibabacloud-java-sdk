@@ -14,13 +14,13 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>List of task executions.</p>
+     * <p>The task execution list.</p>
      */
     @NameInMap("Data")
     public GetAiOutboundTaskExecDetailResponseBodyData data;
 
     /**
-     * <p>Status code description.</p>
+     * <p>The status message.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -29,7 +29,7 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
@@ -38,9 +38,9 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API was invoked successfully.</p>
+     * <p>Indicates whether the API operation was called successfully. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>true</strong>: Successful.</li>
      * <li><strong>false</strong>: Failed.</li>
      * </ul>
      * 
@@ -97,7 +97,7 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
 
     public static class GetAiOutboundTaskExecDetailResponseBodyDataList extends TeaModel {
         /**
-         * <p>Job batch.</p>
+         * <p>The task batch.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -106,7 +106,7 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
         public Integer batchVersion;
 
         /**
-         * <p>Custom business information</p>
+         * <p>The custom business information.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -124,7 +124,7 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
         public Integer callCount;
 
         /**
-         * <p>The activity ID associated with this outbound call.</p>
+         * <p>The ID of the campaign associated with the outbound call.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -133,7 +133,7 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
         public Long caseId;
 
         /**
-         * <p>Number import time. UNIX timestamp format, unit: milliseconds.</p>
+         * <p>The number import time. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1632289999000</p>
@@ -142,16 +142,16 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>Result of the last outbound call.</p>
+         * <p>The result of the last outbound call.</p>
          * 
          * <strong>example:</strong>
-         * <p>未接通</p>
+         * <p>Not connected</p>
          */
         @NameInMap("LastCallResult")
         public String lastCallResult;
 
         /**
-         * <p>Outbound phone number.</p>
+         * <p>The outbound call number.</p>
          * 
          * <strong>example:</strong>
          * <p>150****0000</p>
@@ -160,13 +160,13 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
         public String phoneNum;
 
         /**
-         * <p>Execution status. Valid values:</p>
+         * <p>The execution status. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Pending call.</li>
+         * <li><strong>1</strong>: Pending.</li>
          * <li><strong>2</strong>: Calling.</li>
          * <li><strong>3</strong>: Completed.</li>
-         * <li><strong>4</strong>: Stopped.</li>
-         * <li><strong>5</strong>: Pending retry.</li>
+         * <li><strong>4</strong>: Terminated.</li>
+         * <li><strong>5</strong>: Pending recall.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -176,10 +176,10 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>Execution status description.</p>
+         * <p>The execution status description.</p>
          * 
          * <strong>example:</strong>
-         * <p>待呼叫</p>
+         * <p>1</p>
          */
         @NameInMap("StatusDesc")
         public Integer statusDesc;
@@ -265,7 +265,7 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
 
     public static class GetAiOutboundTaskExecDetailResponseBodyData extends TeaModel {
         /**
-         * <p>Current page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -283,13 +283,13 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
         public Boolean hasNextPage;
 
         /**
-         * <p>List of outbound call executions.</p>
+         * <p>The execution list of outbound call numbers.</p>
          */
         @NameInMap("List")
         public java.util.List<GetAiOutboundTaskExecDetailResponseBodyDataList> list;
 
         /**
-         * <p>Page size.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -298,7 +298,7 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>Total number of jobs.</p>
+         * <p>The total number of tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>199</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHotlineRecordDetailResponseBody extends TeaModel {
     /**
-     * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+     * <p>The status code. A value of 200 indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,16 +23,16 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Description of the status code.</p>
+     * <p>The status message.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxx</p>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
@@ -41,13 +41,13 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("ResultData")
     public ListHotlineRecordDetailResponseBodyResultData resultData;
 
     /**
-     * <p>Indicates whether the API call succeeded.</p>
+     * <p>Indicates whether the API call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
 
     public static class ListHotlineRecordDetailResponseBodyResultDataData extends TeaModel {
         /**
-         * <p>Hotline End Time.</p>
+         * <p>The end time of the hotline call.</p>
          * 
          * <strong>example:</strong>
          * <p>1614578410000</p>
@@ -119,7 +119,7 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>OSS URL of the hotline call recording.</p>
+         * <p>The URL of the hotline call recording.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://xxx.xxxxx/xx.wav">http://xxx.xxxxx/xx.wav</a></p>
@@ -128,7 +128,7 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
         public String ossUrl;
 
         /**
-         * <p>Servicer Account.</p>
+         * <p>The customer service representative account.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:123@123.com">123@123.com</a></p>
@@ -137,7 +137,7 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
         public String servicerName;
 
         /**
-         * <p>Start Time of the hotline call.</p>
+         * <p>The start time of the hotline call.</p>
          * 
          * <strong>example:</strong>
          * <p>1614578400000</p>
@@ -186,7 +186,7 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
 
     public static class ListHotlineRecordDetailResponseBodyResultData extends TeaModel {
         /**
-         * <p>Current page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -195,13 +195,13 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
         public Long currentPage;
 
         /**
-         * <p>Query result data.</p>
+         * <p>The query result data.</p>
          */
         @NameInMap("Data")
         public java.util.List<ListHotlineRecordDetailResponseBodyResultDataData> data;
 
         /**
-         * <p>Page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -210,7 +210,7 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
         public Long onePageSize;
 
         /**
-         * <p>Total number of pages.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -219,7 +219,7 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
         public Long totalPage;
 
         /**
-         * <p>Total number of records.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>945</p>

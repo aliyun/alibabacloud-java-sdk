@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddOuterAccountRequest extends TeaModel {
     /**
-     * <p>Profile picture.</p>
+     * <p>The profile picture.</p>
      * 
      * <strong>example:</strong>
      * <p>http://****</p>
@@ -14,16 +14,16 @@ public class AddOuterAccountRequest extends TeaModel {
     public String avatar;
 
     /**
-     * <p>Extension field, in JSON string format.</p>
+     * <p>The extension field. The value is a JSON string.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;备注&quot;:&quot;临时技能组&quot;}</p>
+     * <p>{&quot;Note&quot;:&quot;Temporary skill group&quot;}</p>
      */
     @NameInMap("Ext")
     public String ext;
 
     /**
-     * <p>External Account ID.</p>
+     * <p>The ID of the external account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,16 +33,16 @@ public class AddOuterAccountRequest extends TeaModel {
     public String outerAccountId;
 
     /**
-     * <p>External account name.</p>
+     * <p>The name of the external account.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试</p>
+     * <p>Test</p>
      */
     @NameInMap("OuterAccountName")
     public String outerAccountName;
 
     /**
-     * <p>External account type.</p>
+     * <p>The type of the external account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class AddOuterAccountRequest extends TeaModel {
     public String outerAccountType;
 
     /**
-     * <p>External department ID.</p>
+     * <p>The ID of the external department.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -61,7 +61,7 @@ public class AddOuterAccountRequest extends TeaModel {
     public String outerDepartmentId;
 
     /**
-     * <p>External department type: Invalid department type.</p>
+     * <p>The type of the external department: invalid department type.</p>
      * 
      * <strong>example:</strong>
      * <p>type_invalid</p>
@@ -70,7 +70,7 @@ public class AddOuterAccountRequest extends TeaModel {
     public String outerDepartmentType;
 
     /**
-     * <p>List of external skill group IDs. Separate multiple IDs with commas (,).</p>
+     * <p>The IDs of the external skill groups. Separate multiple IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;222&quot;,&quot;333&quot;,&quot;444&quot;]</p>
@@ -79,7 +79,7 @@ public class AddOuterAccountRequest extends TeaModel {
     public String outerGroupIds;
 
     /**
-     * <p>Skill group type.</p>
+     * <p>The type of the skill group.</p>
      * 
      * <strong>example:</strong>
      * <p>mybank</p>
@@ -88,10 +88,10 @@ public class AddOuterAccountRequest extends TeaModel {
     public String outerGroupType;
 
     /**
-     * <p>Real name of the account.</p>
+     * <p>The real name of the account.</p>
      * 
      * <strong>example:</strong>
-     * <p>张三</p>
+     * <p>Zhang San</p>
      */
     @NameInMap("RealName")
     public String realName;

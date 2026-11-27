@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHotlineRuntimeInfoRequest extends TeaModel {
     /**
-     * <p>The agent account name. It is unique within the instance (logon name).</p>
+     * <p>The agent account name. The name is unique within the instance and used as the logon name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,7 @@ public class GetHotlineRuntimeInfoRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The instance ID.  </p>
-     * <p>You can log on to the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a> and view the instance ID in <strong>Instance Management</strong>.</p>
+     * <p>The instance ID. Log on to the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a> and view the instance ID in <strong>Instance Management</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

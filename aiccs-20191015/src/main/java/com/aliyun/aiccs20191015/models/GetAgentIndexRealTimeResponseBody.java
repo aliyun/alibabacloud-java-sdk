@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAgentIndexRealTimeResponseBody extends TeaModel {
     /**
-     * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+     * <p>The status code. A value of 200 indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class GetAgentIndexRealTimeResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Data list.</p>
+     * <p>The data list.</p>
      */
     @NameInMap("Data")
     public GetAgentIndexRealTimeResponseBodyData data;
 
     /**
-     * <p>Description of the status code.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -29,7 +29,7 @@ public class GetAgentIndexRealTimeResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
@@ -38,9 +38,9 @@ public class GetAgentIndexRealTimeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API call succeeded. Valid values:  </p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Succeeded.  </li>
+     * <li><strong>true</strong>: Successful.</li>
      * <li><strong>false</strong>: Failed.</li>
      * </ul>
      * 
@@ -97,16 +97,16 @@ public class GetAgentIndexRealTimeResponseBody extends TeaModel {
 
     public static class GetAgentIndexRealTimeResponseBodyDataColumns extends TeaModel {
         /**
-         * <p>Metric.</p>
+         * <p>The metric.</p>
          * 
          * <strong>example:</strong>
-         * <p>客服ID</p>
+         * <p>Agent ID</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>Metric description.</p>
+         * <p>The metric description.</p>
          * 
          * <strong>example:</strong>
          * <p>servicerId</p>
@@ -139,13 +139,13 @@ public class GetAgentIndexRealTimeResponseBody extends TeaModel {
 
     public static class GetAgentIndexRealTimeResponseBodyData extends TeaModel {
         /**
-         * <p>Description of returned columns.</p>
+         * <p>The descriptions of the returned columns.</p>
          */
         @NameInMap("Columns")
         public java.util.List<GetAgentIndexRealTimeResponseBodyDataColumns> columns;
 
         /**
-         * <p>Current page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -154,7 +154,7 @@ public class GetAgentIndexRealTimeResponseBody extends TeaModel {
         public Integer page;
 
         /**
-         * <p>Page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -163,13 +163,13 @@ public class GetAgentIndexRealTimeResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>Returned data results.</p>
+         * <p>The returned data results.</p>
          */
         @NameInMap("Rows")
         public java.util.List<java.util.Map<String, ?>> rows;
 
         /**
-         * <p>Total number of records.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>

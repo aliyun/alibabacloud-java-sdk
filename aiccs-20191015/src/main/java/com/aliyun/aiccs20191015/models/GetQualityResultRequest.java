@@ -4,41 +4,94 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetQualityResultRequest extends TeaModel {
+    /**
+     * <p>The channel type. Valid values:</p>
+     * <ul>
+     * <li><strong>online</strong>: Online.</li>
+     * <li><strong>hotline</strong>: Hotline.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>online</p>
+     */
     @NameInMap("ChannelType")
     public String channelType;
 
+    /**
+     * <p>The IDs of the skill groups.</p>
+     */
     @NameInMap("GroupIds")
     public java.util.List<Long> groupIds;
 
+    /**
+     * <p>The hit status. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: Not hit.</li>
+     * <li><strong>1</strong>: Hit.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("HitStatus")
     public Integer hitStatus;
 
     /**
+     * <p>Instance ID of the AICCS instance. You can obtain instance ID from the Artificial Intelligence Cloud Call Service console.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc_xp_pre***</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The current page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries per page. Default value: 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The IDs of the quality inspection tasks.</p>
+     */
     @NameInMap("ProjectIds")
     public java.util.List<Long> projectIds;
 
+    /**
+     * <p>The IDs of the quality inspection rules.</p>
+     */
     @NameInMap("QualityRuleIds")
     public java.util.List<Long> qualityRuleIds;
 
     /**
+     * <p>The end time of the session.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-04-18 16:04:20</p>
      */
     @NameInMap("TouchEndTime")
     public String touchEndTime;
 
     /**
+     * <p>The start time of the session.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-11-18 16:02:20</p>
      */
     @NameInMap("TouchStartTime")
     public String touchStartTime;

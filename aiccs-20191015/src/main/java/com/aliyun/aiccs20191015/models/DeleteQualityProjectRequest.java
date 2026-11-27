@@ -5,11 +5,21 @@ import com.aliyun.tea.*;
 
 public class DeleteQualityProjectRequest extends TeaModel {
     /**
+     * <p>The AICCS instance ID. You can obtain the ID from the Artificial Intelligence Cloud Call Service console.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc_xp_pre***</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The quality inspection task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 

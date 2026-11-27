@@ -14,7 +14,7 @@ public class DeleteAiOutboundTaskResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Description of the status code.</p>
+     * <p>The status code description.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -32,10 +32,10 @@ public class DeleteAiOutboundTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API call succeeded.</p>
+     * <p>Indicates whether the API call was successful.</p>
      * <ul>
-     * <li><strong>true</strong>: Succeeded.</li>
-     * <li><strong>false</strong>: Failed.</li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

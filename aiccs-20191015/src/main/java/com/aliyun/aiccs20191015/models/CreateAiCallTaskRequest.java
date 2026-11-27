@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAiCallTaskRequest extends TeaModel {
     /**
-     * <p>The code of the agent that has been published.</p>
+     * <p>The code of the online agent.</p>
      * 
      * <strong>example:</strong>
      * <p>1180**************</p>
@@ -14,7 +14,7 @@ public class CreateAiCallTaskRequest extends TeaModel {
     public String agentId;
 
     /**
-     * <p>The application code. This parameter is used when the creation source is engine.</p>
+     * <p>The application code. This parameter is used when the creation source is engine creation.</p>
      * 
      * <strong>example:</strong>
      * <p>025****C98</p>
@@ -30,7 +30,7 @@ public class CreateAiCallTaskRequest extends TeaModel {
     public java.util.List<String> callDay;
 
     /**
-     * <p>The expiration date of outbound call details (specific deadline). Format: YYYY-MM-DD HH:mm:ss.</p>
+     * <p>The expiration date for outbound call details, which is the specific cutoff time. Format: YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-07-30 20:00:20</p>
@@ -39,7 +39,7 @@ public class CreateAiCallTaskRequest extends TeaModel {
     public String callExpireDate;
 
     /**
-     * <p>The expiration duration of outbound call details. Unit: minutes.</p>
+     * <p>The expiration duration for outbound call details. Unit: minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -48,10 +48,12 @@ public class CreateAiCallTaskRequest extends TeaModel {
     public Long callExpireMinutes;
 
     /**
-     * <p>The outbound call validity type. Valid values:</p>
-     * <p>0: Permanently valid.
-     * 1: Valid for a specified duration after import.
-     * 2: Valid until a specified date.</p>
+     * <p>The validity period type for outbound calls. Valid values:</p>
+     * <ul>
+     * <li>0: Permanently valid.</li>
+     * <li>1: Valid for a specified period after import.</li>
+     * <li>2: Valid until a specified time.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -60,7 +62,7 @@ public class CreateAiCallTaskRequest extends TeaModel {
     public Long callExpireType;
 
     /**
-     * <p>The retry interval. Unit: minutes. The maximum value is 720 minutes.</p>
+     * <p>The retry interval. Unit: minutes. The maximum value is 720.</p>
      * 
      * <strong>example:</strong>
      * <p>32</p>
@@ -69,7 +71,7 @@ public class CreateAiCallTaskRequest extends TeaModel {
     public Long callRetryInterval;
 
     /**
-     * <p>The list of retry reasons for failed calls.</p>
+     * <p>The list of reasons for retrying failed calls.</p>
      */
     @NameInMap("CallRetryReason")
     public java.util.List<String> callRetryReason;
@@ -90,6 +92,9 @@ public class CreateAiCallTaskRequest extends TeaModel {
     @NameInMap("CallTime")
     public java.util.List<String> callTime;
 
+    /**
+     * <p>The list of callable time periods. Each element is represented as a JSON string that contains startTime and endTime.</p>
+     */
     @NameInMap("CallableTime")
     public java.util.List<String> callableTime;
 
@@ -114,9 +119,9 @@ public class CreateAiCallTaskRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable retry. Valid values:</p>
      * <ul>
-     * <li><p>true: Enabled.</p>
+     * <li><p>true: Yes.</p>
      * </li>
-     * <li><p>false (default): Disabled.</p>
+     * <li><p>false (default): No.</p>
      * </li>
      * </ul>
      * 
@@ -130,7 +135,7 @@ public class CreateAiCallTaskRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number type. This parameter is used when the creation source is engine. Valid values:</p>
+     * <p>The number type. This parameter is used when the creation source is engine creation. Valid values:</p>
      * <ul>
      * <li><p>0: Alibaba Cloud number.</p>
      * </li>
@@ -166,11 +171,11 @@ public class CreateAiCallTaskRequest extends TeaModel {
     public Long source;
 
     /**
-     * <p>The start type. Valid values:</p>
+     * <p>The start method. Valid values:</p>
      * <ul>
-     * <li><p>IMMEDIATE: Start immediately.</p>
+     * <li><p>IMMEDIATE: Starts immediately.</p>
      * </li>
-     * <li><p>SCHEDULE: Start at a scheduled time.</p>
+     * <li><p>SCHEDULE: Starts at a scheduled time.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -191,17 +196,17 @@ public class CreateAiCallTaskRequest extends TeaModel {
     public Long taskCps;
 
     /**
-     * <p>The task name. The name must be unique within the same account.</p>
+     * <p>The name of the task. The name must be unique within the same account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>TestTask</p>
+     * <p>Test task</p>
      */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
-     * <p>The preset start time of the task. The value is a UNIX timestamp in milliseconds. This parameter is valid and required when StartType is set to SCHEDULE. The task automatically starts at the time specified by this parameter.</p>
+     * <p>The preset start time of the task. The value is a timestamp in milliseconds. This parameter is valid and required only when the StartType parameter is set to SCHEDULE. The task automatically starts at the time specified by this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>12313123133</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LlmSmartCallEncryptResponseBody extends TeaModel {
     /**
-     * <p>Details about the access denied error.</p>
+     * <p>The detailed reasons for access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,7 +14,7 @@ public class LlmSmartCallEncryptResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The request status code. A value of \&quot;ok\&quot; indicates that the request succeeded.</p>
+     * <p>The status code of the request. A value of OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -23,16 +23,16 @@ public class LlmSmartCallEncryptResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public LlmSmartCallEncryptResponseBodyData data;
 
     /**
-     * <p>A description of the status code.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
-     * <p>成功</p>
+     * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
@@ -47,12 +47,10 @@ public class LlmSmartCallEncryptResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API call was successful. Valid values:</p>
+     * <p>Indicates whether the API operation was called successfully. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The API call was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The API call failed.</p>
-     * </li>
+     * <li><strong>true</strong>: Successful.</li>
+     * <li><strong>false</strong>: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

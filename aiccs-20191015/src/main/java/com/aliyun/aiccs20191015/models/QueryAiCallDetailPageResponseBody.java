@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryAiCallDetailPageResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access was denied.</p>
+     * <p>The detailed reasons for access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -29,7 +29,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
     public QueryAiCallDetailPageResponseBodyData data;
 
     /**
-     * <p>The description of the status code.</p>
+     * <p>The status message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -47,7 +47,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the API call is successful. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: Successful.</li>
      * <li><strong>false</strong>: Failed.</li>
@@ -150,10 +150,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public Long branchVersionId;
 
         /**
-         * <p>The expiration time of the outbound call detail. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The expiration time of the outbound call detail. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
-         * <p>2026-07-30 20:00:20</p>
+         * <p>1785412820000</p>
          */
         @NameInMap("CallExpireTime")
         public Long callExpireTime;
@@ -186,7 +186,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public String calledNumber;
 
         /**
-         * <p>The calling time. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The call time. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1748948749000</p>
@@ -204,11 +204,11 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public Long conversationDuration;
 
         /**
-         * <p>The chat record information. The structure is a JSON array, and the chat records are sorted in chronological order. The structure is as follows:</p>
+         * <p>The chat record information. The structure is a JSON array, and the chat records are sorted in chronological order. Details:</p>
          * <pre><code class="language-json">[
          *     {
          *         &quot;content&quot;:&quot;Chat content&quot;,
-         *         &quot;role&quot;:&quot;Role&quot;,//Valid values: user and assistant (bot).
+         *         &quot;role&quot;:&quot;Role&quot;,//Valid values: user (user), assistant (robot)
          *     }
          * ]
          * </code></pre>
@@ -216,52 +216,52 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>[
          *     {
-         *         &quot;content&quot;: &quot;111您好，年龄222，性别男，我这边是<strong>汽车的官方顾问，我们新出了一款车型为</strong>；<strong>已经上市了，售价</strong>万元起，<strong>分钟破*台，您看要不了解一下？&quot;,
+         *         &quot;content&quot;: &quot;Hello 111, age 222, gender male. I am the official consultant for ** Motors. We have launched a new model, **. ** is now on the market with a starting price of ** 10,000 yuan. It sold * units in ** minutes. Would you like to learn more?&quot;,
          *         &quot;role&quot;: &quot;assistant&quot;
          *     },
          *     {
-         *         &quot;content&quot;: &quot;&lt;客户打断&gt;哎，你是谁？&quot;,
-         *         &quot;role&quot;: &quot;user&quot;,
+         *         &quot;content&quot;: &quot;<Customer interruption> Hey, who are you?&quot;,
+         *         &quot;role&quot;: &quot;user&quot;
          *     },
          *     {
-         *         &quot;content&quot;: &quot;&lt;客户打断&gt;你再说一遍。&quot;,
-         *         &quot;role&quot;: &quot;user&quot;,
+         *         &quot;content&quot;: &quot;<Customer interruption> Say that again.&quot;,
+         *         &quot;role&quot;: &quot;user&quot;
          *     },
          *     {
-         *         &quot;content&quot;: &quot;哎，我没听清。&quot;,
-         *         &quot;role&quot;: &quot;user&quot;,
+         *         &quot;content&quot;: &quot;Hey, I didn&quot;t catch that.&quot;,
+         *         &quot;role&quot;: &quot;user&quot;
          *     },
          *     {
-         *         &quot;content&quot;: &quot;你在说什么？&quot;,
-         *         &quot;role&quot;: &quot;user&quot;,
+         *         &quot;content&quot;: &quot;What are you saying?&quot;,
+         *         &quot;role&quot;: &quot;user&quot;
          *     },
          *     {
-         *         &quot;content&quot;: &quot;您好，&quot;,
-         *         &quot;role&quot;: &quot;assistant&quot;,
+         *         &quot;content&quot;: &quot;Hello,&quot;,
+         *         &quot;role&quot;: &quot;assistant&quot;
          *     },
          *     {
-         *         &quot;content&quot;: &quot;我是</strong>汽车总部销售服务顾问。&quot;,
-         *         &quot;role&quot;: &quot;assistant&quot;,
+         *         &quot;content&quot;: &quot;I am a sales service consultant at ** Motors headquarters.&quot;,
+         *         &quot;role&quot;: &quot;assistant&quot;
          *     },
          *     {
-         *         &quot;content&quot;: &quot;我们最近推出了一款新车**，想了解一下您是否对这款车型感兴趣？&quot;,
-         *         &quot;role&quot;: &quot;assistant&quot;,
+         *         &quot;content&quot;: &quot;We recently launched a new car, **. I would like to know if you are interested in this model.&quot;,
+         *         &quot;role&quot;: &quot;assistant&quot;
          *     },
          *     {
-         *         &quot;content&quot;: &quot;&lt;客户打断&gt;哎，那我是谁？&quot;,
-         *         &quot;role&quot;: &quot;user&quot;,
+         *         &quot;content&quot;: &quot;<Customer interruption> Hey, then who am I?&quot;,
+         *         &quot;role&quot;: &quot;user&quot;
          *     },
          *     {
-         *         &quot;content&quot;: &quot;你在说什么呢？&quot;,
-         *         &quot;role&quot;: &quot;user&quot;,
+         *         &quot;content&quot;: &quot;What are you talking about?&quot;,
+         *         &quot;role&quot;: &quot;user&quot;
          *     },
          *     {
-         *         &quot;content&quot;: &quot;抱歉打扰了，111先生。&quot;,
-         *         &quot;role&quot;: &quot;assistant&quot;,
+         *         &quot;content&quot;: &quot;Sorry to bother you, Mr. 111.&quot;,
+         *         &quot;role&quot;: &quot;assistant&quot;
          *     },
          *     {
-         *         &quot;content&quot;: &quot;祝您生活愉快！再见！&quot;,
-         *         &quot;role&quot;: &quot;assistant&quot;,
+         *         &quot;content&quot;: &quot;Have a great day! Goodbye!&quot;,
+         *         &quot;role&quot;: &quot;assistant&quot;
          *     }
          * ]</p>
          */
@@ -287,7 +287,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public String detailId;
 
         /**
-         * <p>The encryption type. Valid values: 0: no encryption. 1: MD5. 2: SHA256. 3: SM3.</p>
+         * <p>The encryption method. Valid values: 0: No encryption. 1: MD5. 2: SHA256. 3: SM3.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -305,7 +305,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public String failedReason;
 
         /**
-         * <p>The import time. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The import time. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1748948749000</p>
@@ -314,7 +314,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public Long importedTime;
 
         /**
-         * <p>The major intent.</p>
+         * <p>The primary intent.</p>
          * 
          * <strong>example:</strong>
          * <p>A</p>
@@ -340,7 +340,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         public String options;
 
         /**
-         * <p>The external business serial number reserved for external input. You can use a unique ID for business association.</p>
+         * <p>The custom business transaction ID provided by the caller. You can use a unique ID to associate the business.</p>
          * 
          * <strong>example:</strong>
          * <p>outId</p>
@@ -360,14 +360,14 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         /**
          * <p>The task detail status. Valid values:</p>
          * <ul>
-         * <li>0: Initialization.</li>
+         * <li>0: Initialized.</li>
          * <li>1: Waiting for call.</li>
          * <li>2: Waiting for retry.</li>
          * <li>3: Calling.</li>
          * <li>4: Call ended.</li>
          * <li>5: Call failed.</li>
          * </ul>
-         * <p>Only 4 and 5 are desired states.</p>
+         * <p>Only 4 and 5 are final states.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -603,7 +603,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
 
     public static class QueryAiCallDetailPageResponseBodyData extends TeaModel {
         /**
-         * <p>The list of task detail data.</p>
+         * <p>The list of task details.</p>
          */
         @NameInMap("List")
         public java.util.List<QueryAiCallDetailPageResponseBodyDataList> list;

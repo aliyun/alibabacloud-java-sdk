@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddSkillGroupResponseBody extends TeaModel {
     /**
-     * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+     * <p>The status code. A value of 200 indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class AddSkillGroupResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>ID of the created skill group.</p>
+     * <p>The ID of the created skill group.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -23,16 +23,16 @@ public class AddSkillGroupResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>Description of the status code.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxx</p>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
@@ -41,7 +41,7 @@ public class AddSkillGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API call succeeded.</p>
+     * <p>Indicates whether the API call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

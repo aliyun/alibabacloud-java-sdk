@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetQualityProjectListRequest extends TeaModel {
     /**
-     * <p>Artificial Intelligence Cloud Call Service (AICCS) instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</p>
+     * <p>Instance ID of the AICCS instance. You can obtain instance ID from the Artificial Intelligence Cloud Call Service console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetQualityProjectListRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The current page. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,7 +24,7 @@ public class GetQualityProjectListRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>Page size. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -33,7 +33,7 @@ public class GetQualityProjectListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Quality inspection job ID (supports fuzzy search).</p>
+     * <p>The ID of the quality check task. Fuzzy search is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -42,19 +42,19 @@ public class GetQualityProjectListRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>Quality inspection job name (supports fuzzy search).</p>
+     * <p>The name of the quality check task. Fuzzy search is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>质检</p>
+     * <p>Quality check</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
-     * <p>Quality inspection job status. Valid values:  </p>
+     * <p>The status of the quality check task. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Start  </li>
-     * <li><strong>1</strong>: Shutdown</li>
+     * <li><strong>0</strong>: Started.</li>
+     * <li><strong>1</strong>: Stopped.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -64,10 +64,10 @@ public class GetQualityProjectListRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>The check frequency type. Valid values:</p>
+     * <p>The type of the check frequency. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Periodic quality inspection</li>
-     * <li><strong>4</strong>: Temporary quality inspection</li>
+     * <li><strong>1</strong>: Periodic quality check.</li>
+     * <li><strong>4</strong>: Temporary quality check.</li>
      * </ul>
      * 
      * <strong>example:</strong>

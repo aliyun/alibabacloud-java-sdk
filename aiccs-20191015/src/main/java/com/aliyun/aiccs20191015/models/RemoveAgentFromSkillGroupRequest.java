@@ -5,14 +5,15 @@ import com.aliyun.tea.*;
 
 public class RemoveAgentFromSkillGroupRequest extends TeaModel {
     /**
-     * <p>A list of agent IDs.</p>
+     * <p>The list of agent IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AgentIds")
     public java.util.List<Long> agentIds;
 
     /**
-     * <p>The Artificial Intelligence Cloud Call Service (AICCS) instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
+     * <p>The AICCS instance ID.
+     * You can obtain the ID from the <b>Instances</b> page in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,8 +23,8 @@ public class RemoveAgentFromSkillGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Skill group ID.  </p>
-     * <p>You can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> API and view the <strong>SkillGroupId</strong> in the response parameters to obtain the skill group ID.</p>
+     * <p>The skill group ID.</p>
+     * <p>You can call the <a href="https://www.alibabacloud.com/help/en/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> operation and view the <strong>SkillGroupId</strong> parameter in the response to obtain the skill group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

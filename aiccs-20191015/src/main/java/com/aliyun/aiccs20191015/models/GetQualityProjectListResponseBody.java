@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetQualityProjectListResponseBody extends TeaModel {
     /**
-     * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+     * <p>The status code. A value of 200 indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,22 +14,22 @@ public class GetQualityProjectListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Quality inspection job information.</p>
+     * <p>The quality check task information.</p>
      */
     @NameInMap("Data")
     public GetQualityProjectListResponseBodyData data;
 
     /**
-     * <p>Description of the status code.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxx</p>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
@@ -38,7 +38,7 @@ public class GetQualityProjectListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API call succeeded.</p>
+     * <p>Indicates whether the API call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class GetQualityProjectListResponseBody extends TeaModel {
 
     public static class GetQualityProjectListResponseBodyDataQualityProjectList extends TeaModel {
         /**
-         * <p>Quality inspection job frequency.</p>
+         * <p>The frequency of the quality check task.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -102,7 +102,7 @@ public class GetQualityProjectListResponseBody extends TeaModel {
         public Integer checkFreqType;
 
         /**
-         * <p>Creation Time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-04-07 18:07:18</p>
@@ -111,19 +111,19 @@ public class GetQualityProjectListResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Quality inspection sampling scope.</p>
+         * <p>The sampling scope of the quality check.</p>
          */
         @NameInMap("DepList")
         public java.util.List<Long> depList;
 
         /**
-         * <p>Quality inspection sampling scope.</p>
+         * <p>The sampling scope of the quality check.</p>
          */
         @NameInMap("GroupList")
         public java.util.List<Long> groupList;
 
         /**
-         * <p>Quality inspection job ID.</p>
+         * <p>The ID of the quality check task.</p>
          * 
          * <strong>example:</strong>
          * <p>15977801</p>
@@ -132,7 +132,7 @@ public class GetQualityProjectListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Updated At.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-04-07 18:07:19</p>
@@ -141,22 +141,22 @@ public class GetQualityProjectListResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>Quality inspection job name.</p>
+         * <p>The name of the quality check task.</p>
          * 
          * <strong>example:</strong>
-         * <p>自动化质检任务</p>
+         * <p>Automated quality check task</p>
          */
         @NameInMap("ProjectName")
         public String projectName;
 
         /**
-         * <p>Quality inspection rule IDs.</p>
+         * <p>The IDs of the quality check rules.</p>
          */
         @NameInMap("QualityRuleIds")
         public java.util.List<Long> qualityRuleIds;
 
         /**
-         * <p>Quality inspection type. Fixed value is <strong>1</strong> (Consultation).</p>
+         * <p>The quality check type. Fixed value: <strong>1</strong> (Consulting).</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -165,13 +165,13 @@ public class GetQualityProjectListResponseBody extends TeaModel {
         public Integer qualityType;
 
         /**
-         * <p>Scope of quality inspection sampling.</p>
+         * <p>The sampling scope of the quality check.</p>
          */
         @NameInMap("ServicerList")
         public java.util.List<Long> servicerList;
 
         /**
-         * <p>Status of the quality inspection job.</p>
+         * <p>The status of the quality check task.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -180,7 +180,7 @@ public class GetQualityProjectListResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>Quality inspection job version number.</p>
+         * <p>The version number of the quality check task.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -293,7 +293,7 @@ public class GetQualityProjectListResponseBody extends TeaModel {
 
     public static class GetQualityProjectListResponseBodyData extends TeaModel {
         /**
-         * <p>Current page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -302,7 +302,7 @@ public class GetQualityProjectListResponseBody extends TeaModel {
         public Integer pageNo;
 
         /**
-         * <p>Page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -311,13 +311,13 @@ public class GetQualityProjectListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>List of quality inspection jobs.</p>
+         * <p>The list of quality check tasks.</p>
          */
         @NameInMap("QualityProjectList")
         public java.util.List<GetQualityProjectListResponseBodyDataQualityProjectList> qualityProjectList;
 
         /**
-         * <p>Total number of records.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>35</p>

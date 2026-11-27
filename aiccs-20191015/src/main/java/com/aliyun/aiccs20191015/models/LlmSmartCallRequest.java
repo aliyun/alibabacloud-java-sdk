@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LlmSmartCallRequest extends TeaModel {
     /**
-     * <p>LLM application code. View it in the <a href="https://aiccs.console.aliyun.com/engine/llmApp">Application Management</a> interface.</p>
+     * <p>The code of the large language model application. You can view the code on the <a href="https://aiccs.console.aliyun.com/engine/llmApp">Large Language Model Application Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,18 +15,25 @@ public class LlmSmartCallRequest extends TeaModel {
     public String applicationCode;
 
     /**
-     * <p>Business parameters. These parameters are passed to the customer model when invoking the customer model.</p>
+     * <p>The custom business parameters. When you call this API operation, you can pass custom parameters to the large language model gateway. When the large language model gateway requests the customer model, this parameter is passed to the customer model.</p>
+     * <ul>
+     * <li><p><a href="https://www.alibabacloud.com/help/en/model-studio/invoke-workflow-application/#6e644d5a7b3ia">Model Studio workflow application: Parameter passing</a>. Example: <code>biz_params = {&quot;city&quot;: &quot;Hangzhou&quot;}</code></p>
+     * </li>
+     * <li><p><a href="https://www.alibabacloud.com/help/en/model-studio/call-single-agent-application/#b774db7cdc0aa">Model Studio agent application: Pass custom parameters</a>. Example:
+     * <code>biz_params = { &quot;user_prompt_params&quot;: &quot;{\&quot;city\&quot;:\&quot;Beijing\&quot;}&quot; }</code></p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>biz_params = {
-     *   &quot;user_prompt_params&quot;: &quot;{\&quot;city\&quot;:\&quot;北京\&quot;}&quot;
+     *   &quot;user_prompt_params&quot;: &quot;{&quot;city&quot;:&quot;Beijing&quot;}&quot;
      * }</p>
      */
     @NameInMap("BizParam")
     public java.util.Map<String, ?> bizParam;
 
     /**
-     * <p>Called number that receives the intelligent outbound call.</p>
+     * <p>The called number that receives the intelligent outbound call.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +43,12 @@ public class LlmSmartCallRequest extends TeaModel {
     public String calledNumber;
 
     /**
-     * <p>Caller number. This parameter is required and supports only numbers from the Chinese mainland. View available numbers in the Voice Service <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Number Management</a> interface.</p>
+     * <p>The caller number. This parameter is required and supports only numbers in the Chinese mainland. Go to the <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Real Number Management</a> page of Voice Service to view the number.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If you use a self-managed line, you must pass the number of the self-managed line.</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>132****2054</p>
@@ -45,11 +57,10 @@ public class LlmSmartCallRequest extends TeaModel {
     public String callerNumber;
 
     /**
-     * <p>Customer-provided ingest endpoint encoding.</p>
+     * <p>The code of the self-managed line.</p>
      * <blockquote>
      * <ul>
-     * <li>If you use your own line, contact Alibaba Cloud support to enable this feature.</li>
-     * <li>The line encoding is provided by Alibaba Cloud support. Do not set this parameter if you do not have one.</li>
+     * <li>If you need to use a self-managed line, contact operations to enable this feature. After the self-managed line is approved, the line code is returned. If no line code is returned, do not specify this parameter.</li>
      * </ul>
      * </blockquote>
      * 
@@ -60,9 +71,9 @@ public class LlmSmartCallRequest extends TeaModel {
     public String customerLineCode;
 
     /**
-     * <p>The extension number of the X number, up to 5 digits.</p>
+     * <p>The extension number of the X number. The extension number cannot exceed 5 digits.</p>
      * <blockquote>
-     * <p>Notice: Fill this field only in AXN extension mode. If no extension number exists, do not fill it.</p>
+     * <p>Notice: This parameter is required only in AXN extension number mode. If no extension number exists, do not specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -72,7 +83,7 @@ public class LlmSmartCallRequest extends TeaModel {
     public String extension;
 
     /**
-     * <p>An ID reserved for the caller. This ID will be returned to the caller through a receipt message. Length: 1–15 bytes.</p>
+     * <p>The ID reserved for the caller. This ID is returned to the caller in the receipt message. When the large language model gateway requests the customer model, this parameter is passed to the customer model. The length is 1 to 15 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>222356****</p>
@@ -81,22 +92,22 @@ public class LlmSmartCallRequest extends TeaModel {
     public String outId;
 
     /**
-     * <p>Prompt variable. Go to the <a href="https://aiccs.console.aliyun.com/engine/llmApp">Application Management</a> interface and click Details to view the prompt variables you created.</p>
+     * <p>The prompt variables. Go to the <a href="https://aiccs.console.aliyun.com/engine/llmApp">Large Language Model Application Management</a> page and click Details to view the prompt variables of the large language model application that you created.</p>
      * 
      * <strong>example:</strong>
      * <p>{
-     *   &quot;style&quot;: &quot;温柔&quot;
+     *   &quot;style&quot;: &quot;gentle&quot;
      * }</p>
      */
     @NameInMap("PromptParam")
     public java.util.Map<String, ?> promptParam;
 
     /**
-     * <p>Maximum call duration. The call is automatically disconnected after timeout. Unit: seconds.</p>
+     * <p>The maximum call duration. The call is automatically disconnected after the timeout period. Unit: seconds.</p>
      * <blockquote>
      * <ul>
-     * <li>Maximum value: 3600 s.</li>
-     * <li>Minimum value: 600 s.</li>
+     * <li>Maximum value: 3600.</li>
+     * <li>Minimum value: 600.</li>
      * </ul>
      * </blockquote>
      * 
@@ -107,23 +118,23 @@ public class LlmSmartCallRequest extends TeaModel {
     public Integer sessionTimeout;
 
     /**
-     * <p>Start-word variables. Go to the <a href="https://aiccs.console.aliyun.com/engine/llmApp">LLM Application Management</a> interface and click Details to view the start-word variables of your created LLM application.</p>
+     * <p>The opening remark variables. Go to the <a href="https://aiccs.console.aliyun.com/engine/llmApp">Large Language Model Application Management</a> page and click Details to view the opening remark variables of the large language model application that you created.</p>
      * 
      * <strong>example:</strong>
      * <p>{
-     *   &quot;name&quot;: &quot;小明&quot;,
-     *   &quot;address&quot;: &quot;浙江省杭州市&quot;
+     *   &quot;name&quot;: &quot;Xiaoming&quot;,
+     *   &quot;address&quot;: &quot;Hangzhou, Zhejiang&quot;
      * }</p>
      */
     @NameInMap("StartWordParam")
     public java.util.Map<String, ?> startWordParam;
 
     /**
-     * <p>Voice speed during TTS playback.</p>
+     * <p>The speech rate for TTS playback.</p>
      * <blockquote>
      * <ul>
-     * <li>Value range: -200 to 200. Default value is 0.</li>
-     * <li>If this parameter is not set, the voice speed configured in the LLM application is used by default.</li>
+     * <li>Valid values: -200 to 200. Default value: 0.</li>
+     * <li>If you do not specify this parameter, the speech rate configured for the large language model application is used by default.</li>
      * </ul>
      * </blockquote>
      * 
@@ -134,11 +145,11 @@ public class LlmSmartCallRequest extends TeaModel {
     public Integer ttsSpeed;
 
     /**
-     * <p>The voice code used for TTS playback.</p>
+     * <p>The voice code for text-to-speech (TTS) playback.</p>
      * <blockquote>
      * <ul>
-     * <li>If no value is set, the voice code configured in the LLM application is used by default.</li>
-     * <li>You can use the <a href="https://help.aliyun.com/document_detail/2926668.html">ListAvailableTts</a> API to view all available voice codes.</li>
+     * <li>If you do not specify this parameter, the voice code configured for the large language model application is used by default.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/2926668.html">ListAvailableTts</a> API operation to query all voice codes.</li>
      * </ul>
      * </blockquote>
      * 
@@ -152,8 +163,8 @@ public class LlmSmartCallRequest extends TeaModel {
      * <p>The volume for TTS playback.</p>
      * <blockquote>
      * <ul>
-     * <li>Value range: 0–100. Default value is 0.</li>
-     * <li>If no value is set, the volume configured in the LLM application is used by default.</li>
+     * <li>Valid values: 0 to 100. Default value: 0.</li>
+     * <li>If you do not specify this parameter, the volume configured for the large language model application is used by default.</li>
      * </ul>
      * </blockquote>
      * 

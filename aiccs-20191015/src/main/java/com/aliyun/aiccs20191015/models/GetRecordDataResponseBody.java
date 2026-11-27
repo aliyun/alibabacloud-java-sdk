@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRecordDataResponseBody extends TeaModel {
     /**
-     * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+     * <p>The status code. A value of 200 indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class GetRecordDataResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Data list.</p>
+     * <p>The list of data.</p>
      */
     @NameInMap("Data")
     public GetRecordDataResponseBodyData data;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class GetRecordDataResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
-     * <p>Description of the status code.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -38,7 +38,7 @@ public class GetRecordDataResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
@@ -47,7 +47,7 @@ public class GetRecordDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API call succeeded.</p>
+     * <p>Indicates whether the API call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class GetRecordDataResponseBody extends TeaModel {
 
     public static class GetRecordDataResponseBodyData extends TeaModel {
         /**
-         * <p>Session ID.</p>
+         * <p>The session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1001067****</p>
@@ -119,7 +119,7 @@ public class GetRecordDataResponseBody extends TeaModel {
         public String acid;
 
         /**
-         * <p>Recording file URL.</p>
+         * <p>The URL of the recording file.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://aliccrec-shvpc.oss-cn-shanghai.aliyuncs.com/accrec_tmp/10010679716-12-01-56.wav">http://aliccrec-shvpc.oss-cn-shanghai.aliyuncs.com/accrec_tmp/10010679716-12-01-56.wav</a>?***</p>

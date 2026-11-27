@@ -148,7 +148,7 @@ public class GetCallDialogContentResponseBody extends TeaModel {
          * <p>The dialog content.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;content\&quot;:\&quot;您好。\&quot;,\&quot;role\&quot;:\&quot;assistant\&quot;},{\&quot;content\&quot;:\&quot;不用了。\&quot;,\&quot;role\&quot;:\&quot;user\&quot;},{\&quot;content\&quot;:\&quot;呃，不用了，再见，谢谢。\&quot;,\&quot;role\&quot;:\&quot;user\&quot;}]</p>
+         * <p>[{&quot;content&quot;:&quot;您好。&quot;,&quot;role&quot;:&quot;assistant&quot;},{&quot;content&quot;:&quot;不用了。&quot;,&quot;role&quot;:&quot;user&quot;},{&quot;content&quot;:&quot;呃，不用了，再见，谢谢。&quot;,&quot;role&quot;:&quot;user&quot;}]</p>
          */
         @NameInMap("DialogContent")
         public String dialogContent;

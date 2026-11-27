@@ -4,21 +4,54 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class QueryTaskDetailResponseBody extends TeaModel {
+    /**
+     * <p>The status code. A value of 200 indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The queried data.</p>
+     */
     @NameInMap("Data")
     public QueryTaskDetailResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <p>The status code description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE338D98-9BD3-4413-B165</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the API call is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -76,60 +109,182 @@ public class QueryTaskDetailResponseBody extends TeaModel {
     }
 
     public static class QueryTaskDetailResponseBodyDataList extends TeaModel {
+        /**
+         * <p>The caller number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1367123xxxx</p>
+         */
         @NameInMap("Ani")
         public String ani;
 
+        /**
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BuId")
         public Long buId;
 
+        /**
+         * <p>The department ID of the skill group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("DepartmentId")
         public Long departmentId;
 
+        /**
+         * <p>The called number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0571456****</p>
+         */
         @NameInMap("Dnis")
         public String dnis;
 
+        /**
+         * <p>The call end reasons.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110</p>
+         */
         @NameInMap("EndReason")
         public Integer endReason;
 
+        /**
+         * <p>The extended attributes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Note&quot;:&quot;Outbound call test&quot;}</p>
+         */
         @NameInMap("ExtAttrs")
         public String extAttrs;
 
+        /**
+         * <p>The time when the task was created. The value is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615445263000</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>The time when the task was updated. The value is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615478401000</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120001</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <p>The ID of the member. The ID of an anonymous member is -1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("MemberId")
         public Long memberId;
 
+        /**
+         * <p>The name of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Anonymous member</p>
+         */
         @NameInMap("MemberName")
         public String memberName;
 
+        /**
+         * <p>The outbound call number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>130****0000</p>
+         */
         @NameInMap("OutboundNum")
         public Integer outboundNum;
 
+        /**
+         * <p>The ID of the outbound task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120001</p>
+         */
         @NameInMap("OutboundTaskId")
         public Long outboundTaskId;
 
+        /**
+         * <p>The priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <p>The next retry time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RetryTime")
         public String retryTime;
 
+        /**
+         * <p>The ID of the customer service representative.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1212</p>
+         */
         @NameInMap("ServicerId")
         public Long servicerId;
 
+        /**
+         * <p>The name of the customer service representative.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>John Doe</p>
+         */
         @NameInMap("ServicerName")
         public String servicerName;
 
+        /**
+         * <p>The ID of the skill group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("SkillGroup")
         public Integer skillGroup;
 
+        /**
+         * <p>The outbound call status. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Inbound call ringing.</li>
+         * <li><strong>2</strong>: Inbound call answered.</li>
+         * <li><strong>3</strong>: Inbound call disconnected.</li>
+         * <li><strong>4</strong>: Outbound call ringing.</li>
+         * <li><strong>5</strong>: Outbound call answered.</li>
+         * <li><strong>6</strong>: Outbound call disconnected.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
@@ -293,15 +448,36 @@ public class QueryTaskDetailResponseBody extends TeaModel {
     }
 
     public static class QueryTaskDetailResponseBodyData extends TeaModel {
+        /**
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CurrentPage")
         public String currentPage;
 
+        /**
+         * <p>The outbound task information.</p>
+         */
         @NameInMap("List")
         public java.util.List<QueryTaskDetailResponseBodyDataList> list;
 
+        /**
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PageSize")
         public String pageSize;
 
+        /**
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34</p>
+         */
         @NameInMap("TotalResults")
         public String totalResults;
 

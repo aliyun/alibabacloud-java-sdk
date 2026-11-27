@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateAiCallTaskShrinkRequest extends TeaModel {
     /**
-     * <p>The callable days.</p>
+     * <p>The allowed call days.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CallDay")
     public String callDayShrink;
 
     /**
-     * <p>The expiration date of outbound call details (the specific deadline). Format: YYYY-MM-DD HH:mm:ss.</p>
+     * <p>The expiration date for outbound call details, which specifies the exact end time. Format: YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-07-30 20:00:20</p>
@@ -21,7 +21,7 @@ public class UpdateAiCallTaskShrinkRequest extends TeaModel {
     public String callExpireDate;
 
     /**
-     * <p>The expiration duration of outbound call details. Unit: minutes.</p>
+     * <p>The expiration duration for outbound call details. Unit: minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -30,10 +30,10 @@ public class UpdateAiCallTaskShrinkRequest extends TeaModel {
     public Long callExpireMinutes;
 
     /**
-     * <p>The outbound call validity type. Valid values:</p>
-     * <p>0: Permanently valid.
-     * 1: Valid for a specified period after import.
-     * 2: Valid until a specified date.</p>
+     * <p>The validity period type for outbound calls. Valid values:</p>
+     * <p>0: long-term validity</p>
+     * <p>1: valid for a specified period after import</p>
+     * <p>2: valid until a specified time</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -66,12 +66,15 @@ public class UpdateAiCallTaskShrinkRequest extends TeaModel {
     public Long callRetryTimes;
 
     /**
-     * <p>The callable time periods.</p>
+     * <p>The allowed call time.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CallTime")
     public String callTimeShrink;
 
+    /**
+     * <p>The list of allowed call time periods. Each element is represented as a JSON string that contains startTime and endTime.</p>
+     */
     @NameInMap("CallableTime")
     public String callableTimeShrink;
 
@@ -85,7 +88,7 @@ public class UpdateAiCallTaskShrinkRequest extends TeaModel {
     public String lineEncoding;
 
     /**
-     * <p>The customer-provided line number.</p>
+     * <p>The number of the customer-provided line.</p>
      * 
      * <strong>example:</strong>
      * <p>152****3120</p>
@@ -96,9 +99,9 @@ public class UpdateAiCallTaskShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable retry. Valid values:</p>
      * <ul>
-     * <li><p>true: Enabled.</p>
+     * <li><p>true: enabled.</p>
      * </li>
-     * <li><p>false (default): Disabled.</p>
+     * <li><p>false (default): disabled.</p>
      * </li>
      * </ul>
      * 
@@ -112,9 +115,9 @@ public class UpdateAiCallTaskShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number type. This parameter is used when the creation source is engine-based.</p>
-     * <p>0: Alibaba Cloud number.</p>
-     * <p>1: Customer-provided line.</p>
+     * <p>The number type. This parameter is used when the creation source is engine creation. Valid values:</p>
+     * <p>0: Alibaba Cloud number</p>
+     * <p>1: customer-provided line</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -130,11 +133,11 @@ public class UpdateAiCallTaskShrinkRequest extends TeaModel {
 
     /**
      * <p>The creation source. Valid values:</p>
-     * <p>0: Created by agent.</p>
-     * <p>1: Created by engine.</p>
+     * <p>0: created by an agent</p>
+     * <p>1: created by an engine</p>
      * 
      * <strong>example:</strong>
-     * <p>Cannot be modified. You do not need to specify this parameter</p>
+     * <p>Cannot be modified. Leave this parameter empty</p>
      */
     @NameInMap("Source")
     public Long source;
@@ -142,9 +145,9 @@ public class UpdateAiCallTaskShrinkRequest extends TeaModel {
     /**
      * <p>The start mode. Valid values:</p>
      * <ul>
-     * <li><p>IMMEDIATE: Starts immediately.</p>
+     * <li><p>IMMEDIATE: immediate start.</p>
      * </li>
-     * <li><p>SCHEDULE: Starts at a scheduled time.</p>
+     * <li><p>SCHEDULE: scheduled start.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -166,7 +169,7 @@ public class UpdateAiCallTaskShrinkRequest extends TeaModel {
     public Long taskCps;
 
     /**
-     * <p>The ID of the task to update.</p>
+     * <p>The ID of the task to be updated.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -176,7 +179,7 @@ public class UpdateAiCallTaskShrinkRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The task name. The name must be unique within the same account.</p>
+     * <p>The name of the task. The name must be unique within the same account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -186,7 +189,7 @@ public class UpdateAiCallTaskShrinkRequest extends TeaModel {
     public String taskName;
 
     /**
-     * <p>The preset start time of the task. The value is a UNIX timestamp in milliseconds. This parameter is valid and required when StartType is set to SCHEDULE. The task automatically starts at the time specified by this parameter.</p>
+     * <p>The preset start time of the task. The value is a timestamp in milliseconds. This parameter is valid and required only when the StartType parameter is set to SCHEDULE. The task automatically starts at the specified time.</p>
      * 
      * <strong>example:</strong>
      * <p>1748923429000</p>

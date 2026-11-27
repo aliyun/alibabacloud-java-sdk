@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHotlineMessageLogRequest extends TeaModel {
     /**
-     * <p>Session ID.</p>
+     * <p>The session ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetHotlineMessageLogRequest extends TeaModel {
     public String acid;
 
     /**
-     * <p>Artificial Intelligence Cloud Call Service (AICCS) instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</p>
+     * <p>The AICCS instance ID. You can obtain the ID from the Artificial Intelligence Cloud Call Service console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

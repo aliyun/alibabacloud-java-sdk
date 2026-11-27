@@ -14,7 +14,7 @@ public class AddLargeModelRequest extends TeaModel {
     public String authCode;
 
     /**
-     * <p>The base model.</p>
+     * <p>The foundation model.</p>
      */
     @NameInMap("BaseModel")
     public java.util.List<String> baseModel;
@@ -56,7 +56,7 @@ public class AddLargeModelRequest extends TeaModel {
     public Double temperature;
 
     /**
-     * <p>The <code>top-k</code> value.</p>
+     * <p>topK</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -65,7 +65,7 @@ public class AddLargeModelRequest extends TeaModel {
     public Long topK;
 
     /**
-     * <p>The <code>top-p</code> value.</p>
+     * <p>topP</p>
      * 
      * <strong>example:</strong>
      * <p>0.1</p>

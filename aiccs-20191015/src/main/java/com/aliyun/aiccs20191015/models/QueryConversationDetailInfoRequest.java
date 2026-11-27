@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryConversationDetailInfoRequest extends TeaModel {
     /**
-     * <p>The task batch ID. This is the batch ID returned when callee data is imported. View the task batch ID on the <strong>Call Task Management</strong> &gt; <strong>Details</strong> &gt; <strong>Execution Records</strong> page, or use the batch ID returned when importing callee data by calling the <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operation.</p>
+     * <p>The task batch ID. This is the batch ID returned when you import called numbers. You can view the task batch ID on the <strong>Call task management</strong> &gt; <strong>Details</strong> &gt; <strong>Execution records</strong> page or obtain the batch ID returned when you call the <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operation to import called numbers.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class QueryConversationDetailInfoRequest extends TeaModel {
     public String batchId;
 
     /**
-     * <p>The task detail ID. View the task detail ID in the upper-left corner of the <strong>Call Task Management</strong> &gt; <strong>Details</strong> &gt; <strong>Execution Records</strong> &gt; <strong>Completed</strong> &gt; <strong>Call Details</strong> page, or retrieve it by calling the <a href="https://help.aliyun.com/document_detail/2926853.html">QueryAiCallDetailPage</a> operation.</p>
+     * <p>The task detail ID. You can view the task detail ID in the upper-left corner of the <strong>Call task management</strong> &gt; <strong>Details</strong> &gt; <strong>Execution records</strong> &gt; <strong>Completed</strong> &gt; <strong>Call details</strong> page or call the <a href="https://help.aliyun.com/document_detail/2926853.html">QueryAiCallDetailPage</a> operation to obtain the task detail ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class QueryConversationDetailInfoRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The task ID. View the task ID on the <strong>Call Task Management</strong> page or retrieve it by calling the <a href="https://help.aliyun.com/document_detail/2926799.html">QueryAiCallTaskPage</a> operation.</p>
+     * <p>The task ID. You can view the task ID on the <strong>Call task management</strong> page or call the <a href="https://help.aliyun.com/document_detail/2926799.html">QueryAiCallTaskPage</a> operation to obtain the task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

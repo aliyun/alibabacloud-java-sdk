@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDepGroupTreeDataRequest extends TeaModel {
     /**
-     * <p>The agent ID.
-     * You can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-getagent">GetAgent</a> API and view the <strong>AgentId</strong> parameter in the response to obtain the agent ID.</p>
+     * <p>The agent ID.</p>
+     * <p>You can call the <a href="https://www.alibabacloud.com/help/en/aiccs/developer-reference/api-aiccs-2019-10-15-getagent">GetAgent</a> operation and view the <strong>AgentId</strong> response parameter to obtain the agent ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,8 +16,8 @@ public class GetDepGroupTreeDataRequest extends TeaModel {
     public Long agentId;
 
     /**
-     * <p>The Artificial Intelligence Cloud Call Service (AICCS) instance ID.
-     * You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
+     * <p>The AICCS instance ID.
+     * You can obtain the ID in the <b>Instance Management</b> section of the left-side navigation pane in the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

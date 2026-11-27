@@ -14,7 +14,7 @@ public class AddLargeModelResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The status code. A value of <code>OK</code> indicates that the request was successful.</p>
+     * <p>The status code. A value of OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -23,7 +23,7 @@ public class AddLargeModelResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The result of the operation.</p>
+     * <p>The data list.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -32,7 +32,7 @@ public class AddLargeModelResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The response message.</p>
+     * <p>The status code description.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -50,12 +50,10 @@ public class AddLargeModelResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the API operation was called successfully. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request succeeded.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: Successful.</li>
+     * <li><strong>false</strong>: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

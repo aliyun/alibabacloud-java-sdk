@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MakeDoubleCallRequest extends TeaModel {
     /**
-     * <p>Account name.</p>
+     * <p>The account name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class MakeDoubleCallRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>Business data carried in the request. The value must be in JSON format.</p>
+     * <p>The business data in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;bizId&quot;: 123456}</p>
@@ -24,7 +24,7 @@ public class MakeDoubleCallRequest extends TeaModel {
     public String bizData;
 
     /**
-     * <p>Artificial Intelligence Cloud Call Service (AICCS) instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</p>
+     * <p>The AICCS instance ID. You can obtain the ID from the Artificial Intelligence Cloud Call Service console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class MakeDoubleCallRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>User\&quot;s phone number.</p>
+     * <p>The mobile phone number of the user.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class MakeDoubleCallRequest extends TeaModel {
     public String memberPhone;
 
     /**
-     * <p>Outbound caller number.</p>
+     * <p>The outbound caller number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,10 +54,7 @@ public class MakeDoubleCallRequest extends TeaModel {
     public String outboundCallNumber;
 
     /**
-     * <p>Agent\&quot;s phone number.  </p>
-     * <blockquote>
-     * <p>This parameter is required only if the call needs to be placed through the agent\&quot;s phone.</p>
-     * </blockquote>
+     * <p>The mobile phone number of the agent. This parameter is required only when you make a call through the agent&quot;s mobile phone.</p>
      * 
      * <strong>example:</strong>
      * <p>150****1234</p>

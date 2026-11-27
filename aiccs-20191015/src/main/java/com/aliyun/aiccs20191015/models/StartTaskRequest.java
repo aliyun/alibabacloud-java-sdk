@@ -14,10 +14,10 @@ public class StartTaskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Indicates whether to start immediately. Valid values:</p>
+     * <p>Specifies whether to start the task immediately. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: Yes.</li>
-     * <li><strong>false</strong>: No, which means the job will not be started.</li>
+     * <li><strong>false</strong>: No. The task is not started.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class StartTaskRequest extends TeaModel {
     public Boolean startNow;
 
     /**
-     * <p>The unique job ID of the robot calling task. You can view it on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page or obtain it by using the <a href="https://help.aliyun.com/document_detail/223556.html">CreateTask</a> API.</p>
+     * <p>The unique ID of the chatbot outbound call task. You can view the ID on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page or obtain it by calling the <a href="https://help.aliyun.com/document_detail/223556.html">CreateTask</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

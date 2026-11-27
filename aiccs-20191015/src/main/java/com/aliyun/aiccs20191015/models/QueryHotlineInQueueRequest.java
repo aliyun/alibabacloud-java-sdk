@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryHotlineInQueueRequest extends TeaModel {
     /**
-     * <p>External skill group ID.</p>
+     * <p>The external skill group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class QueryHotlineInQueueRequest extends TeaModel {
     public String outerGroupId;
 
     /**
-     * <p>External skill group type.</p>
+     * <p>The external skill group type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

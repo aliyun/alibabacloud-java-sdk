@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDepartmentalLatitudeAgentStatusShrinkRequest extends TeaModel {
     /**
-     * <p>Current page number. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,13 +14,13 @@ public class GetDepartmentalLatitudeAgentStatusShrinkRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>List of department IDs.</p>
+     * <p>The list of department IDs.</p>
      */
     @NameInMap("DepIds")
     public String depIdsShrink;
 
     /**
-     * <p>End UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The end timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1617761765000</p>
@@ -29,10 +29,10 @@ public class GetDepartmentalLatitudeAgentStatusShrinkRequest extends TeaModel {
     public Long endDate;
 
     /**
-     * <p>Indicates whether to query by department grouping. Valid values:</p>
+     * <p>Specifies whether to query by department group. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Yes.</li>
-     * <li><strong>false</strong>: No.</li>
+     * <li><strong>true</strong>: yes.</li>
+     * <li><strong>false</strong>: no.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class GetDepartmentalLatitudeAgentStatusShrinkRequest extends TeaModel {
     public Boolean existDepartmentGrouping;
 
     /**
-     * <p>AICCS instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
+     * <p>The AICCS instance ID. You can obtain the ID in the <strong>Instances</strong> section of the left-side navigation pane in the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class GetDepartmentalLatitudeAgentStatusShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Page size. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -61,7 +61,7 @@ public class GetDepartmentalLatitudeAgentStatusShrinkRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Start date UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The start timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1615083365000</p>

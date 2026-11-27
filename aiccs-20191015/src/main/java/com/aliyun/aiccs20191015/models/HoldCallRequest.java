@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class HoldCallRequest extends TeaModel {
     /**
-     * <p>Agent account name (agent logon name)</p>
+     * <p>The agent account name, which is the agent logon name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class HoldCallRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>acid in WebSocket after an inbound call</p>
+     * <p>The ACID in the WebSocket connection after an inbound call.</p>
      * 
      * <strong>example:</strong>
      * <p>7719786</p>
@@ -24,7 +24,7 @@ public class HoldCallRequest extends TeaModel {
     public String callId;
 
     /**
-     * <p>Unique ID of the customer request, used for idempotency validation; can be generated using UUID</p>
+     * <p>The unique client request ID used for idempotency checks. You can use a UUID to generate this ID.</p>
      * 
      * <strong>example:</strong>
      * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
@@ -33,7 +33,7 @@ public class HoldCallRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>connId in WebSocket after an inbound call</p>
+     * <p>The connection ID in the WebSocket connection after an inbound call.</p>
      * 
      * <strong>example:</strong>
      * <p>7719788</p>
@@ -42,7 +42,7 @@ public class HoldCallRequest extends TeaModel {
     public String connectionId;
 
     /**
-     * <p>Artificial Intelligence Cloud Call Service (AICCS) instance ID, visible in the Artificial Intelligence Cloud Call Service console</p>
+     * <p>The AICCS instance ID. You can view it in the Artificial Intelligence Cloud Call Service console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class HoldCallRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>jobId in WebSocket after an inbound call</p>
+     * <p>The job ID in the WebSocket connection after an inbound call.</p>
      * 
      * <strong>example:</strong>
      * <p>7719787</p>

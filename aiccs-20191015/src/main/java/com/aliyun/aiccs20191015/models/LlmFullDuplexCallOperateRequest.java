@@ -9,26 +9,26 @@ public class LlmFullDuplexCallOperateRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Sample value</p>
      */
     @NameInMap("CallId")
     public String callId;
 
     /**
-     * <p>The action command: play / flush / hangup / sendDtmf.</p>
+     * <p>The action command. Valid values: play, flush, hangup, and sendDtmf.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Sample value</p>
      */
     @NameInMap("Command")
     public String command;
 
     /**
-     * <p>The extension parameter, a JSON character string. The metric description for each command:</p>
+     * <p>The extension parameters in JSON character string format. Metric description for each command:</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>Sample value</p>
      */
     @NameInMap("Param")
     public String param;

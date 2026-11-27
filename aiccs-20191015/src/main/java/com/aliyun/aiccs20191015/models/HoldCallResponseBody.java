@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class HoldCallResponseBody extends TeaModel {
     /**
-     * <p>Fault encoding</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class HoldCallResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Fault description</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx</p>
@@ -23,7 +23,7 @@ public class HoldCallResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID, used to trail the cause of a fault</p>
+     * <p>The request ID used to trace the error cause.</p>
      * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
@@ -32,7 +32,7 @@ public class HoldCallResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API call succeeded</p>
+     * <p>Indicates whether the API call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

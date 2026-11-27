@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDepartmentResponseBody extends TeaModel {
     /**
-     * <p>The status code. A value of 200 indicates that the request succeeded.</p>
+     * <p>The status code. A value of 200 indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,10 +14,10 @@ public class UpdateDepartmentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the operation succeeded. Valid values:  </p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Succeeded  </li>
-     * <li><strong>false</strong>: Failed.</li>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class UpdateDepartmentResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
-     * <p>Description of the status code.</p>
+     * <p>The status code description.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -54,10 +54,10 @@ public class UpdateDepartmentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API was invoked successfully. Valid values:  </p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Succeeded.  </li>
-     * <li><strong>false</strong>: Failed.</li>
+     * <li><strong>true</strong>: The operation was successful.</li>
+     * <li><strong>false</strong>: The operation failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

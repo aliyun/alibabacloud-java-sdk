@@ -4,51 +4,152 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class QueryOutboundTaskRequest extends TeaModel {
+    /**
+     * <p>The caller number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>130****0000</p>
+     */
     @NameInMap("Ani")
     public String ani;
 
+    /**
+     * <p>The current page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The department ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("DepartmentId")
     public String departmentId;
 
+    /**
+     * <p>The end date of task execution. The maximum time span between the start time and the end time is 7 days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-08-09</p>
+     */
     @NameInMap("EndDate")
     public String endDate;
 
+    /**
+     * <p>The end time of task execution.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23:00:00</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The skill group name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test skill group</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
+     * <p>The AICCS instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc_xp_pre***</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The skill group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("SkillGroup")
     public Long skillGroup;
 
+    /**
+     * <p>The start date of task execution. The maximum time span between the start time and the end time is 7 days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-08-08</p>
+     */
     @NameInMap("StartDate")
     public String startDate;
 
+    /**
+     * <p>The start time of task execution.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>09:09:09</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The task status. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: not started</li>
+     * <li><strong>2</strong>: running</li>
+     * <li><strong>3</strong>: paused</li>
+     * <li><strong>4</strong>: expired</li>
+     * <li><strong>5</strong>: completed</li>
+     * <li><strong>6</strong>: deleted</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>120001</p>
+     */
     @NameInMap("TaskId")
     public Long taskId;
 
+    /**
+     * <p>The task name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test task</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 
+    /**
+     * <p>The task type. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: PREVIEW (preview)</li>
+     * <li><strong>2</strong>: FORECAST (forecast)</li>
+     * <li><strong>3</strong>: ROBOT (robot)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TaskType")
     public Integer taskType;
 

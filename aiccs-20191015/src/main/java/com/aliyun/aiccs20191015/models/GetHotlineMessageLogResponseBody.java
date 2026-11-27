@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHotlineMessageLogResponseBody extends TeaModel {
     /**
-     * <p>Status code. A return value of &quot;Success&quot; indicates that the request succeeded.</p>
+     * <p>The status code. A value of Success indicates that the request succeeded.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,16 +14,16 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Voice messages.</p>
+     * <p>The voice message information.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetHotlineMessageLogResponseBodyData> data;
 
     /**
-     * <p>Description of the status code.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxx</p>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
@@ -38,7 +38,11 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API call succeeded.</p>
+     * <p>Indicates whether the API call succeeded. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call succeeded.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -105,7 +109,7 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
          * <p>The session content.</p>
          * 
          * <strong>example:</strong>
-         * <p>您好。</p>
+         * <p>Hello</p>
          */
         @NameInMap("Content")
         public String content;
@@ -129,10 +133,10 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
         public String mid;
 
         /**
-         * <p>The sender type. Valid values:  </p>
+         * <p>The sender type. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Membership  </li>
-         * <li><strong>2</strong>: Agent</li>
+         * <li><strong>1</strong>: member</li>
+         * <li><strong>2</strong>: agent</li>
          * </ul>
          * 
          * <strong>example:</strong>

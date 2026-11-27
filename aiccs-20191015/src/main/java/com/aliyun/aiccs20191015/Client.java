@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "aiccs";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "central";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("aiccs", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -29,11 +32,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Hotline numbers are for inbound and outbound calls only.</p>
+     * <p>Hotline numbers are used only for inbound and outbound calls.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Invoke the AddHotlineNumber API to add a hotline number.</p>
+     * <p>Adds a hotline number.</p>
      * 
      * @param tmpReq AddHotlineNumberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -112,11 +115,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Hotline numbers are for inbound and outbound calls only.</p>
+     * <p>Hotline numbers are used only for inbound and outbound calls.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Invoke the AddHotlineNumber API to add a hotline number.</p>
+     * <p>Adds a hotline number.</p>
      * 
      * @param request AddHotlineNumberRequest
      * @return AddHotlineNumberResponse
@@ -128,7 +131,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds one or more inbound numbers.</p>
+     * <p>Adds inbound numbers.</p>
      * 
      * @param tmpReq AddInboundNumberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -190,7 +193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds one or more inbound numbers.</p>
+     * <p>Adds inbound numbers.</p>
      * 
      * @param request AddInboundNumberRequest
      * @return AddInboundNumberResponse
@@ -202,7 +205,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a large language model.</p>
+     * <p>Adds a large model gateway.</p>
      * 
      * @param tmpReq AddLargeModelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -276,7 +279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a large language model.</p>
+     * <p>Adds a large model gateway.</p>
      * 
      * @param request AddLargeModelRequest
      * @return AddLargeModelResponse
@@ -288,7 +291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a large language model application.</p>
+     * <p>Creates a model application.</p>
      * 
      * @param tmpReq AddModelApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -414,7 +417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a large language model application.</p>
+     * <p>Creates a model application.</p>
      * 
      * @param request AddModelApplicationRequest
      * @return AddModelApplicationResponse
@@ -426,7 +429,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke AddOuterAccount to add an external account.</p>
+     * <p>Adds an external account.</p>
      * 
      * @param request AddOuterAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -454,7 +457,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke AddOuterAccount to add an external account.</p>
+     * <p>Adds an external account.</p>
      * 
      * @param request AddOuterAccountRequest
      * @return AddOuterAccountResponse
@@ -466,7 +469,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke AddSkillGroup to create an external skill group.</p>
+     * <p>Creates an external skill group.</p>
      * 
      * @param request AddSkillGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -494,7 +497,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke AddSkillGroup to create an external skill group.</p>
+     * <p>Creates an external skill group.</p>
      * 
      * @param request AddSkillGroupRequest
      * @return AddSkillGroupResponse
@@ -674,7 +677,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke the AiccsSmartCallOperate API to initiate a specified action during an Intelligent outbound call. This API is only used for scenarios such as parallel transfer to a human agent or allowing a human agent to listen in on the man-machine dialogue.</p>
+     * <p>Invokes the AiccsSmartCallOperate operation to initiate a specified action during an intelligent outbound call. This operation applies only to scenarios such as parallel transfer to a human agent, where the agent can monitor the man-machine dialogue.</p>
      * 
      * @param request AiccsSmartCallOperateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -730,7 +733,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke the AiccsSmartCallOperate API to initiate a specified action during an Intelligent outbound call. This API is only used for scenarios such as parallel transfer to a human agent or allowing a human agent to listen in on the man-machine dialogue.</p>
+     * <p>Invokes the AiccsSmartCallOperate operation to initiate a specified action during an intelligent outbound call. This operation applies only to scenarios such as parallel transfer to a human agent, where the agent can monitor the man-machine dialogue.</p>
      * 
      * @param request AiccsSmartCallOperateRequest
      * @return AiccsSmartCallOperateResponse
@@ -742,7 +745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke AnswerCall to answer an incoming call.</p>
+     * <p>Answers an incoming call.</p>
      * 
      * @param request AnswerCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -794,7 +797,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke AnswerCall to answer an incoming call.</p>
+     * <p>Answers an incoming call.</p>
      * 
      * @param request AnswerCallRequest
      * @return AnswerCallResponse
@@ -806,22 +809,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>After you create an intelligent contact robot call task, you can call this operation to append task details.
+     * Before you call this operation, make sure that you have a successfully created intelligent contact robot call task.
+     * If you do not have a successfully created intelligent contact robot call task, you can click Create Task on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page or call the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> operation to create a task.</p>
+     * <h3>Rate limit</h3>
      * <ul>
-     * <li>After creating an Intelligent Contact Robot calling job, you can invoke this API to append job details.</li>
-     * <li>Before invoking this API, ensure that you already have a successfully created Intelligent Contact Robot calling job.</li>
-     * <li>If you do not have a successfully created Intelligent Contact Robot calling job, you can click <strong>Create Job</strong> on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface or create a job by using the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> API.</li>
-     * </ul>
-     * <h3>Queries per second (QPS) limits</h3>
-     * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.</li>
-     * <li>API frequency: 500 queries per second (QPS).<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: not limited.</li>
+     * <li>API rate limit: 500 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API rate limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Append job details.</p>
+     * <p>Appends task details.</p>
      * 
      * @param request AttachTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -869,22 +870,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>After you create an intelligent contact robot call task, you can call this operation to append task details.
+     * Before you call this operation, make sure that you have a successfully created intelligent contact robot call task.
+     * If you do not have a successfully created intelligent contact robot call task, you can click Create Task on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page or call the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> operation to create a task.</p>
+     * <h3>Rate limit</h3>
      * <ul>
-     * <li>After creating an Intelligent Contact Robot calling job, you can invoke this API to append job details.</li>
-     * <li>Before invoking this API, ensure that you already have a successfully created Intelligent Contact Robot calling job.</li>
-     * <li>If you do not have a successfully created Intelligent Contact Robot calling job, you can click <strong>Create Job</strong> on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface or create a job by using the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> API.</li>
-     * </ul>
-     * <h3>Queries per second (QPS) limits</h3>
-     * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.</li>
-     * <li>API frequency: 500 queries per second (QPS).<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: not limited.</li>
+     * <li>API rate limit: 500 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API rate limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Append job details.</p>
+     * <p>Appends task details.</p>
      * 
      * @param request AttachTaskRequest
      * @return AttachTaskResponse
@@ -895,6 +894,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates multiple quality check tasks.</p>
+     * 
      * @param request BatchCreateQualityProjectsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchCreateQualityProjectsResponse
@@ -948,6 +950,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates multiple quality check tasks.</p>
+     * 
      * @param request BatchCreateQualityProjectsRequest
      * @return BatchCreateQualityProjectsResponse
      */
@@ -959,14 +964,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Use this operation to cancel calls. Alternatively, you can manually cancel calls in the console by navigating to <strong>Call Task Management</strong> &gt; <strong>Manage</strong> &gt; <strong>Execution Records</strong> &gt; <strong>Pending</strong>.</li>
-     * <li>Before calling this operation, ensure you have created a call task and imported callee data.</li>
-     * <li>If you have not created a call task, you can create one and import callee data on the <strong>Call Task Management</strong> page. You can also call the <a href="https://help.aliyun.com/document_detail/2926815.html">CreateAiCallTask</a> and <a href="">ImportTaskNumberDatas</a> operations.</li>
-     * <li>Canceling a call task may affect your business. Please proceed with caution.</li>
+     * <li>You can call this operation to cancel a call task, or manually cancel a call task on the <strong>Call task management</strong> &gt; <strong>Manage</strong> &gt; <strong>Execution records</strong> &gt; <strong>Pending</strong> page.</li>
+     * <li>Before calling this operation, make sure that you have created a call task and imported the callee data.</li>
+     * <li>If you do not have an existing call task, you can create a call task and import callee data on the Call task management page, or call the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> and <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operations to create a call task and import callee data.</li>
+     * <li>Canceling a call task may affect your business. Proceed with caution.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>This operation cancels calls from a call task. You cannot cancel a call if its detail record is already in the pending call queue or is in progress.</p>
+     * <p>Cancels a call task. If detail records have entered the pending call queue or are currently being called, they cannot be canceled.</p>
      * 
      * @param tmpReq CancelAiCallDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1037,14 +1042,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Use this operation to cancel calls. Alternatively, you can manually cancel calls in the console by navigating to <strong>Call Task Management</strong> &gt; <strong>Manage</strong> &gt; <strong>Execution Records</strong> &gt; <strong>Pending</strong>.</li>
-     * <li>Before calling this operation, ensure you have created a call task and imported callee data.</li>
-     * <li>If you have not created a call task, you can create one and import callee data on the <strong>Call Task Management</strong> page. You can also call the <a href="https://help.aliyun.com/document_detail/2926815.html">CreateAiCallTask</a> and <a href="">ImportTaskNumberDatas</a> operations.</li>
-     * <li>Canceling a call task may affect your business. Please proceed with caution.</li>
+     * <li>You can call this operation to cancel a call task, or manually cancel a call task on the <strong>Call task management</strong> &gt; <strong>Manage</strong> &gt; <strong>Execution records</strong> &gt; <strong>Pending</strong> page.</li>
+     * <li>Before calling this operation, make sure that you have created a call task and imported the callee data.</li>
+     * <li>If you do not have an existing call task, you can create a call task and import callee data on the Call task management page, or call the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> and <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operations to create a call task and import callee data.</li>
+     * <li>Canceling a call task may affect your business. Proceed with caution.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>This operation cancels calls from a call task. You cannot cancel a call if its detail record is already in the pending call queue or is in progress.</p>
+     * <p>Cancels a call task. If detail records have entered the pending call queue or are currently being called, they cannot be canceled.</p>
      * 
      * @param request CancelAiCallDetailsRequest
      * @return CancelAiCallDetailsResponse
@@ -1057,21 +1062,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can invoke this API to cancel an Intelligent Contact Robot calling job, or manually cancel the job in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface.</li>
-     * <li>After an Intelligent Contact Robot calling job is canceled, it cannot be started again. Proceed with caution.</li>
-     * <li>If you want to pause a job and restart it later, you can manually pause the job in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface or pause it by using the <a href="https://help.aliyun.com/document_detail/2718006.html">StopTask</a> API.</li>
+     * <li>You can call this operation to cancel an intelligent contact robot call task, or manually cancel the task on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page.</li>
+     * <li>After an intelligent contact robot call task is canceled, it cannot be restarted. Proceed with caution.</li>
+     * <li>If you want to pause a task and restart it later, you can manually pause the task on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page or call the <a href="https://help.aliyun.com/document_detail/2718006.html">StopTask</a> operation to pause the task.</li>
      * </ul>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <h3>Rate limit</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.</li>
-     * <li>API frequency: 500 queries per second (QPS).<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Rate limit per user: None.</li>
+     * <li>API rate limit: 500 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API rate limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Cancel an Intelligent Contact Robot calling job.</p>
+     * <p>Cancels an intelligent contact robot call task.</p>
      * 
      * @param request CancelTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1116,21 +1121,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can invoke this API to cancel an Intelligent Contact Robot calling job, or manually cancel the job in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface.</li>
-     * <li>After an Intelligent Contact Robot calling job is canceled, it cannot be started again. Proceed with caution.</li>
-     * <li>If you want to pause a job and restart it later, you can manually pause the job in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface or pause it by using the <a href="https://help.aliyun.com/document_detail/2718006.html">StopTask</a> API.</li>
+     * <li>You can call this operation to cancel an intelligent contact robot call task, or manually cancel the task on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page.</li>
+     * <li>After an intelligent contact robot call task is canceled, it cannot be restarted. Proceed with caution.</li>
+     * <li>If you want to pause a task and restart it later, you can manually pause the task on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page or call the <a href="https://help.aliyun.com/document_detail/2718006.html">StopTask</a> operation to pause the task.</li>
      * </ul>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <h3>Rate limit</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.</li>
-     * <li>API frequency: 500 queries per second (QPS).<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Rate limit per user: None.</li>
+     * <li>API rate limit: 500 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API rate limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Cancel an Intelligent Contact Robot calling job.</p>
+     * <p>Cancels an intelligent contact robot call task.</p>
      * 
      * @param request CancelTaskRequest
      * @return CancelTaskResponse
@@ -1142,12 +1147,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>Currently, only changing the Live Support status to offline is supported.</p>
-     * </blockquote>
+     * <p>Currently, you can only change the status of an online customer service agent to offline.</p>
      * 
      * <b>summary</b> : 
-     * <p>Invoke ChangeChatAgentStatus to modify the Live Support status.</p>
+     * <p>Modifies the status of an online customer service agent.</p>
      * 
      * @param request ChangeChatAgentStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1191,12 +1194,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>Currently, only changing the Live Support status to offline is supported.</p>
-     * </blockquote>
+     * <p>Currently, you can only change the status of an online customer service agent to offline.</p>
      * 
      * <b>summary</b> : 
-     * <p>Invoke ChangeChatAgentStatus to modify the Live Support status.</p>
+     * <p>Modifies the status of an online customer service agent.</p>
      * 
      * @param request ChangeChatAgentStatusRequest
      * @return ChangeChatAgentStatusResponse
@@ -1207,6 +1208,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Updates the status of a quality inspection task based on the task ID.</p>
+     * 
      * @param request ChangeQualityProjectStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ChangeQualityProjectStatusResponse
@@ -1244,6 +1248,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Updates the status of a quality inspection task based on the task ID.</p>
+     * 
      * @param request ChangeQualityProjectStatusRequest
      * @return ChangeQualityProjectStatusResponse
      */
@@ -1255,21 +1262,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before calling this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </li>
-     * <li>If you need to specify skill group information, refer to the guidance in <a href="#api-detail-35">Request Parameters</a>.  </li>
-     * <li>You can manage agents by calling <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-deleteagent">DeleteAgent</a> to delete an agent or <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-updateagent">UpdateAgent</a> to update agent data.</li>
+     * <li>Before you call this operation, make sure that you have <a href="https://www.alibabacloud.com/help/en/aiccs/user-guide/activate-aiccs">activated the service</a> and <a href="https://www.alibabacloud.com/help/en/aiccs/user-guide/create-an-instance">created an instance</a>.</li>
+     * <li>If you need to specify skill group information, refer to the instructions in the <a href="#api-detail-35">request parameters</a> section.</li>
+     * <li>You can call <a href="https://www.alibabacloud.com/help/en/aiccs/developer-reference/api-aiccs-2019-10-15-deleteagent">DeleteAgent</a> to delete an agent, or call <a href="https://www.alibabacloud.com/help/en/aiccs/developer-reference/api-aiccs-2019-10-15-updateagent">UpdateAgent</a> to update agent data and manage the agent.</li>
      * </ul>
-     * <h3>QPS Limit</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user call frequency: No rate limiting.  </li>
-     * <li>API call frequency: 100 queries per second (QPS).  <blockquote>
-     * <p>If the total calls from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: Not limited.</li>
+     * <li>API frequency: 100 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create an agent account in the Cloud Customer Service System and return the agent ID.</p>
+     * <p>Creates an agent account in the Cloud Customer Service System and returns the agent ID.</p>
      * 
      * @param request CreateAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1327,21 +1334,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before calling this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </li>
-     * <li>If you need to specify skill group information, refer to the guidance in <a href="#api-detail-35">Request Parameters</a>.  </li>
-     * <li>You can manage agents by calling <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-deleteagent">DeleteAgent</a> to delete an agent or <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-updateagent">UpdateAgent</a> to update agent data.</li>
+     * <li>Before you call this operation, make sure that you have <a href="https://www.alibabacloud.com/help/en/aiccs/user-guide/activate-aiccs">activated the service</a> and <a href="https://www.alibabacloud.com/help/en/aiccs/user-guide/create-an-instance">created an instance</a>.</li>
+     * <li>If you need to specify skill group information, refer to the instructions in the <a href="#api-detail-35">request parameters</a> section.</li>
+     * <li>You can call <a href="https://www.alibabacloud.com/help/en/aiccs/developer-reference/api-aiccs-2019-10-15-deleteagent">DeleteAgent</a> to delete an agent, or call <a href="https://www.alibabacloud.com/help/en/aiccs/developer-reference/api-aiccs-2019-10-15-updateagent">UpdateAgent</a> to update agent data and manage the agent.</li>
      * </ul>
-     * <h3>QPS Limit</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user call frequency: No rate limiting.  </li>
-     * <li>API call frequency: 100 queries per second (QPS).  <blockquote>
-     * <p>If the total calls from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: Not limited.</li>
+     * <li>API frequency: 100 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create an agent account in the Cloud Customer Service System and return the agent ID.</p>
+     * <p>Creates an agent account in the Cloud Customer Service System and returns the agent ID.</p>
      * 
      * @param request CreateAgentRequest
      * @return CreateAgentResponse
@@ -1353,7 +1360,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before creating a voice call task, use an agent to perform a test call to confirm that the results meet your requirements.</p>
+     * <p>Before creating a voice call task, use an agent to perform a test call to ensure that the results meet your requirements.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a voice call task.</p>
@@ -1498,7 +1505,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before creating a voice call task, use an agent to perform a test call to confirm that the results meet your requirements.</p>
+     * <p>Before creating a voice call task, use an agent to perform a test call to ensure that the results meet your requirements.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a voice call task.</p>
@@ -1635,18 +1642,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before invoking this API, we recommend that you confirm the instance ID and job ID. For guidance on how to obtain them, see the instructions in <a href="#api-detail-35">Request Parameters</a>.</p>
-     * <h3>QPS limit</h3>
+     * <p>Before you call this operation, confirm the instance ID and task ID. For more information, see the instructions in the <a href="#api-detail-35">Request parameters</a> section.</p>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: 20 queries per second (QPS).</li>
-     * <li>API-wide invocation frequency: 20 queries per second (QPS).<blockquote>
-     * <p>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</p>
+     * <li>Calls per user: 20 calls per second.</li>
+     * <li>API rate limit: 20 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API rate limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a batch for an Intelligent Outbound Calling job based on the instance ID and job ID, enabling data under the job to be queried by batch.</p>
+     * <p>Creates a task batch for an intelligent outbound calling task based on the instance ID and task ID so that data under the task can be queried by batch.</p>
      * 
      * @param request CreateAiOutboundTaskBatchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1682,18 +1689,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before invoking this API, we recommend that you confirm the instance ID and job ID. For guidance on how to obtain them, see the instructions in <a href="#api-detail-35">Request Parameters</a>.</p>
-     * <h3>QPS limit</h3>
+     * <p>Before you call this operation, confirm the instance ID and task ID. For more information, see the instructions in the <a href="#api-detail-35">Request parameters</a> section.</p>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: 20 queries per second (QPS).</li>
-     * <li>API-wide invocation frequency: 20 queries per second (QPS).<blockquote>
-     * <p>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</p>
+     * <li>Calls per user: 20 calls per second.</li>
+     * <li>API rate limit: 20 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API rate limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a batch for an Intelligent Outbound Calling job based on the instance ID and job ID, enabling data under the job to be queried by batch.</p>
+     * <p>Creates a task batch for an intelligent outbound calling task based on the instance ID and task ID so that data under the task can be queried by batch.</p>
      * 
      * @param request CreateAiOutboundTaskBatchRequest
      * @return CreateAiOutboundTaskBatchResponse
@@ -1780,6 +1787,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates an outbound call task.</p>
+     * 
      * @param request CreateOutboundTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateOutboundTaskResponse
@@ -1873,6 +1883,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates an outbound call task.</p>
+     * 
      * @param request CreateOutboundTaskRequest
      * @return CreateOutboundTaskResponse
      */
@@ -1882,6 +1895,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a quality check task.</p>
+     * 
      * @param request CreateQualityProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateQualityProjectResponse
@@ -1951,6 +1967,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a quality check task.</p>
+     * 
      * @param request CreateQualityProjectRequest
      * @return CreateQualityProjectResponse
      */
@@ -1960,6 +1979,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a quality check rule.</p>
+     * 
      * @param request CreateQualityRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateQualityRuleResponse
@@ -2005,6 +2027,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a quality check rule.</p>
+     * 
      * @param request CreateQualityRuleRequest
      * @return CreateQualityRuleResponse
      */
@@ -2243,7 +2268,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an agent that enables password-free login to the Cloud Customer Service System based on a User Account.</p>
+     * <p>Creates an agent for passwordless logon to the Cloud Customer Service System based on a user account.</p>
      * 
      * @param request CreateThirdSsoAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2308,7 +2333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an agent that enables password-free login to the Cloud Customer Service System based on a User Account.</p>
+     * <p>Creates an agent for passwordless logon to the Cloud Customer Service System based on a user account.</p>
      * 
      * @param request CreateThirdSsoAgentRequest
      * @return CreateThirdSsoAgentResponse
@@ -2321,23 +2346,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before deletion, we recommend that you confirm the agent account name and instance ID to be deleted. For guidance on how to obtain them, see the description of <a href="#api-detail-35">Request Parameters</a>.</li>
-     * <li>If an agent is accidentally deleted, you can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-createagent">CreateAgent</a> API to recreate the agent.<blockquote>
-     * <p>If an account is re-added after deletion, the agent ID remains unchanged.</p>
+     * <li>Before deleting an agent account, verify the agent account name and instance ID. For more information, see the instructions in the <a href="#api-detail-35">Request parameters</a> section.</li>
+     * <li>If you delete an agent account by mistake, you can call the <a href="https://www.alibabacloud.com/help/en/aiccs/developer-reference/api-aiccs-2019-10-15-createagent">CreateAgent</a> operation to recreate the agent account.<blockquote>
+     * <p>If you add the account again after it is deleted, the agent ID remains unchanged.</p>
      * </blockquote>
      * </li>
      * </ul>
-     * <h3>Queries per second (QPS) Limit</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.</li>
-     * <li>API frequency: 100 queries per second.<blockquote>
-     * <p>Throttling is triggered if the total invocations from multiple users exceed the API frequency limit.</p>
+     * <li>Call frequency per user: Not limited.</li>
+     * <li>API frequency: 100 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an agent account in the Cloud Customer Service System based on the instance ID and agent account name.</p>
+     * <p>Deletes an agent account in the Xixi Cloud Customer Service System based on the instance ID and agent account name.</p>
      * 
      * @param request DeleteAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2378,23 +2403,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before deletion, we recommend that you confirm the agent account name and instance ID to be deleted. For guidance on how to obtain them, see the description of <a href="#api-detail-35">Request Parameters</a>.</li>
-     * <li>If an agent is accidentally deleted, you can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-createagent">CreateAgent</a> API to recreate the agent.<blockquote>
-     * <p>If an account is re-added after deletion, the agent ID remains unchanged.</p>
+     * <li>Before deleting an agent account, verify the agent account name and instance ID. For more information, see the instructions in the <a href="#api-detail-35">Request parameters</a> section.</li>
+     * <li>If you delete an agent account by mistake, you can call the <a href="https://www.alibabacloud.com/help/en/aiccs/developer-reference/api-aiccs-2019-10-15-createagent">CreateAgent</a> operation to recreate the agent account.<blockquote>
+     * <p>If you add the account again after it is deleted, the agent ID remains unchanged.</p>
      * </blockquote>
      * </li>
      * </ul>
-     * <h3>Queries per second (QPS) Limit</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.</li>
-     * <li>API frequency: 100 queries per second.<blockquote>
-     * <p>Throttling is triggered if the total invocations from multiple users exceed the API frequency limit.</p>
+     * <li>Call frequency per user: Not limited.</li>
+     * <li>API frequency: 100 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an agent account in the Cloud Customer Service System based on the instance ID and agent account name.</p>
+     * <p>Deletes an agent account in the Xixi Cloud Customer Service System based on the instance ID and agent account name.</p>
      * 
      * @param request DeleteAgentRequest
      * @return DeleteAgentResponse
@@ -2410,20 +2435,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Notice: Deletion is a sensitive operation. Proceed with caution.</p>
      * </blockquote>
      * <ul>
-     * <li>Before deletion, we recommend that you confirm the job ID and related information. You can call the <a href="https://help.aliyun.com/document_detail/2718026.html">GetAiOutboundTaskList</a> API to view the outbound calling job list and verify the task name, description, and corresponding job ID.</li>
-     * <li>If you need to recreate an Intelligent Outbound Calling job, you can call the <a href="https://help.aliyun.com/document_detail/312260.html">CreateAiOutboundTask</a> API.</li>
+     * <li>Before deletion, confirm the ID and information of the task to be deleted. You can call the <a href="https://help.aliyun.com/document_detail/2718026.html">GetAiOutboundTaskList</a> operation to view the list of outbound call tasks and confirm the task name, description, and corresponding task ID.</li>
+     * <li>To recreate an AI outbound call task, call the <a href="https://help.aliyun.com/document_detail/312260.html">CreateAiOutboundTask</a> operation.</li>
      * </ul>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: 20 times/second.</li>
-     * <li>API invocation frequency: 20 times/second.<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: 20 calls per second.</li>
+     * <li>API rate limit: 20 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API rate limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an Intelligent Outbound Calling job by instance ID and job ID. After deletion, the job will no longer appear in the outbound calling job list.</p>
+     * <p>Deletes an AI outbound call task based on the instance ID and task ID. After the task is deleted, it cannot be retrieved when you query the list of outbound call tasks.</p>
      * 
      * @param request DeleteAiOutboundTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2463,20 +2488,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Notice: Deletion is a sensitive operation. Proceed with caution.</p>
      * </blockquote>
      * <ul>
-     * <li>Before deletion, we recommend that you confirm the job ID and related information. You can call the <a href="https://help.aliyun.com/document_detail/2718026.html">GetAiOutboundTaskList</a> API to view the outbound calling job list and verify the task name, description, and corresponding job ID.</li>
-     * <li>If you need to recreate an Intelligent Outbound Calling job, you can call the <a href="https://help.aliyun.com/document_detail/312260.html">CreateAiOutboundTask</a> API.</li>
+     * <li>Before deletion, confirm the ID and information of the task to be deleted. You can call the <a href="https://help.aliyun.com/document_detail/2718026.html">GetAiOutboundTaskList</a> operation to view the list of outbound call tasks and confirm the task name, description, and corresponding task ID.</li>
+     * <li>To recreate an AI outbound call task, call the <a href="https://help.aliyun.com/document_detail/312260.html">CreateAiOutboundTask</a> operation.</li>
      * </ul>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: 20 times/second.</li>
-     * <li>API invocation frequency: 20 times/second.<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: 20 calls per second.</li>
+     * <li>API rate limit: 20 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API rate limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an Intelligent Outbound Calling job by instance ID and job ID. After deletion, the job will no longer appear in the outbound calling job list.</p>
+     * <p>Deletes an AI outbound call task based on the instance ID and task ID. After the task is deleted, it cannot be retrieved when you query the list of outbound call tasks.</p>
      * 
      * @param request DeleteAiOutboundTaskRequest
      * @return DeleteAiOutboundTaskResponse
@@ -2613,6 +2638,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes an outbound task by outbound task ID.</p>
+     * 
      * @param request DeleteOutboundTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteOutboundTaskResponse
@@ -2646,6 +2674,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes an outbound task by outbound task ID.</p>
+     * 
      * @param request DeleteOutboundTaskRequest
      * @return DeleteOutboundTaskResponse
      */
@@ -2656,7 +2687,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke DeleteOuterAccount to delete an external account by its external Account ID.</p>
+     * <p>Deletes an external account based on the external account ID.</p>
      * 
      * @param request DeleteOuterAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2684,7 +2715,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke DeleteOuterAccount to delete an external account by its external Account ID.</p>
+     * <p>Deletes an external account based on the external account ID.</p>
      * 
      * @param request DeleteOuterAccountRequest
      * @return DeleteOuterAccountResponse
@@ -2695,6 +2726,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a quality inspection task by task ID.</p>
+     * 
      * @param request DeleteQualityProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteQualityProjectResponse
@@ -2728,6 +2762,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a quality inspection task by task ID.</p>
+     * 
      * @param request DeleteQualityProjectRequest
      * @return DeleteQualityProjectResponse
      */
@@ -2737,6 +2774,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a quality check rule based on the rule ID.</p>
+     * 
      * @param request DeleteQualityRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteQualityRuleResponse
@@ -2770,6 +2810,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a quality check rule based on the rule ID.</p>
+     * 
      * @param request DeleteQualityRuleRequest
      * @return DeleteQualityRuleResponse
      */
@@ -2780,7 +2823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an external skill group based on the skill group ID and skill group channel type.</p>
+     * <p>Deletes an external skill group by skill group ID and channel type.</p>
      * 
      * @param request DeleteSkillGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2808,7 +2851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an external skill group based on the skill group ID and skill group channel type.</p>
+     * <p>Deletes an external skill group by skill group ID and channel type.</p>
      * 
      * @param request DeleteSkillGroupRequest
      * @return DeleteSkillGroupResponse
@@ -2891,6 +2934,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies a quality inspection project.</p>
+     * 
      * @param request EditQualityProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EditQualityProjectResponse
@@ -2970,6 +3016,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies a quality inspection project.</p>
+     * 
      * @param request EditQualityProjectRequest
      * @return EditQualityProjectResponse
      */
@@ -2979,6 +3028,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies a quality check rule based on the quality check rule ID.</p>
+     * 
      * @param request EditQualityRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EditQualityRuleResponse
@@ -3028,6 +3080,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies a quality check rule based on the quality check rule ID.</p>
+     * 
      * @param request EditQualityRuleRequest
      * @return EditQualityRuleResponse
      */
@@ -3037,6 +3092,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies a quality check rule tag based on the tag ID.</p>
+     * 
      * @param request EditQualityRuleTagRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EditQualityRuleTagResponse
@@ -3070,6 +3128,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies a quality check rule tag based on the tag ID.</p>
+     * 
      * @param request EditQualityRuleTagRequest
      * @return EditQualityRuleTagResponse
      */
@@ -3080,7 +3141,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke EncryptPhoneNum to encrypt the User\&quot;s Phone number.</p>
+     * <p>Encrypts the mobile phone number of a user.</p>
      * 
      * @param request EncryptPhoneNumRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3108,7 +3169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke EncryptPhoneNum to encrypt the User\&quot;s Phone number.</p>
+     * <p>Encrypts the mobile phone number of a user.</p>
      * 
      * @param request EncryptPhoneNumRequest
      * @return EncryptPhoneNumResponse
@@ -3120,7 +3181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve or recover a call.</p>
+     * <p>Retrieves or resumes a call.</p>
      * 
      * @param request FetchCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3176,7 +3237,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve or recover a call.</p>
+     * <p>Retrieves or resumes a call.</p>
      * 
      * @param request FetchCallRequest
      * @return FetchCallResponse
@@ -3261,20 +3322,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can invoke this API to generate a message channel access signature. The <strong>Data</strong> field in the response contains the MessageBox message channel signature code.</li>
-     * <li>Before invoking the API, we recommend that you confirm your AICCS instance ID. For instructions on how to obtain it, see the description of <a href="#api-detail-35">Request Parameters</a>.</li>
+     * <li>You can call this operation to generate a message channel access signature. The <strong>Data</strong> parameter in the response is the MessageBox message channel signature code. </li>
+     * <li>Before calling this operation, confirm the AICCS instance ID. Refer to the instructions in the <a href="#api-detail-35">request parameters</a> section to obtain the ID.</li>
      * </ul>
-     * <h3>Queries per second (QPS) limit</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.</li>
-     * <li>API-wide frequency: 100 queries per second.<blockquote>
-     * <p>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: Not throttled.</li>
+     * <li>API frequency: 100 calls per second.<blockquote>
+     * <p>Throttling is also triggered if the total number of calls from multiple users exceeds the API frequency limit.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Generate a message channel access signature based on the Artificial Intelligence Cloud Call Service (AICCS) instance ID and agent account name.</p>
+     * <p>Generates a message channel access signature based on the AICCS instance ID and the agent account name.</p>
      * 
      * @param request GenerateWebSocketSignRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3315,20 +3376,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can invoke this API to generate a message channel access signature. The <strong>Data</strong> field in the response contains the MessageBox message channel signature code.</li>
-     * <li>Before invoking the API, we recommend that you confirm your AICCS instance ID. For instructions on how to obtain it, see the description of <a href="#api-detail-35">Request Parameters</a>.</li>
+     * <li>You can call this operation to generate a message channel access signature. The <strong>Data</strong> parameter in the response is the MessageBox message channel signature code. </li>
+     * <li>Before calling this operation, confirm the AICCS instance ID. Refer to the instructions in the <a href="#api-detail-35">request parameters</a> section to obtain the ID.</li>
      * </ul>
-     * <h3>Queries per second (QPS) limit</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.</li>
-     * <li>API-wide frequency: 100 queries per second.<blockquote>
-     * <p>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: Not throttled.</li>
+     * <li>API frequency: 100 calls per second.<blockquote>
+     * <p>Throttling is also triggered if the total number of calls from multiple users exceeds the API frequency limit.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Generate a message channel access signature based on the Artificial Intelligence Cloud Call Service (AICCS) instance ID and agent account name.</p>
+     * <p>Generates a message channel access signature based on the AICCS instance ID and the agent account name.</p>
      * 
      * @param request GenerateWebSocketSignRequest
      * @return GenerateWebSocketSignResponse
@@ -3485,6 +3546,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves agent information by agent ID.</p>
+     * 
      * @param request GetAgentByIdRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAgentByIdResponse
@@ -3518,6 +3582,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves agent information by agent ID.</p>
+     * 
      * @param request GetAgentByIdRequest
      * @return GetAgentByIdResponse
      */
@@ -3607,20 +3674,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.</li>
-     * <li>If you need to specify department or skill group information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.</li>
+     * <li>Before you call this operation, make sure that you have <a href="https://www.alibabacloud.com/help/en/aiccs/user-guide/activate-aiccs">activated the service</a> and <a href="https://www.alibabacloud.com/help/en/aiccs/user-guide/create-an-instance">created an instance</a>.</li>
+     * <li>If you need to specify department and skill group information, refer to the instructions in the <a href="#api-detail-35">request parameters</a> section.</li>
      * </ul>
-     * <h3>queries per second (QPS) Limit</h3>
+     * <h3>Rate limit</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.</li>
-     * <li>API frequency: 10 requests per second.<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Rate limit per user: None.</li>
+     * <li>API rate limit: 10 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API rate limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtain real-time agent detail data grouped by instance, department, and skill group (real-time data).</p>
+     * <p>Retrieves real-time details of agents grouped by instance, department, and skill group.</p>
      * 
      * @param request GetAgentIndexRealTimeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3669,20 +3736,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.</li>
-     * <li>If you need to specify department or skill group information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.</li>
+     * <li>Before you call this operation, make sure that you have <a href="https://www.alibabacloud.com/help/en/aiccs/user-guide/activate-aiccs">activated the service</a> and <a href="https://www.alibabacloud.com/help/en/aiccs/user-guide/create-an-instance">created an instance</a>.</li>
+     * <li>If you need to specify department and skill group information, refer to the instructions in the <a href="#api-detail-35">request parameters</a> section.</li>
      * </ul>
-     * <h3>queries per second (QPS) Limit</h3>
+     * <h3>Rate limit</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.</li>
-     * <li>API frequency: 10 requests per second.<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Rate limit per user: None.</li>
+     * <li>API rate limit: 10 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API rate limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtain real-time agent detail data grouped by instance, department, and skill group (real-time data).</p>
+     * <p>Retrieves real-time details of agents grouped by instance, department, and skill group.</p>
      * 
      * @param request GetAgentIndexRealTimeRequest
      * @return GetAgentIndexRealTimeResponse
@@ -3773,20 +3840,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </li>
-     * <li>If you need to specify agent or department information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</li>
+     * <li>Before you call this operation, make sure that you have <a href="https://www.alibabacloud.com/help/en/aiccs/user-guide/activate-aiccs">activated the service</a> and <a href="https://www.alibabacloud.com/help/en/aiccs/user-guide/create-an-instance">created an instance</a>.</li>
+     * <li>If you need to specify agent and department information, refer to the instructions in the <a href="#api-detail-35">request parameters</a> section to obtain them.</li>
      * </ul>
-     * <h3>queries per second (QPS) limit</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: 100 times per second.  </li>
-     * <li>API-wide invocation frequency: 100 times per second.<blockquote>
-     * <p>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</p>
+     * <li>Call frequency per user: 100 calls per second.</li>
+     * <li>API rate limit: 100 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API rate limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtain agent-level statistics under hotline monitoring. Supports querying by instance, time range, agent, and department group.</p>
+     * <p>Queries the agent dimension statistics for hotline monitoring. Supports grouping queries by instance, time range, agent, and department.</p>
      * 
      * @param tmpReq GetAgentStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3825,20 +3892,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </li>
-     * <li>If you need to specify agent or department information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</li>
+     * <li>Before you call this operation, make sure that you have <a href="https://www.alibabacloud.com/help/en/aiccs/user-guide/activate-aiccs">activated the service</a> and <a href="https://www.alibabacloud.com/help/en/aiccs/user-guide/create-an-instance">created an instance</a>.</li>
+     * <li>If you need to specify agent and department information, refer to the instructions in the <a href="#api-detail-35">request parameters</a> section to obtain them.</li>
      * </ul>
-     * <h3>queries per second (QPS) limit</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: 100 times per second.  </li>
-     * <li>API-wide invocation frequency: 100 times per second.<blockquote>
-     * <p>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</p>
+     * <li>Call frequency per user: 100 calls per second.</li>
+     * <li>API rate limit: 100 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API rate limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtain agent-level statistics under hotline monitoring. Supports querying by instance, time range, agent, and department group.</p>
+     * <p>Queries the agent dimension statistics for hotline monitoring. Supports grouping queries by instance, time range, agent, and department.</p>
      * 
      * @param request GetAgentStatisticsRequest
      * @return GetAgentStatisticsResponse
@@ -3972,18 +4039,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The task execution details include the total number of jobs, job batches, outbound call numbers, corresponding call counts, execution status, and other information.</p>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <p>The task execution details include information such as the total number of tasks, task batches, outbound call numbers and their corresponding call counts, and execution statuses.</p>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: 100 times/second.</li>
-     * <li>API invocation frequency: 100 times/second.<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: 100 calls per second.</li>
+     * <li>API frequency: 100 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtain task execution details by instance ID and job ID.</p>
+     * <p>Queries the execution details of a task based on the instance ID and task ID.</p>
      * 
      * @param request GetAiOutboundTaskExecDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4011,18 +4078,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The task execution details include the total number of jobs, job batches, outbound call numbers, corresponding call counts, execution status, and other information.</p>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <p>The task execution details include information such as the total number of tasks, task batches, outbound call numbers and their corresponding call counts, and execution statuses.</p>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: 100 times/second.</li>
-     * <li>API invocation frequency: 100 times/second.<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: 100 calls per second.</li>
+     * <li>API frequency: 100 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtain task execution details by instance ID and job ID.</p>
+     * <p>Queries the execution details of a task based on the instance ID and task ID.</p>
      * 
      * @param request GetAiOutboundTaskExecDetailRequest
      * @return GetAiOutboundTaskExecDetailResponse
@@ -4035,20 +4102,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The job list contains job information, including job ID, Task Status, Task Name, task completion rate, and more. For details, see <a href="#api-detail-40">Response parameters</a>.</li>
-     * <li>If you need to update job information, you can invoke the <a href="https://help.aliyun.com/document_detail/2718021.html">UpdateAiOutboundTask</a> API.</li>
+     * <li>The task list contains task information, including the task ID, task status, task name, and task completion rate. For more information, see <a href="#api-detail-40">Response parameters</a>.</li>
+     * <li>To update task information, call the <a href="https://help.aliyun.com/document_detail/2718021.html">UpdateAiOutboundTask</a> operation.</li>
      * </ul>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <h3>QPS limit</h3>
      * <ul>
-     * <li>Per-user invocation frequency: 100 times/second.</li>
-     * <li>API invocation frequency: 100 times/second.<blockquote>
-     * <p>Throttling is triggered if the total invocations from multiple users exceed the API frequency limit.</p>
+     * <li>Calls per second per user: 100.</li>
+     * <li>Calls per second for the API: 100.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieve the outbound call job list by instance ID and Task Type.</p>
+     * <p>Queries a list of outbound call tasks based on the instance ID and task type.</p>
      * 
      * @param request GetAiOutboundTaskListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4077,20 +4144,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The job list contains job information, including job ID, Task Status, Task Name, task completion rate, and more. For details, see <a href="#api-detail-40">Response parameters</a>.</li>
-     * <li>If you need to update job information, you can invoke the <a href="https://help.aliyun.com/document_detail/2718021.html">UpdateAiOutboundTask</a> API.</li>
+     * <li>The task list contains task information, including the task ID, task status, task name, and task completion rate. For more information, see <a href="#api-detail-40">Response parameters</a>.</li>
+     * <li>To update task information, call the <a href="https://help.aliyun.com/document_detail/2718021.html">UpdateAiOutboundTask</a> operation.</li>
      * </ul>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <h3>QPS limit</h3>
      * <ul>
-     * <li>Per-user invocation frequency: 100 times/second.</li>
-     * <li>API invocation frequency: 100 times/second.<blockquote>
-     * <p>Throttling is triggered if the total invocations from multiple users exceed the API frequency limit.</p>
+     * <li>Calls per second per user: 100.</li>
+     * <li>Calls per second for the API: 100.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieve the outbound call job list by instance ID and Task Type.</p>
+     * <p>Queries a list of outbound call tasks based on the instance ID and task type.</p>
      * 
      * @param request GetAiOutboundTaskListRequest
      * @return GetAiOutboundTaskListResponse
@@ -4440,7 +4507,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke the GetConfigNumList API to obtain the hotline settings number list.</p>
+     * <p>Queries the list of hotline configuration numbers.</p>
      * 
      * @param request GetConfigNumListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4468,7 +4535,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke the GetConfigNumList API to obtain the hotline settings number list.</p>
+     * <p>Queries the list of hotline configuration numbers.</p>
      * 
      * @param request GetConfigNumListRequest
      * @return GetConfigNumListResponse
@@ -4480,7 +4547,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can invoke the GetCustomerInfo API to obtain membership details by Workbench membership ID.</p>
+     * <p>Retrieves the details of a member based on the workspace member ID.</p>
      * 
      * @param request GetCustomerInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4508,7 +4575,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can invoke the GetCustomerInfo API to obtain membership details by Workbench membership ID.</p>
+     * <p>Retrieves the details of a member based on the workspace member ID.</p>
      * 
      * @param request GetCustomerInfoRequest
      * @return GetCustomerInfoResponse
@@ -4521,21 +4588,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The skill groups returned by this API are grouped by department ID, which can be specified when you <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-createskillgroup">create a skill group</a>.</li>
-     * <li>To query detailed skill group information, you can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> API.</li>
-     * <li>Before invoking this API, you should confirm the AICCS instance ID and agent ID. For guidance on how to obtain them, see the description of <a href="#api-detail-35">Request Parameters</a>.</li>
+     * <li>The skill groups queried by this operation are grouped by department ID. You can specify the department ID when you <a href="https://www.alibabacloud.com/help/en/aiccs/developer-reference/api-aiccs-2019-10-15-createskillgroup">create a skill group</a>.</li>
+     * <li>To query detailed skill group information, call the <a href="https://www.alibabacloud.com/help/en/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> operation.</li>
+     * <li>Before calling this operation, verify the AICCS instance ID and agent ID. For more information, see the instructions in the <a href="#api-detail-35">Request parameters</a> section.</li>
      * </ul>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: 1000 queries per second.</li>
-     * <li>API-wide invocation frequency: 1000 queries per second.<blockquote>
-     * <p>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: 1,000 calls per second.</li>
+     * <li>API frequency: 1,000 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries skill group categories and the skill group list by AICCS instance ID and agent ID.</p>
+     * <p>Queries skill group categories and skill groups based on the AICCS instance ID and agent ID.</p>
      * 
      * @param request GetDepGroupTreeDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4564,21 +4631,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The skill groups returned by this API are grouped by department ID, which can be specified when you <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-createskillgroup">create a skill group</a>.</li>
-     * <li>To query detailed skill group information, you can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> API.</li>
-     * <li>Before invoking this API, you should confirm the AICCS instance ID and agent ID. For guidance on how to obtain them, see the description of <a href="#api-detail-35">Request Parameters</a>.</li>
+     * <li>The skill groups queried by this operation are grouped by department ID. You can specify the department ID when you <a href="https://www.alibabacloud.com/help/en/aiccs/developer-reference/api-aiccs-2019-10-15-createskillgroup">create a skill group</a>.</li>
+     * <li>To query detailed skill group information, call the <a href="https://www.alibabacloud.com/help/en/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> operation.</li>
+     * <li>Before calling this operation, verify the AICCS instance ID and agent ID. For more information, see the instructions in the <a href="#api-detail-35">Request parameters</a> section.</li>
      * </ul>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: 1000 queries per second.</li>
-     * <li>API-wide invocation frequency: 1000 queries per second.<blockquote>
-     * <p>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: 1,000 calls per second.</li>
+     * <li>API frequency: 1,000 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries skill group categories and the skill group list by AICCS instance ID and agent ID.</p>
+     * <p>Queries skill group categories and skill groups based on the AICCS instance ID and agent ID.</p>
      * 
      * @param request GetDepGroupTreeDataRequest
      * @return GetDepGroupTreeDataResponse
@@ -4591,20 +4658,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </li>
-     * <li>If you need to specify department information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</li>
+     * <li>Before calling this operation, make sure that you have <a href="https://www.alibabacloud.com/help/en/aiccs/user-guide/activate-aiccs">activated the service</a> and <a href="https://www.alibabacloud.com/help/en/aiccs/user-guide/create-an-instance">created an instance</a>.</li>
+     * <li>If you need to specify department information, refer to the instructions in the <a href="#api-detail-35">request parameters</a> section.</li>
      * </ul>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: 100 times/second.  </li>
-     * <li>API-wide invocation frequency: 100 times/second.<blockquote>
-     * <p>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: 100 calls per second.</li>
+     * <li>API frequency: 100 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtain department-level status metrics under hotline monitoring. Supports queries by instance, time range, and department group.</p>
+     * <p>Retrieves the department-level status metrics for hotline monitoring. Supports queries by instance, time range, and department group.</p>
      * 
      * @param tmpReq GetDepartmentalLatitudeAgentStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4639,20 +4706,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </li>
-     * <li>If you need to specify department information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</li>
+     * <li>Before calling this operation, make sure that you have <a href="https://www.alibabacloud.com/help/en/aiccs/user-guide/activate-aiccs">activated the service</a> and <a href="https://www.alibabacloud.com/help/en/aiccs/user-guide/create-an-instance">created an instance</a>.</li>
+     * <li>If you need to specify department information, refer to the instructions in the <a href="#api-detail-35">request parameters</a> section.</li>
      * </ul>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: 100 times/second.  </li>
-     * <li>API-wide invocation frequency: 100 times/second.<blockquote>
-     * <p>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: 100 calls per second.</li>
+     * <li>API frequency: 100 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtain department-level status metrics under hotline monitoring. Supports queries by instance, time range, and department group.</p>
+     * <p>Retrieves the department-level status metrics for hotline monitoring. Supports queries by instance, time range, and department group.</p>
      * 
      * @param request GetDepartmentalLatitudeAgentStatusRequest
      * @return GetDepartmentalLatitudeAgentStatusResponse
@@ -4664,18 +4731,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The hotline agent details include information such as agent posture status, agent ID, and heartbeat signature. For more information, see <a href="#api-detail-40">Response parameters</a>.  </p>
-     * <h3>Queries per second (QPS) limit</h3>
+     * <p>The hotline agent details include the agent status, agent ID, heartbeat signature, and other information. For more information, see <a href="#api-detail-40">Response parameters</a>.</p>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: Rate Limiting is not applied.  </li>
-     * <li>API frequency: 100 queries per second (QPS).  <blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Rate limit per user: None.</li>
+     * <li>API rate limit: 100 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API rate limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtain the current service details of a hotline agent based on the instance ID and agent account name.</p>
+     * <p>Queries the current service details of a hotline agent based on the instance ID and agent account name.</p>
      * 
      * @param request GetHotlineAgentDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4703,18 +4770,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The hotline agent details include information such as agent posture status, agent ID, and heartbeat signature. For more information, see <a href="#api-detail-40">Response parameters</a>.  </p>
-     * <h3>Queries per second (QPS) limit</h3>
+     * <p>The hotline agent details include the agent status, agent ID, heartbeat signature, and other information. For more information, see <a href="#api-detail-40">Response parameters</a>.</p>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: Rate Limiting is not applied.  </li>
-     * <li>API frequency: 100 queries per second (QPS).  <blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Rate limit per user: None.</li>
+     * <li>API rate limit: 100 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API rate limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtain the current service details of a hotline agent based on the instance ID and agent account name.</p>
+     * <p>Queries the current service details of a hotline agent based on the instance ID and agent account name.</p>
      * 
      * @param request GetHotlineAgentDetailRequest
      * @return GetHotlineAgentDetailResponse
@@ -4727,28 +4794,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/document_detail/276009.html">activated the service</a> and <a href="https://help.aliyun.com/document_detail/276011.html">created an instance</a>.</li>
-     * <li>If you need to specify department or skill group information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.<blockquote>
+     * <li>Before you call this operation, make sure that you have <a href="https://help.aliyun.com/document_detail/276009.html">activated the service</a> and <a href="https://help.aliyun.com/document_detail/276011.html">created an instance</a>.</li>
+     * <li>If you need to specify department and skill group information, refer to the instructions in the <a href="#api-detail-35">Request parameters</a> section.<blockquote>
      * <p>Query logic priority:</p>
      * <ul>
-     * <li>If GroupIds is not empty, query data metrics under the specified skill groups.</li>
-     * <li>Otherwise, if DepIds is not empty, query data metrics under the corresponding department groups.</li>
-     * <li>Otherwise, query data metrics under the AICCS instance.</li>
+     * <li>If GroupIds is not empty, the system queries the data metrics under the specified skill groups.</li>
+     * <li>Otherwise, if DepIds is not empty, the system queries the data metrics under the specified departments.</li>
+     * <li>Otherwise, the system queries the data metrics under the AICCS instance.</li>
      * </ul>
      * </blockquote>
      * </li>
      * </ul>
-     * <h3>QPS Limit</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.</li>
-     * <li>API frequency: 10 queries per second (QPS).<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: Not limited.</li>
+     * <li>API frequency: 10 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtain detailed data metrics by hotline agent dimension (T+1). Supports grouping queries by instance, time range, department, and skill group.</p>
+     * <p>Queries the details of hotline agent dimension (T+1) data. Supports querying by instance, time range, department, and skill group.</p>
      * 
      * @param request GetHotlineAgentDetailReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4805,28 +4872,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/document_detail/276009.html">activated the service</a> and <a href="https://help.aliyun.com/document_detail/276011.html">created an instance</a>.</li>
-     * <li>If you need to specify department or skill group information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.<blockquote>
+     * <li>Before you call this operation, make sure that you have <a href="https://help.aliyun.com/document_detail/276009.html">activated the service</a> and <a href="https://help.aliyun.com/document_detail/276011.html">created an instance</a>.</li>
+     * <li>If you need to specify department and skill group information, refer to the instructions in the <a href="#api-detail-35">Request parameters</a> section.<blockquote>
      * <p>Query logic priority:</p>
      * <ul>
-     * <li>If GroupIds is not empty, query data metrics under the specified skill groups.</li>
-     * <li>Otherwise, if DepIds is not empty, query data metrics under the corresponding department groups.</li>
-     * <li>Otherwise, query data metrics under the AICCS instance.</li>
+     * <li>If GroupIds is not empty, the system queries the data metrics under the specified skill groups.</li>
+     * <li>Otherwise, if DepIds is not empty, the system queries the data metrics under the specified departments.</li>
+     * <li>Otherwise, the system queries the data metrics under the AICCS instance.</li>
      * </ul>
      * </blockquote>
      * </li>
      * </ul>
-     * <h3>QPS Limit</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.</li>
-     * <li>API frequency: 10 queries per second (QPS).<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: Not limited.</li>
+     * <li>API frequency: 10 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtain detailed data metrics by hotline agent dimension (T+1). Supports grouping queries by instance, time range, department, and skill group.</p>
+     * <p>Queries the details of hotline agent dimension (T+1) data. Supports querying by instance, time range, department, and skill group.</p>
      * 
      * @param request GetHotlineAgentDetailReportRequest
      * @return GetHotlineAgentDetailReportResponse
@@ -4914,17 +4981,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Queries per second (QPS) limits</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: 50 times/second.  </li>
-     * <li>API invocation frequency: 100 times/second.  <blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: 50 calls per second.</li>
+     * <li>API frequency: 100 calls per second.<blockquote>
+     * <p>Throttling is also triggered if the total call volume from multiple users exceeds the API rate limit.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Invoke the GetHotlineCallAction API to query the result data of call actions.</p>
+     * <p>Queries the result data of hotline call actions.</p>
      * 
      * @param request GetHotlineCallActionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4980,17 +5047,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Queries per second (QPS) limits</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: 50 times/second.  </li>
-     * <li>API invocation frequency: 100 times/second.  <blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: 50 calls per second.</li>
+     * <li>API frequency: 100 calls per second.<blockquote>
+     * <p>Throttling is also triggered if the total call volume from multiple users exceeds the API rate limit.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Invoke the GetHotlineCallAction API to query the result data of call actions.</p>
+     * <p>Queries the result data of hotline call actions.</p>
      * 
      * @param request GetHotlineCallActionRequest
      * @return GetHotlineCallActionResponse
@@ -5098,7 +5165,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke the GetHotlineMessageLog API to retrieve hotline message records.</p>
+     * <p>Retrieves hotline message logs.</p>
      * 
      * @param request GetHotlineMessageLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5126,7 +5193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke the GetHotlineMessageLog API to retrieve hotline message records.</p>
+     * <p>Retrieves hotline message logs.</p>
      * 
      * @param request GetHotlineMessageLogRequest
      * @return GetHotlineMessageLogResponse
@@ -5138,7 +5205,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke the GetHotlineRuntimeInfo API to query hotline runtime information.</p>
+     * <p>Queries the hotline runtime information.</p>
      * 
      * @param request GetHotlineRuntimeInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5166,7 +5233,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke the GetHotlineRuntimeInfo API to query hotline runtime information.</p>
+     * <p>Queries the hotline runtime information.</p>
      * 
      * @param request GetHotlineRuntimeInfoRequest
      * @return GetHotlineRuntimeInfoResponse
@@ -5260,7 +5327,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtain the queue length of hotline members.</p>
+     * <p>Retrieves the number of hotline customers in the queue.</p>
      * 
      * @param request GetHotlineWaitingNumberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5288,7 +5355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtain the queue length of hotline members.</p>
+     * <p>Retrieves the number of hotline customers in the queue.</p>
      * 
      * @param request GetHotlineWaitingNumberRequest
      * @return GetHotlineWaitingNumberResponse
@@ -5395,6 +5462,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves a list of instances.</p>
+     * 
      * @param request GetInstanceListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetInstanceListResponse
@@ -5432,6 +5502,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves a list of instances.</p>
+     * 
      * @param request GetInstanceListRequest
      * @return GetInstanceListResponse
      */
@@ -5442,7 +5515,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke the GetMcuLvsIp API to query the hotline server IP address.</p>
+     * <p>Queries the IP addresses of hotline servers.</p>
      * 
      * @param request GetMcuLvsIpRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5470,7 +5543,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke the GetMcuLvsIp API to query the hotline server IP address.</p>
+     * <p>Queries the IP addresses of hotline servers.</p>
      * 
      * @param request GetMcuLvsIpRequest
      * @return GetMcuLvsIpResponse
@@ -5482,17 +5555,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Queries per second (QPS) limit</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.</li>
-     * <li>API frequency: 100 queries per second (QPS).<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: Not throttled.</li>
+     * <li>API frequency: 100 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency, throttling is also triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtain the number\&quot;s归属地 information based on the instance ID and phone number.</p>
+     * <p>Retrieves the location information of a phone number based on the instance ID and phone number.</p>
      * 
      * @param request GetNumLocationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5520,17 +5593,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Queries per second (QPS) limit</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.</li>
-     * <li>API frequency: 100 queries per second (QPS).<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: Not throttled.</li>
+     * <li>API frequency: 100 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency, throttling is also triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtain the number\&quot;s归属地 information based on the instance ID and phone number.</p>
+     * <p>Retrieves the location information of a phone number based on the instance ID and phone number.</p>
      * 
      * @param request GetNumLocationRequest
      * @return GetNumLocationResponse
@@ -5754,7 +5827,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke GetQualityProjectDetail to obtain the quality inspection job details.</p>
+     * <p>Queries the details of a quality inspection task.</p>
      * 
      * @param request GetQualityProjectDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5790,7 +5863,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke GetQualityProjectDetail to obtain the quality inspection job details.</p>
+     * <p>Queries the details of a quality inspection task.</p>
      * 
      * @param request GetQualityProjectDetailRequest
      * @return GetQualityProjectDetailResponse
@@ -5802,7 +5875,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke GetQualityProjectList to obtain the quality inspection job list.</p>
+     * <p>Queries the list of quality check tasks.</p>
      * 
      * @param request GetQualityProjectListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5858,7 +5931,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke GetQualityProjectList to obtain the quality inspection job list.</p>
+     * <p>Queries the list of quality check tasks.</p>
      * 
      * @param request GetQualityProjectListRequest
      * @return GetQualityProjectListResponse
@@ -5869,6 +5942,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the task logs of a quality inspection node.</p>
+     * 
      * @param request GetQualityProjectLogRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetQualityProjectLogResponse
@@ -5902,6 +5978,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the task logs of a quality inspection node.</p>
+     * 
      * @param request GetQualityProjectLogRequest
      * @return GetQualityProjectLogResponse
      */
@@ -5911,6 +5990,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the quality inspection task report.</p>
+     * 
      * @param request GetQualityResultRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetQualityResultResponse
@@ -5976,6 +6058,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the quality inspection task report.</p>
+     * 
      * @param request GetQualityResultRequest
      * @return GetQualityResultResponse
      */
@@ -5985,6 +6070,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a quality check rule.</p>
+     * 
      * @param request GetQualityRuleDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetQualityRuleDetailResponse
@@ -6018,6 +6106,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a quality check rule.</p>
+     * 
      * @param request GetQualityRuleDetailRequest
      * @return GetQualityRuleDetailResponse
      */
@@ -6027,6 +6118,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves a list of quality check rules.</p>
+     * 
      * @param request GetQualityRuleListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetQualityRuleListResponse
@@ -6064,6 +6158,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves a list of quality check rules.</p>
+     * 
      * @param request GetQualityRuleListRequest
      * @return GetQualityRuleListResponse
      */
@@ -6073,6 +6170,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the list of quality check rule tags.</p>
+     * 
      * @param request GetQualityRuleTagListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetQualityRuleTagListResponse
@@ -6102,6 +6202,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the list of quality check rule tags.</p>
+     * 
      * @param request GetQualityRuleTagListRequest
      * @return GetQualityRuleTagListResponse
      */
@@ -6190,7 +6293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke the GetRecordData API to obtain a recording file.</p>
+     * <p>Retrieves the recording file.</p>
      * 
      * @param request GetRecordDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6226,7 +6329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke the GetRecordData API to obtain a recording file.</p>
+     * <p>Retrieves the recording file.</p>
      * 
      * @param request GetRecordDataRequest
      * @return GetRecordDataResponse
@@ -6471,20 +6574,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </li>
-     * <li>If you need to specify department or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</li>
+     * <li>Before you call this operation, make sure that you have <a href="https://www.alibabacloud.com/help/en/aiccs/user-guide/activate-aiccs">activated the service</a> and <a href="https://www.alibabacloud.com/help/en/aiccs/user-guide/create-an-instance">created an instance</a>.</li>
+     * <li>If you need to specify department and skill group information, refer to the instructions in the <a href="#api-detail-35">request parameters</a> section.</li>
      * </ul>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: 100 times per second.  </li>
-     * <li>API-wide invocation frequency: 100 times per second.  <blockquote>
-     * <p>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</p>
+     * <li>Call frequency per user: 100 calls per second.</li>
+     * <li>API frequency: 100 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtain the aggregated agent status metrics for skill groups under hotline monitoring. Supports grouped queries by instance, time range, department, and skill group.</p>
+     * <p>Queries the summary status of agents in skill groups under hotline monitoring. Supports querying by instance, time range, department, and skill group.</p>
      * 
      * @param tmpReq GetSkillGroupAndAgentStatusSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6523,20 +6626,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </li>
-     * <li>If you need to specify department or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</li>
+     * <li>Before you call this operation, make sure that you have <a href="https://www.alibabacloud.com/help/en/aiccs/user-guide/activate-aiccs">activated the service</a> and <a href="https://www.alibabacloud.com/help/en/aiccs/user-guide/create-an-instance">created an instance</a>.</li>
+     * <li>If you need to specify department and skill group information, refer to the instructions in the <a href="#api-detail-35">request parameters</a> section.</li>
      * </ul>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: 100 times per second.  </li>
-     * <li>API-wide invocation frequency: 100 times per second.  <blockquote>
-     * <p>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</p>
+     * <li>Call frequency per user: 100 calls per second.</li>
+     * <li>API frequency: 100 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtain the aggregated agent status metrics for skill groups under hotline monitoring. Supports grouped queries by instance, time range, department, and skill group.</p>
+     * <p>Queries the summary status of agents in skill groups under hotline monitoring. Supports querying by instance, time range, department, and skill group.</p>
      * 
      * @param request GetSkillGroupAndAgentStatusSummaryRequest
      * @return GetSkillGroupAndAgentStatusSummaryResponse
@@ -6908,7 +7011,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke HangupCall to execute the agent hang-up operation.</p>
+     * <p>Hangs up a call for an agent.</p>
      * 
      * @param request HangupCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6960,7 +7063,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke HangupCall to execute the agent hang-up operation.</p>
+     * <p>Hangs up a call for an agent.</p>
      * 
      * @param request HangupCallRequest
      * @return HangupCallResponse
@@ -7032,7 +7135,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Hang up a third-party call.</p>
+     * <p>Disconnects a third-party call.</p>
      * 
      * @param request HangupThirdCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7084,7 +7187,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Hang up a third-party call.</p>
+     * <p>Disconnects a third-party call.</p>
      * 
      * @param request HangupThirdCallRequest
      * @return HangupThirdCallResponse
@@ -7096,7 +7199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Hold the call.</p>
+     * <p>Places a call on hold.</p>
      * 
      * @param request HoldCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7148,7 +7251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Hold the call.</p>
+     * <p>Places a call on hold.</p>
      * 
      * @param request HoldCallRequest
      * @return HoldCallResponse
@@ -7330,7 +7433,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Imports a single phone number record.</p>
+     * <p>Imports data for a single phone number.</p>
      * 
      * @param tmpReq ImportOneTaskPhoneNumberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7400,7 +7503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Imports a single phone number record.</p>
+     * <p>Imports data for a single phone number.</p>
      * 
      * @param request ImportOneTaskPhoneNumberRequest
      * @return ImportOneTaskPhoneNumberResponse
@@ -7413,14 +7516,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this operation to import callee data, or import callee data on the <strong>Call Task Management</strong> page by clicking Import Callee Data, downloading the template, and uploading the file.</li>
+     * <li>You can call this operation to import callee data. You can also import callee data by clicking <strong>Import Callee Data</strong> on the <strong>Call Task Management</strong> page, downloading the template, and uploading a file.</li>
      * <li>This operation currently supports only the JSON data type for importing callee data.</li>
-     * <li>Before calling this operation, make sure that you have a successfully created call task.</li>
-     * <li>If you do not have a successfully created call task, create one on the <strong>Call Task Management</strong> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</li>
+     * <li>Before calling this operation, make sure that a call task has been created.</li>
+     * <li>If you do not have a created call task, you can create one on the <strong>Call Task Management</strong> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Imports callee data for a voice call task.</p>
+     * <p>Imports callee data for a call task.</p>
      * 
      * @param tmpReq ImportTaskNumberDatasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7489,14 +7592,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this operation to import callee data, or import callee data on the <strong>Call Task Management</strong> page by clicking Import Callee Data, downloading the template, and uploading the file.</li>
+     * <li>You can call this operation to import callee data. You can also import callee data by clicking <strong>Import Callee Data</strong> on the <strong>Call Task Management</strong> page, downloading the template, and uploading a file.</li>
      * <li>This operation currently supports only the JSON data type for importing callee data.</li>
-     * <li>Before calling this operation, make sure that you have a successfully created call task.</li>
-     * <li>If you do not have a successfully created call task, create one on the <strong>Call Task Management</strong> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</li>
+     * <li>Before calling this operation, make sure that a call task has been created.</li>
+     * <li>If you do not have a created call task, you can create one on the <strong>Call Task Management</strong> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Imports callee data for a voice call task.</p>
+     * <p>Imports callee data for a call task.</p>
      * 
      * @param request ImportTaskNumberDatasRequest
      * @return ImportTaskNumberDatasResponse
@@ -7509,20 +7612,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>After importing outbound call callee numbers, the outbound calling job can operate normally.  </li>
-     * <li>Before invoking this API, we recommend that you confirm the instance ID and job ID. For more information, see <a href="#api-detail-35">Request Parameters</a>.</li>
+     * <li>After you import outbound called numbers, the outbound call task can make calls normally.</li>
+     * <li>Before you call this operation, verify the instance ID and task ID. For more information, see <a href="#api-detail-35">Request parameters</a>.</li>
      * </ul>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: 20 times/second.  </li>
-     * <li>API invocation frequency: 50 times/second.  <blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Calls per second (CPS) per user: 20.</li>
+     * <li>CPS per API: 50.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API CPS limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Import outbound call callee numbers based on the instance ID and job ID.</p>
+     * <p>Imports outbound called numbers based on the instance ID and task ID.</p>
      * 
      * @param tmpReq InsertAiOutboundPhoneNumsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7573,20 +7676,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>After importing outbound call callee numbers, the outbound calling job can operate normally.  </li>
-     * <li>Before invoking this API, we recommend that you confirm the instance ID and job ID. For more information, see <a href="#api-detail-35">Request Parameters</a>.</li>
+     * <li>After you import outbound called numbers, the outbound call task can make calls normally.</li>
+     * <li>Before you call this operation, verify the instance ID and task ID. For more information, see <a href="#api-detail-35">Request parameters</a>.</li>
      * </ul>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: 20 times/second.  </li>
-     * <li>API invocation frequency: 50 times/second.  <blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Calls per second (CPS) per user: 20.</li>
+     * <li>CPS per API: 50.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API CPS limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Import outbound call callee numbers based on the instance ID and job ID.</p>
+     * <p>Imports outbound called numbers based on the instance ID and task ID.</p>
      * 
      * @param request InsertAiOutboundPhoneNumsRequest
      * @return InsertAiOutboundPhoneNumsResponse
@@ -7597,6 +7700,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Supplements an outbound task based on the outbound task ID.</p>
+     * 
      * @param request InsertTaskDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return InsertTaskDetailResponse
@@ -7634,6 +7740,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Supplements an outbound task based on the outbound task ID.</p>
+     * 
      * @param request InsertTaskDetailRequest
      * @return InsertTaskDetailResponse
      */
@@ -7644,7 +7753,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add a third party to the call.</p>
+     * <p>Adds a third party to a call.</p>
      * 
      * @param request JoinThirdCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7700,7 +7809,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add a third party to the call.</p>
+     * <p>Adds a third party to a call.</p>
      * 
      * @param request JoinThirdCallRequest
      * @return JoinThirdCallResponse
@@ -7864,10 +7973,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you have not created and published any custom voices on the <a href="https://aiccs.console.aliyun.com/engine/voiceprint">Custom Voice</a> page, the operation returns only system voices.</p>
+     * <p>If you do not have any created and online voices on the <a href="https://aiccs.console.aliyun.com/engine/voiceprint">Personalized Voices</a> page, only system preset voices are returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists the system and custom TTS voices available for large model-based outbound calls.</p>
+     * <p>Retrieves the list of TTS voices supported for large model outbound calls, including system preset voices and personalized voices.</p>
      * 
      * @param request ListAvailableTtsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7915,10 +8024,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you have not created and published any custom voices on the <a href="https://aiccs.console.aliyun.com/engine/voiceprint">Custom Voice</a> page, the operation returns only system voices.</p>
+     * <p>If you do not have any created and online voices on the <a href="https://aiccs.console.aliyun.com/engine/voiceprint">Personalized Voices</a> page, only system preset voices are returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists the system and custom TTS voices available for large model-based outbound calls.</p>
+     * <p>Retrieves the list of TTS voices supported for large model outbound calls, including system preset voices and personalized voices.</p>
      * 
      * @param request ListAvailableTtsRequest
      * @return ListAvailableTtsResponse
@@ -7930,17 +8039,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API queries information about completed online sessions within a specified time range, including session content. The query rules are as follows:  </p>
+     * <p>This operation queries online session information for sessions completed within a specified time period, including the session content. The query rules are as follows:</p>
      * <ul>
-     * <li>The maximum time span for the query is 1 Day.  </li>
-     * <li>If only the query End Time is provided, the query Start Time is set to 1 hour before the End Time.  </li>
-     * <li>If only the query Start Time is provided, the End Time is set to 1 hour after the Start Time.  </li>
-     * <li>If neither time is provided, the End Time defaults to the current time, and the Start Time is set to 1 hour before the End Time.  </li>
-     * <li>If both times are provided but the time span exceeds 1 Day, an abnormal response is returned.</li>
+     * <li>The maximum time span for a query is one day.</li>
+     * <li>If only the end time is specified, the start time is set to one hour before the end time.</li>
+     * <li>If only the start time is specified, the end time is set to one hour after the start time.</li>
+     * <li>If neither is specified, the end time is set to the current time, and the start time is set to one hour before the end time.</li>
+     * <li>If both are specified but the time span exceeds one day, an error message is returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Invoke ListChatRecordDetail to query online session details by time period.</p>
+     * <p>Queries the details of online sessions within a specified time period.</p>
      * 
      * @param request ListChatRecordDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7968,17 +8077,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API queries information about completed online sessions within a specified time range, including session content. The query rules are as follows:  </p>
+     * <p>This operation queries online session information for sessions completed within a specified time period, including the session content. The query rules are as follows:</p>
      * <ul>
-     * <li>The maximum time span for the query is 1 Day.  </li>
-     * <li>If only the query End Time is provided, the query Start Time is set to 1 hour before the End Time.  </li>
-     * <li>If only the query Start Time is provided, the End Time is set to 1 hour after the Start Time.  </li>
-     * <li>If neither time is provided, the End Time defaults to the current time, and the Start Time is set to 1 hour before the End Time.  </li>
-     * <li>If both times are provided but the time span exceeds 1 Day, an abnormal response is returned.</li>
+     * <li>The maximum time span for a query is one day.</li>
+     * <li>If only the end time is specified, the start time is set to one hour before the end time.</li>
+     * <li>If only the start time is specified, the end time is set to one hour after the start time.</li>
+     * <li>If neither is specified, the end time is set to the current time, and the start time is set to one hour before the end time.</li>
+     * <li>If both are specified but the time span exceeds one day, an error message is returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Invoke ListChatRecordDetail to query online session details by time period.</p>
+     * <p>Queries the details of online sessions within a specified time period.</p>
      * 
      * @param request ListChatRecordDetailRequest
      * @return ListChatRecordDetailResponse
@@ -7991,21 +8100,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can invoke this API to query Intelligent Contact Bot conversation records, or view them in the <strong>Task Management</strong> &gt; <strong>Details</strong> &gt; <strong>View Conversation Records</strong> interface.</li>
-     * <li>Before invoking this API, ensure that your created Intelligent Contact Bot calling job has successfully connected to at least one phone number.</li>
-     * <li>If you do not have an existing Intelligent Contact Bot calling job, you can create and start a job in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface, or use the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> and <a href="https://help.aliyun.com/document_detail/2718005.html">StartTask</a> APIs to create and start a job.</li>
+     * <li>You can call this operation to query the conversation records of the intelligent contact robot. You can also view the records on the <a href="https://aiccs.console.aliyun.com/job/list"><strong>Task Management</strong></a> &gt; <strong>Details</strong> &gt; <strong>View Conversation Records</strong> page.</li>
+     * <li>Before calling this operation, make sure that the intelligent contact robot call task you created has successfully connected calls.</li>
+     * <li>If you do not have an existing intelligent contact robot call task, you can create and start a task on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page, or by calling the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> and <a href="https://help.aliyun.com/document_detail/2718005.html">StartTask</a> operations.</li>
      * </ul>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.</li>
-     * <li>API frequency: 500 queries per second (QPS).<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: not limited.</li>
+     * <li>API frequency: 500 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Query Intelligent Contact Bot conversation records.</p>
+     * <p>Queries the conversation records of the intelligent contact robot.</p>
      * 
      * @param request ListDialogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8054,21 +8163,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can invoke this API to query Intelligent Contact Bot conversation records, or view them in the <strong>Task Management</strong> &gt; <strong>Details</strong> &gt; <strong>View Conversation Records</strong> interface.</li>
-     * <li>Before invoking this API, ensure that your created Intelligent Contact Bot calling job has successfully connected to at least one phone number.</li>
-     * <li>If you do not have an existing Intelligent Contact Bot calling job, you can create and start a job in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface, or use the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> and <a href="https://help.aliyun.com/document_detail/2718005.html">StartTask</a> APIs to create and start a job.</li>
+     * <li>You can call this operation to query the conversation records of the intelligent contact robot. You can also view the records on the <a href="https://aiccs.console.aliyun.com/job/list"><strong>Task Management</strong></a> &gt; <strong>Details</strong> &gt; <strong>View Conversation Records</strong> page.</li>
+     * <li>Before calling this operation, make sure that the intelligent contact robot call task you created has successfully connected calls.</li>
+     * <li>If you do not have an existing intelligent contact robot call task, you can create and start a task on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page, or by calling the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> and <a href="https://help.aliyun.com/document_detail/2718005.html">StartTask</a> operations.</li>
      * </ul>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.</li>
-     * <li>API frequency: 500 queries per second (QPS).<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: not limited.</li>
+     * <li>API frequency: 500 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Query Intelligent Contact Bot conversation records.</p>
+     * <p>Queries the conversation records of the intelligent contact robot.</p>
      * 
      * @param request ListDialogRequest
      * @return ListDialogResponse
@@ -8080,7 +8189,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke ListHotlineRecord to query the hotline recording list by hotline session ID.</p>
+     * <p>Queries a list of hotline recordings based on the hotline session ID.</p>
      * 
      * @param request ListHotlineRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8108,7 +8217,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke ListHotlineRecord to query the hotline recording list by hotline session ID.</p>
+     * <p>Queries a list of hotline recordings based on the hotline session ID.</p>
      * 
      * @param request ListHotlineRecordRequest
      * @return ListHotlineRecordResponse
@@ -8120,17 +8229,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API queries detailed hotline information within a specified time range, including hotline call information. The query rules are as follows:  </p>
+     * <p>This operation queries hotline details within a specified time range, including hotline call information. The query rules are as follows:</p>
      * <ul>
-     * <li>The maximum time span for the query is 1 Day.  </li>
-     * <li>If only the query End Time is provided, the query Start Time is set to 1 hour before the End Time.  </li>
-     * <li>If only the query Start Time is provided, the End Time is set to 1 hour after the Start Time.  </li>
-     * <li>If neither time is provided, the End Time defaults to the current time, and the Start Time is set to 1 hour before the End Time.  </li>
-     * <li>If both times are provided but the time span exceeds 1 Day, an abnormal result is returned.</li>
+     * <li>The maximum time span for a query is 1 day.</li>
+     * <li>If only the end time is specified, the start time is set to 1 hour before the end time.</li>
+     * <li>If only the start time is specified, the end time is set to 1 hour after the start time.</li>
+     * <li>If neither is specified, the end time is set to the current time, and the start time is set to 1 hour before the end time.</li>
+     * <li>If both are specified but the time span exceeds 1 day, an error is returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Query the list of hotline details by time period.</p>
+     * <p>Queries hotline details based on a time range.</p>
      * 
      * @param request ListHotlineRecordDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8158,17 +8267,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API queries detailed hotline information within a specified time range, including hotline call information. The query rules are as follows:  </p>
+     * <p>This operation queries hotline details within a specified time range, including hotline call information. The query rules are as follows:</p>
      * <ul>
-     * <li>The maximum time span for the query is 1 Day.  </li>
-     * <li>If only the query End Time is provided, the query Start Time is set to 1 hour before the End Time.  </li>
-     * <li>If only the query Start Time is provided, the End Time is set to 1 hour after the Start Time.  </li>
-     * <li>If neither time is provided, the End Time defaults to the current time, and the Start Time is set to 1 hour before the End Time.  </li>
-     * <li>If both times are provided but the time span exceeds 1 Day, an abnormal result is returned.</li>
+     * <li>The maximum time span for a query is 1 day.</li>
+     * <li>If only the end time is specified, the start time is set to 1 hour before the end time.</li>
+     * <li>If only the start time is specified, the end time is set to 1 hour after the start time.</li>
+     * <li>If neither is specified, the end time is set to the current time, and the start time is set to 1 hour before the end time.</li>
+     * <li>If both are specified but the time span exceeds 1 day, an error is returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Query the list of hotline details by time period.</p>
+     * <p>Queries hotline details based on a time range.</p>
      * 
      * @param request ListHotlineRecordDetailRequest
      * @return ListHotlineRecordDetailResponse
@@ -8242,19 +8351,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Before calling this operation, make sure that you have initiated an outbound call task by using the intelligent contact robot.</li>
-     * <li>If you have not initiated an outbound call task by using the intelligent contact robot, call the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> operation to initiate an outbound call task.</li>
+     * <li>If you have not initiated an outbound call task by using the intelligent contact robot, you can call the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> operation to initiate an outbound call task.</li>
      * </ul>
-     * <h3>QPS limit</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user call frequency: not throttled.</li>
+     * <li>Call frequency per user: Not throttled.</li>
      * <li>API frequency: 500 calls per second.<blockquote>
-     * <p>If the total calls from multiple users exceed the API frequency, throttling is triggered.</p>
+     * <p>If the total number of calls from multiple users exceeds the API frequency limit, throttling is also triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the call records of an intelligent contact robot.</p>
+     * <p>Queries the call records of the intelligent contact robot.</p>
      * 
      * @param request ListRobotCallDialogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8304,19 +8413,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Before calling this operation, make sure that you have initiated an outbound call task by using the intelligent contact robot.</li>
-     * <li>If you have not initiated an outbound call task by using the intelligent contact robot, call the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> operation to initiate an outbound call task.</li>
+     * <li>If you have not initiated an outbound call task by using the intelligent contact robot, you can call the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> operation to initiate an outbound call task.</li>
      * </ul>
-     * <h3>QPS limit</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user call frequency: not throttled.</li>
+     * <li>Call frequency per user: Not throttled.</li>
      * <li>API frequency: 500 calls per second.<blockquote>
-     * <p>If the total calls from multiple users exceed the API frequency, throttling is triggered.</p>
+     * <p>If the total number of calls from multiple users exceeds the API frequency limit, throttling is also triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the call records of an intelligent contact robot.</p>
+     * <p>Queries the call records of the intelligent contact robot.</p>
      * 
      * @param request ListRobotCallDialogRequest
      * @return ListRobotCallDialogResponse
@@ -8413,20 +8522,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before invoking this API, ensure that you have already added input parameters for the robot.</li>
-     * <li>If your robot does not have any input parameters, go to the <a href="https://aiccs.console.aliyun.com/patter/list"><strong>Script Management</strong></a> &gt; <strong>Configuration</strong> &gt; <strong>Input and Output Parameters</strong> interface and click to add an input parameter.</li>
+     * <li>Before calling this operation, make sure that you have added input parameters for the chatbot.</li>
+     * <li>If you have not added input parameters for your chatbot, click Add Input Parameter on the <strong>Dialog Flow Management</strong> &gt; <strong>Configuration</strong> &gt; <strong>Input and Output Parameters</strong> page.</li>
      * </ul>
-     * <h3>Queries per second (QPS) Limit</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.</li>
-     * <li>API frequency: 500 queries per second.<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttle will be triggered.</p>
+     * <li>Call frequency per user: No throttling.</li>
+     * <li>API frequency: 500 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency limit, throttling is triggered.
+     * <a href="https://aiccs.console.aliyun.com/patter/list"><strong>Script management</strong></a></p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of robot parameters by robot ID, which is also the script ID.</p>
+     * <p>Queries the list of chatbot parameters based on the chatbot ID, which is the dialog flow ID.</p>
      * 
      * @param request ListRobotParamsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8471,20 +8581,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before invoking this API, ensure that you have already added input parameters for the robot.</li>
-     * <li>If your robot does not have any input parameters, go to the <a href="https://aiccs.console.aliyun.com/patter/list"><strong>Script Management</strong></a> &gt; <strong>Configuration</strong> &gt; <strong>Input and Output Parameters</strong> interface and click to add an input parameter.</li>
+     * <li>Before calling this operation, make sure that you have added input parameters for the chatbot.</li>
+     * <li>If you have not added input parameters for your chatbot, click Add Input Parameter on the <strong>Dialog Flow Management</strong> &gt; <strong>Configuration</strong> &gt; <strong>Input and Output Parameters</strong> page.</li>
      * </ul>
-     * <h3>Queries per second (QPS) Limit</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.</li>
-     * <li>API frequency: 500 queries per second.<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttle will be triggered.</p>
+     * <li>Call frequency per user: No throttling.</li>
+     * <li>API frequency: 500 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency limit, throttling is triggered.
+     * <a href="https://aiccs.console.aliyun.com/patter/list"><strong>Script management</strong></a></p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of robot parameters by robot ID, which is also the script ID.</p>
+     * <p>Queries the list of chatbot parameters based on the chatbot ID, which is the dialog flow ID.</p>
      * 
      * @param request ListRobotParamsRequest
      * @return ListRobotParamsResponse
@@ -8496,7 +8607,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke ListRoles to obtain the list of all roles under a tenant.</p>
+     * <p>Queries a list of all roles for a tenant.</p>
      * 
      * @param request ListRolesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8524,7 +8635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke ListRoles to obtain the list of all roles under a tenant.</p>
+     * <p>Queries a list of all roles for a tenant.</p>
      * 
      * @param request ListRolesRequest
      * @return ListRolesResponse
@@ -8815,8 +8926,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation can be called only during an intelligent outbound call. When you call this operation, set the <strong>CallId</strong> request parameter to the unique receipt ID of the ongoing call.</li>
-     * <li><strong>CallId</strong> is the <strong>CallId</strong> parameter returned by the <a href="https://help.aliyun.com/document_detail/2718012.html">LlmSmartCallFullDuplex</a> operation.</li>
+     * <li>This API operation can only be successfully called during an intelligent outbound call. When calling this operation, note that the <strong>CallId</strong> request parameter must be set to the unique receipt ID of the ongoing call.</li>
+     * <li>The <strong>CallId</strong> is the <strong>CallId</strong> response parameter returned when you call the <a href="https://help.aliyun.com/document_detail/2718012.html">LlmSmartCallFullDuplex</a> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8861,8 +8972,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation can be called only during an intelligent outbound call. When you call this operation, set the <strong>CallId</strong> request parameter to the unique receipt ID of the ongoing call.</li>
-     * <li><strong>CallId</strong> is the <strong>CallId</strong> parameter returned by the <a href="https://help.aliyun.com/document_detail/2718012.html">LlmSmartCallFullDuplex</a> operation.</li>
+     * <li>This API operation can only be successfully called during an intelligent outbound call. When calling this operation, note that the <strong>CallId</strong> request parameter must be set to the unique receipt ID of the ongoing call.</li>
+     * <li>The <strong>CallId</strong> is the <strong>CallId</strong> response parameter returned when you call the <a href="https://help.aliyun.com/document_detail/2718012.html">LlmSmartCallFullDuplex</a> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8879,12 +8990,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Each API invocation supports adding only one called number. If you have multiple called numbers, invoke the API multiple times.</li>
-     * <li>Before initiating an intelligent call based on an LLM, ensure that you have created an LLM application in the <a href="https://aiccs.console.aliyun.com/engine/llmApp">Application Management</a> interface and have successfully requested a real number in the Voice Service <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Number Management</a> interface.</li>
+     * <li>You can add only one called number per API call. To add multiple called numbers, call the API multiple times.</li>
+     * <li>Before initiating an intelligent call based on a large language model, make sure that you have created a large language model application on the <a href="https://aiccs.console.aliyun.com/engine/llmApp">Large Language Model Application Management</a> page and have successfully applied for a real number on the <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Real Number Management</a> page of Voice Service.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Intelligent outbound call based on an LLM.</p>
+     * <p>Initiates an intelligent outbound call based on a large language model.</p>
      * 
      * @param tmpReq LlmSmartCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8979,12 +9090,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Each API invocation supports adding only one called number. If you have multiple called numbers, invoke the API multiple times.</li>
-     * <li>Before initiating an intelligent call based on an LLM, ensure that you have created an LLM application in the <a href="https://aiccs.console.aliyun.com/engine/llmApp">Application Management</a> interface and have successfully requested a real number in the Voice Service <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Number Management</a> interface.</li>
+     * <li>You can add only one called number per API call. To add multiple called numbers, call the API multiple times.</li>
+     * <li>Before initiating an intelligent call based on a large language model, make sure that you have created a large language model application on the <a href="https://aiccs.console.aliyun.com/engine/llmApp">Large Language Model Application Management</a> page and have successfully applied for a real number on the <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Real Number Management</a> page of Voice Service.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Intelligent outbound call based on an LLM.</p>
+     * <p>Initiates an intelligent outbound call based on a large language model.</p>
      * 
      * @param request LlmSmartCallRequest
      * @return LlmSmartCallResponse
@@ -8996,7 +9107,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Initiates a smart call to an encrypted number using a large language model.</p>
+     * <p>Initiates an intelligent call to an encrypted number based on a large language model.</p>
      * 
      * @param tmpReq LlmSmartCallEncryptRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9070,7 +9181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Initiates a smart call to an encrypted number using a large language model.</p>
+     * <p>Initiates an intelligent call to an encrypted number based on a large language model.</p>
      * 
      * @param request LlmSmartCallEncryptRequest
      * @return LlmSmartCallEncryptResponse
@@ -9082,15 +9193,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Before calling this operation, make sure that you have configured the ASR callback URL.</li>
-     * <li>This operation is available only to users whose UIDs are added to the whitelist.</li>
-     * <li>The request rate limit for a single user is 100 QPS.</li>
-     * <li><code>CalledNumber</code> and <code>CallerNumber</code> are required parameters that specify the called number and the calling number, respectively.</li>
-     * <li>Optional parameters such as <code>StartWordParam</code>, <code>TtsVoiceCode</code>, <code>TtsSpeed</code>, and <code>TtsVolume</code> allow you to customize the call experience. If these parameters are not specified, the default settings of the application are used.</li>
-     * <li>The <code>SessionTimeout</code> parameter specifies the maximum call duration in seconds. The call is automatically ended when the specified duration is exceeded. For the default value and valid range, refer to the relevant documentation.</li>
-     * <li>The <code>OutId</code> field can be used to track a unique identifier in an external system. The value must be 1 to 32 bytes in length.</li>
+     * <li>Before calling this operation, ensure that the ASR callback URL is configured.</li>
+     * <li>This operation is only available to specific users in the UID whitelist.</li>
+     * <li>The request frequency limit for a single user is 100 QPS.</li>
+     * <li><code>CalledNumber</code> and <code>CallerNumber</code> are required parameters, which represent the called number and the caller display number, respectively.</li>
+     * <li>Optional parameters such as <code>StartWordParam</code>, <code>TtsVoiceCode</code>, <code>TtsSpeed</code>, and <code>TtsVolume</code> allow you to customize the call experience. If these parameters are not provided, the default settings of the application are used.</li>
+     * <li>The <code>SessionTimeout</code> parameter is used to set the maximum call duration in seconds. The call is automatically ended when this duration is exceeded. For the default value and valid range, refer to the specific documentation.</li>
+     * <li>The <code>OutId</code> field can be used to track a unique identifier in an external system. The length is limited to 1 to 32 bytes.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9164,15 +9275,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Before calling this operation, make sure that you have configured the ASR callback URL.</li>
-     * <li>This operation is available only to users whose UIDs are added to the whitelist.</li>
-     * <li>The request rate limit for a single user is 100 QPS.</li>
-     * <li><code>CalledNumber</code> and <code>CallerNumber</code> are required parameters that specify the called number and the calling number, respectively.</li>
-     * <li>Optional parameters such as <code>StartWordParam</code>, <code>TtsVoiceCode</code>, <code>TtsSpeed</code>, and <code>TtsVolume</code> allow you to customize the call experience. If these parameters are not specified, the default settings of the application are used.</li>
-     * <li>The <code>SessionTimeout</code> parameter specifies the maximum call duration in seconds. The call is automatically ended when the specified duration is exceeded. For the default value and valid range, refer to the relevant documentation.</li>
-     * <li>The <code>OutId</code> field can be used to track a unique identifier in an external system. The value must be 1 to 32 bytes in length.</li>
+     * <li>Before calling this operation, ensure that the ASR callback URL is configured.</li>
+     * <li>This operation is only available to specific users in the UID whitelist.</li>
+     * <li>The request frequency limit for a single user is 100 QPS.</li>
+     * <li><code>CalledNumber</code> and <code>CallerNumber</code> are required parameters, which represent the called number and the caller display number, respectively.</li>
+     * <li>Optional parameters such as <code>StartWordParam</code>, <code>TtsVoiceCode</code>, <code>TtsSpeed</code>, and <code>TtsVolume</code> allow you to customize the call experience. If these parameters are not provided, the default settings of the application are used.</li>
+     * <li>The <code>SessionTimeout</code> parameter is used to set the maximum call duration in seconds. The call is automatically ended when this duration is exceeded. For the default value and valid range, refer to the specific documentation.</li>
+     * <li>The <code>OutId</code> field can be used to track a unique identifier in an external system. The length is limited to 1 to 32 bytes.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9188,7 +9299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke MakeCall to initiate a call.</p>
+     * <p>Initiates a hotline call.</p>
      * 
      * @param request MakeCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9240,7 +9351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke MakeCall to initiate a call.</p>
+     * <p>Initiates a hotline call.</p>
      * 
      * @param request MakeCallRequest
      * @return MakeCallResponse
@@ -9252,7 +9363,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can invoke MakeDoubleCall to initiate a call by using the server-side software development kit (SDK).</p>
+     * <p>Initiates a call through the server-side SDK.</p>
      * 
      * @param request MakeDoubleCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9304,7 +9415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can invoke MakeDoubleCall to initiate a call by using the server-side software development kit (SDK).</p>
+     * <p>Initiates a call through the server-side SDK.</p>
      * 
      * @param request MakeDoubleCallRequest
      * @return MakeDoubleCallResponse
@@ -9465,12 +9576,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before querying voice call task details, make sure that you have created a voice call task.</li>
-     * <li>If you have not created a voice call task, create one on the <strong>Call Task Management</strong> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</li>
+     * <li>Before querying call task details, make sure that you have created a call task.</li>
+     * <li>If you have not created a call task, you can create one on the <strong>Call Task Management</strong> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of voice call tasks by page.</p>
+     * <p>Performs a paged query on call task details.</p>
      * 
      * @param tmpReq QueryAiCallDetailPageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9585,12 +9696,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before querying voice call task details, make sure that you have created a voice call task.</li>
-     * <li>If you have not created a voice call task, create one on the <strong>Call Task Management</strong> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</li>
+     * <li>Before querying call task details, make sure that you have created a call task.</li>
+     * <li>If you have not created a call task, you can create one on the <strong>Call Task Management</strong> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of voice call tasks by page.</p>
+     * <p>Performs a paged query on call task details.</p>
      * 
      * @param request QueryAiCallDetailPageRequest
      * @return QueryAiCallDetailPageResponse
@@ -9798,13 +9909,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
      * <li>This operation queries the details of a communication agent.</li>
-     * <li>If both <code>BranchId</code> and <code>VersionId</code> are empty, the latest published version configuration of the currently active branch is returned. If the active branch has only a draft version, no configuration is returned.</li>
-     * <li>If only <code>BranchId</code> has a value, the latest published version configuration of the specified branch is returned. If the branch has only a draft version, no configuration is returned.</li>
-     * <li>If both <code>BranchId</code> and <code>VersionId</code> have values, the configuration of the specified version is returned.</li>
-     * <li>When <code>BranchDeployStatus = 1</code> (branch is deployed and online) and <code>VersionPublishStatus = 1</code> (version is published), the branch configuration is the one used by imported outbound call tasks.</li>
+     * <li>If both BranchId and VersionId are empty, the configuration of the latest published version of the current active branch is returned. If the active branch has only a draft version, no configuration is returned.</li>
+     * <li>If only BranchId is specified, the configuration of the latest published version of the specified branch is returned. If the branch has only a draft version, no configuration is returned.</li>
+     * <li>If both BranchId and VersionId are specified, the configuration of the specified version is returned.</li>
+     * <li>If BranchDeployStatus = 1 (the branch is deployed and online) and VersionPublishStatus = 1 (the version is published), the branch configuration is used by currently imported outbound call tasks.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9848,13 +9959,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
      * <li>This operation queries the details of a communication agent.</li>
-     * <li>If both <code>BranchId</code> and <code>VersionId</code> are empty, the latest published version configuration of the currently active branch is returned. If the active branch has only a draft version, no configuration is returned.</li>
-     * <li>If only <code>BranchId</code> has a value, the latest published version configuration of the specified branch is returned. If the branch has only a draft version, no configuration is returned.</li>
-     * <li>If both <code>BranchId</code> and <code>VersionId</code> have values, the configuration of the specified version is returned.</li>
-     * <li>When <code>BranchDeployStatus = 1</code> (branch is deployed and online) and <code>VersionPublishStatus = 1</code> (version is published), the branch configuration is the one used by imported outbound call tasks.</li>
+     * <li>If both BranchId and VersionId are empty, the configuration of the latest published version of the current active branch is returned. If the active branch has only a draft version, no configuration is returned.</li>
+     * <li>If only BranchId is specified, the configuration of the latest published version of the specified branch is returned. If the branch has only a draft version, no configuration is returned.</li>
+     * <li>If both BranchId and VersionId are specified, the configuration of the specified version is returned.</li>
+     * <li>If BranchDeployStatus = 1 (the branch is deployed and online) and VersionPublishStatus = 1 (the version is published), the branch configuration is used by currently imported outbound call tasks.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9871,9 +9982,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can use this operation to query call details. You can also view call details in the <strong>Call Task Management</strong> &gt; <strong>Details</strong> &gt; <strong>Execution Records</strong> &gt; <strong>Completed</strong> &gt; <strong>Call Details</strong> page.</li>
-     * <li>Before calling this operation, make sure that you have created a call task and imported callee data.</li>
-     * <li>If you do not have a created call task, create a call task and import callee data on the <strong>Call Task Management</strong> page, or use the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> and <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operations to create a call task and import callee data.</li>
+     * <li>You can call this operation to query call details. You can also view call details on the <strong>Call task management</strong> &gt; <strong>Details</strong> &gt; <strong>Execution records</strong> &gt; <strong>Completed</strong> &gt; <strong>Call details</strong> page.</li>
+     * <li>Before you call this operation, make sure that you have created a call task and imported the called numbers.</li>
+     * <li>If you do not have a call task, you can create a call task and import called numbers on the <strong>Call task management</strong> page, or call the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> and <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operations to create a call task and import called numbers.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9930,9 +10041,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can use this operation to query call details. You can also view call details in the <strong>Call Task Management</strong> &gt; <strong>Details</strong> &gt; <strong>Execution Records</strong> &gt; <strong>Completed</strong> &gt; <strong>Call Details</strong> page.</li>
-     * <li>Before calling this operation, make sure that you have created a call task and imported callee data.</li>
-     * <li>If you do not have a created call task, create a call task and import callee data on the <strong>Call Task Management</strong> page, or use the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> and <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operations to create a call task and import callee data.</li>
+     * <li>You can call this operation to query call details. You can also view call details on the <strong>Call task management</strong> &gt; <strong>Details</strong> &gt; <strong>Execution records</strong> &gt; <strong>Completed</strong> &gt; <strong>Call details</strong> page.</li>
+     * <li>Before you call this operation, make sure that you have created a call task and imported the called numbers.</li>
+     * <li>If you do not have a call task, you can create a call task and import called numbers on the <strong>Call task management</strong> page, or call the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> and <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operations to create a call task and import called numbers.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9949,13 +10060,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can use this operation to query call details. You can also view call details in the <strong>Call Task Management</strong> &gt; <strong>Details</strong> &gt; <strong>Execution Records</strong> &gt; <strong>Completed</strong> &gt; <strong>Call Details</strong> console.</li>
-     * <li>Before calling this operation, make sure that you have created a call task and imported callee data.</li>
-     * <li>If you do not have a created call task, create a call task and import callee data in the <strong>Call Task Management</strong> console, or use the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> and <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operations to create a call task and import callee data.</li>
+     * <li>You can call this operation to query call details. You can also view call details on the <strong>Call Task Management</strong> &gt; <strong>Details</strong> &gt; <strong>Execution Records</strong> &gt; <strong>Completed</strong> &gt; <strong>Call Details</strong> page.</li>
+     * <li>Before calling this operation, make sure that you have created a call task and imported the called numbers.</li>
+     * <li>If you do not have a call task, you can create a call task and import called numbers on the <strong>Call Task Management</strong> page, or call the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> and <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operations to create a call task and import called numbers.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a call task and call conversation information.</p>
+     * <p>Queries the details of call tasks and call records.</p>
      * 
      * @param request QueryConversationDetailInfoNewRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10012,13 +10123,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can use this operation to query call details. You can also view call details in the <strong>Call Task Management</strong> &gt; <strong>Details</strong> &gt; <strong>Execution Records</strong> &gt; <strong>Completed</strong> &gt; <strong>Call Details</strong> console.</li>
-     * <li>Before calling this operation, make sure that you have created a call task and imported callee data.</li>
-     * <li>If you do not have a created call task, create a call task and import callee data in the <strong>Call Task Management</strong> console, or use the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> and <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operations to create a call task and import callee data.</li>
+     * <li>You can call this operation to query call details. You can also view call details on the <strong>Call Task Management</strong> &gt; <strong>Details</strong> &gt; <strong>Execution Records</strong> &gt; <strong>Completed</strong> &gt; <strong>Call Details</strong> page.</li>
+     * <li>Before calling this operation, make sure that you have created a call task and imported the called numbers.</li>
+     * <li>If you do not have a call task, you can create a call task and import called numbers on the <strong>Call Task Management</strong> page, or call the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> and <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operations to create a call task and import called numbers.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a call task and call conversation information.</p>
+     * <p>Queries the details of call tasks and call records.</p>
      * 
      * @param request QueryConversationDetailInfoNewRequest
      * @return QueryConversationDetailInfoNewResponse
@@ -10030,7 +10141,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke QueryHotlineInQueue to obtain hotline agent data for a skill group by skill group ID.</p>
+     * <p>Queries the agent data of a hotline skill group based on the skill group ID.</p>
      * 
      * @param request QueryHotlineInQueueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10058,7 +10169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke QueryHotlineInQueue to obtain hotline agent data for a skill group by skill group ID.</p>
+     * <p>Queries the agent data of a hotline skill group based on the skill group ID.</p>
      * 
      * @param request QueryHotlineInQueueRequest
      * @return QueryHotlineInQueueResponse
@@ -10197,6 +10308,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries outbound call tasks.</p>
+     * 
      * @param request QueryOutboundTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryOutboundTaskResponse
@@ -10282,6 +10396,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries outbound call tasks.</p>
+     * 
      * @param request QueryOutboundTaskRequest
      * @return QueryOutboundTaskResponse
      */
@@ -10377,6 +10494,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the details of outbound tasks.</p>
+     * 
      * @param request QueryTaskDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryTaskDetailResponse
@@ -10462,6 +10582,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the details of outbound tasks.</p>
+     * 
      * @param request QueryTaskDetailRequest
      * @return QueryTaskDetailResponse
      */
@@ -10709,21 +10832,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>If you need to provide agent or skill group information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.</li>
-     * <li>You can invoke <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-listagentbyskillgroupid">ListAgentBySkillGroupId</a> to retrieve agent information under a skill group and verify whether the removal aligns with your expectations.</li>
-     * <li>If you accidentally remove an agent, you can invoke <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-updateagent">UpdateAgent</a> to update the agent data and reassign the skill group to the agent.</li>
+     * <li>To obtain the agent and skill group information, refer to the instructions in the <a href="#api-detail-35">Request parameters</a> section.</li>
+     * <li>You can call the <a href="https://www.alibabacloud.com/help/en/aiccs/developer-reference/api-aiccs-2019-10-15-listagentbyskillgroupid">ListAgentBySkillGroupId</a> operation to query the agents in the skill group and verify whether the removal meets your expectations.</li>
+     * <li>If an agent is removed by mistake, you can call the <a href="https://www.alibabacloud.com/help/en/aiccs/developer-reference/api-aiccs-2019-10-15-updateagent">UpdateAgent</a> operation to update the agent data and reassign the skill group to the agent.</li>
      * </ul>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: 50 times/second.</li>
-     * <li>API-wide invocation frequency: 100 times/second.<blockquote>
-     * <p>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</p>
+     * <li>Rate limit per user: 50 calls per second.</li>
+     * <li>Rate limit per API: 100 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API rate limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Remove agent accounts from a skill group by specifying the skill group and agent IDs.</p>
+     * <p>Removes agent accounts from a skill group by specifying the skill group ID and agent IDs.</p>
      * 
      * @param tmpReq RemoveAgentFromSkillGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10770,21 +10893,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>If you need to provide agent or skill group information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.</li>
-     * <li>You can invoke <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-listagentbyskillgroupid">ListAgentBySkillGroupId</a> to retrieve agent information under a skill group and verify whether the removal aligns with your expectations.</li>
-     * <li>If you accidentally remove an agent, you can invoke <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-updateagent">UpdateAgent</a> to update the agent data and reassign the skill group to the agent.</li>
+     * <li>To obtain the agent and skill group information, refer to the instructions in the <a href="#api-detail-35">Request parameters</a> section.</li>
+     * <li>You can call the <a href="https://www.alibabacloud.com/help/en/aiccs/developer-reference/api-aiccs-2019-10-15-listagentbyskillgroupid">ListAgentBySkillGroupId</a> operation to query the agents in the skill group and verify whether the removal meets your expectations.</li>
+     * <li>If an agent is removed by mistake, you can call the <a href="https://www.alibabacloud.com/help/en/aiccs/developer-reference/api-aiccs-2019-10-15-updateagent">UpdateAgent</a> operation to update the agent data and reassign the skill group to the agent.</li>
      * </ul>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: 50 times/second.</li>
-     * <li>API-wide invocation frequency: 100 times/second.<blockquote>
-     * <p>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</p>
+     * <li>Rate limit per user: 50 calls per second.</li>
+     * <li>Rate limit per API: 100 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API rate limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Remove agent accounts from a skill group by specifying the skill group and agent IDs.</p>
+     * <p>Removes agent accounts from a skill group by specifying the skill group ID and agent IDs.</p>
      * 
      * @param request RemoveAgentFromSkillGroupRequest
      * @return RemoveAgentFromSkillGroupResponse
@@ -10797,16 +10920,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Deletion is a sensitive operation. Proceed with caution.  </li>
-     * <li>Before deletion, confirm the AICCS instance ID and the skill group ID to be deleted. Refer to the guidance in <a href="#api-detail-35">Request Parameters</a> for details on how to obtain them.  </li>
-     * <li>After deletion, you can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> API to verify the skill group status.  </li>
-     * <li>If you accidentally delete a skill group, you can recreate it by invoking the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-createskillgroup">CreateSkillGroup</a> API.</li>
+     * <li>Deletion is a sensitive operation. Proceed with caution.</li>
+     * <li>Before deleting a skill group, confirm the AICCS instance ID and the ID of the skill group to be deleted. For more information about how to obtain these IDs, see the instructions in the <a href="#api-detail-35">request parameters</a> section.</li>
+     * <li>After deletion, you can call the <a href="https://www.alibabacloud.com/help/en/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> operation to query skill groups and verify the deletion.</li>
+     * <li>If a skill group is deleted by mistake, you can call the <a href="https://www.alibabacloud.com/help/en/aiccs/developer-reference/api-aiccs-2019-10-15-createskillgroup">CreateSkillGroup</a> operation to recreate the skill group.</li>
      * </ul>
-     * <h3>Queries per second (QPS) Limit</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.  </li>
-     * <li>API frequency: 1000 queries per second.<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Rate limit per user: no limit.</li>
+     * <li>API rate limit: 1,000 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API rate limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -10853,16 +10976,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Deletion is a sensitive operation. Proceed with caution.  </li>
-     * <li>Before deletion, confirm the AICCS instance ID and the skill group ID to be deleted. Refer to the guidance in <a href="#api-detail-35">Request Parameters</a> for details on how to obtain them.  </li>
-     * <li>After deletion, you can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> API to verify the skill group status.  </li>
-     * <li>If you accidentally delete a skill group, you can recreate it by invoking the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-createskillgroup">CreateSkillGroup</a> API.</li>
+     * <li>Deletion is a sensitive operation. Proceed with caution.</li>
+     * <li>Before deleting a skill group, confirm the AICCS instance ID and the ID of the skill group to be deleted. For more information about how to obtain these IDs, see the instructions in the <a href="#api-detail-35">request parameters</a> section.</li>
+     * <li>After deletion, you can call the <a href="https://www.alibabacloud.com/help/en/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> operation to query skill groups and verify the deletion.</li>
+     * <li>If a skill group is deleted by mistake, you can call the <a href="https://www.alibabacloud.com/help/en/aiccs/developer-reference/api-aiccs-2019-10-15-createskillgroup">CreateSkillGroup</a> operation to recreate the skill group.</li>
      * </ul>
-     * <h3>Queries per second (QPS) Limit</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.  </li>
-     * <li>API frequency: 1000 queries per second.<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Rate limit per user: no limit.</li>
+     * <li>API rate limit: 1,000 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API rate limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -10880,7 +11003,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke the ResetHotlineNumber API to reset the inbound (IVR flow) and outbound (effective scope) configuration information of a hotline number.</p>
+     * <p>Resets the inbound (IVR flow) and outbound (effective scope) configurations of a hotline number.</p>
      * 
      * @param tmpReq ResetHotlineNumberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10958,7 +11081,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke the ResetHotlineNumber API to reset the inbound (IVR flow) and outbound (effective scope) configuration information of a hotline number.</p>
+     * <p>Resets the inbound (IVR flow) and outbound (effective scope) configurations of a hotline number.</p>
      * 
      * @param request ResetHotlineNumberRequest
      * @return ResetHotlineNumberResponse
@@ -10969,6 +11092,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Restarts an outbound task based on the outbound task ID.</p>
+     * 
      * @param request RestartOutboundTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RestartOutboundTaskResponse
@@ -11002,6 +11128,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Restarts an outbound task based on the outbound task ID.</p>
+     * 
      * @param request RestartOutboundTaskRequest
      * @return RestartOutboundTaskResponse
      */
@@ -11127,20 +11256,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The following characters cannot appear in the intelligent interactive voice response SendCcoSmartCall callback: <code>@ = : &quot;&quot; $ { } ^ * ￥</code>.</li>
+     * <li>The following characters cannot appear in the SendCcoSmartCall callback for intelligent interactive voice response: <code>@ = : &quot;&quot; $ { } ^ * ￥</code>.</li>
      * <li>After you invoke this operation, the <strong>Data</strong> response parameter returns the unique receipt ID for this call, which can be used to invoke the <a href="https://help.aliyun.com/document_detail/2718013.html">SendCcoSmartCallOperate</a> operation.</li>
      * </ul>
-     * <h3>QPS limit</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user call frequency: No throttling.</li>
-     * <li>API frequency: 100 calls per second.<blockquote>
-     * <p>If the total calls from multiple users exceed the API frequency, throttling is also triggered.</p>
+     * <li>Invoke frequency per user: Not limited.</li>
+     * <li>API frequency: 100 invocations per second.<blockquote>
+     * <p>If the total number of invocations from multiple users exceeds the API frequency limit, throttling is also triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Initiates an intelligent interactive voice response call based on the China-only caller ID, called number, and intelligent outbound call audio file.</p>
+     * <p>Initiates an intelligent interactive voice response call based on the called display number, the called number, and the intelligent outbound call audio file.</p>
      * 
      * @param request SendCcoSmartCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11297,20 +11426,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The following characters cannot appear in the intelligent interactive voice response SendCcoSmartCall callback: <code>@ = : &quot;&quot; $ { } ^ * ￥</code>.</li>
+     * <li>The following characters cannot appear in the SendCcoSmartCall callback for intelligent interactive voice response: <code>@ = : &quot;&quot; $ { } ^ * ￥</code>.</li>
      * <li>After you invoke this operation, the <strong>Data</strong> response parameter returns the unique receipt ID for this call, which can be used to invoke the <a href="https://help.aliyun.com/document_detail/2718013.html">SendCcoSmartCallOperate</a> operation.</li>
      * </ul>
-     * <h3>QPS limit</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user call frequency: No throttling.</li>
-     * <li>API frequency: 100 calls per second.<blockquote>
-     * <p>If the total calls from multiple users exceed the API frequency, throttling is also triggered.</p>
+     * <li>Invoke frequency per user: Not limited.</li>
+     * <li>API frequency: 100 invocations per second.<blockquote>
+     * <p>If the total number of invocations from multiple users exceeds the API frequency limit, throttling is also triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Initiates an intelligent interactive voice response call based on the China-only caller ID, called number, and intelligent outbound call audio file.</p>
+     * <p>Initiates an intelligent interactive voice response call based on the called display number, the called number, and the intelligent outbound call audio file.</p>
      * 
      * @param request SendCcoSmartCallRequest
      * @return SendCcoSmartCallResponse
@@ -11323,12 +11452,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This API can be successfully invoked only during an ongoing Intelligent Outbound Call. When invoking it, note that the <strong>CallId</strong> in the request parameters must be set to the unique receipt ID of the active call.  </li>
-     * <li>The <strong>CallId</strong> is the <strong>Data</strong> parameter returned when you invoke the <a href="https://help.aliyun.com/document_detail/2718012.html">SendCcoSmartCall</a> API.</li>
+     * <li>This API operation can be called successfully only during an intelligent outbound call. When you call this operation, note that you must set the <strong>CallId</strong> request parameter to the unique receipt ID of the ongoing call.</li>
+     * <li>You can obtain the <strong>CallId</strong> from the <strong>Data</strong> response parameter returned when you call the <a href="https://api.aliyun.com/document/aiccs/2019-10-15/SendCcoSmartCall">SendCcoSmartCall</a> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Initiates a specified action during an Intelligent Outbound Call, applicable only to scenarios such as parallel transfer to a human agent or allowing a human agent to listen in on the man-machine dialogue.</p>
+     * <p>Initiates a specified action during an intelligent outbound call. This operation is used only in scenarios such as parallel transfer to a human agent, where the agent can monitor the man-machine dialogue.</p>
      * 
      * @param request SendCcoSmartCallOperateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11385,12 +11514,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This API can be successfully invoked only during an ongoing Intelligent Outbound Call. When invoking it, note that the <strong>CallId</strong> in the request parameters must be set to the unique receipt ID of the active call.  </li>
-     * <li>The <strong>CallId</strong> is the <strong>Data</strong> parameter returned when you invoke the <a href="https://help.aliyun.com/document_detail/2718012.html">SendCcoSmartCall</a> API.</li>
+     * <li>This API operation can be called successfully only during an intelligent outbound call. When you call this operation, note that you must set the <strong>CallId</strong> request parameter to the unique receipt ID of the ongoing call.</li>
+     * <li>You can obtain the <strong>CallId</strong> from the <strong>Data</strong> response parameter returned when you call the <a href="https://api.aliyun.com/document/aiccs/2019-10-15/SendCcoSmartCall">SendCcoSmartCall</a> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Initiates a specified action during an Intelligent Outbound Call, applicable only to scenarios such as parallel transfer to a human agent or allowing a human agent to listen in on the man-machine dialogue.</p>
+     * <p>Initiates a specified action during an intelligent outbound call. This operation is used only in scenarios such as parallel transfer to a human agent, where the agent can monitor the man-machine dialogue.</p>
      * 
      * @param request SendCcoSmartCallOperateRequest
      * @return SendCcoSmartCallOperateResponse
@@ -11622,17 +11751,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Queries per second (QPS) limits</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.</li>
-     * <li>API frequency: 100 queries per second (QPS).<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: Unlimited.</li>
+     * <li>API rate limit: 100 calls per second.<blockquote>
+     * <p>Throttling is also triggered if the total number of calls from multiple users exceeds the API rate limit.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Initiate an outbound call based on the instance ID, agent account name, hotline outbound caller number, and callee number.</p>
+     * <p>Initiates an outbound call based on the instance ID, agent account name, caller number, and callee number.</p>
      * 
      * @param request StartCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11680,17 +11809,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Queries per second (QPS) limits</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.</li>
-     * <li>API frequency: 100 queries per second (QPS).<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: Unlimited.</li>
+     * <li>API rate limit: 100 calls per second.<blockquote>
+     * <p>Throttling is also triggered if the total number of calls from multiple users exceeds the API rate limit.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Initiate an outbound call based on the instance ID, agent account name, hotline outbound caller number, and callee number.</p>
+     * <p>Initiates an outbound call based on the instance ID, agent account name, caller number, and callee number.</p>
      * 
      * @param request StartCallRequest
      * @return StartCallResponse
@@ -11702,7 +11831,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke StartCallV2 to initiate an outbound call V2.</p>
+     * <p>Initiates an outbound call.</p>
      * 
      * @param request StartCallV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -11754,7 +11883,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke StartCallV2 to initiate an outbound call V2.</p>
+     * <p>Initiates an outbound call.</p>
      * 
      * @param request StartCallV2Request
      * @return StartCallV2Response
@@ -11979,21 +12108,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can invoke this API to start a successfully created Intelligent Contact Robot calling job, or manually start the job on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page.</li>
-     * <li>Before invoking this API, ensure that you already have a successfully created Intelligent Contact Robot calling job.</li>
-     * <li>If you do not have a successfully created Intelligent Contact Robot outbound calling job, you can click to create a job on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page or create one by using the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> API.</li>
+     * <li>You can call this operation to start a successfully created outbound call task for the Artificial Intelligence Cloud Call Service chatbot. You can also manually start the task on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page.</li>
+     * <li>Before calling this operation, ensure that you have a successfully created outbound call task for the Artificial Intelligence Cloud Call Service chatbot.</li>
+     * <li>If you do not have a successfully created outbound call task, you can click Create Task on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page or call the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> operation to create one.</li>
      * </ul>
-     * <h3>queries per second (QPS) Limit</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.</li>
-     * <li>API frequency: 500 queries per second.<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: Not throttled.</li>
+     * <li>API frequency: 500 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Start a successfully created Intelligent Contact Robot calling job.</p>
+     * <p>Starts a successfully created outbound call task for the Artificial Intelligence Cloud Call Service chatbot.</p>
      * 
      * @param request StartTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12042,21 +12171,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can invoke this API to start a successfully created Intelligent Contact Robot calling job, or manually start the job on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page.</li>
-     * <li>Before invoking this API, ensure that you already have a successfully created Intelligent Contact Robot calling job.</li>
-     * <li>If you do not have a successfully created Intelligent Contact Robot outbound calling job, you can click to create a job on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page or create one by using the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> API.</li>
+     * <li>You can call this operation to start a successfully created outbound call task for the Artificial Intelligence Cloud Call Service chatbot. You can also manually start the task on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page.</li>
+     * <li>Before calling this operation, ensure that you have a successfully created outbound call task for the Artificial Intelligence Cloud Call Service chatbot.</li>
+     * <li>If you do not have a successfully created outbound call task, you can click Create Task on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page or call the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> operation to create one.</li>
      * </ul>
-     * <h3>queries per second (QPS) Limit</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.</li>
-     * <li>API frequency: 500 queries per second.<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: Not throttled.</li>
+     * <li>API frequency: 500 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Start a successfully created Intelligent Contact Robot calling job.</p>
+     * <p>Starts a successfully created outbound call task for the Artificial Intelligence Cloud Call Service chatbot.</p>
      * 
      * @param request StartTaskRequest
      * @return StartTaskResponse
@@ -12136,18 +12265,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After pausing an outbound calling job, you can invoke the <a href="https://help.aliyun.com/document_detail/2718027.html">StartAiOutboundTask</a> API to restart it.</p>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <p>After you pause an outbound call task, you can call the <a href="https://help.aliyun.com/document_detail/2718027.html">StartAiOutboundTask</a> operation to restart the task.</p>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: 20 times/second.</li>
-     * <li>API invocation frequency: 20 times/second.<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: 20 calls per second.</li>
+     * <li>API frequency: 20 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency, throttling is also triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Pause an outbound calling job by instance ID and job ID.</p>
+     * <p>Pauses an outbound call task based on the instance ID and task ID.</p>
      * 
      * @param request StopAiOutboundTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12183,18 +12312,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After pausing an outbound calling job, you can invoke the <a href="https://help.aliyun.com/document_detail/2718027.html">StartAiOutboundTask</a> API to restart it.</p>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <p>After you pause an outbound call task, you can call the <a href="https://help.aliyun.com/document_detail/2718027.html">StartAiOutboundTask</a> operation to restart the task.</p>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: 20 times/second.</li>
-     * <li>API invocation frequency: 20 times/second.<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: 20 calls per second.</li>
+     * <li>API frequency: 20 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency, throttling is also triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Pause an outbound calling job by instance ID and job ID.</p>
+     * <p>Pauses an outbound call task based on the instance ID and task ID.</p>
      * 
      * @param request StopAiOutboundTaskRequest
      * @return StopAiOutboundTaskResponse
@@ -12292,7 +12421,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a recording notes task.</p>
+     * <p>Submits an audio note task.</p>
      * 
      * @param request SubmitAudioNoteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12336,7 +12465,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a recording notes task.</p>
+     * <p>Submits an audio note task.</p>
      * 
      * @param request SubmitAudioNoteRequest
      * @return SubmitAudioNoteResponse
@@ -12348,18 +12477,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If the break ends and you need to resume hotline service, you can invoke the <a href="https://help.aliyun.com/document_detail/2718045.html">StartHotlineService</a> API.</p>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <p>To resume the hotline service after a break, call the <a href="https://help.aliyun.com/document_detail/2718045.html">StartHotlineService</a> operation.</p>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.</li>
-     * <li>API frequency: 100 queries per second (QPS).<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: Not limited.</li>
+     * <li>API frequency: 100 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency, throttling is also triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Pause hotline service when an agent takes a short break.</p>
+     * <p>Pauses the hotline service when an agent takes a break.</p>
      * 
      * @param request SuspendHotlineServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12403,18 +12532,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If the break ends and you need to resume hotline service, you can invoke the <a href="https://help.aliyun.com/document_detail/2718045.html">StartHotlineService</a> API.</p>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <p>To resume the hotline service after a break, call the <a href="https://help.aliyun.com/document_detail/2718045.html">StartHotlineService</a> operation.</p>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.</li>
-     * <li>API frequency: 100 queries per second (QPS).<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: Not limited.</li>
+     * <li>API frequency: 100 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency, throttling is also triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Pause hotline service when an agent takes a short break.</p>
+     * <p>Pauses the hotline service when an agent takes a break.</p>
      * 
      * @param request SuspendHotlineServiceRequest
      * @return SuspendHotlineServiceResponse
@@ -12425,6 +12554,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Pauses an outbound call task based on the task ID.</p>
+     * 
      * @param request SuspendOutboundTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SuspendOutboundTaskResponse
@@ -12458,6 +12590,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Pauses an outbound call task based on the task ID.</p>
+     * 
      * @param request SuspendOutboundTaskRequest
      * @return SuspendOutboundTaskResponse
      */
@@ -12614,7 +12749,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke the TransferCallToSkillGroup API to execute a single-step or two-step transfer to a skill group.</p>
+     * <p>Transfers a call to a skill group by using a single-step or two-step transfer.</p>
      * 
      * @param request TransferCallToSkillGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12682,7 +12817,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke the TransferCallToSkillGroup API to execute a single-step or two-step transfer to a skill group.</p>
+     * <p>Transfers a call to a skill group by using a single-step or two-step transfer.</p>
      * 
      * @param request TransferCallToSkillGroupRequest
      * @return TransferCallToSkillGroupResponse
@@ -12695,23 +12830,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before invoking this API, we recommend that you confirm your Artificial Intelligence Cloud Call Service (AICCS) instance ID. For guidance on how to obtain it, see the description of <a href="#api-detail-35">Request Parameters</a>.</li>
-     * <li>After the update, you can invoke the <a href="https://help.aliyun.com/document_detail/2717961.html">GetAgent</a> API to confirm whether the update meets your expectations.<blockquote>
-     * <p>Currently, only the display name and assigned skill groups can be modified.</p>
+     * <li>Before you call this operation, make sure that you have obtained the AICCS instance ID. For more information, see the instructions in the <a href="#api-detail-35">Request parameters</a> section.</li>
+     * <li>After the update, you can call the <a href="https://help.aliyun.com/document_detail/2717961.html">GetAgent</a> operation to check whether the update meets your expectations.<blockquote>
+     * <p>Currently, only the display name and skill groups can be updated.</p>
      * </blockquote>
      * </li>
      * </ul>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.</li>
-     * <li>API-wide invocation frequency: 100 queries per second.<blockquote>
-     * <p>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</p>
+     * <li>Call frequency per user: not limited.</li>
+     * <li>API frequency: 100 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modify agent information in the Cloud Customer Service System based on the instance ID and agent account name. You can modify the agent\&quot;s display name and the skill groups to which the agent belongs.</p>
+     * <p>Updates the agent information in the Cloud Customer Service System based on the instance ID and agent account name. You can update the display name and skill groups of the agent.</p>
      * 
      * @param request UpdateAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12764,23 +12899,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before invoking this API, we recommend that you confirm your Artificial Intelligence Cloud Call Service (AICCS) instance ID. For guidance on how to obtain it, see the description of <a href="#api-detail-35">Request Parameters</a>.</li>
-     * <li>After the update, you can invoke the <a href="https://help.aliyun.com/document_detail/2717961.html">GetAgent</a> API to confirm whether the update meets your expectations.<blockquote>
-     * <p>Currently, only the display name and assigned skill groups can be modified.</p>
+     * <li>Before you call this operation, make sure that you have obtained the AICCS instance ID. For more information, see the instructions in the <a href="#api-detail-35">Request parameters</a> section.</li>
+     * <li>After the update, you can call the <a href="https://help.aliyun.com/document_detail/2717961.html">GetAgent</a> operation to check whether the update meets your expectations.<blockquote>
+     * <p>Currently, only the display name and skill groups can be updated.</p>
      * </blockquote>
      * </li>
      * </ul>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.</li>
-     * <li>API-wide invocation frequency: 100 queries per second.<blockquote>
-     * <p>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</p>
+     * <li>Call frequency per user: not limited.</li>
+     * <li>API frequency: 100 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modify agent information in the Cloud Customer Service System based on the instance ID and agent account name. You can modify the agent\&quot;s display name and the skill groups to which the agent belongs.</p>
+     * <p>Updates the agent information in the Cloud Customer Service System based on the instance ID and agent account name. You can update the display name and skill groups of the agent.</p>
      * 
      * @param request UpdateAgentRequest
      * @return UpdateAgentResponse
@@ -12792,7 +12927,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before updating the configuration of a call task, make sure that the task is in the Stopped state.</p>
+     * <p>Before you update the configuration of a voice call task, ensure that the task is stopped.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates the configuration of a voice call task.</p>
@@ -12933,7 +13068,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before updating the configuration of a call task, make sure that the task is in the Stopped state.</p>
+     * <p>Before you update the configuration of a voice call task, ensure that the task is stopped.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates the configuration of a voice call task.</p>
@@ -13065,21 +13200,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This API supports updating only the department name and does not support updating the department ID.  </li>
-     * <li>Before invoking this API, we recommend that you confirm the AICCS instance ID and department ID. For guidance on how to obtain them, see the instructions in <a href="#api-detail-35">Request Parameters</a>.  </li>
-     * <li>After the update is complete, you can invoke the <a href="https://help.aliyun.com/document_detail/2717975.html">GetAllDepartment</a> API to confirm whether the department information matches your expectations.</li>
+     * <li>This operation only supports updating the department name and does not support updating the department ID.</li>
+     * <li>Before you call this operation, make sure that you have obtained the AICCS instance ID and department ID. For more information, see the instructions in the <a href="#api-detail-35">Request parameters</a> section.</li>
+     * <li>After the update is complete, you can call the <a href="https://help.aliyun.com/document_detail/2717975.html">GetAllDepartment</a> operation to check whether the department information meets your expectations.</li>
      * </ul>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <h3>QPS limit</h3>
      * <ul>
-     * <li>Per-user invocation frequency: 100 times/second.  </li>
-     * <li>API-wide invocation frequency: 100 times/second.<blockquote>
-     * <p>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</p>
+     * <li>Calls per second per user: 100.</li>
+     * <li>API calls per second: 100.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API rate limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Update the department name based on the Artificial Intelligence Cloud Call Service (AICCS) instance ID and department ID.</p>
+     * <p>Updates the department name based on the AICCS instance ID and department ID.</p>
      * 
      * @param request UpdateDepartmentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13120,21 +13255,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This API supports updating only the department name and does not support updating the department ID.  </li>
-     * <li>Before invoking this API, we recommend that you confirm the AICCS instance ID and department ID. For guidance on how to obtain them, see the instructions in <a href="#api-detail-35">Request Parameters</a>.  </li>
-     * <li>After the update is complete, you can invoke the <a href="https://help.aliyun.com/document_detail/2717975.html">GetAllDepartment</a> API to confirm whether the department information matches your expectations.</li>
+     * <li>This operation only supports updating the department name and does not support updating the department ID.</li>
+     * <li>Before you call this operation, make sure that you have obtained the AICCS instance ID and department ID. For more information, see the instructions in the <a href="#api-detail-35">Request parameters</a> section.</li>
+     * <li>After the update is complete, you can call the <a href="https://help.aliyun.com/document_detail/2717975.html">GetAllDepartment</a> operation to check whether the department information meets your expectations.</li>
      * </ul>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <h3>QPS limit</h3>
      * <ul>
-     * <li>Per-user invocation frequency: 100 times/second.  </li>
-     * <li>API-wide invocation frequency: 100 times/second.<blockquote>
-     * <p>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</p>
+     * <li>Calls per second per user: 100.</li>
+     * <li>API calls per second: 100.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API rate limit, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Update the department name based on the Artificial Intelligence Cloud Call Service (AICCS) instance ID and department ID.</p>
+     * <p>Updates the department name based on the AICCS instance ID and department ID.</p>
      * 
      * @param request UpdateDepartmentRequest
      * @return UpdateDepartmentResponse
@@ -13454,7 +13589,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke UpdateOuterAccount to update an external account based on the external account ID.</p>
+     * <p>Updates an external account by external account ID.</p>
      * 
      * @param request UpdateOuterAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13482,7 +13617,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke UpdateOuterAccount to update an external account based on the external account ID.</p>
+     * <p>Updates an external account by external account ID.</p>
      * 
      * @param request UpdateOuterAccountRequest
      * @return UpdateOuterAccountResponse
@@ -13495,21 +13630,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This API does not support updating the skill group ID or skill group name.  </li>
-     * <li>After the update, you can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> API to query the skill group information.  </li>
-     * <li>If you need to provide the AICCS instance ID and skill group ID, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.</li>
+     * <li>This operation does not support updating the skill group ID or skill group name.</li>
+     * <li>After the update, you can call the <a href="https://www.alibabacloud.com/help/en/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> operation to query the skill group information.</li>
+     * <li>To obtain the AICCS instance ID and skill group ID, refer to the instructions in the <a href="#api-detail-35">Request parameters</a> section.</li>
      * </ul>
-     * <h3>Queries per second (QPS) limit</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user call frequency: No rate limiting.</li>
-     * <li>API call frequency: 1000 calls per second.<blockquote>
-     * <p>If the total calls from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: Not throttled.</li>
+     * <li>API frequency: 1,000 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Update the skill group information in the Cloud Customer Service System based on the AICCS instance ID and skill group ID. This API supports updating the skill group description and display name.</p>
+     * <p>Updates the skill group information in the Cloud Customer Service System based on the AICCS instance ID and skill group ID. You can update the description and display name of the skill group.</p>
      * 
      * @param request UpdateSkillGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13562,21 +13697,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This API does not support updating the skill group ID or skill group name.  </li>
-     * <li>After the update, you can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> API to query the skill group information.  </li>
-     * <li>If you need to provide the AICCS instance ID and skill group ID, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.</li>
+     * <li>This operation does not support updating the skill group ID or skill group name.</li>
+     * <li>After the update, you can call the <a href="https://www.alibabacloud.com/help/en/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> operation to query the skill group information.</li>
+     * <li>To obtain the AICCS instance ID and skill group ID, refer to the instructions in the <a href="#api-detail-35">Request parameters</a> section.</li>
      * </ul>
-     * <h3>Queries per second (QPS) limit</h3>
+     * <h3>QPS limits</h3>
      * <ul>
-     * <li>Per-user call frequency: No rate limiting.</li>
-     * <li>API call frequency: 1000 calls per second.<blockquote>
-     * <p>If the total calls from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Call frequency per user: Not throttled.</li>
+     * <li>API frequency: 1,000 calls per second.<blockquote>
+     * <p>If the total number of calls from multiple users exceeds the API frequency, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Update the skill group information in the Cloud Customer Service System based on the AICCS instance ID and skill group ID. This API supports updating the skill group description and display name.</p>
+     * <p>Updates the skill group information in the Cloud Customer Service System based on the AICCS instance ID and skill group ID. You can update the description and display name of the skill group.</p>
      * 
      * @param request UpdateSkillGroupRequest
      * @return UpdateSkillGroupResponse

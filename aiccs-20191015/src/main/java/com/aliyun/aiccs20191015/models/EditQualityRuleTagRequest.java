@@ -5,13 +5,18 @@ import com.aliyun.tea.*;
 
 public class EditQualityRuleTagRequest extends TeaModel {
     /**
+     * <p>The parsing types.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AnalysisTypes")
     public java.util.List<EditQualityRuleTagRequestAnalysisTypes> analysisTypes;
 
     /**
+     * <p>Instance ID of the AICCS instance. You can obtain instance ID from the Artificial Intelligence Cloud Call Service console.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc_xp_pre***</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -38,9 +43,21 @@ public class EditQualityRuleTagRequest extends TeaModel {
     }
 
     public static class EditQualityRuleTagRequestAnalysisTypes extends TeaModel {
+        /**
+         * <p>The ID of the rule tag. Default value: null.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the rule tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>639</p>
+         */
         @NameInMap("Name")
         public String name;
 

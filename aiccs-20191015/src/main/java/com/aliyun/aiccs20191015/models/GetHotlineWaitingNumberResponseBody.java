@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHotlineWaitingNumberResponseBody extends TeaModel {
     /**
-     * <p>Error encoding</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class GetHotlineWaitingNumberResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Queue length of hotline members</p>
+     * <p>The number of hotline customers in the queue.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -23,16 +23,16 @@ public class GetHotlineWaitingNumberResponseBody extends TeaModel {
     public Long data;
 
     /**
-     * <p>Fault description</p>
+     * <p>The error description.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxx</p>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Request ID, used to trail the cause of an error</p>
+     * <p>The request ID, which is used to trace the cause of the error.</p>
      * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
@@ -41,7 +41,7 @@ public class GetHotlineWaitingNumberResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the API call succeeded</p>
+     * <p>Indicates whether the API call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

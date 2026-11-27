@@ -5,50 +5,100 @@ import com.aliyun.tea.*;
 
 public class CreateQualityProjectRequest extends TeaModel {
     /**
+     * <p>The list of quality check rules.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AnalysisIds")
     public java.util.List<Long> analysisIds;
 
+    /**
+     * <p>The list of session channels.</p>
+     */
     @NameInMap("ChannelTouchType")
     public java.util.List<Integer> channelTouchType;
 
     /**
+     * <p>The check frequency type. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: Periodic quality check.</li>
+     * <li><strong>4</strong>: Ad hoc quality check.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CheckFreqType")
     public Integer checkFreqType;
 
+    /**
+     * <p>The list of departments.</p>
+     */
     @NameInMap("DepList")
     public java.util.List<Long> depList;
 
+    /**
+     * <p>The list of skill groups.</p>
+     */
     @NameInMap("GroupList")
     public java.util.List<Long> groupList;
 
     /**
+     * <p>Instance ID of the Artificial Intelligence Cloud Call Service (AICCS) instance. You can obtain instance ID from Instance Management in the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc_xp_pre***</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
+     * <p>The name of the quality check task.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Automated quality check task</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
+     * <p>The quality check scope. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: Instance (all skill groups).</li>
+     * <li><strong>2</strong>: Department or skill group list.</li>
+     * <li><strong>3</strong>: Customer service representative list.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("ScopeType")
     public Integer scopeType;
 
+    /**
+     * <p>The list of customer service representatives.</p>
+     */
     @NameInMap("ServicerList")
     public java.util.List<String> servicerList;
 
+    /**
+     * <p>The end time of the ad hoc quality check session. The value is a timestamp in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1619425576000</p>
+     */
     @NameInMap("TimeRangeEnd")
     public String timeRangeEnd;
 
+    /**
+     * <p>The start time of the ad hoc quality check session. The value is a timestamp in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1619424556000</p>
+     */
     @NameInMap("TimeRangeStart")
     public String timeRangeStart;
 

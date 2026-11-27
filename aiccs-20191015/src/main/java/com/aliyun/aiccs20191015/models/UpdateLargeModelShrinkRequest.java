@@ -56,7 +56,7 @@ public class UpdateLargeModelShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Controls the randomness of the model\&quot;s output. A higher value increases randomness, and a lower value makes the output more deterministic.</p>
+     * <p>Controls the randomness of the model&quot;s output. A higher value increases randomness, and a lower value makes the output more deterministic.</p>
      * 
      * <strong>example:</strong>
      * <p>0.1</p>

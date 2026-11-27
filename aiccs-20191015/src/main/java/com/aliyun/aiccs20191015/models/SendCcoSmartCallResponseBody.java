@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SendCcoSmartCallResponseBody extends TeaModel {
     /**
-     * <p>The request status code. OK indicates a successful request.</p>
+     * <p>The request status code. A value of OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>

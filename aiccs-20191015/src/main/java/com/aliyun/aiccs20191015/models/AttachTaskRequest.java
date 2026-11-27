@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class AttachTaskRequest extends TeaModel {
     /**
-     * <p>The calling string (callee information and parameter list). Valid values:</p>
+     * <p>The call string, which includes the callee information and parameter list. Valid values:</p>
      * <ul>
-     * <li><strong>LIST</strong>: Use this type when the script has no input variables. In this case, only the callee numbers need to be provided. Example: <code>0571****5678,0571****5679</code>.</li>
-     * <li><strong>JSON</strong>: Use this type when the script includes input variables. You must provide the variable names, callee numbers, and variable values. Example: <code>{&quot;ParamNames&quot;:[&quot;name&quot;,&quot;age&quot;],&quot;CalleeList&quot;:[{&quot;Callee&quot;:&quot;181****0000&quot;,&quot;Params&quot;:[&quot;Zhang San&quot;,&quot;20&quot;]},{&quot;Callee&quot;:&quot;181****0001&quot;,&quot;Params&quot;:[&quot;Li Si&quot;,&quot;21&quot;]}]}</code>. <strong>ParamNames</strong> represents the list of parameter names; <strong>Params</strong> represents the list of parameter values.</li>
-     * </ul>
-     * <blockquote>
-     * <p>You can view the script input variables on the <a href="https://aiccs.console.aliyun.com/patter/list"><strong>Script Management</strong></a> &gt; <strong>View</strong> &gt; <strong>Input and Output Parameters</strong> interface.</p>
+     * <li><strong>LIST</strong>: used when the script has no input variables. You only need to pass the called numbers. Example: <code>0571****5678,0571****5679</code>.</li>
+     * <li><strong>JSON</strong>: used when the script has input variables. You need to pass the variable names, called numbers, and variable values. Example: <code>{&quot;ParamNames&quot;:[&quot;name&quot;,&quot;age&quot;],&quot;CalleeList&quot;:[{&quot;Callee&quot;:&quot;181****0000&quot;,&quot;Params&quot;:[&quot;Zhang San&quot;,&quot;20&quot;]},{&quot;Callee&quot;:&quot;181****0001&quot;,&quot;Params&quot;:[&quot;Li Si&quot;,&quot;21&quot;]}]}</code>. <strong>ParamNames</strong> specifies the list of parameter names. <strong>Params</strong> specifies the list of parameter values.<blockquote>
+     * <p>You can view the script input variables on the <a href="https://aiccs.console.aliyun.com/patter/list"><strong>Script Management</strong></a> &gt; <strong>View</strong> &gt; <strong>Input and Output Parameters</strong> page.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -24,14 +24,14 @@ public class AttachTaskRequest extends TeaModel {
      *     {
      *       &quot;Callee&quot;: &quot;181<strong><strong>0000&quot;,
      *       &quot;Params&quot;: [
-     *         &quot;张三&quot;,
+     *         &quot;Zhang San&quot;,
      *         &quot;20&quot;
      *       ]
      *     },
      *     {
      *       &quot;Callee&quot;: &quot;181</strong></strong>0001&quot;,
      *       &quot;Params&quot;: [
-     *         &quot;李四&quot;,
+     *         &quot;Li Si&quot;,
      *         &quot;21&quot;
      *       ]
      *     }
@@ -51,7 +51,7 @@ public class AttachTaskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The job ID. You can obtain the job ID from the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface.</p>
+     * <p>The task ID. You can obtain the task ID on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

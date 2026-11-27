@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAiOutboundTaskListRequest extends TeaModel {
     /**
-     * <p>The end time for job creation. The value is a UNIX timestamp in milliseconds.</p>
+     * <p>The end time for task creation. The value is a timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1617761765000</p>
@@ -14,7 +14,7 @@ public class GetAiOutboundTaskListRequest extends TeaModel {
     public Long createTimeEnd;
 
     /**
-     * <p>The start time for job creation. The value is a UNIX timestamp in milliseconds.</p>
+     * <p>The start time for task creation. The value is a timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1615083365000</p>
@@ -33,7 +33,7 @@ public class GetAiOutboundTaskListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Artificial Intelligence Cloud Call Service (AICCS) instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
+     * <p>The AICCS instance ID. You can obtain the instance ID in the <b>Instances</b> section of the left-side navigation pane in the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class GetAiOutboundTaskListRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Page size. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,9 +53,9 @@ public class GetAiOutboundTaskListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Filter condition.</p>
+     * <p>The filter condition.</p>
      * <blockquote>
-     * <p>Matches job ID or performs fuzzy matching on job name.</p>
+     * <p>Matches the task ID or performs a fuzzy match on the task name.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -65,14 +65,14 @@ public class GetAiOutboundTaskListRequest extends TeaModel {
     public String searchKey;
 
     /**
-     * <p>Job status. Valid values:</p>
+     * <p>The task status. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Not started.</li>
-     * <li><strong>1</strong>: In progress.</li>
-     * <li><strong>2</strong>: Paused by the system.</li>
-     * <li><strong>3</strong>: Manually paused.</li>
-     * <li><strong>4</strong>: Completed.</li>
-     * <li><strong>5</strong>: Stopped.</li>
+     * <li><strong>0</strong>: not started</li>
+     * <li><strong>1</strong>: in progress</li>
+     * <li><strong>2</strong>: paused by the system</li>
+     * <li><strong>3</strong>: paused manually</li>
+     * <li><strong>4</strong>: completed</li>
+     * <li><strong>5</strong>: terminated</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,10 +82,10 @@ public class GetAiOutboundTaskListRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>Task Type. Valid values:</p>
+     * <p>The task type. Valid values:</p>
      * <ul>
-     * <li><strong>2</strong>: Predictive outbound call.</li>
-     * <li><strong>3</strong>: Automated outbound call.</li>
+     * <li><strong>2</strong>: predictive outbound call</li>
+     * <li><strong>3</strong>: automatic outbound call</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

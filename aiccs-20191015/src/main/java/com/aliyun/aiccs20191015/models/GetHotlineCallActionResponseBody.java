@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHotlineCallActionResponseBody extends TeaModel {
     /**
-     * <p>Status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,13 +14,13 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public GetHotlineCallActionResponseBodyData data;
 
     /**
-     * <p>Description of the status code.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -29,7 +29,7 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>EE339D98-9BD3-4413-B165</p>
@@ -38,10 +38,10 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API call succeeded. Valid values:</p>
+     * <p>Indicates whether the API call is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Succeeded.</li>
-     * <li><strong>false</strong>: Failed.</li>
+     * <li><strong>true</strong>: The API call is successful.</li>
+     * <li><strong>false</strong>: The API call fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
 
     public static class GetHotlineCallActionResponseBodyData extends TeaModel {
         /**
-         * <p>Customer ID.</p>
+         * <p>The customer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8999****</p>
@@ -106,7 +106,7 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         public Long actionId;
 
         /**
-         * <p>Tenant ID.</p>
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2367****</p>
@@ -115,7 +115,7 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         public Long buId;
 
         /**
-         * <p>Callout ID.</p>
+         * <p>The call ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1122****</p>
@@ -124,16 +124,16 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         public Long calloutId;
 
         /**
-         * <p>Call name.</p>
+         * <p>The call name.</p>
          * 
          * <strong>example:</strong>
-         * <p>王XX</p>
+         * <p>Wang XX</p>
          */
         @NameInMap("CalloutName")
         public String calloutName;
 
         /**
-         * <p>Ticket ID.</p>
+         * <p>The ticket ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1138902****</p>
@@ -142,7 +142,7 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         public Long caseId;
 
         /**
-         * <p>Channel ID.</p>
+         * <p>The channel ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2377****</p>
@@ -151,10 +151,10 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         public String channelId;
 
         /**
-         * <p>Channel Type. Valid values:</p>
+         * <p>The channel type. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Hotline.</li>
-         * <li><strong>2</strong>: Online.</li>
+         * <li><strong>1</strong>: hotline.</li>
+         * <li><strong>2</strong>: online.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -164,7 +164,7 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         public Long channelType;
 
         /**
-         * <p>Department ID.</p>
+         * <p>The department ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1223****</p>
@@ -182,7 +182,7 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         public String isTransfer;
 
         /**
-         * <p>Membership ID.</p>
+         * <p>The member ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7856876****</p>
@@ -191,7 +191,7 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         public Long memberId;
 
         /**
-         * <p>Membership List.</p>
+         * <p>The list of members.</p>
          * 
          * <strong>example:</strong>
          * <p>8900****</p>
@@ -200,16 +200,16 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         public String memberList;
 
         /**
-         * <p>Membership name.</p>
+         * <p>The name of the member.</p>
          * 
          * <strong>example:</strong>
-         * <p>匿名会员</p>
+         * <p>Anonymous Member</p>
          */
         @NameInMap("MemberName")
         public String memberName;
 
         /**
-         * <p>Agent ID.</p>
+         * <p>The agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1332****</p>
@@ -218,16 +218,16 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         public Long servicerId;
 
         /**
-         * <p>Agent name.</p>
+         * <p>The name of the customer service representative.</p>
          * 
          * <strong>example:</strong>
-         * <p>XX测试</p>
+         * <p>XX Test</p>
          */
         @NameInMap("ServicerName")
         public String servicerName;
 
         /**
-         * <p>Sub-touch ID.</p>
+         * <p>The sub-touch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3423****</p>
@@ -236,7 +236,7 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         public Long subTouchId;
 
         /**
-         * <p>Job ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>12345****</p>
@@ -245,7 +245,7 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         public Long taskId;
 
         /**
-         * <p>Touch ID.</p>
+         * <p>The touch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2235****</p>

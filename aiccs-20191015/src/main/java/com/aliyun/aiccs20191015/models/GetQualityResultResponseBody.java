@@ -4,21 +4,54 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetQualityResultResponseBody extends TeaModel {
+    /**
+     * <p>The name of the channel type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Online</p>
+     */
     @NameInMap("ChannelTypeName")
     public String channelTypeName;
 
+    /**
+     * <p>The status code. A value of 200 indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The quality inspection task data.</p>
+     */
     @NameInMap("Data")
     public GetQualityResultResponseBodyData data;
 
+    /**
+     * <p>The description of the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE338D98-9BD3-4413-B165</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the API call is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,51 +109,151 @@ public class GetQualityResultResponseBody extends TeaModel {
     }
 
     public static class GetQualityResultResponseBodyDataQualityResultResponseList extends TeaModel {
+        /**
+         * <p>The channel type. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Hotline.</li>
+         * <li><strong>2</strong>: Online.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("ChannelType")
         public String channelType;
 
+        /**
+         * <p>The name of the channel type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Online</p>
+         */
         @NameInMap("ChannelTypeName")
         public String channelTypeName;
 
+        /**
+         * <p>The ID of the skill group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the skill group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Automated skill group</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The details of the quality inspection result, including the hit keywords and context chat information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("HitDetail")
         public String hitDetail;
 
+        /**
+         * <p>Indicates whether the rule is hit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("HitStatus")
         public Boolean hitStatus;
 
+        /**
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xspace commercial service</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The name of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Anonymous member</p>
+         */
         @NameInMap("MemberName")
         public String memberName;
 
+        /**
+         * <p>The ID of the quality inspection task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15977801</p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 
+        /**
+         * <p>The name of the quality inspection task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Automated quality inspection task</p>
+         */
         @NameInMap("ProjectName")
         public String projectName;
 
+        /**
+         * <p>The ID of the quality inspection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5369</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <p>The name of the quality inspection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Automated quality inspection rule</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The ID of the customer service representative.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>555555</p>
+         */
         @NameInMap("ServicerId")
         public String servicerId;
 
+        /**
+         * <p>The name of the customer service representative.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Liu Test</p>
+         */
         @NameInMap("ServicerName")
         public String servicerName;
 
+        /**
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20928756</p>
+         */
         @NameInMap("TouchId")
         public String touchId;
 
+        /**
+         * <p>The start time of the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-26 12:11:06</p>
+         */
         @NameInMap("TouchStartTime")
         public String touchStartTime;
 
@@ -260,15 +393,36 @@ public class GetQualityResultResponseBody extends TeaModel {
     }
 
     public static class GetQualityResultResponseBodyData extends TeaModel {
+        /**
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNo")
         public Integer pageNo;
 
+        /**
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The list of data details.</p>
+         */
         @NameInMap("QualityResultResponseList")
         public java.util.List<GetQualityResultResponseBodyDataQualityResultResponseList> qualityResultResponseList;
 
+        /**
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>84</p>
+         */
         @NameInMap("TotalNum")
         public Integer totalNum;
 

@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class GetAgentByIdRequest extends TeaModel {
     /**
+     * <p>The ID of the agent.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("AgentId")
     public Long agentId;
 
     /**
+     * <p>Instance ID of the AICCS instance. You can obtain instance ID from the Artificial Intelligence Cloud Call Service console.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc_xp_pre-cn-***</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

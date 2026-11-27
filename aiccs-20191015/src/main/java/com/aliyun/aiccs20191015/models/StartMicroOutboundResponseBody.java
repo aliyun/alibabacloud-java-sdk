@@ -17,7 +17,7 @@ public class StartMicroOutboundResponseBody extends TeaModel {
      * <p>Customer information.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;caseId\&quot;:2323****}</p>
+     * <p>{&quot;caseId&quot;:2323****}</p>
      */
     @NameInMap("CustomerInfo")
     public String customerInfo;

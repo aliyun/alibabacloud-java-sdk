@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSkillGroupResponseBody extends TeaModel {
     /**
-     * <p>Fault encoding</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class DeleteSkillGroupResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Data</p>
+     * <p>The data.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,16 +23,16 @@ public class DeleteSkillGroupResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>Fault description</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxx</p>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Request ID, used to trail the cause of an error</p>
+     * <p>The request ID used to trace the cause of the error.</p>
      * 
      * <strong>example:</strong>
      * <p>EE338D98-9BD3-4413-B165</p>
@@ -41,7 +41,7 @@ public class DeleteSkillGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API call succeeded</p>
+     * <p>Indicates whether the API call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

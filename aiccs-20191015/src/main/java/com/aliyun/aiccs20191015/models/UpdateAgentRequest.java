@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdateAgentRequest extends TeaModel {
     /**
-     * <p>The agent account name, which is the phone number or mailbox entered during account registration. It is unique within the instance.  </p>
+     * <p>The account name of the agent, which is the mobile phone number or email address specified during account registration. The account name must be unique within the instance.</p>
      * <blockquote>
-     * <p>Update is not supported.</p>
+     * <p>This parameter cannot be updated.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class UpdateAgentRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>Unique ID for the customer request. Used for idempotency validation. You can generate it using UUID.</p>
+     * <p>The unique ID of the client request. This parameter is used for idempotence verification. You can use a UUID to generate the value.</p>
      * 
      * <strong>example:</strong>
      * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
@@ -27,17 +27,18 @@ public class UpdateAgentRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Agent\&quot;s display name.</p>
+     * <p>The display name of the agent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>XX测试</p>
+     * <p>XX Test</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
-     * <p>AICCS instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
+     * <p>The ID of the Artificial Intelligence Cloud Call Service instance.
+     * You can obtain the instance ID from <b>Instance Management</b> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,13 +48,13 @@ public class UpdateAgentRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Skill groups to which the agent belongs.</p>
+     * <p>The skill group to which the agent belongs.</p>
      */
     @NameInMap("SkillGroupId")
     public java.util.List<Long> skillGroupId;
 
     /**
-     * <p>List of skill groups to which the agent belongs.</p>
+     * <p>The list of skill groups to which the agent belongs.</p>
      */
     @NameInMap("SkillGroupIdList")
     public java.util.List<Long> skillGroupIdList;

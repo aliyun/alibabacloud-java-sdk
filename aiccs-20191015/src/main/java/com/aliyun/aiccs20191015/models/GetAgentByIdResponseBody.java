@@ -4,18 +4,45 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetAgentByIdResponseBody extends TeaModel {
+    /**
+     * <p>The status code. A value of Success indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The agent information.</p>
+     */
     @NameInMap("Data")
     public GetAgentByIdResponseBodyData data;
 
+    /**
+     * <p>The description of the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE338D98-9BD3-4413-B165</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the API call is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,24 +92,66 @@ public class GetAgentByIdResponseBody extends TeaModel {
     }
 
     public static class GetAgentByIdResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("AgentId")
         public Integer agentId;
 
+        /**
+         * <p>The name of the user who created the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhang San</p>
+         */
         @NameInMap("CreateUserName")
         public String createUserName;
 
+        /**
+         * <p>The external key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43990666****</p>
+         */
         @NameInMap("ForeignKey")
         public String foreignKey;
 
+        /**
+         * <p>The logon name of the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:123@123.com">123@123.com</a></p>
+         */
         @NameInMap("ForeignNick")
         public String foreignNick;
 
+        /**
+         * <p>The name of the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Liu Ceshi</p>
+         */
         @NameInMap("RealName")
         public String realName;
 
+        /**
+         * <p>The service type. Default value: 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("ServicerType")
         public Integer servicerType;
 
+        /**
+         * <p>The display name of the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Liu Ceshi</p>
+         */
         @NameInMap("ShowName")
         public String showName;
 
